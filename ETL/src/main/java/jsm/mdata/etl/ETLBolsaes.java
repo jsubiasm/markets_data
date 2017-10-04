@@ -28,13 +28,13 @@ import org.slf4j.LoggerFactory;
  * @author Empleado
  *
  */
-public class ETLInfomercados
+public class ETLBolsaes
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(ETLInfomercados.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(ETLBolsaes.class);
 
 	/**
 	 * Proxy
@@ -48,8 +48,8 @@ public class ETLInfomercados
 	/**
 	 * Ficheros
 	 */
-	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\infomercados\\consultas.txt";
-	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\infomercados\\download\\";
+	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\bolsaes\\consultas.txt";
+	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\bolsaes\\download\\";
 	private static final String TMP_DATA_FILE_PREFIX = "_data_file_";
 
 	/**
