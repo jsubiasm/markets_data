@@ -30,11 +30,19 @@ public class ETLInfomercados
 {
 
 	/**
+	 * Proxy
+	 */
+	private static final Boolean USE_PROXY = true;
+	private static final String PROXY_URL = "192.6.2.109";
+	private static final Integer PROXY_PORT = 81;
+	private static final String PROXY_USERNAME = "panda";
+	private static final String PROXY_PASSWORD = "panda";
+
+	/**
 	 * Ficheros
 	 */
-	// http://www.infomercados.com
 	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\infomercados\\consultas.txt";
-	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\infomercados\\";
+	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\infomercados\\download\\";
 	private static final String TMP_DATA_FILE_PREFIX = "_data_file_";
 
 	/**
@@ -64,11 +72,17 @@ public class ETLInfomercados
 			int index = 100;
 			for (String dataUrl : dataUrlList)
 			{
+				// Descargamos URL y guardamos en disco
 				index++;
-
-				// Leemos el fichero de URLs de datos
 				LOGGER.info("Descargando URL [" + dataUrl + "]");
-				descargarFichero(dataUrl, index);
+				if (USE_PROXY)
+				{
+					descargarFicheroConProxy(dataUrl, index);
+				}
+				else
+				{
+					descargarFicheroConProxy(dataUrl, index);
+				}
 
 			}
 
@@ -86,7 +100,7 @@ public class ETLInfomercados
 	 * @return
 	 * @throws Exception
 	 */
-	public static Connection getConnection() throws Exception
+	private static Connection getConnection() throws Exception
 	{
 		try
 		{
@@ -104,14 +118,14 @@ public class ETLInfomercados
 	 * @param dataUrl
 	 * @param index
 	 */
-	public static void descargarFichero(String dataUrl, int index)
+	private static void descargarFicheroConProxy(String dataUrl, int index)
 	{
 		try
 		{
 			CredentialsProvider credsProvider = new BasicCredentialsProvider();
-			credsProvider.setCredentials(new AuthScope("newproxy", 81), new UsernamePasswordCredentials("panda", "panda"));
+			credsProvider.setCredentials(new AuthScope(PROXY_URL, PROXY_PORT), new UsernamePasswordCredentials(PROXY_USERNAME, PROXY_PASSWORD));
 			CloseableHttpClient httpclient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
-			HttpHost proxy = new HttpHost("newproxy", 81);
+			HttpHost proxy = new HttpHost(PROXY_URL, PROXY_PORT);
 			RequestConfig config = RequestConfig.custom().setProxy(proxy).build();
 			HttpGet httpget = new HttpGet(dataUrl);
 			httpget.setConfig(config);
@@ -124,6 +138,15 @@ public class ETLInfomercados
 		{
 			LOGGER.error("Error descargando URL [" + dataUrl + "]", e);
 		}
+	}
+
+	/**
+	 * @param dataUrl
+	 * @param index
+	 */
+	private static void descargarFicheroSinProxy(String dataUrl, int index)
+	{
+		throw new UnsupportedOperationException("Operación no implementada");
 	}
 
 }
