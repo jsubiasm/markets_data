@@ -1,0 +1,45 @@
+--
+-- IBEX INDICES
+--
+INDEX##CSEP##ESP##CSEP####CSEP##IBEX##CSEP##http://www.eleconomista.es/descargas-historicos/indice/IBEX-35/##FINI##/##FFIN##
+--
+-- IBEX COMPONENTES
+--
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##ABERTIS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ABERTIS/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##ACCIONA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ACCIONA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##ACERINOX##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ACERINOX/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##ACS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ACS/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##AENA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/AENA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##AMADEUS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/AMADEUS/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##ARCELORMITTAL-##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ARCELORMITTAL-/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##BANKIA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/BANKIA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##BANKINTER##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/BANKINTER/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##BBVA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/BBVA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##CAIXABANK##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/CAIXABANK/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##CELLNEX-TELECOM-##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/CELLNEX-TELECOM-/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##DIA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DIA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##ENAGAS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ENAGAS/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##ENDESA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ENDESA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##FERROVIAL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/FERROVIAL/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##GAMESA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/GAMESA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##GAS-NATURAL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/GAS-NATURAL/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##GRIFOLS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/GRIFOLS/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##IAG-IBERIA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/IAG-IBERIA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##IBERDROLA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/IBERDROLA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##INDITEX##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/INDITEX/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##INDRA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/INDRA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##COLONIAL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/COLONIAL/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##MAPFRE##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/MAPFRE/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##MEDIASET##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/MEDIASET/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##SOL-MELIA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/SOL-MELIA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##MERLIN-PROP##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/MERLIN-PROP/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##REE##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/REE/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##REPSOL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/REPSOL/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##SABADELL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/SABADELL/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##SANTANDER##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/SANTANDER/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##TECNICAS-REUNIDAS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/TECNICAS-REUNIDAS/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##TELEFONICA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/TELEFONICA/##FINI##/##FFIN##
+STOCK##CSEP##ESP##CSEP##IBEX##CSEP##VISCOFAN##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/VISCOFAN/##FINI##/##FFIN##
+--
+-- FIN
+--
