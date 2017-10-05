@@ -8,8 +8,10 @@ import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -58,14 +60,15 @@ public class ETLEleconomista
 	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\eleconomista\\download\\";
 	private static final String TMP_DATA_FILE_PREFIX = "_data_file_";
 	private static final String TMP_DATA_FILE_EXT = ".txt";
-	private static final String CCOMENT = "--";
-	private static final String CSEPARADOR = "##CSEP##";
-	private static final String CFECINI = "##FINI##";
-	private static final String CFECFIN = "##FFIN##";
-	private static final String CCABECERAINI = "Fecha";
-	private static final SimpleDateFormat CFECFORMAT = new SimpleDateFormat("yyyy-MM-dd");
-	private static final String DFSEPARADOR = "\t";
+	private static final String C_COMENT = "--";
+	private static final String C_SEPARADOR = "##CSEP##";
+	private static final String C_FEC_INI = "##FINI##";
+	private static final String C_FEC_FIN = "##FFIN##";
+	private static final String C_CABECERA_INI = "Fecha";
+	private static final SimpleDateFormat C_FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+	private static final String D_SEPARADOR = "\t";
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
+	private static final String FEC_INI_DESCARGA = "2000-01-01";
 
 	/**
 	 * Conexión a base de datos
@@ -83,11 +86,11 @@ public class ETLEleconomista
 		Connection dbConnection = null;
 		try
 		{
-			LOGGER.info("Descargando ficheros temporales");
-			// descargaFicherosTemporales();
 			LOGGER.info("Abriendo conexión a base de datos");
 			dbConnection = getConnection();
 			dbConnection.setAutoCommit(false);
+			LOGGER.info("Descargando ficheros temporales");
+			descargaFicherosTemporales(dbConnection);
 			LOGGER.info("Procesando ficheros temporales");
 			procesoFicherosTemporales(dbConnection);
 			LOGGER.info("Confirmando transacción");
@@ -118,23 +121,28 @@ public class ETLEleconomista
 	/**
 	 * @throws Exception
 	 */
-	private static void descargaFicherosTemporales() throws Exception
+	private static void descargaFicherosTemporales(Connection dbConnection) throws Exception
 	{
 		try
 		{
 			List<String> dataUrlLines = FileUtils.readLines(new File(DATA_URLS_FILE));
 			for (String dataUrlLine : dataUrlLines)
 			{
-				if (!dataUrlLine.startsWith(CCOMENT))
+				if (!dataUrlLine.startsWith(C_COMENT))
 				{
-					String[] dataUrlLineTokens = dataUrlLine.split(CSEPARADOR);
+					String[] dataUrlLineTokens = dataUrlLine.split(C_SEPARADOR);
 					String mercado = dataUrlLineTokens[0];
 					String bolsa = dataUrlLineTokens[1];
 					String indice = dataUrlLineTokens[2];
 					String ticker = dataUrlLineTokens[3];
 					String dataUrl = dataUrlLineTokens[4];
-					dataUrl = dataUrl.replaceAll(CFECINI, "2015-01-01");
-					dataUrl = dataUrl.replaceAll(CFECFIN, "2016-01-01");
+					String fechaIni = getFechaInicioDescarga(dbConnection, mercado, bolsa, indice, ticker);
+					Calendar calendar = Calendar.getInstance();
+					calendar.setTime(C_FEC_FORMAT.parse(fechaIni));
+					calendar.add(Calendar.YEAR, 1);
+					String fechaFin = C_FEC_FORMAT.format(calendar.getTime());
+					dataUrl = dataUrl.replaceAll(C_FEC_INI, fechaIni);
+					dataUrl = dataUrl.replaceAll(C_FEC_FIN, fechaFin);
 					LOGGER.info("Descargando URL [" + dataUrl + "]");
 					if (USE_PROXY)
 					{
@@ -165,7 +173,7 @@ public class ETLEleconomista
 			for (File dataFile : dataFileList)
 			{
 				LOGGER.info("Procesando fichero [" + dataFile.getName() + "]");
-				String[] dataFileTokens = dataFile.getName().split(CSEPARADOR);
+				String[] dataFileTokens = dataFile.getName().split(C_SEPARADOR);
 				String mercado = dataFileTokens[1];
 				String bolsa = dataFileTokens[2];
 				String indice = dataFileTokens[3];
@@ -173,14 +181,14 @@ public class ETLEleconomista
 				List<String> dataFileLines = FileUtils.readLines(dataFile);
 				for (String dataFileLine : dataFileLines)
 				{
-					if (!dataFileLine.startsWith(CCABECERAINI))
+					if (!dataFileLine.startsWith(C_CABECERA_INI))
 					{
-						String[] dataFields = dataFileLine.split(DFSEPARADOR);
-						Date fecha = CFECFORMAT.parse(dataFields[0]);
+						String[] dataFields = dataFileLine.split(D_SEPARADOR);
+						Date fecha = C_FEC_FORMAT.parse(dataFields[0]);
 						BigDecimal cierre = new BigDecimal(NUMBER_FORMAT.parse(dataFields[1]).toString());
 						BigDecimal maximo = new BigDecimal(NUMBER_FORMAT.parse(dataFields[4]).toString());
 						BigDecimal minimo = new BigDecimal(NUMBER_FORMAT.parse(dataFields[5]).toString());
-						BigDecimal volumen = (dataFields.length == 7) ? new BigDecimal(NUMBER_FORMAT.parse(dataFields[6]).toString()) : null;
+						BigDecimal volumen = (dataFields.length == 7) ? new BigDecimal(NUMBER_FORMAT.parse(dataFields[6]).toString()) : BigDecimal.ZERO;
 						insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, maximo, minimo, cierre, volumen);
 					}
 				}
@@ -227,7 +235,7 @@ public class ETLEleconomista
 			HttpGet httpget = new HttpGet(dataUrl);
 			httpget.setConfig(config);
 			CloseableHttpResponse response = httpclient.execute(httpget);
-			String fileName = TMP_DATA_FILE_PREFIX + CSEPARADOR + mercado + CSEPARADOR + bolsa + CSEPARADOR + indice + CSEPARADOR + ticker + CSEPARADOR + TMP_DATA_FILE_EXT;
+			String fileName = TMP_DATA_FILE_PREFIX + C_SEPARADOR + mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + ticker + C_SEPARADOR + TMP_DATA_FILE_EXT;
 			FileUtils.copyInputStreamToFile(response.getEntity().getContent(), new File(TMP_DATA_FILE_PATH + fileName));
 			response.close();
 			httpclient.close();
@@ -282,6 +290,56 @@ public class ETLEleconomista
 			{
 				throw new Exception("Se han insertado [" + rowsInserted + "] registros");
 			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.error("Error insertando registro", e);
+			throw e;
+		}
+		finally
+		{
+			if (pStatement != null)
+			{
+				pStatement.close();
+			}
+		}
+	}
+
+	/**
+	 * @param dbConnection
+	 * @param mercado
+	 * @param bolsa
+	 * @param indice
+	 * @param ticker
+	 * @return
+	 * @throws Exception
+	 */
+	private static String getFechaInicioDescarga(Connection dbConnection, String mercado, String bolsa, String indice, String ticker) throws Exception
+	{
+		PreparedStatement pStatement = null;
+		try
+		{
+			String consultaSQL = "select max(fecha) as ultima_fecha from public.mercados where mercado = ? and bolsa = ? and indice = ? and ticker = ? group by mercado, bolsa, indice, ticker";
+			pStatement = dbConnection.prepareStatement(consultaSQL);
+			int paramIdx = 1;
+			pStatement.setString(paramIdx++, mercado);
+			pStatement.setString(paramIdx++, bolsa);
+			pStatement.setString(paramIdx++, indice);
+			pStatement.setString(paramIdx++, ticker);
+			ResultSet rSet = pStatement.executeQuery();
+			String fechaInicioDescarga = FEC_INI_DESCARGA;
+			if (rSet.next())
+			{
+				Date ultimaFecha = rSet.getDate("ultima_fecha");
+				if (ultimaFecha != null)
+				{
+					Calendar calendar = Calendar.getInstance();
+					calendar.setTime(ultimaFecha);
+					calendar.add(Calendar.DATE, 1);
+					fechaInicioDescarga = C_FEC_FORMAT.format(calendar.getTime());
+				}
+			}
+			return fechaInicioDescarga;
 		}
 		catch (Exception e)
 		{
