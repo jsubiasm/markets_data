@@ -1,7 +1,7 @@
 --
 -- IBEX INDICES
 --
-INDEX##CSEP##ESP##CSEP####CSEP##IBEX##CSEP##http://www.eleconomista.es/descargas-historicos/indice/IBEX-35/##FINI##/##FFIN##
+INDEX##CSEP##ESP##CSEP##-##CSEP##IBEX##CSEP##http://www.eleconomista.es/descargas-historicos/indice/IBEX-35/##FINI##/##FFIN##
 --
 -- IBEX COMPONENTES
 --

@@ -68,7 +68,6 @@ public class ETLEleconomista
 	private static final SimpleDateFormat C_FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 	private static final String D_SEPARADOR = "\t";
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
-	private static final String FEC_INI_DESCARGA = "2000-01-01";
 
 	/**
 	 * Conexión a base de datos
@@ -79,6 +78,11 @@ public class ETLEleconomista
 	private static final String DATABASE_PASSWORD = "Empleado";
 
 	/**
+	 * Variables
+	 */
+	private static String fecIniDescargaInicial = null;
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args)
@@ -86,6 +90,7 @@ public class ETLEleconomista
 		Connection dbConnection = null;
 		try
 		{
+			getFechaInicioDescargaInicial(args);
 			LOGGER.info("Abriendo conexión a base de datos");
 			dbConnection = getConnection();
 			dbConnection.setAutoCommit(false);
@@ -128,6 +133,34 @@ public class ETLEleconomista
 			}
 		}
 
+	}
+
+	/**
+	 * @param args
+	 * @throws Exception
+	 */
+	private static void getFechaInicioDescargaInicial(String[] args) throws Exception
+	{
+		if (args == null || args.length == 0)
+		{
+			throw new Exception("Se debe proporcionar la fecha de inicio de descarga");
+		}
+		else if (args.length > 1)
+		{
+			throw new Exception("Se espera un solo argumento y se han recuperado " + args.length);
+		}
+		else
+		{
+			try
+			{
+				C_FEC_FORMAT.parse(args[0]);
+			}
+			catch (Exception e)
+			{
+				throw new Exception("La fecha de inicio de descarga debe estar en formato 'yyyy-MM-dd'");
+			}
+			fecIniDescargaInicial = args[0];
+		}
 	}
 
 	/**
@@ -308,7 +341,7 @@ public class ETLEleconomista
 			pStatement.setString(paramIdx++, indice);
 			pStatement.setString(paramIdx++, ticker);
 			ResultSet rSet = pStatement.executeQuery();
-			String fechaInicioDescarga = FEC_INI_DESCARGA;
+			String fechaInicioDescarga = fecIniDescargaInicial;
 			if (rSet.next())
 			{
 				Date ultimaFecha = rSet.getDate("ultima_fecha");
