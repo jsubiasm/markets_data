@@ -96,9 +96,21 @@ public class ETLEleconomista
 			LOGGER.info("Confirmando transacción");
 			dbConnection.commit();
 		}
-		catch (Exception e)
+		catch (Exception e1)
 		{
-			LOGGER.error("ERROR", e);
+			LOGGER.error("ERROR", e1);
+			LOGGER.info("Deshaciendo transacción");
+			if (dbConnection != null)
+			{
+				try
+				{
+					dbConnection.rollback();
+				}
+				catch (Exception e2)
+				{
+					LOGGER.error("ERROR", e2);
+				}
+			}
 		}
 		finally
 		{
@@ -109,9 +121,9 @@ public class ETLEleconomista
 				{
 					dbConnection.close();
 				}
-				catch (Exception e)
+				catch (Exception e3)
 				{
-					LOGGER.error("ERROR", e);
+					LOGGER.error("ERROR", e3);
 				}
 			}
 		}
@@ -123,42 +135,34 @@ public class ETLEleconomista
 	 */
 	private static void descargaFicherosTemporales(Connection dbConnection) throws Exception
 	{
-		try
+		List<String> dataUrlLines = FileUtils.readLines(new File(DATA_URLS_FILE));
+		for (String dataUrlLine : dataUrlLines)
 		{
-			List<String> dataUrlLines = FileUtils.readLines(new File(DATA_URLS_FILE));
-			for (String dataUrlLine : dataUrlLines)
+			if (!dataUrlLine.startsWith(C_COMENT))
 			{
-				if (!dataUrlLine.startsWith(C_COMENT))
+				String[] dataUrlLineTokens = dataUrlLine.split(C_SEPARADOR);
+				String mercado = dataUrlLineTokens[0];
+				String bolsa = dataUrlLineTokens[1];
+				String indice = dataUrlLineTokens[2];
+				String ticker = dataUrlLineTokens[3];
+				String dataUrl = dataUrlLineTokens[4];
+				String fechaIni = getFechaInicioDescarga(dbConnection, mercado, bolsa, indice, ticker);
+				Calendar calendar = Calendar.getInstance();
+				calendar.setTime(C_FEC_FORMAT.parse(fechaIni));
+				calendar.add(Calendar.YEAR, 1);
+				String fechaFin = C_FEC_FORMAT.format(calendar.getTime());
+				dataUrl = dataUrl.replaceAll(C_FEC_INI, fechaIni);
+				dataUrl = dataUrl.replaceAll(C_FEC_FIN, fechaFin);
+				LOGGER.info("Descargando URL [" + dataUrl + "]");
+				if (USE_PROXY)
 				{
-					String[] dataUrlLineTokens = dataUrlLine.split(C_SEPARADOR);
-					String mercado = dataUrlLineTokens[0];
-					String bolsa = dataUrlLineTokens[1];
-					String indice = dataUrlLineTokens[2];
-					String ticker = dataUrlLineTokens[3];
-					String dataUrl = dataUrlLineTokens[4];
-					String fechaIni = getFechaInicioDescarga(dbConnection, mercado, bolsa, indice, ticker);
-					Calendar calendar = Calendar.getInstance();
-					calendar.setTime(C_FEC_FORMAT.parse(fechaIni));
-					calendar.add(Calendar.YEAR, 1);
-					String fechaFin = C_FEC_FORMAT.format(calendar.getTime());
-					dataUrl = dataUrl.replaceAll(C_FEC_INI, fechaIni);
-					dataUrl = dataUrl.replaceAll(C_FEC_FIN, fechaFin);
-					LOGGER.info("Descargando URL [" + dataUrl + "]");
-					if (USE_PROXY)
-					{
-						descargarFicheroConProxy(mercado, bolsa, indice, ticker, dataUrl);
-					}
-					else
-					{
-						descargarFicheroSinProxy(mercado, bolsa, indice, ticker, dataUrl);
-					}
+					descargarFicheroConProxy(mercado, bolsa, indice, ticker, dataUrl);
+				}
+				else
+				{
+					descargarFicheroSinProxy(mercado, bolsa, indice, ticker, dataUrl);
 				}
 			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.error("Error descargando ficheros temporales", e);
-			throw e;
 		}
 	}
 
@@ -167,37 +171,29 @@ public class ETLEleconomista
 	 */
 	private static void procesoFicherosTemporales(Connection dbConnection) throws Exception
 	{
-		try
+		Collection<File> dataFileList = FileUtils.listFiles(new File(TMP_DATA_FILE_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+		for (File dataFile : dataFileList)
 		{
-			Collection<File> dataFileList = FileUtils.listFiles(new File(TMP_DATA_FILE_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
-			for (File dataFile : dataFileList)
+			LOGGER.info("Procesando fichero [" + dataFile.getName() + "]");
+			String[] dataFileTokens = dataFile.getName().split(C_SEPARADOR);
+			String mercado = dataFileTokens[1];
+			String bolsa = dataFileTokens[2];
+			String indice = dataFileTokens[3];
+			String ticker = dataFileTokens[4];
+			List<String> dataFileLines = FileUtils.readLines(dataFile);
+			for (String dataFileLine : dataFileLines)
 			{
-				LOGGER.info("Procesando fichero [" + dataFile.getName() + "]");
-				String[] dataFileTokens = dataFile.getName().split(C_SEPARADOR);
-				String mercado = dataFileTokens[1];
-				String bolsa = dataFileTokens[2];
-				String indice = dataFileTokens[3];
-				String ticker = dataFileTokens[4];
-				List<String> dataFileLines = FileUtils.readLines(dataFile);
-				for (String dataFileLine : dataFileLines)
+				if (!dataFileLine.startsWith(C_CABECERA_INI))
 				{
-					if (!dataFileLine.startsWith(C_CABECERA_INI))
-					{
-						String[] dataFields = dataFileLine.split(D_SEPARADOR);
-						Date fecha = C_FEC_FORMAT.parse(dataFields[0]);
-						BigDecimal cierre = new BigDecimal(NUMBER_FORMAT.parse(dataFields[1]).toString());
-						BigDecimal maximo = new BigDecimal(NUMBER_FORMAT.parse(dataFields[4]).toString());
-						BigDecimal minimo = new BigDecimal(NUMBER_FORMAT.parse(dataFields[5]).toString());
-						BigDecimal volumen = (dataFields.length == 7) ? new BigDecimal(NUMBER_FORMAT.parse(dataFields[6]).toString()) : BigDecimal.ZERO;
-						insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, maximo, minimo, cierre, volumen);
-					}
+					String[] dataFields = dataFileLine.split(D_SEPARADOR);
+					Date fecha = C_FEC_FORMAT.parse(dataFields[0]);
+					BigDecimal cierre = new BigDecimal(NUMBER_FORMAT.parse(dataFields[1]).toString());
+					BigDecimal maximo = new BigDecimal(NUMBER_FORMAT.parse(dataFields[4]).toString());
+					BigDecimal minimo = new BigDecimal(NUMBER_FORMAT.parse(dataFields[5]).toString());
+					BigDecimal volumen = (dataFields.length == 7) ? new BigDecimal(NUMBER_FORMAT.parse(dataFields[6]).toString()) : BigDecimal.ZERO;
+					insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, maximo, minimo, cierre, volumen);
 				}
 			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.error("Error procesando ficheros temporales", e);
-			throw e;
 		}
 	}
 
@@ -207,43 +203,28 @@ public class ETLEleconomista
 	 */
 	private static Connection getConnection() throws Exception
 	{
-		try
-		{
-			Class.forName(DATABASE_DRIVER);
-			return DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
-		}
-		catch (Exception e)
-		{
-			LOGGER.error("Error abriendo conexión a base de datos", e);
-			throw e;
-		}
+		Class.forName(DATABASE_DRIVER);
+		return DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
 	}
 
 	/**
 	 * @param dataUrl
 	 * @param index
 	 */
-	private static void descargarFicheroConProxy(String mercado, String bolsa, String indice, String ticker, String dataUrl)
+	private static void descargarFicheroConProxy(String mercado, String bolsa, String indice, String ticker, String dataUrl) throws Exception
 	{
-		try
-		{
-			CredentialsProvider credsProvider = new BasicCredentialsProvider();
-			credsProvider.setCredentials(new AuthScope(PROXY_URL, PROXY_PORT), new UsernamePasswordCredentials(PROXY_USERNAME, PROXY_PASSWORD));
-			CloseableHttpClient httpclient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
-			HttpHost proxy = new HttpHost(PROXY_URL, PROXY_PORT);
-			RequestConfig config = RequestConfig.custom().setProxy(proxy).build();
-			HttpGet httpget = new HttpGet(dataUrl);
-			httpget.setConfig(config);
-			CloseableHttpResponse response = httpclient.execute(httpget);
-			String fileName = TMP_DATA_FILE_PREFIX + C_SEPARADOR + mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + ticker + C_SEPARADOR + TMP_DATA_FILE_EXT;
-			FileUtils.copyInputStreamToFile(response.getEntity().getContent(), new File(TMP_DATA_FILE_PATH + fileName));
-			response.close();
-			httpclient.close();
-		}
-		catch (Exception e)
-		{
-			LOGGER.error("Error descargando URL [" + dataUrl + "]", e);
-		}
+		CredentialsProvider credsProvider = new BasicCredentialsProvider();
+		credsProvider.setCredentials(new AuthScope(PROXY_URL, PROXY_PORT), new UsernamePasswordCredentials(PROXY_USERNAME, PROXY_PASSWORD));
+		CloseableHttpClient httpclient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
+		HttpHost proxy = new HttpHost(PROXY_URL, PROXY_PORT);
+		RequestConfig config = RequestConfig.custom().setProxy(proxy).build();
+		HttpGet httpget = new HttpGet(dataUrl);
+		httpget.setConfig(config);
+		CloseableHttpResponse response = httpclient.execute(httpget);
+		String fileName = TMP_DATA_FILE_PREFIX + C_SEPARADOR + mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + ticker + C_SEPARADOR + TMP_DATA_FILE_EXT;
+		FileUtils.copyInputStreamToFile(response.getEntity().getContent(), new File(TMP_DATA_FILE_PATH + fileName));
+		response.close();
+		httpclient.close();
 	}
 
 	/**
@@ -293,7 +274,7 @@ public class ETLEleconomista
 		}
 		catch (Exception e)
 		{
-			LOGGER.error("Error insertando registro", e);
+			LOGGER.error("ERROR", e);
 			throw e;
 		}
 		finally
@@ -343,7 +324,7 @@ public class ETLEleconomista
 		}
 		catch (Exception e)
 		{
-			LOGGER.error("Error insertando registro", e);
+			LOGGER.error("ERROR", e);
 			throw e;
 		}
 		finally
