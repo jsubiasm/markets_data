@@ -52,8 +52,9 @@ public class ETLEleconomista
 	private static final Integer PROXY_PORT = 81;
 	private static final String PROXY_USERNAME = "panda";
 	private static final String PROXY_PASSWORD = "panda";
-	private static final int SG_TIMEOUT = 15 * 1000;
+	private static final int URL_TIMEOUT = 15 * 1000;
 	private static final int MAX_INTENTOS = 3;
+	private static final int DOWNLOAD_DELAY = 500;
 
 	/**
 	 * Ficheros
@@ -256,12 +257,13 @@ public class ETLEleconomista
 		{
 			try
 			{
+				Thread.sleep(DOWNLOAD_DELAY);
 				intentos++;
 				CredentialsProvider credsProvider = new BasicCredentialsProvider();
 				credsProvider.setCredentials(new AuthScope(PROXY_URL, PROXY_PORT), new UsernamePasswordCredentials(PROXY_USERNAME, PROXY_PASSWORD));
 				CloseableHttpClient httpClient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
 				HttpHost proxy = new HttpHost(PROXY_URL, PROXY_PORT);
-				RequestConfig config = RequestConfig.custom().setConnectTimeout(SG_TIMEOUT).setProxy(proxy).build();
+				RequestConfig config = RequestConfig.custom().setConnectTimeout(URL_TIMEOUT).setProxy(proxy).build();
 				HttpGet httpGET = new HttpGet(dataUrl);
 				httpGET.setConfig(config);
 				CloseableHttpResponse response = httpClient.execute(httpGET);
