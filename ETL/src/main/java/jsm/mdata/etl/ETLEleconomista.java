@@ -45,19 +45,21 @@ public class ETLEleconomista
 	private final static Logger LOGGER = LoggerFactory.getLogger(ETLEleconomista.class);
 
 	/**
-	 * Proxy
+	 * Conexiones a URLs
 	 */
 	private static final Boolean USE_PROXY = true;
 	private static final String PROXY_URL = "192.6.2.109";
 	private static final Integer PROXY_PORT = 81;
 	private static final String PROXY_USERNAME = "panda";
 	private static final String PROXY_PASSWORD = "panda";
+	private static final int SG_TIMEOUT = 15 * 1000;
+	private static final int MAX_INTENTOS = 3;
 
 	/**
 	 * Ficheros
 	 */
-	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\eleconomista\\consultas.txt";
-	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\consultas\\eleconomista\\download\\";
+	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\eleconomista\\urls.txt";
+	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\eleconomista\\download\\";
 	private static final String TMP_DATA_FILE_PREFIX = "_data_file_";
 	private static final String TMP_DATA_FILE_EXT = ".txt";
 	private static final String C_COMENT = "--";
@@ -104,11 +106,11 @@ public class ETLEleconomista
 		catch (Exception e1)
 		{
 			LOGGER.error("ERROR", e1);
-			LOGGER.info("Deshaciendo transacción");
 			if (dbConnection != null)
 			{
 				try
 				{
+					LOGGER.info("Deshaciendo transacción");
 					dbConnection.rollback();
 				}
 				catch (Exception e2)
@@ -119,11 +121,11 @@ public class ETLEleconomista
 		}
 		finally
 		{
-			LOGGER.info("Cerrando conexión a base de datos");
 			if (dbConnection != null)
 			{
 				try
 				{
+					LOGGER.info("Cerrando conexión a base de datos");
 					dbConnection.close();
 				}
 				catch (Exception e3)
@@ -227,6 +229,8 @@ public class ETLEleconomista
 					insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, maximo, minimo, cierre, volumen);
 				}
 			}
+			LOGGER.info("Confirmando transacción");
+			dbConnection.commit();
 		}
 	}
 
@@ -246,18 +250,42 @@ public class ETLEleconomista
 	 */
 	private static void descargarFicheroConProxy(String mercado, String bolsa, String indice, String ticker, String dataUrl) throws Exception
 	{
-		CredentialsProvider credsProvider = new BasicCredentialsProvider();
-		credsProvider.setCredentials(new AuthScope(PROXY_URL, PROXY_PORT), new UsernamePasswordCredentials(PROXY_USERNAME, PROXY_PASSWORD));
-		CloseableHttpClient httpclient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
-		HttpHost proxy = new HttpHost(PROXY_URL, PROXY_PORT);
-		RequestConfig config = RequestConfig.custom().setProxy(proxy).build();
-		HttpGet httpget = new HttpGet(dataUrl);
-		httpget.setConfig(config);
-		CloseableHttpResponse response = httpclient.execute(httpget);
-		String fileName = TMP_DATA_FILE_PREFIX + C_SEPARADOR + mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + ticker + C_SEPARADOR + TMP_DATA_FILE_EXT;
-		FileUtils.copyInputStreamToFile(response.getEntity().getContent(), new File(TMP_DATA_FILE_PATH + fileName));
-		response.close();
-		httpclient.close();
+		int intentos = 0;
+		boolean retry = false;
+		do
+		{
+			try
+			{
+				intentos++;
+				CredentialsProvider credsProvider = new BasicCredentialsProvider();
+				credsProvider.setCredentials(new AuthScope(PROXY_URL, PROXY_PORT), new UsernamePasswordCredentials(PROXY_USERNAME, PROXY_PASSWORD));
+				CloseableHttpClient httpClient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
+				HttpHost proxy = new HttpHost(PROXY_URL, PROXY_PORT);
+				RequestConfig config = RequestConfig.custom().setConnectTimeout(SG_TIMEOUT).setProxy(proxy).build();
+				HttpGet httpGET = new HttpGet(dataUrl);
+				httpGET.setConfig(config);
+				CloseableHttpResponse response = httpClient.execute(httpGET);
+				String fileName = TMP_DATA_FILE_PREFIX + C_SEPARADOR + mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + ticker + C_SEPARADOR + TMP_DATA_FILE_EXT;
+				FileUtils.copyInputStreamToFile(response.getEntity().getContent(), new File(TMP_DATA_FILE_PATH + fileName));
+				response.close();
+				httpClient.close();
+			}
+			catch (Exception e)
+			{
+				LOGGER.error("ERROR", e);
+				if (intentos <= MAX_INTENTOS)
+				{
+					LOGGER.info("Se reintenta la descarga del fichero");
+					retry = true;
+				}
+				else
+				{
+					LOGGER.info("Se aborta la descarga del fichero");
+					retry = false;
+				}
+			}
+		}
+		while (retry);
 	}
 
 	/**
