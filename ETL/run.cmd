@@ -23,6 +23,11 @@ REM java -jar .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2015-01-01 >
 REM java -jar .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2016-01-01 > 2016-01-01.log
 REM java -jar .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2017-01-01 > 2017-01-01.log
 
+java -jar .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2016-01-01
+java -jar .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2016-07-01
 java -jar .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2017-01-01
+java -jar .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2017-07-01
+
+REM java -jar .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2017-01-01
 
 pause
