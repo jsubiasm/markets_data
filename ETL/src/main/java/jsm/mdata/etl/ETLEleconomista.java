@@ -97,6 +97,8 @@ public class ETLEleconomista
 			LOGGER.info("Abriendo conexión a base de datos");
 			dbConnection = getConnection();
 			dbConnection.setAutoCommit(false);
+			LOGGER.info("Suprimiendo ficheros temporales antiguos");
+			FileUtils.cleanDirectory(new File(TMP_DATA_FILE_PATH));
 			LOGGER.info("Descargando ficheros temporales");
 			descargaFicherosTemporales(dbConnection);
 			LOGGER.info("Procesando ficheros temporales");
@@ -183,20 +185,31 @@ public class ETLEleconomista
 				String ticker = dataUrlLineTokens[3];
 				String dataUrl = dataUrlLineTokens[4];
 				String fechaIni = getFechaInicioDescarga(dbConnection, mercado, bolsa, indice, ticker);
-				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(C_FEC_FORMAT.parse(fechaIni));
-				calendar.add(Calendar.YEAR, 1);
-				String fechaFin = C_FEC_FORMAT.format(calendar.getTime());
+				Calendar calendar1 = Calendar.getInstance();
+				calendar1.setTime(new Date());
+				calendar1.add(Calendar.DATE, -1);
+				String ultimaFechaDisponible = C_FEC_FORMAT.format(calendar1.getTime());
+				Calendar calendar2 = Calendar.getInstance();
+				calendar2.setTime(C_FEC_FORMAT.parse(fechaIni));
+				calendar2.add(Calendar.YEAR, 1);
+				String fechaFin = C_FEC_FORMAT.format(calendar2.getTime());
 				dataUrl = dataUrl.replaceAll(C_FEC_INI, fechaIni);
 				dataUrl = dataUrl.replaceAll(C_FEC_FIN, fechaFin);
-				LOGGER.info("Descargando URL [" + dataUrl + "]");
-				if (USE_PROXY)
+				if (fechaIni.compareToIgnoreCase(ultimaFechaDisponible) < 0)
 				{
-					descargarFicheroConProxy(mercado, bolsa, indice, ticker, dataUrl);
+					LOGGER.info("Descargando URL [" + dataUrl + "]");
+					if (USE_PROXY)
+					{
+						descargarFicheroConProxy(mercado, bolsa, indice, ticker, dataUrl);
+					}
+					else
+					{
+						descargarFicheroSinProxy(mercado, bolsa, indice, ticker, dataUrl);
+					}
 				}
 				else
 				{
-					descargarFicheroSinProxy(mercado, bolsa, indice, ticker, dataUrl);
+					LOGGER.info("Ultima fecha disponible [" + ultimaFechaDisponible + "]. No se descarga la URL [" + dataUrl + "]");
 				}
 			}
 		}
