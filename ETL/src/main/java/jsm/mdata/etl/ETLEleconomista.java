@@ -187,15 +187,14 @@ public class ETLEleconomista
 				String fechaIni = getFechaInicioDescarga(dbConnection, mercado, bolsa, indice, ticker);
 				Calendar calendar1 = Calendar.getInstance();
 				calendar1.setTime(new Date());
-				calendar1.add(Calendar.DATE, -1);
-				String ultimaFechaDisponible = C_FEC_FORMAT.format(calendar1.getTime());
+				String fechaActual = C_FEC_FORMAT.format(calendar1.getTime());
 				Calendar calendar2 = Calendar.getInstance();
 				calendar2.setTime(C_FEC_FORMAT.parse(fechaIni));
 				calendar2.add(Calendar.YEAR, 1);
 				String fechaFin = C_FEC_FORMAT.format(calendar2.getTime());
 				dataUrl = dataUrl.replaceAll(C_FEC_INI, fechaIni);
 				dataUrl = dataUrl.replaceAll(C_FEC_FIN, fechaFin);
-				if (fechaIni.compareToIgnoreCase(ultimaFechaDisponible) < 0)
+				if (fechaIni.compareToIgnoreCase(fechaActual) < 0)
 				{
 					LOGGER.info("Descargando URL [" + dataUrl + "]");
 					if (USE_PROXY)
@@ -209,7 +208,7 @@ public class ETLEleconomista
 				}
 				else
 				{
-					LOGGER.info("Ultima fecha disponible [" + ultimaFechaDisponible + "]. No se descarga la URL [" + dataUrl + "]");
+					LOGGER.info("Fecha actual [" + fechaActual + "]. No se descarga la URL [" + dataUrl + "]");
 				}
 			}
 		}
