@@ -5,36 +5,30 @@ select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha
 from public.mercados
 group by mercado, bolsa, indice, ticker order by fecha_ini, mercado, bolsa, indice, ticker;
 --
--- MODO RUDIMENTARIO DE SACAR VARIACION ENTRE DIAS (HAY QUE MEJORARLO)
+-- MUESTRA VARIACIÓN DE PRECIO DE CIERRE ENTRE DOS FECHAS ESPECIFICADAS
 --
-select totals.*, 
+select m4.mercado, m4.bolsa, m4.indice, m4.ticker, m4.fecha_inicial, m4.cierre_inicial, m4.fecha_final, m4.cierre_final, 
+round((m4.cierre_final*100/m4.cierre_inicial)-100, 2) as var
+from
 (
-	(totals.hoy*100/totals.enero)-100
-)as var_percent
-from 
-(
-select m1.mercado, m1.bolsa, m1.indice, m1.ticker, 
-count(1) as num_dias, min(m1.fecha) as fecha_ini, max(m1.fecha) fecha_fin, 
-(
-	select m3.cierre from public.mercados m3 where
-	m3.mercado = m1.mercado and
-	m3.bolsa = m1.bolsa and
-	m3.indice = m1.indice and
-	m3.ticker = m1.ticker and
-	m3.fecha = '2017-10-03'
+	select distinct m1.mercado, m1.bolsa, m1.indice, m1.ticker,
+	to_date('2017-09-20', 'yyyy-mm-dd') as fecha_inicial,
+	(
+		select m2.cierre from public.mercados m2 
+		where m2.mercado = m1.mercado and m2.bolsa = m1.bolsa and m2.indice = m1.indice 
+		and m2.ticker = m1.ticker and m2.fecha = to_date('2017-09-20', 'yyyy-mm-dd') 
+	) 
+	as cierre_inicial,
+	to_date('2017-10-06', 'yyyy-mm-dd') as fecha_final,
+	(
+		select m3.cierre from public.mercados m3 
+		where m3.mercado = m1.mercado and m3.bolsa = m1.bolsa and m3.indice = m1.indice 
+		and m3.ticker = m1.ticker and m3.fecha = to_date('2017-10-06', 'yyyy-mm-dd') 
+	) 
+	as cierre_final
+	from public.mercados m1 order by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 )
-as enero,
-(
-	select m2.cierre from public.mercados m2 where
-	m2.mercado = m1.mercado and
-	m2.bolsa = m1.bolsa and
-	m2.indice = m1.indice and
-	m2.ticker = m1.ticker and
-	m2.fecha = max(m1.fecha)
-) as hoy
-from public.mercados m1
-group by m1.mercado, m1.bolsa, m1.indice, m1.ticker order by m1.mercado, m1.bolsa, m1.indice, m1.ticker
-) as totals where totals.indice = 'IBEX-35' order by var_percent desc;
+as m4 order by var asc;
 --
 --
 --
