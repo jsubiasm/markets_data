@@ -45,3 +45,12 @@ create
         ticker,
         fecha
     ) ;
+--
+-- INSERTA DATOS EN TMP_DATA A PARTIR DE MERCADOS
+--
+delete from public.tmp_data;
+insert into public.tmp_data select * from public.mercados where fecha > '2015-01-01' and fecha < '2015-12-31'; 
+select count(1) from public.tmp_data;
+--
+-- 
+--
