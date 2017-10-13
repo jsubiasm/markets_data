@@ -343,7 +343,6 @@ STOCK##CSEP##USA##CSEP##S-P-500##CSEP##AUTONATION##CSEP##http://www.eleconomista
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##AUTOZONE##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/AUTOZONE/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##AVALONBAY-COM-REIT##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/AVALONBAY-COM-REIT/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##AVERY-DENNISON##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/AVERY-DENNISON/##FINI##/##FFIN##
-STOCK##CSEP##USA##CSEP##S-P-500##CSEP##BAKER-HUGHES##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/BAKER-HUGHES/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##BALL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/BALL/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##BANK-OF-AMERICA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/BANK-OF-AMERICA/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##BANK-OF-NY-MELLON##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/BANK-OF-NY-MELLON/##FINI##/##FFIN##
@@ -399,7 +398,6 @@ STOCK##CSEP##USA##CSEP##S-P-500##CSEP##CME-GROUP-A##CSEP##http://www.eleconomist
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##CMS-ENERGY-CORP##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/CMS-ENERGY-CORP/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##COACH-##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/COACH-/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##COCA-COLA##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/COCA-COLA/##FINI##/##FFIN##
-STOCK##CSEP##USA##CSEP##S-P-500##CSEP##COCA-COLA-ENTPR##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/COCA-COLA-ENTPR/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##COGZT-TECH-SLTS-A##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/COGZT-TECH-SLTS-A/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##COLGATE-PALMOLIVE##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/COLGATE-PALMOLIVE/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##COMCAST-CLASS-A##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/COMCAST-CLASS-A/##FINI##/##FFIN##
@@ -436,10 +434,8 @@ STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DOLLAR-GENERAL##CSEP##http://www.eleconom
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DOLLAR-TREE##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DOLLAR-TREE/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DOMINION-RES##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DOMINION-RES/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DOVER-CORP##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DOVER-CORP/##FINI##/##FFIN##
-STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DOW-CHEMICAL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DOW-CHEMICAL/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DR-PEPPER-SNAP##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DR-PEPPER-SNAP/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DTE-ENERGY##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DTE-ENERGY/##FINI##/##FFIN##
-STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DU-PONTEI-DE-NMR##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DU-PONTEI-DE-NMR/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DUKE-ENERGY##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DUKE-ENERGY/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##DXC-TECHNOLOGY##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/DXC-TECHNOLOGY/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##E-TRADE-FNCL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/E-TRADE-FNCL/##FINI##/##FFIN##
@@ -452,7 +448,6 @@ STOCK##CSEP##USA##CSEP##S-P-500##CSEP##EDISON-INTL##CSEP##http://www.eleconomist
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##EDWARDS-LIFESCNS-##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/EDWARDS-LIFESCNS-/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##ELECTRONIC-ARTS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ELECTRONIC-ARTS/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##ELI-LILLY-CO##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ELI-LILLY-CO/##FINI##/##FFIN##
-STOCK##CSEP##USA##CSEP##S-P-500##CSEP##EMC##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/EMC/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##EMERSON-ELECTRIC##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/EMERSON-ELECTRIC/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##ENTERGY##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ENTERGY/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##ENVISION-HLTHCR##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/ENVISION-HLTHCR/##FINI##/##FFIN##
@@ -700,7 +695,6 @@ STOCK##CSEP##USA##CSEP##S-P-500##CSEP##SL-GREEN-REALT-REIT##CSEP##http://www.ele
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##SNAP-ON##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/SNAP-ON/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##SOUTHERN##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/SOUTHERN/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##SOUTHWEST-AIRLINES##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/SOUTHWEST-AIRLINES/##FINI##/##FFIN##
-STOCK##CSEP##USA##CSEP##S-P-500##CSEP##STAPLES-INC##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/STAPLES-INC/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##STARBUCKS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/STARBUCKS/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##STATE-STREET##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/STATE-STREET/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##STERICYCLE##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/STERICYCLE/##FINI##/##FFIN##
@@ -771,7 +765,6 @@ STOCK##CSEP##USA##CSEP##S-P-500##CSEP##WESTERN-DIGITAL##CSEP##http://www.elecono
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##WESTROCK##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/WESTROCK/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##WEYERHAEUSER##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/WEYERHAEUSER/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##WHIRLPOOL##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/WHIRLPOOL/##FINI##/##FFIN##
-STOCK##CSEP##USA##CSEP##S-P-500##CSEP##WHOLE-FOODS-MARKET##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/WHOLE-FOODS-MARKET/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##WILLIAMS-COMPANIES##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/WILLIAMS-COMPANIES/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##WILLIS-TOWERS##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/WILLIS-TOWERS/##FINI##/##FFIN##
 STOCK##CSEP##USA##CSEP##S-P-500##CSEP##WW-GRAINGER##CSEP##http://www.eleconomista.es/descargas-historicos/empresa/WW-GRAINGER/##FINI##/##FFIN##
