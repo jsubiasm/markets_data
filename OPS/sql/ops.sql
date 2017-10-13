@@ -51,18 +51,8 @@ from
 	as precio_final
 	from
 	(
-		select distinct m1.mercado, m1.bolsa, m1.indice, m1.ticker,
-		(
-			select min(m2.fecha) from public.tmp_data m2
-			where m2.mercado = m1.mercado and m2.bolsa = m1.bolsa and m2.indice = m1.indice 
-			and m2.ticker = m1.ticker group by m2.mercado, m2.bolsa, m2.indice, m2.ticker
-		) as fecha_inicial,
-		(
-			select max(m3.fecha) from public.tmp_data m3
-			where m3.mercado = m1.mercado and m3.bolsa = m1.bolsa and m3.indice = m1.indice 
-			and m3.ticker = m1.ticker group by m3.mercado, m3.bolsa, m3.indice, m3.ticker
-		) as fecha_final
-		from public.tmp_data m1 order by m1.mercado, m1.bolsa, m1.indice, m1.ticker
+		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.fecha) as fecha_inicial, max(m1.fecha) as fecha_final
+		from public.tmp_data m1 group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
 	as m4
 )
