@@ -1,0 +1,4 @@
+--
+-- ETFS ISHARES XETRA
+--
+ETF##CSEP##GER##CSEP##-##CSEP##etfs-ishares-xetra##CSEP##https://es.investing.com/etfs/germany-etfs?&asset=1&issuer_filter=iShares
