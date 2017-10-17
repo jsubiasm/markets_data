@@ -1,330 +1,330 @@
 --
 -- ETFS ISHARES XETRA
 --
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core DAX UCITS##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Automation & Robotics Acc##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009408
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-s-p-500---gbp-historical-data?cid=45782
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core FTSE 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997715
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Banks 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-600-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares TecDAX UCITS##CSEP##https://es.investing.com/etfs/ishares-tecdax-(de)-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Global Select Dividend 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-global-sel-div.-100-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI World UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-msci-world---gbp-historical-data?cid=38614
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Basic Resources UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-basicresources-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Oil & Gas UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-oil-gas-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core MSCI World UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-world---acc-historical-data?cid=45873
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Emerging Markets UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-msci-emerging-market-historical-data?cid=46607
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=45813
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Listed Private Equity UCITS##CSEP##https://es.investing.com/etfs/ishares-s-p-listed-private-eqty-historical-data?cid=46492
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Japan UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-msci-japan---ie-historical-data?cid=45811
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Asia Pacific Select Dividend 30##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI France UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-france-ucits-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge MSCI Europe Min Vol##CSEP##https://es.investing.com/etfs/ishares-edge-msci-europe-min-vola-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI AC Far East ex-Japan Small Cap UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-far-est-x-jap.-smlcp-historical-data?cid=45872
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares DivDAX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-divdax-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge MSCI World MF GBp##CSEP##https://es.investing.com/etfs/ishares-edge-msci-world-mf-gbp-historical-data?cid=994123
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Banks UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-banks-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core S&P 500 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-s-p-500-historical-data?cid=45844
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Sust MSCI EM SRI##CSEP##https://es.investing.com/etfs/ishares-sust-msci-em-sri-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core MSCI Emerging Markets IMI UCITS##CSEP##https://es.investing.com/etfs/ishares-core-msci-em-imi-historical-data?cid=994133
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Automation & Robotics Acc##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009419
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI AC Far East ex-Japan UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-ac-far-east-x-japan-historical-data?cid=38609
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Pacific ex-Japan UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-msci-pacific-ex-japan-uk-historical-data?cid=45777
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe UCITS Acc##CSEP##https://es.investing.com/etfs/ishares-msci-europe-(acc)-uk-historical-data?cid=46060
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx-50-historical-data?cid=46056
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Automation & Robotics Acc##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009418
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 USD Info Tech##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-info-tech-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 USD Health Care##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-health-care-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Global Clean Energy UCITS##CSEP##https://es.investing.com/etfs/ishares-global-clean-energy-historical-data?cid=45836
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Brazil UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-msci-brazil-gbp-historical-data?cid=45778
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Chemicals UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-600-chemicals-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Ageing Population Acc##CSEP##https://es.investing.com/etfs/ishares-ageing-population-acc-historical-data?cid=1037050
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=45848
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P Commodity Producers Oil and Gas UCITS##CSEP##https://es.investing.com/etfs/ishares-s-p-comm.-prod.-oil-gas-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MDAX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-mdax-(de)-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-msci-europe---ie-historical-data?cid=46485
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Automobiles & Parts UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-auto-parts-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares ATX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI World EUR Hedged UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-world-mon.-hedged-historical-data?cid=46487
-ETF##CSEP##GER##CSEP##-##CSEP##iShares NASDAQ-100 UCITS##CSEP##https://es.investing.com/etfs/ishares-nasdaq-100-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Value Factor##CSEP##https://es.investing.com/etfs/ishares-msci-europe-value-factor-historical-data?cid=995628
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1009261
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Eurozone Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1009458
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge MSCI World Min Vol##CSEP##https://es.investing.com/etfs/ishares-edge-msci-world-min-vol-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe Mid 200 UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-mid-200-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO Dividend UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-select-div.-historical-data?cid=46474
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Food & Beverage UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-food-beverage-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Global Water UCITS##CSEP##https://es.investing.com/etfs/ishares-s-p-glbl-water-historical-data?cid=46491
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Telecommunications UCITS##CSEP##https://es.investing.com/etfs/ishares-eurostoxx-600-telecom--de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares ATX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997634
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Health Care UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-health-care-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI World Value Factor UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-wrld-value-factor-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core DAX UCITS##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998517
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1009462
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Insurance UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-insurance-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe Small 200 UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-small-200-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-euro-select-div.-30-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares JPX-Nikkei 400 EUR Hdg##CSEP##https://es.investing.com/etfs/ishares-jpx-nikkei-400-eur-hdg-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Real Estate UCITS##CSEP##https://es.investing.com/etfs/ishares-eurostoxx-600-real-estate-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Developed Markets Property Yield UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-nareit-dev.-markets-historical-data?cid=38605
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Poland UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-poland-historical-data?cid=45870
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Asia Pacific Select Dividend 30##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997951
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI EM Minimum Volatility##CSEP##https://es.investing.com/etfs/ishares-msci-em-minimum-volatility-historical-data?cid=994135
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Healthcare Innovation Acc##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009026
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI World Momentum Factor UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-world-momentum-factor-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Small UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=46475
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Emerging Markets UCITS Acc##CSEP##https://es.investing.com/etfs/ishares-msci-emerging-mrkt---acc-historical-data?cid=46604
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Utilities UCITS##CSEP##https://es.investing.com/etfs/ishares-eurostoxx-600-utilities-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P Gold Producers UCITS##CSEP##https://es.investing.com/etfs/ishares-s-p-commodity-prod.-gold-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Japan EUR Hedged UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-japan-mon.-euro-hed.-historical-data?cid=46741
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Healthcare Innovation Acc##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009078
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Eurozone Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core MSCI Japan IMI UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-japan---acc-historical-data?cid=46059
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI World Quality Factor UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-wrld-quality-factor-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Emerging Markets Asia UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-em-asia-historical-data?cid=45840
-ETF##CSEP##GER##CSEP##-##CSEP##Ishares Dow Jones U.S. Select Dividend UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-us-select-dividend-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Bric 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-birc-50---ie-historical-data?cid=38607
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Emerging Markets Dividend UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-em-select-dividend-£-historical-data?cid=46600
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Global Sustainability Screened U##CSEP##https://es.investing.com/etfs/ishares-dj-global-sust-screened-uk-historical-data?cid=38617
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Emerging Markets Islamic UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-emerging-mrkt-islamic-historical-data?cid=46605
-ETF##CSEP##GER##CSEP##-##CSEP##iShares TA-25 Israel##CSEP##https://es.investing.com/etfs/ishares-ta25-israel-ucits-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI World Size Factor UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-wrld-size-factor-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge MSCI World Minimum Volatility Hedged##CSEP##https://es.investing.com/etfs/ishrs-edge-msci-wrld-minvol-hdg-acc-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge MSCI Europe MF GBp##CSEP##https://es.investing.com/etfs/ishares-edge-msci-europe-mf-gbp-historical-data?cid=994118
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Global Titans 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-global-titans-50-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##Ishares Dow Jones China Offshore 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-china-offshore-50---de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares UK Dividend UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-uk-dividend-plus---ie-historical-data?cid=38608
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Taiwan UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-taiwan-gbp-historical-data?cid=45775
-ETF##CSEP##GER##CSEP##-##CSEP##iShares SLI UCITS DE##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Global Timber & Forestry UCITS##CSEP##https://es.investing.com/etfs/ishares-s-p-timber-forestry-gbp-historical-data?cid=46090
-ETF##CSEP##GER##CSEP##-##CSEP##iShares European Property Yield UCITS##CSEP##https://es.investing.com/etfs/ishares-nareit-european-prop.-fund-historical-data?cid=38612
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core DAX UCITS##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998503
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 ex-Financials##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-x-financials-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-50-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Construction & Materials##CSEP##https://es.investing.com/etfs/ishares-stoxxeuro-600-cons.---mat.-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1009258
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Turkey UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-turkey-gbp-historical-data?cid=44548
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P SmallCap 600 UCITS##CSEP##https://es.investing.com/etfs/ishares-s-p-smallcap-600-historical-data?cid=45781
-ETF##CSEP##GER##CSEP##-##CSEP##iShares ATX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997640
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Travel & Leisure UCITS##CSEP##https://es.investing.com/etfs/ishares-eurostoxx600-trvl---leis.-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1009191
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Industrial Average UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-industrial-average-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Mid UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=46473
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Asia Pacific Select Dividend 30##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997946
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Global Infrastructure UCITS##CSEP##https://es.investing.com/etfs/ishares-macquarie-global-inf.-100-historical-data?cid=38611
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Asia Pacific Select Dividend 30##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997964
-ETF##CSEP##GER##CSEP##-##CSEP##iShares ATX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997632
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 USD Financials##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-financials-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Personal & Household Good##CSEP##https://es.investing.com/etfs/ishares-stoxx-600-pers-housld-gds-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1009459
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge S&P 500 Min Vol##CSEP##https://es.investing.com/etfs/ishares-edge-sp-500-min-vol-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Telecommunications 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Asia Pacific Select Dividend 30##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997957
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1009262
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1009185
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997965
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Industrial Goods & Servic##CSEP##https://es.investing.com/etfs/ishares-stoxx600-ind.-goods--ser.-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI EMU UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-emu-historical-data?cid=45841
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core MSCI Pacific ex Japan UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-pacific-x-japan-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe ex-UK UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-europe-ex-uk-historical-data?cid=44523
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Russia Adr Gdr UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-russia-historical-data?cid=45845
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nasdaq 100 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nasdaq-100-historical-data?cid=46049
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1008809
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997991
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core DAX UCITS##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998480
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Eastern Europe Capped UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-eastern-europe-10-40-historical-data?cid=46484
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1008947
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997958
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Industrial Average UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-dow-jones-ind.-average-historical-data?cid=46048
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI North America UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-north-america-gbp-historical-data?cid=37538
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Banks 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1008862
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core MSCI Emerging Markets IMI UCITS##CSEP##https://es.investing.com/etfs/ishares-core-msci-em-imi-historical-data?cid=1024491
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Retail UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-euro-600-retail-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1008811
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI ACWI UCITS##CSEP##https://es.investing.com/etfs/ishares-v-msci-acwi-historical-data?cid=46483
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Emerging Markets Small Cap UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-em-smlcap-$-historical-data?cid=46606
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Automation & Robotics Acc##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009435
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Australia UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-australia-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1008807
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Japan Small Cap UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-msci-japan-small-cap-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI USA UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-usa-historical-data?cid=45846
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI South Africa UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-south-africa-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Banks 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1009109
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Eurozone Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1009256
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1008952
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Automation & Robotics Acc##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009457
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1009188
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Asia Pacific Dividend UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pacific-div.-30-historical-data?cid=38615
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI USA Small Cap UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-usa-smlcap-uk-historical-data?cid=46810
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Agribusiness UCITS##CSEP##https://es.investing.com/etfs/s-p-commodity-producers-agri.-historical-data?cid=46488
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI USA Islamic UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-usa-islamic-gbp-historical-data?cid=46821
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=46050
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Europe Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-europe-sust-screened-as-historical-data?cid=46461
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSE MIB UCITS Acc##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-mib-historical-data?cid=45842
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI China A UCITS USD##CSEP##https://es.investing.com/etfs/ishares-msci-china-a-ucits-usd-historical-data?cid=994116
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Small UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009463
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI EMU Small Cap UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-emu-smlcap-uk-historical-data?cid=38651
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 EUR Hedged UCITS##CSEP##https://es.investing.com/etfs/ishares-s-p500-monthly-euro-hedged-historical-data?cid=46822
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1009255
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI EMU Mid Cap UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-emu-mid-cap-historical-data?cid=994132
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Emerging Markets Latin America UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-latin-america---gbp-historical-data?cid=37521
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Mid UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009259
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Technology UCITS##CSEP##https://es.investing.com/etfs/ishares-eurostoxx-600-technology-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe Large 200 UCITS##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-large-200-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Brazil UCITS Acc##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-brazil-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Mid UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009308
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core FTSE 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997731
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Banks 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1009257
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Korea UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-msci-korea-gbp-historical-data?cid=45779
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1008805
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Momentum UK##CSEP##https://es.investing.com/etfs/ishares-msci-europe-momentum-uk-historical-data?cid=995617
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI EM Consumer Growth##CSEP##https://es.investing.com/etfs/ishares-msci-em-consumer-growth-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1009183
-ETF##CSEP##GER##CSEP##-##CSEP##iShares China Large Cap UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-xinhua-china25-historical-data?cid=45780
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1008808
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1009263
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Mid UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009056
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSE 100 UCITS Acc##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997768
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core FTSE 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997750
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI EMU USD Hdg##CSEP##https://es.investing.com/etfs/cs-etf(ie)on-cs-gbl-altrn.engy-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSE 100 UCITS Acc##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=45819
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997954
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Size Factor##CSEP##https://es.investing.com/etfs/ishares-msci-europe-size-factor-historical-data?cid=995625
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Canada UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-canada-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1009307
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core DAX UCITS##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998550
-ETF##CSEP##GER##CSEP##-##CSEP##iShares SLI UCITS DE##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010564
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1008863
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSE 100 UCITS Acc##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997738
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Mid UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009111
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1009110
-ETF##CSEP##GER##CSEP##-##CSEP##iShares AEX##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997981
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core DAX UCITS##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998533
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSEurofirst 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997769
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997973
-ETF##CSEP##GER##CSEP##-##CSEP##iShares AEX##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997972
-ETF##CSEP##GER##CSEP##-##CSEP##iShares ATX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997647
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1009108
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997971
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Asia Pacific Select Dividend 30##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997970
-ETF##CSEP##GER##CSEP##-##CSEP##iShares SLI UCITS DE##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010568
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1009461
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997982
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Banks 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1009460
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Telecommunications 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1009114
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1008943
-ETF##CSEP##GER##CSEP##-##CSEP##iShares SLI UCITS DE##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010584
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Small UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009113
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Telecommunications 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1008951
-ETF##CSEP##GER##CSEP##-##CSEP##iShares US Energy##CSEP##https://es.investing.com/etfs/ishares-dj-us-energy-sector-fund-historical-data?cid=38200
-ETF##CSEP##GER##CSEP##-##CSEP##iShares ATX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997643
-ETF##CSEP##GER##CSEP##-##CSEP##iShares SLI UCITS DE##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010581
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Telecommunications 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1009464
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Select Dividend 30 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1009112
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core FTSE 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997767
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1008857
-ETF##CSEP##GER##CSEP##-##CSEP##iShares AEX##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997987
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Telecommunications 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1008864
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSE 100 UCITS Acc##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997789
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSEurofirst 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997790
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997988
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1008946
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Small UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1008949
-ETF##CSEP##GER##CSEP##-##CSEP##iShares SLI UCITS DE##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010572
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Asia Pacific Select Dividend 30##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997985
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSEurofirst 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997796
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Turkey##CSEP##https://es.investing.com/etfs/ishares-msci-turkey-historical-data?cid=1031037
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997986
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Global Gold Miners##CSEP##https://es.investing.com/etfs/ishares-msci-global-gold-miners-be-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares US Preferred Stock##CSEP##https://es.investing.com/etfs/ishares-us-preferred-stock-historical-data?cid=1031033
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core DAX UCITS##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998561
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1008945
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1008858
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1008859
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge MSCI A Min Vol Asia ex Japan##CSEP##https://es.investing.com/etfs/ishares-msci-asia-ex-japan-minimum-historical-data?cid=1031774
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Asia Pacific Select Dividend 30##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997979
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Eurozone Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1008856
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997980
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Mid UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1008860
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1009107
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Banks 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1008950
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Mid UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1008948
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Small UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1008861
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1009105
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Eurozone Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1008944
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Eurozone Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1009106
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core EURO STOXX 50 UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1008855
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Quality DE##CSEP##https://es.investing.com/etfs/ishares-msci-europe-quality-de-historical-data?cid=995624
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI USA Dividend IQ##CSEP##https://es.investing.com/etfs/ishares-msci-usa-dividend-iq-ucits-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 USD Energy##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-energy-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 USD Cons Discr##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-cons-discr-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI EMU Large Cap UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-emu-large-cap-historical-data?cid=994131
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge MSCI USA MF GBp##CSEP##https://es.investing.com/etfs/ishares-edge-msci-usa-mf-gbp-historical-data?cid=994122
-ETF##CSEP##GER##CSEP##-##CSEP##iShares US Equity Buyback Achievers##CSEP##https://es.investing.com/etfs/ishares-us-equity-buyback-historical-data?cid=956311
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Target UK Real Estate##CSEP##https://es.investing.com/etfs/ishares-msci-target-uk-real-estate-historical-data?cid=994113
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Sust MSCI Japan SRI EUR Hdg##CSEP##https://es.investing.com/etfs/ishares-sustainable-msci-japan-sri-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Sust MSCI USA SRI##CSEP##https://es.investing.com/etfs/ishares-sust-msci-usa-sri-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Value Factor##CSEP##https://es.investing.com/etfs/ishares-msci-europe-value-factor-historical-data?cid=956308
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core FTSE 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997727
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSE 100 UCITS Acc##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997728
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Size Factor##CSEP##https://es.investing.com/etfs/ishares-msci-europe-size-factor-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Quality DE##CSEP##https://es.investing.com/etfs/ishares-msci-europe-quality-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Edge MSCI World Multifactor Hedged Acc##CSEP##https://es.investing.com/etfs/ishares-edge-msci-wrld-multihdg-acc-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Momentum UK##CSEP##https://es.investing.com/etfs/ishares-msci-europe-momentum-uk-historical-data?cid=956303
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Emerging Markets Infrastructure UCITS##CSEP##https://es.investing.com/etfs/ishares-s-p-emerging-mkts-infr.-historical-data?cid=46608
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI World Islamic UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-world-islamic---gbp-historical-data?cid=46486
-ETF##CSEP##GER##CSEP##-##CSEP##iShares US Property Yield UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-nareit-us-prop-fd-historical-data?cid=38606
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO Total Market Growth Large UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-growth-historical-data?cid=38610
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO Total Market Value Large UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-value-historical-data?cid=38613
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Asia Property Yield UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-nareit-asia-fd-historical-data?cid=38604
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSEurofirst 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=38603
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Financial Services UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-financial-svs-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Media UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-media-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI UK Small Cap UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-uk-small-cap-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI UK UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-uk-historical-data?cid=45816
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Korea UCITS Acc##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-korea-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSEurofirst 80 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-80---ie-historical-data?cid=46478
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Mexico Capped UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-mexico-cap-uk-historical-data?cid=45987
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Japan UCITS Acc##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-japan-historical-data?cid=45843
-ETF##CSEP##GER##CSEP##-##CSEP##iNAV iShares MSCI UK UCITS in GBP iNAV##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-uk-gbp-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iNAV iShares FTSE 100 UCITS Acc in GBP iNAV##CSEP##https://es.investing.com/etfs/cs-(ie)-on-ftse-100-de-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSEurofirst 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997729
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997947
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Telecommunications 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1009190
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Small UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009436
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 USD Financials##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-financials-historical-data?cid=1024483
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Mid UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009189
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Banks 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1009187
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Eurozone Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1009184
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1009186
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 USD Energy##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-energy-historical-data?cid=1024484
-ETF##CSEP##GER##CSEP##-##CSEP##iShares S&P 500 USD Info Tech##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-info-tech-historical-data?cid=1024485
-ETF##CSEP##GER##CSEP##-##CSEP##iShares AEX##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997966
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997967
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Healthcare Innovation Acc##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009080
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSEurofirst 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997752
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSE 100 UCITS Acc##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997751
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe Mid Cap Acc##CSEP##https://es.investing.com/etfs/ishares-msci-europe-mid-cap-acc-l-historical-data?cid=1030962
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Exponential Technologies##CSEP##https://es.investing.com/etfs/ishares-exponential-tech-mu-historical-data
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Healthcare Innovation Acc##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009079
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997960
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Telecommunications 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1009058
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Healthcare Innovation Acc##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009059
-ETF##CSEP##GER##CSEP##-##CSEP##iShares SLI UCITS DE##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010561
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Small UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009057
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Banks 30-15 UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1008810
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997948
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Dow Jones Eurozone Sustainability Screened##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1008806
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI USA Dividend IQ##CSEP##https://es.investing.com/etfs/ishares-msci-usa-dividend-iq-ucits-historical-data?cid=1024486
-ETF##CSEP##GER##CSEP##-##CSEP##iShares AEX##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997953
-ETF##CSEP##GER##CSEP##-##CSEP##iShares FTSEurofirst 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997739
-ETF##CSEP##GER##CSEP##-##CSEP##iShares AEX##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997959
-ETF##CSEP##GER##CSEP##-##CSEP##iShares Core FTSE 100 UCITS##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997737
-ETF##CSEP##GER##CSEP##-##CSEP##iShares ATX UCITS DE##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997637
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX Small UCITS##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009260
-ETF##CSEP##GER##CSEP##-##CSEP##iShares US Energy##CSEP##https://es.investing.com/etfs/ishares-dj-us-energy-sector-fund-historical-data?cid=21520
-ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX 50 UCITS Dist##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1009309
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dax-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-automation-robotics-acc-historical-data-cid=1009408##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009408
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500---gbp-historical-data-cid=45782##CSEP##https://es.investing.com/etfs/ishares-s-p-500---gbp-historical-data?cid=45782
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-100-historical-data-cid=997715##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997715
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-banks---de-historical-data##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-europe-600-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-600-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-tecdax-(de)-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-tecdax-(de)-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-global-sel-div.-100-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-global-sel-div.-100-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-world---gbp-historical-data-cid=38614##CSEP##https://es.investing.com/etfs/ishares-msci-world---gbp-historical-data?cid=38614
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-basicresources-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-basicresources-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-oil-gas-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-oil-gas-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-world---acc-historical-data-cid=45873##CSEP##https://es.investing.com/etfs/ishares-msci-world---acc-historical-data?cid=45873
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-emerging-market-historical-data-cid=46607##CSEP##https://es.investing.com/etfs/ishares-msci-emerging-market-historical-data?cid=46607
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-50-uk-historical-data-cid=45813##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=45813
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-listed-private-eqty-historical-data-cid=46492##CSEP##https://es.investing.com/etfs/ishares-s-p-listed-private-eqty-historical-data?cid=46492
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-japan---ie-historical-data-cid=45811##CSEP##https://es.investing.com/etfs/ishares-msci-japan---ie-historical-data?cid=45811
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pac.-div.-30-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-france-ucits-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-france-ucits-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-(de)-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-edge-msci-europe-min-vola-historical-data##CSEP##https://es.investing.com/etfs/ishares-edge-msci-europe-min-vola-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-far-est-x-jap.-smlcp-historical-data-cid=45872##CSEP##https://es.investing.com/etfs/ishares-msci-far-est-x-jap.-smlcp-historical-data?cid=45872
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-(de)-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-divdax-historical-data##CSEP##https://es.investing.com/etfs/ishares-divdax-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-edge-msci-world-mf-gbp-historical-data-cid=994123##CSEP##https://es.investing.com/etfs/ishares-edge-msci-world-mf-gbp-historical-data?cid=994123
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-banks-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-banks-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-s-p-500-historical-data-cid=45844##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-s-p-500-historical-data?cid=45844
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-sust-msci-em-sri-historical-data##CSEP##https://es.investing.com/etfs/ishares-sust-msci-em-sri-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-core-msci-em-imi-historical-data-cid=994133##CSEP##https://es.investing.com/etfs/ishares-core-msci-em-imi-historical-data?cid=994133
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-div.-30-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-automation-robotics-acc-historical-data-cid=1009419##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009419
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-ac-far-east-x-japan-historical-data-cid=38609##CSEP##https://es.investing.com/etfs/ishares-msci-ac-far-east-x-japan-historical-data?cid=38609
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-pacific-ex-japan-uk-historical-data-cid=45777##CSEP##https://es.investing.com/etfs/ishares-msci-pacific-ex-japan-uk-historical-data?cid=45777
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-(acc)-uk-historical-data-cid=46060##CSEP##https://es.investing.com/etfs/ishares-msci-europe-(acc)-uk-historical-data?cid=46060
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx-50-historical-data-cid=46056##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx-50-historical-data?cid=46056
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nikkei-225-historical-data##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-automation-robotics-acc-historical-data-cid=1009418##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009418
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500-usd-info-tech-historical-data##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-info-tech-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500-usd-health-care-historical-data##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-health-care-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-global-clean-energy-historical-data-cid=45836##CSEP##https://es.investing.com/etfs/ishares-global-clean-energy-historical-data?cid=45836
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-brazil-gbp-historical-data-cid=45778##CSEP##https://es.investing.com/etfs/ishares-msci-brazil-gbp-historical-data?cid=45778
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-europe-600-chemicals-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-600-chemicals-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ageing-population-acc-historical-data-cid=1037050##CSEP##https://es.investing.com/etfs/ishares-ageing-population-acc-historical-data?cid=1037050
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-euro-stoxx-50-historical-data-cid=45848##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=45848
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-comm.-prod.-oil-gas-historical-data##CSEP##https://es.investing.com/etfs/ishares-s-p-comm.-prod.-oil-gas-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-mdax-(de)-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-mdax-(de)-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe---ie-historical-data-cid=46485##CSEP##https://es.investing.com/etfs/ishares-msci-europe---ie-historical-data?cid=46485
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-auto-parts-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-auto-parts-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-atx-(de)-historical-data##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-world-mon.-hedged-historical-data-cid=46487##CSEP##https://es.investing.com/etfs/ishares-msci-world-mon.-hedged-historical-data?cid=46487
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nasdaq-100-historical-data##CSEP##https://es.investing.com/etfs/ishares-nasdaq-100-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-value-factor-historical-data-cid=995628##CSEP##https://es.investing.com/etfs/ishares-msci-europe-value-factor-historical-data?cid=995628
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-div.-30-de-historical-data-cid=1009261##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1009261
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-eurozone-sust.-screened-historical-data-cid=1009458##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1009458
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-edge-msci-world-min-vol-historical-data##CSEP##https://es.investing.com/etfs/ishares-edge-msci-world-min-vol-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-europe-mid-200-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-mid-200-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-select-div.-historical-data-cid=46474##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-select-div.-historical-data?cid=46474
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-food-beverage-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-food-beverage-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-glbl-water-historical-data-cid=46491##CSEP##https://es.investing.com/etfs/ishares-s-p-glbl-water-historical-data?cid=46491
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-eurostoxx-600-telecom--de-historical-data##CSEP##https://es.investing.com/etfs/ishares-eurostoxx-600-telecom--de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-atx-(de)-historical-data-cid=997634##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997634
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-health-care-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-health-care-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-wrld-value-factor-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-wrld-value-factor-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dax-de-historical-data-cid=998517##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998517
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-div.-30-de-historical-data-cid=1009462##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1009462
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-insurance-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-insurance-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-europe-small-200-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-small-200-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-euro-select-div.-30-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-euro-select-div.-30-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-jpx-nikkei-400-eur-hdg-historical-data##CSEP##https://es.investing.com/etfs/ishares-jpx-nikkei-400-eur-hdg-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-eurostoxx-600-real-estate-historical-data##CSEP##https://es.investing.com/etfs/ishares-eurostoxx-600-real-estate-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-nareit-dev.-markets-historical-data-cid=38605##CSEP##https://es.investing.com/etfs/ishares-ftse-nareit-dev.-markets-historical-data?cid=38605
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-poland-historical-data-cid=45870##CSEP##https://es.investing.com/etfs/ishares-msci-poland-historical-data?cid=45870
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pac.-div.-30-historical-data-cid=997951##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997951
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-em-minimum-volatility-historical-data-cid=994135##CSEP##https://es.investing.com/etfs/ishares-msci-em-minimum-volatility-historical-data?cid=994135
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-hc-innov-acc-mi-historical-data-cid=1009026##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009026
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-world-momentum-factor-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-world-momentum-factor-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-smallcap-historical-data-cid=46475##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=46475
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-emerging-mrkt---acc-historical-data-cid=46604##CSEP##https://es.investing.com/etfs/ishares-msci-emerging-mrkt---acc-historical-data?cid=46604
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-eurostoxx-600-utilities-historical-data##CSEP##https://es.investing.com/etfs/ishares-eurostoxx-600-utilities-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-commodity-prod.-gold-historical-data##CSEP##https://es.investing.com/etfs/ishares-s-p-commodity-prod.-gold-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-japan-mon.-euro-hed.-historical-data-cid=46741##CSEP##https://es.investing.com/etfs/ishares-msci-japan-mon.-euro-hed.-historical-data?cid=46741
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-hc-innov-acc-mi-historical-data-cid=1009078##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009078
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-eurozone-sust.-screened-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-japan---acc-historical-data-cid=46059##CSEP##https://es.investing.com/etfs/ishares-msci-japan---acc-historical-data?cid=46059
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-wrld-quality-factor-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-wrld-quality-factor-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-msci-em-asia-historical-data-cid=45840##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-em-asia-historical-data?cid=45840
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-us-select-dividend-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-us-select-dividend-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-birc-50---ie-historical-data-cid=38607##CSEP##https://es.investing.com/etfs/ishares-ftse-birc-50---ie-historical-data?cid=38607
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-em-select-dividend-£-historical-data-cid=46600##CSEP##https://es.investing.com/etfs/ishares-dj-em-select-dividend-£-historical-data?cid=46600
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-global-sust-screened-uk-historical-data-cid=38617##CSEP##https://es.investing.com/etfs/ishares-dj-global-sust-screened-uk-historical-data?cid=38617
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-emerging-mrkt-islamic-historical-data-cid=46605##CSEP##https://es.investing.com/etfs/ishares-msci-emerging-mrkt-islamic-historical-data?cid=46605
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ta25-israel-ucits-historical-data##CSEP##https://es.investing.com/etfs/ishares-ta25-israel-ucits-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-wrld-size-factor-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-wrld-size-factor-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishrs-edge-msci-wrld-minvol-hdg-acc-historical-data##CSEP##https://es.investing.com/etfs/ishrs-edge-msci-wrld-minvol-hdg-acc-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-edge-msci-europe-mf-gbp-historical-data-cid=994118##CSEP##https://es.investing.com/etfs/ishares-edge-msci-europe-mf-gbp-historical-data?cid=994118
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-global-titans-50-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-global-titans-50-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-china-offshore-50---de-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-china-offshore-50---de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-uk-dividend-plus---ie-historical-data-cid=38608##CSEP##https://es.investing.com/etfs/ishares-ftse-uk-dividend-plus---ie-historical-data?cid=38608
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-taiwan-gbp-historical-data-cid=45775##CSEP##https://es.investing.com/etfs/ishares-msci-taiwan-gbp-historical-data?cid=45775
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-smi-historical-data##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-timber-forestry-gbp-historical-data-cid=46090##CSEP##https://es.investing.com/etfs/ishares-s-p-timber-forestry-gbp-historical-data?cid=46090
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nareit-european-prop.-fund-historical-data-cid=38612##CSEP##https://es.investing.com/etfs/ishares-nareit-european-prop.-fund-historical-data?cid=38612
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dax-de-historical-data-cid=998503##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998503
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-x-financials-historical-data##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-x-financials-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-europe-50-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-50-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxxeuro-600-cons.---mat.-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxxeuro-600-cons.---mat.-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-(de)-de-historical-data-cid=1009258##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1009258
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-turkey-gbp-historical-data-cid=44548##CSEP##https://es.investing.com/etfs/ishares-msci-turkey-gbp-historical-data?cid=44548
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-smallcap-600-historical-data-cid=45781##CSEP##https://es.investing.com/etfs/ishares-s-p-smallcap-600-historical-data?cid=45781
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-atx-(de)-historical-data-cid=997640##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997640
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-eurostoxx600-trvl---leis.-historical-data##CSEP##https://es.investing.com/etfs/ishares-eurostoxx600-trvl---leis.-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-div.-30-de-historical-data-cid=1009191##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1009191
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-industrial-average-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-industrial-average-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-midcap-historical-data-cid=46473##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=46473
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pac.-div.-30-historical-data-cid=997946##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997946
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-macquarie-global-inf.-100-historical-data-cid=38611##CSEP##https://es.investing.com/etfs/ishares-macquarie-global-inf.-100-historical-data?cid=38611
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pac.-div.-30-historical-data-cid=997964##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997964
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-atx-(de)-historical-data-cid=997632##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997632
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500-usd-financials-historical-data##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-financials-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-600-pers-housld-gds-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-600-pers-housld-gds-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-(de)-de-historical-data-cid=1009459##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1009459
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-edge-sp-500-min-vol-historical-data##CSEP##https://es.investing.com/etfs/ishares-edge-sp-500-min-vol-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-telecom---de-historical-data##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pac.-div.-30-historical-data-cid=997957##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997957
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-(de)-de-historical-data-cid=1009262##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1009262
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-(de)-de-historical-data-cid=1009185##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1009185
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nikkei-225-historical-data-cid=997965##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997965
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx600-ind.-goods--ser.-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx600-ind.-goods--ser.-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-msci-emu-historical-data-cid=45841##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-emu-historical-data?cid=45841
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-msci-pacific-x-japan-de-historical-data##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-pacific-x-japan-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-ex-uk-historical-data-cid=44523##CSEP##https://es.investing.com/etfs/ishares-msci-europe-ex-uk-historical-data?cid=44523
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-msci-russia-historical-data-cid=45845##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-russia-historical-data?cid=45845
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nasdaq-100-historical-data-cid=46049##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nasdaq-100-historical-data?cid=46049
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-(de)-de-historical-data-cid=1008809##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1008809
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nikkei-225-historical-data-cid=997991##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997991
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dax-de-historical-data-cid=998480##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998480
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-eastern-europe-10-40-historical-data-cid=46484##CSEP##https://es.investing.com/etfs/ishares-msci-eastern-europe-10-40-historical-data?cid=46484
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-(de)-de-historical-data-cid=1008947##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1008947
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nikkei-225-historical-data-cid=997958##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997958
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-dow-jones-ind.-average-historical-data-cid=46048##CSEP##https://es.investing.com/etfs/cs-(ie)-dow-jones-ind.-average-historical-data?cid=46048
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-north-america-gbp-historical-data-cid=37538##CSEP##https://es.investing.com/etfs/ishares-msci-north-america-gbp-historical-data?cid=37538
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-banks---de-historical-data-cid=1008862##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1008862
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-core-msci-em-imi-historical-data-cid=1024491##CSEP##https://es.investing.com/etfs/ishares-core-msci-em-imi-historical-data?cid=1024491
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-euro-600-retail-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-euro-600-retail-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-div.-30-de-historical-data-cid=1008811##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1008811
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-v-msci-acwi-historical-data-cid=46483##CSEP##https://es.investing.com/etfs/ishares-v-msci-acwi-historical-data?cid=46483
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-em-smlcap-$-historical-data-cid=46606##CSEP##https://es.investing.com/etfs/ishares-msci-em-smlcap-$-historical-data?cid=46606
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-automation-robotics-acc-historical-data-cid=1009435##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009435
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-australia-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-australia-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-(de)-de-historical-data-cid=1008807##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1008807
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-japan-small-cap-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-japan-small-cap-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-msci-usa-historical-data-cid=45846##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-usa-historical-data?cid=45846
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-south-africa-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-south-africa-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-banks---de-historical-data-cid=1009109##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1009109
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-eurozone-sust.-screened-historical-data-cid=1009256##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1009256
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-div.-30-de-historical-data-cid=1008952##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1008952
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-automation-robotics-acc-historical-data-cid=1009457##CSEP##https://es.investing.com/etfs/ishares-automation-robotics-acc-historical-data?cid=1009457
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-(de)-de-historical-data-cid=1009188##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1009188
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pacific-div.-30-historical-data-cid=38615##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pacific-div.-30-historical-data?cid=38615
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-msci-usa-smlcap-uk-historical-data-cid=46810##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-usa-smlcap-uk-historical-data?cid=46810
+ETF##CSEP##GER##CSEP##-##CSEP##s-p-commodity-producers-agri.-historical-data-cid=46488##CSEP##https://es.investing.com/etfs/s-p-commodity-producers-agri.-historical-data?cid=46488
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-usa-islamic-gbp-historical-data-cid=46821##CSEP##https://es.investing.com/etfs/ishares-msci-usa-islamic-gbp-historical-data?cid=46821
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nikkei-225-historical-data-cid=46050##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=46050
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-europe-sust-screened-as-historical-data-cid=46461##CSEP##https://es.investing.com/etfs/ishares-dj-europe-sust-screened-as-historical-data?cid=46461
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-ftse-mib-historical-data-cid=45842##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-mib-historical-data?cid=45842
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-china-a-ucits-usd-historical-data-cid=994116##CSEP##https://es.investing.com/etfs/ishares-msci-china-a-ucits-usd-historical-data?cid=994116
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-smallcap-historical-data-cid=1009463##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009463
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-msci-emu-smlcap-uk-historical-data-cid=38651##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-emu-smlcap-uk-historical-data?cid=38651
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p500-monthly-euro-hedged-historical-data-cid=46822##CSEP##https://es.investing.com/etfs/ishares-s-p500-monthly-euro-hedged-historical-data?cid=46822
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-euro-stoxx-50-historical-data-cid=1009255##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1009255
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-emu-mid-cap-historical-data-cid=994132##CSEP##https://es.investing.com/etfs/ishares-msci-emu-mid-cap-historical-data?cid=994132
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-latin-america---gbp-historical-data-cid=37521##CSEP##https://es.investing.com/etfs/ishares-msci-latin-america---gbp-historical-data?cid=37521
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-midcap-historical-data-cid=1009259##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009259
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-eurostoxx-600-technology-historical-data##CSEP##https://es.investing.com/etfs/ishares-eurostoxx-600-technology-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-stoxx-europe-large-200-historical-data##CSEP##https://es.investing.com/etfs/ishares-stoxx-europe-large-200-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-msci-brazil-de-historical-data##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-brazil-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-midcap-historical-data-cid=1009308##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009308
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-100-historical-data-cid=997731##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997731
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-banks---de-historical-data-cid=1009257##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1009257
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-korea-gbp-historical-data-cid=45779##CSEP##https://es.investing.com/etfs/ishares-msci-korea-gbp-historical-data?cid=45779
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-euro-stoxx-50-historical-data-cid=1008805##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1008805
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-momentum-uk-historical-data-cid=995617##CSEP##https://es.investing.com/etfs/ishares-msci-europe-momentum-uk-historical-data?cid=995617
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-em-consumer-growth-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-em-consumer-growth-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-euro-stoxx-50-historical-data-cid=1009183##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1009183
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-xinhua-china25-historical-data-cid=45780##CSEP##https://es.investing.com/etfs/ishares-ftse-xinhua-china25-historical-data?cid=45780
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-50-uk-historical-data-cid=1008808##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1008808
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-50-uk-historical-data-cid=1009263##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1009263
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-midcap-historical-data-cid=1009056##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009056
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-ftse-100-historical-data-cid=997768##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997768
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-100-historical-data-cid=997750##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997750
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf(ie)on-cs-gbl-altrn.engy-historical-data##CSEP##https://es.investing.com/etfs/cs-etf(ie)on-cs-gbl-altrn.engy-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-ftse-100-historical-data-cid=45819##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=45819
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nikkei-225-historical-data-cid=997954##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997954
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-size-factor-historical-data-cid=995625##CSEP##https://es.investing.com/etfs/ishares-msci-europe-size-factor-historical-data?cid=995625
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-msci-canada-de-historical-data##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-canada-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-euro-stoxx-50-historical-data-cid=1009307##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1009307
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dax-de-historical-data-cid=998550##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998550
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-smi-historical-data-cid=1010564##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010564
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-div.-30-de-historical-data-cid=1008863##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1008863
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-ftse-100-historical-data-cid=997738##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997738
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-midcap-historical-data-cid=1009111##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009111
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-(de)-de-historical-data-cid=1009110##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1009110
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-aex-as-historical-data-cid=997981##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997981
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dax-de-historical-data-cid=998533##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998533
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftseurofirst-100---ie-historical-data-cid=997769##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997769
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nikkei-225-historical-data-cid=997973##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997973
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-aex-as-historical-data-cid=997972##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997972
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-atx-(de)-historical-data-cid=997647##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997647
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-50-uk-historical-data-cid=1009108##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1009108
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nikkei-225-historical-data-cid=997971##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997971
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pac.-div.-30-historical-data-cid=997970##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997970
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-smi-historical-data-cid=1010568##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010568
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-(de)-de-historical-data-cid=1009461##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1009461
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nikkei-225-historical-data-cid=997982##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997982
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-banks---de-historical-data-cid=1009460##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1009460
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-telecom---de-historical-data-cid=1009114##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1009114
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-euro-stoxx-50-historical-data-cid=1008943##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1008943
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-smi-historical-data-cid=1010584##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010584
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-smallcap-historical-data-cid=1009113##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009113
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-telecom---de-historical-data-cid=1008951##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1008951
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-us-energy-sector-fund-historical-data-cid=38200##CSEP##https://es.investing.com/etfs/ishares-dj-us-energy-sector-fund-historical-data?cid=38200
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-atx-(de)-historical-data-cid=997643##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997643
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-smi-historical-data-cid=1010581##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010581
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-telecom---de-historical-data-cid=1009464##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1009464
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-div.-30-de-historical-data-cid=1009112##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-div.-30-de-historical-data?cid=1009112
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-100-historical-data-cid=997767##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997767
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-(de)-de-historical-data-cid=1008857##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1008857
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-aex-as-historical-data-cid=997987##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997987
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-telecom---de-historical-data-cid=1008864##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1008864
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-ftse-100-historical-data-cid=997789##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997789
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftseurofirst-100---ie-historical-data-cid=997790##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997790
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nikkei-225-historical-data-cid=997988##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997988
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-50-uk-historical-data-cid=1008946##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1008946
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-smallcap-historical-data-cid=1008949##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1008949
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-smi-historical-data-cid=1010572##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010572
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pac.-div.-30-historical-data-cid=997985##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997985
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftseurofirst-100---ie-historical-data-cid=997796##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997796
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-turkey-historical-data-cid=1031037##CSEP##https://es.investing.com/etfs/ishares-msci-turkey-historical-data?cid=1031037
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nikkei-225-historical-data-cid=997986##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997986
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-global-gold-miners-be-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-global-gold-miners-be-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-us-preferred-stock-historical-data-cid=1031033##CSEP##https://es.investing.com/etfs/ishares-us-preferred-stock-historical-data?cid=1031033
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dax-de-historical-data-cid=998561##CSEP##https://es.investing.com/etfs/ishares-dax-de-historical-data?cid=998561
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-(de)-de-historical-data-cid=1008945##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1008945
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-50-uk-historical-data-cid=1008858##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1008858
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-(de)-de-historical-data-cid=1008859##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1008859
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-asia-ex-japan-minimum-historical-data-cid=1031774##CSEP##https://es.investing.com/etfs/ishares-msci-asia-ex-japan-minimum-historical-data?cid=1031774
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-asia-pac.-div.-30-historical-data-cid=997979##CSEP##https://es.investing.com/etfs/ishares-dj-asia-pac.-div.-30-historical-data?cid=997979
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-eurozone-sust.-screened-historical-data-cid=1008856##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1008856
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nikkei-225-historical-data-cid=997980##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997980
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-midcap-historical-data-cid=1008860##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1008860
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-50-(de)-de-historical-data-cid=1009107##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-50-(de)-de-historical-data?cid=1009107
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-banks---de-historical-data-cid=1008950##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1008950
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-midcap-historical-data-cid=1008948##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1008948
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-smallcap-historical-data-cid=1008861##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1008861
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-euro-stoxx-50-historical-data-cid=1009105##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1009105
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-eurozone-sust.-screened-historical-data-cid=1008944##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1008944
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-eurozone-sust.-screened-historical-data-cid=1009106##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1009106
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-euro-stoxx-50-historical-data-cid=1008855##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-euro-stoxx-50-historical-data?cid=1008855
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-quality-de-historical-data-cid=995624##CSEP##https://es.investing.com/etfs/ishares-msci-europe-quality-de-historical-data?cid=995624
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-usa-dividend-iq-ucits-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-usa-dividend-iq-ucits-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500-usd-energy-historical-data##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-energy-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500-usd-cons-discr-historical-data##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-cons-discr-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-emu-large-cap-historical-data-cid=994131##CSEP##https://es.investing.com/etfs/ishares-msci-emu-large-cap-historical-data?cid=994131
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-edge-msci-usa-mf-gbp-historical-data-cid=994122##CSEP##https://es.investing.com/etfs/ishares-edge-msci-usa-mf-gbp-historical-data?cid=994122
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-us-equity-buyback-historical-data-cid=956311##CSEP##https://es.investing.com/etfs/ishares-us-equity-buyback-historical-data?cid=956311
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-target-uk-real-estate-historical-data-cid=994113##CSEP##https://es.investing.com/etfs/ishares-msci-target-uk-real-estate-historical-data?cid=994113
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-sustainable-msci-japan-sri-historical-data##CSEP##https://es.investing.com/etfs/ishares-sustainable-msci-japan-sri-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-sust-msci-usa-sri-historical-data##CSEP##https://es.investing.com/etfs/ishares-sust-msci-usa-sri-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-value-factor-historical-data-cid=956308##CSEP##https://es.investing.com/etfs/ishares-msci-europe-value-factor-historical-data?cid=956308
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-100-historical-data-cid=997727##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997727
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-ftse-100-historical-data-cid=997728##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997728
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-size-factor-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-europe-size-factor-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-quality-de-historical-data##CSEP##https://es.investing.com/etfs/ishares-msci-europe-quality-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-edge-msci-wrld-multihdg-acc-historical-data##CSEP##https://es.investing.com/etfs/ishares-edge-msci-wrld-multihdg-acc-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-momentum-uk-historical-data-cid=956303##CSEP##https://es.investing.com/etfs/ishares-msci-europe-momentum-uk-historical-data?cid=956303
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-emerging-mkts-infr.-historical-data-cid=46608##CSEP##https://es.investing.com/etfs/ishares-s-p-emerging-mkts-infr.-historical-data?cid=46608
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-world-islamic---gbp-historical-data-cid=46486##CSEP##https://es.investing.com/etfs/ishares-msci-world-islamic---gbp-historical-data?cid=46486
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-nareit-us-prop-fd-historical-data-cid=38606##CSEP##https://es.investing.com/etfs/ishares-ftse-nareit-us-prop-fd-historical-data?cid=38606
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-growth-historical-data-cid=38610##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-growth-historical-data?cid=38610
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-value-historical-data-cid=38613##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-value-historical-data?cid=38613
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-nareit-asia-fd-historical-data-cid=38604##CSEP##https://es.investing.com/etfs/ishares-ftse-nareit-asia-fd-historical-data?cid=38604
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftseurofirst-100---ie-historical-data-cid=38603##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=38603
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-financial-svs-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-financial-svs-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-stoxx600-media-historical-data##CSEP##https://es.investing.com/etfs/ishares-dj-stoxx600-media-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-msci-uk-small-cap-historical-data##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-uk-small-cap-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-msci-uk-historical-data-cid=45816##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-uk-historical-data?cid=45816
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-msci-korea-de-historical-data##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-korea-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftseurofirst-80---ie-historical-data-cid=46478##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-80---ie-historical-data?cid=46478
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-msci-mexico-cap-uk-historical-data-cid=45987##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-mexico-cap-uk-historical-data?cid=45987
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-msci-japan-historical-data-cid=45843##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-japan-historical-data?cid=45843
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-msci-uk-gbp-de-historical-data##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-uk-gbp-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-ftse-100-de-historical-data##CSEP##https://es.investing.com/etfs/cs-(ie)-on-ftse-100-de-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftseurofirst-100---ie-historical-data-cid=997729##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997729
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-nikkei-225-historical-data-cid=997947##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997947
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-telecom---de-historical-data-cid=1009190##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1009190
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-smallcap-historical-data-cid=1009436##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009436
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500-usd-financials-historical-data-cid=1024483##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-financials-historical-data?cid=1024483
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-midcap-historical-data-cid=1009189##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-midcap-historical-data?cid=1009189
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-banks---de-historical-data-cid=1009187##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1009187
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-eurozone-sust.-screened-historical-data-cid=1009184##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1009184
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-50-uk-historical-data-cid=1009186##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1009186
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500-usd-energy-historical-data-cid=1024484##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-energy-historical-data?cid=1024484
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-s-p-500-usd-info-tech-historical-data-cid=1024485##CSEP##https://es.investing.com/etfs/ishares-s-p-500-usd-info-tech-historical-data?cid=1024485
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-aex-as-historical-data-cid=997966##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997966
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nikkei-225-historical-data-cid=997967##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997967
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-hc-innov-acc-mi-historical-data-cid=1009080##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009080
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftseurofirst-100---ie-historical-data-cid=997752##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997752
+ETF##CSEP##GER##CSEP##-##CSEP##cs-etf-(ie)-on-ftse-100-historical-data-cid=997751##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-ftse-100-historical-data?cid=997751
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-europe-mid-cap-acc-l-historical-data-cid=1030962##CSEP##https://es.investing.com/etfs/ishares-msci-europe-mid-cap-acc-l-historical-data?cid=1030962
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-exponential-tech-mu-historical-data##CSEP##https://es.investing.com/etfs/ishares-exponential-tech-mu-historical-data
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-hc-innov-acc-mi-historical-data-cid=1009079##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009079
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nikkei-225-historical-data-cid=997960##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997960
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-telecom---de-historical-data-cid=1009058##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-telecom---de-historical-data?cid=1009058
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-hc-innov-acc-mi-historical-data-cid=1009059##CSEP##https://es.investing.com/etfs/ishares-hc-innov-acc-mi-historical-data?cid=1009059
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-smi-historical-data-cid=1010561##CSEP##https://es.investing.com/etfs/ishares-smi-historical-data?cid=1010561
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-smallcap-historical-data-cid=1009057##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009057
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-euro-stoxx-banks---de-historical-data-cid=1008810##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-banks---de-historical-data?cid=1008810
+ETF##CSEP##GER##CSEP##-##CSEP##cs-(ie)-on-nikkei-225-historical-data-cid=997948##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nikkei-225-historical-data?cid=997948
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-eurozone-sust.-screened-historical-data-cid=1008806##CSEP##https://es.investing.com/etfs/ishares-dj-eurozone-sust.-screened-historical-data?cid=1008806
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-msci-usa-dividend-iq-ucits-historical-data-cid=1024486##CSEP##https://es.investing.com/etfs/ishares-msci-usa-dividend-iq-ucits-historical-data?cid=1024486
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-aex-as-historical-data-cid=997953##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997953
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftseurofirst-100---ie-historical-data-cid=997739##CSEP##https://es.investing.com/etfs/ishares-ftseurofirst-100---ie-historical-data?cid=997739
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-aex-as-historical-data-cid=997959##CSEP##https://es.investing.com/etfs/ishares-aex-as-historical-data?cid=997959
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-ftse-100-historical-data-cid=997737##CSEP##https://es.investing.com/etfs/ishares-ftse-100-historical-data?cid=997737
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-atx-(de)-historical-data-cid=997637##CSEP##https://es.investing.com/etfs/ishares-atx-(de)-historical-data?cid=997637
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-smallcap-historical-data-cid=1009260##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-smallcap-historical-data?cid=1009260
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-us-energy-sector-fund-historical-data-cid=21520##CSEP##https://es.investing.com/etfs/ishares-dj-us-energy-sector-fund-historical-data?cid=21520
+ETF##CSEP##GER##CSEP##-##CSEP##ishares-dj-euro-stoxx-50-uk-historical-data-cid=1009309##CSEP##https://es.investing.com/etfs/ishares-dj-euro-stoxx-50-uk-historical-data?cid=1009309

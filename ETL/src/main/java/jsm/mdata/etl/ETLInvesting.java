@@ -253,10 +253,6 @@ public class ETLInvesting extends ETLBase
 					{
 						insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, (Date) registro[0], (BigDecimal) registro[3], (BigDecimal) registro[4], (BigDecimal) registro[1], (BigDecimal) registro[5]);
 					}
-					else
-					{
-						LOGGER.info("El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + OUT_FEC_FORMAT.format(registro[0]) + "] ya existe");
-					}
 				}
 				registroIndex++;
 			}
@@ -280,7 +276,7 @@ public class ETLInvesting extends ETLBase
 		PreparedStatement pStatement = null;
 		try
 		{
-			String consultaSQL = "select count(1) from public.mercados where mercado = ? and bolsa = ? and indice = ? and ticker = ? and fecha = ?";
+			String consultaSQL = "select count(1) as existe from public.mercados where mercado = ? and bolsa = ? and indice = ? and ticker = ? and fecha = ?";
 			pStatement = dbConnection.prepareStatement(consultaSQL);
 			int paramIdx = 1;
 			pStatement.setString(paramIdx++, mercado);
@@ -289,7 +285,12 @@ public class ETLInvesting extends ETLBase
 			pStatement.setString(paramIdx++, ticker);
 			pStatement.setDate(paramIdx++, new java.sql.Date(fecha.getTime()));
 			ResultSet rSet = pStatement.executeQuery();
-			return rSet.next();
+			Integer existe = null;
+			if (rSet.next())
+			{
+				existe = rSet.getInt("existe");
+			}
+			return (existe != null && existe.intValue() > 0);
 		}
 		catch (Exception e)
 		{
