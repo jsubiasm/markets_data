@@ -4,9 +4,15 @@
 package jsm.mdata.etl;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -34,6 +40,8 @@ public class ETLInvesting extends ETLBase
 	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing\\download\\";
 	private static final String C_COMENT = "--";
 	private static final String C_SEPARADOR = "##CSEP##";
+	private static final SimpleDateFormat IN_FEC_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
+	private static final SimpleDateFormat OUT_FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
 
 	/**
@@ -134,12 +142,166 @@ public class ETLInvesting extends ETLBase
 			String indice = dataFileTokens[3];
 			String ticker = dataFileTokens[4];
 			List<String> dataFileLines = FileUtils.readLines(dataFile);
+			List<String> newDataFileLines = new ArrayList<String>();
 			for (String dataFileLine : dataFileLines)
 			{
-				// TODO: PROCESAR FICHERO
+				if (dataFileLine.indexOf("data-col-name=\"") != -1 || dataFileLine.indexOf("data-real-value=\"") != -1)
+				{
+					if (dataFileLine.indexOf("data-col-name=\"") != -1)
+					{
+						dataFileLine = dataFileLine.substring(dataFileLine.indexOf("data-col-name=\"") + "data-col-name=\"".length(), dataFileLine.indexOf("\" class=\""));
+					}
+					if (dataFileLine.indexOf("class=\"first left bold noWrap\">") != -1)
+					{
+						dataFileLine = dataFileLine.substring(dataFileLine.indexOf("class=\"first left bold noWrap\">") + "class=\"first left bold noWrap\">".length(), dataFileLine.indexOf("</td>"));
+					}
+					if (dataFileLine.indexOf("\" class=\"greenFont\"") != -1)
+					{
+						if (dataFileLine.indexOf("data-real-value=\"") != -1)
+						{
+							dataFileLine = dataFileLine.substring(dataFileLine.indexOf("data-real-value=\"") + "data-real-value=\"".length(), dataFileLine.indexOf("\" class=\"greenFont\""));
+						}
+					}
+					else if (dataFileLine.indexOf("\" class=\"redFont\"") != -1)
+					{
+						if (dataFileLine.indexOf("data-real-value=\"") != -1)
+						{
+							dataFileLine = dataFileLine.substring(dataFileLine.indexOf("data-real-value=\"") + "data-real-value=\"".length(), dataFileLine.indexOf("\" class=\"redFont\""));
+						}
+					}
+					else
+					{
+						if (dataFileLine.indexOf("data-real-value=\"") != -1)
+						{
+							dataFileLine = dataFileLine.substring(dataFileLine.indexOf("data-real-value=\"") + "data-real-value=\"".length(), dataFileLine.indexOf("\">"));
+						}
+					}
+					newDataFileLines.add(dataFileLine);
+				}
+			}
+			List<Object[]> listaRegistros = new ArrayList<Object[]>();
+			int lineIndex = 0;
+			for (String newDataFileLine : newDataFileLines)
+			{
+				if (lineIndex % 6 == 0)
+				{
+					listaRegistros.add(lineIndex / 6, new Object[6]);
+				}
+				if ((lineIndex / 6) == 0)
+				{
+					if ((lineIndex % 6) == 0 && !newDataFileLine.equalsIgnoreCase("date"))
+					{
+						throw new IllegalArgumentException("Se esperaba el valor [date] y se ha recuperado [" + newDataFileLine + "]");
+					}
+					else if ((lineIndex % 6) == 1 && !newDataFileLine.equalsIgnoreCase("price"))
+					{
+						throw new IllegalArgumentException("Se esperaba el valor [price] y se ha recuperado [" + newDataFileLine + "]");
+					}
+					else if ((lineIndex % 6) == 2 && !newDataFileLine.equalsIgnoreCase("open"))
+					{
+						throw new IllegalArgumentException("Se esperaba el valor [open] y se ha recuperado [" + newDataFileLine + "]");
+					}
+					else if ((lineIndex % 6) == 3 && !newDataFileLine.equalsIgnoreCase("high"))
+					{
+						throw new IllegalArgumentException("Se esperaba el valor [high] y se ha recuperado [" + newDataFileLine + "]");
+					}
+					else if ((lineIndex % 6) == 4 && !newDataFileLine.equalsIgnoreCase("low"))
+					{
+						throw new IllegalArgumentException("Se esperaba el valor [low] y se ha recuperado [" + newDataFileLine + "]");
+					}
+					else if ((lineIndex % 6) == 5 && !newDataFileLine.equalsIgnoreCase("vol"))
+					{
+						throw new IllegalArgumentException("Se esperaba el valor [vol] y se ha recuperado [" + newDataFileLine + "]");
+					}
+					listaRegistros.get(lineIndex / 6)[lineIndex % 6] = newDataFileLine;
+				}
+				else
+				{
+					if ((lineIndex % 6) == 0)
+					{
+						listaRegistros.get(lineIndex / 6)[lineIndex % 6] = IN_FEC_FORMAT.parse(newDataFileLine);
+					}
+					else if ((lineIndex % 6) == 1)
+					{
+						listaRegistros.get(lineIndex / 6)[lineIndex % 6] = new BigDecimal(NUMBER_FORMAT.parse(newDataFileLine).toString());
+					}
+					else if ((lineIndex % 6) == 2)
+					{
+						listaRegistros.get(lineIndex / 6)[lineIndex % 6] = new BigDecimal(NUMBER_FORMAT.parse(newDataFileLine).toString());
+					}
+					else if ((lineIndex % 6) == 3)
+					{
+						listaRegistros.get(lineIndex / 6)[lineIndex % 6] = new BigDecimal(NUMBER_FORMAT.parse(newDataFileLine).toString());
+					}
+					else if ((lineIndex % 6) == 4)
+					{
+						listaRegistros.get(lineIndex / 6)[lineIndex % 6] = new BigDecimal(NUMBER_FORMAT.parse(newDataFileLine).toString());
+					}
+					else if ((lineIndex % 6) == 5)
+					{
+						listaRegistros.get(lineIndex / 6)[lineIndex % 6] = new BigDecimal(NUMBER_FORMAT.parse(newDataFileLine).toString());
+					}
+				}
+				lineIndex++;
+			}
+			int registroIndex = 0;
+			for (Object[] registro : listaRegistros)
+			{
+				if (registroIndex != 0)
+				{
+					if (!existeRegistro(dbConnection, mercado, bolsa, indice, ticker, (Date) registro[0]))
+					{
+						insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, (Date) registro[0], (BigDecimal) registro[3], (BigDecimal) registro[4], (BigDecimal) registro[1], (BigDecimal) registro[5]);
+					}
+					else
+					{
+						LOGGER.info("El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + OUT_FEC_FORMAT.format(registro[0]) + "] ya existe");
+					}
+				}
+				registroIndex++;
 			}
 			LOGGER.info("Confirmando transacción");
 			dbConnection.commit();
+		}
+	}
+
+	/**
+	 * @param dbConnection
+	 * @param mercado
+	 * @param bolsa
+	 * @param indice
+	 * @param ticker
+	 * @param fecha
+	 * @return
+	 * @throws Exception
+	 */
+	private static boolean existeRegistro(Connection dbConnection, String mercado, String bolsa, String indice, String ticker, Date fecha) throws Exception
+	{
+		PreparedStatement pStatement = null;
+		try
+		{
+			String consultaSQL = "select count(1) from public.mercados where mercado = ? and bolsa = ? and indice = ? and ticker = ? and fecha = ?";
+			pStatement = dbConnection.prepareStatement(consultaSQL);
+			int paramIdx = 1;
+			pStatement.setString(paramIdx++, mercado);
+			pStatement.setString(paramIdx++, bolsa);
+			pStatement.setString(paramIdx++, indice);
+			pStatement.setString(paramIdx++, ticker);
+			pStatement.setDate(paramIdx++, new java.sql.Date(fecha.getTime()));
+			ResultSet rSet = pStatement.executeQuery();
+			return rSet.next();
+		}
+		catch (Exception e)
+		{
+			LOGGER.error("ERROR", e);
+			throw e;
+		}
+		finally
+		{
+			if (pStatement != null)
+			{
+				pStatement.close();
+			}
 		}
 	}
 

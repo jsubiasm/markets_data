@@ -39,7 +39,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>jsm.mdata.etl.ETLEleconomista</mainClass>
+							<mainClass></mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>

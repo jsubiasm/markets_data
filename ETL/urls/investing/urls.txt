@@ -131,7 +131,7 @@ ETF##CSEP##GER##CSEP##-##CSEP##iShares STOXX Europe 600 Industrial Goods & Servi
 ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI EMU UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-emu-historical-data?cid=45841
 ETF##CSEP##GER##CSEP##-##CSEP##iShares Core MSCI Pacific ex Japan UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-msci-pacific-x-japan-de-historical-data
 ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Europe ex-UK UCITS##CSEP##https://es.investing.com/etfs/ishares-msci-europe-ex-uk-historical-data?cid=44523
-ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Russia Adr/Gdr UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-russia-historical-data?cid=45845
+ETF##CSEP##GER##CSEP##-##CSEP##iShares MSCI Russia Adr Gdr UCITS##CSEP##https://es.investing.com/etfs/cs-etf-(ie)-on-msci-russia-historical-data?cid=45845
 ETF##CSEP##GER##CSEP##-##CSEP##iShares Nasdaq 100 UCITS##CSEP##https://es.investing.com/etfs/cs-(ie)-on-nasdaq-100-historical-data?cid=46049
 ETF##CSEP##GER##CSEP##-##CSEP##iShares EURO STOXX UCITS##CSEP##https://es.investing.com/etfs/ishares-euro-stoxx-(de)-de-historical-data?cid=1008809
 ETF##CSEP##GER##CSEP##-##CSEP##iShares Nikkei 225 UCITS DE##CSEP##https://es.investing.com/etfs/ishares-nikkei-225-historical-data?cid=997991
