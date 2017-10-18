@@ -38,8 +38,6 @@ public class ETLInvesting extends ETLBase
 	 */
 	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing\\urls.txt";
 	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing\\download\\";
-	private static final String C_COMENT = "--";
-	private static final String C_SEPARADOR = "##CSEP##";
 	private static final SimpleDateFormat IN_FEC_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
 

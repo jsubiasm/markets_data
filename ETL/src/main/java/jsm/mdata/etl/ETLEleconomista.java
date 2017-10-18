@@ -38,7 +38,6 @@ public class ETLEleconomista extends ETLBase
 	 */
 	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\eleconomista\\urls.txt";
 	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\eleconomista\\download\\";
-	private static final String C_COMENT = "--";
 	private static final String C_FEC_INI = "##FINI##";
 	private static final String C_FEC_FIN = "##FFIN##";
 	private static final String C_CABECERA_INI = "Fecha";

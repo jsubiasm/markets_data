@@ -30,8 +30,6 @@ public class ETLInvesting2 extends ETLBase
 	 */
 	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing2\\urls.txt";
 	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing2\\download\\";
-	private static final String C_COMENT = "--";
-	private static final String C_SEPARADOR = "##CSEP##";
 
 	/**
 	 * @param args
