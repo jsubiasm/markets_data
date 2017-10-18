@@ -41,7 +41,6 @@ public class ETLInvesting extends ETLBase
 	private static final String C_COMENT = "--";
 	private static final String C_SEPARADOR = "##CSEP##";
 	private static final SimpleDateFormat IN_FEC_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
-	private static final SimpleDateFormat OUT_FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
 
 	/**
