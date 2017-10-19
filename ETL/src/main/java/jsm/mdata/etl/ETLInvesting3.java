@@ -140,7 +140,7 @@ public class ETLInvesting3 extends ETLBase
 			String mercado = dataFileTokens[1];
 			String bolsa = dataFileTokens[2];
 			String indice = dataFileTokens[3];
-			List<String> dataFileLines = FileUtils.readLines(dataFile);
+			List<String> dataFileLines = FileUtils.readLines(dataFile, CHARSET);
 			List<String> newDataFileLines = new ArrayList<String>();
 			for (String dataFileLine : dataFileLines)
 			{
@@ -153,8 +153,8 @@ public class ETLInvesting3 extends ETLBase
 				}
 			}
 			File urlsFile = new File(DOWNLOAD_ROOT_PATH + LIST_PROCESADO_PATH + dataFile.getName());
-			FileUtils.writeLines(urlsFile, newDataFileLines);
-			List<String> urlsFileLines = FileUtils.readLines(urlsFile);
+			FileUtils.writeLines(urlsFile, CHARSET, newDataFileLines);
+			List<String> urlsFileLines = FileUtils.readLines(urlsFile, CHARSET);
 			List<String> newUrlsFileLines = new ArrayList<String>();
 			for (String urlFileLine : urlsFileLines)
 			{
@@ -173,7 +173,7 @@ public class ETLInvesting3 extends ETLBase
 				urlFileLine = mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + etfName + C_SEPARADOR + "https://es.investing.com" + urlFileLine;
 				newUrlsFileLines.add(urlFileLine);
 			}
-			FileUtils.writeLines(urlsFile, newUrlsFileLines);
+			FileUtils.writeLines(urlsFile, CHARSET, newUrlsFileLines);
 		}
 	}
 
@@ -193,7 +193,7 @@ public class ETLInvesting3 extends ETLBase
 			String bolsa = dataFileTokens[2];
 			String indice = dataFileTokens[3];
 			String ticker = dataFileTokens[4];
-			List<String> dataFileLines = FileUtils.readLines(dataFile);
+			List<String> dataFileLines = FileUtils.readLines(dataFile, CHARSET);
 			List<String> newDataFileLines = new ArrayList<String>();
 			for (String dataFileLine : dataFileLines)
 			{
@@ -370,7 +370,7 @@ public class ETLInvesting3 extends ETLBase
 	 */
 	private static void descargaURLs(File urlsFile, String downloadPath) throws Exception
 	{
-		List<String> dataUrlLines = FileUtils.readLines(urlsFile);
+		List<String> dataUrlLines = FileUtils.readLines(urlsFile, CHARSET);
 		for (String dataUrlLine : dataUrlLines)
 		{
 			if (!dataUrlLine.startsWith(C_COMENT))

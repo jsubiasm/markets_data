@@ -56,7 +56,7 @@ public class ETLBase
 	protected static final String TMP_DATA_FILE_EXT = ".txt";
 	protected static final String C_SEPARADOR = "##CSEP##";
 	protected static final String C_COMENT = "--";
-	protected static final String URL_CHARSET = "UTF-8";
+	protected static final String CHARSET = "UTF-8";
 
 	/**
 	 * Conexión a base de datos
