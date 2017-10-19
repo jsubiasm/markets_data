@@ -5,7 +5,6 @@ package jsm.mdata.etl;
 
 import java.io.File;
 import java.math.BigDecimal;
-import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -161,7 +160,7 @@ public class ETLInvesting3 extends ETLBase
 			{
 				urlFileLine = urlFileLine.substring(0, urlFileLine.indexOf("\"  title=\""));
 				String etfName = urlFileLine;
-				etfName = etfName.replaceAll("£", "_").replaceAll("\\$", "_").replaceAll("€", "_").replaceAll("\\?", "_").replaceAll("/etfs/", "");
+				etfName = etfName.replaceAll("/etfs/", "").replaceAll("£", "_").replaceAll("\\$", "_").replaceAll("€", "_").replaceAll("\\?", "_");
 				if (urlFileLine.indexOf("?cid=") != -1)
 				{
 					urlFileLine = urlFileLine.replaceAll("\\?cid=", "-historical-data?cid=");
@@ -170,7 +169,7 @@ public class ETLInvesting3 extends ETLBase
 				{
 					urlFileLine = urlFileLine + "-historical-data";
 				}
-				urlFileLine = URLEncoder.encode(urlFileLine, URL_CHARSET);
+				urlFileLine = urlFileLine.replaceAll("£", "%C2%A3").replaceAll("\\$", "%24").replaceAll("€", "%E2%82%AC");
 				urlFileLine = mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + etfName + C_SEPARADOR + "https://es.investing.com" + urlFileLine;
 				newUrlsFileLines.add(urlFileLine);
 			}
