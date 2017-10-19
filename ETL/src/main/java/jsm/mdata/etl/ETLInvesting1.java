@@ -25,19 +25,19 @@ import org.slf4j.LoggerFactory;
  * @author Empleado
  *
  */
-public class ETLInvesting extends ETLBase
+public class ETLInvesting1 extends ETLBase
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(ETLInvesting.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(ETLInvesting1.class);
 
 	/**
 	 * Ficheros
 	 */
-	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing\\urls.txt";
-	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing\\download\\";
+	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing1\\urls.txt";
+	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing1\\download\\";
 	private static final SimpleDateFormat IN_FEC_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
 

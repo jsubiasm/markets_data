@@ -36,12 +36,13 @@ public class ETLInvesting3 extends ETLBase
 	/**
 	 * Ficheros
 	 */
-	private static final String DOWNLOAD_ROOT_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing3\\download";
-	private static final String ALL_ETFS_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing3\\all_etfs_urls.txt";
-	private static final String ALL_ETFS_TEMP_PATH = "\\all_etfs_temp";
-	private static final String ALL_ETFS_URLS_PATH = "\\all_etfs_urls";
-	private static final String ETFS_PATH = "\\etfs";
+	private static final String DOWNLOAD_ROOT_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing3\\download\\";
+	private static final String LIST_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing3\\list_urls.txt";
+	private static final String LIST_TEMP_PATH = "list_temp\\";
+	private static final String DOWNLOAD_LIST_PATH = "list\\";
+	private static final String DOWNLOAD_HISTORICAL_PATH = "historical\\";
 	private static final SimpleDateFormat IN_FEC_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
+	private static final SimpleDateFormat OUT_FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
 
 	/**
@@ -56,18 +57,17 @@ public class ETLInvesting3 extends ETLBase
 			dbConnection = getConnection();
 			dbConnection.setAutoCommit(false);
 			LOGGER.info("Suprimiendo ficheros temporales antiguos");
-			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + ETFS_PATH));
-			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + ALL_ETFS_TEMP_PATH));
-			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + ALL_ETFS_URLS_PATH));
-			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH));
-			LOGGER.info("Descargando listados de ETFs");
-			descargaFicherosAllETFs(ALL_ETFS_URLS_FILE, DOWNLOAD_ROOT_PATH + ALL_ETFS_TEMP_PATH);
-			LOGGER.info("Procesando listados de ETFs");
-			procesoFicherosAllETFs();
-			LOGGER.info("Descargando ficheros temporales de ETFs");
-			descargaFicherosTemporalesETF(DOWNLOAD_ROOT_PATH + ETFS_PATH);
-			LOGGER.info("Procesando ficheros temporales de ETFs");
-			procesoFicherosTemporalesETF(DOWNLOAD_ROOT_PATH + ETFS_PATH, dbConnection);
+			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + LIST_TEMP_PATH));
+			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + DOWNLOAD_LIST_PATH));
+			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + DOWNLOAD_HISTORICAL_PATH));
+			LOGGER.info("Descargando listados de elementos");
+			descargaFicherosListados();
+			LOGGER.info("Procesando listados de elementos");
+			procesoFicherosListados();
+			LOGGER.info("Descargando datos historicos de elementos");
+			descargaFicherosHistorico();
+			LOGGER.info("Procesando datos historicos de elementos");
+			procesoFicherosHistorico(dbConnection);
 			LOGGER.info("Confirmando transacción");
 			dbConnection.commit();
 		}
@@ -105,11 +105,34 @@ public class ETLInvesting3 extends ETLBase
 	}
 
 	/**
+	 * @param urlsFile
+	 * @param downloadPath
 	 * @throws Exception
 	 */
-	private static void procesoFicherosAllETFs() throws Exception
+	private static void descargaFicherosListados() throws Exception
 	{
-		Collection<File> dataFileList = FileUtils.listFiles(new File(DOWNLOAD_ROOT_PATH + ALL_ETFS_TEMP_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+		descargaURLs(new File(LIST_URLS_FILE), DOWNLOAD_ROOT_PATH + LIST_TEMP_PATH);
+	}
+
+	/**
+	 * @param downloadPath
+	 * @throws Exception
+	 */
+	private static void descargaFicherosHistorico() throws Exception
+	{
+		Collection<File> listUrlsFile = FileUtils.listFiles(new File(DOWNLOAD_ROOT_PATH + DOWNLOAD_LIST_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+		for (File urlsFile : listUrlsFile)
+		{
+			descargaURLs(urlsFile, DOWNLOAD_ROOT_PATH + DOWNLOAD_HISTORICAL_PATH);
+		}
+	}
+
+	/**
+	 * @throws Exception
+	 */
+	private static void procesoFicherosListados() throws Exception
+	{
+		Collection<File> dataFileList = FileUtils.listFiles(new File(DOWNLOAD_ROOT_PATH + LIST_TEMP_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
 		for (File dataFile : dataFileList)
 		{
 			LOGGER.info("Procesando fichero [" + dataFile.getName() + "]");
@@ -129,7 +152,7 @@ public class ETLInvesting3 extends ETLBase
 					newDataFileLines.add(dataFileLine);
 				}
 			}
-			File urlsFile = new File(DOWNLOAD_ROOT_PATH + ALL_ETFS_URLS_PATH + dataFile.getName());
+			File urlsFile = new File(DOWNLOAD_ROOT_PATH + DOWNLOAD_LIST_PATH + dataFile.getName());
 			FileUtils.writeLines(urlsFile, newDataFileLines);
 			List<String> urlsFileLines = FileUtils.readLines(urlsFile);
 			List<String> newUrlsFileLines = new ArrayList<String>();
@@ -158,9 +181,9 @@ public class ETLInvesting3 extends ETLBase
 	 * @param dbConnection
 	 * @throws Exception
 	 */
-	private static void procesoFicherosTemporalesETF(String downloadPath, Connection dbConnection) throws Exception
+	private static void procesoFicherosHistorico(Connection dbConnection) throws Exception
 	{
-		Collection<File> dataFileList = FileUtils.listFiles(new File(downloadPath), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+		Collection<File> dataFileList = FileUtils.listFiles(new File(DOWNLOAD_ROOT_PATH + DOWNLOAD_HISTORICAL_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
 		for (File dataFile : dataFileList)
 		{
 			LOGGER.info("Procesando fichero [" + dataFile.getName() + "]");
@@ -280,6 +303,11 @@ public class ETLInvesting3 extends ETLBase
 					if (!existeRegistro(dbConnection, mercado, bolsa, indice, ticker, (Date) registro[0]))
 					{
 						insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, (Date) registro[0], (BigDecimal) registro[3], (BigDecimal) registro[4], (BigDecimal) registro[1], (BigDecimal) registro[5]);
+						LOGGER.info("Insertado registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + OUT_FEC_FORMAT.format(registro[0]) + "] [" + registro[3] + "] [" + registro[4] + "] [" + registro[1] + "] [" + registro[5] + "]");
+					}
+					else
+					{
+						LOGGER.info("NO INSERTADO: El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + OUT_FEC_FORMAT.format(registro[0]) + "] ya existe");
 					}
 				}
 				registroIndex++;
@@ -363,29 +391,6 @@ public class ETLInvesting3 extends ETLBase
 				}
 			}
 		}
-	}
-
-	/**
-	 * @param downloadPath
-	 * @throws Exception
-	 */
-	private static void descargaFicherosTemporalesETF(String downloadPath) throws Exception
-	{
-		Collection<File> listUrlsFile = FileUtils.listFiles(new File(DOWNLOAD_ROOT_PATH + ALL_ETFS_URLS_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
-		for (File urlsFile : listUrlsFile)
-		{
-			descargaURLs(urlsFile, downloadPath);
-		}
-	}
-
-	/**
-	 * @param urlsFile
-	 * @param downloadPath
-	 * @throws Exception
-	 */
-	private static void descargaFicherosAllETFs(String urlsFile, String downloadPath) throws Exception
-	{
-		descargaURLs(new File(urlsFile), downloadPath);
 	}
 
 }
