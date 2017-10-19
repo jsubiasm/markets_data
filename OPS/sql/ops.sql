@@ -30,7 +30,7 @@ from
 )
 as m4 order by var asc;
 --
--- MUESTRA VARIACIÓN DE PRECIO DE CIERRE ENTRE LAS FECHAS MÍNIMAS Y MÁXIMAS ENCONTRADAS
+-- MUESTRA VARIACIÓN DE PRECIO DE CIERRE ENTRE LAS FECHAS MÍNIMAS Y MÁXIMAS ENCONTRADAS FILTRANDO POR MERCADO
 --
 select m7.mercado, m7.bolsa, m7.indice, m7.ticker, m7.fecha_inicial, m7.precio_inicial, m7.fecha_final, m7.precio_final, 
 round((m7.precio_final*100/m7.precio_inicial)-100, 2) as var_precio
@@ -52,7 +52,7 @@ from
 	from
 	(
 		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.fecha) as fecha_inicial, max(m1.fecha) as fecha_final
-		from public.tmp_data m1 group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
+		from public.tmp_data m1 where mercado = 'ETF' group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
 	as m4
 )
