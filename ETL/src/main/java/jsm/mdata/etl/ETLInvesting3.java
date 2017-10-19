@@ -160,7 +160,7 @@ public class ETLInvesting3 extends ETLBase
 			{
 				urlFileLine = urlFileLine.substring(0, urlFileLine.indexOf("\"  title=\""));
 				String etfName = urlFileLine;
-				etfName = etfName.replaceAll("/etfs/", "").replaceAll("£", "_").replaceAll("\\$", "_").replaceAll("€", "_").replaceAll("\\?", "_");
+				etfName = etfName.replaceAll("/etfs/", "").replaceAll("£", "libra").replaceAll("\\$", "dolar").replaceAll("€", "euro").replaceAll("\\?", "_");
 				if (urlFileLine.indexOf("?cid=") != -1)
 				{
 					urlFileLine = urlFileLine.replaceAll("\\?cid=", "-historical-data?cid=");
