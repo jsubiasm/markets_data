@@ -41,6 +41,6 @@ REM java -cp .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar jsm.mdata.etl
 REM java -cp .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar jsm.mdata.etl.ETLEleconomista 2017-01-01 > 2017-01-01.log
 REM java -cp .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar jsm.mdata.etl.ETLEleconomista 2017-07-01 > 2017-07-01.log
 
-java -cp .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar jsm.mdata.etl.ETLEleconomista 2017-07-01
+java -cp .\target\ETL-0.0.1-SNAPSHOT-jar-with-dependencies.jar jsm.mdata.etl.ETLEleconomista 2017-07-01 > _eleconomista.log
 
 pause
