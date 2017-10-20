@@ -46,6 +46,11 @@ public class ETLEleconomista extends ETLBase
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
 
 	/**
+	 * Tabla de base de datos
+	 */
+	private static final String TABLA_BASE_DATOS = "public.mercados_eleconomista";
+
+	/**
 	 * Variables
 	 */
 	private static String fecIniDescargaInicial = null;
@@ -149,7 +154,7 @@ public class ETLEleconomista extends ETLBase
 				String indice = dataUrlLineTokens[2];
 				String ticker = dataUrlLineTokens[3];
 				String dataUrl = dataUrlLineTokens[4];
-				String fechaIni = getFechaInicioDescarga(dbConnection, mercado, bolsa, indice, ticker);
+				String fechaIni = getFechaInicioDescarga(dbConnection, TABLA_BASE_DATOS, mercado, bolsa, indice, ticker);
 				Calendar calendar1 = Calendar.getInstance();
 				calendar1.setTime(new Date());
 				String fechaActual = C_FEC_FORMAT.format(calendar1.getTime());
@@ -204,7 +209,7 @@ public class ETLEleconomista extends ETLBase
 					BigDecimal maximo = new BigDecimal(NUMBER_FORMAT.parse(dataFields[4]).toString());
 					BigDecimal minimo = new BigDecimal(NUMBER_FORMAT.parse(dataFields[5]).toString());
 					BigDecimal volumen = (dataFields.length == 7) ? new BigDecimal(NUMBER_FORMAT.parse(dataFields[6]).toString()) : BigDecimal.ZERO;
-					insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, maximo, minimo, cierre, volumen);
+					insertaRegistro(dbConnection, TABLA_BASE_DATOS, mercado, bolsa, indice, ticker, fecha, maximo, minimo, cierre, volumen);
 				}
 			}
 			LOGGER.info("Confirmando transacción");
@@ -221,12 +226,12 @@ public class ETLEleconomista extends ETLBase
 	 * @return
 	 * @throws Exception
 	 */
-	private static String getFechaInicioDescarga(Connection dbConnection, String mercado, String bolsa, String indice, String ticker) throws Exception
+	private static String getFechaInicioDescarga(Connection dbConnection, String tabla, String mercado, String bolsa, String indice, String ticker) throws Exception
 	{
 		PreparedStatement pStatement = null;
 		try
 		{
-			String consultaSQL = "select max(fecha) as ultima_fecha from public.mercados where mercado = ? and bolsa = ? and indice = ? and ticker = ? group by mercado, bolsa, indice, ticker";
+			String consultaSQL = "select max(fecha) as ultima_fecha from " + tabla + " where mercado = ? and bolsa = ? and indice = ? and ticker = ? group by mercado, bolsa, indice, ticker";
 			pStatement = dbConnection.prepareStatement(consultaSQL);
 			int paramIdx = 1;
 			pStatement.setString(paramIdx++, mercado);

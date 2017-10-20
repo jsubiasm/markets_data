@@ -102,7 +102,7 @@ public class OPTest
 		PreparedStatement pStatement = null;
 		try
 		{
-			String consultaSQL = "select count(1) as num_reg from public.mercados";
+			String consultaSQL = "select count(1) as num_reg from public.mercados_eleconomista";
 			pStatement = dbConnection.prepareStatement(consultaSQL);
 			ResultSet rSet = pStatement.executeQuery();
 			Long numReg = null;

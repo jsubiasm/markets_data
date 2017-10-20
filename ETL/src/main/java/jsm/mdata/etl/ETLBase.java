@@ -153,12 +153,12 @@ public class ETLBase
 	 * @param volumen
 	 * @throws Exception
 	 */
-	protected static void insertaRegistro(Connection dbConnection, String mercado, String bolsa, String indice, String ticker, Date fecha, BigDecimal maximo, BigDecimal minimo, BigDecimal cierre, BigDecimal volumen) throws Exception
+	protected static void insertaRegistro(Connection dbConnection, String tabla, String mercado, String bolsa, String indice, String ticker, Date fecha, BigDecimal maximo, BigDecimal minimo, BigDecimal cierre, BigDecimal volumen) throws Exception
 	{
 		PreparedStatement pStatement = null;
 		try
 		{
-			String insertSQL = "INSERT INTO public.mercados (mercado, bolsa, indice, ticker, fecha, maximo, minimo, cierre, volumen) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String insertSQL = "INSERT INTO " + tabla + " (mercado, bolsa, indice, ticker, fecha, maximo, minimo, cierre, volumen) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			pStatement = dbConnection.prepareStatement(insertSQL);
 			int paramIdx = 1;
 			pStatement.setString(paramIdx++, mercado);

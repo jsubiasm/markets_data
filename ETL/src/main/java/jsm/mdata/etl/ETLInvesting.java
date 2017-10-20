@@ -5,6 +5,7 @@ package jsm.mdata.etl;
 
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URLDecoder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,21 +26,30 @@ import org.slf4j.LoggerFactory;
  * @author Empleado
  *
  */
-public class ETLInvesting1 extends ETLBase
+public class ETLInvesting extends ETLBase
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(ETLInvesting1.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(ETLInvesting.class);
 
 	/**
 	 * Ficheros
 	 */
-	private static final String DATA_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing1\\urls.txt";
-	private static final String TMP_DATA_FILE_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing1\\download\\";
+	private static final String DOWNLOAD_ROOT_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing\\download\\";
+	private static final String LIST_URLS_FILE = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETL\\urls\\investing\\list_urls.txt";
+	private static final String LIST_TEMP_PATH = "list_tmp\\";
+	private static final String LIST_PROCESADO_PATH = "list_procesado\\";
+	private static final String HIST_TEMP_PATH = "historico_tmp\\";
 	private static final SimpleDateFormat IN_FEC_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
+	private static final SimpleDateFormat OUT_FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
+
+	/**
+	 * Tabla de base de datos
+	 */
+	private static final String TABLA_BASE_DATOS = "public.mercados_investing";
 
 	/**
 	 * @param args
@@ -53,11 +63,17 @@ public class ETLInvesting1 extends ETLBase
 			dbConnection = getConnection();
 			dbConnection.setAutoCommit(false);
 			LOGGER.info("Suprimiendo ficheros temporales antiguos");
-			FileUtils.cleanDirectory(new File(TMP_DATA_FILE_PATH));
-			LOGGER.info("Descargando ficheros temporales");
-			descargaFicherosTemporales(dbConnection);
-			LOGGER.info("Procesando ficheros temporales");
-			procesoFicherosTemporales(dbConnection);
+			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + LIST_TEMP_PATH));
+			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + LIST_PROCESADO_PATH));
+			FileUtils.cleanDirectory(new File(DOWNLOAD_ROOT_PATH + HIST_TEMP_PATH));
+			LOGGER.info("Descargando listados de elementos");
+			descargaFicherosListados();
+			LOGGER.info("Procesando listados de elementos");
+			procesoFicherosListados();
+			LOGGER.info("Descargando datos historicos de elementos");
+			descargaFicherosHistorico();
+			LOGGER.info("Procesando datos historicos de elementos");
+			procesoFicherosHistorico(dbConnection);
 			LOGGER.info("Confirmando transacción");
 			dbConnection.commit();
 		}
@@ -92,44 +108,37 @@ public class ETLInvesting1 extends ETLBase
 				}
 			}
 		}
-
 	}
 
 	/**
+	 * @param urlsFile
+	 * @param downloadPath
 	 * @throws Exception
 	 */
-	private static void descargaFicherosTemporales(Connection dbConnection) throws Exception
+	private static void descargaFicherosListados() throws Exception
 	{
-		List<String> dataUrlLines = FileUtils.readLines(new File(DATA_URLS_FILE), CHARSET);
-		for (String dataUrlLine : dataUrlLines)
+		descargaURLs(new File(LIST_URLS_FILE), DOWNLOAD_ROOT_PATH + LIST_TEMP_PATH);
+	}
+
+	/**
+	 * @param downloadPath
+	 * @throws Exception
+	 */
+	private static void descargaFicherosHistorico() throws Exception
+	{
+		Collection<File> listUrlsFile = FileUtils.listFiles(new File(DOWNLOAD_ROOT_PATH + LIST_PROCESADO_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+		for (File urlsFile : listUrlsFile)
 		{
-			if (!dataUrlLine.startsWith(C_COMENT))
-			{
-				String[] dataUrlLineTokens = dataUrlLine.split(C_SEPARADOR);
-				String mercado = dataUrlLineTokens[0];
-				String bolsa = dataUrlLineTokens[1];
-				String indice = dataUrlLineTokens[2];
-				String ticker = dataUrlLineTokens[3];
-				String dataUrl = dataUrlLineTokens[4];
-				LOGGER.info("Descargando URL [" + dataUrl + "]");
-				if (USE_PROXY)
-				{
-					descargarFicheroConProxy(TMP_DATA_FILE_PATH, mercado, bolsa, indice, ticker, dataUrl);
-				}
-				else
-				{
-					descargarFicheroSinProxy(TMP_DATA_FILE_PATH, mercado, bolsa, indice, ticker, dataUrl);
-				}
-			}
+			descargaURLs(urlsFile, DOWNLOAD_ROOT_PATH + HIST_TEMP_PATH);
 		}
 	}
 
 	/**
 	 * @throws Exception
 	 */
-	private static void procesoFicherosTemporales(Connection dbConnection) throws Exception
+	private static void procesoFicherosListados() throws Exception
 	{
-		Collection<File> dataFileList = FileUtils.listFiles(new File(TMP_DATA_FILE_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+		Collection<File> dataFileList = FileUtils.listFiles(new File(DOWNLOAD_ROOT_PATH + LIST_TEMP_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
 		for (File dataFile : dataFileList)
 		{
 			LOGGER.info("Procesando fichero [" + dataFile.getName() + "]");
@@ -137,7 +146,57 @@ public class ETLInvesting1 extends ETLBase
 			String mercado = dataFileTokens[1];
 			String bolsa = dataFileTokens[2];
 			String indice = dataFileTokens[3];
-			String ticker = dataFileTokens[4];
+			List<String> dataFileLines = FileUtils.readLines(dataFile, CHARSET);
+			List<String> newDataFileLines = new ArrayList<String>();
+			for (String dataFileLine : dataFileLines)
+			{
+				if (dataFileLine.indexOf("plusIconTd\"><a href=\"/") != -1)
+				{
+
+					dataFileLine = dataFileLine.substring(dataFileLine.indexOf("plusIconTd\"><a href=\"") + "plusIconTd\"><a href=\"".length());
+					dataFileLine = dataFileLine.replaceAll("plusIconTd\"><a href=\"", "\n");
+					newDataFileLines.add(dataFileLine);
+				}
+			}
+			File urlsFile = new File(DOWNLOAD_ROOT_PATH + LIST_PROCESADO_PATH + dataFile.getName());
+			FileUtils.writeLines(urlsFile, CHARSET, newDataFileLines);
+			List<String> urlsFileLines = FileUtils.readLines(urlsFile, CHARSET);
+			List<String> newUrlsFileLines = new ArrayList<String>();
+			for (String urlFileLine : urlsFileLines)
+			{
+				urlFileLine = urlFileLine.substring(0, urlFileLine.indexOf("\"  title=\""));
+				if (urlFileLine.indexOf("?cid=") != -1)
+				{
+					urlFileLine = urlFileLine.replaceAll("\\?cid=", "-historical-data?cid=");
+				}
+				else
+				{
+					urlFileLine = urlFileLine + "-historical-data";
+				}
+				String url = "https://es.investing.com" + urlFileLine;
+				urlFileLine = mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + url + C_SEPARADOR + url;
+				newUrlsFileLines.add(urlFileLine);
+			}
+			FileUtils.writeLines(urlsFile, CHARSET, newUrlsFileLines);
+		}
+	}
+
+	/**
+	 * @param downloadPath
+	 * @param dbConnection
+	 * @throws Exception
+	 */
+	private static void procesoFicherosHistorico(Connection dbConnection) throws Exception
+	{
+		Collection<File> dataFileList = FileUtils.listFiles(new File(DOWNLOAD_ROOT_PATH + HIST_TEMP_PATH), TrueFileFilter.INSTANCE, TrueFileFilter.INSTANCE);
+		for (File dataFile : dataFileList)
+		{
+			LOGGER.info("Procesando fichero [" + dataFile.getName() + "]");
+			String[] dataFileTokens = dataFile.getName().split(C_SEPARADOR);
+			String mercado = dataFileTokens[1];
+			String bolsa = dataFileTokens[2];
+			String indice = dataFileTokens[3];
+			String ticker = URLDecoder.decode(dataFileTokens[4], CHARSET);
 			List<String> dataFileLines = FileUtils.readLines(dataFile, CHARSET);
 			List<String> newDataFileLines = new ArrayList<String>();
 			for (String dataFileLine : dataFileLines)
@@ -246,9 +305,14 @@ public class ETLInvesting1 extends ETLBase
 			{
 				if (registroIndex != 0)
 				{
-					if (!existeRegistro(dbConnection, mercado, bolsa, indice, ticker, (Date) registro[0]))
+					if (!existeRegistro(dbConnection, TABLA_BASE_DATOS, mercado, bolsa, indice, ticker, (Date) registro[0]))
 					{
-						insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, (Date) registro[0], (BigDecimal) registro[3], (BigDecimal) registro[4], (BigDecimal) registro[1], (BigDecimal) registro[5]);
+						insertaRegistro(dbConnection, TABLA_BASE_DATOS, mercado, bolsa, indice, ticker, (Date) registro[0], (BigDecimal) registro[3], (BigDecimal) registro[4], (BigDecimal) registro[1], (BigDecimal) registro[5]);
+						LOGGER.info("Insertado registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + OUT_FEC_FORMAT.format(registro[0]) + "] [" + registro[3] + "] [" + registro[4] + "] [" + registro[1] + "] [" + registro[5] + "]");
+					}
+					else
+					{
+						LOGGER.info("NO INSERTADO: El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + OUT_FEC_FORMAT.format(registro[0]) + "] ya existe");
 					}
 				}
 				registroIndex++;
@@ -268,12 +332,12 @@ public class ETLInvesting1 extends ETLBase
 	 * @return
 	 * @throws Exception
 	 */
-	private static boolean existeRegistro(Connection dbConnection, String mercado, String bolsa, String indice, String ticker, Date fecha) throws Exception
+	private static boolean existeRegistro(Connection dbConnection, String tabla, String mercado, String bolsa, String indice, String ticker, Date fecha) throws Exception
 	{
 		PreparedStatement pStatement = null;
 		try
 		{
-			String consultaSQL = "select count(1) as existe from public.mercados where mercado = ? and bolsa = ? and indice = ? and ticker = ? and fecha = ?";
+			String consultaSQL = "select count(1) as existe from " + tabla + " where mercado = ? and bolsa = ? and indice = ? and ticker = ? and fecha = ?";
 			pStatement = dbConnection.prepareStatement(consultaSQL);
 			int paramIdx = 1;
 			pStatement.setString(paramIdx++, mercado);
@@ -299,6 +363,37 @@ public class ETLInvesting1 extends ETLBase
 			if (pStatement != null)
 			{
 				pStatement.close();
+			}
+		}
+	}
+
+	/**
+	 * @param urlsFile
+	 * @param downloadPath
+	 * @throws Exception
+	 */
+	private static void descargaURLs(File urlsFile, String downloadPath) throws Exception
+	{
+		List<String> dataUrlLines = FileUtils.readLines(urlsFile, CHARSET);
+		for (String dataUrlLine : dataUrlLines)
+		{
+			if (dataUrlLine != null && !dataUrlLine.trim().isEmpty() && !dataUrlLine.startsWith(C_COMENT))
+			{
+				String[] dataUrlLineTokens = dataUrlLine.split(C_SEPARADOR);
+				String mercado = dataUrlLineTokens[0];
+				String bolsa = dataUrlLineTokens[1];
+				String indice = dataUrlLineTokens[2];
+				String ticker = dataUrlLineTokens[3];
+				String dataUrl = dataUrlLineTokens[4];
+				LOGGER.info("Descargando URL [" + dataUrl + "]");
+				if (USE_PROXY)
+				{
+					descargarFicheroConProxy(downloadPath, mercado, bolsa, indice, ticker, dataUrl);
+				}
+				else
+				{
+					descargarFicheroSinProxy(downloadPath, mercado, bolsa, indice, ticker, dataUrl);
+				}
 			}
 		}
 	}
