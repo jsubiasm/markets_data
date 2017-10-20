@@ -1,12 +1,18 @@
 --
--- ETF LIST URLS
+-- LISTA INDICES
 --
---ETF##CSEP##GER##CSEP##-##CSEP##etfs-lyxor-------xetra##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=Lyxor
---ETF##CSEP##GER##CSEP##-##CSEP##etfs-ishares-----xetra##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=iShares
---ETF##CSEP##GER##CSEP##-##CSEP##etfs-amundi------xetra##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=Amundi
-
-ETF##CSEP##GER##CSEP##-##CSEP##etfs-dbxtrackers-xetra##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=db%20X-trackers
-
---ETF##CSEP##GER##CSEP##-##CSEP##etfs-etfs--------xetra##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=ETFS
-
-STOCK2##CSEP##ESP##CSEP##IBEX35##CSEP##ibex35-acciones##CSEP##https://es.investing.com/indices/spain-35-components
+INDEX##CSEP##-##CSEP##-##CSEP##indices##CSEP##https://es.investing.com/indices/major-indices
+--
+-- LISTA ACCIONES POR INDICE
+--
+STOCK##CSEP##ESP##CSEP##IBEX35##CSEP##ibex35-acciones##CSEP##https://es.investing.com/indices/spain-35-components
+STOCK##CSEP##GER##CSEP##DAX30##CSEP##dax30-acciones##CSEP##https://es.investing.com/indices/germany-30-components
+STOCK##CSEP##FRA##CSEP##CAC40##CSEP##cac40-acciones##CSEP##https://es.investing.com/indices/france-40-components
+--
+-- LISTA ETFS POR PAIS Y EMISOR
+--
+ETF##CSEP##GER##CSEP##-##CSEP##etfs-xetra-lyxor##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=Lyxor
+ETF##CSEP##GER##CSEP##-##CSEP##etfs-xetra-ishares##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=iShares
+ETF##CSEP##GER##CSEP##-##CSEP##etfs-xetra-amundi##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=Amundi
+ETF##CSEP##GER##CSEP##-##CSEP##etfs-xetra-dbxtrackers##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=db%20X-trackers
+ETF##CSEP##GER##CSEP##-##CSEP##etfs-xetra-etfs##CSEP##https://es.investing.com/etfs/germany-etfs?&issuer_filter=ETFS
