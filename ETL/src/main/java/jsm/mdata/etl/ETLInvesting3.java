@@ -5,6 +5,7 @@ package jsm.mdata.etl;
 
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URLDecoder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -144,7 +145,7 @@ public class ETLInvesting3 extends ETLBase
 			List<String> newDataFileLines = new ArrayList<String>();
 			for (String dataFileLine : dataFileLines)
 			{
-				if (dataFileLine.indexOf("plusIconTd\"><a href=\"/etfs/") != -1)
+				if (dataFileLine.indexOf("plusIconTd\"><a href=\"/") != -1)
 				{
 
 					dataFileLine = dataFileLine.substring(dataFileLine.indexOf("plusIconTd\"><a href=\"") + "plusIconTd\"><a href=\"".length());
@@ -159,8 +160,6 @@ public class ETLInvesting3 extends ETLBase
 			for (String urlFileLine : urlsFileLines)
 			{
 				urlFileLine = urlFileLine.substring(0, urlFileLine.indexOf("\"  title=\""));
-				String etfName = urlFileLine;
-				etfName = etfName.replaceAll("/etfs/", "").replaceAll("£", "libra").replaceAll("\\$", "dolar").replaceAll("€", "euro").replaceAll("\\?", "_");
 				if (urlFileLine.indexOf("?cid=") != -1)
 				{
 					urlFileLine = urlFileLine.replaceAll("\\?cid=", "-historical-data?cid=");
@@ -169,8 +168,8 @@ public class ETLInvesting3 extends ETLBase
 				{
 					urlFileLine = urlFileLine + "-historical-data";
 				}
-				urlFileLine = urlFileLine.replaceAll("£", "%C2%A3").replaceAll("\\$", "%24").replaceAll("€", "%E2%82%AC");
-				urlFileLine = mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + etfName + C_SEPARADOR + "https://es.investing.com" + urlFileLine;
+				String url = "https://es.investing.com" + urlFileLine;
+				urlFileLine = mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + url + C_SEPARADOR + url;
 				newUrlsFileLines.add(urlFileLine);
 			}
 			FileUtils.writeLines(urlsFile, CHARSET, newUrlsFileLines);
@@ -192,7 +191,7 @@ public class ETLInvesting3 extends ETLBase
 			String mercado = dataFileTokens[1];
 			String bolsa = dataFileTokens[2];
 			String indice = dataFileTokens[3];
-			String ticker = dataFileTokens[4];
+			String ticker = URLDecoder.decode(dataFileTokens[4], CHARSET);
 			List<String> dataFileLines = FileUtils.readLines(dataFile, CHARSET);
 			List<String> newDataFileLines = new ArrayList<String>();
 			for (String dataFileLine : dataFileLines)
@@ -373,7 +372,7 @@ public class ETLInvesting3 extends ETLBase
 		List<String> dataUrlLines = FileUtils.readLines(urlsFile, CHARSET);
 		for (String dataUrlLine : dataUrlLines)
 		{
-			if (!dataUrlLine.startsWith(C_COMENT))
+			if (dataUrlLine != null && !dataUrlLine.trim().isEmpty() && !dataUrlLine.startsWith(C_COMENT))
 			{
 				String[] dataUrlLineTokens = dataUrlLine.split(C_SEPARADOR);
 				String mercado = dataUrlLineTokens[0];

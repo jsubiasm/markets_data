@@ -5,6 +5,7 @@ package jsm.mdata.etl;
 
 import java.io.File;
 import java.math.BigDecimal;
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -103,7 +104,7 @@ public class ETLBase
 				HttpGet httpGET = new HttpGet(dataUrl);
 				httpGET.setConfig(config);
 				CloseableHttpResponse response = httpClient.execute(httpGET);
-				String fileName = TMP_DATA_FILE_PREFIX + C_SEPARADOR + mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + ticker + C_SEPARADOR + TMP_DATA_FILE_EXT;
+				String fileName = TMP_DATA_FILE_PREFIX + C_SEPARADOR + mercado + C_SEPARADOR + bolsa + C_SEPARADOR + indice + C_SEPARADOR + URLEncoder.encode(ticker, CHARSET) + C_SEPARADOR + TMP_DATA_FILE_EXT;
 				FileUtils.copyInputStreamToFile(response.getEntity().getContent(), new File(tmpDataFilePath + fileName));
 				response.close();
 				httpClient.close();

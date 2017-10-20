@@ -100,7 +100,7 @@ public class ETLInvesting1 extends ETLBase
 	 */
 	private static void descargaFicherosTemporales(Connection dbConnection) throws Exception
 	{
-		List<String> dataUrlLines = FileUtils.readLines(new File(DATA_URLS_FILE));
+		List<String> dataUrlLines = FileUtils.readLines(new File(DATA_URLS_FILE), CHARSET);
 		for (String dataUrlLine : dataUrlLines)
 		{
 			if (!dataUrlLine.startsWith(C_COMENT))
@@ -138,7 +138,7 @@ public class ETLInvesting1 extends ETLBase
 			String bolsa = dataFileTokens[2];
 			String indice = dataFileTokens[3];
 			String ticker = dataFileTokens[4];
-			List<String> dataFileLines = FileUtils.readLines(dataFile);
+			List<String> dataFileLines = FileUtils.readLines(dataFile, CHARSET);
 			List<String> newDataFileLines = new ArrayList<String>();
 			for (String dataFileLine : dataFileLines)
 			{
