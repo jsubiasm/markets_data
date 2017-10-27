@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jsm.mdata.selenium;
+package jsm.mdata.selenium.investing;
 
 /**
  * @author Empleado
