@@ -222,7 +222,7 @@ public class DriverController
 						new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("curr_table")));
 						WebElement tablaDatos = driver.findElement(By.id("curr_table"));
 
-						LOGGER.info("Escribiendo datos sin formatear");
+						LOGGER.info("Escribiendo fichero de datos sin formatear");
 						List<String> lineasFicheroXMLInput = getLineasFicheroXML(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento, tablaDatos.getAttribute("innerHTML"));
 						String fileNameXMLInput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".INPUT.xml";
 						FileUtils.writeLines(new File(fileNameXMLInput), CHARSET, lineasFicheroXMLInput);
@@ -232,7 +232,7 @@ public class DriverController
 						SAXHandler saxHandler = new SAXHandler();
 						saxParser.parse(new File(fileNameXMLInput), saxHandler);
 
-						LOGGER.info("Escribiendo datos");
+						LOGGER.info("Guardando datos");
 						guardarDatosHistoricoActivoActual(saxHandler.getActivoActual());
 
 						hrefsIdx++;
@@ -339,6 +339,7 @@ public class DriverController
 		Connection dbConnection = null;
 		try
 		{
+			LOGGER.info("Abriendo conexión a base de datos");
 			dbConnection = getConnection();
 			String consultaSQL = "select max(fecha) as ultima_fecha from public.mercados_investing where mercado = ? and bolsa = ? and indice = ? and ticker = ? group by mercado, bolsa, indice, ticker";
 			PreparedStatement pStatement = dbConnection.prepareStatement(consultaSQL);
@@ -366,6 +367,7 @@ public class DriverController
 		{
 			if (dbConnection != null)
 			{
+				LOGGER.info("Cerrando conexión a base de datos");
 				dbConnection.close();
 			}
 		}
@@ -436,12 +438,14 @@ public class DriverController
 
 	/**
 	 * @param activoActual
+	 * @throws Exception
 	 */
-	private static void guardarDatosHistoricoActivoActual(Activo activoActual)
+	private static void guardarDatosHistoricoActivoActual(Activo activoActual) throws Exception
 	{
 		Connection dbConnection = null;
 		try
 		{
+			LOGGER.info("Abriendo conexión a base de datos");
 			dbConnection = getConnection();
 			dbConnection.setAutoCommit(false);
 			String datos = "FECHA" + CSV_SEPARATOR;
@@ -450,6 +454,7 @@ public class DriverController
 			datos = datos + "MINIMO" + CSV_SEPARATOR;
 			datos = datos + "CIERRE" + CSV_SEPARATOR;
 			datos = datos + "VOLUMEN" + CSV_RETURN;
+			LOGGER.info("Grabando registros en base de datos");
 			for (Registro registro : activoActual.getListaRegistros())
 			{
 				Date fecha = registro.getFecha();
@@ -470,9 +475,11 @@ public class DriverController
 				String ticker = activoActual.getTicker();
 				insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen);
 			}
+			LOGGER.info("Escribiendo fichero de datos formateados");
 			List<String> lineasFicheroXMLOutput = getLineasFicheroXML(activoActual.getMercado(), activoActual.getBolsa(), activoActual.getIndice(), activoActual.getTicker(), datos);
 			String fileNameXMLOutput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(activoActual.getTicker(), CHARSET) + ".OUTPUT.xml";
 			FileUtils.writeLines(new File(fileNameXMLOutput), CHARSET, lineasFicheroXMLOutput);
+			LOGGER.info("Confirmando transacción");
 			dbConnection.commit();
 		}
 		catch (Exception e1)
@@ -495,15 +502,8 @@ public class DriverController
 		{
 			if (dbConnection != null)
 			{
-				try
-				{
-					LOGGER.info("Cerrando conexión a base de datos");
-					dbConnection.close();
-				}
-				catch (Exception e3)
-				{
-					LOGGER.error("ERROR", e3);
-				}
+				LOGGER.info("Cerrando conexión a base de datos");
+				dbConnection.close();
 			}
 		}
 
