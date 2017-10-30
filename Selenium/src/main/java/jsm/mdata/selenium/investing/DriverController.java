@@ -4,6 +4,7 @@
 package jsm.mdata.selenium.investing;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -231,26 +232,8 @@ public class DriverController
 						SAXHandler saxHandler = new SAXHandler();
 						saxParser.parse(new File(fileNameXMLInput), saxHandler);
 
-						LOGGER.info("Escribiendo datos formateados");
-						Activo activoActual = saxHandler.getActivoActual();
-						String datos = "DATE" + CSV_SEPARATOR;
-						datos = datos + "OPEN" + CSV_SEPARATOR;
-						datos = datos + "HIGH" + CSV_SEPARATOR;
-						datos = datos + "LOW" + CSV_SEPARATOR;
-						datos = datos + "CLOSE" + CSV_SEPARATOR;
-						datos = datos + "VOL" + CSV_RETURN;
-						for (Registro registro : activoActual.getListaRegistros())
-						{
-							datos = datos + DATA_FEC_FORMAT.format(registro.getFecha()) + CSV_SEPARATOR;
-							datos = datos + NUMBER_FORMAT.format(registro.getApertura()) + CSV_SEPARATOR;
-							datos = datos + NUMBER_FORMAT.format(registro.getMaximo()) + CSV_SEPARATOR;
-							datos = datos + NUMBER_FORMAT.format(registro.getMinimo()) + CSV_SEPARATOR;
-							datos = datos + NUMBER_FORMAT.format(registro.getCierre()) + CSV_SEPARATOR;
-							datos = datos + NUMBER_FORMAT.format(registro.getVolumen()) + CSV_RETURN;
-						}
-						List<String> lineasFicheroXMLOutput = getLineasFicheroXML(activoActual.getMercado(), activoActual.getBolsa(), activoActual.getIndice(), activoActual.getTicker(), datos);
-						String fileNameXMLOutput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".OUTPUT.xml";
-						FileUtils.writeLines(new File(fileNameXMLOutput), CHARSET, lineasFicheroXMLOutput);
+						LOGGER.info("Escribiendo datos");
+						guardarDatosHistoricoActivoActual(saxHandler.getActivoActual());
 
 						hrefsIdx++;
 					}
@@ -357,7 +340,7 @@ public class DriverController
 		try
 		{
 			dbConnection = getConnection();
-			String consultaSQL = "select max(fecha) as ultima_fecha from mercados_investing where mercado = ? and bolsa = ? and indice = ? and ticker = ? group by mercado, bolsa, indice, ticker";
+			String consultaSQL = "select max(fecha) as ultima_fecha from public.mercados_investing where mercado = ? and bolsa = ? and indice = ? and ticker = ? group by mercado, bolsa, indice, ticker";
 			PreparedStatement pStatement = dbConnection.prepareStatement(consultaSQL);
 			int paramIdx = 1;
 			pStatement.setString(paramIdx++, mercado);
@@ -397,6 +380,133 @@ public class DriverController
 		calendar.setTime(new Date());
 		calendar.add(Calendar.DATE, -1);
 		return WEB_FEC_FORMAT.format(calendar.getTime());
+	}
+
+	/**
+	 * @param dbConnection
+	 * @param mercado
+	 * @param bolsa
+	 * @param indice
+	 * @param ticker
+	 * @param fecha
+	 * @param apertura
+	 * @param maximo
+	 * @param minimo
+	 * @param cierre
+	 * @param volumen
+	 * @throws Exception
+	 */
+	protected static void insertaRegistro(Connection dbConnection, String mercado, String bolsa, String indice, String ticker, Date fecha, BigDecimal apertura, BigDecimal maximo, BigDecimal minimo, BigDecimal cierre, BigDecimal volumen) throws Exception
+	{
+		PreparedStatement pStatement = null;
+		try
+		{
+			String insertSQL = "insert into public.mercados_investing (mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			pStatement = dbConnection.prepareStatement(insertSQL);
+			int paramIdx = 1;
+			pStatement.setString(paramIdx++, mercado);
+			pStatement.setString(paramIdx++, bolsa);
+			pStatement.setString(paramIdx++, indice);
+			pStatement.setString(paramIdx++, ticker);
+			pStatement.setDate(paramIdx++, new java.sql.Date(fecha.getTime()));
+			pStatement.setBigDecimal(paramIdx++, apertura);
+			pStatement.setBigDecimal(paramIdx++, maximo);
+			pStatement.setBigDecimal(paramIdx++, minimo);
+			pStatement.setBigDecimal(paramIdx++, cierre);
+			pStatement.setBigDecimal(paramIdx++, volumen);
+			int rowsInserted = pStatement.executeUpdate();
+			if (rowsInserted != 1)
+			{
+				throw new Exception("Se han insertado [" + rowsInserted + "] registros");
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.error("ERROR", e);
+			throw e;
+		}
+		finally
+		{
+			if (pStatement != null)
+			{
+				pStatement.close();
+			}
+		}
+	}
+
+	/**
+	 * @param activoActual
+	 */
+	private static void guardarDatosHistoricoActivoActual(Activo activoActual)
+	{
+		Connection dbConnection = null;
+		try
+		{
+			dbConnection = getConnection();
+			dbConnection.setAutoCommit(false);
+			String datos = "FECHA" + CSV_SEPARATOR;
+			datos = datos + "APERTURA" + CSV_SEPARATOR;
+			datos = datos + "MAXIMO" + CSV_SEPARATOR;
+			datos = datos + "MINIMO" + CSV_SEPARATOR;
+			datos = datos + "CIERRE" + CSV_SEPARATOR;
+			datos = datos + "VOLUMEN" + CSV_RETURN;
+			for (Registro registro : activoActual.getListaRegistros())
+			{
+				Date fecha = registro.getFecha();
+				BigDecimal apertura = registro.getApertura();
+				BigDecimal maximo = registro.getMaximo();
+				BigDecimal minimo = registro.getMinimo();
+				BigDecimal cierre = registro.getCierre();
+				BigDecimal volumen = registro.getVolumen();
+				datos = datos + DATA_FEC_FORMAT.format(fecha) + CSV_SEPARATOR;
+				datos = datos + NUMBER_FORMAT.format(apertura) + CSV_SEPARATOR;
+				datos = datos + NUMBER_FORMAT.format(maximo) + CSV_SEPARATOR;
+				datos = datos + NUMBER_FORMAT.format(minimo) + CSV_SEPARATOR;
+				datos = datos + NUMBER_FORMAT.format(cierre) + CSV_SEPARATOR;
+				datos = datos + NUMBER_FORMAT.format(volumen) + CSV_RETURN;
+				String mercado = activoActual.getMercado();
+				String bolsa = activoActual.getBolsa();
+				String indice = activoActual.getIndice();
+				String ticker = activoActual.getTicker();
+				insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen);
+			}
+			List<String> lineasFicheroXMLOutput = getLineasFicheroXML(activoActual.getMercado(), activoActual.getBolsa(), activoActual.getIndice(), activoActual.getTicker(), datos);
+			String fileNameXMLOutput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(activoActual.getTicker(), CHARSET) + ".OUTPUT.xml";
+			FileUtils.writeLines(new File(fileNameXMLOutput), CHARSET, lineasFicheroXMLOutput);
+			dbConnection.commit();
+		}
+		catch (Exception e1)
+		{
+			LOGGER.error("ERROR", e1);
+			if (dbConnection != null)
+			{
+				try
+				{
+					LOGGER.info("Deshaciendo transacción");
+					dbConnection.rollback();
+				}
+				catch (Exception e2)
+				{
+					LOGGER.error("ERROR", e2);
+				}
+			}
+		}
+		finally
+		{
+			if (dbConnection != null)
+			{
+				try
+				{
+					LOGGER.info("Cerrando conexión a base de datos");
+					dbConnection.close();
+				}
+				catch (Exception e3)
+				{
+					LOGGER.error("ERROR", e3);
+				}
+			}
+		}
+
 	}
 
 }
