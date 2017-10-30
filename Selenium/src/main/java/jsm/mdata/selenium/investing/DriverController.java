@@ -5,9 +5,15 @@ package jsm.mdata.selenium.investing;
 
 import java.io.File;
 import java.net.URLEncoder;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -38,6 +44,14 @@ public class DriverController
 	private final static Logger LOGGER = LoggerFactory.getLogger(DriverController.class);
 
 	/**
+	 * Conexión a base de datos
+	 */
+	protected static final String DATABASE_DRIVER = "org.postgresql.Driver";
+	protected static final String DATABASE_URL = "jdbc:postgresql://localhost:5432/postgres";
+	protected static final String DATABASE_USERNAME = "Empleado";
+	protected static final String DATABASE_PASSWORD = "Empleado";
+
+	/**
 	 * Web Driver
 	 */
 	private static final String WEB_DRIVER_PROPERTY = "webdriver.chrome.driver";
@@ -49,8 +63,14 @@ public class DriverController
 	private static final String CSV_SEPARATOR = ";";
 	private static final String CHARSET = "UTF-8";
 	private static final String CSV_RETURN = "\n";
-	private static final SimpleDateFormat FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+	private static final SimpleDateFormat DATA_FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+	private static final SimpleDateFormat WEB_FEC_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
+
+	/**
+	 * Descarga
+	 */
+	private static final String FEC_INI_DOWNLOAD = "01/01/2000";
 
 	/**
 	 * Rutas
@@ -186,7 +206,10 @@ public class DriverController
 
 						LOGGER.info("Actualizando fechas de descarga de datos");
 						new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("picker")));
-						((JavascriptExecutor) driver).executeScript("document.getElementById('picker').value='01/01/2000 - 01/01/2018'");
+						String fechaInicioDescarga = getFechaInicioDescarga(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento);
+						String fechaFinDescarga = getFechaFinDescarga();
+						LOGGER.info("Fecha inicio [" + fechaInicioDescarga + "] Fecha fin [" + fechaFinDescarga + "]");
+						((JavascriptExecutor) driver).executeScript("document.getElementById('picker').value='" + fechaInicioDescarga + " - " + fechaFinDescarga + "'");
 						new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("flatDatePickerCanvasHol")));
 						WebElement fechasLink = driver.findElement(By.id("flatDatePickerCanvasHol"));
 						fechasLink.click();
@@ -218,7 +241,7 @@ public class DriverController
 						datos = datos + "VOL" + CSV_RETURN;
 						for (Registro registro : activoActual.getListaRegistros())
 						{
-							datos = datos + FEC_FORMAT.format(registro.getFecha()) + CSV_SEPARATOR;
+							datos = datos + DATA_FEC_FORMAT.format(registro.getFecha()) + CSV_SEPARATOR;
 							datos = datos + NUMBER_FORMAT.format(registro.getApertura()) + CSV_SEPARATOR;
 							datos = datos + NUMBER_FORMAT.format(registro.getMaximo()) + CSV_SEPARATOR;
 							datos = datos + NUMBER_FORMAT.format(registro.getMinimo()) + CSV_SEPARATOR;
@@ -308,6 +331,72 @@ public class DriverController
 			return "etfs";
 		}
 		return null;
+	}
+
+	/**
+	 * @return
+	 * @throws Exception
+	 */
+	protected static Connection getConnection() throws Exception
+	{
+		Class.forName(DATABASE_DRIVER);
+		return DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+	}
+
+	/**
+	 * @param mercado
+	 * @param bolsa
+	 * @param indice
+	 * @param ticker
+	 * @return
+	 * @throws Exception
+	 */
+	private static String getFechaInicioDescarga(String mercado, String bolsa, String indice, String ticker) throws Exception
+	{
+		Connection dbConnection = null;
+		try
+		{
+			dbConnection = getConnection();
+			String consultaSQL = "select max(fecha) as ultima_fecha from mercados_investing where mercado = ? and bolsa = ? and indice = ? and ticker = ? group by mercado, bolsa, indice, ticker";
+			PreparedStatement pStatement = dbConnection.prepareStatement(consultaSQL);
+			int paramIdx = 1;
+			pStatement.setString(paramIdx++, mercado);
+			pStatement.setString(paramIdx++, bolsa);
+			pStatement.setString(paramIdx++, indice);
+			pStatement.setString(paramIdx++, ticker);
+			ResultSet rSet = pStatement.executeQuery();
+			String fechaInicioDescarga = FEC_INI_DOWNLOAD;
+			if (rSet.next())
+			{
+				Date ultimaFecha = rSet.getDate("ultima_fecha");
+				if (ultimaFecha != null)
+				{
+					Calendar calendar = Calendar.getInstance();
+					calendar.setTime(ultimaFecha);
+					calendar.add(Calendar.DATE, 1);
+					fechaInicioDescarga = WEB_FEC_FORMAT.format(calendar.getTime());
+				}
+			}
+			return fechaInicioDescarga;
+		}
+		finally
+		{
+			if (dbConnection != null)
+			{
+				dbConnection.close();
+			}
+		}
+	}
+
+	/**
+	 * @return
+	 */
+	private static String getFechaFinDescarga()
+	{
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(new Date());
+		calendar.add(Calendar.DATE, -1);
+		return WEB_FEC_FORMAT.format(calendar.getTime());
 	}
 
 }
