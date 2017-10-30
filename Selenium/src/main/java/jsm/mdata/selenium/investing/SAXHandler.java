@@ -33,7 +33,7 @@ public class SAXHandler extends DefaultHandler
 	/**
 	 * Formatos
 	 */
-	private static final SimpleDateFormat IN_FEC_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
+	private static final SimpleDateFormat FEC_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
 
 	/**
@@ -353,7 +353,7 @@ public class SAXHandler extends DefaultHandler
 			{
 				if (numXmlTd == 1)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setFecha(IN_FEC_FORMAT.parse(new String(ch, start, length)));
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setFecha(FEC_FORMAT.parse(new String(ch, start, length)));
 				}
 			}
 		}

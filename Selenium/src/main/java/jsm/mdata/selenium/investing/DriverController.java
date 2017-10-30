@@ -5,8 +5,11 @@ package jsm.mdata.selenium.investing;
 
 import java.io.File;
 import java.net.URLEncoder;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -35,11 +38,19 @@ public class DriverController
 	private final static Logger LOGGER = LoggerFactory.getLogger(DriverController.class);
 
 	/**
+	 * Web Driver
+	 */
+	private static final String WEB_DRIVER_PROPERTY = "webdriver.chrome.driver";
+	private static final String WEB_DRIVER_EXE = "C:\\_PELAYO\\Software\\Selenium\\drivers\\chromedriver.exe";
+
+	/**
 	 * Formatos
 	 */
 	private static final String CSV_SEPARATOR = ";";
 	private static final String CHARSET = "UTF-8";
-	private static final String FILE_SEPARATOR = "#";
+	private static final String CSV_RETURN = "\n";
+	private static final SimpleDateFormat FEC_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getInstance(Locale.GERMAN);
 
 	/**
 	 * Rutas
@@ -52,11 +63,55 @@ public class DriverController
 	private final static List<TipoURL> LISTA_URLS = new ArrayList<TipoURL>();
 	static
 	{
-		LISTA_URLS.add(new TipoURL(TipoURL.TIPO_ETF, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Lyxor"));
-		LISTA_URLS.add(new TipoURL(TipoURL.TIPO_ETF, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=iShares"));
-		LISTA_URLS.add(new TipoURL(TipoURL.TIPO_ETF, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Amundi"));
-		LISTA_URLS.add(new TipoURL(TipoURL.TIPO_ETF, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=db%20X-trackers"));
-		LISTA_URLS.add(new TipoURL(TipoURL.TIPO_ETF, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ETFS"));
+		// --
+		// -- LISTA INDICES
+		// --
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_INDEX, TipoURL.NA, TipoURL.NA, "https://es.investing.com/indices/major-indices"));
+		// --
+		// -- LISTA ACCIONES POR INDICE
+		// --
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_ESP, TipoURL.INDICE_IBEX35, "https://es.investing.com/indices/spain-35-components"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_GER, TipoURL.INDICE_DAX30, "https://es.investing.com/indices/germany-30-components"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_FRA, TipoURL.INDICE_CAC40, "https://es.investing.com/indices/france-40-components"));
+		// --
+		// -- ETFS ALEMANIA POR EMISOR
+		// --
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Amundi"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=BNP%20Paribas"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Boost"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ChinaAMC"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Commerzbank%20AG"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ComStage"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Credit%20Suisse"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=DB%20ETC"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=db%20X-trackers"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Deka"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Deutsche%20X-trackers"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Direxion"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ETFS"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=First%20Trust"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Global%20X"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Hang%20Seng"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=HBSC"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=iShares"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Lyxor"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Nomura"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Ossiam"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Other"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Pimco"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=PowerShares"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ProShares"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=RBS"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=SG"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Source"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=SPDR"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=THEAM"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=UBS"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=UBS%20UK"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Vanguard"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=VelocityShares"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=WisdomTree"));
+		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=X-Trackers"));
 	}
 
 	/**
@@ -81,7 +136,7 @@ public class DriverController
 	private static void run() throws Exception
 	{
 		LOGGER.info("Iniciando driver");
-		System.setProperty("webdriver.chrome.driver", "C:\\_PELAYO\\Software\\Selenium\\drivers\\chromedriver.exe");
+		System.setProperty(WEB_DRIVER_PROPERTY, WEB_DRIVER_EXE);
 		WebDriver driver = new ChromeDriver();
 
 		LOGGER.info("Cargando URL inicial para introducir datos proxy");
@@ -143,89 +198,36 @@ public class DriverController
 						new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("curr_table")));
 						WebElement tablaDatos = driver.findElement(By.id("curr_table"));
 
-						// LOGGER.info("Recuperando cabecera de datos");
-						// List<WebElement> listaHeader = tablaDatos.findElements(By.tagName("thead"));
-						// if (listaHeader.size() != 1)
-						// {
-						// throw new RuntimeException("Se esperaba una cabecera y se han recuperado [" + listaHeader.size() + "]");
-						// }
-						// WebElement tableHeader = listaHeader.get(0);
-						//
-						// LOGGER.info("Recuperando nombre campos");
-						// List<WebElement> listaNombreCampos = tableHeader.findElements(By.tagName("th"));
-						// if (listaNombreCampos.size() != 7)
-						// {
-						// throw new RuntimeException("Se esperaban 7 campos y se han recuperado [" + listaNombreCampos.size() + "]");
-						// }
-						// lineasFichero.add(getCabeceraFichero(listaNombreCampos));
-						//
-						// LOGGER.info("Recuperando bloque de datos");
-						// List<WebElement> listaBody = tablaDatos.findElements(By.tagName("tbody"));
-						// if (listaBody.size() != 1)
-						// {
-						// throw new RuntimeException("Se esperaba un bloque de datos y se han recuperado [" + listaBody.size() + "]");
-						// }
-						// WebElement tableBody = listaBody.get(0);
-						//
-						// LOGGER.info("Recuperando registros");
-						// List<WebElement> listaRegistros = tableBody.findElements(By.tagName("tr"));
-						// for (WebElement registro : listaRegistros)
-						// {
-						// List<WebElement> listaCampos = registro.findElements(By.tagName("td"));
-						// String registroCSV = "";
-						// registroCSV = registroCSV + listaCampos.get(0).getText() + CSV_SEPARATOR;
-						// registroCSV = registroCSV + listaCampos.get(1).getAttribute("data-real-value") + CSV_SEPARATOR;
-						// registroCSV = registroCSV + listaCampos.get(2).getAttribute("data-real-value") + CSV_SEPARATOR;
-						// registroCSV = registroCSV + listaCampos.get(3).getAttribute("data-real-value") + CSV_SEPARATOR;
-						// registroCSV = registroCSV + listaCampos.get(4).getAttribute("data-real-value") + CSV_SEPARATOR;
-						// registroCSV = registroCSV + listaCampos.get(5).getAttribute("data-real-value");
-						//
-						// LOGGER.info("Guardando registro [" + registroCSV + "]");
-						// lineasFichero.add(registroCSV);
-						// }
+						LOGGER.info("Escribiendo datos sin formatear");
+						List<String> lineasFicheroXMLInput = getLineasFicheroXML(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento, tablaDatos.getAttribute("innerHTML"));
+						String fileNameXMLInput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".INPUT.xml";
+						FileUtils.writeLines(new File(fileNameXMLInput), CHARSET, lineasFicheroXMLInput);
 
-						LOGGER.info("Escribiendo datos en formato XML");
-						List<String> lineasFicheroXML = new ArrayList<String>();
-						lineasFicheroXML.add("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>");
-						lineasFicheroXML.add("<datos>");
-						lineasFicheroXML.add("<mercado>" + getMercadoByTipoURL(tipoUrl) + "</mercado>");
-						lineasFicheroXML.add("<bolsa>GER</bolsa>");
-						lineasFicheroXML.add("<indice>-</indice>");
-						lineasFicheroXML.add("<ticker>" + hrefElemento + "</ticker>");
-						lineasFicheroXML.add("<table>");
-						lineasFicheroXML.add(tablaDatos.getAttribute("innerHTML"));
-						lineasFicheroXML.add("</table>");
-						lineasFicheroXML.add("</datos>");
-						String fileNameXML = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".xml";
-						FileUtils.writeLines(new File(fileNameXML), CHARSET, lineasFicheroXML);
-
-						LOGGER.info("Parseando datos en formato XML");
+						LOGGER.info("Formateando datos");
 						SAXParser saxParser = SAXParserFactory.newInstance().newSAXParser();
 						SAXHandler saxHandler = new SAXHandler();
-						saxParser.parse(new File(fileNameXML), saxHandler);
+						saxParser.parse(new File(fileNameXMLInput), saxHandler);
 
-						LOGGER.info("Escribiendo datos en formato CSV");
-						List<String> lineasFicheroCSV = new ArrayList<String>();
+						LOGGER.info("Escribiendo datos formateados");
 						Activo activoActual = saxHandler.getActivoActual();
-
-//						LOGGER.info("--- activo ---");
-//						LOGGER.info("bolsa [" + saxHandler.getActivoActual().getBolsa() + "]");
-//						LOGGER.info("indice [" + saxHandler.getActivoActual().getIndice() + "]");
-//						LOGGER.info("mercado [" + saxHandler.getActivoActual().getMercado() + "]");
-//						LOGGER.info("ticker [" + saxHandler.getActivoActual().getTicker() + "]");
-//						for (Registro registro : saxHandler.getActivoActual().getListaRegistros())
-//						{
-//							LOGGER.info("--- datos ----");
-//							LOGGER.info("apertura [" + registro.getApertura() + "]");
-//							LOGGER.info("cierre [" + registro.getCierre() + "]");
-//							LOGGER.info("fecha [" + registro.getFecha() + "]");
-//							LOGGER.info("maximo [" + registro.getMaximo() + "]");
-//							LOGGER.info("minimo [" + registro.getMinimo() + "]");
-//							LOGGER.info("volumen [" + registro.getVolumen() + "]");
-//						}
-
-						String fileNameCSV = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".csv";
-						FileUtils.writeLines(new File(fileNameCSV), CHARSET, lineasFicheroCSV);
+						String datos = "DATE" + CSV_SEPARATOR;
+						datos = datos + "OPEN" + CSV_SEPARATOR;
+						datos = datos + "HIGH" + CSV_SEPARATOR;
+						datos = datos + "LOW" + CSV_SEPARATOR;
+						datos = datos + "CLOSE" + CSV_SEPARATOR;
+						datos = datos + "VOL" + CSV_RETURN;
+						for (Registro registro : activoActual.getListaRegistros())
+						{
+							datos = datos + FEC_FORMAT.format(registro.getFecha()) + CSV_SEPARATOR;
+							datos = datos + NUMBER_FORMAT.format(registro.getApertura()) + CSV_SEPARATOR;
+							datos = datos + NUMBER_FORMAT.format(registro.getMaximo()) + CSV_SEPARATOR;
+							datos = datos + NUMBER_FORMAT.format(registro.getMinimo()) + CSV_SEPARATOR;
+							datos = datos + NUMBER_FORMAT.format(registro.getCierre()) + CSV_SEPARATOR;
+							datos = datos + NUMBER_FORMAT.format(registro.getVolumen()) + CSV_RETURN;
+						}
+						List<String> lineasFicheroXMLOutput = getLineasFicheroXML(activoActual.getMercado(), activoActual.getBolsa(), activoActual.getIndice(), activoActual.getTicker(), datos);
+						String fileNameXMLOutput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".OUTPUT.xml";
+						FileUtils.writeLines(new File(fileNameXMLOutput), CHARSET, lineasFicheroXMLOutput);
 
 						hrefsIdx++;
 					}
@@ -243,6 +245,30 @@ public class DriverController
 				gestionError(driver);
 			}
 		}
+	}
+
+	/**
+	 * @param mercado
+	 * @param bolsa
+	 * @param indice
+	 * @param hrefElemento
+	 * @param datos
+	 * @return
+	 */
+	private static List<String> getLineasFicheroXML(String mercado, String bolsa, String indice, String hrefElemento, String datos)
+	{
+		List<String> lineasFicheroXML = new ArrayList<String>();
+		lineasFicheroXML.add("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>");
+		lineasFicheroXML.add("<datos>");
+		lineasFicheroXML.add("<mercado>" + mercado + "</mercado>");
+		lineasFicheroXML.add("<bolsa>" + bolsa + "</bolsa>");
+		lineasFicheroXML.add("<indice>" + indice + "</indice>");
+		lineasFicheroXML.add("<ticker>" + hrefElemento + "</ticker>");
+		lineasFicheroXML.add("<table>");
+		lineasFicheroXML.add(datos);
+		lineasFicheroXML.add("</table>");
+		lineasFicheroXML.add("</datos>");
+		return lineasFicheroXML;
 	}
 
 	/**
@@ -269,81 +295,19 @@ public class DriverController
 	 */
 	private static String getTableIdByTipoURL(TipoURL tipoUrl)
 	{
-		if (tipoUrl.getTipo().equalsIgnoreCase(TipoURL.TIPO_ETF))
+		if (tipoUrl.getMercado().equalsIgnoreCase(TipoURL.MERCADO_INDEX))
+		{
+			return "cr_12";
+		}
+		if (tipoUrl.getMercado().equalsIgnoreCase(TipoURL.MERCADO_STOCK))
+		{
+			return "cr1";
+		}
+		if (tipoUrl.getMercado().equalsIgnoreCase(TipoURL.MERCADO_ETF))
 		{
 			return "etfs";
 		}
 		return null;
 	}
-
-	/**
-	 * @param tipoUrl
-	 * @return
-	 */
-	private static String getMercadoByTipoURL(TipoURL tipoUrl)
-	{
-		if (tipoUrl.getTipo().equalsIgnoreCase(TipoURL.TIPO_ETF))
-		{
-			return "ETF";
-		}
-		return null;
-	}
-
-	// /**
-	// * @param listaCampos
-	// */
-	// private static String getCabeceraFichero(List<WebElement> listaCampos)
-	// {
-	// String cabeceraCSV = "";
-	// if (!listaCampos.get(0).getAttribute("data-col-name").equalsIgnoreCase("date"))
-	// {
-	// throw new IllegalArgumentException("Se esperaba el valor [date] y se ha recuperado [" + listaCampos.get(0).getAttribute("data-col-name") + "]");
-	// }
-	// else
-	// {
-	// cabeceraCSV = cabeceraCSV + listaCampos.get(0).getAttribute("data-col-name") + CSV_SEPARATOR;
-	// }
-	// if (!listaCampos.get(1).getAttribute("data-col-name").equalsIgnoreCase("price"))
-	// {
-	// throw new IllegalArgumentException("Se esperaba el valor [price] y se ha recuperado [" + listaCampos.get(1).getAttribute("data-col-name") + "]");
-	// }
-	// else
-	// {
-	// cabeceraCSV = cabeceraCSV + listaCampos.get(1).getAttribute("data-col-name") + CSV_SEPARATOR;
-	// }
-	// if (!listaCampos.get(2).getAttribute("data-col-name").equalsIgnoreCase("open"))
-	// {
-	// throw new IllegalArgumentException("Se esperaba el valor [open] y se ha recuperado [" + listaCampos.get(2).getAttribute("data-col-name") + "]");
-	// }
-	// else
-	// {
-	// cabeceraCSV = cabeceraCSV + listaCampos.get(2).getAttribute("data-col-name") + CSV_SEPARATOR;
-	// }
-	// if (!listaCampos.get(3).getAttribute("data-col-name").equalsIgnoreCase("high"))
-	// {
-	// throw new IllegalArgumentException("Se esperaba el valor [high] y se ha recuperado [" + listaCampos.get(3).getAttribute("data-col-name") + "]");
-	// }
-	// else
-	// {
-	// cabeceraCSV = cabeceraCSV + listaCampos.get(3).getAttribute("data-col-name") + CSV_SEPARATOR;
-	// }
-	// if (!listaCampos.get(4).getAttribute("data-col-name").equalsIgnoreCase("low"))
-	// {
-	// throw new IllegalArgumentException("Se esperaba el valor [low] y se ha recuperado [" + listaCampos.get(4).getAttribute("data-col-name") + "]");
-	// }
-	// else
-	// {
-	// cabeceraCSV = cabeceraCSV + listaCampos.get(4).getAttribute("data-col-name") + CSV_SEPARATOR;
-	// }
-	// if (!listaCampos.get(5).getAttribute("data-col-name").equalsIgnoreCase("vol"))
-	// {
-	// throw new IllegalArgumentException("Se esperaba el valor [vol] y se ha recuperado [" + listaCampos.get(5).getAttribute("data-col-name") + "]");
-	// }
-	// else
-	// {
-	// cabeceraCSV = cabeceraCSV + listaCampos.get(5).getAttribute("data-col-name");
-	// }
-	// return cabeceraCSV;
-	// }
 
 }
