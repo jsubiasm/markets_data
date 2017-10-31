@@ -47,16 +47,16 @@ public class DriverController
 	/**
 	 * Conexión a base de datos
 	 */
-	protected static final String DATABASE_DRIVER = "org.postgresql.Driver";
-	protected static final String DATABASE_URL = "jdbc:postgresql://localhost:5432/postgres";
-	protected static final String DATABASE_USERNAME = "Empleado";
-	protected static final String DATABASE_PASSWORD = "Empleado";
+	private static final String DATABASE_DRIVER = "org.postgresql.Driver";
+	private static final String DATABASE_URL = "jdbc:postgresql://localhost:5432/postgres";
+	private static final String DATABASE_USERNAME = "Empleado";
+	private static final String DATABASE_PASSWORD = "Empleado";
 
 	/**
 	 * Web Driver
 	 */
-	private static final String WEB_DRIVER_PROPERTY = "webdriver.chrome.driver";
-	private static final String WEB_DRIVER_EXE = "C:\\_PELAYO\\Software\\Selenium\\drivers\\chromedriver.exe";
+	public static final String WEB_DRIVER_PROPERTY = "webdriver.chrome.driver";
+	public static final String WEB_DRIVER_EXE = "C:\\_PELAYO\\Software\\Selenium\\drivers\\chromedriver.exe";
 
 	/**
 	 * Formatos
@@ -76,7 +76,7 @@ public class DriverController
 	/**
 	 * Rutas
 	 */
-	protected static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Selenium\\investing\\download";
+	private static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Selenium\\investing\\download";
 
 	/**
 	 * URLs
@@ -190,59 +190,14 @@ public class DriverController
 					listaHrefs.add(link.getAttribute("href"));
 				}
 
+				LOGGER.info("Iniciando proceso");
 				int hrefsIdx = 0;
 				while (hrefsIdx < listaHrefs.size())
 				{
 					try
 					{
 						String hrefElemento = listaHrefs.get(hrefsIdx);
-
-						LOGGER.info("Cargando URL [" + hrefElemento + "]");
-						driver.get(hrefElemento);
-
-						LOGGER.info("Accediendo información histórica");
-						new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.linkText("Información histórica")));
-						WebElement historicoLink = driver.findElement(By.linkText("Información histórica"));
-						historicoLink.click();
-
-						LOGGER.info("Actualizando fechas de descarga de datos");
-						new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("picker")));
-						Date fechaInicioDescarga = getFechaInicioDescarga(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento);
-						Date fechaFinDescarga = getFechaFinDescarga();
-
-						LOGGER.info("Fecha inicio [" + WEB_FEC_FORMAT.format(fechaInicioDescarga) + "] Fecha fin [" + WEB_FEC_FORMAT.format(fechaFinDescarga) + "]");
-						if (!fechaInicioDescarga.after(fechaFinDescarga))
-						{
-							((JavascriptExecutor) driver).executeScript("document.getElementById('picker').value='" + WEB_FEC_FORMAT.format(fechaInicioDescarga) + " - " + WEB_FEC_FORMAT.format(fechaFinDescarga) + "'");
-							new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("flatDatePickerCanvasHol")));
-							WebElement fechasLink = driver.findElement(By.id("flatDatePickerCanvasHol"));
-							fechasLink.click();
-							new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("applyBtn")));
-							WebElement aceptarBtn = driver.findElement(By.id("applyBtn"));
-							aceptarBtn.click();
-
-							LOGGER.info("Recuperando tabla de datos");
-							new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("curr_table")));
-							WebElement tablaDatos = driver.findElement(By.id("curr_table"));
-
-							LOGGER.info("Escribiendo fichero de datos sin formatear");
-							List<String> lineasFicheroXMLInput = getLineasFicheroXML(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento, tablaDatos.getAttribute("innerHTML"));
-							String fileNameXMLInput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".INPUT.xml";
-							FileUtils.writeLines(new File(fileNameXMLInput), CHARSET, lineasFicheroXMLInput);
-
-							LOGGER.info("Formateando datos");
-							SAXParser saxParser = SAXParserFactory.newInstance().newSAXParser();
-							SAXHandler saxHandler = new SAXHandler();
-							saxParser.parse(new File(fileNameXMLInput), saxHandler);
-
-							LOGGER.info("Guardando datos");
-							guardarDatosHistoricoActivoActual(saxHandler.getActivoActual());
-						}
-						else
-						{
-							LOGGER.info("No hay datos que procesar");
-						}
-
+						procesarElemento(driver, tipoUrl, hrefElemento);
 						hrefsIdx++;
 					}
 					catch (Exception e)
@@ -258,6 +213,61 @@ public class DriverController
 				LOGGER.error("Se ha producido un error", e);
 				gestionError(driver);
 			}
+		}
+	}
+
+	/**
+	 * @param driver
+	 * @param tipoUrl
+	 * @param hrefElemento
+	 * @throws Exception
+	 */
+	public static void procesarElemento(WebDriver driver, TipoURL tipoUrl, String hrefElemento) throws Exception
+	{
+		LOGGER.info("Cargando URL [" + hrefElemento + "]");
+		driver.get(hrefElemento);
+
+		LOGGER.info("Accediendo información histórica");
+		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.linkText("Información histórica")));
+		WebElement historicoLink = driver.findElement(By.linkText("Información histórica"));
+		historicoLink.click();
+
+		LOGGER.info("Actualizando fechas de descarga de datos");
+		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("picker")));
+		Date fechaInicioDescarga = getFechaInicioDescarga(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento);
+		Date fechaFinDescarga = getFechaFinDescarga();
+
+		LOGGER.info("Fecha inicio [" + WEB_FEC_FORMAT.format(fechaInicioDescarga) + "] Fecha fin [" + WEB_FEC_FORMAT.format(fechaFinDescarga) + "]");
+		if (!fechaInicioDescarga.after(fechaFinDescarga))
+		{
+			((JavascriptExecutor) driver).executeScript("document.getElementById('picker').value='" + WEB_FEC_FORMAT.format(fechaInicioDescarga) + " - " + WEB_FEC_FORMAT.format(fechaFinDescarga) + "'");
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("flatDatePickerCanvasHol")));
+			WebElement fechasLink = driver.findElement(By.id("flatDatePickerCanvasHol"));
+			fechasLink.click();
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("applyBtn")));
+			WebElement aceptarBtn = driver.findElement(By.id("applyBtn"));
+			aceptarBtn.click();
+
+			LOGGER.info("Recuperando tabla de datos");
+			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("curr_table")));
+			WebElement tablaDatos = driver.findElement(By.id("curr_table"));
+
+			LOGGER.info("Escribiendo fichero de datos sin formatear");
+			List<String> lineasFicheroXMLInput = getLineasFicheroXML(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento, tablaDatos.getAttribute("innerHTML"));
+			String fileNameXMLInput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".INPUT.xml";
+			FileUtils.writeLines(new File(fileNameXMLInput), CHARSET, lineasFicheroXMLInput);
+
+			LOGGER.info("Formateando datos");
+			SAXParser saxParser = SAXParserFactory.newInstance().newSAXParser();
+			SAXHandler saxHandler = new SAXHandler();
+			saxParser.parse(new File(fileNameXMLInput), saxHandler);
+
+			LOGGER.info("Guardando datos");
+			guardarDatosHistoricoActivoActual(saxHandler.getActivoActual());
+		}
+		else
+		{
+			LOGGER.info("No hay datos que procesar");
 		}
 	}
 
@@ -288,7 +298,7 @@ public class DriverController
 	/**
 	 * @param driver
 	 */
-	private static void gestionError(WebDriver driver)
+	public static void gestionError(WebDriver driver)
 	{
 		LOGGER.info("Intentando cerrar popup bloqueante");
 		try
@@ -328,7 +338,7 @@ public class DriverController
 	 * @return
 	 * @throws Exception
 	 */
-	protected static Connection getConnection() throws Exception
+	private static Connection getConnection() throws Exception
 	{
 		Class.forName(DATABASE_DRIVER);
 		return DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
@@ -406,7 +416,7 @@ public class DriverController
 	 * @param volumen
 	 * @throws Exception
 	 */
-	protected static void insertaRegistro(Connection dbConnection, String mercado, String bolsa, String indice, String ticker, Date fecha, BigDecimal apertura, BigDecimal maximo, BigDecimal minimo, BigDecimal cierre, BigDecimal volumen) throws Exception
+	private static void insertaRegistro(Connection dbConnection, String mercado, String bolsa, String indice, String ticker, Date fecha, BigDecimal apertura, BigDecimal maximo, BigDecimal minimo, BigDecimal cierre, BigDecimal volumen) throws Exception
 	{
 		PreparedStatement pStatement = null;
 		try
