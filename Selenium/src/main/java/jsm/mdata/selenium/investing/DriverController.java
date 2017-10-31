@@ -450,6 +450,46 @@ public class DriverController
 	}
 
 	/**
+	 * @param dbConnection
+	 * @param mercado
+	 * @param bolsa
+	 * @param indice
+	 * @param ticker
+	 * @param fecha
+	 * @return
+	 * @throws Exception
+	 */
+	private static boolean existeRegistro(Connection dbConnection, String mercado, String bolsa, String indice, String ticker, Date fecha) throws Exception
+	{
+		PreparedStatement pStatement = null;
+		try
+		{
+			String consultaSQL = "select count(1) as existe from public.mercados_investing where mercado = ? and bolsa = ? and indice = ? and ticker = ? and fecha = ?";
+			pStatement = dbConnection.prepareStatement(consultaSQL);
+			int paramIdx = 1;
+			pStatement.setString(paramIdx++, mercado);
+			pStatement.setString(paramIdx++, bolsa);
+			pStatement.setString(paramIdx++, indice);
+			pStatement.setString(paramIdx++, ticker);
+			pStatement.setDate(paramIdx++, new java.sql.Date(fecha.getTime()));
+			ResultSet rSet = pStatement.executeQuery();
+			Integer existe = null;
+			if (rSet.next())
+			{
+				existe = rSet.getInt("existe");
+			}
+			return (existe != null && existe.intValue() > 0);
+		}
+		finally
+		{
+			if (pStatement != null)
+			{
+				pStatement.close();
+			}
+		}
+	}
+
+	/**
 	 * @param activoActual
 	 * @throws Exception
 	 */
@@ -486,7 +526,15 @@ public class DriverController
 				String bolsa = activoActual.getBolsa();
 				String indice = activoActual.getIndice();
 				String ticker = activoActual.getTicker();
-				insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen);
+				if (!existeRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha))
+				{
+					insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen);
+					LOGGER.info("Insertado registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] [" + apertura + "] [" + maximo + "] [" + minimo + "] [" + cierre + "] [" + volumen + "]");
+				}
+				else
+				{
+					LOGGER.info("NO INSERTADO: El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] ya existe");
+				}
 			}
 			LOGGER.info("Escribiendo fichero de datos formateados");
 			List<String> lineasFicheroXMLOutput = getLineasFicheroXML(activoActual.getMercado(), activoActual.getBolsa(), activoActual.getIndice(), activoActual.getTicker(), datos);
