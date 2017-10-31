@@ -529,11 +529,10 @@ public class DriverController
 				if (!existeRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha))
 				{
 					insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen);
-					LOGGER.info("Insertado registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] [" + apertura + "] [" + maximo + "] [" + minimo + "] [" + cierre + "] [" + volumen + "]");
 				}
 				else
 				{
-					LOGGER.info("NO INSERTADO: El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] ya existe");
+					LOGGER.info("El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] ya existe");
 				}
 			}
 			LOGGER.info("Escribiendo fichero de datos formateados");
