@@ -244,8 +244,19 @@ public class DriverController
 			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("flatDatePickerCanvasHol")));
 			WebElement fechasLink = driver.findElement(By.id("flatDatePickerCanvasHol"));
 			fechasLink.click();
+
 			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("startDate")));
+			WebElement startDate = driver.findElement(By.id("startDate"));
+			startDate.clear();
+			startDate.sendKeys(WEB_FEC_FORMAT.format(fechaInicioDescarga));
+			new WebDriverWait(driver, 10).until(ExpectedConditions.attributeToBe(By.id("startDate"), "value", WEB_FEC_FORMAT.format(fechaInicioDescarga)));
+
 			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("endDate")));
+			WebElement endDate = driver.findElement(By.id("endDate"));
+			endDate.clear();
+			endDate.sendKeys(WEB_FEC_FORMAT.format(fechaFinDescarga));
+			new WebDriverWait(driver, 10).until(ExpectedConditions.attributeToBe(By.id("endDate"), "value", WEB_FEC_FORMAT.format(fechaFinDescarga)));
+
 			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("applyBtn")));
 			WebElement aceptarBtn = driver.findElement(By.id("applyBtn"));
 			aceptarBtn.click();
@@ -253,19 +264,26 @@ public class DriverController
 			LOGGER.info("Recuperando tabla de datos");
 			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("curr_table")));
 			WebElement tablaDatos = driver.findElement(By.id("curr_table"));
+			String tablaDatosHtml = tablaDatos.getAttribute("innerHTML");
+			if (tablaDatosHtml.indexOf("No se encontraron resultados") == -1)
+			{
+				LOGGER.info("Escribiendo fichero de datos sin formatear");
+				List<String> lineasFicheroXMLInput = getLineasFicheroXML(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento, tablaDatosHtml);
+				String fileNameXMLInput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".INPUT.xml";
+				FileUtils.writeLines(new File(fileNameXMLInput), CHARSET, lineasFicheroXMLInput);
 
-			LOGGER.info("Escribiendo fichero de datos sin formatear");
-			List<String> lineasFicheroXMLInput = getLineasFicheroXML(tipoUrl.getMercado(), tipoUrl.getBolsa(), tipoUrl.getIndice(), hrefElemento, tablaDatos.getAttribute("innerHTML"));
-			String fileNameXMLInput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".INPUT.xml";
-			FileUtils.writeLines(new File(fileNameXMLInput), CHARSET, lineasFicheroXMLInput);
+				LOGGER.info("Formateando datos");
+				SAXParser saxParser = SAXParserFactory.newInstance().newSAXParser();
+				SAXHandler saxHandler = new SAXHandler();
+				saxParser.parse(new File(fileNameXMLInput), saxHandler);
 
-			LOGGER.info("Formateando datos");
-			SAXParser saxParser = SAXParserFactory.newInstance().newSAXParser();
-			SAXHandler saxHandler = new SAXHandler();
-			saxParser.parse(new File(fileNameXMLInput), saxHandler);
-
-			LOGGER.info("Guardando datos");
-			guardarDatosHistoricoActivoActual(saxHandler.getActivoActual());
+				LOGGER.info("Guardando datos");
+				guardarDatosHistoricoActivoActual(saxHandler.getActivoActual());
+			}
+			else
+			{
+				LOGGER.info("No se han encontrado datos");
+			}
 		}
 		else
 		{
