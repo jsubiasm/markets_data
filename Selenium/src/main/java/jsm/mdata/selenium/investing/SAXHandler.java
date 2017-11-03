@@ -169,33 +169,30 @@ public class SAXHandler extends DefaultHandler
 			{
 				xmlTh = true;
 				numXmlTh++;
-				if (numXmlTr == 1)
+				String dataColName = attributes.getValue("data-col-name");
+				if (numXmlTh == 1 && !dataColName.equalsIgnoreCase("date"))
 				{
-					String dataColName = attributes.getValue("data-col-name");
-					if (numXmlTh == 1 && !dataColName.equalsIgnoreCase("date"))
-					{
-						throw new IllegalArgumentException("Se esperaba el valor [date] y se ha recuperado [" + dataColName + "]");
-					}
-					else if (numXmlTh == 2 && !dataColName.equalsIgnoreCase("price"))
-					{
-						throw new IllegalArgumentException("Se esperaba el valor [price] y se ha recuperado [" + dataColName + "]");
-					}
-					else if (numXmlTh == 3 && !dataColName.equalsIgnoreCase("open"))
-					{
-						throw new IllegalArgumentException("Se esperaba el valor [open] y se ha recuperado [" + dataColName + "]");
-					}
-					else if (numXmlTh == 4 && !dataColName.equalsIgnoreCase("high"))
-					{
-						throw new IllegalArgumentException("Se esperaba el valor [high] y se ha recuperado [" + dataColName + "]");
-					}
-					else if (numXmlTh == 5 && !dataColName.equalsIgnoreCase("low"))
-					{
-						throw new IllegalArgumentException("Se esperaba el valor [low] y se ha recuperado [" + dataColName + "]");
-					}
-					else if (numXmlTh == 6 && !dataColName.equalsIgnoreCase("vol"))
-					{
-						throw new IllegalArgumentException("Se esperaba el valor [vol] y se ha recuperado [" + dataColName + "]");
-					}
+					throw new IllegalArgumentException("Se esperaba el valor [date] y se ha recuperado [" + dataColName + "]");
+				}
+				else if (numXmlTh == 2 && !dataColName.equalsIgnoreCase("price"))
+				{
+					throw new IllegalArgumentException("Se esperaba el valor [price] y se ha recuperado [" + dataColName + "]");
+				}
+				else if (numXmlTh == 3 && !dataColName.equalsIgnoreCase("open"))
+				{
+					throw new IllegalArgumentException("Se esperaba el valor [open] y se ha recuperado [" + dataColName + "]");
+				}
+				else if (numXmlTh == 4 && !dataColName.equalsIgnoreCase("high"))
+				{
+					throw new IllegalArgumentException("Se esperaba el valor [high] y se ha recuperado [" + dataColName + "]");
+				}
+				else if (numXmlTh == 5 && !dataColName.equalsIgnoreCase("low"))
+				{
+					throw new IllegalArgumentException("Se esperaba el valor [low] y se ha recuperado [" + dataColName + "]");
+				}
+				else if (numXmlTh == 6 && !dataColName.equalsIgnoreCase("vol"))
+				{
+					throw new IllegalArgumentException("Se esperaba el valor [vol] y se ha recuperado [" + dataColName + "]");
 				}
 			}
 			if (qName.equalsIgnoreCase(XML_TBODY))
@@ -207,25 +204,35 @@ public class SAXHandler extends DefaultHandler
 				xmlTd = true;
 				numXmlTd++;
 				String dataRealValue = attributes.getValue("data-real-value");
+				BigDecimal dataRealValueParsed = null;
+				try
+				{
+					dataRealValueParsed = new BigDecimal(NUMBER_FORMAT.parse(dataRealValue).toString());
+				}
+				catch (Exception e)
+				{
+					LOGGER.error("No se ha podido parsear el valor [" + dataRealValue + "] y se sustituye por un cero", e);
+					dataRealValueParsed = BigDecimal.ZERO;
+				}
 				if (numXmlTd == 2)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setCierre(new BigDecimal(NUMBER_FORMAT.parse(dataRealValue).toString()));
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setCierre(dataRealValueParsed);
 				}
 				else if (numXmlTd == 3)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setApertura(new BigDecimal(NUMBER_FORMAT.parse(dataRealValue).toString()));
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setApertura(dataRealValueParsed);
 				}
 				else if (numXmlTd == 4)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setMaximo(new BigDecimal(NUMBER_FORMAT.parse(dataRealValue).toString()));
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setMaximo(dataRealValueParsed);
 				}
 				else if (numXmlTd == 5)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setMinimo(new BigDecimal(NUMBER_FORMAT.parse(dataRealValue).toString()));
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setMinimo(dataRealValueParsed);
 				}
 				else if (numXmlTd == 6)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setVolumen(new BigDecimal(NUMBER_FORMAT.parse(dataRealValue).toString()));
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setVolumen(dataRealValueParsed);
 				}
 			}
 		}

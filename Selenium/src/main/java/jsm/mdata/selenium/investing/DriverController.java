@@ -244,6 +244,8 @@ public class DriverController
 			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("flatDatePickerCanvasHol")));
 			WebElement fechasLink = driver.findElement(By.id("flatDatePickerCanvasHol"));
 			fechasLink.click();
+			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("startDate")));
+			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("endDate")));
 			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("applyBtn")));
 			WebElement aceptarBtn = driver.findElement(By.id("applyBtn"));
 			aceptarBtn.click();
@@ -508,6 +510,7 @@ public class DriverController
 			datos = datos + "CIERRE" + CSV_SEPARATOR;
 			datos = datos + "VOLUMEN" + CSV_RETURN;
 			LOGGER.info("Grabando registros en base de datos");
+			int numRegInsertados = 0;
 			for (Registro registro : activoActual.getListaRegistros())
 			{
 				Date fecha = registro.getFecha();
@@ -529,6 +532,7 @@ public class DriverController
 				if (!existeRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha))
 				{
 					insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen);
+					numRegInsertados++;
 				}
 				else
 				{
@@ -539,7 +543,7 @@ public class DriverController
 			List<String> lineasFicheroXMLOutput = getLineasFicheroXML(activoActual.getMercado(), activoActual.getBolsa(), activoActual.getIndice(), activoActual.getTicker(), datos);
 			String fileNameXMLOutput = DOWNLOAD_PATH + "\\" + URLEncoder.encode(activoActual.getTicker(), CHARSET) + ".OUTPUT.xml";
 			FileUtils.writeLines(new File(fileNameXMLOutput), CHARSET, lineasFicheroXMLOutput);
-			LOGGER.info("Confirmando transacción");
+			LOGGER.info("Confirmando transacción para [" + numRegInsertados + "] registros");
 			dbConnection.commit();
 		}
 		catch (Exception e1)
