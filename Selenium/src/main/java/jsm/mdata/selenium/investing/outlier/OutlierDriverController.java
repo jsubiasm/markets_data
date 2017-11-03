@@ -30,7 +30,15 @@ public class OutlierDriverController
 	private final static Logger LOGGER = LoggerFactory.getLogger(OutlierDriverController.class);
 
 	/**
+	 * 
 	 * URLs
+	 * 
+	 * select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin from public.mercados_investing group by mercado, bolsa, indice, ticker order by fecha_ini desc, mercado, bolsa, indice, ticker;
+	 * 
+	 * delete from public.mercados_investing where ticker = 'xxxxxxxxxxxxxxxxxxxxxxxxx';
+	 * 
+	 * LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "xxxxxxxxxxxxxxxxxxxxxxxxx"));
+	 * 
 	 */
 	private final static List<TipoURL> LISTA_URLS_OUTLIERS = new ArrayList<TipoURL>();
 	static
