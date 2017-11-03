@@ -204,35 +204,25 @@ public class SAXHandler extends DefaultHandler
 				xmlTd = true;
 				numXmlTd++;
 				String dataRealValue = attributes.getValue("data-real-value");
-				BigDecimal dataRealValueParsed = null;
-				try
-				{
-					dataRealValueParsed = new BigDecimal(NUMBER_FORMAT.parse(dataRealValue).toString());
-				}
-				catch (Exception e)
-				{
-					LOGGER.error("No se ha podido parsear el valor [" + dataRealValue + "] y se sustituye por un cero", e);
-					dataRealValueParsed = BigDecimal.ZERO;
-				}
 				if (numXmlTd == 2)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setCierre(dataRealValueParsed);
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setCierre(getBigDecimalFromString(dataRealValue));
 				}
 				else if (numXmlTd == 3)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setApertura(dataRealValueParsed);
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setApertura(getBigDecimalFromString(dataRealValue));
 				}
 				else if (numXmlTd == 4)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setMaximo(dataRealValueParsed);
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setMaximo(getBigDecimalFromString(dataRealValue));
 				}
 				else if (numXmlTd == 5)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setMinimo(dataRealValueParsed);
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setMinimo(getBigDecimalFromString(dataRealValue));
 				}
 				else if (numXmlTd == 6)
 				{
-					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setVolumen(dataRealValueParsed);
+					activoActual.getListaRegistros().get(activoActual.getListaRegistros().size() - 1).setVolumen(getBigDecimalFromString(dataRealValue));
 				}
 			}
 		}
@@ -240,6 +230,25 @@ public class SAXHandler extends DefaultHandler
 		{
 			throw new SAXException("ERROR", e);
 		}
+	}
+
+	/**
+	 * @param numericString
+	 * @return
+	 */
+	private BigDecimal getBigDecimalFromString(String numericString)
+	{
+		BigDecimal theBigDecimal = null;
+		try
+		{
+			theBigDecimal = new BigDecimal(NUMBER_FORMAT.parse(numericString).toString());
+		}
+		catch (Exception e)
+		{
+			LOGGER.error("No se ha podido parsear el valor [" + numericString + "] y se sustituye por un cero", e);
+			theBigDecimal = BigDecimal.ZERO;
+		}
+		return theBigDecimal;
 	}
 
 	/*
