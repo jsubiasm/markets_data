@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jsm.mdata.selenium.investing;
+package jsm.mdata.selenium.investing.etl;
 
 import java.util.ArrayList;
 

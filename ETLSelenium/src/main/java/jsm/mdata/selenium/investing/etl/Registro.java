@@ -1,4 +1,4 @@
-package jsm.mdata.selenium.investing;
+package jsm.mdata.selenium.investing.etl;
 
 import java.math.BigDecimal;
 import java.util.Date;
