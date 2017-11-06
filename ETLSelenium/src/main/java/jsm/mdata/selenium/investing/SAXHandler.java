@@ -85,7 +85,7 @@ public class SAXHandler extends DefaultHandler
 	{
 		try
 		{
-			String fileName = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Selenium\\investing\\download\\https%3A%2F%2Fes.investing.com%2Fetfs%2Flyxor-stoxx-europe-600-banks%3Fcid%3D46171.xml";
+			String fileName = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETLSelenium\\investing\\download\\https%3A%2F%2Fes.investing.com%2Fetfs%2Flyxor-stoxx-europe-600-banks%3Fcid%3D46171.xml";
 			SAXParser saxParser = SAXParserFactory.newInstance().newSAXParser();
 			SAXHandler saxHandler = new SAXHandler();
 			saxParser.parse(new File(fileName), saxHandler);
