@@ -79,60 +79,71 @@ public class DriverController
 	private static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETLSelenium\\investing\\download";
 
 	/**
-	 * URLs
+	 * Lista URLs 01
 	 */
-	private final static List<TipoURL> LISTA_URLS = new ArrayList<TipoURL>();
+	private final static List<TipoURL> LISTA_URLS_01 = new ArrayList<TipoURL>();
 	static
 	{
 		// --
 		// -- LISTA INDICES
 		// --
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_INDEX, TipoURL.NA, TipoURL.NA, "https://es.investing.com/indices/major-indices"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_INDEX, TipoURL.NA, TipoURL.NA, "https://es.investing.com/indices/major-indices"));
 		// --
 		// -- LISTA ACCIONES POR INDICE
 		// --
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_ESP, TipoURL.INDICE_IBEX35, "https://es.investing.com/indices/spain-35-components"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_GER, TipoURL.INDICE_DAX30, "https://es.investing.com/indices/germany-30-components"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_FRA, TipoURL.INDICE_CAC40, "https://es.investing.com/indices/france-40-components"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_ESP, TipoURL.INDICE_IBEX35, "https://es.investing.com/indices/spain-35-components"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_GER, TipoURL.INDICE_DAX30, "https://es.investing.com/indices/germany-30-components"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_FRA, TipoURL.INDICE_CAC40, "https://es.investing.com/indices/france-40-components"));
 		// --
 		// -- ETFS ALEMANIA POR EMISOR
 		// --
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Amundi"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=BNP%20Paribas"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Boost"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ChinaAMC"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Commerzbank%20AG"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ComStage"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Credit%20Suisse"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=DB%20ETC"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=db%20X-trackers"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Deka"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Deutsche%20X-trackers"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Direxion"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ETFS"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=First%20Trust"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Global%20X"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Hang%20Seng"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=HBSC"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=iShares"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Lyxor"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Nomura"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Ossiam"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Other"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Pimco"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=PowerShares"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ProShares"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=RBS"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=SG"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Source"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=SPDR"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=THEAM"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=UBS"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=UBS%20UK"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Vanguard"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=VelocityShares"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=WisdomTree"));
-		LISTA_URLS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=X-Trackers"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=BNP%20Paribas"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Boost"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ChinaAMC"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Commerzbank%20AG"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ComStage"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Credit%20Suisse"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=DB%20ETC"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Deka"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Deutsche%20X-trackers"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Direxion"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=First%20Trust"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Global%20X"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Hang%20Seng"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=HBSC"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Nomura"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Ossiam"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Other"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Pimco"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=PowerShares"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ProShares"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=RBS"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=SG"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Source"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=SPDR"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=THEAM"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=UBS"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=UBS%20UK"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Vanguard"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=VelocityShares"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=WisdomTree"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=X-Trackers"));
+	}
+
+	/**
+	 * Lista URLs 02
+	 */
+	private final static List<TipoURL> LISTA_URLS_02 = new ArrayList<TipoURL>();
+	static
+	{
+		// --
+		// -- ETFS ALEMANIA POR EMISOR
+		// --
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Amundi"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=db%20X-trackers"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ETFS"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=iShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Lyxor"));
 	}
 
 	/**
@@ -142,7 +153,10 @@ public class DriverController
 	{
 		try
 		{
-			run();
+			LOGGER.info("Recuperando lista de URLs");
+			List<TipoURL> listaURLs = seleccionListaURLs(args);
+			LOGGER.info("Iniciando proceso automatizado");
+			run(listaURLs);
 		}
 		catch (Exception e)
 		{
@@ -151,10 +165,57 @@ public class DriverController
 	}
 
 	/**
+	 * @param args
+	 * @return
+	 * @throws Exception
+	 */
+	private static List<TipoURL> seleccionListaURLs(String[] args) throws Exception
+	{
+		List<TipoURL> listaURLs = null;
+		if (args == null || args.length == 0)
+		{
+			throw new Exception("Se debe proporcionar el número de lista de descarga [1 | 2]");
+		}
+		else if (args.length > 1)
+		{
+			throw new Exception("Se espera un solo argumento y se han recuperado [" + args.length + "]");
+		}
+		else
+		{
+			Integer numeroLista = null;
+			try
+			{
+				numeroLista = new Integer(args[0]);
+			}
+			catch (Exception e)
+			{
+				throw new Exception("Los valores permitidos para el número de lista de descarga son [1 | 2]");
+			}
+			if (numeroLista.intValue() < 1 || numeroLista.intValue() > 2)
+			{
+				throw new Exception("Los valores permitidos para el número de lista de descarga son [1 | 2]");
+			}
+			else if (numeroLista.intValue() == 1)
+			{
+				listaURLs = LISTA_URLS_01;
+			}
+			else if (numeroLista.intValue() == 2)
+			{
+				listaURLs = LISTA_URLS_02;
+			}
+			else
+			{
+				throw new Exception("Los valores permitidos para el número de lista de descarga son [1 | 2]");
+			}
+			return listaURLs;
+		}
+	}
+
+	/**
 	 * @throws Exception
 	 * 
 	 */
-	private static void run() throws Exception
+	private static void run(List<TipoURL> listaURLs) throws Exception
 	{
 		LOGGER.info("Iniciando driver");
 		System.setProperty(WEB_DRIVER_PROPERTY, WEB_DRIVER_EXE);
@@ -168,11 +229,11 @@ public class DriverController
 		FileUtils.cleanDirectory(new File(DOWNLOAD_PATH));
 
 		int urlsIdx = 0;
-		while (urlsIdx < LISTA_URLS.size())
+		while (urlsIdx < listaURLs.size())
 		{
 			try
 			{
-				TipoURL tipoUrl = LISTA_URLS.get(urlsIdx);
+				TipoURL tipoUrl = listaURLs.get(urlsIdx);
 
 				LOGGER.info("Cargando URL [" + tipoUrl.getUrl() + "]");
 				driver.get(tipoUrl.getUrl());
