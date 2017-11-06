@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jsm.mdata.selenium.investing;
+package jsm.mdata.selenium.investing.etl;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -31,6 +31,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import jsm.mdata.selenium.investing.Activo;
+import jsm.mdata.selenium.investing.Registro;
+import jsm.mdata.selenium.investing.SAXHandler;
+import jsm.mdata.selenium.investing.TipoURL;
 
 /**
  * @author Empleado

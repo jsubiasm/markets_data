@@ -43,7 +43,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>jsm.mdata.selenium.investing.DriverController</mainClass>
+							<mainClass>jsm.mdata.selenium.investing.etl.DriverController</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
