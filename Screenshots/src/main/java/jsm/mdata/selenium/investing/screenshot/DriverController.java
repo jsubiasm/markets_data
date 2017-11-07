@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jsm.mdata.selenium.investing.snapshot;
+package jsm.mdata.selenium.investing.screenshot;
 
 import java.io.File;
 import java.net.URLEncoder;
@@ -41,7 +41,7 @@ public class DriverController
 	/**
 	 * Rutas
 	 */
-	private static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Snapshots\\investing\\download";
+	private static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Screenshots\\investing\\download";
 
 	/**
 	 * Formatos
