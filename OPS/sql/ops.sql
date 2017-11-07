@@ -106,9 +106,18 @@ from
 			   min(m1.cierre) as precio_minimo, max(m1.cierre) as precio_maximo 
 		from public.mercados_investing m1 
 		where m1.mercado = 'ETF'
+		and ticker not like '%-2x%'
+		and ticker not like '%-3x%'
+		and ticker not like '%-4x%'
+		and ticker not like '%-10x%'
+		and ticker not like '%-15x%'
+		and ticker not like '%leveraged%'
+		and ticker not like '%inverse%'
+		and ticker not like '%short%'
+		and ticker not like '%levdax%'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
-	as m2 where m2.primera_fecha < '2008-01-01'
+	as m2 where m2.primera_fecha < '2012-01-01'
 ) 
 as m4 order by var_maximo desc, var_minimo desc;
 --
