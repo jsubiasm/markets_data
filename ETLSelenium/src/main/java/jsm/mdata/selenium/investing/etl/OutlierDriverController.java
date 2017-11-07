@@ -68,6 +68,10 @@ public class OutlierDriverController
 		{
 			LOGGER.error("ERROR", e);
 		}
+		finally
+		{
+			LOGGER.info("FINALIZADO");
+		}
 	}
 
 	/**

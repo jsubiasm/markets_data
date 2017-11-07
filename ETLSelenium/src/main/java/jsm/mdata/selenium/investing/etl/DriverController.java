@@ -162,6 +162,10 @@ public class DriverController
 		{
 			LOGGER.error("ERROR", e);
 		}
+		finally
+		{
+			LOGGER.info("FINALIZADO");
+		}
 	}
 
 	/**
@@ -217,6 +221,9 @@ public class DriverController
 	 */
 	private static void run(List<TipoURL> listaURLs) throws Exception
 	{
+		LOGGER.info("Suprimiendo ficheros temporales antiguos");
+		FileUtils.cleanDirectory(new File(DOWNLOAD_PATH));
+
 		LOGGER.info("Iniciando driver");
 		System.setProperty(WEB_DRIVER_PROPERTY, WEB_DRIVER_EXE);
 		WebDriver driver = new ChromeDriver();
@@ -225,9 +232,7 @@ public class DriverController
 		driver.get("https://es.investing.com/");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.className("disclaimer")));
 
-		LOGGER.info("Suprimiendo ficheros temporales antiguos");
-		FileUtils.cleanDirectory(new File(DOWNLOAD_PATH));
-
+		LOGGER.info("Iniciando proceso");
 		int urlsIdx = 0;
 		while (urlsIdx < listaURLs.size())
 		{
@@ -251,7 +256,7 @@ public class DriverController
 					listaHrefs.add(link.getAttribute("href"));
 				}
 
-				LOGGER.info("Iniciando proceso");
+				LOGGER.info("Procesando elementos");
 				int hrefsIdx = 0;
 				while (hrefsIdx < listaHrefs.size())
 				{
