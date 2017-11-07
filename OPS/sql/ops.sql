@@ -88,11 +88,12 @@ as m4 order by var_volumen asc;
 --
 -- MUESTRA VARIACIÓN DEL ULTIMO PRECIO CON RESPECTO AL PRECIO MÁXIMO
 --
-select m4.mercado, m4.bolsa, m4.indice, m4.ticker, m4.fecha_inicio, m4.ultima_fecha, m4.precio_maximo, m4.ultimo_precio,
-round((m4.ultimo_precio*100/m4.precio_maximo)-100, 2) as var_precio 
+select m4.mercado, m4.bolsa, m4.indice, m4.ticker, m4.primera_fecha, m4.ultima_fecha, m4.precio_minimo, m4.precio_maximo, m4.ultimo_precio,
+round( ((m4.ultimo_precio - m4.precio_maximo) * 100) / m4.precio_maximo , 2) as var_maximo,  
+round( ((m4.ultimo_precio - m4.precio_minimo) * 100) / m4.precio_minimo , 2) as var_minimo          
 from
 (
-	select m2.mercado, m2.bolsa, m2.indice, m2.ticker, m2.fecha_inicio, m2.ultima_fecha, m2.precio_maximo,
+	select m2.mercado, m2.bolsa, m2.indice, m2.ticker, m2.primera_fecha, m2.ultima_fecha, m2.precio_minimo, m2.precio_maximo,
 	(
 		select m3.cierre from public.mercados_investing m3 
 		where m3.mercado = m2.mercado and m3.bolsa = m2.bolsa and m3.indice = m2.indice 
@@ -100,14 +101,16 @@ from
 	) as ultimo_precio
 	from 
 	(
-		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.fecha) as fecha_inicio, max(m1.fecha) as ultima_fecha, max(m1.cierre) as precio_maximo
+		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, 
+			   min(m1.fecha) as primera_fecha, max(m1.fecha) as ultima_fecha, 
+			   min(m1.cierre) as precio_minimo, max(m1.cierre) as precio_maximo 
 		from public.mercados_investing m1 
-		where m1.mercado = 'STOCK'
+		where m1.mercado = 'ETF'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
-	as m2
+	as m2 where m2.primera_fecha < '2008-01-01'
 ) 
-as m4 order by var_precio desc;
+as m4 order by var_maximo desc, var_minimo desc;
 --
 -- 
 --
