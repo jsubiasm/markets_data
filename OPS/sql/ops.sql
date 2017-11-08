@@ -3,37 +3,52 @@
 --
 select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin
 from public.mercados_investing
-group by mercado, bolsa, indice, ticker order by fecha_ini, mercado, bolsa, indice, ticker;
+group by mercado, bolsa, indice, ticker order by fecha_fin, mercado, bolsa, indice, ticker;
 --
 -- MUESTRA VARIACIÓN DE PRECIO DE CIERRE ENTRE DOS FECHAS ESPECIFICADAS
 --
 select m4.mercado, m4.bolsa, m4.indice, m4.ticker, m4.fecha_inicial, m4.precio_inicial, m4.fecha_final, m4.precio_final, 
-round((m4.precio_final*100/m4.precio_inicial)-100, 2) as var
+round( ((m4.precio_final - m4.precio_inicial) * 100) / m4.precio_inicial , 2) as var_precio 
 from
 (
-	select distinct m1.mercado, m1.bolsa, m1.indice, m1.ticker,
+	select distinct m5.mercado, m5.bolsa, m5.indice, m5.ticker,
 	to_date('2015-09-22', 'yyyy-mm-dd') as fecha_inicial,
 	(
 		select m2.cierre from public.mercados_investing m2 
-		where m2.mercado = m1.mercado and m2.bolsa = m1.bolsa and m2.indice = m1.indice 
-		and m2.ticker = m1.ticker and m2.fecha = to_date('2015-09-22', 'yyyy-mm-dd') 
+		where m2.mercado = m5.mercado and m2.bolsa = m5.bolsa and m2.indice = m5.indice 
+		and m2.ticker = m5.ticker and m2.fecha = to_date('2015-09-22', 'yyyy-mm-dd') 
 	) 
 	as precio_inicial,
 	to_date('2015-10-06', 'yyyy-mm-dd') as fecha_final,
 	(
 		select m3.cierre from public.mercados_investing m3 
-		where m3.mercado = m1.mercado and m3.bolsa = m1.bolsa and m3.indice = m1.indice 
-		and m3.ticker = m1.ticker and m3.fecha = to_date('2015-10-06', 'yyyy-mm-dd') 
+		where m3.mercado = m5.mercado and m3.bolsa = m5.bolsa and m3.indice = m5.indice 
+		and m3.ticker = m5.ticker and m3.fecha = to_date('2015-10-06', 'yyyy-mm-dd') 
 	) 
 	as precio_final
-	from public.mercados_investing m1 order by m1.mercado, m1.bolsa, m1.indice, m1.ticker
+	from
+	(
+		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.fecha) as fecha_inicial, max(m1.fecha) as fecha_final
+		from public.mercados_investing m1 
+		where m1.mercado = 'ETF'
+		and m1.ticker not like '%-2x%'
+		and m1.ticker not like '%-3x%'
+		and m1.ticker not like '%-4x%'
+		and m1.ticker not like '%-10x%'
+		and m1.ticker not like '%-15x%'
+		and m1.ticker not like '%leveraged%'
+		and m1.ticker not like '%inverse%'
+		and m1.ticker not like '%short%'
+		and m1.ticker not like '%levdax%'
+		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
+	) as m5
 )
-as m4 order by var asc;
+as m4 order by var_precio desc;
 --
 -- MUESTRA VARIACIÓN DE PRECIO DE CIERRE ENTRE LAS FECHAS MÍNIMAS Y MÁXIMAS ENCONTRADAS FILTRANDO POR MERCADO Y TICKER
 --
 select m7.mercado, m7.bolsa, m7.indice, m7.ticker, m7.fecha_inicial, m7.precio_inicial, m7.fecha_final, m7.precio_final, 
-round((m7.precio_final*100/m7.precio_inicial)-100, 2) as var_precio
+round( ((m7.precio_final - m7.precio_inicial) * 100) / m7.precio_inicial , 2) as var_precio  
 from
 (
 	select m4.mercado, m4.bolsa, m4.indice, m4.ticker, m4.fecha_inicial, m4.fecha_final,
@@ -52,21 +67,27 @@ from
 	from
 	(
 		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.fecha) as fecha_inicial, max(m1.fecha) as fecha_final
-		from public.mercados_investing m1 where mercado = 'ETF' 
-		and ticker not like '%leveraged%'
-		and ticker not like '%-3x-%'
-		and ticker not like '%-2x-%'
-		and ticker not like '%short%'
+		from public.mercados_investing m1  
+		where m1.mercado = 'ETF'
+		and m1.ticker not like '%-2x%'
+		and m1.ticker not like '%-3x%'
+		and m1.ticker not like '%-4x%'
+		and m1.ticker not like '%-10x%'
+		and m1.ticker not like '%-15x%'
+		and m1.ticker not like '%leveraged%'
+		and m1.ticker not like '%inverse%'
+		and m1.ticker not like '%short%'
+		and m1.ticker not like '%levdax%'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
 	as m4
 )
-as m7 order by var_precio asc;
+as m7 order by var_precio desc;
 --
 -- MUESTRA VARIACIÓN DEL ULTIMO VOLUMEN CON RESPECTO AL VOLUMEN MEDIO
 --
 select m4.mercado, m4.bolsa, m4.indice, m4.ticker, m4.ultima_fecha, m4.avg_vol, m4.ultimo_vol,
-round((m4.ultimo_vol*100/m4.avg_vol)-100, 2) as var_volumen 
+round( ((m4.ultimo_vol - m4.avg_vol) * 100) / m4.avg_vol , 2) as var_volumen 
 from
 (
 	select m2.mercado, m2.bolsa, m2.indice, m2.ticker, m2.ultima_fecha, m2.avg_vol,
@@ -79,14 +100,23 @@ from
 	(
 		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, max(fecha) as ultima_fecha, round(avg(volumen)) as avg_vol
 		from public.mercados_investing m1 
-		where m1.indice <> '-'
+		where m1.mercado = 'ETF'
+		and m1.ticker not like '%-2x%'
+		and m1.ticker not like '%-3x%'
+		and m1.ticker not like '%-4x%'
+		and m1.ticker not like '%-10x%'
+		and m1.ticker not like '%-15x%'
+		and m1.ticker not like '%leveraged%'
+		and m1.ticker not like '%inverse%'
+		and m1.ticker not like '%short%'
+		and m1.ticker not like '%levdax%'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
-	as m2
+	as m2 where m2.avg_vol > 0
 ) 
-as m4 order by var_volumen asc;
+as m4 order by var_volumen desc;
 --
--- MUESTRA VARIACIÓN DEL ULTIMO PRECIO CON RESPECTO AL PRECIO MÁXIMO
+-- MUESTRA VARIACIÓN DEL ULTIMO PRECIO CON RESPECTO A LOS PRECIOS MÍNIMO Y MÁXIMO
 --
 select m4.mercado, m4.bolsa, m4.indice, m4.ticker, m4.primera_fecha, m4.ultima_fecha, m4.precio_minimo, m4.precio_maximo, m4.ultimo_precio,
 round( ((m4.ultimo_precio - m4.precio_maximo) * 100) / m4.precio_maximo , 2) as var_maximo,  
@@ -106,15 +136,15 @@ from
 			   min(m1.cierre) as precio_minimo, max(m1.cierre) as precio_maximo 
 		from public.mercados_investing m1 
 		where m1.mercado = 'ETF'
-		and ticker not like '%-2x%'
-		and ticker not like '%-3x%'
-		and ticker not like '%-4x%'
-		and ticker not like '%-10x%'
-		and ticker not like '%-15x%'
-		and ticker not like '%leveraged%'
-		and ticker not like '%inverse%'
-		and ticker not like '%short%'
-		and ticker not like '%levdax%'
+		and m1.ticker not like '%-2x%'
+		and m1.ticker not like '%-3x%'
+		and m1.ticker not like '%-4x%'
+		and m1.ticker not like '%-10x%'
+		and m1.ticker not like '%-15x%'
+		and m1.ticker not like '%leveraged%'
+		and m1.ticker not like '%inverse%'
+		and m1.ticker not like '%short%'
+		and m1.ticker not like '%levdax%'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
 	as m2 where m2.primera_fecha < '2012-01-01'
