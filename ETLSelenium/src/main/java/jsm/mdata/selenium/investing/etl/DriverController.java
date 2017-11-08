@@ -386,7 +386,7 @@ public class DriverController
 	 */
 	public static void gestionError(WebDriver driver)
 	{
-		LOGGER.info("Intentando cerrar popup bloqueante");
+		LOGGER.info("Cerrando popup bloqueante");
 		try
 		{
 			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.className("popupCloseIcon")));
@@ -395,7 +395,7 @@ public class DriverController
 		}
 		catch (Exception e)
 		{
-			LOGGER.error("Error intentando cerrar popup bloqueante", e);
+			LOGGER.info("No existe popup bloqueante");
 		}
 	}
 
@@ -639,7 +639,6 @@ public class DriverController
 		}
 		catch (Exception e)
 		{
-			LOGGER.error("ERROR", e);
 			if (dbConnection != null)
 			{
 				LOGGER.info("Deshaciendo transacción");
