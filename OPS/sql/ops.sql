@@ -151,5 +151,47 @@ from
 ) 
 as m4 order by var_maximo desc, var_minimo desc;
 --
+-- MUESTRA VARIACIÓN ENTRE LOS PRECIOS MÍNIMO Y MÁXIMO (O MÁXIMO Y MÍNIMO SI ES BAJISTA)
+--
+select m5.*, 
+(
+	case when m5.precio_minimo_fecha < m5.precio_maximo_fecha 
+		then 
+			round( ((m5.precio_maximo - m5.precio_minimo) * 100) / m5.precio_minimo , 2)
+		else 
+			round( ((m5.precio_minimo - m5.precio_maximo) * 100) / m5.precio_maximo , 2)
+		end
+) as var_precio
+from 
+(
+	select m2.*,
+	(
+		select max(m3.fecha) from public.mercados_investing m3 
+		where m3.mercado = m2.mercado and m3.bolsa = m2.bolsa and m3.indice = m2.indice 
+		and m3.ticker = m2.ticker and m3.cierre = m2.precio_minimo
+	) as precio_minimo_fecha,
+	(
+		select max(m4.fecha) from public.mercados_investing m4 
+		where m4.mercado = m2.mercado and m4.bolsa = m2.bolsa and m4.indice = m2.indice 
+		and m4.ticker = m2.ticker and m4.cierre = m2.precio_maximo
+	) as precio_maximo_fecha
+	from 
+	(
+		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.cierre) as precio_minimo, max(m1.cierre) as precio_maximo 
+		from public.mercados_investing m1 
+		where m1.mercado = 'ETF'
+		and m1.ticker not like '%-2x%'
+		and m1.ticker not like '%-3x%'
+		and m1.ticker not like '%-4x%'
+		and m1.ticker not like '%-10x%'
+		and m1.ticker not like '%-15x%'
+		and m1.ticker not like '%leveraged%'
+		and m1.ticker not like '%inverse%'
+		and m1.ticker not like '%short%'
+		and m1.ticker not like '%levdax%'
+		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
+	) as m2
+) as m5 order by var_precio desc;
+--
 -- 
 --
