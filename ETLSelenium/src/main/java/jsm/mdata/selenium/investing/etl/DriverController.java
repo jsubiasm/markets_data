@@ -598,29 +598,36 @@ public class DriverController
 			for (Registro registro : activoActual.getListaRegistros())
 			{
 				Date fecha = registro.getFecha();
-				BigDecimal apertura = registro.getApertura();
-				BigDecimal maximo = registro.getMaximo();
-				BigDecimal minimo = registro.getMinimo();
-				BigDecimal cierre = registro.getCierre();
-				BigDecimal volumen = registro.getVolumen();
-				datos = datos + DATA_FEC_FORMAT.format(fecha) + CSV_SEPARATOR;
-				datos = datos + NUMBER_FORMAT.format(apertura) + CSV_SEPARATOR;
-				datos = datos + NUMBER_FORMAT.format(maximo) + CSV_SEPARATOR;
-				datos = datos + NUMBER_FORMAT.format(minimo) + CSV_SEPARATOR;
-				datos = datos + NUMBER_FORMAT.format(cierre) + CSV_SEPARATOR;
-				datos = datos + NUMBER_FORMAT.format(volumen) + CSV_RETURN;
-				String mercado = activoActual.getMercado();
-				String bolsa = activoActual.getBolsa();
-				String indice = activoActual.getIndice();
-				String ticker = activoActual.getTicker();
-				if (!existeRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha))
+				if (!fecha.after(getFechaFinDescarga()))
 				{
-					insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen);
-					numRegInsertados++;
+					BigDecimal apertura = registro.getApertura();
+					BigDecimal maximo = registro.getMaximo();
+					BigDecimal minimo = registro.getMinimo();
+					BigDecimal cierre = registro.getCierre();
+					BigDecimal volumen = registro.getVolumen();
+					datos = datos + DATA_FEC_FORMAT.format(fecha) + CSV_SEPARATOR;
+					datos = datos + NUMBER_FORMAT.format(apertura) + CSV_SEPARATOR;
+					datos = datos + NUMBER_FORMAT.format(maximo) + CSV_SEPARATOR;
+					datos = datos + NUMBER_FORMAT.format(minimo) + CSV_SEPARATOR;
+					datos = datos + NUMBER_FORMAT.format(cierre) + CSV_SEPARATOR;
+					datos = datos + NUMBER_FORMAT.format(volumen) + CSV_RETURN;
+					String mercado = activoActual.getMercado();
+					String bolsa = activoActual.getBolsa();
+					String indice = activoActual.getIndice();
+					String ticker = activoActual.getTicker();
+					if (!existeRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha))
+					{
+						insertaRegistro(dbConnection, mercado, bolsa, indice, ticker, fecha, apertura, maximo, minimo, cierre, volumen);
+						numRegInsertados++;
+					}
+					else
+					{
+						LOGGER.info("El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] ya existe");
+					}
 				}
 				else
 				{
-					LOGGER.info("El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] ya existe");
+					throw new Exception("La fecha [" + DATA_FEC_FORMAT.format(fecha) + "] es posterior a la fecha [" + DATA_FEC_FORMAT.format(getFechaFinDescarga()) + "]");
 				}
 			}
 			LOGGER.info("Escribiendo fichero de datos formateados");
@@ -630,14 +637,15 @@ public class DriverController
 			LOGGER.info("Confirmando transacción para [" + numRegInsertados + "] registros");
 			dbConnection.commit();
 		}
-		catch (Exception e1)
+		catch (Exception e)
 		{
-			LOGGER.error("ERROR", e1);
+			LOGGER.error("ERROR", e);
 			if (dbConnection != null)
 			{
 				LOGGER.info("Deshaciendo transacción");
 				dbConnection.rollback();
 			}
+			throw e;
 		}
 		finally
 		{
