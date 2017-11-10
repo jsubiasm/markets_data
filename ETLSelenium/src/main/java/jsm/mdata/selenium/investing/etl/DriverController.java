@@ -344,7 +344,7 @@ public class DriverController
 				saxParser.parse(new File(fileNameXMLInput), saxHandler);
 
 				LOGGER.info("Guardando datos");
-				guardarDatosHistoricoActivoActual(saxHandler.getActivoActual());
+				guardarDatosHistoricoActivoActual(saxHandler.getActivoActual(), fechaInicioDescarga, fechaFinDescarga);
 			}
 			else
 			{
@@ -579,7 +579,7 @@ public class DriverController
 	 * @param activoActual
 	 * @throws Exception
 	 */
-	private static void guardarDatosHistoricoActivoActual(Activo activoActual) throws Exception
+	private static void guardarDatosHistoricoActivoActual(Activo activoActual, Date fechaInicioDescarga, Date fechaFinDescarga) throws Exception
 	{
 		Connection dbConnection = null;
 		try
@@ -598,7 +598,15 @@ public class DriverController
 			for (Registro registro : activoActual.getListaRegistros())
 			{
 				Date fecha = registro.getFecha();
-				if (!fecha.after(getFechaFinDescarga()))
+				if (fecha.before(fechaInicioDescarga))
+				{
+					throw new Exception("La fecha [" + DATA_FEC_FORMAT.format(fecha) + "] es anterior a la fecha [" + DATA_FEC_FORMAT.format(fechaInicioDescarga) + "]");
+				}
+				else if (fecha.after(fechaFinDescarga))
+				{
+					throw new Exception("La fecha [" + DATA_FEC_FORMAT.format(fecha) + "] es posterior a la fecha [" + DATA_FEC_FORMAT.format(fechaFinDescarga) + "]");
+				}
+				else
 				{
 					BigDecimal apertura = registro.getApertura();
 					BigDecimal maximo = registro.getMaximo();
@@ -622,12 +630,8 @@ public class DriverController
 					}
 					else
 					{
-						LOGGER.info("El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] ya existe");
+						throw new Exception("El registro [" + mercado + "] [" + bolsa + "] [" + indice + "] [" + ticker + "] [" + DATA_FEC_FORMAT.format(fecha) + "] ya existe");
 					}
-				}
-				else
-				{
-					throw new Exception("La fecha [" + DATA_FEC_FORMAT.format(fecha) + "] es posterior a la fecha [" + DATA_FEC_FORMAT.format(getFechaFinDescarga()) + "]");
 				}
 			}
 			LOGGER.info("Escribiendo fichero de datos formateados");
