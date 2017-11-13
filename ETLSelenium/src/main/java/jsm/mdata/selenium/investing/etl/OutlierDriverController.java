@@ -30,8 +30,6 @@ public class OutlierDriverController
 	 * 
 	 * URLs
 	 * 
-	 * select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin from public.mercados_investing group by mercado, bolsa, indice, ticker order by fecha_ini desc, mercado, bolsa, indice, ticker;
-	 * 
 	 * delete from public.mercados_investing where ticker = 'xxxxxxxxxxxxxxxxxxxxxxxxx';
 	 * 
 	 * LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "xxxxxxxxxxxxxxxxxxxxxxxxx"));
@@ -43,16 +41,19 @@ public class OutlierDriverController
 		// --
 		// -- OUTLIERS
 		// --
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/etfs-all-commodities-go-ucits-de?cid=1031770"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/etfs-longer-dated-allcomm-exagri-de"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/etfs-longer-dated-allcomm-exagri-de?cid=1031773"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/ishares-msci-europe-value-factor?cid=956308"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/deka-mdax?cid=1052314"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/hsbc-msci-world"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/ishares-msci-asia-ex-japan-minimum?cid=1031774"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/etfs-all-commodities-go-ucits-de?cid=1031772"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/etfs-all-commodities-go-ucits-de"));
-		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/etfs-longer-dated-allcomm-exagri-de?cid=1031771"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/bnp-rici-enhanced-metals"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/bnp-rici-enhanced-indust-metals"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/coba--3x-mdaxf-daily-short"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/coba--4x-mdaxf-daily-short"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/coba-etc--3x-copper-daily-short"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/coba-etc--3x-wti-oil-daily-short"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/coba-etn--10x-bundf-daily-short"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/db-x-trackers-msci-bangladesh-imtr?cid=45810"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/db-xtrack-msci-emu-minvol?cid=1024388"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/db-xtrackers-ii-%E2%82%AC-sov.-euro-15-tr"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/dbxtrck-ii-eur-hiyld-corpbd-dr-1c"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/ubs-(irl)-msci-emu-cyclical-mi?cid=949271"));
+		LISTA_URLS_OUTLIERS.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/boerse-stuttgart-secs-gold-ihs-2017"));
 	}
 
 	/**
