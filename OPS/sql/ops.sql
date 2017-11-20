@@ -202,5 +202,29 @@ from
 	) as m2
 ) as m5 order by var_precio desc;
 --
+-- BUSQUEDA DE ETFS FILTRANDO POR TICKER
+--
+select mercado, bolsa, indice, ticker
+from public.mercados_investing
+where mercado = 'ETF' and 
+(
+	ticker like '%gold%' or 
+	ticker like '%water%' or 
+	ticker like '%emerging%' or 
+	ticker like '%clean%energy%' or 
+	ticker like '%new%energy%' or
+	ticker like '%solar%' or 
+	ticker like '%robot%' or 
+	ticker like '%health%' or 
+	ticker like '%pharma%' or 
+	ticker like '%tech%'
+)
+and ticker not like '%-2x%'
+and ticker not like '%-3x%'
+and ticker not like '%-4x%'
+and ticker not like '%leverage%'
+and ticker not like '%short%'
+group by mercado, bolsa, indice, ticker order by mercado, bolsa, indice, ticker;
+--
 -- 
 --
