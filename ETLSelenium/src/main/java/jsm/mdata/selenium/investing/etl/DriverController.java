@@ -128,6 +128,11 @@ public class DriverController
 		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=VelocityShares"));
 		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=WisdomTree"));
 		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=X-Trackers"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Amundi"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=db%20X-trackers"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ETFS"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=iShares"));
+		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Lyxor"));
 	}
 
 	/**
@@ -137,13 +142,75 @@ public class DriverController
 	static
 	{
 		// --
-		// -- ETFS ALEMANIA POR EMISOR
+		// -- ETFS USA POR EMISOR
 		// --
-		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Amundi"));
-		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=db%20X-trackers"));
-		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=ETFS"));
-		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=iShares"));
-		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_GER, TipoURL.NA, "https://es.investing.com/etfs/germany-etfs?&issuer_filter=Lyxor"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=AdvisorShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=ALPS"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Amplify"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=ARK"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=ArrowShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Barclays%20Funds"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=BioShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Cambria"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Citigroup"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Columbia"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Compass%20EMP"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Credit%20Suisse"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=CSOP"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Deutsche%20Bank"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Deutsche%20X-trackers"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Direxion"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=ELEMENTS"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=ETC"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=ETFS"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Fidelity"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=First%20Asset"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=First%20Trust"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=FlexShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Franklin%20Templeton"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=GaveKal"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Global%20X"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Goldman%20Sachs"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Guggenheim"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Horizons"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=iPath"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=IQ"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=iShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Janus"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=John%20Hancock"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=JPMorgan"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=KraneShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Lattice"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Legg%20Mason"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Morgan%20Stanley"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=NextShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Oppenheimer"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=OShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Other"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Pacer"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Pimco"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=PowerShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=ProShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Pure%20Funds"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=QuantShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Recon"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Renaissance"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=RiverFront"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Schwab"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=SPDR"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Sprott"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Strategy%20shares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Teucrium"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Tuttle"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=UBS"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=USCF"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=ValueShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Van%20Eck"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Vanguard"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=VelocityShares"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=Vident"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=WBI"));
+		LISTA_URLS_02.add(new TipoURL(TipoURL.MERCADO_ETF, TipoURL.BOLSA_USA, TipoURL.NA, "https://es.investing.com/etfs/usa-etfs?&issuer_filter=WisdomTree"));
 	}
 
 	/**

@@ -23,6 +23,7 @@ public class TipoURL
 	public static final String BOLSA_ESP = "ESP";
 	public static final String BOLSA_GER = "GER";
 	public static final String BOLSA_FRA = "FRA";
+	public static final String BOLSA_USA = "USA";
 
 	/**
 	 * Indices
