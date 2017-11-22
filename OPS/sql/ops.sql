@@ -202,29 +202,100 @@ from
 	) as m2
 ) as m5 order by var_precio desc;
 --
--- BUSQUEDA DE ETFS FILTRANDO POR TICKER
+-- BUSQUEDA DE ETFS FILTRANDO POR TICKER Y FECHA
 --
-select mercado, bolsa, indice, ticker
-from public.mercados_investing
-where mercado = 'ETF' and 
+select t1.* from 
 (
-	ticker like '%gold%' or 
-	ticker like '%water%' or 
-	ticker like '%emerging%' or 
-	ticker like '%clean%energy%' or 
-	ticker like '%new%energy%' or
-	ticker like '%solar%' or 
-	ticker like '%robot%' or 
-	ticker like '%health%' or 
-	ticker like '%pharma%' or 
-	ticker like '%tech%'
-)
-and ticker not like '%-2x%'
-and ticker not like '%-3x%'
-and ticker not like '%-4x%'
-and ticker not like '%leverage%'
-and ticker not like '%short%'
-group by mercado, bolsa, indice, ticker order by mercado, bolsa, indice, ticker;
+	select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin
+	from public.mercados_investing
+	where mercado = 'ETF' and 
+	(
+		ticker like '%gold%' or 
+		ticker like '%water%' or 
+		ticker like '%emerging%' or 
+		ticker like '%clean%energy%' or 
+		ticker like '%new%energy%' or
+		ticker like '%solar%' or 
+		ticker like '%robot%' or 
+		ticker like '%health%' or 
+		ticker like '%pharma%' or 
+		ticker like '%tech%' or
+		ticker in 
+		(
+			'https://es.investing.com/etfs/spdr-consumer-discr.-select-sector',
+			'https://es.investing.com/etfs/spdr---consumer-staples',
+			'https://es.investing.com/etfs/spdr-energy-select-sector-fund',
+			'https://es.investing.com/etfs/financial-select-sector-spdr-fund',
+			'https://es.investing.com/etfs/financial-services-select-sector',
+			'https://es.investing.com/etfs/spdr---health-care',
+			'https://es.investing.com/etfs/industrial-sector-spdr-trust',
+			'https://es.investing.com/etfs/spdr-materials-select-sector-etf',
+			'https://es.investing.com/etfs/spdr-select-sector---technology',
+			'https://es.investing.com/etfs/spdr-select-sector---utilities',
+			'https://es.investing.com/etfs/ishares-djsu-broker-dealers-index',
+			'https://es.investing.com/etfs/spdr-kbw-capital-markets',
+			'https://es.investing.com/etfs/ishares-djsu-financial-services',
+			'https://es.investing.com/etfs/ishares-djsu-financial-sector',
+			'https://es.investing.com/etfs/spdr-kbw-bank',
+			'https://es.investing.com/etfs/spdr-kbw-regional-banking',
+			'https://es.investing.com/etfs/spdr-kbw-insurance',
+			'https://es.investing.com/etfs/ishares-djsu-medical-devices-index',
+			'https://es.investing.com/etfs/ishares-djsu-health-care-providers',
+			'https://es.investing.com/etfs/ishares-djsu-health-care-index',
+			'https://es.investing.com/etfs/spdr-s-p-pharmaceuticals',
+			'https://es.investing.com/etfs/spdr-s-p-biotech',
+			'https://es.investing.com/etfs/ishares-djsu-technology',
+			'https://es.investing.com/etfs/ishares-djsu-telecommunications',
+			'https://es.investing.com/etfs/spdr-s-p-semiconductor',
+			'https://es.investing.com/etfs/spdr-s-p-software---services',
+			'https://es.investing.com/etfs/ishares-djsu-aerospace---defense',
+			'https://es.investing.com/etfs/ishares-djsu-basic-materials-index',
+			'https://es.investing.com/etfs/spdr-s-p-metals---mining',
+			'https://es.investing.com/etfs/spdr-s-p-transportation',
+			'https://es.investing.com/etfs/ishares-djsu-industrial-sector',
+			'https://es.investing.com/etfs/ishares-djsu-utilities',
+			'https://es.investing.com/etfs/ishares-dj-us-energy-sector-fund',
+			'https://es.investing.com/etfs/spdr-s-p-oil--gas-explor---product',
+			'https://es.investing.com/etfs/spdr-s-p-oil---gas-eq---services',
+			'https://es.investing.com/etfs/spdr-s-p-homebuilders',
+			'https://es.investing.com/etfs/spdr-s-p-retail',
+			'https://es.investing.com/etfs/ishares-djsu-consumer-goods-index',
+			'https://es.investing.com/etfs/ishares-djsu-consumer',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-auto-parts',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-banks',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-basicresources',
+			'https://es.investing.com/etfs/ishares-stoxx-europe-600-chemicals',
+			'https://es.investing.com/etfs/ishares-stoxxeuro-600-cons.---mat.',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-financial-svs',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-food-beverage',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-health-care',
+			'https://es.investing.com/etfs/ishares-stoxx600-ind.-goods--ser.',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-insurance',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-media',
+			'https://es.investing.com/etfs/ishares-dj-stoxx600-oil-gas',
+			'https://es.investing.com/etfs/ishares-stoxx-600-pers-housld-gds',
+			'https://es.investing.com/etfs/ishares-eurostoxx-600-real-estate',
+			'https://es.investing.com/etfs/ishares-stoxx-euro-600-retail',
+			'https://es.investing.com/etfs/ishares-eurostoxx-600-technology',
+			'https://es.investing.com/etfs/ishares-eurostoxx-600-telecom--de',
+			'https://es.investing.com/etfs/ishares-eurostoxx600-trvl---leis.',
+			'https://es.investing.com/etfs/ishares-eurostoxx-600-utilities'
+		)
+	)
+	and ticker not like '%-2x%'
+	and ticker not like '%-3x%'
+	and ticker not like '%-4x%'
+	and ticker not like '%leverage%'
+	and ticker not like '%short%'
+	and ticker not like '%goldman%'
+	and ticker not like '%ultra%'
+	and ticker not like '%double%'
+	and ticker not like '%boost%'
+	group by mercado, bolsa, indice, ticker
+) 
+as t1
+where t1.fecha_ini < '2010-01-01'
+order by t1.fecha_ini, t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 --
 -- 
 --
