@@ -63,7 +63,7 @@ public class OutlierDriverController
 	{
 		try
 		{
-			run();
+			//run();
 		}
 		catch (Exception e)
 		{
@@ -79,7 +79,7 @@ public class OutlierDriverController
 	 * @throws Exception
 	 * 
 	 */
-	private static void run() throws Exception
+	/*private static void run() throws Exception
 	{
 		LOGGER.info("Iniciando driver");
 		System.setProperty(DriverController.WEB_DRIVER_PROPERTY, DriverController.WEB_DRIVER_EXE);
@@ -106,6 +106,6 @@ public class OutlierDriverController
 				DriverController.gestionError(driver);
 			}
 		}
-	}
+	}*/
 
 }
