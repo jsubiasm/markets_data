@@ -268,6 +268,7 @@ select t1.* from
 	and ticker not like '%goldman%'
 	and ticker not like '%golden%'
 	and ticker not like '%daily%'
+	and ticker not like '%eonia%'
 	group by mercado, bolsa, indice, ticker
 ) 
 as t1
