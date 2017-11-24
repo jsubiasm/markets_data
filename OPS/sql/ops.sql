@@ -275,5 +275,30 @@ as t1
 where t1.fecha_ini < '2009-01-01'
 order by t1.fecha_ini, t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 --
+-- BUSQUEDA DE ETFS FILTRANDO POR TICKER Y FECHA
+--
+select t1.* from 
+(
+	select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin, round(avg(volumen)) vol_medio
+	from public.mercados_investing
+	where mercado = 'ETF' 
+	and ticker not like '%2x%'
+	and ticker not like '%3x%'
+	and ticker not like '%4x%'
+	and ticker not like '%leverage%'
+	and ticker not like '%short%'
+	and ticker not like '%long%'
+	and ticker not like '%bear%'
+	and ticker not like '%bull%'
+	and ticker not like '%ultra%'
+	and ticker not like '%double%'
+	and ticker not like '%boost%'
+	and ticker not like '%daily%'
+	group by mercado, bolsa, indice, ticker
+) 
+as t1
+where t1.fecha_ini < '2010-01-01'
+order by t1.vol_medio, t1.mercado, t1.bolsa, t1.indice, t1.ticker;
+--
 -- 
 --
