@@ -79,6 +79,11 @@ public class DriverController
 	private static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\ETLSelenium\\investing\\download";
 
 	/**
+	 * Fecha actual
+	 */
+	private static final Date FECHA_ACTUAL = new Date();
+
+	/**
 	 * Lista URLs 01
 	 */
 	private final static List<TipoURL> LISTA_URLS_01 = new ArrayList<TipoURL>();
@@ -550,7 +555,7 @@ public class DriverController
 	private static Date getFechaFinDescarga()
 	{
 		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(new Date());
+		calendar.setTime(FECHA_ACTUAL);
 		calendar.add(Calendar.DATE, -1);
 		return calendar.getTime();
 	}
