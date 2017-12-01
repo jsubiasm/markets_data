@@ -228,7 +228,7 @@ as t1
 where t1.fecha_ini < '2010-01-01'
 order by t1.vol_medio, t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 --
--- BUSQUEDA DE ETFS FILTRANDO POR TICKER Y FECHA
+-- BUSQUEDA DE ETFS SOBRE BONOS
 --
 select t1.* from 
 (
@@ -248,38 +248,21 @@ select t1.* from
 	and ticker not like '%boost%'
 	and ticker not like '%daily%'
 	and ticker not like '%inverse%'
-	and ticker not like '%goldman%'
 	and
 	(
-		ticker like '%sov%' or 
-		ticker like '%health%' or 
-		ticker like '%retail%' or 
-		ticker like '%telecom%' or 
-		ticker like '%infr%' or 
-		ticker like '%germany%' or 
-		ticker like '%gold%' or 
-		ticker like '%precious%' or 
-		ticker like '%metal%' or 
-		ticker like '%reit%' or 
-		ticker like '%clean%' or 
-		ticker like '%treasury%' or 
-		ticker like '%bond%' or 
-		ticker like '%gov%' or 
-		ticker like '%pharma%' or 
-		ticker like '%energy%' or 
-		ticker like '%estate%' or 
-		ticker like '%biotech%' or 
-		ticker like '%solar%' or 
-		ticker like '%wind%' or
-		ticker like '%water%'
+		ticker like '%sov%' or
+		ticker like '%bond%' or
+		ticker like '%gov%' or
+		ticker like '%corp%' or 
+		ticker like '%treas%'
 	)
 	group by mercado, bolsa, indice, ticker
 ) 
 as t1
-where t1.fecha_ini < '2010-01-01'
-order by t1.vol_medio, t1.mercado, t1.bolsa, t1.indice, t1.ticker;
+where t1.fecha_ini < '2014-01-01'
+order by t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 --
--- BUSQUEDA DE ETFS FILTRANDO POR TICKER Y FECHA
+-- BUSQUEDA DE ETFS SOBRE ACCIONES
 --
 select t1.* from 
 (
