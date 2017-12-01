@@ -92,13 +92,13 @@ public class DriverController
 		// --
 		// -- LISTA INDICES
 		// --
-		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_INDEX, TipoURL.NA, TipoURL.NA, "https://es.investing.com/indices/major-indices"));
+		// LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_INDEX, TipoURL.NA, TipoURL.NA, "https://es.investing.com/indices/major-indices"));
 		// --
 		// -- LISTA ACCIONES POR INDICE
 		// --
-		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_ESP, TipoURL.INDICE_IBEX35, "https://es.investing.com/indices/spain-35-components"));
-		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_GER, TipoURL.INDICE_DAX30, "https://es.investing.com/indices/germany-30-components"));
-		LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_FRA, TipoURL.INDICE_CAC40, "https://es.investing.com/indices/france-40-components"));
+		// LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_ESP, TipoURL.INDICE_IBEX35, "https://es.investing.com/indices/spain-35-components"));
+		// LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_GER, TipoURL.INDICE_DAX30, "https://es.investing.com/indices/germany-30-components"));
+		// LISTA_URLS_01.add(new TipoURL(TipoURL.MERCADO_STOCK, TipoURL.BOLSA_FRA, TipoURL.INDICE_CAC40, "https://es.investing.com/indices/france-40-components"));
 		// --
 		// -- ETFS ALEMANIA POR EMISOR
 		// --
