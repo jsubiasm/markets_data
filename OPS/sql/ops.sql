@@ -204,59 +204,86 @@ from
 --
 -- BUSQUEDA DE ETFS FILTRANDO POR TICKER Y FECHA
 --
-select t1.* from 
+select t1.*,
 (
-	select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin, round(avg(volumen)) vol_medio
-	from public.mercados_investing
-	where mercado = 'ETF' 
-	and ticker not like '%2x%'
-	and ticker not like '%3x%'
-	and ticker not like '%4x%'
-	and ticker not like '%leverage%'
-	and ticker not like '%short%'
-	and ticker not like '%long%'
-	and ticker not like '%bear%'
-	and ticker not like '%bull%'
-	and ticker not like '%ultra%'
-	and ticker not like '%double%'
-	and ticker not like '%boost%'
-	and ticker not like '%daily%'
-	and ticker not like '%inverse%'
-	group by mercado, bolsa, indice, ticker
+	select t3.cierre from public.mercados_investing t3 
+	where t3.mercado = t1.mercado and t3.bolsa = t1.bolsa and t3.indice = t1.indice 
+	and t3.ticker = t1.ticker and t3.fecha = t1.fecha_fin
+) 
+as cierre_fin,
+(
+	select round(avg(t2.volumen)) from public.mercados_investing t2 
+	where t2.mercado = t1.mercado and t2.bolsa = t1.bolsa and t2.indice = t1.indice 
+	and t2.ticker = t1.ticker and t2.fecha > (t1.fecha_fin - interval '1 month')
+) 
+as vol_med_ult_mes
+from
+(
+	select t0.mercado, t0.bolsa, t0.indice, t0.ticker, count(1) as num_dias, min(t0.fecha) as fecha_ini, max(t0.fecha) fecha_fin
+	from public.mercados_investing t0
+	where t0.mercado = 'ETF'
+	and t0.ticker not like '%2x%'
+	and t0.ticker not like '%3x%'
+	and t0.ticker not like '%4x%'
+	and t0.ticker not like '%leverage%'
+	and t0.ticker not like '%short%'
+	and t0.ticker not like '%long%'
+	and t0.ticker not like '%bear%'
+	and t0.ticker not like '%bull%'
+	and t0.ticker not like '%ultra%'
+	and t0.ticker not like '%double%'
+	and t0.ticker not like '%boost%'
+	and t0.ticker not like '%daily%'
+	and t0.ticker not like '%inverse%'
+	group by t0.mercado, t0.bolsa, t0.indice, t0.ticker
 ) 
 as t1
-where t1.fecha_ini < '2010-01-01'
-order by t1.vol_medio, t1.mercado, t1.bolsa, t1.indice, t1.ticker;
+where t1.fecha_ini < '2014-01-01'
+order by t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 --
 -- BUSQUEDA DE ETFS SOBRE BONOS
 --
-select t1.* from 
+select t1.*,
 (
-	select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin, round(avg(volumen)) vol_medio
-	from public.mercados_investing
-	where mercado = 'ETF' 
-	and ticker not like '%2x%'
-	and ticker not like '%3x%'
-	and ticker not like '%4x%'
-	and ticker not like '%leverage%'
-	and ticker not like '%short%'
-	and ticker not like '%long%'
-	and ticker not like '%bear%'
-	and ticker not like '%bull%'
-	and ticker not like '%ultra%'
-	and ticker not like '%double%'
-	and ticker not like '%boost%'
-	and ticker not like '%daily%'
-	and ticker not like '%inverse%'
+	select t3.cierre from public.mercados_investing t3 
+	where t3.mercado = t1.mercado and t3.bolsa = t1.bolsa and t3.indice = t1.indice 
+	and t3.ticker = t1.ticker and t3.fecha = t1.fecha_fin
+) 
+as cierre_fin,
+(
+	select round(avg(t2.volumen)) from public.mercados_investing t2 
+	where t2.mercado = t1.mercado and t2.bolsa = t1.bolsa and t2.indice = t1.indice 
+	and t2.ticker = t1.ticker and t2.fecha > (t1.fecha_fin - interval '1 month')
+) 
+as vol_med_ult_mes
+from
+(
+	select t0.mercado, t0.bolsa, t0.indice, t0.ticker, count(1) as num_dias, min(t0.fecha) as fecha_ini, max(t0.fecha) fecha_fin
+	from public.mercados_investing t0
+	where t0.mercado = 'ETF'
+	and t0.ticker not like '%2x%'
+	and t0.ticker not like '%3x%'
+	and t0.ticker not like '%4x%'
+	and t0.ticker not like '%leverage%'
+	and t0.ticker not like '%short%'
+	and t0.ticker not like '%long%'
+	and t0.ticker not like '%bear%'
+	and t0.ticker not like '%bull%'
+	and t0.ticker not like '%ultra%'
+	and t0.ticker not like '%double%'
+	and t0.ticker not like '%boost%'
+	and t0.ticker not like '%daily%'
+	and t0.ticker not like '%inverse%'
 	and
 	(
-		ticker like '%sov%' or
-		ticker like '%bond%' or
-		ticker like '%gov%' or
-		ticker like '%corp%' or 
-		ticker like '%treas%'
+		t0.ticker like '%sov%' or
+		t0.ticker like '%bond%' or
+		t0.ticker like '%gov%' or
+		t0.ticker like '%tr.%' or
+		t0.ticker like '%tre.%' or 
+		t0.ticker like '%treas%'
 	)
-	group by mercado, bolsa, indice, ticker
+	group by t0.mercado, t0.bolsa, t0.indice, t0.ticker
 ) 
 as t1
 where t1.fecha_ini < '2014-01-01'
@@ -264,65 +291,78 @@ order by t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 --
 -- BUSQUEDA DE ETFS SOBRE ACCIONES
 --
-select t1.* from 
+select t1.*,
 (
-	select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin, round(avg(volumen)) vol_medio
-	from public.mercados_investing
-	where mercado = 'ETF' 
-	and ticker not like '%2x%'
-	and ticker not like '%3x%'
-	and ticker not like '%4x%'
-	and ticker not like '%leverage%'
-	and ticker not like '%short%'
-	and ticker not like '%long%'
-	and ticker not like '%bear%'
-	and ticker not like '%bull%'
-	and ticker not like '%ultra%'
-	and ticker not like '%double%'
-	and ticker not like '%boost%'
-	and ticker not like '%daily%'
-	and ticker not like '%inverse%'
+	select t3.cierre from public.mercados_investing t3 
+	where t3.mercado = t1.mercado and t3.bolsa = t1.bolsa and t3.indice = t1.indice 
+	and t3.ticker = t1.ticker and t3.fecha = t1.fecha_fin
+) 
+as cierre_fin,
+(
+	select round(avg(t2.volumen)) from public.mercados_investing t2 
+	where t2.mercado = t1.mercado and t2.bolsa = t1.bolsa and t2.indice = t1.indice 
+	and t2.ticker = t1.ticker and t2.fecha > (t1.fecha_fin - interval '1 month')
+) 
+as vol_med_ult_mes
+from
+(
+	select t0.mercado, t0.bolsa, t0.indice, t0.ticker, count(1) as num_dias, min(t0.fecha) as fecha_ini, max(t0.fecha) fecha_fin
+	from public.mercados_investing t0
+	where t0.mercado = 'ETF'
+	and t0.ticker not like '%2x%'
+	and t0.ticker not like '%3x%'
+	and t0.ticker not like '%4x%'
+	and t0.ticker not like '%leverage%'
+	and t0.ticker not like '%short%'
+	and t0.ticker not like '%long%'
+	and t0.ticker not like '%bear%'
+	and t0.ticker not like '%bull%'
+	and t0.ticker not like '%ultra%'
+	and t0.ticker not like '%double%'
+	and t0.ticker not like '%boost%'
+	and t0.ticker not like '%daily%'
+	and t0.ticker not like '%inverse%'
 	and
 	(
-		ticker like '%retail%' or 
-		ticker like '%energ%' or 
-		ticker like '%financ%' or 
-		ticker like '%banks%' or 
-		ticker like '%banking%' or 
-		ticker like '%health%' or 
-		ticker like '%indus%' or 
-		ticker like '%tech%' or 
-		ticker like '%biot%' or 
-		ticker like '%utilit%' or 
-		ticker like '%insuran%' or 
-		ticker like '%medic%' or 
-		ticker like '%pharma%' or 
-		ticker like '%telecom%' or 
-		ticker like '%semicond%' or 
-		ticker like '%software%' or 
-		ticker like '%aero%' or 
-		ticker like '%material%' or 
-		ticker like '%metal%' or 
-		ticker like '%transport%' or 
-		ticker like '%builder%' or 
-		ticker like '%infr%' or 
-		ticker like '%consum%' or 
-		ticker like '%auto%' or 
-		ticker like '%robot%' or 
-		ticker like '%chemic%' or 
-		ticker like '%resourc%' or 
-		ticker like '%construc%' or 
-		ticker like '%media%' or 
-		ticker like '%estate%' or 
-		ticker like '%reit%' or 
-		ticker like '%travel%' or 
-		ticker like '%solar%' or 
-		ticker like '%wind%' or 
-		ticker like '%water%' or 
-		ticker like '%clean%' or 
-		ticker like '%gold%'
+		t0.ticker like '%retail%' or 
+		t0.ticker like '%energ%' or 
+		t0.ticker like '%financ%' or 
+		t0.ticker like '%banks%' or 
+		t0.ticker like '%banking%' or 
+		t0.ticker like '%health%' or 
+		t0.ticker like '%indus%' or 
+		t0.ticker like '%tech%' or 
+		t0.ticker like '%biot%' or 
+		t0.ticker like '%utilit%' or 
+		t0.ticker like '%insuran%' or 
+		t0.ticker like '%medic%' or 
+		t0.ticker like '%pharma%' or 
+		t0.ticker like '%telecom%' or 
+		t0.ticker like '%semicond%' or 
+		t0.ticker like '%software%' or 
+		t0.ticker like '%aero%' or 
+		t0.ticker like '%material%' or 
+		t0.ticker like '%metal%' or 
+		t0.ticker like '%transport%' or 
+		t0.ticker like '%builder%' or 
+		t0.ticker like '%infr%' or 
+		t0.ticker like '%consum%' or 
+		t0.ticker like '%auto%' or 
+		t0.ticker like '%robot%' or 
+		t0.ticker like '%chemic%' or 
+		t0.ticker like '%resourc%' or 
+		t0.ticker like '%construc%' or 
+		t0.ticker like '%media%' or 
+		t0.ticker like '%estate%' or 
+		t0.ticker like '%reit%' or 
+		t0.ticker like '%travel%' or 
+		t0.ticker like '%solar%' or 
+		t0.ticker like '%wind%' or 
+		t0.ticker like '%water%' or 
+		t0.ticker like '%clean%' or 
+		t0.ticker like '%gold%'
 	)
-	group by mercado, bolsa, indice, ticker
+	group by t0.mercado, t0.bolsa, t0.indice, t0.ticker
 ) 
 as t1
 where t1.fecha_ini < '2014-01-01'
