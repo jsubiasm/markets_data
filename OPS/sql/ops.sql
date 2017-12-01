@@ -304,22 +304,25 @@ select t1.* from
 		ticker like '%retail%' or 
 		ticker like '%energ%' or 
 		ticker like '%financ%' or 
-		ticker like '%bank%' or 
+		ticker like '%banks%' or 
+		ticker like '%banking%' or 
 		ticker like '%health%' or 
 		ticker like '%indus%' or 
 		ticker like '%tech%' or 
+		ticker like '%biot%' or 
 		ticker like '%utilit%' or 
-		ticker like '%insur%' or 
+		ticker like '%insuran%' or 
 		ticker like '%medic%' or 
 		ticker like '%pharma%' or 
 		ticker like '%telecom%' or 
 		ticker like '%semicond%' or 
-		ticker like '%soft%' or 
+		ticker like '%software%' or 
 		ticker like '%aero%' or 
 		ticker like '%material%' or 
 		ticker like '%metal%' or 
 		ticker like '%transport%' or 
-		ticker like '%build%' or 
+		ticker like '%builder%' or 
+		ticker like '%infr%' or 
 		ticker like '%consum%' or 
 		ticker like '%auto%' or 
 		ticker like '%robot%' or 
