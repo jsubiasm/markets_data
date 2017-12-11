@@ -335,7 +335,7 @@ as t1
 where t1.fecha_ini < '2010-01-01'
 order by t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 --
--- BUSQUEDA DE ETFS SOBRE ACCIONES POR NEGOCIO (EXCLUYE STOXX Y SP)
+-- BUSQUEDA DE ETFS SOBRE ACCIONES POR ACTIVIDAD (EXCLUYE STOXX Y SP)
 --
 select t1.*,
 (
@@ -425,7 +425,7 @@ as t1
 where t1.fecha_ini < '2010-01-01'
 order by t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 --
--- BUSQUEDA DE ETFS SOBRE ACCIONES POR NEGOCIO (EXCLUYE TODAS LAS ANTERIORES Y ALGUN NEGOCIO MÁS)
+-- BUSQUEDA DE ETFS SOBRE ACCIONES EXCLUYENDO ACTIVIDADES (TAMBIÉN EXCLUYE TODAS LAS ANTERIORES)
 --
 select t1.*,
 (
