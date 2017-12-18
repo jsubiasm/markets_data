@@ -567,8 +567,8 @@ order by t1.mercado, t1.bolsa, t1.indice, t1.ticker;
 select t2.*,
 (
 	case 
-		when (t2.vol_med_ult_2_meses > 0) and (t2.vol_med_ult_4_anios > 0) 
-		then round( ((t2.vol_med_ult_2_meses - t2.vol_med_ult_4_anios) * 100) / t2.vol_med_ult_4_anios , 2)
+		when (t2.vol_med_ult_4_meses > 0) and (t2.vol_med_ult_4_anios > 0) 
+		then round( ((t2.vol_med_ult_4_meses - t2.vol_med_ult_4_anios) * 100) / t2.vol_med_ult_4_anios , 2)
 		else 0
 	end
 ) 
@@ -591,9 +591,9 @@ from
 	(
 		select round(avg(t2.volumen)) from public.mercados_investing t2 
 		where t2.mercado = t1.mercado and t2.bolsa = t1.bolsa and t2.indice = t1.indice 
-		and t2.ticker = t1.ticker and t2.fecha > (t1.fecha_fin - interval '2 months')
+		and t2.ticker = t1.ticker and t2.fecha > (t1.fecha_fin - interval '4 months')
 	) 
-	as vol_med_ult_2_meses
+	as vol_med_ult_4_meses
 	from
 	(
 		select t0.mercado, t0.bolsa, t0.indice, t0.ticker, count(1) as num_dias, min(t0.fecha) as fecha_ini, max(t0.fecha) fecha_fin
