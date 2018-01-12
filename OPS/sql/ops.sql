@@ -53,75 +53,43 @@ or ticker like '%wind%'
 --
 -- TICKER NOT LIKE
 --
-and ticker not like '%-cap-%'
-and ticker not like '%-mid-%'
-and ticker not like '%-term-%'
 and ticker not like '%2x%'
 and ticker not like '%3x%'
 and ticker not like '%4x%'
-and ticker not like '%agri.%'
-and ticker not like '%agric%'
+and ticker not like '%5x%'
+and ticker not like '%agri%'
 and ticker not like '%bear%'
-and ticker not like '%bond%'
 and ticker not like '%boost%'
 and ticker not like '%brent%'
 and ticker not like '%bull%'
-and ticker not like '%bund%'
 and ticker not like '%cattle%'
 and ticker not like '%cocoa%'
 and ticker not like '%coffee%'
 and ticker not like '%commod%'
 and ticker not like '%corn%'
-and ticker not like '%corp%'
 and ticker not like '%cotton%'
-and ticker not like '%covered%'
 and ticker not like '%crude%'
-and ticker not like '%currency%'
-and ticker not like '%daily%'
-and ticker not like '%dividend%'
 and ticker not like '%double%'
-and ticker not like '%eonia%'
 and ticker not like '%gasoline%'
-and ticker not like '%ger.%'
-and ticker not like '%german%'
-and ticker not like '%gov%'
 and ticker not like '%grains%'
-and ticker not like '%growth%'
 and ticker not like '%heating%'
-and ticker not like '%inflation%'
 and ticker not like '%inverse%'
-and ticker not like '%invest-grade%'
-and ticker not like '%large%'
 and ticker not like '%lean-hogs%'
-and ticker not like '%leverage%'
+and ticker not like '%lever%'
 and ticker not like '%long%'
-and ticker not like '%mid-cap%'
-and ticker not like '%midcap%'
-and ticker not like '%month%'
 and ticker not like '%natural-gas%'
-and ticker not like '%pure-beta%'
 and ticker not like '%short%'
-and ticker not like '%small%'
-and ticker not like '%smlcap%'
 and ticker not like '%softs%'
-and ticker not like '%sov%'
 and ticker not like '%soybean%'
-and ticker not like '%strong%'
 and ticker not like '%sugar%'
-and ticker not like '%topix%'
-and ticker not like '%tr.%'
-and ticker not like '%tre.%'
-and ticker not like '%treas%'
 and ticker not like '%ultra%'
-and ticker not like '%value%'
 and ticker not like '%wheat%'
 and ticker not like '%wti%'
-and ticker not like '%year%'
 --
 -- MOSTRAMOS TODOS LOS VALORES ALMACENADOS, EL NUMERO DE REGISTROS Y LOS INTERVALOS DE ALMACENAMIENTO PARA CADA UNO DE ELLOS
 --
 select mercado, bolsa, indice, ticker, count(1) as num_dias, min(fecha) as fecha_ini, max(fecha) fecha_fin
-from public.mercados_investing
+from public.mercados_investing_equity_etf
 group by mercado, bolsa, indice, ticker order by fecha_fin, mercado, bolsa, indice, ticker;
 --
 -- MUESTRA VARIACIÓN DE PRECIO DE CIERRE ENTRE DOS FECHAS CONCRETAS ESPECIFICADAS (AMBAS FECHAS TIENEN QUE CONTENER DATOS)
@@ -131,24 +99,24 @@ round( ((m4.precio_final - m4.precio_inicial) * 100) / m4.precio_inicial , 2) as
 from
 (
 	select distinct m5.mercado, m5.bolsa, m5.indice, m5.ticker,
-	to_date('2015-09-22', 'yyyy-mm-dd') as fecha_inicial,
+	to_date('2014-09-22', 'yyyy-mm-dd') as fecha_inicial,
 	(
-		select m2.cierre from public.mercados_investing m2 
+		select m2.cierre from public.mercados_investing_equity_etf m2 
 		where m2.mercado = m5.mercado and m2.bolsa = m5.bolsa and m2.indice = m5.indice 
-		and m2.ticker = m5.ticker and m2.fecha = to_date('2015-09-22', 'yyyy-mm-dd') 
+		and m2.ticker = m5.ticker and m2.fecha = to_date('2014-09-22', 'yyyy-mm-dd') 
 	) 
 	as precio_inicial,
-	to_date('2015-10-06', 'yyyy-mm-dd') as fecha_final,
+	to_date('2014-10-06', 'yyyy-mm-dd') as fecha_final,
 	(
-		select m3.cierre from public.mercados_investing m3 
+		select m3.cierre from public.mercados_investing_equity_etf m3 
 		where m3.mercado = m5.mercado and m3.bolsa = m5.bolsa and m3.indice = m5.indice 
-		and m3.ticker = m5.ticker and m3.fecha = to_date('2015-10-06', 'yyyy-mm-dd') 
+		and m3.ticker = m5.ticker and m3.fecha = to_date('2014-10-06', 'yyyy-mm-dd') 
 	) 
 	as precio_final
 	from
 	(
 		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.fecha) as fecha_inicial, max(m1.fecha) as fecha_final
-		from public.mercados_investing m1 
+		from public.mercados_investing_equity_etf m1 
 		where m1.mercado = 'ETF'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	) as m5
@@ -163,13 +131,13 @@ from
 (
 	select m4.*,
 	(
-		select m5.cierre from public.mercados_investing m5 
+		select m5.cierre from public.mercados_investing_equity_etf m5 
 		where m5.mercado = m4.mercado and m5.bolsa = m4.bolsa and m5.indice = m4.indice 
 		and m5.ticker = m4.ticker and m5.fecha = m4.fecha_inicial 
 	) 
 	as precio_inicial,
 	(
-		select m6.cierre from public.mercados_investing m6 
+		select m6.cierre from public.mercados_investing_equity_etf m6 
 		where m6.mercado = m4.mercado and m6.bolsa = m4.bolsa and m6.indice = m4.indice 
 		and m6.ticker = m4.ticker and m6.fecha = m4.fecha_final
 	) 
@@ -177,9 +145,9 @@ from
 	from
 	(
 		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.fecha) as fecha_inicial, max(m1.fecha) as fecha_final
-		from public.mercados_investing m1  
+		from public.mercados_investing_equity_etf m1  
 		where m1.mercado = 'ETF'
-		and m1.fecha between '2016-01-01' and '2016-12-31'
+		and m1.fecha between '2014-01-01' and '2014-12-31'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
 	as m4
@@ -194,14 +162,14 @@ from
 (
 	select m2.*,
 	(
-		select m3.volumen from public.mercados_investing m3 
+		select m3.volumen from public.mercados_investing_equity_etf m3 
 		where m3.mercado = m2.mercado and m3.bolsa = m2.bolsa and m3.indice = m2.indice 
 		and m3.ticker = m2.ticker and m3.fecha = m2.ultima_fecha
 	) as ultimo_vol
 	from 
 	(
 		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, max(fecha) as ultima_fecha, round(avg(volumen)) as avg_vol
-		from public.mercados_investing m1 
+		from public.mercados_investing_equity_etf m1 
 		where m1.mercado = 'ETF'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
@@ -218,7 +186,7 @@ from
 (
 	select m2.*,
 	(
-		select m3.cierre from public.mercados_investing m3 
+		select m3.cierre from public.mercados_investing_equity_etf m3 
 		where m3.mercado = m2.mercado and m3.bolsa = m2.bolsa and m3.indice = m2.indice 
 		and m3.ticker = m2.ticker and m3.fecha = m2.ultima_fecha
 	) as ultimo_precio
@@ -227,11 +195,11 @@ from
 		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, 
 			   min(m1.fecha) as primera_fecha, max(m1.fecha) as ultima_fecha, 
 			   min(m1.cierre) as precio_minimo, max(m1.cierre) as precio_maximo 
-		from public.mercados_investing m1 
+		from public.mercados_investing_equity_etf m1 
 		where m1.mercado = 'ETF' 
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	)
-	as m2 where m2.primera_fecha < '2012-01-01'
+	as m2 where m2.primera_fecha < '2014-01-01'
 ) 
 as m4 order by var_maximo desc, var_minimo desc;
 --
@@ -250,23 +218,23 @@ from
 (
 	select m2.*,
 	(
-		select max(m3.fecha) from public.mercados_investing m3 
+		select max(m3.fecha) from public.mercados_investing_equity_etf m3 
 		where m3.mercado = m2.mercado and m3.bolsa = m2.bolsa and m3.indice = m2.indice 
 		and m3.ticker = m2.ticker and m3.cierre = m2.precio_minimo
-		and m3.fecha between '2016-01-01' and '2016-12-31'
+		and m3.fecha between '2014-01-01' and '2014-12-31'
 	) as precio_minimo_fecha,
 	(
-		select max(m4.fecha) from public.mercados_investing m4 
+		select max(m4.fecha) from public.mercados_investing_equity_etf m4 
 		where m4.mercado = m2.mercado and m4.bolsa = m2.bolsa and m4.indice = m2.indice 
 		and m4.ticker = m2.ticker and m4.cierre = m2.precio_maximo
-		and m4.fecha between '2016-01-01' and '2016-12-31'
+		and m4.fecha between '2014-01-01' and '2014-12-31'
 	) as precio_maximo_fecha
 	from 
 	(
 		select m1.mercado, m1.bolsa, m1.indice, m1.ticker, min(m1.cierre) as precio_minimo, max(m1.cierre) as precio_maximo 
-		from public.mercados_investing m1 
+		from public.mercados_investing_equity_etf m1 
 		where m1.mercado = 'ETF'
-		and m1.fecha between '2016-01-01' and '2016-12-31'
+		and m1.fecha between '2014-01-01' and '2014-12-31'
 		group by m1.mercado, m1.bolsa, m1.indice, m1.ticker
 	) as m2
 ) as m5 order by var_precio desc;
@@ -275,13 +243,13 @@ from
 --
 select t1.*,
 (
-	select t3.cierre from public.mercados_investing t3 
+	select t3.cierre from public.mercados_investing_equity_etf t3 
 	where t3.mercado = t1.mercado and t3.bolsa = t1.bolsa and t3.indice = t1.indice 
 	and t3.ticker = t1.ticker and t3.fecha = t1.fecha_fin
 ) 
 as cierre_fin,
 (
-	select round(avg(t2.volumen)) from public.mercados_investing t2 
+	select round(avg(t2.volumen)) from public.mercados_investing_equity_etf t2 
 	where t2.mercado = t1.mercado and t2.bolsa = t1.bolsa and t2.indice = t1.indice 
 	and t2.ticker = t1.ticker and t2.fecha > (t1.fecha_fin - interval '1 month')
 ) 
@@ -289,7 +257,7 @@ as vol_med_ult_mes
 from
 (
 	select t0.mercado, t0.bolsa, t0.indice, t0.ticker, count(1) as num_dias, min(t0.fecha) as fecha_ini, max(t0.fecha) fecha_fin
-	from public.mercados_investing t0
+	from public.mercados_investing_equity_etf t0
 	where t0.mercado = 'ETF'
 	group by t0.mercado, t0.bolsa, t0.indice, t0.ticker
 ) 
@@ -312,19 +280,19 @@ from
 (
 	select t1.*,
 	(
-		select t3.cierre from public.mercados_investing t3 
+		select t3.cierre from public.mercados_investing_equity_etf t3 
 		where t3.mercado = t1.mercado and t3.bolsa = t1.bolsa and t3.indice = t1.indice 
 		and t3.ticker = t1.ticker and t3.fecha = t1.fecha_fin
 	) 
 	as cierre_fin,
 		(
-		select round(avg(t2.volumen)) from public.mercados_investing t2 
+		select round(avg(t2.volumen)) from public.mercados_investing_equity_etf t2 
 		where t2.mercado = t1.mercado and t2.bolsa = t1.bolsa and t2.indice = t1.indice 
 		and t2.ticker = t1.ticker and t2.fecha > (t1.fecha_fin - interval '4 years')
 	) 
 	as vol_med_ult_4_anios,
 	(
-		select round(avg(t2.volumen)) from public.mercados_investing t2 
+		select round(avg(t2.volumen)) from public.mercados_investing_equity_etf t2 
 		where t2.mercado = t1.mercado and t2.bolsa = t1.bolsa and t2.indice = t1.indice 
 		and t2.ticker = t1.ticker and t2.fecha > (t1.fecha_fin - interval '4 months')
 	) 
@@ -332,7 +300,7 @@ from
 	from
 	(
 		select t0.mercado, t0.bolsa, t0.indice, t0.ticker, count(1) as num_dias, min(t0.fecha) as fecha_ini, max(t0.fecha) fecha_fin
-		from public.mercados_investing t0
+		from public.mercados_investing_equity_etf t0
 		where t0.mercado = 'ETF' 
 		group by t0.mercado, t0.bolsa, t0.indice, t0.ticker
 	) 

@@ -1,4 +1,52 @@
 --
+-- TABLA MERCADOS INVESTING ETFS SOBRE ACCIONES
+--
+CREATE TABLE public.mercados_investing_equity_etf (
+	mercado varchar NOT NULL,
+	bolsa varchar NOT NULL,
+	indice varchar NOT NULL,
+	ticker varchar NOT NULL,
+	fecha date NOT NULL,
+	apertura numeric NOT NULL,
+	maximo numeric NOT NULL,
+	minimo numeric NOT NULL,
+	cierre numeric NOT NULL,
+	volumen numeric NOT NULL
+)
+WITH (
+	OIDS=FALSE
+) ;
+create
+    index mercados_investing_equity_etf_bolsa_idx on
+    mercados_investing_equity_etf
+        using btree(bolsa) ;
+create
+    index mercados_investing_equity_etf_fecha_idx on
+    mercados_investing_equity_etf
+        using btree(fecha) ;
+create
+    index mercados_investing_equity_etf_indice_idx on
+    mercados_investing_equity_etf
+        using btree(indice) ;
+create
+    index mercados_investing_equity_etf_mercado_idx on
+    mercados_investing_equity_etf
+        using btree(mercado) ;
+create
+    index mercados_investing_equity_etf_ticker_idx on
+    mercados_investing_equity_etf
+        using btree(ticker) ;
+create
+    unique index mercados_investing_equity_etf_unique_idx on
+    mercados_investing_equity_etf
+        using btree(
+        mercado,
+        bolsa,
+        indice,
+        ticker,
+        fecha
+    ) ;
+--
 -- TABLA MERCADOS INVESTING
 --
 CREATE TABLE public.mercados_investing (
