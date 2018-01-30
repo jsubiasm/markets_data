@@ -580,8 +580,8 @@ public class DriverController
 
 		}
 
-		LOGGER.info("Esperamos 100 milisegundos");
-		Thread.sleep(100);
+		LOGGER.info("Esperamos 500 milisegundos");
+		Thread.sleep(500);
 
 		LOGGER.info("Generando screenshot");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
