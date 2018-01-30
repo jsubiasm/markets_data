@@ -561,7 +561,27 @@ public class DriverController
 		LOGGER.info("Esperando gráfico en tercer IFrame");
 		new WebDriverWait(driver, 10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.tagName("iframe")));
 		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.className("pane-controls")));
-		Thread.sleep(500);
+
+		LOGGER.info("Buscando botonera tipo gráfico");
+		List<WebElement> listaDivsQuick = driver.findElements(By.className("quick"));
+		int element = 0;
+		for (WebElement divQuick : listaDivsQuick)
+		{
+			if (element == 0)
+			{
+				element++;
+				continue;
+			}
+
+			LOGGER.info("Seleccionando gráfico de velas");
+			WebElement spanVelas = divQuick.findElement(By.tagName("span"));
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(spanVelas));
+			spanVelas.click();
+
+		}
+
+		LOGGER.info("Esperamos 100 milisegundos");
+		Thread.sleep(100);
 
 		LOGGER.info("Generando screenshot");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
