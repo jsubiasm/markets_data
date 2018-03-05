@@ -58,14 +58,32 @@ public class DriverControllerSCR
 		// -- ESP
 		// --
 		List<String> listaURL_01 = new ArrayList<String>();
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::a|eq_pe_ratio::1.31,18|eq_eps::0.4,16.21|yield_us::2,24.88|eq_market_cap::1000000000,88490000000>eq_pe_ratio;1");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::ORD|exchange::11|eq_market_cap::200000000,88490000000|yield_us::1,24.88|eq_pe_ratio::1.31,22<yield_us;1");
 		LISTA_URL_GROUP.add(new URLGroup("ESP", listaURL_01));
 		// --
-		// -- USA
+		// -- GER
 		// --
-		// List<String> listaURL_02 = new ArrayList<String>();
-		// listaURL_02.add("https://es.investing.com/etfs/alps-alerian-energy-infra");
-		// LISTA_URL_GROUP.add(new URLGroup("USA", listaURL_02));
+		List<String> listaURL_02 = new ArrayList<String>();
+		listaURL_02.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::4|eq_market_cap::3000000000,583950000000|yield_us::1,286.36|eq_pe_ratio::0,22<eq_pe_ratio;1");
+		LISTA_URL_GROUP.add(new URLGroup("GER", listaURL_02));
+		// --
+		// -- FRA
+		// --
+		List<String> listaURL_03 = new ArrayList<String>();
+		listaURL_03.add("https://es.investing.com/stock-screener/?sp=country::22|sector::a|industry::a|equityType::ORD|exchange::9|eq_market_cap::4000000000,121040000000|yield_us::1,67.57|eq_pe_ratio::0.28,22%3Ceq_pe_ratio;1");
+		LISTA_URL_GROUP.add(new URLGroup("FRA", listaURL_03));
+		// --
+		// -- NASDAQ
+		// --
+		List<String> listaURL_04 = new ArrayList<String>();
+		listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::2|eq_market_cap::4000000000,894090000000|yield_us::1,36460|eq_pe_ratio::0,21%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("NASDAQ", listaURL_04));
+		// --
+		// -- NY
+		// --
+		List<String> listaURL_05 = new ArrayList<String>();
+		listaURL_05.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::1|eq_market_cap::40000000000,894090000000|yield_us::1,36460|eq_pe_ratio::0,21<eq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("NY", listaURL_05));
 	}
 
 	/**
