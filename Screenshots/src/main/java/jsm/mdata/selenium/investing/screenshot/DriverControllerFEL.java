@@ -24,13 +24,13 @@ import org.slf4j.LoggerFactory;
  * @author Empleado
  *
  */
-public class DriverController
+public class DriverControllerFEL
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(DriverController.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerFEL.class);
 
 	/**
 	 * Web Driver
@@ -474,7 +474,7 @@ public class DriverController
 		FileUtils.cleanDirectory(new File(DOWNLOAD_PATH));
 
 		LOGGER.info("Iniciando driver");
-		System.setProperty(DriverController.WEB_DRIVER_PROPERTY, DriverController.WEB_DRIVER_EXE);
+		System.setProperty(DriverControllerFEL.WEB_DRIVER_PROPERTY, DriverControllerFEL.WEB_DRIVER_EXE);
 		WebDriver driver = new ChromeDriver();
 
 		LOGGER.info("Cargando URL inicial para introducir datos proxy");
@@ -493,13 +493,13 @@ public class DriverController
 				try
 				{
 					String hrefElemento = listaURL.get(urlsIdx);
-					DriverController.procesarElemento(driver, hrefElemento, downloadFolder);
+					DriverControllerFEL.procesarElemento(driver, hrefElemento, downloadFolder);
 					urlsIdx++;
 				}
 				catch (Exception e)
 				{
 					LOGGER.error("Se ha producido un error", e);
-					DriverController.gestionError(driver);
+					DriverControllerFEL.gestionError(driver);
 				}
 			}
 		}
