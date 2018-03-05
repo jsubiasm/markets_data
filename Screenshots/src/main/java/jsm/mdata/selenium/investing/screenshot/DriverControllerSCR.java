@@ -141,7 +141,9 @@ public class DriverControllerSCR
 					LOGGER.info("Recuperando tabla de elementos [" + tableId + "]");
 					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id(tableId)));
 					WebElement tablaElementos = driver.findElement(By.id(tableId));
+					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfNestedElementsLocatedBy(tablaElementos, By.tagName("tbody")));
 					WebElement tableBody = tablaElementos.findElement(By.tagName("tbody"));
+					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfNestedElementsLocatedBy(tableBody, By.tagName("a")));
 					List<WebElement> listaLinks = tableBody.findElements(By.tagName("a"));
 
 					LOGGER.info("Guardando enlaces de elementos");
