@@ -55,35 +55,56 @@ public class DriverControllerSCR
 	static
 	{
 		// --
-		// -- ESP
+		// -- Alemania
 		// --
 		List<String> listaURL_01 = new ArrayList<String>();
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::ORD|exchange::11|eq_market_cap::200000000,88490000000|yield_us::1,24.88|eq_pe_ratio::1.31,22<yield_us;1");
-		LISTA_URL_GROUP.add(new URLGroup("ESP", listaURL_01));
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::4|eq_market_cap::6500000000,583950000000|yield_us::1,286.36|eq_pe_ratio::0,40%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
 		// --
-		// -- GER
+		// -- Francia
 		// --
 		List<String> listaURL_02 = new ArrayList<String>();
-		listaURL_02.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::4|eq_market_cap::3000000000,583950000000|yield_us::1,286.36|eq_pe_ratio::0,22<eq_pe_ratio;1");
-		LISTA_URL_GROUP.add(new URLGroup("GER", listaURL_02));
+		listaURL_02.add("https://es.investing.com/stock-screener/?sp=country::22|sector::a|industry::a|equityType::ORD|exchange::9|eq_market_cap::8000000000,122060000000|yield_us::1,67.8|eq_pe_ratio::0.28,40%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Francia", listaURL_02));
 		// --
-		// -- FRA
+		// -- Italia
 		// --
 		List<String> listaURL_03 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/stock-screener/?sp=country::22|sector::a|industry::a|equityType::ORD|exchange::9|eq_market_cap::4000000000,121040000000|yield_us::1,67.57|eq_pe_ratio::0.28,22%3Ceq_pe_ratio;1");
-		LISTA_URL_GROUP.add(new URLGroup("FRA", listaURL_03));
+		listaURL_03.add("https://es.investing.com/stock-screener/?sp=country::10|sector::a|industry::a|equityType::ORD|exchange::6|eq_market_cap::1700000000,49890000000|yield_us::1,9.54|eq_pe_ratio::0.15,40%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Italia", listaURL_03));
+		// --
+		// -- España
+		// --
+		List<String> listaURL_04 = new ArrayList<String>();
+		listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::ORD|exchange::11|eq_market_cap::1300000000,88830000000|yield_us::1,24.88|eq_pe_ratio::1.31,40%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("España", listaURL_04));
+		// --
+		// -- Holanda
+		// --
+		List<String> listaURL_05 = new ArrayList<String>();
+		listaURL_05.add("https://es.investing.com/stock-screener/?sp=country::21|sector::a|industry::a|equityType::ORD|exchange::7|eq_market_cap::500000000,213780000000|yield_us::1,24.75|eq_pe_ratio::2.45,40%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Holanda", listaURL_05));
+		// --
+		// -- Bélgica
+		// --
+		List<String> listaURL_06 = new ArrayList<String>();
+		listaURL_06.add("https://es.investing.com/stock-screener/?sp=country::34|sector::a|industry::a|equityType::ORD|exchange::14|eq_market_cap::300000000,152460000000|yield_us::1,21.35|eq_pe_ratio::0.03,40%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Bélgica", listaURL_06));
 		// --
 		// -- NASDAQ
 		// --
-		List<String> listaURL_04 = new ArrayList<String>();
-		listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::2|eq_market_cap::4000000000,894090000000|yield_us::1,36460|eq_pe_ratio::0,21%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("NASDAQ", listaURL_04));
+		List<String> listaURL_07 = new ArrayList<String>();
+		listaURL_07.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::2|eq_market_cap::5000000000,897190000000|yield_us::1,119.85|eq_pe_ratio::0,40%3Ceq_market_cap;1");
+		listaURL_07.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::2|eq_market_cap::5000000000,897190000000|yield_us::1,119.85|eq_pe_ratio::0,40%3Ceq_market_cap;2");
+		LISTA_URL_GROUP.add(new URLGroup("NASDAQ", listaURL_07));
 		// --
 		// -- NY
 		// --
-		List<String> listaURL_05 = new ArrayList<String>();
-		listaURL_05.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::1|eq_market_cap::40000000000,894090000000|yield_us::1,36460|eq_pe_ratio::0,21<eq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("NY", listaURL_05));
+		List<String> listaURL_08 = new ArrayList<String>();
+		listaURL_08.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::1|eq_market_cap::25000000000,897190000000|yield_us::1,119.85|eq_pe_ratio::0,40%3Ceq_market_cap;1");
+		listaURL_08.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::1|eq_market_cap::25000000000,897190000000|yield_us::1,119.85|eq_pe_ratio::0,40%3Ceq_market_cap;2");
+		listaURL_08.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::1|eq_market_cap::25000000000,897190000000|yield_us::1,119.85|eq_pe_ratio::0,40%3Ceq_market_cap;3");
+		LISTA_URL_GROUP.add(new URLGroup("NY", listaURL_08));
 	}
 
 	/**
