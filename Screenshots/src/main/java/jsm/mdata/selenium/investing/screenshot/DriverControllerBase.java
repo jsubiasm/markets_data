@@ -26,6 +26,22 @@ public abstract class DriverControllerBase
 {
 
 	/**
+	 * Web Driver
+	 */
+	protected static final String WEB_DRIVER_PROPERTY = "webdriver.chrome.driver";
+	protected static final String WEB_DRIVER_EXE = "C:\\_PELAYO\\Software\\Selenium\\drivers\\chromedriver.exe";
+
+	/**
+	 * Rutas
+	 */
+	protected static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Screenshots\\investing\\download";
+
+	/**
+	 * Formatos
+	 */
+	private static final String CHARSET = "UTF-8";
+
+	/**
 	 * Logger
 	 */
 	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerBase.class);
@@ -37,7 +53,7 @@ public abstract class DriverControllerBase
 	 * @param charset
 	 * @throws Exception
 	 */
-	protected static void procesarElemento(WebDriver driver, String hrefElemento, String downloadPath, String charset) throws Exception
+	protected static void procesarElemento(WebDriver driver, String hrefElemento, String downloadPath) throws Exception
 	{
 		LOGGER.info("Cargando URL [" + hrefElemento + "]");
 		driver.get(hrefElemento);
@@ -113,7 +129,7 @@ public abstract class DriverControllerBase
 
 		LOGGER.info("Generando screenshot");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + URLEncoder.encode(hrefElemento, charset) + ".png"));
+		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".png"));
 	}
 
 	/**

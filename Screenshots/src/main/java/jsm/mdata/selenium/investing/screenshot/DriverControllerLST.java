@@ -29,22 +29,6 @@ public class DriverControllerLST extends DriverControllerBase
 	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerLST.class);
 
 	/**
-	 * Web Driver
-	 */
-	public static final String WEB_DRIVER_PROPERTY = "webdriver.chrome.driver";
-	public static final String WEB_DRIVER_EXE = "C:\\_PELAYO\\Software\\Selenium\\drivers\\chromedriver.exe";
-
-	/**
-	 * Rutas
-	 */
-	private static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Screenshots\\investing\\download";
-
-	/**
-	 * Formatos
-	 */
-	private static final String CHARSET = "UTF-8";
-
-	/**
 	 * URL Groups
 	 */
 	private final static List<URLGroup> LISTA_URL_GROUP = new ArrayList<URLGroup>();
@@ -489,7 +473,7 @@ public class DriverControllerLST extends DriverControllerBase
 				try
 				{
 					String hrefElemento = listaURL.get(urlsIdx);
-					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder, CHARSET);
+					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder);
 					urlsIdx++;
 				}
 				catch (Exception e)
