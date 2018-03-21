@@ -38,9 +38,9 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Alemania
 		// --
-		// List<String> listaURL_01 = new ArrayList<String>();
-		// listaURL_01.add("");
-		// LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
+		List<String> listaURL_01 = new ArrayList<String>();
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::4|eq_market_cap::2000000000,583950000000|eq_one_year_return::0,24080|ytd::0,1900|a52_week_high_diff::-4,0%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
 		// --
 		// -- Austria
 		// --
@@ -80,9 +80,9 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Francia
 		// --
-		// List<String> listaURL_08 = new ArrayList<String>();
-		// listaURL_08.add("");
-		// LISTA_URL_GROUP.add(new URLGroup("Francia", listaURL_08));
+		List<String> listaURL_08 = new ArrayList<String>();
+		listaURL_08.add("https://es.investing.com/stock-screener/?sp=country::22|sector::a|industry::a|equityType::ORD|exchange::9|eq_market_cap::6000000000,125120000000|eq_one_year_return::0,964.52|ytd::0,524.52|a52_week_high_diff::-4,0%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Francia", listaURL_08));
 		// --
 		// -- Holanda
 		// --
@@ -98,9 +98,9 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Italia
 		// --
-		// List<String> listaURL_11 = new ArrayList<String>();
-		// listaURL_11.add("");
-		// LISTA_URL_GROUP.add(new URLGroup("Italia", listaURL_11));
+		List<String> listaURL_11 = new ArrayList<String>();
+		listaURL_11.add("https://es.investing.com/stock-screener/?sp=country::10|sector::a|industry::a|equityType::ORD|exchange::6|eq_market_cap::1000000000,51360000000|eq_one_year_return::0,1010|ytd::0,321.88|a52_week_high_diff::-4,0%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Italia", listaURL_11));
 		// --
 		// -- Portugal
 		// --
