@@ -37,6 +37,13 @@ public abstract class DriverControllerBase
 	protected static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Screenshots\\investing\\download";
 
 	/**
+	 * 
+	 */
+	protected static final String TF_DIARIO = "interval=D";
+	protected static final String TF_SEMANAL = "interval=W";
+	protected static final String TF_MENSUAL = "interval=M";
+
+	/**
 	 * Formatos
 	 */
 	private static final String CHARSET = "UTF-8";
@@ -53,7 +60,7 @@ public abstract class DriverControllerBase
 	 * @param charset
 	 * @throws Exception
 	 */
-	protected static void procesarElemento(WebDriver driver, String hrefElemento, String downloadPath) throws Exception
+	protected static void procesarElemento(WebDriver driver, String hrefElemento, String downloadPath, String timeFrame) throws Exception
 	{
 		LOGGER.info("Cargando URL [" + hrefElemento + "]");
 		driver.get(hrefElemento);
@@ -80,7 +87,7 @@ public abstract class DriverControllerBase
 
 		LOGGER.info("Recuperando URL segundo IFrame");
 		WebElement iframe02 = driver.findElement(By.tagName("iframe"));
-		String iframe02Url = iframe02.getAttribute("src").replaceAll("interval=D", "interval=M");
+		String iframe02Url = iframe02.getAttribute("src").replaceAll(TF_DIARIO, timeFrame);
 
 		LOGGER.info("Cargando URL [" + iframe02Url + "]");
 		driver.get(iframe02Url);
@@ -129,7 +136,7 @@ public abstract class DriverControllerBase
 
 		LOGGER.info("Generando screenshot");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + ".png"));
+		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + timeFrame + ".png"));
 	}
 
 	/**
