@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -38,15 +39,15 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Alemania
 		// --
-		List<String> listaURL_01 = new ArrayList<String>();
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::4|eq_market_cap::2000000000,583950000000|eq_one_year_return::0,24080|ytd::0,1900|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
+		// List<String> listaURL_01 = new ArrayList<String>();
+		// listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::4|eq_market_cap::2000000000,583950000000|eq_one_year_return::0,24080|ytd::0,1900|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
 		// --
 		// -- Austria
 		// --
-		List<String> listaURL_02 = new ArrayList<String>();
-		listaURL_02.add("https://es.investing.com/stock-screener/?sp=country::54|sector::a|industry::a|equityType::ORD|exchange::17|eq_market_cap::1000000000,18210000000|eq_one_year_return::0,226.73|ytd::0,69.47|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("Austria", listaURL_02));
+		// List<String> listaURL_02 = new ArrayList<String>();
+		// listaURL_02.add("https://es.investing.com/stock-screener/?sp=country::54|sector::a|industry::a|equityType::ORD|exchange::17|eq_market_cap::1000000000,18210000000|eq_one_year_return::0,226.73|ytd::0,69.47|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// LISTA_URL_GROUP.add(new URLGroup("Austria", listaURL_02));
 		// --
 		// -- Bélgica
 		// --
@@ -57,20 +58,20 @@ public class DriverControllerSCR extends DriverControllerBase
 		// -- España
 		// --
 		List<String> listaURL_04 = new ArrayList<String>();
-		listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::ORD|exchange::11|eq_market_cap::1000000000,88260000000|eq_one_year_return::0,561.5|ytd::0,535.4|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::ORD|exchange::11|eq_market_cap::1000000000,88260000000|eq_one_year_return::0,561.5|ytd::0,535.4|a52_week_high_diff::-8,0%3Ceq_market_cap;1");
 		LISTA_URL_GROUP.add(new URLGroup("España", listaURL_04));
 		// --
 		// -- USA-Nasdaq
 		// --
-		List<String> listaURL_05 = new ArrayList<String>();
-		listaURL_05.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::2|eq_market_cap::10000000000,888100000000|eq_one_year_return::0,16110000|ytd::0,59900|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("USA-Nasdaq", listaURL_05));
+		// List<String> listaURL_05 = new ArrayList<String>();
+		// listaURL_05.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::2|eq_market_cap::10000000000,888100000000|eq_one_year_return::0,16110000|ytd::0,59900|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// LISTA_URL_GROUP.add(new URLGroup("USA-Nasdaq", listaURL_05));
 		// --
 		// -- USA-Nueva York
 		// --
-		List<String> listaURL_06 = new ArrayList<String>();
-		listaURL_06.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::1|eq_market_cap::20000000000,888100000000|eq_one_year_return::0,16110000|ytd::0,59900|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("USA-Nueva York", listaURL_06));
+		// List<String> listaURL_06 = new ArrayList<String>();
+		// listaURL_06.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::1|eq_market_cap::20000000000,888100000000|eq_one_year_return::0,16110000|ytd::0,59900|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// LISTA_URL_GROUP.add(new URLGroup("USA-Nueva York", listaURL_06));
 		// --
 		// -- Finlandia
 		// --
@@ -98,9 +99,9 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Italia
 		// --
-		List<String> listaURL_11 = new ArrayList<String>();
-		listaURL_11.add("https://es.investing.com/stock-screener/?sp=country::10|sector::a|industry::a|equityType::ORD|exchange::6|eq_market_cap::1000000000,51360000000|eq_one_year_return::0,1010|ytd::0,321.88|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("Italia", listaURL_11));
+		// List<String> listaURL_11 = new ArrayList<String>();
+		// listaURL_11.add("https://es.investing.com/stock-screener/?sp=country::10|sector::a|industry::a|equityType::ORD|exchange::6|eq_market_cap::1000000000,51360000000|eq_one_year_return::0,1010|ytd::0,321.88|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// LISTA_URL_GROUP.add(new URLGroup("Italia", listaURL_11));
 		// --
 		// -- Portugal
 		// --
@@ -138,7 +139,9 @@ public class DriverControllerSCR extends DriverControllerBase
 
 		LOGGER.info("Iniciando driver");
 		System.setProperty(WEB_DRIVER_PROPERTY, WEB_DRIVER_EXE);
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+		WebDriver driver = new ChromeDriver(options);
 
 		LOGGER.info("Cargando URL inicial para introducir datos proxy");
 		driver.get("https://es.investing.com/");
@@ -183,9 +186,9 @@ public class DriverControllerSCR extends DriverControllerBase
 						try
 						{
 							String hrefElemento = listaHrefs.get(hrefsIdx);
-							procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder, TF_MENSUAL);
-							procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder, TF_SEMANAL);
-							procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder, TF_DIARIO);
+							procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL);
+							procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_SEMANAL, TF_SEMANAL);
+							procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_DIARIO, TF_DIARIO);
 							hrefsIdx++;
 						}
 						catch (Exception e)
