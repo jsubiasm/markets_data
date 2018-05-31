@@ -39,9 +39,9 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Alemania
 		// --
-		// List<String> listaURL_01 = new ArrayList<String>();
-		// listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::4|eq_market_cap::2000000000,583950000000|eq_one_year_return::0,24080|ytd::0,1900|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		// LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
+		List<String> listaURL_01 = new ArrayList<String>();
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::4|turnover_volume::100,35380000|eq_market_cap::1000000000,792500000000|a52_week_high_diff::-10,0|yield_us::1,221.05|eq_pe_ratio::0,100%3Ceq_pe_ratio;1");
+		LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
 		// --
 		// -- Austria
 		// --
@@ -51,14 +51,14 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Bélgica
 		// --
-		List<String> listaURL_03 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/stock-screener/?sp=country::34|sector::a|industry::a|equityType::ORD|exchange::14|eq_market_cap::1000000000,158650000000|eq_one_year_return::0,301.88|ytd::0,208.64|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("Bélgica", listaURL_03));
+		// List<String> listaURL_03 = new ArrayList<String>();
+		// listaURL_03.add("https://es.investing.com/stock-screener/?sp=country::34|sector::a|industry::a|equityType::ORD|exchange::14|eq_market_cap::1000000000,158650000000|eq_one_year_return::0,301.88|ytd::0,208.64|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// LISTA_URL_GROUP.add(new URLGroup("Bélgica", listaURL_03));
 		// --
 		// -- España
 		// --
 		List<String> listaURL_04 = new ArrayList<String>();
-		listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::ORD|exchange::11|eq_market_cap::1000000000,88260000000|eq_one_year_return::0,561.5|ytd::0,535.4|a52_week_high_diff::-8,0%3Ceq_market_cap;1");
+		listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::ORD|exchange::11|turnover_volume::100,91560000|eq_market_cap::100000000,88060000000|a52_week_high_diff::-10,0|yield_us::1,8.97|eq_pe_ratio::3.14,100%3Ceq_market_cap;1");
 		LISTA_URL_GROUP.add(new URLGroup("España", listaURL_04));
 		// --
 		// -- USA-Nasdaq
@@ -82,14 +82,14 @@ public class DriverControllerSCR extends DriverControllerBase
 		// -- Francia
 		// --
 		List<String> listaURL_08 = new ArrayList<String>();
-		listaURL_08.add("https://es.investing.com/stock-screener/?sp=country::22|sector::a|industry::a|equityType::ORD|exchange::9|eq_market_cap::6000000000,125120000000|eq_one_year_return::0,964.52|ytd::0,524.52|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		listaURL_08.add("https://es.investing.com/stock-screener/?sp=country::22|sector::a|industry::a|equityType::ORD|exchange::9|turnover_volume::100,14760000|eq_market_cap::1000000000,165750000000|a52_week_high_diff::-7,0|yield_us::1,18.01|eq_pe_ratio::0.19,100%3Cyield_us;1");
 		LISTA_URL_GROUP.add(new URLGroup("Francia", listaURL_08));
 		// --
 		// -- Holanda
 		// --
-		List<String> listaURL_09 = new ArrayList<String>();
-		listaURL_09.add("https://es.investing.com/stock-screener/?sp=country::21|sector::a|industry::a|equityType::ORD|exchange::7|eq_market_cap::1000000000,214050000000|eq_one_year_return::0,353.95|ytd::0,275|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("Holanda", listaURL_09));
+		// List<String> listaURL_09 = new ArrayList<String>();
+		// listaURL_09.add("https://es.investing.com/stock-screener/?sp=country::21|sector::a|industry::a|equityType::ORD|exchange::7|eq_market_cap::1000000000,214050000000|eq_one_year_return::0,353.95|ytd::0,275|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// LISTA_URL_GROUP.add(new URLGroup("Holanda", listaURL_09));
 		// --
 		// -- Irlanda
 		// --
@@ -105,9 +105,9 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Portugal
 		// --
-		List<String> listaURL_12 = new ArrayList<String>();
-		listaURL_12.add("https://es.investing.com/stock-screener/?sp=country::38|sector::a|industry::a|equityType::ORD|exchange::10|eq_market_cap::1000000000,11620000000|eq_one_year_return::0,200|ytd::0,135|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
-		LISTA_URL_GROUP.add(new URLGroup("Portugal", listaURL_12));
+		// List<String> listaURL_12 = new ArrayList<String>();
+		// listaURL_12.add("https://es.investing.com/stock-screener/?sp=country::38|sector::a|industry::a|equityType::ORD|exchange::10|eq_market_cap::1000000000,11620000000|eq_one_year_return::0,200|ytd::0,135|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// LISTA_URL_GROUP.add(new URLGroup("Portugal", listaURL_12));
 	}
 
 	/**
