@@ -473,9 +473,9 @@ public class DriverControllerLST extends DriverControllerBase
 				try
 				{
 					String hrefElemento = listaURL.get(urlsIdx);
-					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder, TF_MENSUAL);
-					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder, TF_SEMANAL);
-					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder, TF_DIARIO);
+					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL);
+					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_SEMANAL, TF_SEMANAL);
+					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_DIARIO, TF_DIARIO);
 					urlsIdx++;
 				}
 				catch (Exception e)
