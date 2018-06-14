@@ -878,10 +878,8 @@ public class DriverControllerLST extends DriverControllerBase
 		listaURL_03.add("https://es.investing.com/etfs/ishares-automation-robotics-acc?cid=1009408");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-dj-china-offshore-50---de");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-edge-msci-mf-healthcare");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-evolved-us-innvtvhlthcr");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-s-p-global-healthcare");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-hc-innov-acc-mi?cid=1009026");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-s-p-500-usd-health-care?cid=997100");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-s-p-500-usd-health-care");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-dj-stoxx600-health-care");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-health-care-index");
@@ -896,7 +894,6 @@ public class DriverControllerLST extends DriverControllerBase
 		listaURL_03.add("https://es.investing.com/etfs/powersh.-dynamic-pharmaceuticals");
 		listaURL_03.add("https://es.investing.com/etfs/powersh-s-p-smallcap-healthcare");
 		listaURL_03.add("https://es.investing.com/etfs/principal-healthcare-innovators");
-		listaURL_03.add("https://es.investing.com/etfs/proshares-sp-500-ex-health-care");
 		listaURL_03.add("https://es.investing.com/etfs/robo-stox-global-robotics");
 		listaURL_03.add("https://es.investing.com/etfs/stoxx-600-optimised-health-care");
 		listaURL_03.add("https://es.investing.com/etfs/spdr-msci-europe-health-care?cid=46222");
@@ -904,7 +901,6 @@ public class DriverControllerLST extends DriverControllerBase
 		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-health-care-equipment");
 		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-health-care-services");
 		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-pharmaceuticals");
-		listaURL_03.add("https://es.investing.com/etfs/spdr-sp-us-hc-select-sector");
 		listaURL_03.add("https://es.investing.com/etfs/market-vectors-biotech");
 		listaURL_03.add("https://es.investing.com/etfs/holdrs-merrill-lynch-pharma.");
 		listaURL_03.add("https://es.investing.com/etfs/vanguard-health-care");
