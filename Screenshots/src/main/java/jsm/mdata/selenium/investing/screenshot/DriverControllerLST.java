@@ -891,44 +891,44 @@ public class DriverControllerLST extends DriverControllerBase
 		// -- ETFs BIOTECH
 		// --
 		List<String> listaURL_04 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/etfs/bioshares-biotechnology-clinical");
-		listaURL_03.add("https://es.investing.com/etfs/bioshares-biotechnology-products");
-		listaURL_03.add("https://es.investing.com/etfs/firsttrust-amex-biotech");
-		listaURL_03.add("https://es.investing.com/etfs/powersh.-dynamic-biotech---genome");
-		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-biotech");
-		listaURL_03.add("https://es.investing.com/etfs/market-vectors-biotech");
+		listaURL_04.add("https://es.investing.com/etfs/bioshares-biotechnology-clinical");
+		listaURL_04.add("https://es.investing.com/etfs/bioshares-biotechnology-products");
+		listaURL_04.add("https://es.investing.com/etfs/firsttrust-amex-biotech");
+		listaURL_04.add("https://es.investing.com/etfs/powersh.-dynamic-biotech---genome");
+		listaURL_04.add("https://es.investing.com/etfs/spdr-s-p-biotech");
+		listaURL_04.add("https://es.investing.com/etfs/market-vectors-biotech");
 		LISTA_URL_GROUP.add(new URLGroup("BIOTECH", listaURL_04));
 		// --
 		// -- ETFs PHARMA
 		// --
 		List<String> listaURL_05 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-pharmaceutical-index");
-		listaURL_03.add("https://es.investing.com/etfs/powersh.-dynamic-pharmaceuticals");
-		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-pharmaceuticals");
-		listaURL_03.add("https://es.investing.com/etfs/holdrs-merrill-lynch-pharma.");
+		listaURL_05.add("https://es.investing.com/etfs/ishares-djsu-pharmaceutical-index");
+		listaURL_05.add("https://es.investing.com/etfs/powersh.-dynamic-pharmaceuticals");
+		listaURL_05.add("https://es.investing.com/etfs/spdr-s-p-pharmaceuticals");
+		listaURL_05.add("https://es.investing.com/etfs/holdrs-merrill-lynch-pharma.");
 		LISTA_URL_GROUP.add(new URLGroup("PHARMA", listaURL_05));
 		// --
 		// -- ETFs MEDICAL
 		// --
 		List<String> listaURL_06 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/etfs/alps-medical-breakthroughs");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-medical-devices-index");
+		listaURL_06.add("https://es.investing.com/etfs/alps-medical-breakthroughs");
+		listaURL_06.add("https://es.investing.com/etfs/ishares-djsu-medical-devices-index");
 		LISTA_URL_GROUP.add(new URLGroup("MEDICAL", listaURL_06));
 		// --
 		// -- ETFs ROBOTICS
 		// --
 		List<String> listaURL_07 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/etfs/global-x-robotics---ai-usd");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-automation-robotics-acc?cid=1009408");
-		listaURL_03.add("https://es.investing.com/etfs/robo-stox-global-robotics");
+		listaURL_07.add("https://es.investing.com/etfs/global-x-robotics---ai-usd");
+		listaURL_07.add("https://es.investing.com/etfs/ishares-automation-robotics-acc?cid=1009408");
+		listaURL_07.add("https://es.investing.com/etfs/robo-stox-global-robotics");
 		LISTA_URL_GROUP.add(new URLGroup("ROBOTICS", listaURL_07));
 		// --
 		// -- ETFs CHINA
 		// --
 		List<String> listaURL_08 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/etfs/db-xtrackers-msci-china-trn-uk?cid=46543");
-		listaURL_03.add("https://es.investing.com/etfs/etflab-msci-china");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-dj-china-offshore-50---de");
+		listaURL_08.add("https://es.investing.com/etfs/db-xtrackers-msci-china-trn-uk?cid=46543");
+		listaURL_08.add("https://es.investing.com/etfs/etflab-msci-china");
+		listaURL_08.add("https://es.investing.com/etfs/ishares-dj-china-offshore-50---de");
 		LISTA_URL_GROUP.add(new URLGroup("CHINA", listaURL_08));
 	}
 
