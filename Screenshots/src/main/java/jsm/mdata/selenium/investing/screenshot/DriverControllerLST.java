@@ -857,26 +857,17 @@ public class DriverControllerLST extends DriverControllerBase
 		// listaURL_02.add("https://es.investing.com/etfs/xtrackers-msci-all-world-high-div");
 		// LISTA_URL_GROUP.add(new URLGroup("USA", listaURL_02));
 		// --
-		// -- ETFs health-robot-china USA y GER
+		// -- ETFs HEALTHCARE
 		// --
 		List<String> listaURL_03 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/etfs/alps-medical-breakthroughs");
 		listaURL_03.add("https://es.investing.com/etfs/amundi-etf-msci-europe-healthcare?cid=45977");
-		listaURL_03.add("https://es.investing.com/etfs/bioshares-biotechnology-clinical");
-		listaURL_03.add("https://es.investing.com/etfs/bioshares-biotechnology-products");
 		listaURL_03.add("https://es.investing.com/etfs/comstage-stoxx600-health-care-nr");
-		listaURL_03.add("https://es.investing.com/etfs/db-xtrackers-msci-china-trn-uk?cid=46543");
 		listaURL_03.add("https://es.investing.com/etfs/db-x-trackers-msci-wrd-hlth-care-de");
 		listaURL_03.add("https://es.investing.com/etfs/dj-stoxx600-health-care");
-		listaURL_03.add("https://es.investing.com/etfs/etflab-msci-china");
 		listaURL_03.add("https://es.investing.com/etfs/fidelity-msci-healthcare-index");
 		listaURL_03.add("https://es.investing.com/etfs/firsttrust-health-care-alphadex");
-		listaURL_03.add("https://es.investing.com/etfs/firsttrust-amex-biotech");
-		listaURL_03.add("https://es.investing.com/etfs/global-x-robotics---ai-usd");
 		listaURL_03.add("https://es.investing.com/etfs/rydex-s-p-equal-weight-health-care");
 		listaURL_03.add("https://es.investing.com/etfs/spdr---health-care");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-automation-robotics-acc?cid=1009408");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-dj-china-offshore-50---de");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-edge-msci-mf-healthcare");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-s-p-global-healthcare");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-hc-innov-acc-mi?cid=1009026");
@@ -884,27 +875,61 @@ public class DriverControllerLST extends DriverControllerBase
 		listaURL_03.add("https://es.investing.com/etfs/ishares-dj-stoxx600-health-care");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-health-care-index");
 		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-health-care-providers");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-medical-devices-index");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-pharmaceutical-index");
 		listaURL_03.add("https://es.investing.com/etfs/john-hancock-multifactor-health");
 		listaURL_03.add("https://es.investing.com/etfs/lyxor-msci-world-health-care-tr?cid=46008");
 		listaURL_03.add("https://es.investing.com/etfs/lyxor-stoxx-europe-600-health-care?cid=46172");
 		listaURL_03.add("https://es.investing.com/etfs/powershares-dwa-healthcare-o");
-		listaURL_03.add("https://es.investing.com/etfs/powersh.-dynamic-biotech---genome");
-		listaURL_03.add("https://es.investing.com/etfs/powersh.-dynamic-pharmaceuticals");
 		listaURL_03.add("https://es.investing.com/etfs/powersh-s-p-smallcap-healthcare");
 		listaURL_03.add("https://es.investing.com/etfs/principal-healthcare-innovators");
-		listaURL_03.add("https://es.investing.com/etfs/robo-stox-global-robotics");
 		listaURL_03.add("https://es.investing.com/etfs/stoxx-600-optimised-health-care");
 		listaURL_03.add("https://es.investing.com/etfs/spdr-msci-europe-health-care?cid=46222");
-		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-biotech");
 		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-health-care-equipment");
 		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-health-care-services");
-		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-pharmaceuticals");
-		listaURL_03.add("https://es.investing.com/etfs/market-vectors-biotech");
-		listaURL_03.add("https://es.investing.com/etfs/holdrs-merrill-lynch-pharma.");
 		listaURL_03.add("https://es.investing.com/etfs/vanguard-health-care");
-		LISTA_URL_GROUP.add(new URLGroup("health-robot-china", listaURL_03));
+		LISTA_URL_GROUP.add(new URLGroup("HEALTHCARE", listaURL_03));
+		// --
+		// -- ETFs BIOTECH
+		// --
+		List<String> listaURL_04 = new ArrayList<String>();
+		listaURL_03.add("https://es.investing.com/etfs/bioshares-biotechnology-clinical");
+		listaURL_03.add("https://es.investing.com/etfs/bioshares-biotechnology-products");
+		listaURL_03.add("https://es.investing.com/etfs/firsttrust-amex-biotech");
+		listaURL_03.add("https://es.investing.com/etfs/powersh.-dynamic-biotech---genome");
+		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-biotech");
+		listaURL_03.add("https://es.investing.com/etfs/market-vectors-biotech");
+		LISTA_URL_GROUP.add(new URLGroup("BIOTECH", listaURL_04));
+		// --
+		// -- ETFs PHARMA
+		// --
+		List<String> listaURL_05 = new ArrayList<String>();
+		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-pharmaceutical-index");
+		listaURL_03.add("https://es.investing.com/etfs/powersh.-dynamic-pharmaceuticals");
+		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-pharmaceuticals");
+		listaURL_03.add("https://es.investing.com/etfs/holdrs-merrill-lynch-pharma.");
+		LISTA_URL_GROUP.add(new URLGroup("PHARMA", listaURL_05));
+		// --
+		// -- ETFs MEDICAL
+		// --
+		List<String> listaURL_06 = new ArrayList<String>();
+		listaURL_03.add("https://es.investing.com/etfs/alps-medical-breakthroughs");
+		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-medical-devices-index");
+		LISTA_URL_GROUP.add(new URLGroup("MEDICAL", listaURL_06));
+		// --
+		// -- ETFs ROBOTICS
+		// --
+		List<String> listaURL_07 = new ArrayList<String>();
+		listaURL_03.add("https://es.investing.com/etfs/global-x-robotics---ai-usd");
+		listaURL_03.add("https://es.investing.com/etfs/ishares-automation-robotics-acc?cid=1009408");
+		listaURL_03.add("https://es.investing.com/etfs/robo-stox-global-robotics");
+		LISTA_URL_GROUP.add(new URLGroup("ROBOTICS", listaURL_07));
+		// --
+		// -- ETFs CHINA
+		// --
+		List<String> listaURL_08 = new ArrayList<String>();
+		listaURL_03.add("https://es.investing.com/etfs/db-xtrackers-msci-china-trn-uk?cid=46543");
+		listaURL_03.add("https://es.investing.com/etfs/etflab-msci-china");
+		listaURL_03.add("https://es.investing.com/etfs/ishares-dj-china-offshore-50---de");
+		LISTA_URL_GROUP.add(new URLGroup("CHINA", listaURL_08));
 	}
 
 	/**
