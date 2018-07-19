@@ -31,6 +31,16 @@ public class DriverControllerSCH extends DriverControllerBase
 	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerSCH.class);
 
 	/**
+	 * 
+	 */
+	private final static Integer MAX_ERROR_RETRY = 10;
+
+	/**
+	 * 
+	 */
+	private final static String URL_INICIAL = "https://es.investing.com";
+
+	/**
 	 * URL Groups
 	 */
 	private final static List<URLGroup> LISTA_URL_GROUP = new ArrayList<URLGroup>();
@@ -434,16 +444,21 @@ public class DriverControllerSCH extends DriverControllerBase
 			LOGGER.info("Procesando grupo [" + downloadFolder + "]");
 			List<String> listaURL = urlGroup.getListaURL();
 			int urlsIdx = 0;
+			int errorRetry = 0;
 			while (urlsIdx < listaURL.size())
 			{
 				try
 				{
 					LOGGER.info("Cargando URL inicial");
-					driver.get("https://es.investing.com/");
-					new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.className("disclaimer")));
+					driver.get(URL_INICIAL);
+					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.className("disclaimer")));
 
 					String ticker = listaURL.get(urlsIdx);
 					LOGGER.info("Buscando ticker [" + ticker + "]");
+					if (errorRetry > 0)
+					{
+						LOGGER.info("Reintento [" + errorRetry + "]");
+					}
 					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("searchTextTop")));
 					WebElement textBoxBusqueda = driver.findElement(By.id("searchTextTop"));
 					textBoxBusqueda.clear();
@@ -460,8 +475,12 @@ public class DriverControllerSCH extends DriverControllerBase
 					primerETF.click();
 
 					LOGGER.info("Recuperando URL");
-					new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.className("disclaimer")));
+					new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.linkText("Gráfico")));
 					String hrefElemento = driver.getCurrentUrl();
+					if (hrefElemento.equalsIgnoreCase(URL_INICIAL))
+					{
+						throw new Exception("URL inadecuada");
+					}
 
 					LOGGER.info("Procesando URL [" + hrefElemento + "]");
 					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL);
@@ -472,7 +491,11 @@ public class DriverControllerSCH extends DriverControllerBase
 				catch (Exception e)
 				{
 					LOGGER.error("Se ha producido un error", e);
-					gestionError(driver);
+					errorRetry++;
+					if (errorRetry >= MAX_ERROR_RETRY)
+					{
+						urlsIdx++;
+					}
 				}
 			}
 		}
