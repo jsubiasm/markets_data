@@ -487,6 +487,7 @@ public class DriverControllerSCH extends DriverControllerBase
 					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_SEMANAL, TF_SEMANAL);
 					// procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_DIARIO, TF_DIARIO);
 					urlsIdx++;
+					errorRetry = 0;
 				}
 				catch (Exception e)
 				{
@@ -495,6 +496,7 @@ public class DriverControllerSCH extends DriverControllerBase
 					if (errorRetry >= MAX_ERROR_RETRY)
 					{
 						urlsIdx++;
+						errorRetry = 0;
 					}
 				}
 			}
