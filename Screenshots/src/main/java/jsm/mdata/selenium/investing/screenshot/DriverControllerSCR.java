@@ -41,6 +41,13 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		List<String> listaURL_01 = new ArrayList<String>();
 		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;1");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;2");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;3");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;4");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;5");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;6");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;7");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;8");
 		LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
 		// --
 		// -- Austria
