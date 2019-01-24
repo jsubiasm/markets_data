@@ -40,14 +40,7 @@ public class DriverControllerSCR extends DriverControllerBase
 		// -- Alemania
 		// --
 		List<String> listaURL_01 = new ArrayList<String>();
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;1");
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;2");
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;3");
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;4");
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;5");
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;6");
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;7");
-		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::ORD|exchange::112|eq_market_cap::5000000000,779680000000|yield_us::3,217.24%3Ceq_market_cap;8");
+		listaURL_01.add("https://es.investing.com/stock-screener/?sp=country::17|sector::a|industry::a|equityType::a|exchange::4|eq_pe_ratio::0,100|yield_us::4,268.09|eq_market_cap::5000000000,712490000000%3Ceq_market_cap;1");
 		LISTA_URL_GROUP.add(new URLGroup("Alemania", listaURL_01));
 		// --
 		// -- Austria
@@ -64,9 +57,9 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- España
 		// --
-		// List<String> listaURL_04 = new ArrayList<String>();
-		// listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::ORD|exchange::11|turnover_volume::100,91560000|eq_market_cap::100000000,88060000000|a52_week_high_diff::-10,0|yield_us::1,8.97|eq_pe_ratio::3.14,100%3Ceq_market_cap;1");
-		// LISTA_URL_GROUP.add(new URLGroup("España", listaURL_04));
+		List<String> listaURL_04 = new ArrayList<String>();
+		listaURL_04.add("https://es.investing.com/stock-screener/?sp=country::26|sector::a|industry::a|equityType::a|eq_pe_ratio::0.16,100|yield_us::4,247.12|eq_market_cap::1000000000,82900000000%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("España", listaURL_04));
 		// --
 		// -- USA-Nasdaq
 		// --
@@ -80,6 +73,14 @@ public class DriverControllerSCR extends DriverControllerBase
 		// listaURL_06.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::ORD|exchange::1|eq_market_cap::20000000000,888100000000|eq_one_year_return::0,16110000|ytd::0,59900|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
 		// LISTA_URL_GROUP.add(new URLGroup("USA-Nueva York", listaURL_06));
 		// --
+		// -- USA
+		// --
+		List<String> listaURL_06 = new ArrayList<String>();
+		listaURL_06.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::a|exchange::a|eq_pe_ratio::0,100|yield_us::4,420|eq_market_cap::15000000000,819130000000%3Ceq_market_cap;1");
+		listaURL_06.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::a|exchange::a|eq_pe_ratio::0,100|yield_us::4,420|eq_market_cap::15000000000,819130000000%3Ceq_market_cap;2");
+		listaURL_06.add("https://es.investing.com/stock-screener/?sp=country::5|sector::a|industry::a|equityType::a|exchange::a|eq_pe_ratio::0,100|yield_us::4,420|eq_market_cap::15000000000,819130000000%3Ceq_market_cap;3");
+		LISTA_URL_GROUP.add(new URLGroup("USA", listaURL_06));
+		// --
 		// -- Finlandia
 		// --
 		// List<String> listaURL_07 = new ArrayList<String>();
@@ -88,14 +89,14 @@ public class DriverControllerSCR extends DriverControllerBase
 		// --
 		// -- Francia
 		// --
-		// List<String> listaURL_08 = new ArrayList<String>();
-		// listaURL_08.add("https://es.investing.com/stock-screener/?sp=country::22|sector::a|industry::a|equityType::ORD|exchange::9|turnover_volume::100,14760000|eq_market_cap::1000000000,165750000000|a52_week_high_diff::-7,0|yield_us::1,18.01|eq_pe_ratio::0.19,100%3Cyield_us;1");
-		// LISTA_URL_GROUP.add(new URLGroup("Francia", listaURL_08));
+		List<String> listaURL_08 = new ArrayList<String>();
+		listaURL_08.add("https://es.investing.com/stock-screener/?sp=country::22|sector::a|industry::a|equityType::a|eq_pe_ratio::0.99,100|yield_us::4,39.24|eq_market_cap::5000000000,197900000000%3Ceq_market_cap;1");
+		LISTA_URL_GROUP.add(new URLGroup("Francia", listaURL_08));
 		// --
 		// -- Holanda
 		// --
 		// List<String> listaURL_09 = new ArrayList<String>();
-		// listaURL_09.add("https://es.investing.com/stock-screener/?sp=country::21|sector::a|industry::a|equityType::ORD|exchange::7|eq_market_cap::1000000000,214050000000|eq_one_year_return::0,353.95|ytd::0,275|a52_week_high_diff::-6,0%3Ceq_market_cap;1");
+		// listaURL_09.add("https://es.investing.com/stock-screener/?sp=country::21|sector::a|industry::a|equityType::a|eq_pe_ratio::2.47,100|yield_us::4,909.09|eq_market_cap::2000000000,216900000000%3Ceq_market_cap;1");
 		// LISTA_URL_GROUP.add(new URLGroup("Holanda", listaURL_09));
 		// --
 		// -- Irlanda
