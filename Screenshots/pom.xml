@@ -43,7 +43,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>jsm.mdata.selenium.investing.screenshot.DriverControllerSCR</mainClass>
+							<mainClass>jsm.mdata.selenium.investing.screenshot.DriverControllerLST</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>

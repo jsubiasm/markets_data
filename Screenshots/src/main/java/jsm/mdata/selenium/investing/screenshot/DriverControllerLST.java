@@ -859,77 +859,214 @@ public class DriverControllerLST extends DriverControllerBase
 		// --
 		// -- ETFs HEALTHCARE
 		// --
-		List<String> listaURL_03 = new ArrayList<String>();
-		listaURL_03.add("https://es.investing.com/etfs/amundi-etf-msci-europe-healthcare?cid=45977");
-		listaURL_03.add("https://es.investing.com/etfs/comstage-stoxx600-health-care-nr");
-		listaURL_03.add("https://es.investing.com/etfs/db-x-trackers-msci-wrd-hlth-care-de");
-		listaURL_03.add("https://es.investing.com/etfs/dj-stoxx600-health-care");
-		listaURL_03.add("https://es.investing.com/etfs/fidelity-msci-healthcare-index");
-		listaURL_03.add("https://es.investing.com/etfs/firsttrust-health-care-alphadex");
-		listaURL_03.add("https://es.investing.com/etfs/rydex-s-p-equal-weight-health-care");
-		listaURL_03.add("https://es.investing.com/etfs/spdr---health-care");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-edge-msci-mf-healthcare");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-s-p-global-healthcare");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-hc-innov-acc-mi?cid=1009026");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-s-p-500-usd-health-care");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-dj-stoxx600-health-care");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-health-care-index");
-		listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-health-care-providers");
-		listaURL_03.add("https://es.investing.com/etfs/john-hancock-multifactor-health");
-		listaURL_03.add("https://es.investing.com/etfs/lyxor-msci-world-health-care-tr?cid=46008");
-		listaURL_03.add("https://es.investing.com/etfs/lyxor-stoxx-europe-600-health-care?cid=46172");
-		listaURL_03.add("https://es.investing.com/etfs/powershares-dwa-healthcare-o");
-		listaURL_03.add("https://es.investing.com/etfs/powersh-s-p-smallcap-healthcare");
-		listaURL_03.add("https://es.investing.com/etfs/principal-healthcare-innovators");
-		listaURL_03.add("https://es.investing.com/etfs/stoxx-600-optimised-health-care");
-		listaURL_03.add("https://es.investing.com/etfs/spdr-msci-europe-health-care?cid=46222");
-		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-health-care-equipment");
-		listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-health-care-services");
-		listaURL_03.add("https://es.investing.com/etfs/vanguard-health-care");
-		LISTA_URL_GROUP.add(new URLGroup("HEALTHCARE", listaURL_03));
+		// List<String> listaURL_03 = new ArrayList<String>();
+		// listaURL_03.add("https://es.investing.com/etfs/amundi-etf-msci-europe-healthcare?cid=45977");
+		// listaURL_03.add("https://es.investing.com/etfs/comstage-stoxx600-health-care-nr");
+		// listaURL_03.add("https://es.investing.com/etfs/db-x-trackers-msci-wrd-hlth-care-de");
+		// listaURL_03.add("https://es.investing.com/etfs/dj-stoxx600-health-care");
+		// listaURL_03.add("https://es.investing.com/etfs/fidelity-msci-healthcare-index");
+		// listaURL_03.add("https://es.investing.com/etfs/firsttrust-health-care-alphadex");
+		// listaURL_03.add("https://es.investing.com/etfs/rydex-s-p-equal-weight-health-care");
+		// listaURL_03.add("https://es.investing.com/etfs/spdr---health-care");
+		// listaURL_03.add("https://es.investing.com/etfs/ishares-edge-msci-mf-healthcare");
+		// listaURL_03.add("https://es.investing.com/etfs/ishares-s-p-global-healthcare");
+		// listaURL_03.add("https://es.investing.com/etfs/ishares-hc-innov-acc-mi?cid=1009026");
+		// listaURL_03.add("https://es.investing.com/etfs/ishares-s-p-500-usd-health-care");
+		// listaURL_03.add("https://es.investing.com/etfs/ishares-dj-stoxx600-health-care");
+		// listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-health-care-index");
+		// listaURL_03.add("https://es.investing.com/etfs/ishares-djsu-health-care-providers");
+		// listaURL_03.add("https://es.investing.com/etfs/john-hancock-multifactor-health");
+		// listaURL_03.add("https://es.investing.com/etfs/lyxor-msci-world-health-care-tr?cid=46008");
+		// listaURL_03.add("https://es.investing.com/etfs/lyxor-stoxx-europe-600-health-care?cid=46172");
+		// listaURL_03.add("https://es.investing.com/etfs/powershares-dwa-healthcare-o");
+		// listaURL_03.add("https://es.investing.com/etfs/powersh-s-p-smallcap-healthcare");
+		// listaURL_03.add("https://es.investing.com/etfs/principal-healthcare-innovators");
+		// listaURL_03.add("https://es.investing.com/etfs/stoxx-600-optimised-health-care");
+		// listaURL_03.add("https://es.investing.com/etfs/spdr-msci-europe-health-care?cid=46222");
+		// listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-health-care-equipment");
+		// listaURL_03.add("https://es.investing.com/etfs/spdr-s-p-health-care-services");
+		// listaURL_03.add("https://es.investing.com/etfs/vanguard-health-care");
+		// LISTA_URL_GROUP.add(new URLGroup("HEALTHCARE", listaURL_03));
 		// --
 		// -- ETFs BIOTECH
 		// --
-		List<String> listaURL_04 = new ArrayList<String>();
-		listaURL_04.add("https://es.investing.com/etfs/bioshares-biotechnology-clinical");
-		listaURL_04.add("https://es.investing.com/etfs/bioshares-biotechnology-products");
-		listaURL_04.add("https://es.investing.com/etfs/firsttrust-amex-biotech");
-		listaURL_04.add("https://es.investing.com/etfs/powersh.-dynamic-biotech---genome");
-		listaURL_04.add("https://es.investing.com/etfs/spdr-s-p-biotech");
-		listaURL_04.add("https://es.investing.com/etfs/market-vectors-biotech");
-		LISTA_URL_GROUP.add(new URLGroup("BIOTECH", listaURL_04));
+		// List<String> listaURL_04 = new ArrayList<String>();
+		// listaURL_04.add("https://es.investing.com/etfs/bioshares-biotechnology-clinical");
+		// listaURL_04.add("https://es.investing.com/etfs/bioshares-biotechnology-products");
+		// listaURL_04.add("https://es.investing.com/etfs/firsttrust-amex-biotech");
+		// listaURL_04.add("https://es.investing.com/etfs/powersh.-dynamic-biotech---genome");
+		// listaURL_04.add("https://es.investing.com/etfs/spdr-s-p-biotech");
+		// listaURL_04.add("https://es.investing.com/etfs/market-vectors-biotech");
+		// LISTA_URL_GROUP.add(new URLGroup("BIOTECH", listaURL_04));
 		// --
 		// -- ETFs PHARMA
 		// --
-		List<String> listaURL_05 = new ArrayList<String>();
-		listaURL_05.add("https://es.investing.com/etfs/ishares-djsu-pharmaceutical-index");
-		listaURL_05.add("https://es.investing.com/etfs/powersh.-dynamic-pharmaceuticals");
-		listaURL_05.add("https://es.investing.com/etfs/spdr-s-p-pharmaceuticals");
-		listaURL_05.add("https://es.investing.com/etfs/holdrs-merrill-lynch-pharma.");
-		LISTA_URL_GROUP.add(new URLGroup("PHARMA", listaURL_05));
+		// List<String> listaURL_05 = new ArrayList<String>();
+		// listaURL_05.add("https://es.investing.com/etfs/ishares-djsu-pharmaceutical-index");
+		// listaURL_05.add("https://es.investing.com/etfs/powersh.-dynamic-pharmaceuticals");
+		// listaURL_05.add("https://es.investing.com/etfs/spdr-s-p-pharmaceuticals");
+		// listaURL_05.add("https://es.investing.com/etfs/holdrs-merrill-lynch-pharma.");
+		// LISTA_URL_GROUP.add(new URLGroup("PHARMA", listaURL_05));
 		// --
 		// -- ETFs MEDICAL
 		// --
-		List<String> listaURL_06 = new ArrayList<String>();
-		listaURL_06.add("https://es.investing.com/etfs/alps-medical-breakthroughs");
-		listaURL_06.add("https://es.investing.com/etfs/ishares-djsu-medical-devices-index");
-		LISTA_URL_GROUP.add(new URLGroup("MEDICAL", listaURL_06));
+		// List<String> listaURL_06 = new ArrayList<String>();
+		// listaURL_06.add("https://es.investing.com/etfs/alps-medical-breakthroughs");
+		// listaURL_06.add("https://es.investing.com/etfs/ishares-djsu-medical-devices-index");
+		// LISTA_URL_GROUP.add(new URLGroup("MEDICAL", listaURL_06));
 		// --
 		// -- ETFs ROBOTICS
 		// --
-		List<String> listaURL_07 = new ArrayList<String>();
-		listaURL_07.add("https://es.investing.com/etfs/global-x-robotics---ai-usd");
-		listaURL_07.add("https://es.investing.com/etfs/ishares-automation-robotics-acc?cid=1009408");
-		listaURL_07.add("https://es.investing.com/etfs/robo-stox-global-robotics");
-		LISTA_URL_GROUP.add(new URLGroup("ROBOTICS", listaURL_07));
+		// List<String> listaURL_07 = new ArrayList<String>();
+		// listaURL_07.add("https://es.investing.com/etfs/global-x-robotics---ai-usd");
+		// listaURL_07.add("https://es.investing.com/etfs/ishares-automation-robotics-acc?cid=1009408");
+		// listaURL_07.add("https://es.investing.com/etfs/robo-stox-global-robotics");
+		// LISTA_URL_GROUP.add(new URLGroup("ROBOTICS", listaURL_07));
 		// --
 		// -- ETFs CHINA
 		// --
-		List<String> listaURL_08 = new ArrayList<String>();
-		listaURL_08.add("https://es.investing.com/etfs/db-xtrackers-msci-china-trn-uk?cid=46543");
-		listaURL_08.add("https://es.investing.com/etfs/etflab-msci-china");
-		listaURL_08.add("https://es.investing.com/etfs/ishares-dj-china-offshore-50---de");
-		LISTA_URL_GROUP.add(new URLGroup("CHINA", listaURL_08));
+		// List<String> listaURL_08 = new ArrayList<String>();
+		// listaURL_08.add("https://es.investing.com/etfs/db-xtrackers-msci-china-trn-uk?cid=46543");
+		// listaURL_08.add("https://es.investing.com/etfs/etflab-msci-china");
+		// listaURL_08.add("https://es.investing.com/etfs/ishares-dj-china-offshore-50---de");
+		// LISTA_URL_GROUP.add(new URLGroup("CHINA", listaURL_08));
+		// --
+		// -- ACCIONES CON DIVIDENDO
+		// --
+		List<String> listaURL_09 = new ArrayList<String>();
+		listaURL_09.add("https://es.investing.com/equities/3m-co");
+		listaURL_09.add("https://es.investing.com/equities/acs-cons-y-serv");
+		listaURL_09.add("https://es.investing.com/equities/adidas-salomon");
+		listaURL_09.add("https://es.investing.com/equities/aflac-inc");
+		listaURL_09.add("https://es.investing.com/equities/air-liquide");
+		listaURL_09.add("https://es.investing.com/equities/air-prods---chem");
+		listaURL_09.add("https://es.investing.com/equities/allianz-ag");
+		listaURL_09.add("https://es.investing.com/equities/altria-group");
+		listaURL_09.add("https://es.investing.com/equities/amadeus");
+		listaURL_09.add("https://es.investing.com/equities/american-express");
+		listaURL_09.add("https://es.investing.com/equities/apple-computer-inc");
+		listaURL_09.add("https://es.investing.com/equities/aqua-america-inc.");
+		listaURL_09.add("https://es.investing.com/equities/archer-daniels-mid");
+		listaURL_09.add("https://es.investing.com/equities/assoc.br.foods");
+		listaURL_09.add("https://es.investing.com/equities/at-t");
+		listaURL_09.add("https://es.investing.com/equities/auto-data-process");
+		listaURL_09.add("https://es.investing.com/equities/axa");
+		listaURL_09.add("https://es.investing.com/equities/banco-santander");
+		listaURL_09.add("https://es.investing.com/equities/basf-ag");
+		listaURL_09.add("https://es.investing.com/equities/bayer-ag");
+		listaURL_09.add("https://es.investing.com/equities/bbva");
+		listaURL_09.add("https://es.investing.com/equities/becton-dickinsn");
+		listaURL_09.add("https://es.investing.com/equities/bhp-billiton");
+		listaURL_09.add("https://es.investing.com/equities/blackrock,-inc.-c");
+		listaURL_09.add("https://es.investing.com/equities/bolsas-y-mer-esp");
+		listaURL_09.add("https://es.investing.com/equities/bay-mot-werke");
+		listaURL_09.add("https://es.investing.com/equities/bp");
+		listaURL_09.add("https://es.investing.com/equities/british-american-tobacco");
+		listaURL_09.add("https://es.investing.com/equities/brookfield-infrastructure-partners");
+		listaURL_09.add("https://es.investing.com/equities/brown-forman-b");
+		listaURL_09.add("https://es.investing.com/equities/burberry");
+		listaURL_09.add("https://es.investing.com/equities/cardinal-health");
+		listaURL_09.add("https://es.investing.com/equities/caterpillar");
+		listaURL_09.add("https://es.investing.com/equities/chevron");
+		listaURL_09.add("https://es.investing.com/equities/church---dwight");
+		listaURL_09.add("https://es.investing.com/equities/clorox-co");
+		listaURL_09.add("https://es.investing.com/equities/coca-cola-co");
+		listaURL_09.add("https://es.investing.com/equities/colgate-palmo");
+		listaURL_09.add("https://es.investing.com/equities/compass-minerals-intl-inc");
+		listaURL_09.add("https://es.investing.com/equities/cocnsol-edison");
+		listaURL_09.add("https://es.investing.com/equities/corning-inc");
+		listaURL_09.add("https://es.investing.com/equities/croda");
+		listaURL_09.add("https://es.investing.com/equities/cummins-inc");
+		listaURL_09.add("https://es.investing.com/equities/cvs-corp");
+		listaURL_09.add("https://es.investing.com/equities/daimler");
+		listaURL_09.add("https://es.investing.com/equities/danone");
+		listaURL_09.add("https://es.investing.com/equities/deere---co");
+		listaURL_09.add("https://es.investing.com/equities/diageo");
+		listaURL_09.add("https://es.investing.com/equities/dominion-res");
+		listaURL_09.add("https://es.investing.com/equities/dover-corp");
+		listaURL_09.add("https://es.investing.com/equities/duke-energy");
+		listaURL_09.add("https://es.investing.com/equities/eaton-vance");
+		listaURL_09.add("https://es.investing.com/equities/ebro-foods");
+		listaURL_09.add("https://es.investing.com/equities/edison-intl");
+		listaURL_09.add("https://es.investing.com/equities/emerson-elec");
+		listaURL_09.add("https://es.investing.com/equities/enagas");
+		listaURL_09.add("https://es.investing.com/equities/exxon-mobil");
+		listaURL_09.add("https://es.investing.com/equities/grupo-ferrovial");
+		listaURL_09.add("https://es.investing.com/equities/franklin-res");
+		listaURL_09.add("https://es.investing.com/equities/general-dynam");
+		listaURL_09.add("https://es.investing.com/equities/general-electric");
+		listaURL_09.add("https://es.investing.com/equities/general-mills");
+		listaURL_09.add("https://es.investing.com/equities/genuine-parts-co");
+		listaURL_09.add("https://es.investing.com/equities/gilead-sciences-inc");
+		listaURL_09.add("https://es.investing.com/equities/glaxosmithkline");
+		listaURL_09.add("https://es.investing.com/equities/hcp-inc");
+		listaURL_09.add("https://es.investing.com/equities/helmerich---payne");
+		listaURL_09.add("https://es.investing.com/equities/henkel-ag---co.-st");
+		listaURL_09.add("https://es.investing.com/equities/hershey-co");
+		listaURL_09.add("https://es.investing.com/equities/hormel-foods-corp");
+		listaURL_09.add("https://es.investing.com/equities/iberdrola");
+		listaURL_09.add("https://es.investing.com/equities/ibm");
+		listaURL_09.add("https://es.investing.com/equities/illinois-tool-wk-r");
+		listaURL_09.add("https://es.investing.com/equities/imperial-tobacco");
+		listaURL_09.add("https://es.investing.com/equities/inditex");
+		listaURL_09.add("https://es.investing.com/equities/intel-corp");
+		listaURL_09.add("https://es.investing.com/equities/johnson-johnson");
+		listaURL_09.add("https://es.investing.com/equities/kellogg-co.");
+		listaURL_09.add("https://es.investing.com/equities/kimberly-clark");
+		listaURL_09.add("https://es.investing.com/equities/kinder-morgan");
+		listaURL_09.add("https://es.investing.com/equities/kraft-foods-inc");
+		listaURL_09.add("https://es.investing.com/equities/leggett---platt");
+		listaURL_09.add("https://es.investing.com/equities/l.v.m.h.");
+		listaURL_09.add("https://es.investing.com/equities/lowes-companies");
+		listaURL_09.add("https://es.investing.com/equities/mapfre");
+		listaURL_09.add("https://es.investing.com/equities/mccormick---co");
+		listaURL_09.add("https://es.investing.com/equities/mcdonalds");
+		listaURL_09.add("https://es.investing.com/equities/medtronic");
+		listaURL_09.add("https://es.investing.com/equities/mondelez-international-inc");
+		listaURL_09.add("https://es.investing.com/equities/muench.-rueck");
+		listaURL_09.add("https://es.investing.com/equities/national-grid");
+		listaURL_09.add("https://es.investing.com/equities/gas-natural-sdg");
+		listaURL_09.add("https://es.investing.com/equities/nestle-ag");
+		listaURL_09.add("https://es.investing.com/equities/nike");
+		listaURL_09.add("https://es.investing.com/equities/omega-healthcare");
+		listaURL_09.add("https://es.investing.com/equities/pepsico");
+		listaURL_09.add("https://es.investing.com/equities/pfizer");
+		listaURL_09.add("https://es.investing.com/equities/philip-morris-intl");
+		listaURL_09.add("https://es.investing.com/equities/procter-gamble");
+		listaURL_09.add("https://es.investing.com/equities/qualcomm-inc");
+		listaURL_09.add("https://es.investing.com/equities/realty-income");
+		listaURL_09.add("https://es.investing.com/equities/reckitt-benckiser");
+		listaURL_09.add("https://es.investing.com/equities/red-electrica");
+		listaURL_09.add("https://es.investing.com/equities/repsol-ypf");
+		listaURL_09.add("https://es.investing.com/equities/rio-tinto");
+		listaURL_09.add("https://es.investing.com/equities/royal-dutch-shell-a-shr");
+		listaURL_09.add("https://es.investing.com/equities/royal-mail");
+		listaURL_09.add("https://es.investing.com/equities/rpc-group");
+		listaURL_09.add("https://es.investing.com/equities/siemens");
+		listaURL_09.add("https://es.investing.com/equities/southern-co");
+		listaURL_09.add("https://es.investing.com/equities/scottish---southern-energy");
+		listaURL_09.add("https://es.investing.com/equities/starbucks-corp");
+		listaURL_09.add("https://es.investing.com/equities/t-rowe-price-gp");
+		listaURL_09.add("https://es.investing.com/equities/target");
+		listaURL_09.add("https://es.investing.com/equities/telefonica");
+		listaURL_09.add("https://es.investing.com/equities/tjx-co-inc");
+		listaURL_09.add("https://es.investing.com/equities/uniball");
+		listaURL_09.add("https://es.investing.com/equities/unilever-cert");
+		listaURL_09.add("https://es.investing.com/equities/united-tech");
+		listaURL_09.add("https://es.investing.com/equities/united-utilities");
+		listaURL_09.add("https://es.investing.com/equities/verizon-communications");
+		listaURL_09.add("https://es.investing.com/equities/vf-corp");
+		listaURL_09.add("https://es.investing.com/equities/visa-inc");
+		listaURL_09.add("https://es.investing.com/equities/viscofan-sa");
+		listaURL_09.add("https://es.investing.com/equities/vodafone");
+		listaURL_09.add("https://es.investing.com/equities/w-p-carey-inc");
+		listaURL_09.add("https://es.investing.com/equities/w-w-grainger-inc");
+		listaURL_09.add("https://es.investing.com/equities/walgreen-co");
+		listaURL_09.add("https://es.investing.com/equities/wal-mart-stores");
+		listaURL_09.add("https://es.investing.com/equities/disney");
+		listaURL_09.add("https://es.investing.com/equities/wells-fargo");
+		listaURL_09.add("https://es.investing.com/equities/wpp");
+		LISTA_URL_GROUP.add(new URLGroup("DIVIDENDO", listaURL_09));
 	}
 
 	/**
@@ -982,7 +1119,7 @@ public class DriverControllerLST extends DriverControllerBase
 				{
 					String hrefElemento = listaURL.get(urlsIdx);
 					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL);
-					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_SEMANAL, TF_SEMANAL);
+					// procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_SEMANAL, TF_SEMANAL);
 					// procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_DIARIO, TF_DIARIO);
 					urlsIdx++;
 				}
