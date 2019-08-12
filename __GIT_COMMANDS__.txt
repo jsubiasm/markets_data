@@ -1,3 +1,6 @@
+
+git config --global http.proxy http://panda:panda@newproxy:81
+git config --global https.proxy https://panda:panda@newproxy:81
 git status
 git add -A
 git commit -m "... comentario ..."
