@@ -980,7 +980,7 @@ public class DriverControllerLST extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/british-american-tobacco");
 		listaURL_09.add("https://es.investing.com/equities/british-land");
 		listaURL_09.add("https://es.investing.com/equities/britvic");
-		listaURL_09.add("https://es.investing.com/equities/brookfield-asset-management-chart?cid=20219");
+		listaURL_09.add("https://es.investing.com/equities/brookfield-asset-management?cid=20219");
 		listaURL_09.add("https://es.investing.com/equities/brookfield-infrastructure-partners?cid=958116");
 		listaURL_09.add("https://es.investing.com/equities/brookfield-renewable-energy-partner");
 		listaURL_09.add("https://es.investing.com/equities/brown-forman-b");
