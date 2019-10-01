@@ -60,10 +60,39 @@ public abstract class DriverControllerBase
 	 * @param charset
 	 * @throws Exception
 	 */
-	protected static void procesarElemento(WebDriver driver, String hrefElemento, String downloadPath, String timeFrame) throws Exception
+	protected static void procesarElemento(WebDriver driver, String hrefElemento, String downloadPath, String timeFrame, Double minDividendo) throws Exception
 	{
 		LOGGER.info("Cargando URL [" + hrefElemento + "]");
 		driver.get(hrefElemento);
+
+		if (minDividendo != null)
+		{
+			LOGGER.info("Buscando Dividendo");
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Gráfico técnico")));
+			WebElement tablaDatos = driver.findElement(By.className("overviewDataTableWithTooltip"));
+			List<WebElement> listaInlineBlock = tablaDatos.findElements(By.className("inlineblock"));
+			for (WebElement inlineBlock : listaInlineBlock)
+			{
+				WebElement floatLangBase1 = inlineBlock.findElement(By.className("float_lang_base_1"));
+				if (floatLangBase1.getAttribute("innerHTML") != null && floatLangBase1.getAttribute("innerHTML").equalsIgnoreCase("Dividendo"))
+				{
+					WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
+					String dividendoStr = floatLangBase2.getAttribute("innerHTML");
+					dividendoStr = dividendoStr.substring(dividendoStr.indexOf("(") + 1, dividendoStr.indexOf(")") - 1);
+					dividendoStr = dividendoStr.replaceAll(",", ".");
+					Double dividendo = Double.valueOf(dividendoStr);
+					if (dividendo < minDividendo)
+					{
+						LOGGER.info("No se obtiene el chart porque la RPD [" + dividendo + "] es menor que la RPD mínima [" + minDividendo + "]");
+						return;
+					}
+					else
+					{
+						break;
+					}
+				}
+			}
+		}
 
 		LOGGER.info("Accediendo gráfico técnico");
 		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Gráfico técnico")));

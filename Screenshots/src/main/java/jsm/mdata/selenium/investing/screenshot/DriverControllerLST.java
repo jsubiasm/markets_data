@@ -1188,6 +1188,11 @@ public class DriverControllerLST extends DriverControllerBase
 	}
 
 	/**
+	 * 
+	 */
+	private static final Double RPD_MINIMA = 4.0;
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args)
@@ -1236,7 +1241,7 @@ public class DriverControllerLST extends DriverControllerBase
 				try
 				{
 					String hrefElemento = listaURL.get(urlsIdx);
-					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL);
+					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL, RPD_MINIMA);
 					// procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_SEMANAL, TF_SEMANAL);
 					// procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_DIARIO, TF_DIARIO);
 					urlsIdx++;
