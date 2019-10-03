@@ -65,6 +65,51 @@ public abstract class DriverControllerBase
 		LOGGER.info("Cargando URL [" + hrefElemento + "]");
 		driver.get(hrefElemento);
 
+		if (minCapitalizacion != null)
+		{
+			LOGGER.info("Buscando Capitalización");
+			try
+			{
+				new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Gráfico técnico")));
+				WebElement tablaDatos = driver.findElement(By.className("overviewDataTableWithTooltip"));
+				List<WebElement> listaInlineBlock = tablaDatos.findElements(By.className("inlineblock"));
+				for (WebElement inlineBlock : listaInlineBlock)
+				{
+					WebElement floatLangBase1 = inlineBlock.findElement(By.className("float_lang_base_1"));
+					if (floatLangBase1.getAttribute("innerHTML") != null && floatLangBase1.getAttribute("innerHTML").equalsIgnoreCase("Cap. mercado"))
+					{
+						WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
+						String capitalizacionStr = floatLangBase2.getAttribute("innerHTML");
+						if (capitalizacionStr.endsWith("B"))
+						{
+							capitalizacionStr = capitalizacionStr.substring(0, capitalizacionStr.indexOf("B"));
+							capitalizacionStr = capitalizacionStr.replaceAll(",", ".");
+							Double capitalizacion = Double.valueOf(capitalizacionStr);
+							if (capitalizacion < minCapitalizacion)
+							{
+								LOGGER.info("No se obtiene el chart porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
+								return;
+							}
+							else
+							{
+								break;
+							}
+						}
+						else
+						{
+							LOGGER.info("No se obtiene el chart porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
+							return;
+						}
+					}
+				}
+			}
+			catch (Exception e)
+			{
+				LOGGER.error("Error al obtener la Capitalización", e);
+				return;
+			}
+		}
+
 		if (minDividendo != null)
 		{
 			LOGGER.info("Buscando Dividendo");
@@ -98,51 +143,6 @@ public abstract class DriverControllerBase
 			catch (Exception e)
 			{
 				LOGGER.error("Error al obtener la RPD", e);
-				return;
-			}
-		}
-
-		if (minCapitalizacion != null)
-		{
-			LOGGER.info("Buscando Capitalización");
-			try
-			{
-				new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Gráfico técnico")));
-				WebElement tablaDatos = driver.findElement(By.className("overviewDataTableWithTooltip"));
-				List<WebElement> listaInlineBlock = tablaDatos.findElements(By.className("inlineblock"));
-				for (WebElement inlineBlock : listaInlineBlock)
-				{
-					WebElement floatLangBase1 = inlineBlock.findElement(By.className("float_lang_base_1"));
-					if (floatLangBase1.getAttribute("innerHTML") != null && floatLangBase1.getAttribute("innerHTML").equalsIgnoreCase("Cap. mercado"))
-					{
-						WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
-						String capitalizacionStr = floatLangBase2.getAttribute("innerHTML");
-						if (capitalizacionStr.endsWith("B"))
-						{
-							capitalizacionStr = capitalizacionStr.substring(0, capitalizacionStr.indexOf("B") - 1);
-							capitalizacionStr = capitalizacionStr.replaceAll(",", ".");
-							Double capitalizacion = Double.valueOf(capitalizacionStr);
-							if (capitalizacion < minCapitalizacion)
-							{
-								LOGGER.info("No se obtiene el chart porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
-								return;
-							}
-							else
-							{
-								break;
-							}
-						}
-						else
-						{
-							LOGGER.info("No se obtiene el chart porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
-							return;
-						}
-					}
-				}
-			}
-			catch (Exception e)
-			{
-				LOGGER.error("Error al obtener la capitalizacion", e);
 				return;
 			}
 		}
