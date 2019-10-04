@@ -21,13 +21,13 @@ import org.slf4j.LoggerFactory;
  * @author Empleado
  *
  */
-public class DriverControllerLST extends DriverControllerBase
+public class DCChartFromWebUrl extends DriverControllerBase
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerLST.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(DCChartFromWebUrl.class);
 
 	/**
 	 * URL Groups

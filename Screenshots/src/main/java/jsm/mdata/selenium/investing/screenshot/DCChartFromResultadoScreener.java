@@ -22,13 +22,13 @@ import org.slf4j.LoggerFactory;
  * @author Empleado
  *
  */
-public class DriverControllerSCR extends DriverControllerBase
+public class DCChartFromResultadoScreener extends DriverControllerBase
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerSCR.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(DCChartFromResultadoScreener.class);
 
 	/**
 	 * URL Groups

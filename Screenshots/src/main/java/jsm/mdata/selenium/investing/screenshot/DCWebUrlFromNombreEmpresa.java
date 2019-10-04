@@ -22,13 +22,13 @@ import org.slf4j.LoggerFactory;
  * @author Empleado
  *
  */
-public class DriverControllerEMP extends DriverControllerBase
+public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerEMP.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(DCWebUrlFromNombreEmpresa.class);
 
 	/**
 	 * URL Groups

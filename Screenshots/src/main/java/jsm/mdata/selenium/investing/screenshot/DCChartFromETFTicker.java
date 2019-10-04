@@ -22,13 +22,13 @@ import org.slf4j.LoggerFactory;
  * @author Empleado
  *
  */
-public class DriverControllerSCH extends DriverControllerBase
+public class DCChartFromETFTicker extends DriverControllerBase
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerSCH.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(DCChartFromETFTicker.class);
 
 	/**
 	 * 
