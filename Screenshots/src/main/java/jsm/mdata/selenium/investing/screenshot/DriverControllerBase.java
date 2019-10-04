@@ -87,7 +87,7 @@ public abstract class DriverControllerBase
 							Double capitalizacion = Double.valueOf(capitalizacionStr);
 							if (capitalizacion < minCapitalizacion)
 							{
-								LOGGER.info("No se obtiene el chart porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
+								LOGGER.info("No se obtiene el chart de [" + hrefElemento + "] porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
 								return;
 							}
 							else
@@ -97,7 +97,7 @@ public abstract class DriverControllerBase
 						}
 						else
 						{
-							LOGGER.info("No se obtiene el chart porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
+							LOGGER.info("No se obtiene el chart de [" + hrefElemento + "] porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
 							return;
 						}
 					}
