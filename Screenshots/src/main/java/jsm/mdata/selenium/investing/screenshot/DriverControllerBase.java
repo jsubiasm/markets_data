@@ -80,9 +80,14 @@ public abstract class DriverControllerBase
 					{
 						WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
 						String capitalizacionStr = floatLangBase2.getAttribute("innerHTML");
-						if (capitalizacionStr.endsWith("B"))
+						if (capitalizacionStr.endsWith("T"))
+						{
+							break;
+						}
+						else if (capitalizacionStr.endsWith("B"))
 						{
 							capitalizacionStr = capitalizacionStr.substring(0, capitalizacionStr.indexOf("B"));
+							capitalizacionStr = capitalizacionStr.replaceAll("\\.", "");
 							capitalizacionStr = capitalizacionStr.replaceAll(",", ".");
 							Double capitalizacion = Double.valueOf(capitalizacionStr);
 							if (capitalizacion < minCapitalizacion)
@@ -126,6 +131,7 @@ public abstract class DriverControllerBase
 						WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
 						String dividendoStr = floatLangBase2.getAttribute("innerHTML");
 						dividendoStr = dividendoStr.substring(dividendoStr.indexOf("(") + 1, dividendoStr.indexOf(")") - 1);
+						dividendoStr = dividendoStr.replaceAll("\\.", "");
 						dividendoStr = dividendoStr.replaceAll(",", ".");
 						Double dividendo = Double.valueOf(dividendoStr);
 						if (dividendo < minDividendo)
@@ -144,6 +150,23 @@ public abstract class DriverControllerBase
 			{
 				LOGGER.error("Error al obtener la RPD", e);
 				return;
+			}
+		}
+
+		LOGGER.info("Buscando datos relevantes para sacar en el log");
+		String industria = "";
+		String sector = "";
+		WebElement companyProfileHeader = driver.findElement(By.className("companyProfileHeader"));
+		List<WebElement> listaDatosProfile = companyProfileHeader.findElements(By.tagName("div"));
+		for (WebElement datoProfile : listaDatosProfile)
+		{
+			if (datoProfile.getAttribute("innerHTML") != null && datoProfile.getAttribute("innerHTML").startsWith("Industria"))
+			{
+				industria = datoProfile.findElements(By.tagName("a")).get(0).getAttribute("innerHTML");
+			}
+			else if (datoProfile.getAttribute("innerHTML") != null && datoProfile.getAttribute("innerHTML").startsWith("Sector"))
+			{
+				sector = datoProfile.findElements(By.tagName("a")).get(0).getAttribute("innerHTML");
 			}
 		}
 
@@ -216,7 +239,7 @@ public abstract class DriverControllerBase
 		LOGGER.info("Esperamos 500 milisegundos");
 		Thread.sleep(500);
 
-		LOGGER.info("Generando screenshot");
+		LOGGER.info("Generando screenshot [" + hrefElemento + "] [" + industria + "] [" + sector + "]");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + timeFrame + ".png"));
 	}
