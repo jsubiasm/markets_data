@@ -65,6 +65,7 @@ public abstract class DriverControllerBase
 		LOGGER.info("Cargando URL [" + hrefElemento + "]");
 		driver.get(hrefElemento);
 
+		Double capitalizacion = null;
 		if (minCapitalizacion != null)
 		{
 			LOGGER.info("Buscando Capitalización");
@@ -89,7 +90,7 @@ public abstract class DriverControllerBase
 							capitalizacionStr = capitalizacionStr.substring(0, capitalizacionStr.indexOf("B"));
 							capitalizacionStr = capitalizacionStr.replaceAll("\\.", "");
 							capitalizacionStr = capitalizacionStr.replaceAll(",", ".");
-							Double capitalizacion = Double.valueOf(capitalizacionStr);
+							capitalizacion = Double.valueOf(capitalizacionStr);
 							if (capitalizacion < minCapitalizacion)
 							{
 								LOGGER.info("No se obtiene el chart de [" + hrefElemento + "] porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
@@ -115,6 +116,7 @@ public abstract class DriverControllerBase
 			}
 		}
 
+		Double dividendo = null;
 		if (minDividendo != null)
 		{
 			LOGGER.info("Buscando Dividendo");
@@ -130,10 +132,15 @@ public abstract class DriverControllerBase
 					{
 						WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
 						String dividendoStr = floatLangBase2.getAttribute("innerHTML");
+						if (dividendoStr.indexOf("N/A") != -1)
+						{
+							LOGGER.info("No se obtiene el chart porque la RPD [" + dividendoStr + "] no está disponible");
+							return;
+						}
 						dividendoStr = dividendoStr.substring(dividendoStr.indexOf("(") + 1, dividendoStr.indexOf(")") - 1);
 						dividendoStr = dividendoStr.replaceAll("\\.", "");
 						dividendoStr = dividendoStr.replaceAll(",", ".");
-						Double dividendo = Double.valueOf(dividendoStr);
+						dividendo = Double.valueOf(dividendoStr);
 						if (dividendo < minDividendo)
 						{
 							LOGGER.info("No se obtiene el chart porque la RPD [" + dividendo + "] es menor que la RPD mínima [" + minDividendo + "]");
@@ -156,19 +163,22 @@ public abstract class DriverControllerBase
 		LOGGER.info("Buscando datos relevantes para sacar en el log");
 		String industria = "";
 		String sector = "";
+		String nombreEmpresa = "";
 		WebElement companyProfileHeader = driver.findElement(By.className("companyProfileHeader"));
 		List<WebElement> listaDatosProfile = companyProfileHeader.findElements(By.tagName("div"));
 		for (WebElement datoProfile : listaDatosProfile)
 		{
 			if (datoProfile.getAttribute("innerHTML") != null && datoProfile.getAttribute("innerHTML").startsWith("Industria"))
 			{
-				industria = datoProfile.findElements(By.tagName("a")).get(0).getAttribute("innerHTML");
+				industria = datoProfile.findElements(By.tagName("a")).get(0).getAttribute("innerHTML").trim();
 			}
 			else if (datoProfile.getAttribute("innerHTML") != null && datoProfile.getAttribute("innerHTML").startsWith("Sector"))
 			{
-				sector = datoProfile.findElements(By.tagName("a")).get(0).getAttribute("innerHTML");
+				sector = datoProfile.findElements(By.tagName("a")).get(0).getAttribute("innerHTML").trim();
 			}
 		}
+		WebElement instrumentHead = driver.findElement(By.className("instrumentHead"));
+		nombreEmpresa = instrumentHead.findElements(By.tagName("h1")).get(0).getAttribute("innerHTML").trim();
 
 		LOGGER.info("Accediendo gráfico técnico");
 		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Gráfico técnico")));
@@ -239,7 +249,7 @@ public abstract class DriverControllerBase
 		LOGGER.info("Esperamos 500 milisegundos");
 		Thread.sleep(500);
 
-		LOGGER.info("Generando screenshot [" + hrefElemento + "] [" + industria + "] [" + sector + "]");
+		LOGGER.info("Generando screenshot [" + sector + "] [" + industria + "] [" + nombreEmpresa + "] [" + dividendo + "] [" + capitalizacion + "] [" + hrefElemento + "]");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + timeFrame + ".png"));
 	}
