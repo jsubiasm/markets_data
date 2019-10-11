@@ -725,7 +725,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 	/**
 	 * 
 	 */
-	private static final Double RPD_MINIMA = 5.0;
+	private static final Double RPD_MINIMA = 4.0;
 
 	/**
 	 * 

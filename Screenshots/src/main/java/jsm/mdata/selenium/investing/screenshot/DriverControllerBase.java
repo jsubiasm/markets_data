@@ -251,7 +251,7 @@ public abstract class DriverControllerBase
 
 		LOGGER.info("Generando screenshot [" + sector + "] [" + industria + "] [" + nombreEmpresa + "] [" + dividendo + "] [" + capitalizacion + "] [" + hrefElemento + "]");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + timeFrame + ".png"));
+		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + dividendo.intValue() + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + timeFrame + ".png"));
 	}
 
 	/**
