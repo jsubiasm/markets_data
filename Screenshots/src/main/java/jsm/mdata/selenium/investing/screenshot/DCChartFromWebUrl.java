@@ -618,6 +618,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/sjw-corp");
 		listaURL_09.add("https://es.investing.com/equities/smith---nephew-snats-inc");
 		// listaURL_09.add("https://es.investing.com/equities/sniace-sa");
+		listaURL_09.add("https://es.investing.com/equities/societe-bic");
 		listaURL_09.add("https://es.investing.com/equities/societe-generale");
 		listaURL_09.add("https://es.investing.com/equities/sodexho-alliance");
 		// listaURL_09.add("https://es.investing.com/equities/solaria-energia-y-medio-ambiente");
