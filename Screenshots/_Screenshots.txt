@@ -1,138 +1,137 @@
-Salud;Biotecnología y medicamentos;AbbVie Inc (ABBV);5.84;110.1;https://es.investing.com/equities/abbvie-inc
-Bienes de capital;Servicios para la construcción;Actividades de Construcción y Servicios S.A. (ACS);5.46;11.06;https://es.investing.com/equities/acs-cons-y-serv
-Financiero;Seguros (vida);Aegon NV (AEGN);8.19;7.86;https://es.investing.com/equities/aegon
-Transporte;Otros transportes;AENA SME S.A. (AENA);4.28;25.16;https://es.investing.com/equities/aena-aeropuertos-sa
-Financiero;Seguros (vida);Allianz SE VNA O.N. (ALVG);4.48;88.9;https://es.investing.com/equities/allianz-ag
-Consumo no cíclico;Tabaco;Altria Group (MO);7.91;80.29;https://es.investing.com/equities/altria-group
-Servicios;Operaciones inmobiliarias;Vereit Inc (VER);5.64;10.41;https://es.investing.com/equities/american-realty-c
-Servicios;Servicios de comunicación;AT&T Inc (T);5.51;273.43;https://es.investing.com/equities/at-t
-Transporte;Otros transportes;Atlantia SpA (ATL);4.19;17.62;https://es.investing.com/equities/atlantia
-Financiero;Seguros (vida);Aviva PLC (AV);8.07;15.25;https://es.investing.com/equities/aviva
-Financiero;Seguros (vida);AXA SA (AXAF);5.54;55.0;https://es.investing.com/equities/axa
-Bienes de capital;Aeroespacial y defensa;BAE Systems PLC (BAES);4.07;17.66;https://es.investing.com/equities/bae-systems
-Financiero;Bancos regionales;Banco Santander S.A. (SAN);6.62;59.52;https://es.investing.com/equities/banco-santander
-Financiero;Banca mayorista;Bankia S.A. (BKIA);6.66;5.26;https://es.investing.com/equities/bankia
-Financiero;Bancos regionales;Bankinter S.A. (BKT);5.29;5.3;https://es.investing.com/equities/bankinter
-Materiales básicos;Químicos - plásticos y caucho;BASF SE NA O.N. (BASFn);5.31;58.48;https://es.investing.com/equities/basf-ag
-Consumo cíclico;Fabricantes de automóviles y camiones;Bayerische Motoren Werke AG (BMWG);5.44;42.14;https://es.investing.com/equities/bay-mot-werke
-Salud;Principales medicamentos;Bayer AG NA (BAYGn);4.19;59.71;https://es.investing.com/equities/bayer-ag
-Financiero;Banca mayorista;Banco Bilbao Vizcaya Argentaria S.A. (BBVA);5.77;30.3;https://es.investing.com/equities/bbva
-Servicios;Servicios de comunicación;BCE Inc. (BCE);4.9;58.56;https://es.investing.com/equities/bce
-Bienes de capital;Servicios para la construcción;Bellway PLC (BWY);4.52;4.06;https://es.investing.com/equities/bellway
-Materiales básicos;Minería de metales;BHP Group PLC (BHPB);6.33;85.69;https://es.investing.com/equities/bhp-billiton
-Bienes de capital;Servicios para la construcción;Bouygues SA (BOUY);4.49;14.13;https://es.investing.com/equities/bouygues
-Energía;Explotación de petróleo y gas;BP PLC (BP);6.36;102.5;https://es.investing.com/equities/bp
-Consumo no cíclico;Tabaco;British American Tobacco PLC (BATS);7.2;63.39;https://es.investing.com/equities/british-american-tobacco
-Servicios;Operaciones inmobiliarias;British Land Company PLC (BLND);5.77;5.19;https://es.investing.com/equities/british-land
-Servicios;Servicios a empresas;Brookfield Infrastructure Partners LP (BIP_u);4.08;2.62;https://es.investing.com/equities/brookfield-infrastructure-partners
-Suministros;Suministro eléctrico;Brookfield Renewable Partners LP (BEP);5.76;5.49;https://es.investing.com/equities/brookfield-renewable-energy-partner
-Tecnológico;Software y programación;BT Group PLC (BT);8.65;18.73;https://es.investing.com/equities/bt-group
-Energía;Pozos petrolíferos - servicios y equipamiento;Buckeye Partners LP (BPL);7.21;6.37;https://es.investing.com/equities/buckeye-partners-lp
-Financiero;Bancos regionales;CaixaBank S.A. (CABK);6.16;14.51;https://es.investing.com/equities/caixabank-sa
-Salud;Biotecnología y medicamentos;Cardinal Health Inc (CAH);4.25;13.73;https://es.investing.com/equities/cardinal-health
-Servicios;Actividades recreativas;Carnival Corporation (CCL);4.93;28.13;https://es.investing.com/equities/carnival-corp-exch
-Suministros;Suministro de gas natural;Centrica PLC (CNA);14.56;3.96;https://es.investing.com/equities/centrica
-Energía;Petróleo y gas - integrados;Chevron Corp (CVX);4.21;217.54;https://es.investing.com/equities/chevron
-Financiero;Banca mayorista;Canadian Imperial Bank Of Commerce (CM);5.3;48.34;https://es.investing.com/equities/cibc
-Financiero;Bancos regionales;Close Brothers Group plc (CBRO);5.1;2.16;https://es.investing.com/equities/close-brothers
-Financiero;Seguros (propiedad y contingencia);CNP Assurances SA (CNPP);4.81;12.32;https://es.investing.com/equities/cnp-assurances
-Consumo cíclico;Fabricantes de automóviles y camiones;Daimler AG NA O.N. (DAIGn);6.85;49.37;https://es.investing.com/equities/daimler
-Suministros;Suministro eléctrico;Dominion Resources Inc (D);4.51;65.7;https://es.investing.com/equities/dominion-res
-Materiales básicos;Papel y productos derivados;DS Smith PLC (SMDS);4.8;4.71;https://es.investing.com/equities/ds-smith
-Servicios;Servicios de comunicación;Deutsche Telekom AG Na (DTEGn);4.47;73.12;https://es.investing.com/equities/dt-telekom
-Suministros;Suministro eléctrico;E.ON SE NA (EONGn);4.94;19.02;https://es.investing.com/equities/e.on
-Suministros;Suministro eléctrico;EDP Energias de Portugal SA ADR (EDPFY);5.93;14.36;https://es.investing.com/equities/edp-energias-de-portugal-sa
-Suministros;Suministro de gas natural;Enagás S.A. (ENAG);7.43;4.92;https://es.investing.com/equities/enagas
-Suministros;Suministro de gas natural;Enbridge Inc (ENB);6.31;72.17;https://es.investing.com/equities/enbridge-inc.
-Suministros;Suministro eléctrico;Endesa S.A. (ELE);6.01;24.77;https://es.investing.com/equities/endesa
-Suministros;Suministro eléctrico;ERG (ERG);4.21;2.65;https://es.investing.com/equities/erg-spa
-Energía;Explotación de petróleo y gas;Exxon Mobil Corp (XOM);5.16;288.77;https://es.investing.com/equities/exxon-mobil
-Suministros;Suministro de gas natural;Naturgy Energy Group S.A. (NTGY);4.36;23.63;https://es.investing.com/equities/gas-natural-sdg
-Suministros;Suministro eléctrico;Engie SA (ENGIE);4.91;35.57;https://es.investing.com/equities/gdf-suez
-Salud;Biotecnología y medicamentos;Gilead Sciences Inc (GILD);4.07;80.12;https://es.investing.com/equities/gilead-sciences-inc
-Salud;Biotecnología y medicamentos;GlaxoSmithKline PLC (GSK);4.65;83.09;https://es.investing.com/equities/glaxosmithkline
-Energía;Carbón;Glencore PLC (GLEN);6.82;31.27;https://es.investing.com/equities/glencore
-Servicios;Servicios y sistemas de seguridad;G4S PLC (GFS);5.22;2.92;https://es.investing.com/equities/group-4-securicor
-Servicios;Servicios personales;H&R Block Inc (HRB);4.47;4.74;https://es.investing.com/equities/h---r-block-inc
-Servicios;Operaciones inmobiliarias;Hammerson PLC (HMSO);9.66;2.16;https://es.investing.com/equities/hammerson
-Consumo cíclico;Vestimenta/accesorios;Hanesbrands Inc (HBI);4.15;5.33;https://es.investing.com/equities/hanesbrands
-Consumo cíclico;Productos recreativos;Harley-Davidson Inc (HOG);4.51;5.3;https://es.investing.com/equities/harley-davidson
-Servicios;Operaciones inmobiliarias;HCP Inc (HCP);4.06;17.95;https://es.investing.com/equities/hcp-inc
-Energía;Pozos petrolíferos - servicios y equipamiento;Helmerich and Payne Inc (HP);7.8;4.02;https://es.investing.com/equities/helmerich---payne
-Servicios;Comercio minoristas (vestimenta);H & M Hennes & Mauritz AB B (HMb);5.13;330.35;https://es.investing.com/equities/hennes---mauritz
-Consumo cíclico;Vestimenta/accesorios;Hugo Boss AG NA O.N. (BOSSn);6.03;2.7;https://es.investing.com/equities/hugo-boss
-Tecnológico;Servicios informáticos;International Business Machines (IBM);4.64;125.02;https://es.investing.com/equities/ibm
-Consumo no cíclico;Tabaco;Imperial Brands PLC (IMB);11.98;17.61;https://es.investing.com/equities/imperial-tobacco
-Servicios;Comercio minoristas (especializado);Inchcape PLC (INCH);4.42;2.5;https://es.investing.com/equities/inchcape
-Financiero;Servicios de inversión;Investec PLC (INVP);6.2;4.02;https://es.investing.com/equities/investec
-Bienes de capital;Servicios para la construcción;Jiangsu Expressway Co Ltd (0177);5.17;51.08;https://es.investing.com/equities/jiangsu-expres
-Servicios;Operaciones inmobiliarias;Kimco Realty Corporation (KIM);5.47;8.67;https://es.investing.com/equities/kimco-realty
-Suministros;Suministro de gas natural;Kinder Morgan Inc (KMI);4.96;45.82;https://es.investing.com/equities/kinder-morgan
-Servicios;Comercio minorista (bricolaje);Kingfisher PLC (KGF);5.82;4.23;https://es.investing.com/equities/kingfisher
-Servicios;Operaciones inmobiliarias;Klepierre SA (LOIM);6.76;9.1;https://es.investing.com/equities/klepierre
-Bienes de capital;Maquinaria agrícola y de construcción;Konecranes ABP (KCRA);4.56;2.1;https://es.investing.com/equities/konecranes
-Consumo no cíclico;Transformación de alimentos;Kraft Heinz Co (KHC);5.99;32.87;https://es.investing.com/equities/kraft-foods-inc
-Servicios;Impresión y publicación;Lagardere SCA (LAGA);6.51;2.59;https://es.investing.com/equities/lagardere-s.c.a.
-Financiero;Servicios de inversión;Legal & General Group PLC (LGEN);7.17;14.87;https://es.investing.com/equities/legal---general
-Consumo cíclico;Muebles y accesorios;Leggett & Platt Incorporated (LEG);4.13;5.17;https://es.investing.com/equities/leggett---platt
-Servicios;Comercio minoristas (vestimenta);L Brands Inc (LB);6.98;4.65;https://es.investing.com/equities/limited-brands
-Servicios;Servicios a empresas;Logista (LOG);6.46;2.39;https://es.investing.com/equities/logista
-Servicios;Operaciones inmobiliarias;LTC Properties Inc (LTC);4.45;2.02;https://es.investing.com/equities/ltc-properties-inc
-Financiero;Otros servicios financieros;Main Street Capital Corporation (MAIN);5.86;2.65;https://es.investing.com/equities/main-street-capital-corp
-Financiero;Seguros (propiedad y contingencia);Mapfre S.A. (MAP);6.09;7.49;https://es.investing.com/equities/mapfre
-Servicios;Comercio minorista (grandes almacenes y tiendas descuento);Marks and Spencer Group PLC (MKS);7.47;3.35;https://es.investing.com/equities/marks---spencer-group
-Financiero;Seguros (propiedad y contingencia);Mercury General Corporation (MCY);4.69;2.97;https://es.investing.com/equities/mercury-general-corp
-Tecnológico;Software y programación;Micro Focus International PLC (MCRO);9.6;3.53;https://es.investing.com/equities/micro-focus
-Consumo no cíclico;Bebidas (alcohólicas);Molson Coors Brewing Co Class B (TAP);4.11;12.05;https://es.investing.com/equities/molson-coors
-Materiales básicos;Contenedores y empaquetado;Mondi PLC (MNDI);4.65;11.83;https://es.investing.com/equities/mond
-Financiero;Seguros (vida);Munich Re (MUVGn);4.28;33.64;https://es.investing.com/equities/muench.-rueck
-Suministros;Suministro de gas natural;National Fuel Gas Company (NFG);4.01;3.75;https://es.investing.com/equities/national-fuel-gas-comp
-Suministros;Suministro eléctrico;National Grid PLC (NG);5.29;30.29;https://es.investing.com/equities/national-grid
-Servicios;Operaciones inmobiliarias;Omega Healthcare Investors Inc (OHI);6.25;9.22;https://es.investing.com/equities/omega-healthcare
-Consumo cíclico;Joyería y orfebrería;Pandora A/S (PNDORA);8.34;24.85;https://es.investing.com/equities/pandora
-Servicios;Servicios de tratamiento de residuos;Pennon Group (PNN);5.13;3.48;https://es.investing.com/equities/pennon
-Financiero;Bancos regionales;People’s United Financial Inc (PBCT);4.73;6.11;https://es.investing.com/equities/peoples-united-financial
-Salud;Biotecnología y medicamentos;Pfizer Inc (PFE);4.03;197.96;https://es.investing.com/equities/pfizer
-Consumo no cíclico;Tabaco;Philip Morris International Inc (PM);6.04;120.97;https://es.investing.com/equities/philip-morris-intl
-Suministros;Suministro eléctrico;PPL Corporation (PPL);5.44;22.07;https://es.investing.com/equities/ppl-corp
-Financiero;Seguros (accidentes y salud);Principal Financial Group Inc (PFG);4.13;15.04;https://es.investing.com/equities/principal-fin
-Financiero;Seguros (vida);Prudential Financial Inc (PRU);4.65;35.24;https://es.investing.com/equities/prudential-fin
-Servicios;Publicidad;Publicis Groupe SA (PUBP);4.99;8.74;https://es.investing.com/equities/publicis-groupe
-Servicios;Servicios a empresas;Randstad NV (RAND);7.73;8.28;https://es.investing.com/equities/randstad
-Suministros;Suministro eléctrico;Red Eléctrica de España S.A.U (REE);5.45;9.68;https://es.investing.com/equities/red-electrica
-Consumo cíclico;Fabricantes de automóviles y camiones;Renault SA (RENA);6.99;15.12;https://es.investing.com/equities/renault
-Energía;Petróleo y gas - integrados;Repsol S.A. (REP);6.43;22.77;https://es.investing.com/equities/repsol-ypf
-Materiales básicos;Minería de metales;Rio Tinto PLC (RIO);5.79;67.09;https://es.investing.com/equities/rio-tinto
-Energía;Explotación de petróleo y gas;Royal Dutch Shell PLC Class A (RDSa);6.47;211.6;https://es.investing.com/equities/royal-dutch-shell-a-shr
-Transporte;Camiones;Royal Mail PLC (RMG);12.66;2.04;https://es.investing.com/equities/royal-mail
-Financiero;Bancos regionales;Skandinaviska Enskilda Banken AB A (SEBa);6.41;196.74;https://es.investing.com/equities/s.e.b
-Servicios;Comercio minoristas (comestibles);J Sainsbury PLC (SBRY);5.13;4.6;https://es.investing.com/equities/sainsbury
-Energía;Pozos petrolíferos - servicios y equipamiento;Schlumberger NV (SLB);6.47;42.97;https://es.investing.com/equities/schlumberger-ltd
-Financiero;Seguros (propiedad y contingencia);SCOR SE (SCOR);4.56;6.81;https://es.investing.com/equities/scor
-Financiero;Banca mayorista;Bank of Nova Scotia (BNS);4.81;91.3;https://es.investing.com/equities/scotiabank
-Suministros;Suministro eléctrico;SSE PLC (SSE);7.84;13.0;https://es.investing.com/equities/scottish---southern-energy
-Salud;Servicios para el cuidado de la salud;Senior Housing Properties Trust (SNH);6.43;2.17;https://es.investing.com/equities/senior-housing
-Servicios;Operaciones inmobiliarias;Simon Property Group Inc (SPG);5.75;45.34;https://es.investing.com/equities/simon-prop-grp
-Financiero;Bancos regionales;Societe Generale SA (SOGN);9.17;20.55;https://es.investing.com/equities/societe-generale
-Suministros;Suministro eléctrico;Southern Company (SO);4.04;64.6;https://es.investing.com/equities/southern-co
-Financiero;Servicios de inversión;St. James’s Place PLC (SJP);5.2;5.09;https://es.investing.com/equities/st-james
-Financiero;Servicios de inversión;Standard Life Aberdeen PLC (SLA);8.12;6.64;https://es.investing.com/equities/standard-life
-Servicios;Servicios de tratamiento de residuos;Suez SA (SEVI);4.87;8.3;https://es.investing.com/equities/suez-environnement-s.a.
-Energía;Explotación de petróleo y gas;Suncor Energy Inc (SU);4.34;45.88;https://es.investing.com/equities/suncor-energy-inc.
-Consumo no cíclico;Transformación de alimentos;Tate & Lyle PLC (TATE);4.22;3.22;https://es.investing.com/equities/tate---lyle
-Servicios;Servicios de comunicación;Telefónica S.A. (TEF);5.87;35.61;https://es.investing.com/equities/telefonica
-Financiero;Bancos regionales;Toronto Dominion Bank (TD);4.06;132.9;https://es.investing.com/equities/toronto-dominion-bank
-Energía;Explotación de petróleo y gas;Total SA (TOTF);5.87;120.66;https://es.investing.com/equities/total
-Financiero;Servicios de inversión;UBS Group AG (UBSG);6.7;40.62;https://es.investing.com/equities/ubs-group-n
-Servicios;Operaciones inmobiliarias;WFD Unibail Rodamco NV (URW);8.25;18.23;https://es.investing.com/equities/uniball
-Suministros;Suministro de agua;United Utilities Group PLC (UU);5.21;5.44;https://es.investing.com/equities/united-utilities
-Energía;Explotación de petróleo y gas;Valero Energy Corporation (VLO);4.23;35.56;https://es.investing.com/equities/valero-energy
-Servicios;Operaciones inmobiliarias;Ventas Inc (VTR);4.3;27.25;https://es.investing.com/equities/ventas-inc
-Servicios;Servicios de comunicación;Verizon Communications Inc (VZ);4.15;247.44;https://es.investing.com/equities/verizon-communications
-Servicios;Servicios de comunicación;Vodafone Group PLC (VOD);5.03;43.54;https://es.investing.com/equities/vodafone
-Servicios;Operaciones inmobiliarias;W P Carey Inc (WPC);4.56;15.57;https://es.investing.com/equities/w-p-carey-inc
-Financiero;Bancos regionales;Wells Fargo & Company (WFC);4.24;214.36;https://es.investing.com/equities/wells-fargo
-Servicios;Publicidad;WPP PLC (WPP);6.21;11.66;https://es.investing.com/equities/wpp
-Bienes de capital;Otros bienes de capital;Zardoya Otis S.A. (ZOT);5.27;2.86;https://es.investing.com/equities/zardoya-otis-sa
-Transporte;Otros transportes;Zhejiang Expressway Co Ltd (0576);6.46;29.36;https://es.investing.com/equities/zhejiangexpres
-Servicios;Servicios de comunicación;Nos SGPS SA (NOS);6.76;2.64;https://es.investing.com/equities/zon-optimus-sa
+Salud;Biotecnología y medicamentos;AbbVie Inc (ABBV);5.83;109.08;26.58;https://es.investing.com/equities/abbvie-inc
+Bienes de capital;Servicios para la construcción;Actividades de Construcción y Servicios S.A. (ACS);5.25;11.17;12.28;https://es.investing.com/equities/acs-cons-y-serv
+Financiero;Seguros (vida);Aegon NV (AEGN);7.74;7.91;10.26;https://es.investing.com/equities/aegon
+Transporte;Otros transportes;AENA SME S.A. (AENA);4.28;25.27;18.8;https://es.investing.com/equities/aena-aeropuertos-sa
+Financiero;Seguros (vida);Allianz SE VNA O.N. (ALVG);4.48;89.59;12.11;https://es.investing.com/equities/allianz-ag
+Consumo no cíclico;Tabaco;Altria Group (MO);7.82;79.81;12.43;https://es.investing.com/equities/altria-group
+Servicios;Operaciones inmobiliarias;Vereit Inc (VER);5.64;10.36;39.71;https://es.investing.com/equities/american-realty-c
+Servicios;Servicios de comunicación;AT&T Inc (T);5.45;273.79;16.47;https://es.investing.com/equities/at-t
+Transporte;Otros transportes;Atlantia SpA (ATL);4.11;17.93;16.74;https://es.investing.com/equities/atlantia
+Financiero;Seguros (vida);Aviva PLC (AV);7.47;15.65;6.82;https://es.investing.com/equities/aviva
+Financiero;Seguros (vida);AXA SA (AXAF);5.36;55.87;37.93;https://es.investing.com/equities/axa
+Bienes de capital;Aeroespacial y defensa;BAE Systems PLC (BAES);4.06;17.86;13.54;https://es.investing.com/equities/bae-systems
+Financiero;Bancos regionales;Banco Santander S.A. (SAN);6.62;61.64;8.5;https://es.investing.com/equities/banco-santander
+Financiero;Banca mayorista;Bankia S.A. (BKIA);6.66;5.36;8.43;https://es.investing.com/equities/bankia
+Financiero;Bancos regionales;Bankinter S.A. (BKT);4.9;5.37;10.66;https://es.investing.com/equities/bankinter
+Materiales básicos;Químicos - plásticos y caucho;BASF SE NA O.N. (BASFn);5.31;59.77;18.51;https://es.investing.com/equities/basf-ag
+Consumo cíclico;Fabricantes de automóviles y camiones;Bayerische Motoren Werke AG (BMWG);5.44;43.15;8.16;https://es.investing.com/equities/bay-mot-werke
+Salud;Principales medicamentos;Bayer AG NA (BAYGn);4.19;61.47;55.46;https://es.investing.com/equities/bayer-ag
+Financiero;Banca mayorista;Banco Bilbao Vizcaya Argentaria S.A. (BBVA);5.51;30.9;6.5;https://es.investing.com/equities/bbva
+Servicios;Servicios de comunicación;BCE Inc. (BCE);4.87;58.08;18.7;https://es.investing.com/equities/bce
+Bienes de capital;Servicios para la construcción;Bellway PLC (BWY);4.52;4.04;7.98;https://es.investing.com/equities/bellway
+Materiales básicos;Minería de metales;BHP Group PLC (BHPB);6.12;83.19;12.7;https://es.investing.com/equities/bhp-billiton
+Bienes de capital;Servicios para la construcción;Bouygues SA (BOUY);4.44;14.44;11.17;https://es.investing.com/equities/bouygues
+Energía;Explotación de petróleo y gas;BP PLC (BP);6.52;100.44;14.17;https://es.investing.com/equities/bp
+Consumo no cíclico;Tabaco;British American Tobacco PLC (BATS);7.49;61.92;10.36;https://es.investing.com/equities/british-american-tobacco
+Servicios;Operaciones inmobiliarias;British Land Company PLC (BLND);5.28;5.52;;https://es.investing.com/equities/british-land
+Servicios;Servicios a empresas;Brookfield Infrastructure Partners LP (BIP_u);4.1;2.62;;https://es.investing.com/equities/brookfield-infrastructure-partners
+Suministros;Suministro eléctrico;Brookfield Renewable Partners LP (BEP);5.76;5.52;;https://es.investing.com/equities/brookfield-renewable-energy-partner
+Tecnológico;Software y programación;BT Group PLC (BT);7.82;19.52;9.11;https://es.investing.com/equities/bt-group
+Energía;Pozos petrolíferos - servicios y equipamiento;Buckeye Partners LP (BPL);7.21;6.37;;https://es.investing.com/equities/buckeye-partners-lp
+Financiero;Bancos regionales;CaixaBank S.A. (CABK);6.16;15.12;7.79;https://es.investing.com/equities/caixabank-sa
+Salud;Biotecnología y medicamentos;Cardinal Health Inc (CAH);4.18;13.68;10.37;https://es.investing.com/equities/cardinal-health
+Servicios;Actividades recreativas;Carnival Corporation (CCL);4.88;28.88;9.52;https://es.investing.com/equities/carnival-corp-exch
+Suministros;Suministro de gas natural;Centrica PLC (CNA);14.4;3.96;;https://es.investing.com/equities/centrica
+Energía;Petróleo y gas - integrados;Chevron Corp (CVX);4.15;220.56;15.07;https://es.investing.com/equities/chevron
+Financiero;Banca mayorista;Canadian Imperial Bank Of Commerce (CM);5.3;48.89;9.64;https://es.investing.com/equities/cibc
+Financiero;Bancos regionales;Close Brothers Group plc (CBRO);5.18;2.27;15.72;https://es.investing.com/equities/close-brothers
+Financiero;Seguros (propiedad y contingencia);CNP Assurances SA (CNPP);4.7;12.29;9.32;https://es.investing.com/equities/cnp-assurances
+Consumo cíclico;Fabricantes de automóviles y camiones;Daimler AG NA O.N. (DAIGn);6.85;50.87;8.53;https://es.investing.com/equities/daimler
+Suministros;Suministro eléctrico;Dominion Resources Inc (D);4.49;65.27;52.31;https://es.investing.com/equities/dominion-res
+Materiales básicos;Papel y productos derivados;DS Smith PLC (SMDS);4.7;4.75;17.65;https://es.investing.com/equities/ds-smith
+Servicios;Servicios de comunicación;Deutsche Telekom AG Na (DTEGn);4.47;74.36;33.29;https://es.investing.com/equities/dt-telekom
+Suministros;Suministro eléctrico;E.ON SE NA (EONGn);4.94;19.31;8.38;https://es.investing.com/equities/e.on
+Suministros;Suministro eléctrico;EDP Energias de Portugal SA ADR (EDPFY);5.97;14.31;9.43;https://es.investing.com/equities/edp-energias-de-portugal-sa
+Suministros;Suministro de gas natural;Enagás S.A. (ENAG);7.44;4.89;10.62;https://es.investing.com/equities/enagas
+Suministros;Suministro de gas natural;Enbridge Inc (ENB);6.22;72.09;20.11;https://es.investing.com/equities/enbridge-inc.
+Suministros;Suministro eléctrico;Endesa S.A. (ELE);6.07;24.89;17.38;https://es.investing.com/equities/endesa
+Suministros;Suministro eléctrico;ERG (ERG);4.16;2.71;90.14;https://es.investing.com/equities/erg-spa
+Energía;Explotación de petróleo y gas;Exxon Mobil Corp (XOM);5.1;292.71;16.69;https://es.investing.com/equities/exxon-mobil
+Suministros;Suministro de gas natural;Naturgy Energy Group S.A. (NTGY);4.36;24.19;;https://es.investing.com/equities/gas-natural-sdg
+Suministros;Suministro eléctrico;Engie SA (ENGIE);4.77;36.54;47.38;https://es.investing.com/equities/gdf-suez
+Salud;Biotecnología y medicamentos;GlaxoSmithKline PLC (GSK);4.78;83.03;18.43;https://es.investing.com/equities/glaxosmithkline
+Energía;Carbón;Glencore PLC (GLEN);6.45;31.13;47.57;https://es.investing.com/equities/glencore
+Servicios;Servicios y sistemas de seguridad;G4S PLC (GFS);4.93;3.03;80.68;https://es.investing.com/equities/group-4-securicor
+Servicios;Servicios personales;H&R Block Inc (HRB);4.4;4.74;11.19;https://es.investing.com/equities/h---r-block-inc
+Servicios;Operaciones inmobiliarias;Hammerson PLC (HMSO);8.53;2.35;;https://es.investing.com/equities/hammerson
+Consumo cíclico;Vestimenta/accesorios;Hanesbrands Inc (HBI);4.07;5.54;10.0;https://es.investing.com/equities/hanesbrands
+Consumo cíclico;Productos recreativos;Harley-Davidson Inc (HOG);4.44;5.52;12.93;https://es.investing.com/equities/harley-davidson
+Servicios;Operaciones inmobiliarias;HCP Inc (HCP);4.05;18.0;18.23;https://es.investing.com/equities/hcp-inc
+Energía;Pozos petrolíferos - servicios y equipamiento;Helmerich and Payne Inc (HP);7.73;4.14;;https://es.investing.com/equities/helmerich---payne
+Servicios;Comercio minoristas (vestimenta);H & M Hennes & Mauritz AB B (HMb);5.13;342.1;26.44;https://es.investing.com/equities/hennes---mauritz
+Consumo cíclico;Vestimenta/accesorios;Hugo Boss AG NA O.N. (BOSSn);7.18;2.56;11.95;https://es.investing.com/equities/hugo-boss
+Tecnológico;Servicios informáticos;International Business Machines (IBM);4.59;125.83;11.83;https://es.investing.com/equities/ibm
+Consumo no cíclico;Tabaco;Imperial Brands PLC (IMB);11.97;17.72;11.33;https://es.investing.com/equities/imperial-tobacco
+Servicios;Comercio minoristas (especializado);Inchcape PLC (INCH);4.28;2.53;69.27;https://es.investing.com/equities/inchcape
+Financiero;Servicios de inversión;Investec PLC (INVP);5.66;4.16;8.32;https://es.investing.com/equities/investec
+Bienes de capital;Servicios para la construcción;Jiangsu Expressway Co Ltd (0177);5.06;51.28;11.26;https://es.investing.com/equities/jiangsu-expres
+Servicios;Operaciones inmobiliarias;Kimco Realty Corporation (KIM);5.45;8.77;25.86;https://es.investing.com/equities/kimco-realty
+Suministros;Suministro de gas natural;Kinder Morgan Inc (KMI);4.94;45.59;20.06;https://es.investing.com/equities/kinder-morgan
+Servicios;Comercio minorista (bricolaje);Kingfisher PLC (KGF);5.15;4.51;28.61;https://es.investing.com/equities/kingfisher
+Servicios;Operaciones inmobiliarias;Klepierre SA (LOIM);6.64;9.25;24.19;https://es.investing.com/equities/klepierre
+Bienes de capital;Maquinaria agrícola y de construcción;Konecranes ABP (KCRA);4.47;2.13;20.27;https://es.investing.com/equities/konecranes
+Consumo no cíclico;Transformación de alimentos;Kraft Heinz Co (KHC);5.91;33.33;;https://es.investing.com/equities/kraft-foods-inc
+Servicios;Impresión y publicación;Lagardere SCA (LAGA);6.51;2.62;21.24;https://es.investing.com/equities/lagardere-s.c.a.
+Financiero;Servicios de inversión;Legal & General Group PLC (LGEN);6.42;15.68;8.18;https://es.investing.com/equities/legal---general
+Servicios;Comercio minoristas (vestimenta);L Brands Inc (LB);7.13;4.83;8.49;https://es.investing.com/equities/limited-brands
+Servicios;Servicios a empresas;Logista (LOG);6.22;2.41;14.82;https://es.investing.com/equities/logista
+Servicios;Operaciones inmobiliarias;LTC Properties Inc (LTC);4.48;2.03;19.12;https://es.investing.com/equities/ltc-properties-inc
+Financiero;Otros servicios financieros;Main Street Capital Corporation (MAIN);5.85;2.65;17.12;https://es.investing.com/equities/main-street-capital-corp
+Financiero;Seguros (propiedad y contingencia);Mapfre S.A. (MAP);5.84;7.6;15.78;https://es.investing.com/equities/mapfre
+Servicios;Comercio minorista (grandes almacenes y tiendas descuento);Marks and Spencer Group PLC (MKS);7.47;3.7;96.16;https://es.investing.com/equities/marks---spencer-group
+Financiero;Seguros (propiedad y contingencia);Mercury General Corporation (MCY);4.67;3.0;15.34;https://es.investing.com/equities/mercury-general-corp
+Tecnológico;Software y programación;Micro Focus International PLC (MCRO);9.37;3.58;;https://es.investing.com/equities/micro-focus
+Consumo no cíclico;Bebidas (alcohólicas);Molson Coors Brewing Co Class B (TAP);4.09;12.16;13.62;https://es.investing.com/equities/molson-coors
+Materiales básicos;Contenedores y empaquetado;Mondi PLC (MNDI);4.5;12.08;9.48;https://es.investing.com/equities/mond
+Financiero;Seguros (vida);Munich Re (MUVGn);4.28;34.01;14.73;https://es.investing.com/equities/muench.-rueck
+Suministros;Suministro de gas natural;National Fuel Gas Company (NFG);4.0;3.86;13.23;https://es.investing.com/equities/national-fuel-gas-comp
+Suministros;Suministro eléctrico;National Grid PLC (NG);5.22;30.94;20.1;https://es.investing.com/equities/national-grid
+Servicios;Operaciones inmobiliarias;Omega Healthcare Investors Inc (OHI);6.22;9.39;35.25;https://es.investing.com/equities/omega-healthcare
+Consumo cíclico;Joyería y orfebrería;Pandora A/S (PNDORA);8.34;24.16;6.84;https://es.investing.com/equities/pandora
+Servicios;Servicios de tratamiento de residuos;Pennon Group (PNN);4.75;3.58;16.51;https://es.investing.com/equities/pennon
+Financiero;Bancos regionales;People’s United Financial Inc (PBCT);4.64;6.23;12.24;https://es.investing.com/equities/peoples-united-financial
+Salud;Biotecnología y medicamentos;Pfizer Inc (PFE);4.02;200.78;17.75;https://es.investing.com/equities/pfizer
+Consumo no cíclico;Tabaco;Philip Morris International Inc (PM);6.02;121.4;15.47;https://es.investing.com/equities/philip-morris-intl
+Suministros;Suministro eléctrico;PPL Corporation (PPL);5.4;23.22;13.2;https://es.investing.com/equities/ppl-corp
+Financiero;Seguros (accidentes y salud);Principal Financial Group Inc (PFG);4.08;15.41;10.39;https://es.investing.com/equities/principal-fin
+Financiero;Seguros (vida);Prudential Financial Inc (PRU);4.56;35.91;9.39;https://es.investing.com/equities/prudential-fin
+Servicios;Publicidad;Publicis Groupe SA (PUBP);5.69;8.72;9.13;https://es.investing.com/equities/publicis-groupe
+Servicios;Servicios a empresas;Randstad NV (RAND);7.33;8.43;12.55;https://es.investing.com/equities/randstad
+Suministros;Suministro eléctrico;Red Eléctrica de España S.A.U (REE);5.46;9.75;13.02;https://es.investing.com/equities/red-electrica
+Consumo cíclico;Fabricantes de automóviles y camiones;Renault SA (RENA);6.6;15.58;6.32;https://es.investing.com/equities/renault
+Energía;Petróleo y gas - integrados;Repsol S.A. (REP);6.22;23.05;11.17;https://es.investing.com/equities/repsol-ypf
+Materiales básicos;Minería de metales;Rio Tinto PLC (RIO);5.53;65.72;6.55;https://es.investing.com/equities/rio-tinto
+Energía;Explotación de petróleo y gas;Royal Dutch Shell PLC Class A (RDSa);6.36;211.12;11.68;https://es.investing.com/equities/royal-dutch-shell-a-shr
+Transporte;Camiones;Royal Mail PLC (RMG);11.46;2.12;12.16;https://es.investing.com/equities/royal-mail
+Financiero;Bancos regionales;Skandinaviska Enskilda Banken AB A (SEBa);6.25;198.53;10.71;https://es.investing.com/equities/s.e.b
+Servicios;Comercio minoristas (comestibles);J Sainsbury PLC (SBRY);5.13;4.72;24.29;https://es.investing.com/equities/sainsbury
+Energía;Pozos petrolíferos - servicios y equipamiento;Schlumberger NV (SLB);6.44;45.04;21.66;https://es.investing.com/equities/schlumberger-ltd
+Financiero;Seguros (propiedad y contingencia);SCOR SE (SCOR);4.48;6.9;19.57;https://es.investing.com/equities/scor
+Financiero;Banca mayorista;Bank of Nova Scotia (BNS);4.81;91.71;10.12;https://es.investing.com/equities/scotiabank
+Suministros;Suministro eléctrico;SSE PLC (SSE);7.45;13.51;9.55;https://es.investing.com/equities/scottish---southern-energy
+Salud;Servicios para el cuidado de la salud;Senior Housing Properties Trust (SNH);6.59;2.19;;https://es.investing.com/equities/senior-housing
+Servicios;Operaciones inmobiliarias;Simon Property Group Inc (SPG);5.71;45.79;19.87;https://es.investing.com/equities/simon-prop-grp
+Consumo no cíclico;Suministros para oficina;BIC (BICP);5.46;2.78;14.94;https://es.investing.com/equities/societe-bic
+Financiero;Bancos regionales;Societe Generale SA (SOGN);8.72;20.98;6.79;https://es.investing.com/equities/societe-generale
+Suministros;Suministro eléctrico;Southern Company (SO);4.01;63.68;14.44;https://es.investing.com/equities/southern-co
+Financiero;Servicios de inversión;St. James’s Place PLC (SJP);4.8;5.32;35.52;https://es.investing.com/equities/st-james
+Financiero;Servicios de inversión;Standard Life Aberdeen PLC (SLA);7.55;6.71;;https://es.investing.com/equities/standard-life
+Servicios;Servicios de tratamiento de residuos;Suez SA (SEVI);4.78;8.41;20.41;https://es.investing.com/equities/suez-environnement-s.a.
+Energía;Explotación de petróleo y gas;Suncor Energy Inc (SU);4.29;46.58;10.99;https://es.investing.com/equities/suncor-energy-inc.
+Consumo no cíclico;Transformación de alimentos;Tate & Lyle PLC (TATE);4.25;3.2;17.88;https://es.investing.com/equities/tate---lyle
+Servicios;Servicios de comunicación;Telefónica S.A. (TEF);5.68;36.0;11.89;https://es.investing.com/equities/telefonica
+Financiero;Bancos regionales;Toronto Dominion Bank (TD);4.05;134.23;11.53;https://es.investing.com/equities/toronto-dominion-bank
+Energía;Explotación de petróleo y gas;Total SA (TOTF);5.8;120.29;12.77;https://es.investing.com/equities/total
+Financiero;Servicios de inversión;UBS Group AG (UBSG);6.7;41.1;11.33;https://es.investing.com/equities/ubs-group-n
+Servicios;Operaciones inmobiliarias;WFD Unibail Rodamco NV (URW);8.15;18.48;12.1;https://es.investing.com/equities/uniball
+Suministros;Suministro de agua;United Utilities Group PLC (UU);4.89;5.68;15.46;https://es.investing.com/equities/united-utilities
+Energía;Explotación de petróleo y gas;Valero Energy Corporation (VLO);4.2;36.69;14.75;https://es.investing.com/equities/valero-energy
+Servicios;Operaciones inmobiliarias;Ventas Inc (VTR);4.33;27.07;59.31;https://es.investing.com/equities/ventas-inc
+Servicios;Servicios de comunicación;Verizon Communications Inc (VZ);4.11;246.49;15.58;https://es.investing.com/equities/verizon-communications
+Servicios;Servicios de comunicación;Vodafone Group PLC (VOD);5.03;43.32;;https://es.investing.com/equities/vodafone
+Servicios;Operaciones inmobiliarias;W P Carey Inc (WPC);4.55;15.45;30.29;https://es.investing.com/equities/w-p-carey-inc
+Financiero;Bancos regionales;Wells Fargo & Company (WFC);4.19;217.09;10.09;https://es.investing.com/equities/wells-fargo
+Servicios;Publicidad;WPP PLC (WPP);6.44;12.04;17.33;https://es.investing.com/equities/wpp
+Bienes de capital;Otros bienes de capital;Zardoya Otis S.A. (ZOT);5.21;3.06;20.5;https://es.investing.com/equities/zardoya-otis-sa
+Transporte;Otros transportes;Zhejiang Expressway Co Ltd (0576);6.3;28.71;7.56;https://es.investing.com/equities/zhejiangexpres
+Servicios;Servicios de comunicación;Nos SGPS SA (NOS);6.65;2.71;17.68;https://es.investing.com/equities/zon-optimus-sa

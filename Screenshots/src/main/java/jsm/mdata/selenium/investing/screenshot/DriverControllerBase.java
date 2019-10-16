@@ -160,10 +160,11 @@ public abstract class DriverControllerBase
 			}
 		}
 
-		LOGGER.info("Buscando datos relevantes para sacar en el log");
+		LOGGER.info("Buscando datos relevantes para sacar en el log y construir tabla excel");
 		String industria = "";
 		String sector = "";
 		String nombreEmpresa = "";
+		String per = "";
 		WebElement companyProfileHeader = driver.findElement(By.className("companyProfileHeader"));
 		List<WebElement> listaDatosProfile = companyProfileHeader.findElements(By.tagName("div"));
 		for (WebElement datoProfile : listaDatosProfile)
@@ -179,6 +180,36 @@ public abstract class DriverControllerBase
 		}
 		WebElement instrumentHead = driver.findElement(By.className("instrumentHead"));
 		nombreEmpresa = instrumentHead.findElements(By.tagName("h1")).get(0).getAttribute("innerHTML").trim();
+		try
+		{
+			new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Gráfico técnico")));
+			WebElement tablaDatos = driver.findElement(By.className("overviewDataTableWithTooltip"));
+			List<WebElement> listaInlineBlock = tablaDatos.findElements(By.className("inlineblock"));
+			for (WebElement inlineBlock : listaInlineBlock)
+			{
+				WebElement floatLangBase1 = inlineBlock.findElement(By.className("float_lang_base_1"));
+				if (floatLangBase1.getAttribute("innerHTML") != null && floatLangBase1.getAttribute("innerHTML").equalsIgnoreCase("PER"))
+				{
+					WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
+					String perStr = floatLangBase2.getAttribute("innerHTML");
+					if (perStr.indexOf("N/A") != -1)
+					{
+						LOGGER.info("El PER [" + perStr + "] no está disponible");
+					}
+					else
+					{
+						perStr = perStr.replaceAll("\\.", "");
+						perStr = perStr.replaceAll(",", ".");
+						Double perDouble = Double.valueOf(perStr);
+						per = perDouble.toString();
+					}
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.error("Error al obtener el PER", e);
+		}
 
 		LOGGER.info("Accediendo gráfico técnico");
 		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Gráfico técnico")));
@@ -249,7 +280,7 @@ public abstract class DriverControllerBase
 		LOGGER.info("Esperamos 500 milisegundos");
 		Thread.sleep(500);
 
-		LOGGER.info("Generando screenshot [" + sector + "] [" + industria + "] [" + nombreEmpresa + "] [" + dividendo + "] [" + capitalizacion + "] [" + hrefElemento + "]");
+		LOGGER.info("Generando screenshot [" + sector + "] [" + industria + "] [" + nombreEmpresa + "] [" + dividendo + "] [" + capitalizacion + "] [" + per + "] [" + hrefElemento + "]");
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + dividendo.intValue() + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + timeFrame + ".png"));
 	}
