@@ -232,22 +232,22 @@ public abstract class DriverControllerBase
 		String precioValorContableIndus = "";
 		// String precioValorContableNetoEmprs = "";
 		// String precioValorContableNetoIndus = "";
-		String margenBrutoTTMEmprs = "";
-		String margenBrutoTTMIndus = "";
-		String margenBruto5YAEmprs = "";
-		String margenBruto5YAIndus = "";
-		String margenOperativoTTMEmprs = "";
-		String margenOperativoTTMIndus = "";
-		String margenOperativo5YAEmprs = "";
-		String margenOperativo5YAIndus = "";
-		String margenAntesImpuestosTTMEmprs = "";
-		String margenAntesImpuestosTTMIndus = "";
-		String margenAntesImpuestos5YAEmprs = "";
-		String margenAntesImpuestos5YAIndus = "";
-		String margenUtilidadNetoTTMEmprs = "";
-		String margenUtilidadNetoTTMIndus = "";
-		String margenUtilidadNeto5YAEmprs = "";
-		String margenUtilidadNeto5YAIndus = "";
+		// String margenBrutoTTMEmprs = "";
+		// String margenBrutoTTMIndus = "";
+		// String margenBruto5YAEmprs = "";
+		// String margenBruto5YAIndus = "";
+		// String margenOperativoTTMEmprs = "";
+		// String margenOperativoTTMIndus = "";
+		// String margenOperativo5YAEmprs = "";
+		// String margenOperativo5YAIndus = "";
+		// String margenAntesImpuestosTTMEmprs = "";
+		// String margenAntesImpuestosTTMIndus = "";
+		// String margenAntesImpuestos5YAEmprs = "";
+		// String margenAntesImpuestos5YAIndus = "";
+		// String margenUtilidadNetoTTMEmprs = "";
+		// String margenUtilidadNetoTTMIndus = "";
+		// String margenUtilidadNeto5YAEmprs = "";
+		// String margenUtilidadNeto5YAIndus = "";
 		String beneficioAccionEmprs = "";
 		String beneficioAccionIndus = "";
 		// String BPABasicoEmprs = "";
@@ -256,24 +256,24 @@ public abstract class DriverControllerBase
 		// String BPADiluidoIndus = "";
 		String bolsaLibrosEmprs = "";
 		String bolsaLibrosIndus = "";
-		String valorContableNetoAccionEmprs = "";
-		String valorContableNetoAccionIndus = "";
-		String efectivoAccionEmprs = "";
-		String efectivoAccionIndus = "";
-		String flujoCajaAccionEmprs = "";
-		String flujoCajaAccionIndus = "";
-		String rentabilidadSobreInversionTTMEmprs = "";
-		String rentabilidadSobreInversionTTMIndus = "";
-		String rentabilidadSobreInversion5YAEmprs = "";
-		String rentabilidadSobreInversion5YAIndus = "";
-		String rentabilidadSobreActivosTTMEmprs = "";
-		String rentabilidadSobreActivosTTMIndus = "";
-		String rentabilidadSobreActivos5YAEmprs = "";
-		String rentabilidadSobreActivos5YAIndus = "";
-		String rentabilidadSobreFondoPropiosTTMEmprs = "";
-		String rentabilidadSobreFondoPropiosTTMIndus = "";
-		String rentabilidadSobreFondoPropios5YAEmprs = "";
-		String rentabilidadSobreFondoPropios5YAIndus = "";
+		// String valorContableNetoAccionEmprs = "";
+		// String valorContableNetoAccionIndus = "";
+		// String efectivoAccionEmprs = "";
+		// String efectivoAccionIndus = "";
+		// String flujoCajaAccionEmprs = "";
+		// String flujoCajaAccionIndus = "";
+		// String rentabilidadSobreInversionTTMEmprs = "";
+		// String rentabilidadSobreInversionTTMIndus = "";
+		// String rentabilidadSobreInversion5YAEmprs = "";
+		// String rentabilidadSobreInversion5YAIndus = "";
+		// String rentabilidadSobreActivosTTMEmprs = "";
+		// String rentabilidadSobreActivosTTMIndus = "";
+		// String rentabilidadSobreActivos5YAEmprs = "";
+		// String rentabilidadSobreActivos5YAIndus = "";
+		// String rentabilidadSobreFondoPropiosTTMEmprs = "";
+		// String rentabilidadSobreFondoPropiosTTMIndus = "";
+		// String rentabilidadSobreFondoPropios5YAEmprs = "";
+		// String rentabilidadSobreFondoPropios5YAIndus = "";
 		String BPAVsTrimestre1AnioAtrasEmprs = "";
 		String BPAVsTrimestre1AnioAtrasIndus = "";
 		String BPAVs1AnioAtrasEmprs = "";
@@ -286,8 +286,8 @@ public abstract class DriverControllerBase
 		String ventasVs1AnioAtrasIndus = "";
 		String crecimientoVentas5YAEmprs = "";
 		String crecimientoVentas5YAIndus = "";
-		String crecimientoConsumoCapital5YAEmprs = "";
-		String crecimientoConsumoCapital5YAIndus = "";
+		// String crecimientoConsumoCapital5YAEmprs = "";
+		// String crecimientoConsumoCapital5YAIndus = "";
 		String testAcidoEmprs = "";
 		String testAcidoIndus = "";
 		String ratioSolvenciaEmprs = "";
@@ -365,46 +365,46 @@ public abstract class DriverControllerBase
 				// precioValorContableNetoEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
 				// precioValorContableNetoIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
 				// }
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen bruto <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
-				{
-					margenBrutoTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					margenBrutoTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen bruto <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
-				{
-					margenBruto5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					margenBruto5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen operativo <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
-				{
-					margenOperativoTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					margenOperativoTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen operativo <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
-				{
-					margenOperativo5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					margenOperativo5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen Antes de Impuestos <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
-				{
-					margenAntesImpuestosTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					margenAntesImpuestosTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen Antes de Impuestos <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
-				{
-					margenAntesImpuestos5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					margenAntesImpuestos5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen de utilidad neto <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
-				{
-					margenUtilidadNetoTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					margenUtilidadNetoTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen de utilidad neto <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
-				{
-					margenUtilidadNeto5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					margenUtilidadNeto5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen bruto <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
+				// {
+				// margenBrutoTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// margenBrutoTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen bruto <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
+				// {
+				// margenBruto5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// margenBruto5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen operativo <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
+				// {
+				// margenOperativoTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// margenOperativoTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen operativo <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
+				// {
+				// margenOperativo5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// margenOperativo5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen Antes de Impuestos <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
+				// {
+				// margenAntesImpuestosTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// margenAntesImpuestosTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen Antes de Impuestos <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
+				// {
+				// margenAntesImpuestos5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// margenAntesImpuestos5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen de utilidad neto <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
+				// {
+				// margenUtilidadNetoTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// margenUtilidadNetoTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Margen de utilidad neto <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
+				// {
+				// margenUtilidadNeto5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// margenUtilidadNeto5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
 				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Beneficio/Acción <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
 				{
 					beneficioAccionEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
@@ -425,51 +425,51 @@ public abstract class DriverControllerBase
 					bolsaLibrosEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
 					bolsaLibrosIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
 				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Valor Contable Neto/Acción <i class=\"lighterGrayFont arial_11\">MRQ<") != -1)
-				{
-					valorContableNetoAccionEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					valorContableNetoAccionIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Efectivo/Acción <i class=\"lighterGrayFont arial_11\">MRQ<") != -1)
-				{
-					efectivoAccionEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					efectivoAccionIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Flujo de caja/Acción <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
-				{
-					flujoCajaAccionEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					flujoCajaAccionIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre la inversión <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
-				{
-					rentabilidadSobreInversionTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					rentabilidadSobreInversionTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre la inversión <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
-				{
-					rentabilidadSobreInversion5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					rentabilidadSobreInversion5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre los activos <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
-				{
-					rentabilidadSobreActivosTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					rentabilidadSobreActivosTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre los activos <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
-				{
-					rentabilidadSobreActivos5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					rentabilidadSobreActivos5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre fondos propios <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
-				{
-					rentabilidadSobreFondoPropiosTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					rentabilidadSobreFondoPropiosTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre fondos propios <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
-				{
-					rentabilidadSobreFondoPropios5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					rentabilidadSobreFondoPropios5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Valor Contable Neto/Acción <i class=\"lighterGrayFont arial_11\">MRQ<") != -1)
+				// {
+				// valorContableNetoAccionEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// valorContableNetoAccionIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Efectivo/Acción <i class=\"lighterGrayFont arial_11\">MRQ<") != -1)
+				// {
+				// efectivoAccionEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// efectivoAccionIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Flujo de caja/Acción <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
+				// {
+				// flujoCajaAccionEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// flujoCajaAccionIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre la inversión <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
+				// {
+				// rentabilidadSobreInversionTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// rentabilidadSobreInversionTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre la inversión <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
+				// {
+				// rentabilidadSobreInversion5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// rentabilidadSobreInversion5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre los activos <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
+				// {
+				// rentabilidadSobreActivosTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// rentabilidadSobreActivosTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre los activos <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
+				// {
+				// rentabilidadSobreActivos5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// rentabilidadSobreActivos5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre fondos propios <i class=\"lighterGrayFont arial_11\">TTM<") != -1)
+				// {
+				// rentabilidadSobreFondoPropiosTTMEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// rentabilidadSobreFondoPropiosTTMIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Rentabilidad sobre fondos propios <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
+				// {
+				// rentabilidadSobreFondoPropios5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// rentabilidadSobreFondoPropios5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
 				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">BPA(MRQ) vs Trimestre 1 Año Atrás <i class=\"lighterGrayFont arial_11\">MRQ<") != -1)
 				{
 					BPAVsTrimestre1AnioAtrasEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
@@ -500,11 +500,11 @@ public abstract class DriverControllerBase
 					crecimientoVentas5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
 					crecimientoVentas5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
 				}
-				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Crecimiento del Consumo de Capital en 5 Años <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
-				{
-					crecimientoConsumoCapital5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
-					crecimientoConsumoCapital5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
-				}
+				// else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Crecimiento del Consumo de Capital en 5 Años <i class=\"lighterGrayFont arial_11\">5YA<") != -1)
+				// {
+				// crecimientoConsumoCapital5YAEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
+				// crecimientoConsumoCapital5YAIndus = celdaDatoList.get(2).getAttribute("innerHTML").trim();
+				// }
 				else if (celdaDatoList.size() > 1 && celdaDatoList.get(0).getAttribute("innerHTML") != null && celdaDatoList.get(0).getAttribute("innerHTML").indexOf(">Test ácido <i class=\"lighterGrayFont arial_11\">MRQ<") != -1)
 				{
 					testAcidoEmprs = celdaDatoList.get(1).getAttribute("innerHTML").trim();
@@ -651,82 +651,89 @@ public abstract class DriverControllerBase
 		LOGGER.info("Esperamos 500 milisegundos");
 		Thread.sleep(500);
 
-		String loggerExcelLine = "Generando screenshot [" + sector + "] [" + industria + "] [" + nombreEmpresa + "] [" + dividendo + "] [" + capitalizacion + "] [" + per + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + precioVentasEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + precioVentasIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + precioFlujoCajaEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + precioFlujoCajaIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + precioValorContableEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + precioValorContableIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenBrutoTTMEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenBrutoTTMIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenBruto5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenBruto5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenOperativoTTMEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenOperativoTTMIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenOperativo5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenOperativo5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenAntesImpuestosTTMEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenAntesImpuestosTTMIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenAntesImpuestos5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenAntesImpuestos5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenUtilidadNetoTTMEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenUtilidadNetoTTMIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenUtilidadNeto5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + margenUtilidadNeto5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + beneficioAccionEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + beneficioAccionIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + bolsaLibrosEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + bolsaLibrosIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + valorContableNetoAccionEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + valorContableNetoAccionIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + efectivoAccionEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + efectivoAccionIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + flujoCajaAccionEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + flujoCajaAccionIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreInversionTTMEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreInversionTTMIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreInversion5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreInversion5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreActivosTTMEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreActivosTTMIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreActivos5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreActivos5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreFondoPropiosTTMEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreFondoPropiosTTMIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreFondoPropios5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadSobreFondoPropios5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + BPAVsTrimestre1AnioAtrasEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + BPAVsTrimestre1AnioAtrasIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + BPAVs1AnioAtrasEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + BPAVs1AnioAtrasIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + crecimientoBPA5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + crecimientoBPA5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + ventasVsTrimestre1AnioAtrasEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + ventasVsTrimestre1AnioAtrasIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + ventasVs1AnioAtrasEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + ventasVs1AnioAtrasIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + crecimientoVentas5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + crecimientoVentas5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + crecimientoConsumoCapital5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + crecimientoConsumoCapital5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + testAcidoEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + testAcidoIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + ratioSolvenciaEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + ratioSolvenciaIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + deudaLPTotalFondosPropiosEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + deudaLPTotalFondosPropiosIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + totalDeudaTotalFondosPropiosEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + totalDeudaTotalFondosPropiosIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadPorDividendoEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + rentabilidadPorDividendoIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + promedioRendimientoDividendo5YAEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + promedioRendimientoDividendo5YAIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + tasaCrecimientoDividendosEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + tasaCrecimientoDividendosIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + ratioPayoutEmprs + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + ratioPayoutIndus + "] ";
-		loggerExcelLine = loggerExcelLine + "[" + hrefElemento + "] ";
+		String loggerExcelLine = "Generando screenshot --> ";
+
+		loggerExcelLine = loggerExcelLine + ";" + sector;
+		loggerExcelLine = loggerExcelLine + ";" + industria;
+		loggerExcelLine = loggerExcelLine + ";" + nombreEmpresa.replaceAll("&amp;", "&");
+		loggerExcelLine = loggerExcelLine + ";" + dividendo.toString().replaceAll("\\.", ",");
+		loggerExcelLine = loggerExcelLine + ";" + capitalizacion.toString().replaceAll("\\.", ",");
+		loggerExcelLine = loggerExcelLine + ";" + per.replaceAll("N/A", "-");
+		loggerExcelLine = loggerExcelLine + ";" + precioVentasEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + precioVentasIndus;
+		loggerExcelLine = loggerExcelLine + ";" + precioFlujoCajaEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + precioFlujoCajaIndus;
+		loggerExcelLine = loggerExcelLine + ";" + precioValorContableEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + precioValorContableIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + margenBrutoTTMEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + margenBrutoTTMIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + margenBruto5YAEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + margenBruto5YAIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + margenOperativoTTMEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + margenOperativoTTMIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + margenOperativo5YAEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + margenOperativo5YAIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + margenAntesImpuestosTTMEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + margenAntesImpuestosTTMIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + margenAntesImpuestos5YAEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + margenAntesImpuestos5YAIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + margenUtilidadNetoTTMEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + margenUtilidadNetoTTMIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + margenUtilidadNeto5YAEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + margenUtilidadNeto5YAIndus;
+		loggerExcelLine = loggerExcelLine + ";" + beneficioAccionEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + beneficioAccionIndus;
+		loggerExcelLine = loggerExcelLine + ";" + bolsaLibrosEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + bolsaLibrosIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + valorContableNetoAccionEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + valorContableNetoAccionIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + efectivoAccionEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + efectivoAccionIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + flujoCajaAccionEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + flujoCajaAccionIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreInversionTTMEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreInversionTTMIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreInversion5YAEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreInversion5YAIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreActivosTTMEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreActivosTTMIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreActivos5YAEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreActivos5YAIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreFondoPropiosTTMEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreFondoPropiosTTMIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreFondoPropios5YAEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + rentabilidadSobreFondoPropios5YAIndus;
+		loggerExcelLine = loggerExcelLine + ";" + BPAVsTrimestre1AnioAtrasEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + BPAVsTrimestre1AnioAtrasIndus;
+		loggerExcelLine = loggerExcelLine + ";" + BPAVs1AnioAtrasEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + BPAVs1AnioAtrasIndus;
+		loggerExcelLine = loggerExcelLine + ";" + crecimientoBPA5YAEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + crecimientoBPA5YAIndus;
+		loggerExcelLine = loggerExcelLine + ";" + ventasVsTrimestre1AnioAtrasEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + ventasVsTrimestre1AnioAtrasIndus;
+		loggerExcelLine = loggerExcelLine + ";" + ventasVs1AnioAtrasEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + ventasVs1AnioAtrasIndus;
+		loggerExcelLine = loggerExcelLine + ";" + crecimientoVentas5YAEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + crecimientoVentas5YAIndus;
+		// loggerExcelLine = loggerExcelLine + ";" + crecimientoConsumoCapital5YAEmprs;
+		// loggerExcelLine = loggerExcelLine + ";" + crecimientoConsumoCapital5YAIndus;
+		loggerExcelLine = loggerExcelLine + ";" + testAcidoEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + testAcidoIndus;
+		loggerExcelLine = loggerExcelLine + ";" + ratioSolvenciaEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + ratioSolvenciaIndus;
+		loggerExcelLine = loggerExcelLine + ";" + deudaLPTotalFondosPropiosEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + deudaLPTotalFondosPropiosIndus;
+		loggerExcelLine = loggerExcelLine + ";" + totalDeudaTotalFondosPropiosEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + totalDeudaTotalFondosPropiosIndus;
+		loggerExcelLine = loggerExcelLine + ";" + rentabilidadPorDividendoEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + rentabilidadPorDividendoIndus;
+		loggerExcelLine = loggerExcelLine + ";" + promedioRendimientoDividendo5YAEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + promedioRendimientoDividendo5YAIndus;
+		loggerExcelLine = loggerExcelLine + ";" + tasaCrecimientoDividendosEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + tasaCrecimientoDividendosIndus;
+		loggerExcelLine = loggerExcelLine + ";" + ratioPayoutEmprs;
+		loggerExcelLine = loggerExcelLine + ";" + ratioPayoutIndus;
+		loggerExcelLine = loggerExcelLine + ";" + hrefElemento;
 
 		LOGGER.info(loggerExcelLine);
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
