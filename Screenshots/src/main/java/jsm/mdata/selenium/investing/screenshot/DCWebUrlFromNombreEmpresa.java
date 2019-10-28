@@ -1277,8 +1277,11 @@ public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 					WebElement textBoxBusqueda = driver.findElement(By.className("searchText"));
 					textBoxBusqueda.clear();
 					textBoxBusqueda.sendKeys(nombreEmpresa);
-					new WebDriverWait(driver, 10).until(ExpectedConditions.attributeToBe(By.className("js-footer-link-text"), "innerHTML", nombreEmpresa));
-					clickElementByClassName(driver, driver, "js-footer-link");
+					// new WebDriverWait(driver, 10).until(ExpectedConditions.attributeToBe(By.className("js-footer-link-text"), "innerHTML", nombreEmpresa));
+					// clickElementByClassName(driver, driver, "js-footer-link");
+					LOGGER.info("Esperamos 100 milisegundos");
+					Thread.sleep(100);
+					clickElementByClassName(driver, driver, "js-magnifying-glass-icon");
 					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("js-inner-all-results-quotes-wrapper")));
 					WebElement tablaResultados = driver.findElement(By.className("js-inner-all-results-quotes-wrapper"));
 					List<WebElement> listaResultados = tablaResultados.findElements(By.tagName("a"));
