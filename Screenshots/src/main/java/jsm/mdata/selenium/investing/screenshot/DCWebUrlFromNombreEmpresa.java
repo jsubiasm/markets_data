@@ -1268,6 +1268,7 @@ public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 				try
 				{
 					nombreEmpresa = listaEmpresas.get(empresaIdx);
+
 					LOGGER.info("Buscando empresa [" + nombreEmpresa + "]");
 					if (errorRetry > 0)
 					{
@@ -1277,8 +1278,7 @@ public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 					WebElement textBoxBusqueda = driver.findElement(By.className("searchText"));
 					textBoxBusqueda.clear();
 					textBoxBusqueda.sendKeys(nombreEmpresa);
-					// new WebDriverWait(driver, 10).until(ExpectedConditions.attributeToBe(By.className("js-footer-link-text"), "innerHTML", nombreEmpresa));
-					// clickElementByClassName(driver, driver, "js-footer-link");
+
 					LOGGER.info("Esperamos 100 milisegundos");
 					Thread.sleep(100);
 					clickElementByClassName(driver, driver, "js-magnifying-glass-icon");
