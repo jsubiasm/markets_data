@@ -66,6 +66,10 @@ public abstract class DriverControllerBase
 		LOGGER.info("Cargando URL [" + hrefElemento + "] ");
 		driver.get(hrefElemento);
 
+		LOGGER.info("Buscando nombre de empresa");
+		WebElement instrumentHead = driver.findElement(By.className("instrumentHead"));
+		String nombreEmpresa = instrumentHead.findElements(By.tagName("h1")).get(0).getAttribute("innerHTML").trim();
+
 		Double capitalizacion = null;
 		if (minCapitalizacion != null)
 		{
@@ -94,7 +98,7 @@ public abstract class DriverControllerBase
 							capitalizacion = Double.valueOf(capitalizacionStr);
 							if (capitalizacion < minCapitalizacion)
 							{
-								LOGGER.info("No se obtiene el chart de [" + hrefElemento + "] porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
+								LOGGER.info("No se obtiene el chart de [" + nombreEmpresa + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
 								return;
 							}
 							else
@@ -104,7 +108,7 @@ public abstract class DriverControllerBase
 						}
 						else
 						{
-							LOGGER.info("No se obtiene el chart de [" + hrefElemento + "] porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
+							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
 							return;
 						}
 					}
@@ -161,10 +165,9 @@ public abstract class DriverControllerBase
 			}
 		}
 
-		LOGGER.info("Buscando sector, industria y nombre de empresa");
+		LOGGER.info("Buscando sector e industria");
 		String industria = "";
 		String sector = "";
-		String nombreEmpresa = "";
 		WebElement companyProfileHeader = driver.findElement(By.className("companyProfileHeader"));
 		List<WebElement> listaDatosProfile = companyProfileHeader.findElements(By.tagName("div"));
 		for (WebElement datoProfile : listaDatosProfile)
@@ -178,8 +181,6 @@ public abstract class DriverControllerBase
 				sector = datoProfile.findElements(By.tagName("a")).get(0).getAttribute("innerHTML").trim();
 			}
 		}
-		WebElement instrumentHead = driver.findElement(By.className("instrumentHead"));
-		nombreEmpresa = instrumentHead.findElements(By.tagName("h1")).get(0).getAttribute("innerHTML").trim();
 
 		LOGGER.info("Buscando PER");
 		String per = "";
