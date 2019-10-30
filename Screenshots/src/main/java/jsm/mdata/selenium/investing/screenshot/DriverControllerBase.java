@@ -116,7 +116,7 @@ public abstract class DriverControllerBase
 			}
 			catch (Exception e)
 			{
-				LOGGER.error("Error al obtener la Capitalización", e);
+				LOGGER.error("Error al obtener la Capitalización de [" + nombreEmpresa + "] [" + hrefElemento + "]", e);
 				return;
 			}
 		}
@@ -139,7 +139,7 @@ public abstract class DriverControllerBase
 						String dividendoStr = floatLangBase2.getAttribute("innerHTML");
 						if (dividendoStr.indexOf("N/A") != -1)
 						{
-							LOGGER.info("No se obtiene el chart porque la RPD [" + dividendoStr + "] no está disponible");
+							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa + "] [" + hrefElemento + "] porque la RPD [" + dividendoStr + "] no está disponible");
 							return;
 						}
 						dividendoStr = dividendoStr.substring(dividendoStr.indexOf("(") + 1, dividendoStr.indexOf(")") - 1);
@@ -148,7 +148,7 @@ public abstract class DriverControllerBase
 						dividendo = Double.valueOf(dividendoStr);
 						if (dividendo < minDividendo)
 						{
-							LOGGER.info("No se obtiene el chart porque la RPD [" + dividendo + "] es menor que la RPD mínima [" + minDividendo + "] ");
+							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa + "] [" + hrefElemento + "] porque la RPD [" + dividendo + "] es menor que la RPD mínima [" + minDividendo + "] ");
 							return;
 						}
 						else
@@ -160,7 +160,7 @@ public abstract class DriverControllerBase
 			}
 			catch (Exception e)
 			{
-				LOGGER.error("Error al obtener la RPD", e);
+				LOGGER.error("Error al obtener la RPD de [" + nombreEmpresa + "] [" + hrefElemento + "]", e);
 				return;
 			}
 		}
