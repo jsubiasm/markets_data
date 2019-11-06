@@ -314,7 +314,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/edinburgh-investment-trust");
 		listaURL_09.add("https://es.investing.com/equities/edison-intl");
 		listaURL_09.add("https://es.investing.com/equities/edp");
-		listaURL_09.add("https://es.investing.com/equities/edp-energias-de-portugal-sa");
 		listaURL_09.add("https://es.investing.com/equities/eiffage");
 		listaURL_09.add("https://es.investing.com/equities/eli-lilly-and-co");
 		listaURL_09.add("https://es.investing.com/equities/elia-system-op.");
@@ -713,7 +712,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/saint-gobain");
 		listaURL_09.add("https://es.investing.com/equities/sampo-plc");
 		listaURL_09.add("https://es.investing.com/equities/samsonite-international-sa");
-		listaURL_09.add("https://es.investing.com/equities/sanofi");
 		listaURL_09.add("https://es.investing.com/equities/sanofi-aventis");
 		listaURL_09.add("https://es.investing.com/equities/sap-ag");
 		listaURL_09.add("https://es.investing.com/equities/saputo-inc");
