@@ -656,8 +656,8 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/prologis");
 		listaURL_09.add("https://es.investing.com/equities/prosegur-sa");
 		listaURL_09.add("https://es.investing.com/equities/prosperity-bancshares-inc");
+		listaURL_09.add("https://es.investing.com/equities/prudential");
 		listaURL_09.add("https://es.investing.com/equities/prudential-fin");
-		listaURL_09.add("https://es.investing.com/equities/prudential-plc-cap-sec");
 		listaURL_09.add("https://es.investing.com/equities/prysmian");
 		listaURL_09.add("https://es.investing.com/equities/publicis-groupe");
 		listaURL_09.add("https://es.investing.com/equities/quaker-chemical-corp");
