@@ -4,6 +4,7 @@
 package jsm.mdata.selenium.yahoo.screenshot;
 
 import java.io.File;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -895,7 +896,7 @@ public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 	/**
 	 * 
 	 */
-	private final static String URL_INICIAL = "https://es.finance.yahoo.com";
+	private final static String URL_INICIAL = "https://search.yahoo.com/search?p=";
 
 	/**
 	 * @param args
@@ -952,39 +953,26 @@ public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 						LOGGER.info("Reintento [" + errorRetry + "]");
 					}
 
-					LOGGER.info("Cargando URL inicial");
-					driver.get(URL_INICIAL);
-					new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("yfin-usr-qry")));
-
-					LOGGER.info("Refrescando pantalla");
-					driver.navigate().refresh();
-					new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("yfin-usr-qry")));
-					WebElement textBoxBusqueda = driver.findElement(By.id("yfin-usr-qry"));
-
-					textBoxBusqueda.click();
-					textBoxBusqueda.clear();
-					textBoxBusqueda.sendKeys(nombreEmpresa);
-
-					LOGGER.info("Esperamos 1000 milisegundos");
-					Thread.sleep(1000);
-
-					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("ul")));
-					List<WebElement> posiblesListas = driver.findElements(By.tagName("ul"));
-					for (WebElement posibleLista : posiblesListas)
+					String urlYahooSearch = URL_INICIAL + URLEncoder.encode("yahoo finance " + nombreEmpresa, "UTF-8");
+					LOGGER.info("Cargando URL de búsqueda [" + urlYahooSearch + "]");
+					driver.get(urlYahooSearch);
+					new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("a")));
+					List<WebElement> listaLinks = driver.findElements(By.tagName("a"));
+					for (WebElement link : listaLinks)
 					{
-						if (posibleLista.getAttribute("innerHTML").indexOf("Equity") != -1)
+						String linkHref = link.getAttribute("href");
+						if (linkHref != null && linkHref.indexOf("finance.yahoo.com/quote") != -1)
 						{
-							posibleLista.findElements(By.tagName("li")).get(0).click();
+							driver.get(linkHref);
 							break;
 						}
 					}
 
-					// WebDriverBase.clickElementById(driver, driver, "search-button");
-
+					String resultHrefElemento = driver.getCurrentUrl();
+					LOGGER.info("Accediendo a la página de datos [" + resultHrefElemento + "]");
 					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("quote-header-info")));
 					WebElement infoCabecera = driver.findElement(By.id("quote-header-info"));
 					String resultNombreEmpresa = infoCabecera.findElements(By.tagName("h1")).get(0).getAttribute("innerHTML").trim();
-					String resultHrefElemento = driver.getCurrentUrl();
 					WebElement tablaDatos = driver.findElement(By.id("quote-summary"));
 					List<WebElement> listaFilasTabla = tablaDatos.findElements(By.tagName("tr"));
 					String resultCAP = null;
@@ -992,20 +980,22 @@ public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 					String resultRPD = null;
 					for (WebElement filaTabla : listaFilasTabla)
 					{
-						if (filaTabla.getAttribute("innerHTML").indexOf("Capitalización de mercado") != -1)
+						if (filaTabla.getAttribute("innerHTML").indexOf("Market Cap") != -1)
 						{
 							List<WebElement> elementosFila = filaTabla.findElements(By.tagName("span"));
 							String capitalizacionStr = elementosFila.get(1).getAttribute("innerHTML").trim();
-							capitalizacionStr = capitalizacionStr.replaceAll("\\.", "");
+							capitalizacionStr = capitalizacionStr.replaceAll(",", "");
+							capitalizacionStr = capitalizacionStr.replaceAll("\\.", ",");
 							resultCAP = capitalizacionStr.substring(0, capitalizacionStr.length() - 1);
 							resultCAP_UM = capitalizacionStr.substring(capitalizacionStr.length() - 1, capitalizacionStr.length());
 						}
-						else if (filaTabla.getAttribute("innerHTML").indexOf("Previsión de rentabilidad y dividendo") != -1)
+						else if (filaTabla.getAttribute("innerHTML").indexOf("Forward Dividend &amp; Yield") != -1)
 						{
 							List<WebElement> elementosFila = filaTabla.findElements(By.tagName("td"));
 							resultRPD = elementosFila.get(1).getAttribute("innerHTML").trim();
 							resultRPD = resultRPD.substring(resultRPD.indexOf("(") + 1, resultRPD.indexOf(")") - 1);
-							resultRPD = resultRPD.replaceAll("\\.", "");
+							resultRPD = resultRPD.replaceAll(",", "");
+							resultRPD = resultRPD.replaceAll("\\.", ",");
 						}
 					}
 

@@ -43,7 +43,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>jsm.mdata.selenium.yahoo.screenshot.DCWebUrlFromNombreEmpresa_v2</mainClass>
+							<mainClass>jsm.mdata.selenium.yahoo.screenshot.DCWebUrlFromNombreEmpresa</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
