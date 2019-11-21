@@ -10,7 +10,6 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,18 +18,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jsm.mdata.selenium.common.WebDriverBase;
+
 /**
  * @author Empleado
  *
  */
 public abstract class DriverControllerBase
 {
-
-	/**
-	 * Web Driver
-	 */
-	protected static final String WEB_DRIVER_PROPERTY = "webdriver.chrome.driver";
-	protected static final String WEB_DRIVER_EXE = "C:\\_PELAYO\\Software\\Selenium\\drivers\\chromedriver.exe";
 
 	/**
 	 * Rutas
@@ -43,11 +38,6 @@ public abstract class DriverControllerBase
 	protected static final String TF_DIARIO = "interval=D";
 	protected static final String TF_SEMANAL = "interval=W";
 	protected static final String TF_MENSUAL = "interval=M";
-
-	/**
-	 * Formatos
-	 */
-	private static final String CHARSET = "UTF-8";
 
 	/**
 	 * Logger
@@ -236,8 +226,8 @@ public abstract class DriverControllerBase
 		String tasaCrecimientoDividendosIndus = "";
 		String ratioPayoutEmprs = "";
 		String ratioPayoutIndus = "";
-		clickElementByLinkText(driver, driver, "Fundamental");
-		clickElementByLinkText(driver, driver, "Ratios");
+		WebDriverBase.clickElementByLinkText(driver, driver, "Fundamental");
+		WebDriverBase.clickElementByLinkText(driver, driver, "Ratios");
 		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("reportTbl")));
 		List<WebElement> reportTableList = driver.findElements(By.className("reportTbl"));
 		for (WebElement reportTable : reportTableList)
@@ -340,7 +330,7 @@ public abstract class DriverControllerBase
 		}
 
 		LOGGER.info("Accediendo gráfico técnico");
-		clickElementByLinkText(driver, driver, "Gráfico");
+		WebDriverBase.clickElementByLinkText(driver, driver, "Gráfico");
 
 		LOGGER.info("Recuperando URL primer IFrame");
 		List<WebElement> listaIFrames = driver.findElements(By.tagName("iframe"));
@@ -379,7 +369,7 @@ public abstract class DriverControllerBase
 				continue;
 			}
 			LOGGER.info("Seleccionando gráfico de velas");
-			clickElementByTagName(driver, divQuick, "span");
+			WebDriverBase.clickElementByTagName(driver, divQuick, "span");
 		}
 
 		LOGGER.info("Buscando botonera escala gráfico");
@@ -391,7 +381,7 @@ public abstract class DriverControllerBase
 			if (elementIdx2 == 2)
 			{
 				LOGGER.info("Seleccionando escala logarítmica");
-				clickElement(driver, boton);
+				WebDriverBase.clickElement(driver, boton);
 			}
 			elementIdx2++;
 		}
@@ -445,7 +435,7 @@ public abstract class DriverControllerBase
 		loggerExcelLine = loggerExcelLine + ";" + hrefElemento;
 		LOGGER.info(loggerExcelLine);
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + dividendo.intValue() + "\\" + URLEncoder.encode(hrefElemento, CHARSET) + timeFrame + ".png"));
+		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + dividendo.intValue() + "\\" + URLEncoder.encode(hrefElemento, WebDriverBase.CHARSET) + timeFrame + ".png"));
 	}
 
 	/**
@@ -456,58 +446,12 @@ public abstract class DriverControllerBase
 		LOGGER.info("Intentando cerrar popup bloqueante");
 		try
 		{
-			clickElementByClassName(driver, driver, "popupCloseIcon");
+			WebDriverBase.clickElementByClassName(driver, driver, "popupCloseIcon");
 		}
 		catch (Exception e)
 		{
 			LOGGER.error("Error intentando cerrar popup bloqueante", e);
 		}
-	}
-
-	/**
-	 * @param driver
-	 * @param context
-	 * @param linkText
-	 */
-	protected static void clickElementByLinkText(WebDriver driver, SearchContext context, String linkText)
-	{
-		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.linkText(linkText)));
-		WebElement element = context.findElement(By.linkText(linkText));
-		element.click();
-	}
-
-	/**
-	 * @param driver
-	 * @param context
-	 * @param className
-	 */
-	protected static void clickElementByClassName(WebDriver driver, SearchContext context, String className)
-	{
-		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.className(className)));
-		WebElement element = context.findElement(By.className(className));
-		element.click();
-	}
-
-	/**
-	 * @param driver
-	 * @param context
-	 * @param tagName
-	 */
-	protected static void clickElementByTagName(WebDriver driver, SearchContext context, String tagName)
-	{
-		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.tagName(tagName)));
-		WebElement element = context.findElement(By.tagName(tagName));
-		element.click();
-	}
-
-	/**
-	 * @param driver
-	 * @param element
-	 */
-	protected static void clickElement(WebDriver driver, WebElement element)
-	{
-		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(element));
-		element.click();
 	}
 
 }

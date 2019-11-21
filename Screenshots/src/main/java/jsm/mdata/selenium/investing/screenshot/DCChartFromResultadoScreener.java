@@ -18,6 +18,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jsm.mdata.selenium.common.URLGroup;
+import jsm.mdata.selenium.common.WebDriverBase;
+
 /**
  * @author Empleado
  *
@@ -148,7 +151,7 @@ public class DCChartFromResultadoScreener extends DriverControllerBase
 		FileUtils.cleanDirectory(new File(DOWNLOAD_PATH));
 
 		LOGGER.info("Iniciando driver");
-		System.setProperty(WEB_DRIVER_PROPERTY, WEB_DRIVER_EXE);
+		System.setProperty(WebDriverBase.WEB_DRIVER_PROPERTY, WebDriverBase.WEB_DRIVER_EXE);
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		WebDriver driver = new ChromeDriver(options);

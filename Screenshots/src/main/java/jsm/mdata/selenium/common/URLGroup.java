@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jsm.mdata.selenium.investing.screenshot;
+package jsm.mdata.selenium.common;
 
 import java.util.List;
 
