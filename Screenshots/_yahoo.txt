@@ -1,0 +1,841 @@
+1,3;B;2,28;1st Source Corporation (SRCE);https://finance.yahoo.com/quote/SRCE
+24,542;B;N/;3i Group plc (TGOPF);https://finance.yahoo.com/quote/TGOPF/news?p=TGOPF
+2,607;B;3,15;3i Infrastructure plc (3IN.L);https://finance.yahoo.com/quote/3IN.L
+96,476;B;3,37;3M Company (MMM);https://finance.yahoo.com/quote/MMM/news?p=MMM
+2,564;B;1,86;ABM Industries Incorporated (ABM);https://finance.yahoo.com/quote/ABM
+25,042;B;4,12;Aena S.M.E., S.A. (AENA.MC);https://finance.yahoo.com/quote/AENA.MC
+113,085;B;0,86;ASML Holding N.V. (ASML);https://finance.yahoo.com/quote/ASML/news?p=ASML
+271,6;B;5,49;AT&T Inc. (T);https://finance.yahoo.com/quote/T/news?p=T
+1,332;B;0,84;Atrion Corporation (ATRI);https://finance.yahoo.com/quote/ATRI
+65,788;B;5,46;AXA SA (AXAHY);https://finance.yahoo.com/quote/AXAHY
+4,926;B;2,72;AXIS Capital Holdings Limited (AXS);https://finance.yahoo.com/quote/AXS
+4,087;B;N/;Aalberts NV (AALBF);https://finance.yahoo.com/quote/AALBF/news?p=AALBF
+3,869;B;0,27;Aaron's, Inc. (AAN);https://finance.yahoo.com/quote/AAN/news?p=AAN
+128,953;B;5,30;AbbVie Inc. (ABBV);https://finance.yahoo.com/quote/ABBV/news?p=ABBV
+148,356;B;1,52;Abbott Laboratories (ABT);https://finance.yahoo.com/quote/ABT/news?p=ABT
+3,516;B;1,29;Abcam plc (ABCZY);https://finance.yahoo.com/quote/ABCZY/news?p=ABCZY
+125,736;B;1,88;Accenture plc (ACN);https://finance.yahoo.com/quote/ACN/news?p=ACN
+5,537;B;3,82;Acciona, S.A. (ACXIF);https://finance.yahoo.com/quote/ACXIF/news?p=ACXIF
+10,231;B;2,70;Accor SA (AC.PA);https://finance.yahoo.com/quote/AC.PA
+2,814;B;4,36;Acerinox, S.A. (ANIOY);https://finance.yahoo.com/quote/ANIOY/news?p=ANIOY
+4,583;B;1,65;Ackermans & Van Haaren NV (ACKB.BR);https://finance.yahoo.com/quote/ACKB.BR
+10,534;B;5,44;ACS, Actividades de Construccion y Servicios, S.A. (ACS.MC);https://finance.yahoo.com/quote/ACS.MC
+41,551;B;0,68;Activision Blizzard, Inc. (ATVI);https://finance.yahoo.com/quote/ATVI/news?p=ATVI
+59,839;B;1,25;adidas AG (ADDYY);https://finance.yahoo.com/quote/ADDYY/news?p=ADDYY
+9,061;B;7,30;Aegon N.V. (AEG);https://finance.yahoo.com/quote/AEG
+39,732;B;2,00;Aflac Incorporated (AFL);https://finance.yahoo.com/quote/AFL/news?p=AFL
+10,106;B;4,12;ageas SA/NV (AGS.BR);https://finance.yahoo.com/quote/AGS.BR
+56,761;B;1,99;L'Air Liquide S.A. (AI.PA);https://finance.yahoo.com/quote/AI.PA
+52,422;B;1,95;Air Products and Chemicals, Inc. (APD);https://finance.yahoo.com/quote/APD
+104,775;B;1,22;Airbus SE (AIR.PA);https://finance.yahoo.com/quote/AIR.PA
+19,537;B;3,37;Akzo Nobel N.V. (AKZOF);https://finance.yahoo.com/quote/AKZOF/news?p=AKZOF
+-;-;-;Albemarle Corp;-
+95,594;B;2,16;Alfa Laval AB (publ) (ALFA.ST);https://finance.yahoo.com/quote/ALFA.ST
+7,299;B;4,07;Algonquin Power & Utilities Corp. (AQN);https://finance.yahoo.com/quote/AQN
+35,672;B;0,59;Alimentation Couche-Tard Inc. (ANCUF);https://finance.yahoo.com/quote/ANCUF/news?p=ANCUF
+3,64;B;N/;Alliance Trust PLC (ALITF);https://finance.yahoo.com/quote/ALITF/news?p=ALITF
+12,772;B;2,67;Alliant Energy Corporation (LNT);https://finance.yahoo.com/quote/LNT/news?p=LNT
+92,005;B;4,12;Allianz SE (ALV.DE);https://finance.yahoo.com/quote/ALV.DE
+4,788;B;2,94;Allied Properties Real Estate Investment Trust (APYRF);https://finance.yahoo.com/quote/APYRF/news?p=APYRF
+N/;A;N/;Almirall, S.A. (LBTSF);https://finance.yahoo.com/quote/LBTSF/news?p=LBTSF
+898,285;B;N/;Alphabet Inc. (GOOG);https://finance.yahoo.com/quote/GOOG/
+90,511;B;7,16;Altria Group, Inc. (MO);https://finance.yahoo.com/quote/MO/news?p=MO
+30,628;B;1,85;Amadeus IT Group, S.A. (AMS.MC);https://finance.yahoo.com/quote/AMS.MC
+23,783;B;4,53;Amcor plc (AMC.AX);https://finance.yahoo.com/quote/AMC.AX
+2,596;B;1,10;American Equity Investment Life Holding Company (AEL);https://finance.yahoo.com/quote/AEL
+97,62;B;1,43;American Express Company (AXP);https://finance.yahoo.com/quote/AXP/
+9,814;B;1,67;American Financial Group, Inc. (AFG);https://finance.yahoo.com/quote/AFG
+3,177;B;1,43;American States Water Company (AWR);https://finance.yahoo.com/quote/AWR/news?p=AWR
+96,517;B;1,66;American Tower Corporation (REIT) (AMT);https://finance.yahoo.com/quote/AMT/news?p=AMT
+21,796;B;1,66;American Water Works Company, Inc. (AWK);https://finance.yahoo.com/quote/AWK
+20,066;B;2,45;Ameriprise Financial, Inc. (AMP);https://finance.yahoo.com/quote/AMP
+18,028;B;1,83;AmerisourceBergen Corporation (ABC);https://finance.yahoo.com/quote/ABC
+133,994;B;2,58;Amgen Inc. (AMGN);https://finance.yahoo.com/quote/AMGN/news?p=AMGN
+40,11;B;1,99;Analog Devices, Inc. (ADI);https://finance.yahoo.com/quote/ADI/news?p=ADI
+154,091;B;2,54;Anheuser-Busch InBev SA/NV (BUD);https://finance.yahoo.com/quote/BUD
+1,189;T;1,16;Apple Inc. (AAPL);https://finance.yahoo.com/quote/AAPL/news?p=AAPL
+2,392;B;2,00;Applied Industrial Technologies, Inc. (AIT);https://finance.yahoo.com/quote/AIT
+55,102;B;1,38;Applied Materials, Inc. (AMAT);https://finance.yahoo.com/quote/AMAT/news?p=AMAT
+7,077;B;1,30;AptarGroup, Inc. (ATR);https://finance.yahoo.com/quote/ATR/news?p=ATR
+9,495;B;2,16;Aqua America, Inc. (WTR);https://finance.yahoo.com/quote/WTR/news?p=WTR
+16,2;B;1,22;ArcelorMittal (MT);https://finance.yahoo.com/quote/MT
+23,659;B;3,25;Archer-Daniels-Midland Company (ADM);https://finance.yahoo.com/quote/ADM
+7,118;B;2,63;Arkema S.A. (AKE.PA);https://finance.yahoo.com/quote/AKE.PA
+4,41;B;1,45;Ashland Global Holdings Inc. (ASH);https://finance.yahoo.com/quote/ASH
+3,344;B;3,42;Ashmore Group PLC (ASHM.L);https://finance.yahoo.com/quote/ASHM.L
+13,717;B;2,79;Ashtead Group plc (ASHTY);https://finance.yahoo.com/quote/ASHTY/news?p=ASHTY
+19,436;B;1,90;Associated British Foods plc (ABF.L);https://finance.yahoo.com/quote/ABF.L
+8,032;B;1,90;Assurant, Inc. (AIZ);https://finance.yahoo.com/quote/AIZ/news?p=AIZ
+122,093;B;2,94;AstraZeneca PLC (AZNCF);https://finance.yahoo.com/quote/AZNCF/news?p=AZNCF
+4,309;B;3,24;ATCO Ltd. (ACLLF);https://finance.yahoo.com/quote/ACLLF/news?p=ACLLF
+19,933;B;N/;Atlantia S.p.A. (ATASF);https://finance.yahoo.com/quote/ATASF/news?p=ATASF
+410,574;B;0,87;Atlas Copco AB (ATCO-A.ST);https://finance.yahoo.com/quote/ATCO-A.ST
+12,983;B;2,12;Atmos Energy Corporation (ATO);https://finance.yahoo.com/quote/ATO/news?p=ATO
+8,713;B;2,38;Atos SE (AEXAF);https://finance.yahoo.com/quote/AEXAF/news?p=AEXAF
+73,81;B;2,13;Automatic Data Processing, Inc. (ADP);https://finance.yahoo.com/quote/ADP
+3,13;B;3,30;Avista Corporation (AVA);https://finance.yahoo.com/quote/AVA
+15,523;B;7,23;Aviva plc (AV.L);https://finance.yahoo.com/quote/AV.L
+6,814;B;3,32;Axel Springer SE (SPR.DE);https://finance.yahoo.com/quote/SPR.DE/
+1,064;B;11,67;B&G Foods, Inc. (BGS);https://finance.yahoo.com/quote/BGS
+23,788;B;3,03;BAE Systems plc (BAESY);https://finance.yahoo.com/quote/BAESY/news?p=BAESY
+63,367;B;4,60;BASF SE (BAS.DE);https://finance.yahoo.com/quote/BAS.DE
+43,233;B;5,01;BCE Inc. (BCE);https://finance.yahoo.com/quote/BCE/news?p=BCE
+128,543;B;5,30;BHP Group (BHP);https://finance.yahoo.com/quote/BHP
+110,52;B;7,19;BHP Group (BBL);https://finance.yahoo.com/quote/BBL
+2,751;B;5,59;Societe BIC SA (BB.PA);https://finance.yahoo.com/quote/BB.PA
+64,615;B;5,91;BNP Paribas SA (BNP.PA);https://finance.yahoo.com/quote/BNP.PA
+70,167;B;6,06;BNP Paribas SA (BNPQY);https://finance.yahoo.com/quote/BNPQY/news?p=BNPQY
+5,793;B;2,50;BOK Financial Corporation (BOKF);https://finance.yahoo.com/quote/BOKF
+130,513;B;6,39;BP p.l.c. (BP);https://finance.yahoo.com/quote/BP/news?p=BP
+-;-;-;BT Group PLC;-
+1,743;B;1,15;Badger Meter, Inc. (BMI);https://finance.yahoo.com/quote/BMI/news?p=BMI
+3,219;B;0,47;Balchem Corporation (BCPC);https://finance.yahoo.com/quote/BCPC
+22,062;B;0,89;Ball Corporation (BLL);https://finance.yahoo.com/quote/BLL/news?p=BLL
+8,258;B;3,12;Baloise Holding AG (BLHEY);https://finance.yahoo.com/quote/BLHEY/
+1,914;B;2,17;BancFirst Corporation (BANF);https://finance.yahoo.com/quote/BANF/news?p=BANF
+34,645;B;5,53;Banco Bilbao Vizcaya Argentaria, S.A. (BBVA);https://finance.yahoo.com/quote/BBVA
+65,123;B;7,72;Banco Santander, S.A. (SAN);https://finance.yahoo.com/quote/SAN
+6,129;B;1,93;Banco de Sabadell, S.A. (BNDSF);https://finance.yahoo.com/quote/BNDSF/news?p=BNDSF
+3,767;B;3,41;Bank OZK (OZK);https://finance.yahoo.com/quote/OZK/
+294,05;B;2,19;Bank of America Corporation (BAC);https://finance.yahoo.com/quote/BAC/news?p=BAC
+48,849;B;4,10;Bank of Montreal (BMO);https://finance.yahoo.com/quote/BMO/news?p=BMO
+70,283;B;4,79;The Bank of Nova Scotia (BNS);https://finance.yahoo.com/quote/BNS
+null;null;null;Bankers Investment Trust Plc (BNKR.L);https://uk.finance.yahoo.com/quote/BNKR.L/
+5,3;B;6,53;Bankia, S.A. (BNKXF);https://finance.yahoo.com/quote/BNKXF/news?p=BNKXF
+6,104;B;4,12;Bankinter, S.A. (BKNIY);https://finance.yahoo.com/quote/BKNIY/news?p=BKNIY
+2,958;B;1,09;Barnes Group Inc. (B);https://finance.yahoo.com/quote/B/news?p=B
+30,361;B;1,17;Barrick Gold Corporation (GOLD);https://finance.yahoo.com/quote/GOLD
+63,917;B;3,99;Bayer Aktiengesellschaft (BAYN.DE);https://finance.yahoo.com/quote/BAYN.DE
+47,366;B;4,76;Bayerische Motoren Werke Aktiengesellschaft (BMW.DE);https://finance.yahoo.com/quote/BMW.DE
+12,177;B;2,27;Bancolombia S.A. (CIB);https://finance.yahoo.com/quote/CIB
+2,842;B;2,20;Beazley plc (BEZ.L);https://finance.yahoo.com/quote/BEZ.L
+66,619;B;1,25;Becton, Dickinson and Company (BDX);https://finance.yahoo.com/quote/BDX
+23,692;B;0,66;Beiersdorf Aktiengesellschaft (BEI.DE);https://finance.yahoo.com/quote/BEI.DE
+4,028;B;4,55;Bellway p.l.c. (BWY.L);https://finance.yahoo.com/quote/BWY.L
+N/;A;N/;Bemis Company, Inc. (BMS);https://finance.yahoo.com/quote/BMS
+19,544;B;2,65;Best Buy Co., Inc. (BBY);https://finance.yahoo.com/quote/BBY/news?p=BBY
+9,302;B;0,44;bioMerieux S.A. (BIM.PA);https://finance.yahoo.com/quote/BIM.PA
+4,748;B;2,79;Black Hills Corporation (BKH);https://finance.yahoo.com/quote/BKH/news?p=BKH
+75,93;B;2,68;BlackRock, Inc. (BLK);https://finance.yahoo.com/quote/BLK/news?p=BLK
+208,745;B;2,24;The Boeing Company (BA);https://finance.yahoo.com/quote/BA
+2,972;B;5,51;Bolsas y Mercados Espanoles, Sociedad Holding de Mercados y Sistemas Financieros, S.A. (BME.MC);https://finance.yahoo.com/quote/BME.MC
+8,677;B;1,62;BorgWarner Inc. (BWA);https://finance.yahoo.com/quote/BWA/news?p=BWA
+15,19;B;4,64;Bouygues SA (BOUYF);https://finance.yahoo.com/quote/BOUYF/news?p=BOUYF
+1,724;B;5,30;Bovis Homes Group PLC (BVS.L);https://finance.yahoo.com/quote/BVS.L
+2,906;B;0,29;Boyd Group Income Fund (BFGIF);https://finance.yahoo.com/quote/BFGIF/news?p=BFGIF
+2,951;B;1,58;Brady Corporation (BRC);https://finance.yahoo.com/quote/BRC
+8,118;B;2,50;Brenntag AG (BNTGF);https://finance.yahoo.com/quote/BNTGF/news?p=BNTGF
+1,597;B;3,47;Brinker International, Inc. (EAT);https://finance.yahoo.com/quote/EAT/news?p=EAT
+91,908;B;2,90;Bristol-Myers Squibb Company (BMY);https://finance.yahoo.com/quote/BMY/news?p=BMY
+68,254;B;7,03;British American Tobacco p.l.c. (BATS.L);https://finance.yahoo.com/quote/BATS.L
+5,124;B;5,65;British Land Company Plc (BLND.L);https://finance.yahoo.com/quote/BLND.L
+2,526;B;2,96;Britvic plc (BVIC.L);https://finance.yahoo.com/quote/BVIC.L
+123,63;B;3,34;Broadcom Inc. (AVGO);https://finance.yahoo.com/quote/AVGO/
+14,037;B;1,76;Broadridge Financial Solutions, Inc. (BR);https://finance.yahoo.com/quote/BR/news?p=BR
+57,98;B;1,12;Brookfield Asset Management Inc. (BAM);https://finance.yahoo.com/quote/BAM/news?p=BAM
+15,537;B;3,84;Brookfield Infrastructure Partners L.P. (BIP);https://finance.yahoo.com/quote/BIP
+17,961;B;6,90;Brookfield Property Partners L.P. (BPY);https://finance.yahoo.com/quote/BPY
+15,641;B;5,95;Brookfield Renewable Partners L.P. (BEP-PE.TO);https://finance.yahoo.com/quote/BEP-PE.TO/
+8,163;B;4,57;Brookfield Renewable Partners L.P. (BEP);https://finance.yahoo.com/quote/BEP
+10,766;B;0,90;Brown & Brown, Inc. (BRO);https://finance.yahoo.com/quote/BRO
+31,305;B;0,99;Brown-Forman Corporation (BF-B);https://finance.yahoo.com/quote/BF-B
+4,613;B;1,67;Brunswick Corporation (BC);https://finance.yahoo.com/quote/BC
+6,382;B;N/;Buckeye Partners, L.P. (BPL);https://finance.yahoo.com/quote/BPL
+7,834;B;3,59;Bunge Limited (BG);https://finance.yahoo.com/quote/BG/news?p=BG
+6,582;B;2,46;Bunzl plc (BNZL.L);https://finance.yahoo.com/quote/BNZL.L
+8,242;B;2,06;Burberry Group plc (BRBY.L);https://finance.yahoo.com/quote/BRBY.L
+11,495;B;2,56;Bureau Veritas SA (BVRDF);https://finance.yahoo.com/quote/BVRDF/news?p=BVRDF
+7,142;B;1,25;CAE Inc. (CAE);https://finance.yahoo.com/quote/CAE/news?p=CAE
+7,39;B;N/;CCL Industries Inc. (CCDBF);https://finance.yahoo.com/quote/CCDBF/news?p=CCDBF
+9,806;B;2,66;CF Industries Holdings, Inc. (CF);https://finance.yahoo.com/quote/CF/news?p=CF
+10,219;B;2,65;C.H. Robinson Worldwide, Inc. (CHRW);https://finance.yahoo.com/quote/CHRW/news?p=CHRW
+2,769;B;2,81;CIE Automotive, S.A. (CIE.MC);https://finance.yahoo.com/quote/CIE.MC/
+17,513;B;2,48;CMS Energy Corporation (CMS);https://finance.yahoo.com/quote/CMS
+11,968;B;5,01;CNP Assurances SA (CNP.PA);https://finance.yahoo.com/quote/CNP.PA
+28,927;B;2,15;CRH plc (CRH);https://finance.yahoo.com/quote/CRH/news?p=CRH
+54,093;B;1,34;CSX Corporation (CSX);https://finance.yahoo.com/quote/CSX/news?p=CSX
+3,434;B;5,01;CT Real Estate Investment Trust (CRT-UN.TO);https://ca.finance.yahoo.com/quote/CRT-UN.TO
+97,468;B;2,67;CVS Health Corporation (CVS);https://finance.yahoo.com/quote/CVS
+15,872;B;6,38;CaixaBank, S.A. (CABK.MC);https://finance.yahoo.com/quote/CABK.MC
+2,105;B;1,96;Cal-Maine Foods, Inc. (CALM);https://finance.yahoo.com/quote/CALM/news?p=CALM
+1,677;B;1,96;Caledonia Investments plc (CLDN.L);https://finance.yahoo.com/quote/CLDN.L
+2,464;B;1,54;California Water Service Group (CWT);https://finance.yahoo.com/quote/CWT/news?p=CWT
+8,764;B;2,54;Canadian Apartment Properties Real Estate Investment Trust (CAR-UN.TO);https://finance.yahoo.com/quote/CAR-UN.TO
+38,45;B;5,12;Canadian Imperial Bank of Commerce (CM);https://finance.yahoo.com/quote/CM/news?p=CM
+64,913;B;1,82;Canadian National Railway Company (CNI);https://finance.yahoo.com/quote/CNI
+33,295;B;4,05;Canadian Natural Resources Limited (CNQ);https://finance.yahoo.com/quote/CNQ
+9,731;B;2,23;Canadian Tire Corporation, Limited (CTC.TO);https://finance.yahoo.com/quote/CTC.TO/news?p=CTC.TO
+10,658;B;4,30;Canadian Utilities Limited (CU.TO);https://finance.yahoo.com/quote/CU.TO
+3,106;B;3,15;Canadian Western Bank (CWB.TO);https://ca.finance.yahoo.com/quote/CWB.TO
+3,223;B;0,27;Cantel Medical Corp. (CMD);https://finance.yahoo.com/quote/CMD
+17,848;B;1,58;Capgemini SE (CAP.PA);https://finance.yahoo.com/quote/CAP.PA
+2,617;B;5,95;Capital Power Corporation (CPXWF);https://finance.yahoo.com/quote/CPXWF/news?p=CPXWF
+5,142;B;N/;Capri Holdings Limited (CPRI);https://finance.yahoo.com/quote/CPRI/
+16,207;B;3,47;Cardinal Health, Inc. (CAH);https://finance.yahoo.com/quote/CAH/news?p=CAH
+8,842;B;1,25;Carlisle Companies Incorporated (CSL);https://finance.yahoo.com/quote/CSL/news?p=CSL
+141,826;B;1,86;Carlsberg A/S (CARL-B.CO);https://finance.yahoo.com/quote/CARL-B.CO
+31,117;B;4,58;Carnival Corporation & Plc (CCL);https://finance.yahoo.com/quote/CCL/news?p=CCL
+6,402;B;0,74;Casey's General Stores, Inc. (CASY);https://finance.yahoo.com/quote/CASY
+4,47;B;7,35;Casino, Guichard-Perrachon Societe Anonyme (CO.PA);https://finance.yahoo.com/quote/CO.PA
+78,212;B;2,88;Caterpillar Inc. (CAT);https://finance.yahoo.com/quote/CAT/news?p=CAT
+13,678;B;1,17;Cboe Global Markets, Inc. (CBOE);https://finance.yahoo.com/quote/CBOE
+15,017;B;2,00;Celanese Corporation (CE);https://finance.yahoo.com/quote/CE/news?p=CE
+12,218;B;0,20;Cellnex Telecom, S.A. (CLNX.MC);https://finance.yahoo.com/quote/CLNX.MC/
+12,28;B;4,70;CenterPoint Energy, Inc. (CNP);https://finance.yahoo.com/quote/CNP/news?p=CNP
+5,543;B;13,54;Centrica plc (CPYYF);https://finance.yahoo.com/quote/CPYYF/news?p=CPYYF
+6,938;B;0,30;Chemed Corporation (CHE);https://finance.yahoo.com/quote/CHE/news?p=CHE
+1,115;B;N/;Chesapeake Energy Corporation (CHK);https://finance.yahoo.com/quote/CHK/news?p=CHK
+1,47;B;1,80;Chesapeake Utilities Corporation (CPK);https://finance.yahoo.com/quote/CPK/news?p=CPK
+221,875;B;4,09;Chevron Corporation (CVX);https://finance.yahoo.com/quote/CVX/news?p=CVX
+21,567;B;N/;Chipotle Mexican Grill, Inc. (CMG);https://finance.yahoo.com/quote/CMG/news?p=CMG
+19,636;B;1,33;Chocoladefabriken Lindt & Sprungli AG (LDSVF);https://finance.yahoo.com/quote/LDSVF
+69,118;B;1,96;Chubb Limited (CB);https://finance.yahoo.com/quote/CB/news?p=CB
+17,1;B;1,32;Church & Dwight Co., Inc. (CHD);https://finance.yahoo.com/quote/CHD
+5,224;B;0,45;Churchill Downs Incorporated (CHDN);https://finance.yahoo.com/quote/CHDN
+17,633;B;2,08;Cincinnati Financial Corporation (CINF);https://finance.yahoo.com/quote/CINF
+1,224;B;7,01;Cineplex Inc. (CPXGF);https://finance.yahoo.com/quote/CPXGF/news?p=CPXGF
+26,854;B;0,98;Cintas Corporation (CTAS);https://finance.yahoo.com/quote/CTAS/news?p=CTAS
+191,312;B;3,08;Cisco Systems, Inc. (CSCO);https://finance.yahoo.com/quote/CSCO/news?p=CSCO
+null;null;null;The City of London Investment Trust plc (CTY.L);https://uk.finance.yahoo.com/quote/CTY.L?p=CTY.L
+18,371;B;2,90;The Clorox Company (CLX);https://finance.yahoo.com/quote/CLX
+2,146;B;4,55;Close Brothers Group plc (CBG.L);https://finance.yahoo.com/quote/CBG.L
+228,622;B;3,01;The Coca-Cola Company (KO);https://finance.yahoo.com/quote/KO/news?p=KO
+5,836;B;1,96;Cogeco Communications Inc. (CCA.TO);https://finance.yahoo.com/quote/CCA.TO
+1,713;B;2,19;Cogeco Inc. (CGO.TO);https://ca.finance.yahoo.com/quote/CGO.TO
+3,11;B;2,19;Cohen & Steers, Inc. (CNS);https://finance.yahoo.com/quote/CNS/news?p=CNS
+57,602;B;2,56;Colgate-Palmolive Company (CL);https://finance.yahoo.com/quote/cl/
+25,387;B;1,31;Coloplast A/S (CLPBF);https://finance.yahoo.com/quote/CLPBF/news?p=CLPBF
+6,114;B;1,06;Columbia Sportswear Company (COLM);https://finance.yahoo.com/quote/COLM/news?p=COLM
+198,474;B;1,90;Comcast Corporation (CMCSA);https://finance.yahoo.com/quote/CMCSA/news?p=CMCSA
+9,988;B;3,87;Comerica Incorporated (CMA);https://finance.yahoo.com/quote/CMA
+7,096;B;1,57;Commerce Bancshares, Inc. (CBSH);https://finance.yahoo.com/quote/CBSH/news?p=CBSH
+3,442;B;2,44;Community Bank System, Inc. (CBU);https://finance.yahoo.com/quote/CBU
+42,979;B;2,68;Compagnie Financiere Richemont SA (CFRUY);https://finance.yahoo.com/quote/CFRUY
+22,025;B;N/;Compagnie Generale des Etablissements Michelin (MGDDF);https://finance.yahoo.com/quote/MGDDF/press-releases/
+3,566;B;3,00;Compagnie Plastic Omnium SA (POM.PA);https://finance.yahoo.com/quote/POM.PA
+19,7;B;3,59;Compagnie de Saint-Gobain S.A. (SGO.PA);https://finance.yahoo.com/quote/SGO.PA
+31,657;B;1,90;Compass Group PLC (CPG.L);https://finance.yahoo.com/quote/CPG.L
+1,825;B;5,28;Compass Minerals International, Inc. (CMP);https://finance.yahoo.com/quote/CMP/news?p=CMP
+29,024;B;3,39;Consolidated Edison, Inc. (ED);https://finance.yahoo.com/quote/ED
+36,571;B;1,66;Constellation Brands, Inc. (STZ);https://finance.yahoo.com/quote/STZ
+1,363;B;1,86;Construcciones y Auxiliar de Ferrocarriles, S.A. (CAF.MC);https://finance.yahoo.com/quote/CAF.MC/
+24,269;B;3,86;Continental Aktiengesellschaft (CON.DE);https://finance.yahoo.com/quote/CON.DE
+4,306;B;4,27;CoreSite Realty Corporation (COR);https://finance.yahoo.com/quote/COR/news?p=COR
+-;-;-;Corning Incorporated;-
+2,825;B;2,09;Corporacion Financiera Alba, S.A. (ALB.MC);https://finance.yahoo.com/quote/ALB.MC/
+1,41;B;2,59;Corticeira Amorim, S.G.P.S., S.A. (COR.LS);https://finance.yahoo.com/quote/COR.LS/
+132,148;B;0,87;Costco Wholesale Corporation (COST);https://finance.yahoo.com/quote/COST/news?p=COST
+3,834;B;3,27;Cracker Barrel Old Country Store, Inc. (CBRL);https://finance.yahoo.com/quote/CBRL/
+1,659;B;1,75;Cranswick plc (CWK.L);https://finance.yahoo.com/quote/CWK.L
+937,762;M;8,94;Crest Nicholson Holdings plc (CRST.L);https://finance.yahoo.com/quote/CRST.L
+6,13;B;1,65;Croda International Plc (CRDA.L);https://finance.yahoo.com/quote/CRDA.L
+36,267;B;5,48;Credit Agricole S.A. (ACA.PA);https://finance.yahoo.com/quote/ACA.PA
+6,085;B;4,07;CubeSmart (CUBE);https://finance.yahoo.com/quote/CUBE/news?p=CUBE
+5,829;B;3,03;Cullen/Frost Bankers, Inc. (CFR);https://finance.yahoo.com/quote/CFR
+27,672;B;2,90;Cummins Inc. (CMI);https://finance.yahoo.com/quote/CMI/news?p=CMI
+5,101;B;4,27;DS Smith Plc (SMDS.L);https://finance.yahoo.com/quote/SMDS.L
+168,875;B;0,31;DSV Panalpina A/S (DSV.CO);https://finance.yahoo.com/quote/DSV.CO
+23,84;B;3,26;DTE Energy Company (DTE);https://finance.yahoo.com/quote/DTE/news?p=DTE
+9,396;B;N/;DaVita Inc. (DVA);https://finance.yahoo.com/quote/DVA/news?p=DVA
+54,913;B;6,48;Daimler AG (DAI.DE);https://finance.yahoo.com/quote/DAI.DE
+47,938;B;2,60;Danone S.A. (BN.PA);https://finance.yahoo.com/quote/BN.PA
+10,209;B;1,71;Dassault Aviation SA (AM.PA);https://finance.yahoo.com/quote/AM.PA
+40,603;B;0,47;Dassault Systemes SE (DASTY);https://finance.yahoo.com/quote/DASTY
+10,533;B;0,60;Davide Campari-Milano S.p.A. (DVDCY);https://finance.yahoo.com/quote/DVDCY
+2,838;B;1,16;Dechra Pharmaceuticals PLC (DPH.L);https://finance.yahoo.com/quote/DPH.L
+54,18;B;1,75;Deere & Company (DE);https://finance.yahoo.com/quote/DE/news?p=DE
+5,269;B;2,06;Derwent London Plc (DWVYF);https://finance.yahoo.com/quote/DWVYF/news?p=DWVYF
+24,945;B;1,96;Deutsche Borse AG (DB1.DE);https://finance.yahoo.com/quote/DB1.DE
+N/;A;N/;Deutsche EuroShop AG (DUSCF);https://finance.yahoo.com/quote/DUSCF/news?p=DUSCF
+41,647;B;3,37;Deutsche Post AG (DPW.DE);https://finance.yahoo.com/quote/DPW.DE
+71,908;B;3,96;Deutsche Telekom AG (DTE.DE);https://finance.yahoo.com/quote/DTE.DE
+14,118;B;0,09;Deutsche Wohnen SE (DWHHF);https://finance.yahoo.com/quote/DWHHF/news?p=DWHHF
+94,565;B;2,59;Diageo plc (DEO);https://finance.yahoo.com/quote/DEO/news?p=DEO
+25,326;B;3,56;Digital Realty Trust, Inc. (DLR);https://finance.yahoo.com/quote/DLR/news?p=DLR
+1,976;B;1,65;Diploma PLC (DPLM.L);https://finance.yahoo.com/quote/DPLM.L/news/
+25,974;B;2,12;Discover Financial Services (DFS);https://finance.yahoo.com/quote/DFS
+41,375;B;0,80;Dollar General Corporation (DG);https://finance.yahoo.com/quote/DG/news?p=DG
+11,197;B;N/;Dollarama Inc. (DLMAF);https://finance.yahoo.com/quote/DLMAF/news?p=DLMAF
+68,234;B;4,43;Dominion Energy, Inc. (D);https://finance.yahoo.com/quote/D
+3,055;B;2,11;Domino's Pizza Enterprises Limited (DMZPY);https://finance.yahoo.com/quote/DMZPY/
+1,787;B;2,63;Domino's Pizza Group plc (DPUKY);https://finance.yahoo.com/quote/DPUKY/
+11,789;B;0,90;Domino's Pizza, Inc. (DPZ);https://finance.yahoo.com/quote/DPZ/news?p=DPZ
+2,126;B;4,90;Domtar Corporation (UFS);https://finance.yahoo.com/quote/UFS/news?p=UFS
+6,918;B;1,53;Donaldson Company, Inc. (DCI);https://finance.yahoo.com/quote/DCI/news?p=DCI
+1,205;B;2,02;Douglas Dynamics, Inc. (PLOW);https://finance.yahoo.com/quote/PLOW/news?p=PLOW
+15,772;B;1,81;Dover Corporation (DOV);https://finance.yahoo.com/quote/DOV/news?p=DOV
+63,521;B;4,34;Duke Energy Corporation (DUK);https://finance.yahoo.com/quote/DUK
+2,141;B;6,50;Dunelm Group plc (DNLMY);https://finance.yahoo.com/quote/DNLMY/news?p=DNLMY
+19,827;B;4,71;E.ON SE (EOAN.DE);https://finance.yahoo.com/quote/EOAN.DE
+14,897;B;5,14;EDP - Energias de Portugal, S.A. (EDPFY);https://finance.yahoo.com/quote/EDPFY
+13,312;B;5,10;EDP - Energias de Portugal, S.A. (EDP.LS);https://finance.yahoo.com/quote/EDP.LS
+2,777;B;3,99;ERG S.p.A. (ERG.MI);https://finance.yahoo.com/quote/ERG.MI
+37,132;B;3,15;Eaton Corporation plc (ETN);https://finance.yahoo.com/quote/ETN/news?p=ETN
+5,463;B;3,12;Eaton Vance Corp. (EV);https://finance.yahoo.com/quote/EV
+2,999;B;3,87;Ebro Foods, S.A. (EBRO.MC);https://finance.yahoo.com/quote/EBRO.MC
+53,677;B;0,99;Ecolab Inc. (ECL);https://finance.yahoo.com/quote/ECL/news?p=ECL
+1,064;B;4,27;The Edinburgh Investment Trust plc (EDIN.L);https://finance.yahoo.com/quote/EDIN.L
+25,432;B;3,56;Edison International (EIX);https://finance.yahoo.com/quote/EIX/news?p=EIX
+10,863;B;2,70;Eiffage SA (EFGSY);https://finance.yahoo.com/quote/EFGSY/news?p=EFGSY
+110,041;B;2,24;Eli Lilly and Company (LLY);https://finance.yahoo.com/quote/LLY/
+4,708;B;2,13;Elia System Operator SA (ELI.BR);https://finance.yahoo.com/quote/ELI.BR
+7,923;B;3,55;Elisa Oyj (ELISA.HE);https://finance.yahoo.com/quote/ELISA.HE/
+44,316;B;2,73;Emerson Electric Co. (EMR);https://finance.yahoo.com/quote/EMR
+9,427;B;1,39;Empire Company Limited (EMP-A.TO);https://finance.yahoo.com/quote/EMP-A.TO
+14,466;B;2,51;EMS-CHEMIE HOLDING AG (EMSN.SW);https://finance.yahoo.com/quote/EMSN.SW/
+5,434;B;8,06;Enagas, S.A. (ENG.MC);https://finance.yahoo.com/quote/ENG.MC
+76,696;B;5,93;Enbridge Inc. (ENB);https://finance.yahoo.com/quote/ENB/news?p=ENB
+25,791;B;5,86;Endesa, S.A. (ELE.MC);https://finance.yahoo.com/quote/ELE.MC
+null;null;null;Energy Transfer Equity, L.P. (ETE);https://finance.yahoo.com/quote/ETE
+2,217;B;1,10;Enghouse Systems Limited (ENGH.TO);https://finance.yahoo.com/quote/ENGH.TO/
+34,132;B;5,30;ENGIE SA (ENGI.PA);https://finance.yahoo.com/quote/ENGI.PA
+56,699;B;7,04;Enterprise Products Partners L.P. (EPD);https://finance.yahoo.com/quote/EPD
+1,88;B;1,25;Equitable Group Inc. (EQB.TO);https://finance.yahoo.com/quote/EQB.TO/
+12,955;B;1,72;Equity LifeStyle Properties, Inc. (ELS);https://finance.yahoo.com/quote/ELS/news?p=ELS
+8,144;B;2,04;Erie Indemnity Company (ERIE);https://finance.yahoo.com/quote/ERIE
+1,43;B;5,25;Essentra plc (FLRAF);https://finance.yahoo.com/quote/FLRAF/news?p=FLRAF
+21,061;B;2,45;Essex Property Trust, Inc. (ESS);https://finance.yahoo.com/quote/ESS/news?p=ESS
+67,517;B;1,47;EssilorLuxottica Societe anonyme (ESLOF);https://finance.yahoo.com/quote/eslof/
+N/;A;N/;ETABLISSEMENTEN FRANZ COLRUYT N (0N4Y.IL);https://finance.yahoo.com/quote/0N4Y.IL/
+8,26;B;0,62;Eurofins Scientific SE (ERF.PA);https://finance.yahoo.com/quote/ERF.PA
+null;null;null;EURONEXT 100 (^N100);https://finance.yahoo.com/quote/%5EN100
+3,529;B;7,82;Eutelsat Communications S.A. (ETL.PA);https://finance.yahoo.com/quote/ETL.PA
+3,042;B;2,98;Evercore Inc. (EVR);https://finance.yahoo.com/quote/EVR/news?p=EVR
+14,809;B;3,11;Evergy, Inc. (EVRG);https://finance.yahoo.com/quote/EVRG/
+26,71;B;2,60;Eversource Energy (ES);https://finance.yahoo.com/quote/ES
+13,378;B;4,94;Evonik Industries AG (EVKIF);https://finance.yahoo.com/quote/EVKIF/news?p=EVKIF
+1,493;B;5,29;Exchange Income Corporation (EIF.TO);https://finance.yahoo.com/quote/EIF.TO
+12,854;B;1,32;Expeditors International of Washington, Inc. (EXPD);https://finance.yahoo.com/quote/EXPD
+13,854;B;3,37;Extra Space Storage Inc. (EXR);https://finance.yahoo.com/quote/EXR
+287,842;B;5,13;Exxon Mobil Corporation (XOM);https://finance.yahoo.com/quote/XOM/news?p=XOM
+9,938;B;1,10;FactSet Research Systems Inc. (FDS);https://finance.yahoo.com/quote/FDS/news?p=FDS
+1,408;B;0,89;Faes Farma, S.A. (FAE.MC);https://finance.yahoo.com/quote/FAE.MC/news/
+20,223;B;2,50;Fastenal Company (FAST);https://finance.yahoo.com/quote/FAST/news?p=FAST
+6,349;B;2,71;Faurecia S.E. (EO.PA);https://finance.yahoo.com/quote/EO.PA
+39,729;B;1,67;FedEx Corporation (FDX);https://finance.yahoo.com/quote/FDX/news?p=FDX
+9,89;B;3,19;Federal Realty Investment Trust (FRT);https://finance.yahoo.com/quote/FRT
+21,306;B;2,77;Ferrovial, S.A. (FRRVF);https://finance.yahoo.com/quote/FRRVF/news?p=FRRVF
+6,706;B;2,87;Fielmann Aktiengesellschaft (FLMNF);https://finance.yahoo.com/quote/FLMNF/news?p=FLMNF
+1,112;B;7,61;Fiera Capital Corporation (FSZ.TO);https://finance.yahoo.com/quote/FSZ.TO
+2,997;B;3,32;Finning International Inc. (FINGF);https://finance.yahoo.com/quote/FINGF/news?p=FINGF
+2,718;B;2,95;First Interstate BancSystem, Inc. (FIBK);https://finance.yahoo.com/quote/FIBK
+2,272;B;2,55;First Merchants Corporation (FRME);https://finance.yahoo.com/quote/FRME/news?p=FRME
+2,639;B;4,43;First National Financial Corporation (FN.TO);https://finance.yahoo.com/quote/FN.TO
+4,622;B;3,48;Flowers Foods, Inc. (FLO);https://finance.yahoo.com/quote/FLO/news?p=FLO
+2,169;B;N/;Fluidra, S.A. (FDR.MC);https://finance.yahoo.com/quote/FDR.MC/
+6,687;B;2,35;Flutter Entertainment PLC (FLTR.L);https://finance.yahoo.com/quote/FLTR.L/
+4,205;B;3,69;Fomento de Construcciones y Contratas, S.A. (FCC.MC);https://finance.yahoo.com/quote/FCC.MC
+34,614;B;6,74;Ford Motor Company (F);https://finance.yahoo.com/quote/F/news?p=F
+17,674;B;3,59;Fortis Inc. (FTS);https://finance.yahoo.com/quote/FTS
+20,999;B;5,30;Fortum Oyj (FOJCY);https://finance.yahoo.com/quote/FOJCY/news?p=FOJCY
+18,646;B;1,01;Franco-Nevada Corporation (FNV);https://finance.yahoo.com/quote/FNV
+2,461;B;1,09;Franklin Electric Co., Inc. (FELE);https://finance.yahoo.com/quote/FELE/news?p=FELE
+13,612;B;3,75;Franklin Resources, Inc. (BEN);https://finance.yahoo.com/quote/BEN/news?p=BEN
+7,968;B;2,68;Fraport AG (FPRUY);https://finance.yahoo.com/quote/FPRUY/news?p=FPRUY
+2,749;B;7,67;freenet AG (FNTN.DE);https://finance.yahoo.com/quote/FNTN.DE
+N/;A;N/;FRENI BREMBO SPA FRENI BREMBO O (0RPV.IL);https://finance.yahoo.com/quote/0RPV.IL/
+21,95;B;1,79;Fresenius Medical Care AG & Co. KGaA (FMS);https://finance.yahoo.com/quote/FMS
+N/;A;N/;FRESENIUS SE+CO.KGAA O.N. (FRE.DU);https://finance.yahoo.com/quote/FRE.DU/
+5,906;B;N/;Fuchs Petrolub SE (FUPBY);https://finance.yahoo.com/quote/FUPBY
+5,272;B;2,39;Fuchs Petrolub SE (FPE3.DE);https://finance.yahoo.com/quote/FPE3.DE
+4,152;B;3,38;G4S plc (GFSZY);https://finance.yahoo.com/quote/GFSZY/news?p=GFSZY
+5,202;B;2,95;GEA Group Aktiengesellschaft (G1A.DE);https://finance.yahoo.com/quote/G1A.DE
+39,122;B;0,44;GN Store Nord A/S (GN.CO);https://finance.yahoo.com/quote/GN.CO
+12,431;B;4,46;Galp Energia, SGPS, S.A. (GALP.LS);https://finance.yahoo.com/quote/GALP.LS
+11,336;B;3,53;Gecina SA (GFC.PA);https://finance.yahoo.com/quote/GFC.PA
+53,328;B;2,21;General Dynamics Corporation (GD);https://finance.yahoo.com/quote/GD
+99,475;B;0,35;General Electric Company (GE);https://finance.yahoo.com/quote/GE
+32,136;B;3,70;General Mills, Inc. (GIS);https://finance.yahoo.com/quote/GIS/news?p=GIS
+7,215;B;1,61;Gentex Corporation (GNTX);https://finance.yahoo.com/quote/GNTX
+15,01;B;2,92;Genuine Parts Company (GPC);https://finance.yahoo.com/quote/GPC
+2,52;B;0,92;Genus plc (GENSF);https://finance.yahoo.com/quote/GENSF/news?p=GENSF
+4,813;B;3,87;Genworth MI Canada Inc. (MIC.TO);https://finance.yahoo.com/quote/MIC.TO
+11,954;B;1,98;George Weston Limited (WNGRF);https://finance.yahoo.com/quote/WNGRF/news?p=WNGRF
+2,358;B;3,44;Gestamp Automocion, S.A. (GEST.MC);https://finance.yahoo.com/quote/GEST.MC/
+7,947;B;N/;Getlink SE (GRPTF);https://finance.yahoo.com/quote/GRPTF
+5,466;B;2,00;Gildan Activewear Inc. (GIL);https://finance.yahoo.com/quote/GIL
+82,083;B;3,88;Gilead Sciences, Inc. (GILD);https://finance.yahoo.com/quote/GILD/news?p=GILD
+27,015;B;2,05;Givaudan SA (GVDBF);https://finance.yahoo.com/quote/GVDBF/news?p=GVDBF
+3,721;B;N/;Glanbia plc (GLAPF);https://finance.yahoo.com/quote/GLAPF/news?p=GLAPF
+109,424;B;4,45;GlaxoSmithKline plc (GSK);https://finance.yahoo.com/quote/GSK/news?p=GSK
+41,817;B;6,45;Glencore plc (GLCNF);https://finance.yahoo.com/quote/GLCNF/news?p=GLCNF
+77,159;B;2,27;The Goldman Sachs Group, Inc. (GS);https://finance.yahoo.com/quote/GS/news?p=GS
+514,991;M;N/;Gores Metropoulos, Inc. (GMHIU);https://finance.yahoo.com/quote/GMHIU/
+7,935;B;1,35;Graco Inc. (GGG);https://finance.yahoo.com/quote/GGG/news?p=GGG
+3,69;B;4,10;Granite Real Estate Investment Trust (GRT-UN.TO);https://ca.finance.yahoo.com/quote/GRT-UN.TO
+null;null;null;Greene King plc (GNK.L);https://uk.finance.yahoo.com/quote/GNK.L?ltr=1
+19,696;B;1,38;Grifols, S.A. (GIKLY);https://finance.yahoo.com/quote/GIKLY/news?p=GIKLY
+1,894;B;1,10;Group 1 Automotive, Inc. (GPI);https://finance.yahoo.com/quote/GPI/news?p=GPI
+16,022;B;3,40;Groupe Bruxelles Lambert SA (GBLBY);https://finance.yahoo.com/quote/GBLBY/
+3,784;B;1,91;Grupo Catalana Occidente, S.A. (GCO.MC);https://finance.yahoo.com/quote/GCO.MC/
+294,855;B;5,39;H & M Hennes & Mauritz AB (publ) (HM-B.ST);https://finance.yahoo.com/quote/HM-B.ST
+2,517;B;1,30;H.B. Fuller Company (FUL);https://finance.yahoo.com/quote/FUL
+4,916;B;4,25;H&R Block, Inc. (HRB);https://finance.yahoo.com/quote/HRB/news?p=HRB
+18,145;B;N/;Healthpeak Properties, Inc. (HCP);https://finance.yahoo.com/quote/HCP/news?p=HCP
+97,417;B;0,52;HDFC Bank Limited (HDB);https://finance.yahoo.com/quote/HDB
+18,021;B;3,62;Halliburton Company (HAL);https://finance.yahoo.com/quote/HAL/news?p=HAL
+7,783;B;0,64;Halma plc (HLMA.L);https://finance.yahoo.com/quote/HLMA.L
+2,89;B;8,51;Hammerson plc (HMSNF);https://finance.yahoo.com/quote/HMSNF/news?p=HMSNF
+5,447;B;3,89;Hanesbrands Inc. (HBI);https://finance.yahoo.com/quote/HBI/news?p=HBI
+20,26;B;2,25;Hannover Ruck SE (HNR1.DE);https://finance.yahoo.com/quote/HNR1.DE
+5,48;B;4,07;Harley-Davidson, Inc. (HOG);https://finance.yahoo.com/quote/HOG/news?p=HOG
+12,987;B;2,86;Hasbro, Inc. (HAS);https://finance.yahoo.com/quote/HAS/news?p=HAS
+1,836;B;3,19;Healthcare Services Group, Inc. (HCSG);https://finance.yahoo.com/quote/HCSG
+15,3;B;0,14;HEICO Corporation (HEI-A);https://finance.yahoo.com/quote/HEI-A/news?p=HEI-A
+13,266;B;3,13;HeidelbergCement AG (HEI.DE);https://finance.yahoo.com/quote/HEI.DE
+27,332;B;1,48;Heineken Holding N.V. (HKHHY);https://finance.yahoo.com/quote/HKHHY/news?p=HKHHY
+53,157;B;1,76;Heineken N.V. (HEIA.AS);https://finance.yahoo.com/quote/HEIA.AS
+4,163;B;7,31;Helmerich & Payne, Inc. (HP);https://finance.yahoo.com/quote/HP
+677,9;M;N/;Henderson Smaller Companies Investment Trust (HSL.L);https://finance.yahoo.com/quote/HSL.L/
+39,003;B;2,08;Henkel AG & Co. KGaA (HEN.DE);https://finance.yahoo.com/quote/HEN.DE
+5,95;B;2,50;Hera S.p.A. (HER.MI);https://finance.yahoo.com/quote/HER.MI
+N/;A;N/;HERMES INTERNATIONAL SCA HERMES (0HV2.IL);https://finance.yahoo.com/quote/0HV2.IL/
+22,116;B;2,11;The Hershey Company (HSY);https://finance.yahoo.com/quote/HSY/news?p=HSY
+1,961;B;2,69;Hillenbrand, Inc. (HI);https://finance.yahoo.com/quote/HI/news?p=HI
+8,562;B;4,83;HOCHTIEF Aktiengesellschaft (HOCFY);https://finance.yahoo.com/quote/HOCFY/news?p=HOCFY
+2,345;B;12,10;Holly Energy Partners, L.P. (HEP);https://finance.yahoo.com/quote/HEP
+241,919;B;2,46;The Home Depot, Inc. (HD);https://finance.yahoo.com/quote/HD/news?p=HD
+1,782;B;2,66;Horace Mann Educators Corporation (HMN);https://finance.yahoo.com/quote/HMN
+22,881;B;1,97;Hormel Foods Corporation (HRL);https://finance.yahoo.com/quote/HRL/news?p=HRL
+3,666;B;1,91;Howden Joinery Group Plc (HWDN.L);https://finance.yahoo.com/quote/HWDN.L
+7,948;B;2,49;Hubbell Incorporated (HUBB);https://finance.yahoo.com/quote/HUBB
+2,783;B;6,54;Hugo Boss AG (BOSS.DE);https://finance.yahoo.com/quote/BOSS.DE
+8,04;B;0,96;Hyatt Hotels Corporation (H);https://finance.yahoo.com/quote/H/news?p=H
+124,287;M;N/;iCAD, Inc. (ICAD);https://finance.yahoo.com/quote/ICAD
+12,322;B;1,23;IDEX Corporation (IEX);https://finance.yahoo.com/quote/IEX/news?p=IEX
+54,14;B;4,12;Iberdrola, S.A. (IBE.MC);https://finance.yahoo.com/quote/IBE.MC
+6,759;B;0,78;Iliad SA (ILD.PA);https://finance.yahoo.com/quote/ILD.PA
+55,423;B;2,45;Illinois Tool Works Inc. (ITW);https://finance.yahoo.com/quote/ITW/news?p=ITW
+2,832;B;5,81;Imerys S.A. (NK.PA);https://finance.yahoo.com/quote/NK.PA
+16,199;B;16,36;Imperial Brands PLC (IMB.L);https://finance.yahoo.com/quote/IMB.L
+18,766;B;2,69;Imperial Oil Limited (IMO);https://finance.yahoo.com/quote/IMO/news?p=IMO
+2,549;B;4,20;Inchcape plc (INCH.L);https://finance.yahoo.com/quote/INCH.L
+1,844;B;N/;Indra Sistemas, S.A. (ISMAY);https://finance.yahoo.com/quote/ISMAY/news?p=ISMAY
+-;-;-;Industria Macchine Automatiche;-
+85,191;B;2,39;Industria de Diseno Textil, S.A. (ITX.MC);https://finance.yahoo.com/quote/ITX.MC
+-;-;-;Industrial Alliance Insurance and Financial Services Inc Pref Series G Class A;-
+23,546;B;1,40;Infineon Technologies AG (IFX.DE);https://finance.yahoo.com/quote/IFX.DE
+14,02;B;N/;Informa plc (IFPJF);https://finance.yahoo.com/quote/IFPJF/news?p=IFPJF
+6,033;B;1,12;Ingenico Group - GCS (ING.PA);https://finance.yahoo.com/quote/ING.PA
+31,109;B;1,63;Ingersoll-Rand Plc (IR);https://finance.yahoo.com/quote/IR
+5,584;B;3,01;Ingredion Incorporated (INGR);https://finance.yahoo.com/quote/INGR/news?p=INGR
+5,848;B;1,68;Inmobiliaria Colonial, SOCIMI, S.A. (COL.MC);https://finance.yahoo.com/quote/COL.MC
+1,78;B;4,14;Innergex Renewable Energy Inc. (INGXF);https://finance.yahoo.com/quote/INGXF/news?p=INGXF
+18,907;B;2,24;Intact Financial Corporation (IFC.TO);https://finance.yahoo.com/quote/IFC.TO
+251,865;B;2,16;Intel Corporation (INTC);https://finance.yahoo.com/quote/INTC/news?p=INTC
+2,429;B;1,71;Inter Parfums, Inc. (IPAR);https://finance.yahoo.com/quote/IPAR/news?p=IPAR
+6,951;B;7,71;Inter Pipeline Ltd. (IPPLF);https://finance.yahoo.com/quote/IPPLF/news?p=IPPLF
+1,971;B;1,91;InterRent Real Estate Investment Trust (IIP-UN.TO);https://ca.finance.yahoo.com/quote/IIP-UN.TO
+2,747;B;2,61;International Bancshares Corporation (IBOC);https://finance.yahoo.com/quote/IBOC/news?p=IBOC
+117,967;B;4,86;International Business Machines Corporation (IBM);https://finance.yahoo.com/quote/IBM/
+14,564;B;2,19;International Flavors & Fragrances Inc. (IFF);https://finance.yahoo.com/quote/IFF/news?p=IFF
+1,958;B;N/;International Speedway Corporation (ISCA);https://finance.yahoo.com/quote/ISCA
+8,738;B;1,85;Intertek Group plc (ITRK.L);https://finance.yahoo.com/quote/ITRK.L
+7,802;B;7,08;Invesco Ltd. (IVZ);https://finance.yahoo.com/quote/IVZ
+3,897;B;4,94;Investec Group Limited (IVTJF);https://finance.yahoo.com/quote/IVTJF/news?p=IVTJF
+7,872;B;1,03;Ipsen S.A. (IPN.PA);https://finance.yahoo.com/quote/IPN.PA
+4,671;B;5,29;J Sainsbury plc (SBRY.L);https://finance.yahoo.com/quote/SBRY.L
+12,298;B;0,90;J.B. Hunt Transport Services, Inc. (JBHT);https://finance.yahoo.com/quote/JBHT
+6,175;B;2,20;JCDecaux SA (JCDXF);https://finance.yahoo.com/quote/JCDXF/news?p=JCDXF
+7,297;B;0,23;JD Sports Fashion plc (JD.L);https://finance.yahoo.com/quote/JD.L
+12,026;B;3,38;The J. M. Smucker Company (SJM);https://finance.yahoo.com/quote/SJM
+406,582;B;2,76;JPMorgan Chase & Co. (JPM);https://finance.yahoo.com/quote/JPM/news?p=JPM
+11,567;B;1,06;Jack Henry & Associates, Inc. (JKHY);https://finance.yahoo.com/quote/JKHY/news?p=JKHY
+951,71;M;1,75;James Fisher and Sons plc (FSJ.L);https://finance.yahoo.com/quote/FSJ.L
+7,397;B;4,96;Jiangsu Expressway Company Limited (JEXYY);https://finance.yahoo.com/quote/JEXYY/news?p=JEXYY
+2,62;B;2,91;John Wiley & Sons, Inc. (JW-A);https://finance.yahoo.com/quote/JW-A
+357,776;B;2,80;Johnson & Johnson (JNJ);https://finance.yahoo.com/quote/JNJ/news?p=JNJ
+32,978;B;2,42;Johnson Controls International plc (JCI);https://finance.yahoo.com/quote/JCI
+8,046;B;3,67;Johnson Matthey Plc (JMPLY);https://finance.yahoo.com/quote/JMPLY/news?p=JMPLY
+1,655;B;4,65;Jupiter Fund Management Plc (JUP.L);https://finance.yahoo.com/quote/JUP.L
+32,63;B;2,98;KONE Oyj (KNYJF);https://finance.yahoo.com/quote/KNYJF/news?p=KNYJF
+22,301;B;3,49;Kellogg Company (K);https://finance.yahoo.com/quote/K/news?p=K
+76,114;B;1,47;Kering SA (PPRUF);https://finance.yahoo.com/quote/PPRUF/news?p=PPRUF
+19,768;B;0,62;Kerry Group plc (KYGA.L);https://finance.yahoo.com/quote/KYGA.L
+5,374;B;N/;Keyera Corp. (KEYUF);https://finance.yahoo.com/quote/KEYUF/news?p=KEYUF
+46,142;B;3,10;Kimberly-Clark Corporation (KMB);https://finance.yahoo.com/quote/KMB/news?p=KMB
+9,053;B;5,17;Kimco Realty Corporation (KIM);https://finance.yahoo.com/quote/KIM
+45,435;B;5,00;Kinder Morgan, Inc. (KMI);https://finance.yahoo.com/quote/KMI/news?p=KMI
+1,567;B;1,55;Kinepolis Group NV (KIN.BR);https://finance.yahoo.com/quote/KIN.BR/
+5,286;B;5,16;Kingfisher plc (KGFHF);https://finance.yahoo.com/quote/KGFHF/news?p=KGFHF
+6,958;B;1,98;KION GROUP AG (KGX.DE);https://finance.yahoo.com/quote/KGX.DE/
+10,493;B;6,42;Klepierre SA (KLPEF);https://finance.yahoo.com/quote/KLPEF/news?p=KLPEF
+46,149;B;1,04;Kobenhavns Lufthavne A/S (KBHL.CO);https://finance.yahoo.com/quote/KBHL.CO/
+2,493;B;4,32;Konecranes Plc (KNCRY);https://finance.yahoo.com/quote/KNCRY/
+29,026;B;2,50;Koninklijke Ahold Delhaize N.V. (ADRNY);https://finance.yahoo.com/quote/ADRNY
+22,756;B;1,32;Koninklijke DSM N.V. (RDSMY);https://finance.yahoo.com/quote/RDSMY
+40,877;B;2,12;Koninklijke Philips N.V. (PHG);https://finance.yahoo.com/quote/PHG
+6,271;B;2,20;Koninklijke Vopak N.V. (VPK.AS);https://finance.yahoo.com/quote/VPK.AS
+3,171;B;1,54;Korian (KORI.PA);https://finance.yahoo.com/quote/KORI.PA/
+37,966;B;5,16;The Kraft Heinz Company (KHC);https://finance.yahoo.com/quote/KHC
+21,315;B;2,38;The Kroger Co. (KR);https://finance.yahoo.com/quote/KR/news?p=KR
+4,392;B;6,98;L Brands, Inc. (LB);https://finance.yahoo.com/quote/LB/news?p=LB
+142,755;B;1,48;L'Oreal S.A. (OR.PA);https://finance.yahoo.com/quote/OR.PA
+45,276;B;1,48;L3Harris Technologies, Inc. (LHX);https://finance.yahoo.com/quote/LHX/
+6,878;B;3,43;LEG Immobilien AG (LEG.DE);https://finance.yahoo.com/quote/LEG.DE/
+1,858;B;4,80;LTC Properties, Inc. (LTC);https://finance.yahoo.com/quote/LTC/news?p=LTC
+221,971;B;1,11;LVMH Moet Hennessy - Louis Vuitton, Societe Europeenne (LVMUY);https://finance.yahoo.com/quote/LVMUY
+1,362;B;0,32;Laboratorios Farmaceuticos Rovi, S.A. (ROVI.MC);https://finance.yahoo.com/quote/rovi.mc/
+2,585;B;6,44;Lagardere SCA (MMB.PA);https://finance.yahoo.com/quote/MMB.PA
+4,367;B;1,79;Lancaster Colony Corporation (LANC);https://finance.yahoo.com/quote/LANC
+4,386;B;0,66;Landstar System, Inc. (LSTR);https://finance.yahoo.com/quote/LSTR/news?p=LSTR
+5,958;B;1,42;LANXESS Aktiengesellschaft (LNXSF);https://finance.yahoo.com/quote/LNXSF/news?p=LNXSF
+1,499;B;5,75;Laurentian Bank of Canada (LRCDF);https://finance.yahoo.com/quote/LRCDF/news?p=LRCDF
+3,926;B;5,00;Lazard Ltd (LAZ);https://finance.yahoo.com/quote/LAZ/news?p=LAZ
+7,065;B;2,46;Lear Corporation (LEA);https://finance.yahoo.com/quote/LEA
+16,308;B;6,05;Legal & General Group Plc (LGEN.L);https://finance.yahoo.com/quote/LGEN.L
+6,892;B;3,04;Leggett & Platt, Incorporated (LEG);https://finance.yahoo.com/quote/LEG/news?p=LEG
+9,837;B;1,22;Lennox International Inc. (LII);https://finance.yahoo.com/quote/LII
+5,539;B;2,14;Lincoln Electric Holdings, Inc. (LECO);https://finance.yahoo.com/quote/LECO/news?p=LECO
+99,868;B;1,66;Linde plc (LIN.DE);https://finance.yahoo.com/quote/LIN.DE
+110,755;B;1,69;Linde plc (LIN);https://finance.yahoo.com/quote/LIN
+3,75;B;0,75;Lithia Motors, Inc. (LAD);https://finance.yahoo.com/quote/LAD/news?p=LAD
+4,381;B;1,07;Littelfuse, Inc. (LFUS);https://finance.yahoo.com/quote/LFUS/news?p=LFUS
+25,532;B;1,81;Loblaw Companies Limited (L.TO);https://finance.yahoo.com/quote/L.TO
+110,769;B;2,46;Lockheed Martin Corporation (LMT);https://finance.yahoo.com/quote/LMT/news?p=LMT
+2,696;B;5,56;Compania de Distribucion Integral Logista Holdings, S.A. (LOG.MC);https://finance.yahoo.com/quote/LOG.MC/
+31,107;B;0,57;London Stock Exchange Group plc (LDNXF);https://finance.yahoo.com/quote/LDNXF/news?p=LDNXF
+2,008;B;1,13;Lotus Bakeries NV (LOTB.BR);https://finance.yahoo.com/quote/LOTB.BR/
+90,941;B;1,94;Lowe's Companies, Inc. (LOW);https://finance.yahoo.com/quote/LOW/
+5,867;B;2,85;MDU Resources Group, Inc. (MDU);https://finance.yahoo.com/quote/MDU/news?p=MDU
+2,628;B;1,89;MGE Energy, Inc. (MGEE);https://finance.yahoo.com/quote/MGEE/news?p=MGEE
+4,81;B;1,36;MSA Safety Incorporated (MSA);https://finance.yahoo.com/quote/MSA
+4,078;B;4,06;MSC Industrial Direct Co., Inc. (MSM);https://finance.yahoo.com/quote/MSM
+13,722;B;6,81;Magellan Midstream Partners, L.P. (MMP);https://finance.yahoo.com/quote/MMP/news?p=MMP
+16,604;B;2,62;Magna International Inc. (MGA);https://finance.yahoo.com/quote/MGA/news?p=MGA
+2,709;B;5,76;Main Street Capital Corporation (MAIN);https://finance.yahoo.com/quote/MAIN
+5,45;B;2,35;ManpowerGroup Inc. (MAN);https://finance.yahoo.com/quote/MAN/news?p=MAN
+38,044;B;3,85;Manulife Financial Corporation (MFC);https://finance.yahoo.com/quote/MFC
+7,671;B;6,81;Mapfre, S.A. (MAP.MC);https://finance.yahoo.com/quote/MAP.MC/
+15,34;B;0,52;MarketAxess Holdings Inc. (MKTX);https://finance.yahoo.com/quote/MKTX/news?p=MKTX
+null;null;null;Marks and Spencer Group plc (MKS.L);https://uk.finance.yahoo.com/quote/MKS.L/
+43,388;B;1,42;Marriott International, Inc. (MAR);https://finance.yahoo.com/quote/MAR
+54,08;B;1,71;Marsh & McLennan Companies, Inc. (MMC);https://finance.yahoo.com/quote/MMC/news?p=MMC
+287,908;B;0,47;Mastercard Incorporated (MA);https://finance.yahoo.com/quote/MA/news?p=MA
+1,125;B;2,40;Matthews International Corporation (MATW);https://finance.yahoo.com/quote/MATW/news?p=MATW
+15,011;B;3,43;Maxim Integrated Products, Inc. (MXIM);https://finance.yahoo.com/quote/MXIM/news?p=MXIM
+22,325;B;1,37;McCormick & Company, Incorporated (MKC);https://finance.yahoo.com/quote/MKC/news?p=MKC
+146,198;B;2,57;McDonald's Corporation (MCD);https://finance.yahoo.com/quote/MCD
+1,78;B;2,05;McGrath RentCorp (MGRC);https://finance.yahoo.com/quote/MGRC
+27,154;B;1,09;McKesson Corporation (MCK);https://finance.yahoo.com/quote/MCK
+1,748;B;5,58;Mediaset Espana Comunicacion, S.A. (TL5.MC);https://finance.yahoo.com/quote/TL5.MC
+9,861;B;4,56;Mediobanca Banca di Credito Finanziario S.p.A. (MDIBY);https://finance.yahoo.com/quote/MDIBY/
+149,985;B;1,94;Medtronic plc (MDT);https://finance.yahoo.com/quote/MDT/
+6,296;B;2,67;Meggitt PLC (MEGGF);https://finance.yahoo.com/quote/MEGGF/news?p=MEGGF
+1,698;B;2,42;Melia Hotels International, S.A. (MEL.MC);https://finance.yahoo.com/quote/MEL.MC/
+217,096;B;2,60;Merck & Co., Inc. (MRK);https://finance.yahoo.com/quote/MRK
+46,543;B;1,16;MERCK Kommanditgesellschaft auf Aktien (MRK.DE);https://finance.yahoo.com/quote/MRK.DE
+2,694;B;5,11;Mercury General Corporation (MCY);https://finance.yahoo.com/quote/MCY
+1,629;B;5,75;Meredith Corporation (MDPEB);https://finance.yahoo.com/quote/MDPEB/news?p=MDPEB
+5,999;B;3,75;MERLIN Properties SOCIMI, S.A. (MRL.MC);https://finance.yahoo.com/quote/MRL.MC/
+45,007;B;3,58;MetLife, Inc. (MET);https://finance.yahoo.com/quote/MET/news?p=MET
+2,845;B;3,60;Methanex Corporation (MEOH);https://finance.yahoo.com/quote/MEOH/news?p=MEOH
+3,536;B;9,68;Micro Focus International plc (MCRO.L);https://finance.yahoo.com/quote/MCRO.L
+21,783;B;1,58;Microchip Technology Incorporated (MCHP);https://finance.yahoo.com/quote/MCHP
+1,141;T;1,36;Microsoft Corporation (MSFT);https://finance.yahoo.com/quote/MSFT/news?p=MSFT
+1,059;B;1,69;Middlesex Water Company (MSEX);https://finance.yahoo.com/quote/MSEX
+11,346;B;4,15;Molson Coors Brewing Company (TAP-A);https://finance.yahoo.com/quote/TAP-A
+75,461;B;2,16;Mondelez International, Inc. (MDLZ);https://finance.yahoo.com/quote/MDLZ/news?p=MDLZ
+10,479;B;4,28;Mondi plc (MONDF);https://finance.yahoo.com/quote/MONDF/news?p=MONDF
+1,825;B;3,15;Moneysupermarket.com Group PLC (MONY.L);https://finance.yahoo.com/quote/MONY.L
+2,403;B;1,21;Monro, Inc. (MNRO);https://finance.yahoo.com/quote/MNRO/news?p=MNRO
+42,274;B;0,90;Moody's Corporation (MCO);https://finance.yahoo.com/quote/MCO/news?p=MCO
+36,961;B;3,60;Munchener Ruckversicherungs-Gesellschaft Aktiengesellschaft (MUV2.DE);https://finance.yahoo.com/quote/MUV2.DE
+1,551;B;N/;Murray International Trust Plc (MYI.L);https://finance.yahoo.com/quote/MYI.L
+1,724;B;3,36;NH Hotel Group, S.A. (NHH.MC);https://finance.yahoo.com/quote/NHH.MC/
+3,917;B;3,79;National Fuel Gas Company (NFG);https://finance.yahoo.com/quote/NFG/news?p=NFG
+40,128;B;5,28;National Grid plc (NGG);https://finance.yahoo.com/quote/NGG
+3,537;B;5,22;National Health Investors, Inc. (NHI);https://finance.yahoo.com/quote/NHI/news?p=NHI
+1,299;B;2,47;National HealthCare Corporation (NHC);https://finance.yahoo.com/quote/NHC
+9,747;B;3,63;National Retail Properties, Inc. (NNN);https://finance.yahoo.com/quote/NNN
+23,116;B;7,53;Naturgy Energy Group, S.A. (NTGY.MC);https://finance.yahoo.com/quote/NTGY.MC/
+304,878;B;2,31;Nestle S.A. (NSRGY);https://finance.yahoo.com/quote/NSRGY
+5,58;B;1,53;NewMarket Corporation (NEU);https://finance.yahoo.com/quote/NEU/news?p=NEU
+31,539;B;1,46;Newmont Goldcorp Corporation (NEM);https://finance.yahoo.com/quote/NEM
+11,395;B;6,37;NEXT plc (NXGPY);https://finance.yahoo.com/quote/NXGPY/news?p=NXGPY
+114,97;B;2,15;NextEra Energy, Inc. (NEE);https://finance.yahoo.com/quote/NEE
+145,256;B;1,05;NIKE, Inc. (NKE);https://finance.yahoo.com/quote/NKE/news?p=NKE
+3,999;B;6,05;Nokian Renkaat Oyj (NKRKY);https://finance.yahoo.com/quote/NKRKY/
+9,455;B;0,92;Nordson Corporation (NDSN);https://finance.yahoo.com/quote/NDSN/news?p=NDSN
+3,528;B;3,32;NorthWestern Corporation (NWE);https://finance.yahoo.com/quote/NWE/news?p=NWE
+59,492;B;1,49;Northrop Grumman Corporation (NOC);https://finance.yahoo.com/quote/NOC
+1,779;B;4,30;Northwest Bancshares, Inc. (NWBI);https://finance.yahoo.com/quote/NWBI/news?p=NWBI
+2,003;B;2,93;Northwest Natural Holding Company (NWN);https://finance.yahoo.com/quote/NWN
+3,343;B;N/;NOS, S.G.P.S., S.A. (ZONNF);https://finance.yahoo.com/quote/ZONNF/news?p=ZONNF
+204,457;B;3,14;Novartis AG (NVS);https://finance.yahoo.com/quote/NVS/news?p=NVS
+860,482;B;2,12;Novo Nordisk A/S (NOVO-B.CO);https://finance.yahoo.com/quote/NOVO-B.CO
+128,058;B;2,19;Novo Nordisk A/S (NVO);https://finance.yahoo.com/quote/NVO/news?p=NVO
+90,093;B;1,60;Novozymes A/S (NZYM-B.CO);https://finance.yahoo.com/quote/NZYM-B.CO
+2,106;B;3,77;Nu Skin Enterprises, Inc. (NUS);https://finance.yahoo.com/quote/NUS/news?p=NUS
+16,404;B;2,92;Nucor Corporation (NUE);https://finance.yahoo.com/quote/NUE/news?p=NUE
+8,54;B;3,60;OGE Energy Corp. (OGE);https://finance.yahoo.com/quote/OGE
+29,242;B;5,17;ONEOK, Inc. (OKE);https://finance.yahoo.com/quote/OKE/news?p=OKE
+34,375;B;8,29;Occidental Petroleum Corporation (OXY);https://finance.yahoo.com/quote/OXY/news?p=OXY
+6,918;B;3,52;Old Republic International Corporation (ORI);https://finance.yahoo.com/quote/ORI
+9,094;B;6,42;Omega Healthcare Investors, Inc. (OHI);https://finance.yahoo.com/quote/OHI/news?p=OHI
+16,874;B;3,30;Omnicom Group Inc. (OMC);https://finance.yahoo.com/quote/OMC/news?p=OMC
+8,061;B;0,49;Onex Corporation (ONEX.TO);https://finance.yahoo.com/quote/onex.to/
+11,673;B;1,61;Open Text Corporation (OTEX);https://finance.yahoo.com/quote/OTEX
+184,609;B;1,70;Oracle Corporation (ORCL);https://finance.yahoo.com/quote/ORCL/news?p=ORCL
+5,568;B;3,77;Orion Oyj (ORNBV.HE);https://finance.yahoo.com/quote/ORNBV.HE/
+88,422;B;2,93;Orkla ASA (ORK.OL);https://finance.yahoo.com/quote/ORK.OL
+1,285;B;1,77;Osisko Gold Royalties Ltd (OR);https://finance.yahoo.com/quote/OR
+4,284;B;N/;OSRAM Licht AG (OSAGF);https://finance.yahoo.com/quote/OSAGF/news?p=OSAGF
+20,875;B;0,28;Ossur hf. (OSSR.CO);https://finance.yahoo.com/quote/OSSR.CO
+34,584;B;1,80;P/F Bakkafrost (BAKKA.OL);https://finance.yahoo.com/quote/BAKKA.OL
+29,913;B;1,58;PPG Industries, Inc. (PPG);https://finance.yahoo.com/quote/PPG/news?p=PPG
+24,424;B;4,92;PPL Corporation (PPL);https://finance.yahoo.com/quote/PPL/news?p=PPL
+10,613;B;2,78;Packaging Corporation of America (PKG);https://finance.yahoo.com/quote/PKG/news?p=PKG
+25,692;B;6,51;Pandora A/S (PNDORA.CO);https://finance.yahoo.com/quote/PNDORA.CO
+25,049;B;1,79;Parker-Hannifin Corporation (PH);https://finance.yahoo.com/quote/PH/news?p=PH
+5,235;B;2,50;Parkland Fuel Corporation (PKIUF);https://finance.yahoo.com/quote/PKIUF/news?p=PKIUF
+2,685;B;6,12;Pattern Energy Group Inc. (PEGI);https://finance.yahoo.com/quote/PEGI
+30,694;B;2,89;Paychex, Inc. (PAYX);https://finance.yahoo.com/quote/PAYX
+6,471;B;2,80;Pearson plc (PSO);https://finance.yahoo.com/quote/PSO/news?p=PSO
+18,229;B;5,01;Pembina Pipeline Corporation (PBA);https://finance.yahoo.com/quote/PBA
+3,834;B;4,46;Pennon Group Plc (PNN.L);https://finance.yahoo.com/quote/PNN.L
+7,258;B;1,66;Pentair plc (PNR);https://finance.yahoo.com/quote/PNR/news?p=PNR
+7,133;B;4,34;People's United Financial, Inc. (PBCT);https://finance.yahoo.com/quote/PBCT
+186,487;B;2,84;PepsiCo, Inc. (PEP);https://finance.yahoo.com/quote/PEP/news?p=PEP
+43,608;B;1,86;Pernod Ricard SA (RI.PA);https://finance.yahoo.com/quote/RI.PA
+6,627;B;1,72;Perrigo Company plc (PRGO);https://finance.yahoo.com/quote/PRGO
+205,039;B;3,82;Pfizer Inc. (PFE);https://finance.yahoo.com/quote/PFE/news?p=PFE
+129,884;B;5,61;Philip Morris International Inc. (PM);https://finance.yahoo.com/quote/PM/news?p=PM
+8,146;B;N/;Pilgrim's Pride Corporation (PPC);https://finance.yahoo.com/quote/PPC/news?p=PPC
+21,612;B;1,36;Pioneer Natural Resources Company (PXD);https://finance.yahoo.com/quote/PXD
+1,57;B;2,86;Playtech plc (PYTCY);https://finance.yahoo.com/quote/PYTCY/news?p=PYTCY
+5,959;B;2,40;Polaris Inc. (PII);https://finance.yahoo.com/quote/PII/news?p=PII
+5,029;B;2,76;Portland General Electric Company (POR);https://finance.yahoo.com/quote/POR
+1,891;B;N/;Premium Brands Holdings Corporation (PRBZF);https://finance.yahoo.com/quote/PRBZF/news?p=PRBZF
+null;null;null;Primary Health Properties Plc (PHP.L);https://uk.finance.yahoo.com/quote/PHP.L?p=PHP.L
+5,44;B;1,04;Primerica, Inc. (PRI);https://finance.yahoo.com/quote/PRI/news?p=PRI
+15,072;B;4,02;Principal Financial Group, Inc. (PFG);https://finance.yahoo.com/quote/PFG
+304,968;B;2,46;The Procter & Gamble Company (PG);https://finance.yahoo.com/quote/PG/
+57,837;B;2,33;Prologis, Inc. (PLD);https://finance.yahoo.com/quote/PLD/news?p=PLD
+2,078;B;3,49;Prosegur Compania de Seguridad, S.A. (PSG.MC);https://finance.yahoo.com/quote/psg.mc/
+6,552;B;2,45;Prosperity Bancshares, Inc. (PB);https://finance.yahoo.com/quote/PB/news?p=PB
+11,082;B;N/;Prudential Financial, Inc. JR SUB NT 53 (PRH);https://finance.yahoo.com/quote/PRH/news?p=PRH
+33,084;B;3,80;Prudential plc (PRU.L);https://finance.yahoo.com/quote/PRU.L
+5,226;B;2,16;Prysmian S.p.A. (PRY.MI);https://finance.yahoo.com/quote/PRY.MI
+10,261;B;5,51;Publicis Groupe S.A. (PUBGY);https://finance.yahoo.com/quote/PUBGY/news?p=PUBGY
+2,557;B;1,05;Quaker Chemical Corporation (KWR);https://finance.yahoo.com/quote/KWR/news?p=KWR&guccounter=1
+97,764;B;2,74;QUALCOMM Incorporated (QCOM);https://finance.yahoo.com/quote/QCOM
+4,416;B;0,94;RLI Corp. (RLI);https://finance.yahoo.com/quote/RLI/news?p=RLI
+3,662;B;1,91;Howden Joinery Group Plc (HWDN.L);https://finance.yahoo.com/quote/HWDN.L
+9,463;B;1,95;RPM International Inc. (RPM);https://finance.yahoo.com/quote/RPM/news?p=RPM
+16,296;B;2,65;RWE Aktiengesellschaft (RWE.DE);https://finance.yahoo.com/quote/RWE.DE
+1,647;B;1,29;RWS Holdings plc (RWS.L);https://finance.yahoo.com/quote/RWS.L
+9,457;B;4,42;Randstad N.V. (RAND.AS);https://finance.yahoo.com/quote/RAND.AS
+60,449;B;1,73;Raytheon Company (RTN);https://finance.yahoo.com/quote/RTN
+25,418;B;3,50;Realty Income Corporation (O);https://finance.yahoo.com/quote/O
+55,678;B;2,39;Reckitt Benckiser Group plc (RBGPF);https://finance.yahoo.com/quote/RBGPF/news?p=RBGPF
+7,718;B;2,59;Recordati Industria Chimica e Farmaceutica S.p.A. (REC.MI);https://finance.yahoo.com/quote/REC.MI
+9,295;B;5,71;Red Electrica Corporacion, S.A. (REE.MC);https://finance.yahoo.com/quote/REE.MC
+3,366;B;1,48;Regal Beloit Corporation (RBC);https://finance.yahoo.com/quote/RBC/news?p=RBC
+10,24;B;1,71;Reinsurance Group of America, Incorporated (RGA);https://finance.yahoo.com/quote/RGA/news?p=RGA
+6,585;B;2,14;Remy Cointreau SA (REMYY);https://finance.yahoo.com/quote/REMYY/news?p=REMYY
+8,323;B;0,74;RenaissanceRe Holdings Ltd. (RNR);https://finance.yahoo.com/quote/RNR/news?p=RNR
+12,733;B;8,06;Renault SA (RNO.PA);https://finance.yahoo.com/quote/RNO.PA
+23,4;B;7,06;Repsol, S.A. (REPYY);https://finance.yahoo.com/quote/REPYY/news?p=REPYY
+27,992;B;1,85;Republic Services, Inc. (RSG);https://finance.yahoo.com/quote/RSG
+19,763;B;3,04;Restaurant Brands International Inc. (QSR);https://finance.yahoo.com/quote/QSR
+2,101;B;4,32;Retail Opportunity Investments Corp. (ROIC);https://finance.yahoo.com/quote/ROIC
+1,193;B;N/;Richelieu Hardware Ltd. (RHUHF);https://finance.yahoo.com/quote/RHUHF/news?p=RHUHF
+8,201;B;1,31;Rightmove plc (RTMVF);https://finance.yahoo.com/quote/RTMVF/news?p=RTMVF
+90,323;B;6,21;Rio Tinto Group (RTPPF);https://finance.yahoo.com/quote/RTPPF/news?p=RTPPF
+4,548;B;1,90;Ritchie Bros. Auctioneers Incorporated (RBA);https://finance.yahoo.com/quote/RBA
+6,782;B;2,11;Robert Half International Inc. (RHI);https://finance.yahoo.com/quote/RHI/news?p=RHI
+261,605;B;2,83;Roche Holding AG (RHHVF);https://finance.yahoo.com/quote/RHHVF/news?p=RHHVF
+22,671;B;2,07;Rockwell Automation, Inc. (ROK);https://finance.yahoo.com/quote/ROK
+29,995;B;2,08;ROCKWOOL International A/S (ROCK-B.CO);https://finance.yahoo.com/quote/ROCK-B.CO
+11,978;B;1,14;Rollins, Inc. (ROL);https://finance.yahoo.com/quote/ROL/news?p=ROL
+13,78;B;1,60;Rolls-Royce Holdings plc (RR.L);https://finance.yahoo.com/quote/RR.L
+36,741;B;0,59;Roper Technologies, Inc. (ROP);https://finance.yahoo.com/quote/ROP
+39,949;B;0,91;Ross Stores, Inc. (ROST);https://finance.yahoo.com/quote/ROST/news?p=ROST
+3,815;B;1,74;Rotork plc (RTOXY);https://finance.yahoo.com/quote/RTOXY/news?p=RTOXY
+117,904;B;3,92;Royal Bank of Canada (RY);https://finance.yahoo.com/quote/RY/news?p=RY
+22,756;B;1,32;Koninklijke DSM N.V. (RDSMY);https://finance.yahoo.com/quote/RDSMY
+233,015;B;6,40;Royal Dutch Shell plc (RDS-A);https://finance.yahoo.com/quote/RDS-A
+7,841;B;0,90;Royal Gold, Inc. (RGLD);https://finance.yahoo.com/quote/RGLD/news?p=RGLD
+2,928;B;13,78;Royal Mail plc (ROYMY);https://finance.yahoo.com/quote/ROYMY/news?p=ROYMY
+406,525;M;N/;the Rubicon Project, Inc. (RUBI);https://finance.yahoo.com/quote/RUBI
+2,673;B;4,30;Ryder System, Inc. (R);https://finance.yahoo.com/quote/R/news?p=R
+65,524;B;0,85;S&P Global Inc. (SPGI);https://finance.yahoo.com/quote/SPGI?guccounter=1
+165,228;B;1,24;SAP SE (SAPGF);https://finance.yahoo.com/quote/SAPGF/news?p=SAPGF
+7,724;B;4,82;SCOR SE (SCRYY);https://finance.yahoo.com/quote/SCRYY/news?p=SCRYY
+7,796;B;N/;SEB SA (SEBYF);https://finance.yahoo.com/quote/SEBYF/news?p=SEBYF
+9,513;B;1,06;SEI Investments Company (SEIC);https://finance.yahoo.com/quote/SEIC
+19,479;B;3,05;SGS SA (SGSOY);https://finance.yahoo.com/quote/SGSOY/news?p=SGSOY
+2,006;B;1,70;SJW Group (SJW);https://finance.yahoo.com/quote/SJW
+17,272;B;6,72;SSE plc (SSEZF);https://finance.yahoo.com/quote/SSEZF/news?p=SSEZF
+12,835;B;0,97;STERIS plc (STE);https://finance.yahoo.com/quote/STE
+N/;A;N/;Sacyr, S.A. (SYRVF);https://finance.yahoo.com/quote/SYRVF/news?p=SYRVF
+70,26;B;2,48;Safran SA (SAFRY);https://finance.yahoo.com/quote/SAFRY/news?p=SAFRY
+10,581;B;N/;The Sage Group plc (SGGEF);https://finance.yahoo.com/quote/SGGEF/news?p=SGGEF
+7,871;B;N/;Sage Therapeutics, Inc. (SAGE);https://finance.yahoo.com/quote/SAGE
+20,917;B;7,67;Sampo Oyj (SAMPO.HE);https://finance.yahoo.com/quote/sampo.he/
+3,023;B;4,18;Samsonite International S.A. (SMSEY);https://finance.yahoo.com/quote/SMSEY
+115,041;B;3,79;Sanofi (SNY);https://finance.yahoo.com/quote/SNY
+115,041;B;3,79;Sanofi (SNY);https://finance.yahoo.com/quote/SNY
+12,27;B;1,69;Saputo Inc. (SAPIF);https://finance.yahoo.com/quote/SAPIF/news?p=SAPIF
+1,805;B;N/;Saracen Mineral Holdings Limited (SCEXF);https://finance.yahoo.com/quote/scexf/
+50,032;B;5,77;Schlumberger Limited (SLB);https://finance.yahoo.com/quote/SLB
+47,667;B;2,69;Schneider Electric S.E. (SU.PA);https://finance.yahoo.com/quote/SU.PA
+13,592;B;3,52;Schroders plc (SHNWF);https://finance.yahoo.com/quote/SHNWF/news?p=SHNWF
+5,702;B;2,26;The Scotts Miracle-Gro Company (SMG);https://finance.yahoo.com/quote/SMG
+41,681;B;2,63;Sempra Energy (SRE);https://finance.yahoo.com/quote/SRE/news?p=SRE
+1,782;B;8,14;Senior Housing Properties Trust (SNH);https://finance.yahoo.com/quote/SNH
+2,654;B;2,50;Sensient Technologies Corporation (SXT);https://finance.yahoo.com/quote/SXT
+2,39;B;N/;Shenzhen Expressway Company Limited (SHZNF);https://finance.yahoo.com/quote/SHZNF/news?p=SHZNF
+2,39;B;N/;Shenzhen Expressway Company Limited (SHZNF);https://finance.yahoo.com/quote/SHZNF/news?p=SHZNF
+53,172;B;0,77;The Sherwin-Williams Company (SHW);https://finance.yahoo.com/quote/SHW
+92,977;B;3,41;Siemens Aktiengesellschaft (SIE.DE);https://finance.yahoo.com/quote/SIE.DE
+8,76;B;0,19;Siemens Gamesa Renewable Energy, S.A. (SGRE.MC);https://finance.yahoo.com/quote/SGRE.MC/
+3,414;B;1,42;Silgan Holdings Inc. (SLGN);https://finance.yahoo.com/quote/SLGN/news?p=SLGN
+N/;A;N/;SimCorp A/S (SICRF);https://finance.yahoo.com/quote/SICRF/news?p=SICRF
+45,487;B;5,57;Simon Property Group, Inc. (SPG);https://finance.yahoo.com/quote/SPG/news?p=SPG
+175,639;B;7,39;Skandinaviska Enskilda Banken AB (publ.) (SEB-A.ST);https://finance.yahoo.com/quote/SEB-A.ST
+18,734;B;1,67;Smith & Nephew plc (SNN);https://finance.yahoo.com/quote/SNN
+7,844;B;1,99;A. O. Smith Corporation (AOS);https://finance.yahoo.com/quote/AOS
+23,806;B;7,77;Societe Generale Societe anonyme (GLE.PA);https://finance.yahoo.com/quote/GLE.PA
+15,392;B;2,74;Sodexo S.A. (SW.PA);https://finance.yahoo.com/quote/SW.PA
+6,655;B;1,40;Sofina Societe Anonyme (SOF.BR);https://finance.yahoo.com/quote/SOF.BR
+2,446;B;N/;Software Aktiengesellschaft (SWDAF);https://finance.yahoo.com/quote/SWDAF/news?p=SWDAF
+11,695;B;4,49;Solvay SA (SVYSF);https://finance.yahoo.com/quote/SVYSF/news?p=SVYSF
+5,863;B;2,94;Sonoco Products Company (SON);https://finance.yahoo.com/quote/SON
+2,787;B;3,81;South Jersey Industries, Inc. (SJI);https://finance.yahoo.com/quote/SJI/news?p=SJI
+65,839;B;3,99;The Southern Company (SO);https://finance.yahoo.com/quote/SO/news?p=SO
+1,185;B;3,54;Southside Bancshares, Inc. (SBSI);https://finance.yahoo.com/quote/SBSI/news?p=SBSI
+4,181;B;2,82;Southwest Gas Holdings, Inc. (SWX);https://finance.yahoo.com/quote/SWX
+4,014;B;1,63;Spectris plc (SEPJY);https://finance.yahoo.com/quote/SEPJY/news?p=SEPJY
+8,156;B;1,21;Spirax-Sarco Engineering plc (SPXSF);https://finance.yahoo.com/quote/SPXSF/news?p=SPXSF
+3,838;B;2,95;Spire Inc. (SR);https://finance.yahoo.com/quote/SR
+9,498;B;0,52;Spirit AeroSystems Holdings, Inc. (SPR);https://finance.yahoo.com/quote/SPR/news?p=SPR
+23,122;B;N/;Sprint Corporation (S);https://finance.yahoo.com/quote/S/news?p=S
+2,319;B;N/;Sprouts Farmers Market, Inc. (SFM);https://finance.yahoo.com/quote/SFM/news?p=SFM
+5,489;B;4,54;St. James's Place plc (STJ.L);https://finance.yahoo.com/quote/STJ.L
+7,199;B;7,01;Standard Life Aberdeen plc (SLA.L);https://finance.yahoo.com/quote/SLA.L/
+1,138;B;1,78;Standard Motor Products, Inc. (SMP);https://finance.yahoo.com/quote/SMP/news?p=SMP
+23,36;B;1,76;Stanley Black & Decker, Inc. (SWK);https://finance.yahoo.com/quote/SWK/news?p=SWK
+2,901;B;1,68;Stantec Inc. (STN);https://finance.yahoo.com/quote/STN/news?p=STN
+98,732;B;1,95;Starbucks Corporation (SBUX);https://finance.yahoo.com/quote/SBUX/news?p=SBUX
+2,048;B;N/;Stella-Jones Inc. (STLJF);https://finance.yahoo.com/quote/STLJF/news?p=STLJF
+2,192;B;1,13;Stepan Company (SCL);https://finance.yahoo.com/quote/SCL/news?p=SCL
+5,626;B;N/;Stericycle, Inc. (SRCL);https://finance.yahoo.com/quote/SRCL/news?p=SRCL
+103,156;B;3,95;Stora Enso Oyj (STE-R.ST);https://finance.yahoo.com/quote/STE-R.ST/
+9,493;B;3,50;STORE Capital Corporation (STOR);https://finance.yahoo.com/quote/STOR
+76,483;B;1,00;Stryker Corporation (SYK);https://finance.yahoo.com/quote/SYK/news?p=SYK
+-;-;-;Suez SA;-
+48,155;B;3,99;Suncor Energy Inc. (SU);https://finance.yahoo.com/quote/SU/news?p=SU
+16,743;B;3,32;Swiss Life Holding AG (SLHN.SW);https://finance.yahoo.com/quote/SLHN.SW/
+8,158;B;3,73;Swiss Prime Site AG (SWPRF);https://finance.yahoo.com/quote/SWPRF/news?p=SWPRF
+26,929;B;4,31;Swisscom AG (SWZCF);https://finance.yahoo.com/quote/SWZCF/news?p=SWZCF
+40,726;B;2,24;Sysco Corporation (SYY);https://finance.yahoo.com/quote/SYY/news?p=SYY
+28,259;B;2,49;T. Rowe Price Group, Inc. (TROW);https://finance.yahoo.com/quote/TROW/news?p=TROW
+47,605;B;4,47;TC Energy Corporation (TRP);https://finance.yahoo.com/quote/TRP
+3,535;B;2,22;TFI International Inc. (TFII.TO);https://finance.yahoo.com/quote/TFII.TO/
+71,714;B;1,52;The TJX Companies, Inc. (TJX);https://finance.yahoo.com/quote/TJX/news?p=TJX
+2,084;B;4,51;TP ICAP plc (TCAP.L);https://finance.yahoo.com/quote/TCAP.L/
+259,081;B;2,97;Taiwan Semiconductor Manufacturing Company Limited (TSM);https://finance.yahoo.com/quote/TSM
+1,438;B;8,72;Tanger Factory Outlet Centers, Inc. (SKT);https://finance.yahoo.com/quote/SKT
+64,597;B;2,38;Target Corporation (TGT);https://finance.yahoo.com/quote/TGT/news?p=TGT
+4,259;B;3,89;Tate & Lyle plc (TATYF);https://finance.yahoo.com/quote/TATYF/news?p=TATYF
+2,015;B;7,76;Taubman Centers, Inc. (TCO);https://finance.yahoo.com/quote/TCO
+12,223;B;N/;Telecom Italia S.p.A. (TIAJF);https://finance.yahoo.com/quote/TIAJF/news?p=TIAJF
+38,571;B;6,14;Telefonica, S.A. (TEF);https://finance.yahoo.com/quote/TEF
+13,744;B;0,90;Teleperformance SE (TLPFY);https://finance.yahoo.com/quote/TLPFY/
+2,655;B;2,83;Telephone and Data Systems, Inc. (TDS);https://finance.yahoo.com/quote/TDS
+22,665;B;4,71;TELUS Corporation (TU);https://finance.yahoo.com/quote/TU
+1,336;B;1,19;Tennant Company (TNC);https://finance.yahoo.com/quote/TNC/news?p=TNC
+11,674;B;4,11;Terna - Rete Elettrica Nazionale Societa per Azioni (TRN.MI);https://finance.yahoo.com/quote/TRN.MI
+108,649;B;3,05;Texas Instruments Incorporated (TXN);https://finance.yahoo.com/quote/TXN/news?p=TXN
+5,353;B;0,25;Texas Pacific Land Trust (TPL);https://finance.yahoo.com/quote/TPL/news?p=TPL
+2,191;B;0,46;The Ensign Group, Inc. (ENSG);https://finance.yahoo.com/quote/ENSG/news?p=ENSG
+1,093;B;N/;The Hanover Insurance Group, Inc. SUB DB 6.35%53 (THGA);https://finance.yahoo.com/quote/THGA/news?p=THGA
+34,956;B;2,42;The Travelers Companies, Inc. (TRV);https://finance.yahoo.com/quote/TRV
+4,68;B;2,35;The Wendy's Company (WEN);https://finance.yahoo.com/quote/WEN/
+35,879;B;2,01;Thomson Reuters Corporation (TRI);https://finance.yahoo.com/quote/TRI/news?p=TRI
+14,898;B;1,88;Tiffany & Co. (TIF);https://finance.yahoo.com/quote/TIF/news?p=TIF
+1,297;B;2,34;Tompkins Financial Corporation (TMP);https://finance.yahoo.com/quote/TMP/news?p=TMP
+2,299;B;1,04;Tootsie Roll Industries, Inc. (TR);https://finance.yahoo.com/quote/TR
+8,281;B;1,16;The Toro Company (TTC);https://finance.yahoo.com/quote/TTC/news?p=TTC
+5,627;B;1,57;Toromont Industries Ltd. (TIH.TO);https://finance.yahoo.com/quote/TIH.TO
+104,921;B;3,91;The Toronto-Dominion Bank (TD);https://finance.yahoo.com/quote/TD
+140,147;B;6,25;TOTAL S.A. (TTFNF);https://finance.yahoo.com/quote/TTFNF/news?p=TTFNF
+11,467;B;1,43;Tractor Supply Company (TSCO);https://finance.yahoo.com/quote/TSCO/news?p=TSCO
+2,9;B;N/;TransAlta Renewables Inc. (TRSWF);https://finance.yahoo.com/quote/TRSWF/news?p=TRSWF
+1,337;B;5,75;Transcontinental Inc. (TCL-A.TO);https://finance.yahoo.com/quote/TCL-A.TO
+3,749;B;3,14;Travis Perkins plc (TPK.L);https://finance.yahoo.com/quote/TPK.L
+33,094;B;1,86;Tyson Foods, Inc. (TSN);https://finance.yahoo.com/quote/TSN/news?p=TSN
+1,236;B;N/;Tecnicas Reunidas, S.A. (TRE.MC);https://finance.yahoo.com/quote/TRE.MC
+43,691;B;5,65;UBS Group AG (UBS);https://finance.yahoo.com/quote/UBS
+9,129;B;2,97;UGI Corporation (UGI);https://finance.yahoo.com/quote/UGI/news?p=UGI
+3,225;B;1,91;UMB Financial Corporation (UMBF);https://finance.yahoo.com/quote/UMBF/news?p=UMBF
+16,213;B;4,26;UPM-Kymmene Oyj (UPM.HE);https://finance.yahoo.com/quote/UPM.HE/
+92,322;B;2,82;U.S. Bancorp (USB);https://finance.yahoo.com/quote/USB/news?p=USB
+1,51;B;2,47;Ultra Electronics Holdings plc (ULE.L);https://finance.yahoo.com/quote/ULE.L
+9,563;B;1,95;Umicore SA (UMI.BR);https://finance.yahoo.com/quote/UMI.BR
+7,346;B;N/;Under Armour, Inc. (UA);https://finance.yahoo.com/quote/UA/
+153,937;B;3,05;The Unilever Group (UN);https://finance.yahoo.com/quote/UN/news?p=UN
+154,5;B;3,06;The Unilever Group (UL);https://finance.yahoo.com/quote/UL/news?p=UL
+120,853;B;2,19;Union Pacific Corporation (UNP);https://finance.yahoo.com/quote/UNP
+7,271;B;5,59;UnipolSai Assicurazioni S.p.A. (US.MI);https://finance.yahoo.com/quote/US.MI
+23,204;B;N/;United Airlines Holdings, Inc. (UAL);https://finance.yahoo.com/quote/UAL/
+3,835;B;3,69;United Bankshares, Inc. (UBSI);https://finance.yahoo.com/quote/UBSI
+102,09;B;3,19;United Parcel Service, Inc. (UPS);https://finance.yahoo.com/quote/UPS/news?p=UPS
+126,598;B;1,98;United Technologies Corporation (UTX);https://finance.yahoo.com/quote/UTX
+5,868;B;4,77;United Utilities Group PLC (UU.L);https://finance.yahoo.com/quote/UU.L
+261,07;B;1,58;UnitedHealth Group Incorporated (UNH);https://finance.yahoo.com/quote/UNH
+1,256;B;5,90;Universal Corporation (UVV);https://finance.yahoo.com/quote/UVV
+1,629;B;2,29;Universal Health Realty Income Trust (UHT);https://finance.yahoo.com/quote/UHT/news?p=UHT
+12,305;B;0,56;Universal Health Services, Inc. (UHS);https://finance.yahoo.com/quote/UHS
+6,099;B;3,90;Unum Group (UNM);https://finance.yahoo.com/quote/UNM/news?p=UNM
+34,146;B;2,22;V.F. Corporation (VFC);https://finance.yahoo.com/quote/VFC/
+9,65;B;2,93;Vail Resorts, Inc. (MTN);https://finance.yahoo.com/quote/MTN/news?p=MTN
+9,5;B;3,77;Valeo SA (VLEEF);https://finance.yahoo.com/quote/VLEEF/news?p=VLEEF
+39,911;B;3,56;Valero Energy Corporation (VLO);https://finance.yahoo.com/quote/VLO/news?p=VLO
+1,889;B;12,84;Vector Group Ltd. (VGR);https://finance.yahoo.com/quote/VGR/news?p=VGR
+21,79;B;5,43;Ventas, Inc. (VTR);https://finance.yahoo.com/quote/VTR/news?p=VTR
+12,676;B;4,02;Veolia Environnement S.A. (VIE.PA);https://finance.yahoo.com/quote/VIE.PA
+10,539;B;5,69;VEREIT, Inc. (VER);https://finance.yahoo.com/quote/VER
+22,601;B;N/;VeriSign, Inc. (VRSN);https://finance.yahoo.com/quote/VRSN/news?p=VRSN
+245,996;B;4,13;Verizon Communications Inc. (VZ);https://finance.yahoo.com/quote/VZ/news?p=VZ
+2,049;B;2,51;Victrex plc (VCT.L);https://finance.yahoo.com/quote/VCT.L
+2,26;B;1,20;Vidrala, S.A. (VID.MC);https://finance.yahoo.com/quote/vid.mc/
+55,839;B;2,68;VINCI SA (DG.PA);https://finance.yahoo.com/quote/DG.PA
+403,867;B;0,66;Visa Inc. (V);https://finance.yahoo.com/quote/V/
+2,211;B;3,98;Viscofan, S.A. (VIS.MC);https://finance.yahoo.com/quote/VIS.MC/
+52,447;B;4,68;Vodafone Group Plc (VOD);https://finance.yahoo.com/quote/VOD/
+25,568;B;3,06;Vonovia SE (VNA.DE);https://finance.yahoo.com/quote/VNA.DE
+14,848;B;4,83;W. P. Carey Inc. (WPC);https://finance.yahoo.com/quote/WPC/news?p=WPC
+12,806;B;0,63;W. R. Berkley Corporation (WRB);https://finance.yahoo.com/quote/WRB
+2,634;B;1,30;WD-40 Company (WDFC);https://finance.yahoo.com/quote/WDFC/news?p=WDFC
+27,821;B;2,68;WEC Energy Group, Inc. (WEC);https://finance.yahoo.com/quote/WEC
+2,218;B;N/;WESCO International, Inc. (WCC);https://finance.yahoo.com/quote/WCC/news?p=WCC
+N/;A;N/;WFD UNIBAIL RODAMCO NV WFD UNIB (0YO9.IL);https://finance.yahoo.com/quote/0YO9.IL/
+2,649;B;3,50;WH Smith PLC (SMWH.L);https://finance.yahoo.com/quote/SMWH.L
+15,671;B;6,04;WPP plc (WPPGF);https://finance.yahoo.com/quote/WPPGF/news?p=WPPGF
+16,825;B;1,84;W.W. Grainger, Inc. (GWW);https://finance.yahoo.com/quote/GWW
+54,748;B;2,98;Walgreens Boots Alliance, Inc. (WBA);https://finance.yahoo.com/quote/WBA/
+338,839;B;1,76;Walmart Inc. (WMT);https://finance.yahoo.com/quote/WMT/news?p=WMT
+261,682;B;1,20;The Walt Disney Company (DIS);https://finance.yahoo.com/quote/DIS/news?p=DIS
+23,689;B;0,82;Waste Connections, Inc. (WCN);https://finance.yahoo.com/quote/WCN/news?p=WCN
+47,757;B;1,82;Waste Management, Inc. (WM);https://finance.yahoo.com/quote/WM/news?p=WM
+3,57;B;2,34;The Weir Group PLC (WEIR.L);https://finance.yahoo.com/quote/WEIR.L
+226,44;B;3,78;Wells Fargo & Company (WFC);https://finance.yahoo.com/quote/WFC/news?p=WFC
+34,428;B;4,10;Welltower Inc. (WELL);https://finance.yahoo.com/quote/WELL/
+6,134;B;N/;Wendel (WNDLF);https://finance.yahoo.com/quote/WNDLF/news?p=WNDLF
+11,069;B;0,43;West Pharmaceutical Services, Inc. (WST);https://finance.yahoo.com/quote/WST/news?p=WST
+9,991;B;4,66;WestRock Company (WRK);https://finance.yahoo.com/quote/WRK
+1,756;B;2,52;Westamerica Bancorporation (WABC);https://finance.yahoo.com/quote/WABC
+8,746;B;1,51;Westlake Chemical Corporation (WLK);https://finance.yahoo.com/quote/WLK
+12,559;B;1,29;Wheaton Precious Metals Corp. (WPM);https://finance.yahoo.com/quote/WPM/
+7,295;B;2,30;Whitbread PLC (WTBCF);https://finance.yahoo.com/quote/WTBCF/news?p=WTBCF
+5,352;B;2,65;Williams-Sonoma, Inc. (WSM);https://finance.yahoo.com/quote/WSM/news?p=WSM
+16,197;B;0,17;Wirecard AG (WRCDF);https://finance.yahoo.com/quote/WRCDF/news?p=WRCDF
+17,142;B;1,59;Wolters Kluwer N.V. (WKL.AS);https://finance.yahoo.com/quote/WKL.AS
+4,317;B;3,73;Wyndham Destinations, Inc. (WYND);https://finance.yahoo.com/quote/WYND/
+32,349;B;2,64;Xcel Energy Inc. (XEL);https://finance.yahoo.com/quote/XEL/news?p=XEL
+22,886;B;1,59;Xilinx, Inc. (XLNX);https://finance.yahoo.com/quote/XLNX/news?p=XLNX
+3,291;B;4,64;Zardoya Otis, S.A. (ZOT.MC);https://finance.yahoo.com/quote/ZOT.MC
+null;null;null;Zhejiang Expressway Co., Ltd. (ZHEH.L);https://finance.yahoo.com/quote/ZHEH.L/
