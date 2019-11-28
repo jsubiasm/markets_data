@@ -88,7 +88,7 @@ public abstract class DriverControllerBase
 							capitalizacion = Double.valueOf(capitalizacionStr);
 							if (capitalizacion < minCapitalizacion)
 							{
-								LOGGER.info("No se obtiene el chart de [" + nombreEmpresa + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
+								LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
 								return;
 							}
 							else
@@ -98,7 +98,7 @@ public abstract class DriverControllerBase
 						}
 						else
 						{
-							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
+							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
 							return;
 						}
 					}
@@ -129,7 +129,7 @@ public abstract class DriverControllerBase
 						String dividendoStr = floatLangBase2.getAttribute("innerHTML");
 						if (dividendoStr.indexOf("N/A") != -1)
 						{
-							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa + "] [" + hrefElemento + "] porque la RPD [" + dividendoStr + "] no está disponible");
+							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + dividendoStr + "] no está disponible");
 							return;
 						}
 						dividendoStr = dividendoStr.substring(dividendoStr.indexOf("(") + 1, dividendoStr.indexOf(")") - 1);
@@ -138,7 +138,7 @@ public abstract class DriverControllerBase
 						dividendo = Double.valueOf(dividendoStr);
 						if (dividendo < minDividendo)
 						{
-							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa + "] [" + hrefElemento + "] porque la RPD [" + dividendo + "] es menor que la RPD mínima [" + minDividendo + "] ");
+							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + dividendo + "] es menor que la RPD mínima [" + minDividendo + "] ");
 							return;
 						}
 						else

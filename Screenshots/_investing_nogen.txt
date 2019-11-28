@@ -1,653 +1,656 @@
-1st Source Corporation (SRCE);https://es.investing.com/equities/1st-source-corp;1.31;_;
-3I Group PLC (III);https://es.investing.com/equities/3i;_;3.26;
-3I Infrastructure PLC (3IN);https://es.investing.com/equities/3i-infrsttr;_;3.09;
-3M Company (MMM);https://es.investing.com/equities/3m-co;_;3.47;
-Smith AO Corporation (AOS);https://es.investing.com/equities/a.o-smith-corp;_;1.88;
-Aalberts Industries NV (AALB);https://es.investing.com/equities/aalberts-industr;_;1.79;
-Aarons Inc (AAN);https://es.investing.com/equities/aarons;_;0.18;
-Abbott Laboratories (ABT);https://es.investing.com/equities/abbott-laboratories;_;1.57;
-Abcam PLC (ABCA);https://es.investing.com/equities/abcam-plc;_;1.04;
-ABM Industries Incorporated (ABM);https://es.investing.com/equities/abm-industries-inc;_;1.93;
-Accenture plc (ACN);https://es.investing.com/equities/accenture-ltd;_;1.75;
-Acciona S.A. (ANA);https://es.investing.com/equities/acciona-sa;_;3.85;
-Accor SA (ACCP);https://es.investing.com/equities/accor;_;2.69;
-Acerinox S.A. (ACX);https://es.investing.com/equities/acerinox;_;3.81;
-Ackermans & Van Haaren NV (ACKB);https://es.investing.com/equities/ackermans-v.haar;_;1.19;
-Activision Blizzard Inc (ATVI);https://es.investing.com/equities/activision-inc;_;0.69;
-Adidas AG (ADSGn);https://es.investing.com/equities/adidas-salomon;_;1.22;
-AENA SME S.A. (AENA);https://es.investing.com/equities/aena-aeropuertos-sa;_;3.87;
-Aflac Inc (AFL);https://es.investing.com/equities/aflac-inc;_;2.03;
-Ageas (AGES);https://es.investing.com/equities/ageas;_;2.95;
-Koninklijke Ahold Delhaize NV (AD);https://es.investing.com/equities/ahold-kon;_;2.89;
-Air Liquide SA (AIRP);https://es.investing.com/equities/air-liquide;_;2.05;
-Air Products and Chemicals Inc (APD);https://es.investing.com/equities/air-prods---chem;_;2.18;
-Akzo Nobel NV (AKZO);https://es.investing.com/equities/akzo-nobel;_;2.23;
-Albemarle Corp (ALB);https://es.investing.com/equities/albemarle;_;2.31;
-Alfa Laval AB (ALFA);https://es.investing.com/equities/alfa-laval;_;2.23;
-Alimentation Couche-Tard Inc (ATDb);https://es.investing.com/equities/alimentation-couche-tard-inc;_;0.63;
-Alliance Trust PLC (ATST);https://es.investing.com/equities/alliance-trust-plc-ord-shs-25p;_;1.75;
-Alliant Energy Corp (LNT);https://es.investing.com/equities/alliant-energy;_;2.67;
-Allied Properties REIT (AP_u);https://es.investing.com/equities/allied-properties-reit;_;3.0;
-Almirall S.A. (ALM);https://es.investing.com/equities/almirall-sa;_;1.32;
-Amadeus IT Holding S.A. (AMA);https://es.investing.com/equities/amadeus;_;1.75;
-American Tower Corp (AMT);https://es.investing.com/equities/amer-tower-corp;_;1.75;
-American Equity Investment Life Holding Co (AEL);https://es.investing.com/equities/american-equity-holdings;_;1.1;
-American Express Company (AXP);https://es.investing.com/equities/american-express;_;1.45;
-American Financial Group Inc (AFG);https://es.investing.com/equities/american-financial-group;_;1.76;
-American States Water Company (AWR);https://es.investing.com/equities/american-states-water-comp;_;1.3;
-American Water Works (AWK);https://es.investing.com/equities/american-water-works-inc;_;1.65;
-Ameriprise Financial Inc (AMP);https://es.investing.com/equities/ameriprise-fincl;_;2.6;
-AmerisourceBergen (ABC);https://es.investing.com/equities/amerisourcebergn;_;1.84;
-Amgen Inc (AMGN);https://es.investing.com/equities/amgen-inc;_;2.86;
-Analog Devices Inc (ADI);https://es.investing.com/equities/analog-devices;_;2.02;
-Anheuser Busch Inbev SA NV (ABI);https://es.investing.com/equities/anheuser-busch-inbev;_;2.46;
-Apple Inc (AAPL);https://es.investing.com/equities/apple-computer-inc;_;1.25;
-Applied Industrial Technologies (AIT);https://es.investing.com/equities/applied-industrial-technologies;_;2.19;
-Applied Materials Inc (AMAT);https://es.investing.com/equities/applied-matls-inc;_;1.51;
-AptarGroup Inc (ATR);https://es.investing.com/equities/aptargroup-inc;_;1.22;
-Aqua America Inc (WTR);https://es.investing.com/equities/aqua-america-inc.;_;2.05;
-ArcelorMittal S.A. (MT);https://es.investing.com/equities/arcelormittal-reg;_;1.25;
-Archer-Daniels-Midland Company (ADM);https://es.investing.com/equities/archer-daniels-mid;_;3.41;
-Arkema SA (AKE);https://es.investing.com/equities/arkema;_;2.53;
-Ashland Global Holdings Inc (ASH);https://es.investing.com/equities/ashland-inc;_;1.43;
-Ashmore Group Plc (ASHM);https://es.investing.com/equities/ashmore;_;3.48;
-Ashtead Group PLC (AHT);https://es.investing.com/equities/ashtead-group;_;1.72;
-ASML Holding NV (ASML);https://es.investing.com/equities/asml-holding;_;0.87;
-Associated British Foods PLC (ABF);https://es.investing.com/equities/assoc.br.foods;_;2.1;
-Assurant Inc (AIZ);https://es.investing.com/equities/assurant;_;1.91;
-AstraZeneca PLC (AZN);https://es.investing.com/equities/astrazeneca;_;2.94;
-Atco Ltd (ACOx);https://es.investing.com/equities/atco-ltd;_;3.46;
-Atlas Copco AB Class A (ATCOa);https://es.investing.com/equities/atlas-copco-a;_;2.11;
-Atmos Energy Corporation (ATO);https://es.investing.com/equities/atmos-energy-corp;_;1.87;
-Atos SE (ATOS);https://es.investing.com/equities/atos-origin;_;2.46;
-ATRION Corporation (ATRI);https://es.investing.com/equities/atrion-corp;1.56;_;
-Automatic Data Processing Inc (ADP);https://es.investing.com/equities/auto-data-process;_;1.95;
-Construcciones y Auxiliar de Ferrocarriles SA (CAF);https://es.investing.com/equities/auxiliar-de-ferrocarriles;1.36;_;
-Broadcom Inc (AVGO);https://es.investing.com/equities/avago-technologies;_;3.66;
-Avista Corporation (AVA);https://es.investing.com/equities/avista-corp;_;3.24;
-Axel Springer SE (SPRGn);https://es.investing.com/equities/axel-springer;_;3.34;
-AXIS Capital Holdings Ltd (AXS);https://es.investing.com/equities/axis-capital;_;2.59;
-B&G Foods Inc (BGS);https://es.investing.com/equities/b-g-foods-holdings-corp;1.02;_;
-Badger Meter Inc (BMI);https://es.investing.com/equities/badger-meter-inc;1.7;_;
-P/f Bakkafrost (BAKKA);https://es.investing.com/equities/bakkafrost-p-f;_;2.32;
-Balchem Corporation (BCPC);https://es.investing.com/equities/balchem-corp;_;0.46;
-Ball Corporation (BLL);https://es.investing.com/equities/ball-corp;_;0.83;
-Baloise Holding AG (BALN);https://es.investing.com/equities/baloise-hld;_;3.07;
-BancFirst Corporation (BANF);https://es.investing.com/equities/bancfirst-corp;1.9;_;
-Bank of America Corp (BAC);https://es.investing.com/equities/bank-of-america;_;2.27;
-Bank Ozk (OZK);https://es.investing.com/equities/bank-of-the-ozark;_;3.43;
-Bankers Investment Trust (BNKR);https://es.investing.com/equities/bankers-investment-trust;1.14;_;
-Barnes Group Inc (B);https://es.investing.com/equities/barnes-group-inc;_;1.08;
-Barrick Gold Corp (GOLD);https://es.investing.com/equities/barrick-gold-corp.;_;0.93;
-Banco de Sabadell S.A. (SABE);https://es.investing.com/equities/bco-de-sabadell;_;1.98;
-Bcolombia (BIC);https://es.investing.com/equities/bcolombia;_;2.47;
-Beazley PLC (BEZG);https://es.investing.com/equities/beazley-group;_;2.01;
-Becton Dickinson and Company (BDX);https://es.investing.com/equities/becton-dickinsn;_;1.26;
-Beiersdorf AG O.N. (BEIG);https://es.investing.com/equities/beiersdorf;_;0.68;
-Bemis Company Inc (BMS);https://es.investing.com/equities/bemis-company;_;2.2;
-Best Buy Co Inc (BBY);https://es.investing.com/equities/best-buy;_;2.73;
-Biomerieux SA (BIOX);https://es.investing.com/equities/biomerieux;_;0.49;
-Black Hills Corporation (BKH);https://es.investing.com/equities/black-hills-corp;_;2.59;
-BlackRock Inc (BLK);https://es.investing.com/equities/blackrock,-inc.-c;_;2.87;
-BNP Paribas Fortis SA (BE0172505399);https://es.investing.com/equities/bnp-paribas-fortis-sa;N/A;_;
-Boeing Co (BA);https://es.investing.com/equities/boeing-co;_;2.42;
-BOK Financial Corporation (BOKF);https://es.investing.com/equities/bok-financial-corp;_;2.57;
-BorgWarner Inc (BWA);https://es.investing.com/equities/borgwarner;_;1.71;
-Bovis Homes Group PLC (BVS);https://es.investing.com/equities/bovis-homes;1.61;_;
-Boyd Group Income Fund (BYD_u);https://es.investing.com/equities/boyd-group-income-fund;_;0.31;
-Brady Corporation (BRC);https://es.investing.com/equities/brady-corp;_;1.53;
-Freni Brembo SpA (BRBI);https://es.investing.com/equities/brembo;_;2.23;
-Brenntag AG (BNRGn);https://es.investing.com/equities/brenntag-ag;_;2.63;
-Brinker International Inc (EAT);https://es.investing.com/equities/brinker-international-inc;1.72;_;
-Bristol-Myers Squibb Company (BMY);https://es.investing.com/equities/bristol-myer-squiib;_;2.98;
-Britvic PLC (BVIC);https://es.investing.com/equities/britvic;_;2.93;
-Broadridge Financial Solutions Inc (BR);https://es.investing.com/equities/broadridge-financial-solutions;_;1.75;
-Brookfield Asset Management Inc (BAMa);https://es.investing.com/equities/brookfield-asset-management;_;1.2;
-Brown & Brown Inc (BRO);https://es.investing.com/equities/brown---brown-inc;_;0.95;
-Brown Forman (BFb);https://es.investing.com/equities/brown-forman-b;_;1.03;
-Brunswick Corporation (BC);https://es.investing.com/equities/brunswick-corp;_;1.63;
-Bunge Limited (BG);https://es.investing.com/equities/bunge;_;3.62;
-Bunzl PLC (BNZL);https://es.investing.com/equities/bunzl;_;2.55;
-Burberry Group PLC (BRBY);https://es.investing.com/equities/burberry;_;2.19;
-Bureau Veritas SA (BVI);https://es.investing.com/equities/bureau-verita;_;2.46;
-CH Robinson Worldwide Inc (CHRW);https://es.investing.com/equities/c-h-robinson-worldwide-inc;_;2.22;
-CAE Inc. (CAE);https://es.investing.com/equities/cae;_;1.33;
-Cal-Maine Foods Inc (CALM);https://es.investing.com/equities/cal-maine-foods;1.93;_;
-Caledonia Investments (CLDN);https://es.investing.com/equities/caledonia-investment;1.65;_;
-California Water Service Group (CWT);https://es.investing.com/equities/california-water-service-group;_;1.45;
-Davide Campari Milano SpA (CPRI);https://es.investing.com/equities/campari;_;0.6;
-Canadian Apartment Properties REIT (CAR_u);https://es.investing.com/equities/canadian-apartment-properties-reit;_;2.53;
-Canadian National Railway Co (CNI);https://es.investing.com/equities/canadian-national-railway;_;1.85;
-Canadian Tire Corp Ltd (CTCa);https://es.investing.com/equities/canadian-tire-corp-ltd;_;2.9;
-Canadian Western Bank (CWB);https://es.investing.com/equities/canadian-western-bank;_;3.36;
-Cantel Medical Corp (CMD);https://es.investing.com/equities/cantel-medical-corp;_;0.28;
-Capgemini SE (CAPP);https://es.investing.com/equities/cap-gemini;_;1.65;
-Cardinal Health Inc (CAH);https://es.investing.com/equities/cardinal-health;_;3.85;
-Carlisle Companies Incorporated (CSL);https://es.investing.com/equities/carlisle-companies-inc;_;1.29;
-Carlsberg A/S B (CARLb);https://es.investing.com/equities/carlsberg-b;_;1.68;
-Caseys General Stores Inc (CASY);https://es.investing.com/equities/caseys-general;_;0.77;
-Caterpillar Inc (CAT);https://es.investing.com/equities/caterpillar;_;2.95;
-Cboe Global Markets Inc (CBOE);https://es.investing.com/equities/cboe-holdings-inc;_;1.1;
-CCL Industries Inc (CCLb);https://es.investing.com/equities/ccl-industries-inc;_;1.27;
-Celanese Corporation (CE);https://es.investing.com/equities/celanese;_;2.01;
-Cellnex Telecom S.A. (CLNX);https://es.investing.com/equities/cellnex-telecom;_;0.22;
-CenterPoint Energy Inc (CNP);https://es.investing.com/equities/centerpoint;_;3.89;
-CF Industries Holdings Inc (CF);https://es.investing.com/equities/cf-industries;_;2.6;
-Chemed Corp (CHE);https://es.investing.com/equities/chemed-corp;_;0.32;
-Chesapeake Energy Corporation (CHK);https://es.investing.com/equities/chesapeake-ener;_;N/A;
-Chesapeake Utilities Corporation (CPK);https://es.investing.com/equities/chesapeake-utilities-corp;1.55;_;
-Chipotle Mexican Grill Inc (CMG);https://es.investing.com/equities/chipotle-mexican-grill-inc;_;N/A;
-Chubb Ltd (CB);https://es.investing.com/equities/chubb-corp;_;2.01;
-Church & Dwight Company Inc (CHD);https://es.investing.com/equities/church---dwight;_;1.22;
-Churchill Downs Incorporated (CHDN);https://es.investing.com/equities/churchill-downs;_;0.41;
-CIE Automotive S.A. (CIEA);https://es.investing.com/equities/cie-automotive-sa;_;2.67;
-Cincinnati Financial Corporation (CINF);https://es.investing.com/equities/cincinnati-fin;_;2.01;
-Cineplex Inc. (CGX);https://es.investing.com/equities/cineplex-inc;1.45;_;
-Cintas Corporation (CTAS);https://es.investing.com/equities/cintas-corp;_;0.94;
-Cisco Systems Inc (CSCO);https://es.investing.com/equities/cisco-sys-inc;_;2.99;
-City Of London Investment Trust (CTY);https://es.investing.com/equities/city-of-london-investment-trust;1.62;_;
-Clorox Co (CLX);https://es.investing.com/equities/clorox-co;_;2.8;
-CMS Energy Corporation (CMS);https://es.investing.com/equities/cms-energy-corp;_;2.4;
-Coca-Cola Company (KO);https://es.investing.com/equities/coca-cola-co;_;2.98;
-Consolidated Edison Inc (ED);https://es.investing.com/equities/cocnsol-edison;_;3.17;
-Cogeco Communications Inc (CCA);https://es.investing.com/equities/cogeco-cable-inc;_;1.93;
-Cogeco Inc. (CGO);https://es.investing.com/equities/cogeco-inc.;1.39;_;
-Cohen & Steers Inc (CNS);https://es.investing.com/equities/cohen---steers-inc.;_;2.29;
-Colgate-Palmolive Company (CL);https://es.investing.com/equities/colgate-palmo;_;2.51;
-Coloplast A/S (COLOb);https://es.investing.com/equities/coloplast--b-;_;2.0;
-Etablissementen Franz Colruyt NV (COLR);https://es.investing.com/equities/colruyt;_;2.62;
-Columbia Sportswear Company (COLM);https://es.investing.com/equities/columbia-sportswear;_;1.02;
-Comcast Corp (CMCSA);https://es.investing.com/equities/comcast-corp-new;_;1.84;
-Commerce Bancshares Inc (CBSH);https://es.investing.com/equities/commerce-bancshar;_;1.62;
-Community Bank System Inc (CBU);https://es.investing.com/equities/community-bank-system-inc;_;2.43;
-Compass Group PLC (CPG);https://es.investing.com/equities/compass-group;_;1.99;
-Compass Minerals International Inc (CMP);https://es.investing.com/equities/compass-minerals-intl-inc;1.92;_;
-Constellation Brands Inc Class A (STZ);https://es.investing.com/equities/constellation-a;_;1.53;
-Corning Incorporated (GLW);https://es.investing.com/equities/corning-inc;_;2.62;
-Corporación Financiera Alba S.A. (ALB);https://es.investing.com/equities/corporacion-financiera-alba-sa;_;2.24;
-Corticeira Amorim (CORA);https://es.investing.com/equities/corticeira-amorim;1.3;_;
-Costco Wholesale Corp (COST);https://es.investing.com/equities/costco-whsl-corp-new;_;0.88;
-Cracker Barrel Old Country Store (CBRL);https://es.investing.com/equities/cracker-barrelold-country;_;3.22;
-Cranswick PLC (CWK);https://es.investing.com/equities/cranswick-plc;1.63;_;
-Crest Nicholson Holdings plc (CRST);https://es.investing.com/equities/crest-nicholson;1.05;_;
-CRH PLC (CRH);https://es.investing.com/equities/crh;_;2.3;
-Croda International PLC (CRDA);https://es.investing.com/equities/croda;_;1.87;
-CSX Corporation (CSX);https://es.investing.com/equities/csx-corp;_;1.33;
-CT Real Estate Investment Trust (CRT_u);https://es.investing.com/equities/ct-real-estate-investment-trust;1.52;_;
-CubeSmart (CUBE);https://es.investing.com/equities/cubesmart;_;3.97;
-Cullen/Frost Bankers Inc (CFR);https://es.investing.com/equities/cullen-frost-bankers-inc;_;3.06;
-Cummins Inc (CMI);https://es.investing.com/equities/cummins-inc;_;2.94;
-CVS Health Corp (CVS);https://es.investing.com/equities/cvs-corp;_;3.07;
-Danone SA (DANO);https://es.investing.com/equities/danone;_;2.56;
-Dassault Aviation SA (AVMD);https://es.investing.com/equities/dassault-avia;_;1.24;
-Dassault Systemes SE (DAST);https://es.investing.com/equities/dassault-system;_;0.43;
-DaVita HealthCare Partners Inc (DVA);https://es.investing.com/equities/davita-inc;_;N/A;
-Dechra Pharmaceuticals PLC (DPH);https://es.investing.com/equities/dechra-pharma;_;1.22;
-Deere & Company (DE);https://es.investing.com/equities/deere---co;_;1.76;
-Derwent London PLC (DLN);https://es.investing.com/equities/derwent-london;_;1.92;
-Vonovia SE (VNAn);https://es.investing.com/equities/deutsche-annington-immobilien-se;_;3.05;
-Deutsche Post AG NA O.N. (DPWGn);https://es.investing.com/equities/deutsche-post;_;3.72;
-Deutsche Wohnen AG (DWNG);https://es.investing.com/equities/deutsche-wohnen-ag-exch;_;2.61;
-Diageo PLC (DGE);https://es.investing.com/equities/diageo;_;2.21;
-Digital Realty Trust Inc (DLR);https://es.investing.com/equities/digital-realty-trust-inc;_;3.25;
-Diploma PLC (DPLM);https://es.investing.com/equities/diploma--plc;1.78;_;
-Discover Financial Services (DFS);https://es.investing.com/equities/discover-financl;_;2.16;
-Walt Disney Company (DIS);https://es.investing.com/equities/disney;_;1.34;
-Dollar General Corporation (DG);https://es.investing.com/equities/dollar-general-corp;_;0.79;
-Dollarama Inc (DOL);https://es.investing.com/equities/dollarama-inc;_;0.39;
-Domino'S Pizza Enterprises Ltd (DMP);https://es.investing.com/equities/dominos-pizza;_;2.29;
-Domino’s Pizza Inc (DPZ);https://es.investing.com/equities/dominos-pizza-inc;_;0.96;
-Domino’s Pizza Group PLC (DOM);https://es.investing.com/equities/dominos-pizza-ukir;1.34;_;
-Donaldson Company Inc (DCI);https://es.investing.com/equities/donaldson-comp-inc;_;1.58;
-Douglas Dynamics Inc (PLOW);https://es.investing.com/equities/douglas-dynamics-inc;1.08;_;
-Dover Corporation (DOV);https://es.investing.com/equities/dover-corp;_;1.88;
-DSV (DSV);https://es.investing.com/equities/dsv;_;0.31;
-Deutsche Boerse AG (DB1Gn);https://es.investing.com/equities/dt-boerse;_;1.88;
-Deutsche Euroshop AG (DEQGn);https://es.investing.com/equities/dt-euroshop-exch;1.67;_;
-DTE Energy Company (DTE);https://es.investing.com/equities/dte-energy;_;2.95;
-Duke Energy Corporation (DUK);https://es.investing.com/equities/duke-energy;_;3.96;
-Dunelm Group PLC (DNLM);https://es.investing.com/equities/dunelm-group;1.7;_;
-Airbus Group SE (AIR);https://es.investing.com/equities/eads;_;1.19;
-Eaton Corporation PLC (ETN);https://es.investing.com/equities/eaton;_;3.32;
-Eaton Vance Corp (EV);https://es.investing.com/equities/eaton-vance;_;3.3;
-Ebro Foods S.A. (EBRO);https://es.investing.com/equities/ebro-foods;_;3.02;
-Ecolab Inc (ECL);https://es.investing.com/equities/ecolab-inc;_;0.96;
-Edinburgh Investment Trust (EDIN);https://es.investing.com/equities/edinburgh-investment-trust;1.1;_;
-Edison International (EIX);https://es.investing.com/equities/edison-intl;_;3.71;
-Eiffage SA (FOUG);https://es.investing.com/equities/eiffage;_;2.08;
-Eli Lilly and Company (LLY);https://es.investing.com/equities/eli-lilly-and-co;_;2.34;
-Elia (ELI);https://es.investing.com/equities/elia-system-op.;_;1.52;
-Elisa Oyj (ELISA);https://es.investing.com/equities/elisa-corporat.;_;3.43;
-Emerson Electric Company (EMR);https://es.investing.com/equities/emerson-elec;_;2.77;
-Empire Company Ltd (EMPa);https://es.investing.com/equities/empire-company-ltd;_;1.38;
-Ems Chemie Hld (EMSN);https://es.investing.com/equities/ems-chemie-hld;_;3.14;
-Enghouse Systems Ltd (ENGH);https://es.investing.com/equities/enghouse-systems-limited;_;1.19;
-Equitable Group Inc. (EQB);https://es.investing.com/equities/equitable-group-inc.;1.92;_;
-Equity Lifestyle Properties Inc (ELS);https://es.investing.com/equities/equity-lifestyle-properties-inc;_;1.78;
-Erie Indemnity Company (ERIE);https://es.investing.com/equities/erie-indemnity-co;_;1.94;
-Essentra PLC (ESNT);https://es.investing.com/equities/essentra-plc;1.03;_;
-Essex Property Trust Inc (ESS);https://es.investing.com/equities/essex-property-trust-inc;_;2.41;
-EssilorLuxottica SA (ESLX);https://es.investing.com/equities/essilor-internat;_;1.14;
-Eurofins Scientific SE (EUFI);https://es.investing.com/equities/euro-scientific;_;0.62;
-Euronext (ENX);https://es.investing.com/equities/euronext;_;2.42;
-Evercore Partners Inc (EVR);https://es.investing.com/equities/evercore-partners-inc;_;3.11;
-Exchange Income Corporation (EIF);https://es.investing.com/equities/exchange-income-corp;1.33;_;
-Expeditors International of Washington Inc (EXPD);https://es.investing.com/equities/expeditors-intl-wash-inc;_;1.33;
-Extra Space Storage Inc (EXR);https://es.investing.com/equities/extra-space-storage;_;3.21;
-FactSet Research Systems Inc (FDS);https://es.investing.com/equities/factset-research-systems-inc;_;1.13;
-Faes Farma SA (FAE);https://es.investing.com/equities/faes-farma-sa;1.39;_;
-Fastenal Company (FAST);https://es.investing.com/equities/fastenal-co;_;2.37;
-Faurecia (EPED);https://es.investing.com/equities/faurecia;_;2.74;
-Fomento de Construcciones y Contratas S.A. (FCC);https://es.investing.com/equities/fcc;_;N/A (3,68%)] no está disponible
-Federal Realty Investment Trust (FRT);https://es.investing.com/equities/federal-realty-investment-trust;_;3.02;
-FedEx Corporation (FDX);https://es.investing.com/equities/fedex-corp;_;1.64;
-Fielmann AG (FIEG);https://es.investing.com/equities/fielmann-ag-exch;_;2.77;
-Fiera Capital Corporation (FSZ);https://es.investing.com/equities/fiera-capital-corporation;1.04;_;
-Finning International Inc. (FTT);https://es.investing.com/equities/finning-international-inc;_;3.7;
-First Interstate BancSystem Inc (FIBK);https://es.investing.com/equities/first-interstate;_;2.9;
-First Merchants Corporation (FRME);https://es.investing.com/equities/first-merchants-corp;_;2.65;
-Flowers Foods Inc (FLO);https://es.investing.com/equities/flowers-foods;_;3.52;
-Fluidra S.A. (FLUI);https://es.investing.com/equities/fluidra-sa;_;N/A;
-Fortis Inc (FTS);https://es.investing.com/equities/fortis-inc;_;3.54;
-Franco-Nevada Corporation (FNV);https://es.investing.com/equities/franco-nevada-corp;_;1.06;
-Franklin Electric Co Inc (FELE);https://es.investing.com/equities/franklin-electric;_;1.13;
-Franklin Resources Inc (BEN);https://es.investing.com/equities/franklin-res;_;3.74;
-Fraport AG (FRAG);https://es.investing.com/equities/fraport;_;2.61;
-Fresenius SE & Co KGAA O.N. (FREG);https://es.investing.com/equities/fresenius-ag;_;1.75;
-Fresenius Medical Care KGAA ST (FMEG);https://es.investing.com/equities/fresenius-medi;_;1.96;
-Fuchs Petrolub AG VZO Pref (FPEG_p);https://es.investing.com/equities/fuchs-petrolub-ag;_;3.0;
-Fuchs Petrolub AG O.N. (0B4R);https://es.investing.com/equities/fuchs-petrolub-l;_;N/A;
-Siemens Gamesa Renewable Energy S.A. (SGREN);https://es.investing.com/equities/gamesa;_;0.17;
-Groupe Bruxelles Lambert SA (GBLB);https://es.investing.com/equities/gbl;_;2.39;
-GEA Group AG (G1AG);https://es.investing.com/equities/gea-group;_;3.14;
-Gecina SA (GFCP);https://es.investing.com/equities/gecina;_;3.65;
-General Dynamics Corporation (GD);https://es.investing.com/equities/general-dynam;_;2.35;
-General Electric Company (GE);https://es.investing.com/equities/general-electric;_;0.44;
-General Mills Inc (GIS);https://es.investing.com/equities/general-mills;_;3.88;
-Gentex Corporation (GNTX);https://es.investing.com/equities/gentex-corp;_;1.66;
-Genuine Parts Co (GPC);https://es.investing.com/equities/genuine-parts-co;_;2.98;
-Genus PLC (GNS);https://es.investing.com/equities/genus;1.85;_;
-George Weston Limited (WN);https://es.investing.com/equities/george-weston-ltd;_;1.98;
-Gestamp Automocion SA (GEST);https://es.investing.com/equities/gestamp-automocion-sa;_;3.23;
-Gildan Activewear Inc. (GIL);https://es.investing.com/equities/gildan-activewear;_;2.08;
-Gilead Sciences Inc (GILD);https://es.investing.com/equities/gilead-sciences-inc;_;3.98;
-Givaudan SA (GIVN);https://es.investing.com/equities/givaudan-sa-cfd;_;2.12;
-Glanbia PLC (GL9);https://es.investing.com/equities/glanbia-plc;_;2.3;
-GN Store Nord (GN);https://es.investing.com/equities/gn-store-nord;_;0.46;
-Goldman Sachs Group Inc (GS);https://es.investing.com/equities/goldman-sachs-group;_;2.33;
-Alphabet Inc Class C (GOOG);https://es.investing.com/equities/google-inc-c;_;N/A;
-Gores Metropoulos Inc (GMHI);https://es.investing.com/equities/gores-metropoulos-inc;N/A;_;
-Graco Inc (GGG);https://es.investing.com/equities/graco-inc;_;1.4;
-Greene King PLC (GNK);https://es.investing.com/equities/greene-king;_;0,33;
-Grifols S.A. (GRLS);https://es.investing.com/equities/grifols;_;1.3;
-Group 1 Automotive Inc (GPI);https://es.investing.com/equities/group-1-automotive-inc;1.93;_;
-Getlink SE (GETP);https://es.investing.com/equities/groupe-eurotunnel-s.a.;_;1.97;
-Grupo Catalana de Occidente S.A. (GCO);https://es.investing.com/equities/grupo-catalana-occidente-sa;_;2.71;
-Ferrovial S.A. (FER);https://es.investing.com/equities/grupo-ferrovial;_;2.73;
-Halliburton Company (HAL);https://es.investing.com/equities/halliburton-co;_;3.52;
-Halma PLC (HLMA);https://es.investing.com/equities/halma;_;0.85;
-Hanesbrands Inc (HBI);https://es.investing.com/equities/hanesbrands;_;3.78;
-Hannover Rueck SE (HNRGn);https://es.investing.com/equities/hannover-rueck;_;3.13;
-The Hanover Insurance Group Inc (THG);https://es.investing.com/equities/hanover-insurance-group-inc;_;1.85;
-Harley-Davidson Inc (HOG);https://es.investing.com/equities/harley-davidson;_;3.81;
-L3Harris Technologies Inc (LHX);https://es.investing.com/equities/harris-corporation;_;1.49;
-Hasbro Inc (HAS);https://es.investing.com/equities/hasbro-inc;_;2.83;
-H B Fuller Company (FUL);https://es.investing.com/equities/hb-fuller-comp;_;1.31;
-HDFC Bank Limited ADR (HDB);https://es.investing.com/equities/hdfc-bank;_;0.54;
-Welltower Inc (WELL);https://es.investing.com/equities/health-care-reit;_;3.96;
-Healthcare Services Group Inc (HCSG);https://es.investing.com/equities/healthcare-service;1.83;_;
-Heico Corporation (HEI);https://es.investing.com/equities/heico-corp;_;0.12;
-Heidelbergcement AG O.N. (HEIG);https://es.investing.com/equities/heidelbergcement-ag-exch;_;3.29;
-Heineken (HEIN);https://es.investing.com/equities/heineken;_;1.83;
-Heineken Holding NV (HEIO);https://es.investing.com/equities/heineken-holding-nv;_;1.95;
-Henderson Smaller Cos Inv Tst (HSL);https://es.investing.com/equities/henderson-sml-co-common-stock;661,11M;_;
-Henkel AG & Co KGAA ST O.N. (HNKG);https://es.investing.com/equities/henkel-ag---co.-st;_;1.95;
-Hera (HRA);https://es.investing.com/equities/hera-spa;_;2.66;
-Hermes International SCA (HRMS);https://es.investing.com/equities/hermes-international;_;0.7;
-Hershey Company (HSY);https://es.investing.com/equities/hershey-co;_;2.16;
-Hillenbrand Inc (HI);https://es.investing.com/equities/hillenbrand-inc;1.95;_;
-Hochtief AG (HOTG);https://es.investing.com/equities/hochtief;_;3.03;
-Home Depot Inc (HD);https://es.investing.com/equities/home-depot;_;2.32;
-Horace Mann Educators Corporation (HMN);https://es.investing.com/equities/horace-mann-educators-corp;1.8;_;
-Hormel Foods Corporation (HRL);https://es.investing.com/equities/hormel-foods-corp;_;2.07;
-Howden Joinery Group Plc (HWDN);https://es.investing.com/equities/howden-join;_;2.04;
-Hubbell Inc (HUBB);https://es.investing.com/equities/hubbell-inc-b;_;2.62;
-Hyatt Hotels Corporation (H);https://es.investing.com/equities/hyatt-hotels-corp;_;1.03;
-Iberdrola S.A. (IBE);https://es.investing.com/equities/iberdrola;_;3.79;
-IDEX Corporation (IEX);https://es.investing.com/equities/idex;_;1.26;
-Iliad (ILD);https://es.investing.com/equities/iliad;_;0.75;
-Illinois Tool Works Inc (ITW);https://es.investing.com/equities/illinois-tool-wk-r;_;2.49;
-Imperial Oil Ltd (IMO);https://es.investing.com/equities/imperial-oil-ltd;_;2.61;
-Inchcape PLC (INCH);https://es.investing.com/equities/inchcape;_;3.97;
-Industria de Diseño y Textil S.A. (ITX);https://es.investing.com/equities/inditex;_;3.11;
-Indra Sistemas S.A. (IDR);https://es.investing.com/equities/indra-sistemas;1.52;_;
-Industria Macchine Automatiche (IMAI);https://es.investing.com/equities/industria-macchine-automatiche;_;3.22;
-Infineon Technologies AG NA O.N. (IFXGn);https://es.investing.com/equities/infineon-tech;_;1.47;
-Informa PLC (INF);https://es.investing.com/equities/informa;_;2.94;
-Ingenico Group SA (INGC);https://es.investing.com/equities/ingenico;_;1.14;
-Ingersoll-Rand PLC (IR);https://es.investing.com/equities/ingersoll-rand;_;1.75;
-Ingredion Incorporated (INGR);https://es.investing.com/equities/ingredion-inc;_;3.15;
-Inmobiliaria Colonial S.A. (COL);https://es.investing.com/equities/inmob-colonial;_;1.74;
-Intact Financial Corporation (IFC);https://es.investing.com/equities/intact-financial-corp;_;2.29;
-Intel Corporation (INTC);https://es.investing.com/equities/intel-corp;_;2.23;
-Inter Parfums Inc (IPAR);https://es.investing.com/equities/inter-parfums-inc;_;1.48;
-International Bancshares Corporation (IBOC);https://es.investing.com/equities/international-ban;_;2.71;
-International Speedway Corporation (ISCA);https://es.investing.com/equities/international-spe;1.96;_;
-InterRent REIT (IIP_u);https://es.investing.com/equities/interrent-reit;1.87;_;
-Intertek Group PLC (ITRK);https://es.investing.com/equities/intertek-testing-services;_;1.93;
-International Flavors & Fragrances Inc (IFF);https://es.investing.com/equities/intl-flav---frag;_;2.5;
-Ipsen SA (IPN);https://es.investing.com/equities/ipsen;_;1.07;
-JB Hunt Transport Services Inc (JBHT);https://es.investing.com/equities/j.b.-hunt-transpo;_;0.89;
-Jack Henry & Associates Inc (JKHY);https://es.investing.com/equities/jack-henry---asso;_;1.15;
-James Fisher & Sons plc (FSJ);https://es.investing.com/equities/james-fisher-and-sons;981,4M;_;
-JC Decaux SA (JCDX);https://es.investing.com/equities/jcdeceaux;_;2.35;
-JD Sports Fashion PLC (JD);https://es.investing.com/equities/jd-sports-fashion;_;0.22;
-JM Smucker Company (SJM);https://es.investing.com/equities/jm-smucker-co;_;3.25;
-John Wiley & Sons (JWa);https://es.investing.com/equities/john-wiley---sons-a;_;3.05;
-Johnson Controls International PLC (JCI);https://es.investing.com/equities/johnson-controls;_;2.44;
-Johnson & Johnson (JNJ);https://es.investing.com/equities/johnson-johnson;_;2.96;
-Johnson Matthey PLC (JMAT);https://es.investing.com/equities/johnson-matthey;_;2.97;
-JPMorgan Chase & Co (JPM);https://es.investing.com/equities/jp-morgan-chase;_;2.86;
-Jupiter Fund Management Plc (JUP);https://es.investing.com/equities/jupiter-fund-management;1.59;_;
-Kellogg Company (K);https://es.investing.com/equities/kellogg-co.;_;3.74;
-Kering SA (PRTP);https://es.investing.com/equities/kering;_;1.18;
-Kerry Group (KYGa);https://es.investing.com/equities/kerry-group;_;0.68;
-Kimberly-Clark Corporation (KMB);https://es.investing.com/equities/kimberly-clark;_;3.07;
-Kinepolis Group NV (KIPO);https://es.investing.com/equities/kinepolis-group;1.6;_;
-Kion Group AG (KGX);https://es.investing.com/equities/kion-group-ag;_;1.99;
-Kobenhavns Lufthavne (KBHL);https://es.investing.com/equities/koebenhavns-lufthavne;_;2.01;
-KONE Oyj (KNEBV);https://es.investing.com/equities/kone-corporation;_;2.88;
-Koninklijke DSM NV (DSMN);https://es.investing.com/equities/koninklijke-dsm;_;2.1;
-Korian Medica SA (KORI);https://es.investing.com/equities/korian;_;1.63;
-Kroger Company (KR);https://es.investing.com/equities/kroger-co;_;2.53;
-L'Oréal SA (OREP);https://es.investing.com/equities/l-oreal;_;1.45;
-LVMH Moet Hennessy Louis Vuitton SE (LVMH);https://es.investing.com/equities/l.v.m.h.;_;1.42;
-Laboratorios Farmaceuticos Rovi S.A. (ROVI);https://es.investing.com/equities/laboratorios-farmaceuticos-rovi-sa;1.21;_;
-Spire Inc (SR);https://es.investing.com/equities/laclede-group-inc;_;2.82;
-Lancaster Colony Corporation (LANC);https://es.investing.com/equities/lancaster-colony;_;1.9;
-Landstar System Inc (LSTR);https://es.investing.com/equities/landstar-system;_;0.62;
-Lanxess AG (LXSG);https://es.investing.com/equities/lanxess;_;1.62;
-Laurentian Bank Of Canada (LB);https://es.investing.com/equities/laurentian-bank-of-canada;1.92;_;
-Lear Corporation (LEA);https://es.investing.com/equities/lear;_;2.42;
-LEG Immobilien AG (LEGn);https://es.investing.com/equities/leg-immobilien-ag;_;3.0;
-Leggett & Platt Incorporated (LEG);https://es.investing.com/equities/leggett---platt;_;3.54;
-Lennox International Inc (LII);https://es.investing.com/equities/lennox-international;_;1.27;
-Lincoln Electric Holdings Inc (LECO);https://es.investing.com/equities/lincoln-electric-holdings-inc;_;2.13;
-Linde AG O.N. (LING);https://es.investing.com/equities/linde;_;2.0;
-Linde PLC (LINI);https://es.investing.com/equities/linde-plc;_;1.8;
-Chocoladefabriken Lindt & Spruengli AG (LISN);https://es.investing.com/equities/lindt---sp-n;_;1.16;
-Lithia Motors Inc (LAD);https://es.investing.com/equities/lithia-motors-inc;_;0.77;
-Littelfuse Inc (LFUS);https://es.investing.com/equities/littelfuse;_;1.02;
-Lockheed Martin Corporation (LMT);https://es.investing.com/equities/lockheed-martin;_;2.59;
-London Stock Exchange Group PLC (LSE);https://es.investing.com/equities/london-stock-exchange;_;0.9;
-Lotus Bakeries (LOTB);https://es.investing.com/equities/lotus-bakeries;_;0.8;
-Lowe’s Companies Inc (LOW);https://es.investing.com/equities/lowes-companies;_;1.97;
-Magna International Inc (MGA);https://es.investing.com/equities/magna-international;_;2.69;
-ManpowerGroup Inc (MAN);https://es.investing.com/equities/manpower-inc;_;2.35;
-MarketAxess Holdings Inc (MKTX);https://es.investing.com/equities/marketaxess-holdi;_;0.59;
-Marriott International Inc (MAR);https://es.investing.com/equities/marriott-intl;_;1.52;
-Marsh & McLennan Companies Inc (MMC);https://es.investing.com/equities/marsh---mclennan;_;1.87;
-Mastercard Inc (MA);https://es.investing.com/equities/mastercard-cl-a;_;0.49;
-Matthews International Corporation (MATW);https://es.investing.com/equities/matthews-internat;1.17;_;
-Maxim Integrated Products Inc (MXIM);https://es.investing.com/equities/maxim-integrated;_;3.36;
-McCormick & Company Incorporated (MKC);https://es.investing.com/equities/mccormick---co;_;1.43;
-McDonald’s Corporation (MCD);https://es.investing.com/equities/mcdonalds;_;2.57;
-McGrath RentCorp (MGRC);https://es.investing.com/equities/mcgrath-rentcorp;1.87;_;
-S&P Global Inc (SPGI);https://es.investing.com/equities/mcgraw-hill;_;0.91;
-McKesson Corporation (MCK);https://es.investing.com/equities/mckesson-corp;_;1.12;
-MDU Resources Group Inc (MDU);https://es.investing.com/equities/mdu-res-group-inc;_;2.9;
-Mediaset España Comunicación S.A. (TL5);https://es.investing.com/equities/mediaset-esp;1.69;_;
-Medtronic PLC (MDT);https://es.investing.com/equities/medtronic;_;2.05;
-Meggitt PLC (MGGT);https://es.investing.com/equities/meggitt;_;2.71;
-Meliá Hotels International S.A. (MEL);https://es.investing.com/equities/melia-hotels-international-sa;1.64;_;
-Merck & Company Inc (MRK);https://es.investing.com/equities/merck---co;_;2.67;
-Merck KGaA (MRCG);https://es.investing.com/equities/merck-kgaa;_;1.31;
-Meredith Corporation (MDP);https://es.investing.com/equities/meredith-corp;1.7;_;
-Merlin Properties Socimi S.A. (MRL);https://es.investing.com/equities/merlin-properties-sa;_;3.83;
-Methanex Corporation (MX);https://es.investing.com/equities/methanex;_;3.95;
-MetLife Inc (MET);https://es.investing.com/equities/metlife-inc;_;3.8;
-MGE Energy Inc (MGEE);https://es.investing.com/equities/mge-energy-inc;_;1.84;
-Capri Holdings Ltd (CPRI);https://es.investing.com/equities/michael-kors-holdings;_;N/A;
-Compagnie Generale des Etablissements Michelin SCA (MICP);https://es.investing.com/equities/michelin;_;3.16;
-Microchip Technology Inc (MCHP);https://es.investing.com/equities/microchip-technology-inc;_;1.56;
-Microsoft Corporation (MSFT);https://es.investing.com/equities/microsoft-corp;_;1.45;
-Middlesex Water Company (MSEX);https://es.investing.com/equities/middlesex-water;1.09;_;
-MSA Safety (MSA);https://es.investing.com/equities/mine-safety-appliances-comp;_;1.46;
-Mondelez International Inc (MDLZ);https://es.investing.com/equities/mondelez-international-inc;_;2.16;
-Moneysupermarket.Com Group PLC (MONY);https://es.investing.com/equities/moneysuprmkt;1.85;_;
-Monro Muffler Brake Inc (MNRO);https://es.investing.com/equities/monro-muffler;_;1.28;
-Moodys Corporation (MCO);https://es.investing.com/equities/moodys-corp;_;0.93;
-MSC Industrial Direct Company Inc (MSM);https://es.investing.com/equities/msc-industrial-direct-comp-inc;_;3.97;
-Murray International Trust (MYI);https://es.investing.com/equities/murray-international-trust;1.57;_;
-National Fuel Gas Company (NFG);https://es.investing.com/equities/national-fuel-gas-comp;_;3.81;
-National HealthCare Corporation (NHC);https://es.investing.com/equities/national-healthcare-corp;1.25;_;
-National Retail Properties Inc (NNN);https://es.investing.com/equities/national-retail;_;3.56;
-Nestlé SA (NESN);https://es.investing.com/equities/nestle-ag;_;2.22;
-NewMarket Corporation (NEU);https://es.investing.com/equities/newmarket-corp;_;1.61;
-Newmont Goldcorp Corp (NEM);https://es.investing.com/equities/newmont-mining;_;1.43;
-Next PLC (NXT);https://es.investing.com/equities/next;_;2.48;
-Nextera Energy Inc (NEE);https://es.investing.com/equities/nextera-energy-inc;_;2.11;
-NH Hotel Group S.A. (NHH);https://es.investing.com/equities/nh-hoteles-sa;1.75;_;
-Nike Inc (NKE);https://es.investing.com/equities/nike;_;0.97;
-Nordson Corporation (NDSN);https://es.investing.com/equities/nordson-corp;_;0.99;
-Eversource Energy (ES);https://es.investing.com/equities/northeast-utilities;_;2.51;
-Northrop Grumman Corporation (NOC);https://es.investing.com/equities/northrop-grumman;_;1.53;
-Northwest Bancshares Inc (NWBI);https://es.investing.com/equities/northwest-bancsha;1.8;_;
-Northwest Natural Gas Co (NWN);https://es.investing.com/equities/northwest-natural-gas-comp;_;2.73;
-NorthWestern Corporation (NWE);https://es.investing.com/equities/northwestern-corp;_;3.12;
-Novartis AG (NOVN);https://es.investing.com/equities/novartis;_;3.29;
-Novo Nordisk A/S (NVO);https://es.investing.com/equities/novo-nordis;_;2.26;
-Novo Nordisk A/S Class B (NOVOb);https://es.investing.com/equities/novo-nordisk;_;2.35;
-Novozymes A/S B (NZYMb);https://es.investing.com/equities/novozymes-b;_;1.45;
-Nu Skin Enterprises Inc (NUS);https://es.investing.com/equities/nu-skin-enterprises-inc;_;3.32;
-Nucor Corp (NUE);https://es.investing.com/equities/nucor;_;2.92;
-OGE Energy Corporation (OGE);https://es.investing.com/equities/oge-energy;_;3.6;
-Old Republic International Corp (ORI);https://es.investing.com/equities/old-republic-international;_;3.53;
-Omnicom Group Inc (OMC);https://es.investing.com/equities/omnicom-gp-inc;_;3.38;
-Onex Corp (ONEX);https://es.investing.com/equities/onex-corp;_;0.52;
-Open Text Corp (OTEX);https://es.investing.com/equities/open-text;_;1.77;
-Oracle Corporation (ORCL);https://es.investing.com/equities/oracle-corp;_;1.77;
-Orion Oyj B (ORNBV);https://es.investing.com/equities/orion-b;_;3.59;
-Orkla ASA (ORK);https://es.investing.com/equities/orkla-a;_;3.01;
-Osisko Gold Ro (OR);https://es.investing.com/equities/osisko-gold-ro;1.82;_;
-Osram Licht AG (OSRn);https://es.investing.com/equities/osram-licht;_;2.76;
-Ossur HF (OSSR);https://es.investing.com/equities/ossur-hf;_;0.27;
-Packaging Corp of America (PKG);https://es.investing.com/equities/packaging-corp;_;2.85;
-Flutter Entertainment PLC (FLTRF);https://es.investing.com/equities/paddy-power;_;2.74;
-Parker-Hannifin Corporation (PH);https://es.investing.com/equities/parkerhannifin;_;1.85;
-Parkland Fuel Corporation (PKI);https://es.investing.com/equities/parkland-fuel-corp;_;2.69;
-Paychex Inc (PAYX);https://es.investing.com/equities/paychex-inc;_;2.93;
-Pearson PLC (PSON);https://es.investing.com/equities/pearson;_;2.79;
-Pentair PLC (PNR);https://es.investing.com/equities/pentair;_;1.75;
-PepsiCo Inc (PEP);https://es.investing.com/equities/pepsico;_;2.8;
-Pernod Ricard SA (PERP);https://es.investing.com/equities/pernod-ricard;_;1.95;
-Perrigo Company PLC (PRGO);https://es.investing.com/equities/perrigo-co;_;1.55;
-Pfizer Inc (PFE);https://es.investing.com/equities/pfizer;_;3.92;
-Koninklijke Philips NV (PHG);https://es.investing.com/equities/philips-kon;_;2.21;
-Pilgrims Pride Corp (PPC);https://es.investing.com/equities/pilgrims-pride-corp;_;N/A;
-Pioneer Natural Resources Co (PXD);https://es.investing.com/equities/pioneer-natural-resources;_;0.68;
-Compagnie Plastic Omnium SA (PLOF);https://es.investing.com/equities/plastic-omnium;_;2.6;
-Playtech Plc (PTEC);https://es.investing.com/equities/playtech-limited;1.2;_;
-Polaris Industries Inc (PII);https://es.investing.com/equities/polaris-industries;_;2.41;
-Portland General Electric Co (POR);https://es.investing.com/equities/portland-general;_;2.72;
-PPG Industries Inc (PPG);https://es.investing.com/equities/ppg-industries;_;1.64;
-Premium Brands Holdings Corporation (PBH);https://es.investing.com/equities/premium-brands-holdings-corp;_;2.39;
-Primary Health Properties (PHP);https://es.investing.com/equities/primary-health-properties-plc;1.72;_;
-Primerica Inc (PRI);https://es.investing.com/equities/primerica-inc;_;1.08;
-Procter & Gamble Company (PG);https://es.investing.com/equities/procter-gamble;_;2.42;
-Prologis Inc (PLD);https://es.investing.com/equities/prologis;_;2.33;
-Prosegur, Cia. De Seguridad S.A. (PSG);https://es.investing.com/equities/prosegur-sa;_;3.7;
-Prosperity Bancshares Inc (PB);https://es.investing.com/equities/prosperity-bancshares-inc;_;2.52;
-Prysmian SpA (PRY);https://es.investing.com/equities/prysmian;_;2.08;
-Quaker Chemical Corporation (KWR);https://es.investing.com/equities/quaker-chemical-corp;_;1.01;
-Qualcomm Incorporated (QCOM);https://es.investing.com/equities/qualcomm-inc;_;3.09;
-Raytheon Company (RTN);https://es.investing.com/equities/raytheon-co;_;1.78;
-Realty Income Corp (O);https://es.investing.com/equities/realty-income;_;3.37;
-Reckitt Benckiser Group PLC (RB);https://es.investing.com/equities/reckitt-benckiser;_;2.98;
-Recordati (RECI);https://es.investing.com/equities/recordati;_;2.39;
-Regal Beloit Corporation (RBC);https://es.investing.com/equities/regal-beloit-corp;_;1.59;
-Reinsurance Group of America (RGA);https://es.investing.com/equities/reinsurance-group-of-america-inc;_;1.78;
-Remy Cointreau (RCOP);https://es.investing.com/equities/remy-cointreau;_;2.25;
-Renaissancere Holdings Ltd (RNR);https://es.investing.com/equities/renaissancere-holdings-ltd;_;0.74;
-Republic Services Inc (RSG);https://es.investing.com/equities/republic-services-inc;_;1.88;
-Restaurant Brands International Inc (QSR);https://es.investing.com/equities/restaurant-brands-intrnational;_;2.92;
-Richelieu Hardware Ltd. (RCH);https://es.investing.com/equities/richelieu-hardware-ltd.;1.52;_;
-Compagnie Financiere Richemont SA (CFR);https://es.investing.com/equities/richemont;_;2.6;
-Rightmove PLC (RMV);https://es.investing.com/equities/rightmove;_;1.13;
-Ritchie Bros Auctioneers (RBA);https://es.investing.com/equities/ritchie-bros.-auctioneers;_;1.99;
-RLI Corp (RLI);https://es.investing.com/equities/rli-corp;_;0.96;
-Robert Half International Inc (RHI);https://es.investing.com/equities/robert-half-intl;_;2.14;
-Roche Holding AG (RO);https://es.investing.com/equities/roche-holding;_;2.82;
-Rockwell Automation Inc (ROK);https://es.investing.com/equities/rockwell-automat;_;2.19;
-Rockwool International B (ROCKb);https://es.investing.com/equities/rockwool-international-b;_;1.81;
-Rollins Inc (ROL);https://es.investing.com/equities/rollins-inc;_;1.09;
-Rolls-Royce Holdings PLC (RR);https://es.investing.com/equities/rolls-royce;_;N/A;
-Roper Technologies Inc (ROP);https://es.investing.com/equities/roper-industries;_;0.55;
-Ross Stores Inc (ROST);https://es.investing.com/equities/ross-stores-inc;_;0.92;
-Rotork PLC (ROR);https://es.investing.com/equities/rotork;_;1.99;
-Royal Bank of Canada (RY);https://es.investing.com/equities/royal-bank-of-canada-rbc;_;3.96;
-Royal DSM NV (RDSMY);https://es.investing.com/equities/royal-dsm-nv;_;2.14;
-Royal Gold Inc (RGLD);https://es.investing.com/equities/royal-gold-inc.;_;0.88;
-RPC Group PLC (RPC);https://es.investing.com/equities/rpc-group;_;3.59;
-RPM International Inc (RPM);https://es.investing.com/equities/rpm-intl-inc;_;2.03;
-Rubis SCA (RUBF);https://es.investing.com/equities/rubis;_;3.11;
-RWE AG ST O.N. (RWEG);https://es.investing.com/equities/rwe-st-a;_;2.71;
-RWS Holdings PLC (RWS);https://es.investing.com/equities/rws-holdings;1.63;_;
-Sacyr SA (SCYR);https://es.investing.com/equities/sacyr-valle;1.46;_;
-Safran SA (SAF);https://es.investing.com/equities/safran;_;1.12;
-Sage Group PLC (SGE);https://es.investing.com/equities/sage-group;_;2.49;
-Sage Therapeutic (SAGE);https://es.investing.com/equities/sage-therapeutic;_;N/A;
-Compagnie de Saint Gobain SA (SGOB);https://es.investing.com/equities/saint-gobain;_;3.54;
-Samsonite International SA (1SO);https://es.investing.com/equities/samsonite-international-sa;_;3.93;
-Sanofi ADR (SNY);https://es.investing.com/equities/sanofi;_;3.68;
-Sanofi SA (SASY);https://es.investing.com/equities/sanofi-aventis;_;3.6;
-SAP SE (SAPG);https://es.investing.com/equities/sap-ag;_;1.37;
-Saputo Inc (SAP);https://es.investing.com/equities/saputo-inc;_;1.81;
-Saracen Mineral Holdings Ltd (SAR);https://es.investing.com/equities/saracen-mineral-holdings;_;N/A;
-Schneider Electric SE (SCHN);https://es.investing.com/equities/schneider-electr;_;2.76;
-Schroders PLC (SDR);https://es.investing.com/equities/schroders;_;3.65;
-Scotts Miracle-Gro Company (SMG);https://es.investing.com/equities/scotts-miracle-gro-comp;_;2.36;
-SEB SA (SEBF);https://es.investing.com/equities/seb;_;1.44;
-SEI Investments Company (SEIC);https://es.investing.com/equities/sei-investments;_;1.09;
-Sempra Energy (SRE);https://es.investing.com/equities/sempra-energy;_;2.69;
-Sensient Technologies Corporation (SXT);https://es.investing.com/equities/sensient-technologies-corp;_;2.51;
-SGS SA (SGSN);https://es.investing.com/equities/sgs;_;3.0;
-Shenzhen Expressway Co Ltd (0548);https://es.investing.com/equities/shenzhen-expressway-co-ltd;_;3.92;
-Sherwin-Williams Co (SHW);https://es.investing.com/equities/sherwinwilliams;_;0.79;
-Siemens AG Class N (SIEGn);https://es.investing.com/equities/siemens;_;3.71;
-Silgan Holdings Inc (SLGN);https://es.investing.com/equities/silgan-holdings;_;1.43;
-Wheaton Precious Metals Corp (WPM);https://es.investing.com/equities/silver-wheaton-corp;_;1.31;
-Simcorp A/S (SIM);https://es.investing.com/equities/simcorp;_;1.12;
-SJW Corporation (SJW);https://es.investing.com/equities/sjw-corp;_;1.64;
-Smith & Nephew SNATS Inc (SNN);https://es.investing.com/equities/smith---nephew-snats-inc;_;1.67;
-Sodexo SA (EXHO);https://es.investing.com/equities/sodexho-alliance;_;2.8;
-Sofina (SOF);https://es.investing.com/equities/sofina;_;0.99;
-Software AG (SOWGn);https://es.investing.com/equities/software;_;2.62;
-Solvay SA (SOLB);https://es.investing.com/equities/solvay;_;2.52;
-Sonoco Products Company (SON);https://es.investing.com/equities/sonoco-products-comp;_;2.95;
-South Jersey Industries Inc (SJI);https://es.investing.com/equities/south-jersey-industries-inc;_;3.58;
-Southside Bancshares Inc (SBSI);https://es.investing.com/equities/southside-bancshares;1.18;_;
-Southwest Gas Holdings Inc (SWX);https://es.investing.com/equities/southwest-gas-corp;_;2.48;
-Spectris PLC (SXS);https://es.investing.com/equities/spectris;_;2.51;
-Spirax-Sarco Engineering PLC (SPX);https://es.investing.com/equities/spirax;_;1.32;
-Spirit Aerosystems Holdings Inc (SPR);https://es.investing.com/equities/spirit-aerosystems-holdings-inc;_;0.61;
-Sprint Corp (S);https://es.investing.com/equities/sprint-nextel-corp;_;N/A;
-Sprouts Farmers Market Inc (SFM);https://es.investing.com/equities/sprts-frmr;_;N/A;
-Standard Motor Products Inc (SMP);https://es.investing.com/equities/standard-motor-products-inc;1.19;_;
-Stanley Black & Decker Inc (SWK);https://es.investing.com/equities/stanley-works;_;1.82;
-Stantec Inc (STN);https://es.investing.com/equities/stantec;_;2.05;
-Starbucks Corporation (SBUX);https://es.investing.com/equities/starbucks-corp;_;1.73;
-Stella-Jones Inc. (SJ);https://es.investing.com/equities/stella-jones-inc.;_;1.51;
-Stepan Company (SCL);https://es.investing.com/equities/stepan-comp;_;1.13;
-Stericycle Inc (SRCL);https://es.investing.com/equities/stericycle-inc;_;N/A;
-STERIS plc (STE);https://es.investing.com/equities/steris-corp;_;1.07;
-Stora Enso Oyj R (STERV);https://es.investing.com/equities/stora-enso;_;3.47;
-Store Capital Corp (STOR);https://es.investing.com/equities/store-capital-corp;_;3.6;
-Stryker Corporation (SYK);https://es.investing.com/equities/stryker;_;0.98;
-Swiss Life Holding AG (SLHN);https://es.investing.com/equities/swiss-life;_;3.53;
-Swiss Prime Site AG (SPSN);https://es.investing.com/equities/swiss-prime-si;_;3.71;
-Sysco Corporation (SYY);https://es.investing.com/equities/sysco-corp;_;1.97;
-Shenzhen Expressway Co Ltd (600548);https://es.investing.com/equities/sz-expressway;_;3.4;
-T. Rowe Price Group Inc (TROW);https://es.investing.com/equities/t-rowe-price-gp;_;2.67;
-Taiwan Semiconductor Manufacturing (TSM);https://es.investing.com/equities/taiwan-semicond.manufacturing-co;_;3.12;
-Tanger Factory Outlet Centers Inc (SKT);https://es.investing.com/equities/tanger-factory;1.52;_;
-Target Corporation (TGT);https://es.investing.com/equities/target;_;2.42;
-Técnicas Reunidas S.A. (TRE);https://es.investing.com/equities/tecnicas-reunidas;1.22;_;
-Telecom Italia SPA (TI);https://es.investing.com/equities/telecom-italia-s.p.a.;_;N/A;
-Teleperformance SE (TEPRF);https://es.investing.com/equities/teleperformance;_;0.91;
-Telephone and Data Systems Inc (TDS);https://es.investing.com/equities/telephone-and-data-systems-inc;_;2.53;
-Tennant Company (TNC);https://es.investing.com/equities/tennant-co.;1.37;_;
-Terna Rete Elettrica Nazionale SpA (TRN);https://es.investing.com/equities/terna;_;3.95;
-Texas Instruments Incorporated (TXN);https://es.investing.com/equities/texas-instru;_;2.99;
-Texas Pacific Land Trust (TPL);https://es.investing.com/equities/texas-pacific-land-trust;_;0.3;
-The Ensign Group Inc (ENSG);https://es.investing.com/equities/the-ensign-group;_;0.47;
-The Travelers Companies Inc (TRV);https://es.investing.com/equities/the-travelers-co;_;2.51;
-The Wendy’s Co (WEN);https://es.investing.com/equities/the-wendys-co;_;2.25;
-Thomson Reuters Corp (TRI);https://es.investing.com/equities/thomson-reuters-corp;_;2.21;
-Tiffany & Co (TIF);https://es.investing.com/equities/tiffany---co;_;2.35;
-TJX Companies Inc (TJX);https://es.investing.com/equities/tjx-co-inc;_;1.56;
-Tompkins Financial Corporation (TMP);https://es.investing.com/equities/tompkins-financial-corp;1.31;_;
-Tootsie Roll Industries Inc (TR);https://es.investing.com/equities/tootsie-roll-industries-inc;_;1.08;
-Toro Co (TTC);https://es.investing.com/equities/toro-co.;_;1.22;
-Toromont Industries Ltd. (TIH);https://es.investing.com/equities/toromont-industries-ltd;_;1.62;
-Toronto Dominion Bank (TD);https://es.investing.com/equities/toronto-dominion-bank;_;3.94;
-Tractor Supply Company (TSCO);https://es.investing.com/equities/tractor-supply-company;_;1.45;
-Transcontinental Inc (TCLa);https://es.investing.com/equities/transcontinental-inc;1.31;_;
-TFI International Inc (TFII);https://es.investing.com/equities/transforce-inc;_;2.29;
-Travis Perkins PLC (TPK);https://es.investing.com/equities/travis-perkins;_;3.17;
-TP ICAP PLC (TCAPI);https://es.investing.com/equities/tullet-prebon;1.94;_;
-Tyson Foods Inc (TSN);https://es.investing.com/equities/tyson-foods;_;1.91;
-UGI Corporation (UGI);https://es.investing.com/equities/ugi;_;2.7;
-Ultra Electronics Holdings PLC (ULE);https://es.investing.com/equities/ultra-electronics;1.38;_;
-UMB Financial Corporation (UMBF);https://es.investing.com/equities/umb-financial-corp;_;1.83;
-Umicore SA (UMI);https://es.investing.com/equities/umicore;_;2.08;
-Under Armour Inc A (UAA);https://es.investing.com/equities/under-armour;_;N/A;
-Unilever PLC (ULVR);https://es.investing.com/equities/unilever;_;3.11;
-Unilever NV (UNA);https://es.investing.com/equities/unilever-ord;_;3.1;
-Union Pacific Corporation (UNP);https://es.investing.com/equities/union-pacific;_;2.25;
-United Bankshares Inc (UBSI);https://es.investing.com/equities/united-bankshares;_;3.43;
-United Airlines Holdings Inc (UAL);https://es.investing.com/equities/united-continenta;_;N/A;
-UnitedHealth Group Incorporated (UNH);https://es.investing.com/equities/united-health-group;_;1.76;
-United Parcel Service Inc (UPS);https://es.investing.com/equities/united-parcel;_;3.32;
-United Technologies Corporation (UTX);https://es.investing.com/equities/united-tech;_;2.06;
-Universal Corporation (UVV);https://es.investing.com/equities/universal-corp;1.37;_;
-Universal Health Realty Income Trust (UHT);https://es.investing.com/equities/universal-health-realty-trust;1.66;_;
-Universal Health Services Inc (UHS);https://es.investing.com/equities/universal-health-services;_;0.58;
-UPM-Kymmene Oyj (UPM);https://es.investing.com/equities/upm-kymmene;_;3.88;
-US Bancorp (USB);https://es.investing.com/equities/us-bancorp;_;2.96;
-Vail Resorts Inc (MTN);https://es.investing.com/equities/vail-resorts-inc;_;2.98;
-Valeo SA (VLOF);https://es.investing.com/equities/valeo;_;3.55;
-Valero Energy Corporation (VLO);https://es.investing.com/equities/valero-energy;_;3.63;
-Vector Group Ltd (VGR);https://es.investing.com/equities/vector-group-ltd;1.8;_;
-Veolia Environnement VE SA (VIE);https://es.investing.com/equities/veolia-environ;_;3.66;
-VeriSign Inc (VRSN);https://es.investing.com/equities/verisign-inc;_;N/A;
-VF Corporation (VFC);https://es.investing.com/equities/vf-corp;_;2.28;
-Victrex (VCTX);https://es.investing.com/equities/victrex;1.89;_;
-Vidrala S.A. (VID);https://es.investing.com/equities/vidrala-sa;_;1.26;
-Vinci SA (SGEF);https://es.investing.com/equities/vinci;_;2.7;
-Visa Inc Class A (V);https://es.investing.com/equities/visa-inc;_;0.67;
-Koninklijke Vopak NV (VOPA);https://es.investing.com/equities/vopak;_;2.12;
-WW Grainger Inc (GWW);https://es.investing.com/equities/w-w-grainger-inc;_;1.82;
-Walmart Inc (WMT);https://es.investing.com/equities/wal-mart-stores;_;1.78;
-Walgreens Boots Alliance Inc (WBA);https://es.investing.com/equities/walgreen-co;_;3.3;
-Waste Connections Inc (WCN);https://es.investing.com/equities/waste-connections-inc;_;0.7;
-Waste Management Inc (WM);https://es.investing.com/equities/waste-managemnt;_;1.84;
-WD-40 Company (WDFC);https://es.investing.com/equities/wd-40-company;_;1.34;
-Weir Group PLC (WEIR);https://es.investing.com/equities/weir-group;_;3.33;
-Wells Fargo & Company (WFC);https://es.investing.com/equities/wells-fargo;_;3.96;
-Wendel (MWDP);https://es.investing.com/equities/wendel;_;2.08;
-WESCO International Inc (WCC);https://es.investing.com/equities/wesco-intl;_;N/A;
-West Pharmaceutical Services Inc (WST);https://es.investing.com/equities/west-pharmaceutical-services-inc;_;0.45;
-Westamerica Bancorporation (WABC);https://es.investing.com/equities/westamerica-banco;1.8;_;
-Evergy Inc (EVRG);https://es.investing.com/equities/westar-energy;_;2.99;
-Westlake Chemical Corporation (WLK);https://es.investing.com/equities/westlake-chemical;_;1.63;
-WH Smith PLC (SMWH);https://es.investing.com/equities/wh-smith;_;2.59;
-Whitbread PLC (WTB);https://es.investing.com/equities/whitbread;_;2.38;
-Williams-Sonoma Inc (WSM);https://es.investing.com/equities/williams-sonoma-inc;_;2.78;
-Wirecard AG (WDIG);https://es.investing.com/equities/wire-card;_;0.16;
-WEC Energy Group Inc (WEC);https://es.investing.com/equities/wisconsin-energy-corp;_;2.52;
-Wolters Kluwer (WLSNc);https://es.investing.com/equities/wolters-kluwer;_;1.58;
-W. R. Berkley Corp (WRB);https://es.investing.com/equities/wr-berkley-corp;_;0.63;
-Wyndham Destinations Inc (WYND);https://es.investing.com/equities/wyndham-world;_;3.82;
-Xcel Energy Inc (XEL);https://es.investing.com/equities/xcel-energy;_;2.55;
-Xilinx Inc (XLNX);https://es.investing.com/equities/xilinx-inc;_;1.56;
+1st Source Corporation (SRCE);https://es.investing.com/equities/1st-source-corp;1.31;-
+3I Group PLC (III);https://es.investing.com/equities/3i;-;3.47 
+3I Infrastructure PLC (3IN);https://es.investing.com/equities/3i-infrsttr;-;3.04 
+3M Company (MMM);https://es.investing.com/equities/3m-co;-;3.4 
+Smith AO Corporation (AOS);https://es.investing.com/equities/a.o-smith-corp;-;1.97 
+Aalberts Industries NV (AALB);https://es.investing.com/equities/aalberts-industr;-;1.69 
+Aarons Inc (AAN);https://es.investing.com/equities/aarons;-;0.27 
+Abbott Laboratories (ABT);https://es.investing.com/equities/abbott-laboratories;-;1.5 
+Abcam PLC (ABCA);https://es.investing.com/equities/abcam-plc;-;0.94 
+ABM Industries Incorporated (ABM);https://es.investing.com/equities/abm-industries-inc;-;1.86 
+Accenture plc (ACN);https://es.investing.com/equities/accenture-ltd;-;1.59 
+Acciona S.A. (ANA);https://es.investing.com/equities/acciona-sa;-;3.8 
+Accor SA (ACCP);https://es.investing.com/equities/accor;-;2.66 
+Acerinox S.A. (ACX);https://es.investing.com/equities/acerinox;-;3.81 
+Ackermans & Van Haaren NV (ACKB);https://es.investing.com/equities/ackermans-v.haar;-;1.18 
+Activision Blizzard Inc (ATVI);https://es.investing.com/equities/activision-inc;-;0.68 
+Adidas AG (ADSGn);https://es.investing.com/equities/adidas-salomon;-;1.19 
+AENA SME S.A. (AENA);https://es.investing.com/equities/aena-aeropuertos-sa;-;3.87 
+Aflac Inc (AFL);https://es.investing.com/equities/aflac-inc;-;1.97 
+Ageas (AGES);https://es.investing.com/equities/ageas;-;2.84 
+Koninklijke Ahold Delhaize NV (AD);https://es.investing.com/equities/ahold-kon;-;2.73 
+Air Liquide SA (AIRP);https://es.investing.com/equities/air-liquide;-;1.98 
+Air Products and Chemicals Inc (APD);https://es.investing.com/equities/air-prods---chem;-;1.98 
+Akzo Nobel NV (AKZO);https://es.investing.com/equities/akzo-nobel;-;2.11 
+Albemarle Corp (ALB);https://es.investing.com/equities/albemarle;-;2.24 
+Alfa Laval AB (ALFA);https://es.investing.com/equities/alfa-laval;-;2.11 
+Alimentation Couche-Tard Inc (ATDb);https://es.investing.com/equities/alimentation-couche-tard-inc;-;0.58 
+Alliance Trust PLC (ATST);https://es.investing.com/equities/alliance-trust-plc-ord-shs-25p;-;1.68 
+Alliant Energy Corp (LNT);https://es.investing.com/equities/alliant-energy;-;2.68 
+Allied Properties REIT (AP_u);https://es.investing.com/equities/allied-properties-reit;-;3.0 
+Almirall S.A. (ALM);https://es.investing.com/equities/almirall-sa;-;1.19 
+Amadeus IT Holding S.A. (AMA);https://es.investing.com/equities/amadeus;-;1.74 
+American Tower Corp (AMT);https://es.investing.com/equities/amer-tower-corp;-;1.77 
+American Equity Investment Life Holding Co (AEL);https://es.investing.com/equities/american-equity-holdings;-;1.01 
+American Express Company (AXP);https://es.investing.com/equities/american-express;-;1.44 
+American Financial Group Inc (AFG);https://es.investing.com/equities/american-financial-group;-;1.63 
+American States Water Company (AWR);https://es.investing.com/equities/american-states-water-comp;-;1.42 
+American Water Works (AWK);https://es.investing.com/equities/american-water-works-inc;-;1.65 
+Ameriprise Financial Inc (AMP);https://es.investing.com/equities/ameriprise-fincl;-;2.41 
+AmerisourceBergen (ABC);https://es.investing.com/equities/amerisourcebergn;-;1.82 
+Amgen Inc (AMGN);https://es.investing.com/equities/amgen-inc;-;2.47 
+Analog Devices Inc (ADI);https://es.investing.com/equities/analog-devices;-;1.88 
+Anheuser Busch Inbev SA NV (ABI);https://es.investing.com/equities/anheuser-busch-inbev;-;2.52 
+Apple Inc (AAPL);https://es.investing.com/equities/apple-computer-inc;-;1.17 
+Applied Industrial Technologies (AIT);https://es.investing.com/equities/applied-industrial-technologies;-;1.91 
+Applied Materials Inc (AMAT);https://es.investing.com/equities/applied-matls-inc;-;1.46 
+AptarGroup Inc (ATR);https://es.investing.com/equities/aptargroup-inc;-;1.28 
+Aqua America Inc (WTR);https://es.investing.com/equities/aqua-america-inc.;-;2.13 
+ArcelorMittal S.A. (MT);https://es.investing.com/equities/arcelormittal-reg;-;1.14 
+Archer-Daniels-Midland Company (ADM);https://es.investing.com/equities/archer-daniels-mid;-;3.27 
+Arkema SA (AKE);https://es.investing.com/equities/arkema;-;2.42 
+Ashland Global Holdings Inc (ASH);https://es.investing.com/equities/ashland-inc;-;1.53 
+Ashmore Group Plc (ASHM);https://es.investing.com/equities/ashmore;-;3.53 
+Ashtead Group PLC (AHT);https://es.investing.com/equities/ashtead-group;-;1.63 
+ASML Holding NV (ASML);https://es.investing.com/equities/asml-holding;-;0.85 
+Associated British Foods PLC (ABF);https://es.investing.com/equities/assoc.br.foods;-;1.8 
+Assurant Inc (AIZ);https://es.investing.com/equities/assurant;-;1.89 
+AstraZeneca PLC (AZN);https://es.investing.com/equities/astrazeneca;-;2.89 
+Atco Ltd (ACOx);https://es.investing.com/equities/atco-ltd;-;3.28 
+Atlas Copco AB Class A (ATCOa);https://es.investing.com/equities/atlas-copco-a;-;2.11 
+Atmos Energy Corporation (ATO);https://es.investing.com/equities/atmos-energy-corp;-;2.14 
+Atos SE (ATOS);https://es.investing.com/equities/atos-origin;-;2.2 
+ATRION Corporation (ATRI);https://es.investing.com/equities/atrion-corp;1.31;-
+Automatic Data Processing Inc (ADP);https://es.investing.com/equities/auto-data-process;-;2.12 
+Construcciones y Auxiliar de Ferrocarriles SA (CAF);https://es.investing.com/equities/auxiliar-de-ferrocarriles;1.36;-
+Broadcom Inc (AVGO);https://es.investing.com/equities/avago-technologies;-;3.35 
+Avista Corporation (AVA);https://es.investing.com/equities/avista-corp;-;3.3 
+Axel Springer SE (SPRGn);https://es.investing.com/equities/axel-springer;-;3.12 
+AXIS Capital Holdings Ltd (AXS);https://es.investing.com/equities/axis-capital;-;2.73 
+B&G Foods Inc (BGS);https://es.investing.com/equities/b-g-foods-holdings-corp;1.06;-
+Badger Meter Inc (BMI);https://es.investing.com/equities/badger-meter-inc;1.81;-
+BAE Systems PLC (BAES);https://es.investing.com/equities/bae-systems;-;3.9 
+P/f Bakkafrost (BAKKA);https://es.investing.com/equities/bakkafrost-p-f;-;2.23 
+Balchem Corporation (BCPC);https://es.investing.com/equities/balchem-corp;-;0.47 
+Ball Corporation (BLL);https://es.investing.com/equities/ball-corp;-;0.9 
+Baloise Holding AG (BALN);https://es.investing.com/equities/baloise-hld;-;3.22 
+BancFirst Corporation (BANF);https://es.investing.com/equities/bancfirst-corp;1.95;-
+Bank of America Corp (BAC);https://es.investing.com/equities/bank-of-america;-;2.16 
+Bank Ozk (OZK);https://es.investing.com/equities/bank-of-the-ozark;-;3.36 
+Bankers Investment Trust (BNKR);https://es.investing.com/equities/bankers-investment-trust;1.17;-
+Barnes Group Inc (B);https://es.investing.com/equities/barnes-group-inc;-;1.06 
+Barrick Gold Corp (GOLD);https://es.investing.com/equities/barrick-gold-corp.;-;1.19 
+Banco de Sabadell S.A. (SABE);https://es.investing.com/equities/bco-de-sabadell;-;1.96 
+Bcolombia (BIC);https://es.investing.com/equities/bcolombia;-;2.48 
+Beazley PLC (BEZG);https://es.investing.com/equities/beazley-group;-;2.2 
+Becton Dickinson and Company (BDX);https://es.investing.com/equities/becton-dickinsn;-;1.24 
+Beiersdorf AG O.N. (BEIG);https://es.investing.com/equities/beiersdorf;-;0.68 
+Bemis Company Inc (BMS);https://es.investing.com/equities/bemis-company;-;2.2 
+Best Buy Co Inc (BBY);https://es.investing.com/equities/best-buy;-;2.45 
+Biomerieux SA (BIOX);https://es.investing.com/equities/biomerieux;-;0.42 
+Black Hills Corporation (BKH);https://es.investing.com/equities/black-hills-corp;-;2.79 
+BlackRock Inc (BLK);https://es.investing.com/equities/blackrock,-inc.-c;-;2.69 
+BNP Paribas Fortis SA (BE0172505399);https://es.investing.com/equities/bnp-paribas-fortis-sa;;-;-
+Boeing Co (BA);https://es.investing.com/equities/boeing-co;-;2.2 
+BOK Financial Corporation (BOKF);https://es.investing.com/equities/bok-financial-corp;-;2.44 
+BorgWarner Inc (BWA);https://es.investing.com/equities/borgwarner;-;1.59 
+Bovis Homes Group PLC (BVS);https://es.investing.com/equities/bovis-homes;1.84;-
+Boyd Group Income Fund (BYD_u);https://es.investing.com/equities/boyd-group-income-fund;-;0.28 
+Brady Corporation (BRC);https://es.investing.com/equities/brady-corp;-;1.48 
+Freni Brembo SpA (BRBI);https://es.investing.com/equities/brembo;-;1.97 
+Brenntag AG (BNRGn);https://es.investing.com/equities/brenntag-ag;-;2.43 
+Brinker International Inc (EAT);https://es.investing.com/equities/brinker-international-inc;1.66;-
+Bristol-Myers Squibb Company (BMY);https://es.investing.com/equities/bristol-myer-squiib;-;2.89 
+Britvic PLC (BVIC);https://es.investing.com/equities/britvic;-;2.9 
+Broadridge Financial Solutions Inc (BR);https://es.investing.com/equities/broadridge-financial-solutions;-;1.75 
+Brookfield Asset Management Inc (BAMa);https://es.investing.com/equities/brookfield-asset-management;-;1.1 
+Brookfield Infrastructure Partners LP (BIP_u);https://es.investing.com/equities/brookfield-infrastructure-partners;-;3.79 
+Brown & Brown Inc (BRO);https://es.investing.com/equities/brown---brown-inc;-;0.9 
+Brown Forman (BFb);https://es.investing.com/equities/brown-forman-b;-;1.01 
+Brunswick Corporation (BC);https://es.investing.com/equities/brunswick-corp;-;1.62 
+Bunge Limited (BG);https://es.investing.com/equities/bunge;-;3.75 
+Bunzl PLC (BNZL);https://es.investing.com/equities/bunzl;-;2.39 
+Burberry Group PLC (BRBY);https://es.investing.com/equities/burberry;-;2.04 
+Bureau Veritas SA (BVI);https://es.investing.com/equities/bureau-verita;-;2.33 
+CH Robinson Worldwide Inc (CHRW);https://es.investing.com/equities/c-h-robinson-worldwide-inc;-;2.6 
+CAE Inc. (CAE);https://es.investing.com/equities/cae;-;1.23 
+Cal-Maine Foods Inc (CALM);https://es.investing.com/equities/cal-maine-foods;-;1.96 
+Caledonia Investments (CLDN);https://es.investing.com/equities/caledonia-investment;1.96;-
+California Water Service Group (CWT);https://es.investing.com/equities/california-water-service-group;-;1.55 
+Davide Campari Milano SpA (CPRI);https://es.investing.com/equities/campari;-;0.59 
+Canadian Apartment Properties REIT (CAR_u);https://es.investing.com/equities/canadian-apartment-properties-reit;-;2.52 
+Canadian National Railway Co (CNI);https://es.investing.com/equities/canadian-national-railway;-;1.78 
+Canadian Tire Corp Ltd (CTCa);https://es.investing.com/equities/canadian-tire-corp-ltd;-;2.94 
+Canadian Western Bank (CWB);https://es.investing.com/equities/canadian-western-bank;-;3.13 
+Cantel Medical Corp (CMD);https://es.investing.com/equities/cantel-medical-corp;-;0.26 
+Capgemini SE (CAPP);https://es.investing.com/equities/cap-gemini;-;1.58 
+Cardinal Health Inc (CAH);https://es.investing.com/equities/cardinal-health;-;3.55 
+Carlisle Companies Incorporated (CSL);https://es.investing.com/equities/carlisle-companies-inc;-;1.26 
+Carlsberg A/S B (CARLb);https://es.investing.com/equities/carlsberg-b;-;1.62 
+Caseys General Stores Inc (CASY);https://es.investing.com/equities/caseys-general;-;0.73 
+Caterpillar Inc (CAT);https://es.investing.com/equities/caterpillar;-;2.82 
+Cboe Global Markets Inc (CBOE);https://es.investing.com/equities/cboe-holdings-inc;-;1.2 
+CCL Industries Inc (CCLb);https://es.investing.com/equities/ccl-industries-inc;-;1.17 
+Celanese Corporation (CE);https://es.investing.com/equities/celanese;-;1.95 
+Cellnex Telecom S.A. (CLNX);https://es.investing.com/equities/cellnex-telecom;-;0.19 
+CF Industries Holdings Inc (CF);https://es.investing.com/equities/cf-industries;-;2.62 
+Chemed Corp (CHE);https://es.investing.com/equities/chemed-corp;-;0.3 
+Chesapeake Energy Corporation (CHK);https://es.investing.com/equities/chesapeake-ener;1.21;-
+Chesapeake Utilities Corporation (CPK);https://es.investing.com/equities/chesapeake-utilities-corp;1.51;-
+Chipotle Mexican Grill Inc (CMG);https://es.investing.com/equities/chipotle-mexican-grill-inc;-;-
+Chubb Ltd (CB);https://es.investing.com/equities/chubb-corp;-;1.98 
+Church & Dwight Company Inc (CHD);https://es.investing.com/equities/church---dwight;-;1.31 
+Churchill Downs Incorporated (CHDN);https://es.investing.com/equities/churchill-downs;-;0.44 
+CIE Automotive S.A. (CIEA);https://es.investing.com/equities/cie-automotive-sa;-;2.81 
+Cincinnati Financial Corporation (CINF);https://es.investing.com/equities/cincinnati-fin;-;2.09 
+Cineplex Inc. (CGX);https://es.investing.com/equities/cineplex-inc;1.61;-
+Cintas Corporation (CTAS);https://es.investing.com/equities/cintas-corp;-;1.0 
+Cisco Systems Inc (CSCO);https://es.investing.com/equities/cisco-sys-inc;-;3.09 
+City Of London Investment Trust (CTY);https://es.investing.com/equities/city-of-london-investment-trust;1.66;-
+Clorox Co (CLX);https://es.investing.com/equities/clorox-co;-;2.86 
+CMS Energy Corporation (CMS);https://es.investing.com/equities/cms-energy-corp;-;2.48 
+Coca-Cola Company (KO);https://es.investing.com/equities/coca-cola-co;-;2.97 
+Consolidated Edison Inc (ED);https://es.investing.com/equities/cocnsol-edison;-;3.42 
+Cogeco Communications Inc (CCA);https://es.investing.com/equities/cogeco-cable-inc;-;1.99 
+Cogeco Inc. (CGO);https://es.investing.com/equities/cogeco-inc.;1.65;-
+Cohen & Steers Inc (CNS);https://es.investing.com/equities/cohen---steers-inc.;-;2.15 
+Colgate-Palmolive Company (CL);https://es.investing.com/equities/colgate-palmo;-;2.54 
+Coloplast A/S (COLOb);https://es.investing.com/equities/coloplast--b-;-;2.11 
+Etablissementen Franz Colruyt NV (COLR);https://es.investing.com/equities/colruyt;-;2.75 
+Columbia Sportswear Company (COLM);https://es.investing.com/equities/columbia-sportswear;-;1.03 
+Comcast Corp (CMCSA);https://es.investing.com/equities/comcast-corp-new;-;1.93 
+Comerica Inc (CMA);https://es.investing.com/equities/comerica-inc;-;3.81 
+Commerce Bancshares Inc (CBSH);https://es.investing.com/equities/commerce-bancshar;-;1.63 
+Community Bank System Inc (CBU);https://es.investing.com/equities/community-bank-system-inc;-;2.43 
+Compass Group PLC (CPG);https://es.investing.com/equities/compass-group;-;2.09 
+Compass Minerals International Inc (CMP);https://es.investing.com/equities/compass-minerals-intl-inc;1.91;-
+Constellation Brands Inc Class A (STZ);https://es.investing.com/equities/constellation-a;-;1.63 
+Continental AG O.N. (CONG);https://es.investing.com/equities/continental-ag;-;3.43 
+Corning Incorporated (GLW);https://es.investing.com/equities/corning-inc;-;2.75 
+Corporación Financiera Alba S.A. (ALB);https://es.investing.com/equities/corporacion-financiera-alba-sa;-;2.06 
+Corticeira Amorim (CORA);https://es.investing.com/equities/corticeira-amorim;1.44;-
+Costco Wholesale Corp (COST);https://es.investing.com/equities/costco-whsl-corp-new;-;0.86 
+Cracker Barrel Old Country Store (CBRL);https://es.investing.com/equities/cracker-barrelold-country;-;3.44 
+Cranswick PLC (CWK);https://es.investing.com/equities/cranswick-plc;1.66;-
+Crest Nicholson Holdings plc (CRST);https://es.investing.com/equities/crest-nicholson;997,37M;-
+CRH PLC (CRH);https://es.investing.com/equities/crh;-;2.19 
+Croda International PLC (CRDA);https://es.investing.com/equities/croda;-;1.8 
+CSX Corporation (CSX);https://es.investing.com/equities/csx-corp;-;1.34 
+CT Real Estate Investment Trust (CRT_u);https://es.investing.com/equities/ct-real-estate-investment-trust;1.59;-
+Cullen/Frost Bankers Inc (CFR);https://es.investing.com/equities/cullen-frost-bankers-inc;-;3.05 
+Cummins Inc (CMI);https://es.investing.com/equities/cummins-inc;-;2.83 
+CVS Health Corp (CVS);https://es.investing.com/equities/cvs-corp;-;2.67 
+Danone SA (DANO);https://es.investing.com/equities/danone;-;2.55 
+Dassault Aviation SA (AVMD);https://es.investing.com/equities/dassault-avia;-;1.21 
+Dassault Systemes SE (DAST);https://es.investing.com/equities/dassault-system;-;0.41 
+DaVita HealthCare Partners Inc (DVA);https://es.investing.com/equities/davita-inc;-;-
+Dechra Pharmaceuticals PLC (DPH);https://es.investing.com/equities/dechra-pharma;-;1.13 
+Deere & Company (DE);https://es.investing.com/equities/deere---co;-;1.72 
+Derwent London PLC (DLN);https://es.investing.com/equities/derwent-london;-;1.83 
+Vonovia SE (VNAn);https://es.investing.com/equities/deutsche-annington-immobilien-se;-;3.02 
+Deutsche Post AG NA O.N. (DPWGn);https://es.investing.com/equities/deutsche-post;-;3.51 
+Deutsche Wohnen AG (DWNG);https://es.investing.com/equities/deutsche-wohnen-ag-exch;-;2.45 
+Diageo PLC (DGE);https://es.investing.com/equities/diageo;-;2.15 
+Digital Realty Trust Inc (DLR);https://es.investing.com/equities/digital-realty-trust-inc;-;3.58 
+Diploma PLC (DPLM);https://es.investing.com/equities/diploma--plc;-;1.52 
+Discover Financial Services (DFS);https://es.investing.com/equities/discover-financl;-;2.08 
+Walt Disney Company (DIS);https://es.investing.com/equities/disney;-;1.16 
+Dollar General Corporation (DG);https://es.investing.com/equities/dollar-general-corp;-;0.81 
+Dollarama Inc (DOL);https://es.investing.com/equities/dollarama-inc;-;0.37 
+Domino'S Pizza Enterprises Ltd (DMP);https://es.investing.com/equities/dominos-pizza;-;2.17 
+Domino’s Pizza Inc (DPZ);https://es.investing.com/equities/dominos-pizza-inc;-;0.9 
+Domino’s Pizza Group PLC (DOM);https://es.investing.com/equities/dominos-pizza-ukir;1.42;-
+Donaldson Company Inc (DCI);https://es.investing.com/equities/donaldson-comp-inc;-;1.5 
+Douglas Dynamics Inc (PLOW);https://es.investing.com/equities/douglas-dynamics-inc;1.24;-
+Dover Corporation (DOV);https://es.investing.com/equities/dover-corp;-;1.75 
+DSV (DSV);https://es.investing.com/equities/dsv;-;0.26 
+Deutsche Boerse AG (DB1Gn);https://es.investing.com/equities/dt-boerse;-;1.88 
+Deutsche Euroshop AG (DEQGn);https://es.investing.com/equities/dt-euroshop-exch;1.62;-
+DTE Energy Company (DTE);https://es.investing.com/equities/dte-energy;-;3.26 
+Dunelm Group PLC (DNLM);https://es.investing.com/equities/dunelm-group;1.73;-
+Airbus Group SE (AIR);https://es.investing.com/equities/eads;-;1.12 
+Eaton Corporation PLC (ETN);https://es.investing.com/equities/eaton;-;3.06 
+Eaton Vance Corp (EV);https://es.investing.com/equities/eaton-vance;-;3.16 
+Ebro Foods S.A. (EBRO);https://es.investing.com/equities/ebro-foods;-;2.9 
+Ecolab Inc (ECL);https://es.investing.com/equities/ecolab-inc;-;0.99 
+Edinburgh Investment Trust (EDIN);https://es.investing.com/equities/edinburgh-investment-trust;1.09;-
+Edison International (EIX);https://es.investing.com/equities/edison-intl;-;3.55 
+Eiffage SA (FOUG);https://es.investing.com/equities/eiffage;-;2.0 
+Eli Lilly and Company (LLY);https://es.investing.com/equities/eli-lilly-and-co;-;2.2 
+Elia (ELI);https://es.investing.com/equities/elia-system-op.;-;1.5 
+Elisa Oyj (ELISA);https://es.investing.com/equities/elisa-corporat.;-;3.36 
+Emerson Electric Company (EMR);https://es.investing.com/equities/emerson-elec;-;2.69 
+Empire Company Ltd (EMPa);https://es.investing.com/equities/empire-company-ltd;-;1.35 
+Ems Chemie Hld (EMSN);https://es.investing.com/equities/ems-chemie-hld;-;3.14 
+Enghouse Systems Ltd (ENGH);https://es.investing.com/equities/enghouse-systems-limited;-;1.04 
+Equitable Group Inc. (EQB);https://es.investing.com/equities/equitable-group-inc.;1.86;-
+Equity Lifestyle Properties Inc (ELS);https://es.investing.com/equities/equity-lifestyle-properties-inc;-;1.67 
+ERG (ERG);https://es.investing.com/equities/erg-spa;-;3.83 
+Erie Indemnity Company (ERIE);https://es.investing.com/equities/erie-indemnity-co;-;2.08 
+Essentra PLC (ESNT);https://es.investing.com/equities/essentra-plc;1.11;-
+Essex Property Trust Inc (ESS);https://es.investing.com/equities/essex-property-trust-inc;-;2.5 
+EssilorLuxottica SA (ESLX);https://es.investing.com/equities/essilor-internat;-;1.08 
+Eurofins Scientific SE (EUFI);https://es.investing.com/equities/euro-scientific;-;0.6 
+Euronext (ENX);https://es.investing.com/equities/euronext;-;2.5 
+Evercore Partners Inc (EVR);https://es.investing.com/equities/evercore-partners-inc;-;2.95 
+Exchange Income Corporation (EIF);https://es.investing.com/equities/exchange-income-corp;1.55;-
+Expeditors International of Washington Inc (EXPD);https://es.investing.com/equities/expeditors-intl-wash-inc;-;1.31 
+Extra Space Storage Inc (EXR);https://es.investing.com/equities/extra-space-storage;-;3.36 
+FactSet Research Systems Inc (FDS);https://es.investing.com/equities/factset-research-systems-inc;-;1.1 
+Faes Farma SA (FAE);https://es.investing.com/equities/faes-farma-sa;1.47;-
+Fastenal Company (FAST);https://es.investing.com/equities/fastenal-co;-;2.45 
+Faurecia (EPED);https://es.investing.com/equities/faurecia;-;2.57 
+Fomento de Construcciones y Contratas S.A. (FCC);https://es.investing.com/equities/fcc;-;-
+Federal Realty Investment Trust (FRT);https://es.investing.com/equities/federal-realty-investment-trust;-;3.2 
+FedEx Corporation (FDX);https://es.investing.com/equities/fedex-corp;-;1.61 
+Fielmann AG (FIEG);https://es.investing.com/equities/fielmann-ag-exch;-;2.65 
+Fiera Capital Corporation (FSZ);https://es.investing.com/equities/fiera-capital-corporation;1.14;-
+Finning International Inc. (FTT);https://es.investing.com/equities/finning-international-inc;-;3.34 
+First Interstate BancSystem Inc (FIBK);https://es.investing.com/equities/first-interstate;-;2.95 
+First Merchants Corporation (FRME);https://es.investing.com/equities/first-merchants-corp;-;2.57 
+Flowers Foods Inc (FLO);https://es.investing.com/equities/flowers-foods;-;3.5 
+Fluidra S.A. (FLUI);https://es.investing.com/equities/fluidra-sa;-;-
+Fortis Inc (FTS);https://es.investing.com/equities/fortis-inc;-;3.65 
+Franco-Nevada Corporation (FNV);https://es.investing.com/equities/franco-nevada-corp;-;1.02 
+Franklin Electric Co Inc (FELE);https://es.investing.com/equities/franklin-electric;-;1.05 
+Franklin Resources Inc (BEN);https://es.investing.com/equities/franklin-res;-;3.75 
+Fraport AG (FRAG);https://es.investing.com/equities/fraport;-;2.64 
+Fresenius SE & Co KGAA O.N. (FREG);https://es.investing.com/equities/fresenius-ag;-;1.75 
+Fresenius Medical Care KGAA ST (FMEG);https://es.investing.com/equities/fresenius-medi;-;1.96 
+Fuchs Petrolub AG VZO Pref (FPEG_p);https://es.investing.com/equities/fuchs-petrolub-ag;-;3.0 
+Fuchs Petrolub AG O.N. (0B4R);https://es.investing.com/equities/fuchs-petrolub-l;-;-
+Siemens Gamesa Renewable Energy S.A. (SGREN);https://es.investing.com/equities/gamesa;-;0.17 
+Groupe Bruxelles Lambert SA (GBLB);https://es.investing.com/equities/gbl;-;2.32 
+GEA Group AG (G1AG);https://es.investing.com/equities/gea-group;-;3.14 
+Gecina SA (GFCP);https://es.investing.com/equities/gecina;-;3.39 
+General Dynamics Corporation (GD);https://es.investing.com/equities/general-dynam;-;2.24 
+General Electric Company (GE);https://es.investing.com/equities/general-electric;-;0.35 
+General Mills Inc (GIS);https://es.investing.com/equities/general-mills;-;3.68 
+Gentex Corporation (GNTX);https://es.investing.com/equities/gentex-corp;-;1.6 
+Genuine Parts Co (GPC);https://es.investing.com/equities/genuine-parts-co;-;2.92 
+Genus PLC (GNS);https://es.investing.com/equities/genus;-;0.88 
+Genworth MI Canada Inc. (MIC);https://es.investing.com/equities/genworth-mi-canada-inc;-;3.9 
+George Weston Limited (WN);https://es.investing.com/equities/george-weston-ltd;-;1.95 
+Gestamp Automocion SA (GEST);https://es.investing.com/equities/gestamp-automocion-sa;-;3.18 
+Gildan Activewear Inc. (GIL);https://es.investing.com/equities/gildan-activewear;-;1.9 
+Gilead Sciences Inc (GILD);https://es.investing.com/equities/gilead-sciences-inc;-;3.75 
+Givaudan SA (GIVN);https://es.investing.com/equities/givaudan-sa-cfd;-;2.12 
+Glanbia PLC (GL9);https://es.investing.com/equities/glanbia-plc;-;2.4 
+GN Store Nord (GN);https://es.investing.com/equities/gn-store-nord;-;0.4 
+Goldman Sachs Group Inc (GS);https://es.investing.com/equities/goldman-sachs-group;-;2.25 
+Alphabet Inc Class C (GOOG);https://es.investing.com/equities/google-inc-c;-;-
+Gores Metropoulos Inc (GMHI);https://es.investing.com/equities/gores-metropoulos-inc;;-;-
+Graco Inc (GGG);https://es.investing.com/equities/graco-inc;-;1.31 
+Greene King PLC (GNK);https://es.investing.com/equities/greene-king;-;-
+Grifols S.A. (GRLS);https://es.investing.com/equities/grifols;-;1.11 
+Group 1 Automotive Inc (GPI);https://es.investing.com/equities/group-1-automotive-inc;1.98;-
+Getlink SE (GETP);https://es.investing.com/equities/groupe-eurotunnel-s.a.;-;1.94 
+Grupo Catalana de Occidente S.A. (GCO);https://es.investing.com/equities/grupo-catalana-occidente-sa;-;2.54 
+Ferrovial S.A. (FER);https://es.investing.com/equities/grupo-ferrovial;-;2.69 
+Halliburton Company (HAL);https://es.investing.com/equities/halliburton-co;-;3.46 
+Halma PLC (HLMA);https://es.investing.com/equities/halma;-;0.76 
+Hanesbrands Inc (HBI);https://es.investing.com/equities/hanesbrands;-;3.99 
+Hannover Rueck SE (HNRGn);https://es.investing.com/equities/hannover-rueck;-;2.97 
+The Hanover Insurance Group Inc (THG);https://es.investing.com/equities/hanover-insurance-group-inc;-;1.76 
+L3Harris Technologies Inc (LHX);https://es.investing.com/equities/harris-corporation;-;1.5 
+Hasbro Inc (HAS);https://es.investing.com/equities/hasbro-inc;-;2.71 
+H B Fuller Company (FUL);https://es.investing.com/equities/hb-fuller-comp;-;1.27 
+HDFC Bank Limited ADR (HDB);https://es.investing.com/equities/hdfc-bank;-;0.52 
+Healthcare Services Group Inc (HCSG);https://es.investing.com/equities/healthcare-service;1.9;-
+Heico Corporation (HEI);https://es.investing.com/equities/heico-corp;-;0.11 
+Heidelbergcement AG O.N. (HEIG);https://es.investing.com/equities/heidelbergcement-ag-exch;-;3.09 
+Heineken (HEIN);https://es.investing.com/equities/heineken;-;1.76 
+Heineken Holding NV (HEIO);https://es.investing.com/equities/heineken-holding-nv;-;1.88 
+Henderson Smaller Cos Inv Tst (HSL);https://es.investing.com/equities/henderson-sml-co-common-stock;729,09M;-
+Henkel AG & Co KGAA ST O.N. (HNKG);https://es.investing.com/equities/henkel-ag---co.-st;-;1.86 
+Hera (HRA);https://es.investing.com/equities/hera-spa;-;2.5 
+Hermes International SCA (HRMS);https://es.investing.com/equities/hermes-international;-;0.67 
+Hershey Company (HSY);https://es.investing.com/equities/hershey-co;-;2.07 
+Hillenbrand Inc (HI);https://es.investing.com/equities/hillenbrand-inc;1.97;-
+Hochtief AG (HOTG);https://es.investing.com/equities/hochtief;-;3.02 
+Home Depot Inc (HD);https://es.investing.com/equities/home-depot;-;2.46 
+Horace Mann Educators Corporation (HMN);https://es.investing.com/equities/horace-mann-educators-corp;1.81;-
+Hormel Foods Corporation (HRL);https://es.investing.com/equities/hormel-foods-corp;-;2.1 
+Howden Joinery Group Plc (HWDN);https://es.investing.com/equities/howden-join;-;1.89 
+Hubbell Inc (HUBB);https://es.investing.com/equities/hubbell-inc-b;-;2.46 
+Hyatt Hotels Corporation (H);https://es.investing.com/equities/hyatt-hotels-corp;-;0.95 
+IDEX Corporation (IEX);https://es.investing.com/equities/idex;-;1.24 
+Iliad (ILD);https://es.investing.com/equities/iliad;-;0.59 
+Illinois Tool Works Inc (ITW);https://es.investing.com/equities/illinois-tool-wk-r;-;2.44 
+Imperial Oil Ltd (IMO);https://es.investing.com/equities/imperial-oil-ltd;-;2.65 
+Industria de Diseño y Textil S.A. (ITX);https://es.investing.com/equities/inditex;-;3.15 
+Indra Sistemas S.A. (IDR);https://es.investing.com/equities/indra-sistemas;1.72;-
+Industria Macchine Automatiche (IMAI);https://es.investing.com/equities/industria-macchine-automatiche;-;3.02 
+Infineon Technologies AG NA O.N. (IFXGn);https://es.investing.com/equities/infineon-tech;-;1.47 
+Informa PLC (INF);https://es.investing.com/equities/informa;-;2.8 
+Ingenico Group SA (INGC);https://es.investing.com/equities/ingenico;-;1.12 
+Ingersoll-Rand PLC (IR);https://es.investing.com/equities/ingersoll-rand;-;1.62 
+Ingredion Incorporated (INGR);https://es.investing.com/equities/ingredion-inc;-;2.97 
+Inmobiliaria Colonial S.A. (COL);https://es.investing.com/equities/inmob-colonial;-;1.76 
+Intact Financial Corporation (IFC);https://es.investing.com/equities/intact-financial-corp;-;2.21 
+Intel Corporation (INTC);https://es.investing.com/equities/intel-corp;-;2.14 
+Inter Parfums Inc (IPAR);https://es.investing.com/equities/inter-parfums-inc;-;1.93 
+International Bancshares Corporation (IBOC);https://es.investing.com/equities/international-ban;-;2.58 
+International Speedway Corporation (ISCA);https://es.investing.com/equities/international-spe;1.96;-
+InterRent REIT (IIP_u);https://es.investing.com/equities/interrent-reit;-;1.91 
+Intertek Group PLC (ITRK);https://es.investing.com/equities/intertek-testing-services;-;1.84 
+International Flavors & Fragrances Inc (IFF);https://es.investing.com/equities/intl-flav---frag;-;2.11 
+Ipsen SA (IPN);https://es.investing.com/equities/ipsen;-;0.95 
+JB Hunt Transport Services Inc (JBHT);https://es.investing.com/equities/j.b.-hunt-transpo;-;0.89 
+Jack Henry & Associates Inc (JKHY);https://es.investing.com/equities/jack-henry---asso;-;1.05 
+James Fisher & Sons plc (FSJ);https://es.investing.com/equities/james-fisher-and-sons;971,34M;-
+JC Decaux SA (JCDX);https://es.investing.com/equities/jcdeceaux;-;2.35 
+JD Sports Fashion PLC (JD);https://es.investing.com/equities/jd-sports-fashion;-;0.22 
+JM Smucker Company (SJM);https://es.investing.com/equities/jm-smucker-co;-;3.28 
+John Wiley & Sons (JWa);https://es.investing.com/equities/john-wiley---sons-a;-;2.88 
+Johnson Controls International PLC (JCI);https://es.investing.com/equities/johnson-controls;-;2.42 
+Johnson & Johnson (JNJ);https://es.investing.com/equities/johnson-johnson;-;2.77 
+Johnson Matthey PLC (JMAT);https://es.investing.com/equities/johnson-matthey;-;2.88 
+JPMorgan Chase & Co (JPM);https://es.investing.com/equities/jp-morgan-chase;-;2.73 
+Jupiter Fund Management Plc (JUP);https://es.investing.com/equities/jupiter-fund-management;1.72;-
+Kellogg Company (K);https://es.investing.com/equities/kellogg-co.;-;3.48 
+Kering SA (PRTP);https://es.investing.com/equities/kering;-;1.1 
+Kerry Group (KYGa);https://es.investing.com/equities/kerry-group;-;0.63 
+Kimberly-Clark Corporation (KMB);https://es.investing.com/equities/kimberly-clark;-;3.06 
+Kinepolis Group NV (KIPO);https://es.investing.com/equities/kinepolis-group;1.64;-
+Kion Group AG (KGX);https://es.investing.com/equities/kion-group-ag;-;1.98 
+Kobenhavns Lufthavne (KBHL);https://es.investing.com/equities/koebenhavns-lufthavne;-;2.01 
+KONE Oyj (KNEBV);https://es.investing.com/equities/kone-corporation;-;2.89 
+Koninklijke DSM NV (DSMN);https://es.investing.com/equities/koninklijke-dsm;-;1.95 
+Korian Medica SA (KORI);https://es.investing.com/equities/korian;-;1.63 
+Kroger Company (KR);https://es.investing.com/equities/kroger-co;-;2.37 
+L'Oréal SA (OREP);https://es.investing.com/equities/l-oreal;-;1.38 
+LVMH Moet Hennessy Louis Vuitton SE (LVMH);https://es.investing.com/equities/l.v.m.h.;-;1.52 
+Laboratorios Farmaceuticos Rovi S.A. (ROVI);https://es.investing.com/equities/laboratorios-farmaceuticos-rovi-sa;1.35;-
+Spire Inc (SR);https://es.investing.com/equities/laclede-group-inc;-;3.2 
+Lancaster Colony Corporation (LANC);https://es.investing.com/equities/lancaster-colony;-;1.75 
+Landstar System Inc (LSTR);https://es.investing.com/equities/landstar-system;-;0.66 
+Lanxess AG (LXSG);https://es.investing.com/equities/lanxess;-;1.44 
+Laurentian Bank Of Canada (LB);https://es.investing.com/equities/laurentian-bank-of-canada;1.96;-
+Lear Corporation (LEA);https://es.investing.com/equities/lear;-;2.46 
+LEG Immobilien AG (LEGn);https://es.investing.com/equities/leg-immobilien-ag;-;2.98 
+Leggett & Platt Incorporated (LEG);https://es.investing.com/equities/leggett---platt;-;3.01 
+Lennox International Inc (LII);https://es.investing.com/equities/lennox-international;-;1.19 
+Lincoln Electric Holdings Inc (LECO);https://es.investing.com/equities/lincoln-electric-holdings-inc;-;2.11 
+Linde AG O.N. (LING);https://es.investing.com/equities/linde;-;2.0 
+Linde PLC (LINI);https://es.investing.com/equities/linde-plc;-;1.69 
+Chocoladefabriken Lindt & Spruengli AG (LISN);https://es.investing.com/equities/lindt---sp-n;-;1.1 
+Lithia Motors Inc (LAD);https://es.investing.com/equities/lithia-motors-inc;-;0.74 
+Littelfuse Inc (LFUS);https://es.investing.com/equities/littelfuse;-;1.05 
+Lockheed Martin Corporation (LMT);https://es.investing.com/equities/lockheed-martin;-;2.45 
+London Stock Exchange Group PLC (LSE);https://es.investing.com/equities/london-stock-exchange;-;0.9 
+Lotus Bakeries (LOTB);https://es.investing.com/equities/lotus-bakeries;-;0.78 
+Lowe’s Companies Inc (LOW);https://es.investing.com/equities/lowes-companies;-;1.87 
+LTC Properties Inc (LTC);https://es.investing.com/equities/ltc-properties-inc;1.89;-
+Magna International Inc (MGA);https://es.investing.com/equities/magna-international;-;2.63 
+ManpowerGroup Inc (MAN);https://es.investing.com/equities/manpower-inc;-;2.3 
+Manulife Financial Corp (MFC);https://es.investing.com/equities/manulife-financial-corporation;-;3.87 
+MarketAxess Holdings Inc (MKTX);https://es.investing.com/equities/marketaxess-holdi;-;0.51 
+Marriott International Inc (MAR);https://es.investing.com/equities/marriott-intl;-;1.37 
+Marsh & McLennan Companies Inc (MMC);https://es.investing.com/equities/marsh---mclennan;-;1.68 
+Mastercard Inc (MA);https://es.investing.com/equities/mastercard-cl-a;-;0.46 
+Matthews International Corporation (MATW);https://es.investing.com/equities/matthews-internat;1.21;-
+Maxim Integrated Products Inc (MXIM);https://es.investing.com/equities/maxim-integrated;-;3.37 
+McCormick & Company Incorporated (MKC);https://es.investing.com/equities/mccormick---co;-;1.47 
+McDonald’s Corporation (MCD);https://es.investing.com/equities/mcdonalds;-;2.58 
+McGrath RentCorp (MGRC);https://es.investing.com/equities/mcgrath-rentcorp;1.79;-
+S&P Global Inc (SPGI);https://es.investing.com/equities/mcgraw-hill;-;0.85 
+McKesson Corporation (MCK);https://es.investing.com/equities/mckesson-corp;-;1.12 
+MDU Resources Group Inc (MDU);https://es.investing.com/equities/mdu-res-group-inc;-;2.86 
+Mediaset España Comunicación S.A. (TL5);https://es.investing.com/equities/mediaset-esp;1.88;-
+Medtronic PLC (MDT);https://es.investing.com/equities/medtronic;-;1.94 
+Meggitt PLC (MGGT);https://es.investing.com/equities/meggitt;-;2.57 
+Meliá Hotels International S.A. (MEL);https://es.investing.com/equities/melia-hotels-international-sa;1.74;-
+Merck & Company Inc (MRK);https://es.investing.com/equities/merck---co;-;2.79 
+Merck KGaA (MRCG);https://es.investing.com/equities/merck-kgaa;-;1.14 
+Meredith Corporation (MDP);https://es.investing.com/equities/meredith-corp;1.6;-
+Merlin Properties Socimi S.A. (MRL);https://es.investing.com/equities/merlin-properties-sa;-;3.93 
+Methanex Corporation (MX);https://es.investing.com/equities/methanex;-;3.83 
+MetLife Inc (MET);https://es.investing.com/equities/metlife-inc;-;3.54 
+MGE Energy Inc (MGEE);https://es.investing.com/equities/mge-energy-inc;-;1.77 
+Capri Holdings Ltd (CPRI);https://es.investing.com/equities/michael-kors-holdings;-;-
+Compagnie Generale des Etablissements Michelin SCA (MICP);https://es.investing.com/equities/michelin;-;3.21 
+Microchip Technology Inc (MCHP);https://es.investing.com/equities/microchip-technology-inc;-;1.54 
+Microsoft Corporation (MSFT);https://es.investing.com/equities/microsoft-corp;-;1.34 
+Middlesex Water Company (MSEX);https://es.investing.com/equities/middlesex-water;1.09;-
+MSA Safety (MSA);https://es.investing.com/equities/mine-safety-appliances-comp;-;1.35 
+Mondelez International Inc (MDLZ);https://es.investing.com/equities/mondelez-international-inc;-;2.17 
+Moneysupermarket.Com Group PLC (MONY);https://es.investing.com/equities/moneysuprmkt;1.86;-
+Monro Muffler Brake Inc (MNRO);https://es.investing.com/equities/monro-muffler;-;1.2 
+Moodys Corporation (MCO);https://es.investing.com/equities/moodys-corp;-;0.88 
+Munich Re (MUVGn);https://es.investing.com/equities/muench.-rueck;-;3.42 
+Murray International Trust (MYI);https://es.investing.com/equities/murray-international-trust;1.56;-
+National Fuel Gas Company (NFG);https://es.investing.com/equities/national-fuel-gas-comp;-;3.85 
+National HealthCare Corporation (NHC);https://es.investing.com/equities/national-healthcare-corp;1.31;-
+National Retail Properties Inc (NNN);https://es.investing.com/equities/national-retail;-;3.71 
+Nestlé SA (NESN);https://es.investing.com/equities/nestle-ag;-;2.22 
+NewMarket Corporation (NEU);https://es.investing.com/equities/newmarket-corp;-;1.55 
+Newmont Goldcorp Corp (NEM);https://es.investing.com/equities/newmont-mining;-;1.47 
+Next PLC (NXT);https://es.investing.com/equities/next;-;2.46 
+Nextera Energy Inc (NEE);https://es.investing.com/equities/nextera-energy-inc;-;2.14 
+NH Hotel Group S.A. (NHH);https://es.investing.com/equities/nh-hoteles-sa;1.67;-
+Nike Inc (NKE);https://es.investing.com/equities/nike;-;1.05 
+Nordson Corporation (NDSN);https://es.investing.com/equities/nordson-corp;-;0.91 
+Eversource Energy (ES);https://es.investing.com/equities/northeast-utilities;-;2.59 
+Northrop Grumman Corporation (NOC);https://es.investing.com/equities/northrop-grumman;-;1.49 
+Northwest Bancshares Inc (NWBI);https://es.investing.com/equities/northwest-bancsha;1.78;-
+Northwest Natural Gas Co (NWN);https://es.investing.com/equities/northwest-natural-gas-comp;-;2.78 
+NorthWestern Corporation (NWE);https://es.investing.com/equities/northwestern-corp;-;3.21 
+Novartis AG (NOVN);https://es.investing.com/equities/novartis;-;3.29 
+Novo Nordisk A/S (NVO);https://es.investing.com/equities/novo-nordis;-;2.17 
+Novo Nordisk A/S Class B (NOVOb);https://es.investing.com/equities/novo-nordisk;-;2.35 
+Novozymes A/S B (NZYMb);https://es.investing.com/equities/novozymes-b;-;1.38 
+Nu Skin Enterprises Inc (NUS);https://es.investing.com/equities/nu-skin-enterprises-inc;-;3.85 
+Nucor Corp (NUE);https://es.investing.com/equities/nucor;-;2.86 
+OGE Energy Corporation (OGE);https://es.investing.com/equities/oge-energy;-;3.68 
+Old Republic International Corp (ORI);https://es.investing.com/equities/old-republic-international;-;3.52 
+Omnicom Group Inc (OMC);https://es.investing.com/equities/omnicom-gp-inc;-;3.28 
+Onex Corp (ONEX);https://es.investing.com/equities/onex-corp;-;0.5 
+Open Text Corp (OTEX);https://es.investing.com/equities/open-text;-;1.56 
+Oracle Corporation (ORCL);https://es.investing.com/equities/oracle-corp;-;1.7 
+Orion Oyj B (ORNBV);https://es.investing.com/equities/orion-b;-;3.65 
+Orkla ASA (ORK);https://es.investing.com/equities/orkla-a;-;2.92 
+Osisko Gold Ro (OR);https://es.investing.com/equities/osisko-gold-ro;1.64;-
+Osram Licht AG (OSRn);https://es.investing.com/equities/osram-licht;-;2.76 
+Ossur HF (OSSR);https://es.investing.com/equities/ossur-hf;-;0.26 
+Packaging Corp of America (PKG);https://es.investing.com/equities/packaging-corp;-;2.81 
+Flutter Entertainment PLC (FLTRF);https://es.investing.com/equities/paddy-power;-;2.39 
+Parker-Hannifin Corporation (PH);https://es.investing.com/equities/parkerhannifin;-;1.76 
+Parkland Fuel Corporation (PKI);https://es.investing.com/equities/parkland-fuel-corp;-;2.52 
+Paychex Inc (PAYX);https://es.investing.com/equities/paychex-inc;-;2.88 
+Pearson PLC (PSON);https://es.investing.com/equities/pearson;-;2.9 
+Pentair PLC (PNR);https://es.investing.com/equities/pentair;-;1.62 
+PepsiCo Inc (PEP);https://es.investing.com/equities/pepsico;-;2.82 
+Pernod Ricard SA (PERP);https://es.investing.com/equities/pernod-ricard;-;1.87 
+Perrigo Company PLC (PRGO);https://es.investing.com/equities/perrigo-co;-;1.67 
+Pfizer Inc (PFE);https://es.investing.com/equities/pfizer;-;3.76 
+Koninklijke Philips NV (PHG);https://es.investing.com/equities/philips-kon;-;2.02 
+Pilgrims Pride Corp (PPC);https://es.investing.com/equities/pilgrims-pride-corp;-;-
+Pioneer Natural Resources Co (PXD);https://es.investing.com/equities/pioneer-natural-resources;-;1.38 
+Compagnie Plastic Omnium SA (PLOF);https://es.investing.com/equities/plastic-omnium;-;2.61 
+Playtech Plc (PTEC);https://es.investing.com/equities/playtech-limited;1.14;-
+Polaris Industries Inc (PII);https://es.investing.com/equities/polaris-industries;-;2.44 
+Portland General Electric Co (POR);https://es.investing.com/equities/portland-general;-;2.77 
+PPG Industries Inc (PPG);https://es.investing.com/equities/ppg-industries;-;1.57 
+Premium Brands Holdings Corporation (PBH);https://es.investing.com/equities/premium-brands-holdings-corp;-;2.38 
+Primary Health Properties (PHP);https://es.investing.com/equities/primary-health-properties-plc;1.79;-
+Primerica Inc (PRI);https://es.investing.com/equities/primerica-inc;-;1.03 
+Procter & Gamble Company (PG);https://es.investing.com/equities/procter-gamble;-;2.44 
+Prologis Inc (PLD);https://es.investing.com/equities/prologis;-;2.3 
+Prosegur, Cia. De Seguridad S.A. (PSG);https://es.investing.com/equities/prosegur-sa;-;3.44 
+Prosperity Bancshares Inc (PB);https://es.investing.com/equities/prosperity-bancshares-inc;-;2.63 
+Prudential PLC (PRU);https://es.investing.com/equities/prudential;-;3.73 
+Prysmian SpA (PRY);https://es.investing.com/equities/prysmian;-;2.07 
+Quaker Chemical Corporation (KWR);https://es.investing.com/equities/quaker-chemical-corp;-;1.03 
+Qualcomm Incorporated (QCOM);https://es.investing.com/equities/qualcomm-inc;-;2.93 
+Raytheon Company (RTN);https://es.investing.com/equities/raytheon-co;-;1.74 
+Realty Income Corp (O);https://es.investing.com/equities/realty-income;-;3.55 
+Reckitt Benckiser Group PLC (RB);https://es.investing.com/equities/reckitt-benckiser;-;2.88 
+Recordati (RECI);https://es.investing.com/equities/recordati;-;2.51 
+Regal Beloit Corporation (RBC);https://es.investing.com/equities/regal-beloit-corp;-;1.45 
+Reinsurance Group of America (RGA);https://es.investing.com/equities/reinsurance-group-of-america-inc;-;1.69 
+Remy Cointreau (RCOP);https://es.investing.com/equities/remy-cointreau;-;2.21 
+Renaissancere Holdings Ltd (RNR);https://es.investing.com/equities/renaissancere-holdings-ltd;-;0.72 
+Republic Services Inc (RSG);https://es.investing.com/equities/republic-services-inc;-;1.83 
+Restaurant Brands International Inc (QSR);https://es.investing.com/equities/restaurant-brands-intrnational;-;3.07 
+Richelieu Hardware Ltd. (RCH);https://es.investing.com/equities/richelieu-hardware-ltd.;1.52;-
+Compagnie Financiere Richemont SA (CFR);https://es.investing.com/equities/richemont;-;2.63 
+Rightmove PLC (RMV);https://es.investing.com/equities/rightmove;-;1.1 
+Ritchie Bros Auctioneers (RBA);https://es.investing.com/equities/ritchie-bros.-auctioneers;-;1.86 
+RLI Corp (RLI);https://es.investing.com/equities/rli-corp;-;0.94 
+Robert Half International Inc (RHI);https://es.investing.com/equities/robert-half-intl;-;2.11 
+Roche Holding AG (RO);https://es.investing.com/equities/roche-holding;-;2.69 
+Rockwell Automation Inc (ROK);https://es.investing.com/equities/rockwell-automat;-;2.08 
+Rockwool International B (ROCKb);https://es.investing.com/equities/rockwool-international-b;-;1.53 
+Rollins Inc (ROL);https://es.investing.com/equities/rollins-inc;-;1.17 
+Rolls-Royce Holdings PLC (RR);https://es.investing.com/equities/rolls-royce;-;-
+Roper Technologies Inc (ROP);https://es.investing.com/equities/roper-industries;-;0.56 
+Ross Stores Inc (ROST);https://es.investing.com/equities/ross-stores-inc;-;0.88 
+Rotork PLC (ROR);https://es.investing.com/equities/rotork;-;1.79 
+Royal Bank of Canada (RY);https://es.investing.com/equities/royal-bank-of-canada-rbc;-;3.86 
+Royal DSM NV (RDSMY);https://es.investing.com/equities/royal-dsm-nv;-;2.0 
+Royal Gold Inc (RGLD);https://es.investing.com/equities/royal-gold-inc.;-;0.96 
+RPC Group PLC (RPC);https://es.investing.com/equities/rpc-group;-;3.59 
+RPM International Inc (RPM);https://es.investing.com/equities/rpm-intl-inc;-;1.93 
+Rubis SCA (RUBF);https://es.investing.com/equities/rubis;-;3.03 
+RWE AG ST O.N. (RWEG);https://es.investing.com/equities/rwe-st-a;-;2.65 
+RWS Holdings PLC (RWS);https://es.investing.com/equities/rws-holdings;1.75;-
+Sacyr SA (SCYR);https://es.investing.com/equities/sacyr-valle;1.42;-
+Safran SA (SAF);https://es.investing.com/equities/safran;-;1.08 
+Sage Group PLC (SGE);https://es.investing.com/equities/sage-group;-;2.25 
+Sage Therapeutic (SAGE);https://es.investing.com/equities/sage-therapeutic;-;-
+Compagnie de Saint Gobain SA (SGOB);https://es.investing.com/equities/saint-gobain;-;3.54 
+Samsonite International SA (1SO);https://es.investing.com/equities/samsonite-international-sa;-;3.93 
+Sanofi SA (SASY);https://es.investing.com/equities/sanofi-aventis;-;3.59 
+SAP SE (SAPG);https://es.investing.com/equities/sap-ag;-;1.37 
+Saputo Inc (SAP);https://es.investing.com/equities/saputo-inc;-;1.71 
+Saracen Mineral Holdings Ltd (SAR);https://es.investing.com/equities/saracen-mineral-holdings;-;-
+Schneider Electric SE (SCHN);https://es.investing.com/equities/schneider-electr;-;2.66 
+Schroders PLC (SDR);https://es.investing.com/equities/schroders;-;3.44 
+Scotts Miracle-Gro Company (SMG);https://es.investing.com/equities/scotts-miracle-gro-comp;-;2.29 
+SEB SA (SEBF);https://es.investing.com/equities/seb;-;1.43 
+SEI Investments Company (SEIC);https://es.investing.com/equities/sei-investments;-;1.03 
+Sempra Energy (SRE);https://es.investing.com/equities/sempra-energy;-;2.63 
+Senior Housing Properties Trust (SNH);https://es.investing.com/equities/senior-housing;1.77;-
+Sensient Technologies Corporation (SXT);https://es.investing.com/equities/sensient-technologies-corp;-;2.45 
+SGS SA (SGSN);https://es.investing.com/equities/sgs;-;3.0 
+Shenzhen Expressway Co Ltd (0548);https://es.investing.com/equities/shenzhen-expressway-co-ltd;-;3.84 
+Sherwin-Williams Co (SHW);https://es.investing.com/equities/sherwinwilliams;-;0.77 
+Siemens AG Class N (SIEGn);https://es.investing.com/equities/siemens;-;3.33 
+Silgan Holdings Inc (SLGN);https://es.investing.com/equities/silgan-holdings;-;1.42 
+Wheaton Precious Metals Corp (WPM);https://es.investing.com/equities/silver-wheaton-corp;-;1.3 
+Simcorp A/S (SIM);https://es.investing.com/equities/simcorp;-;0.89 
+SJW Corporation (SJW);https://es.investing.com/equities/sjw-corp;-;1.7 
+Smith & Nephew SNATS Inc (SNN);https://es.investing.com/equities/smith---nephew-snats-inc;-;1.63 
+Sodexo SA (EXHO);https://es.investing.com/equities/sodexho-alliance;-;2.74 
+Sofina (SOF);https://es.investing.com/equities/sofina;-;0.99 
+Software AG (SOWGn);https://es.investing.com/equities/software;-;2.62 
+Solvay SA (SOLB);https://es.investing.com/equities/solvay;-;3.61 
+Sonoco Products Company (SON);https://es.investing.com/equities/sonoco-products-comp;-;2.86 
+South Jersey Industries Inc (SJI);https://es.investing.com/equities/south-jersey-industries-inc;-;3.81 
+Southern Company (SO);https://es.investing.com/equities/southern-co;-;3.98 
+Southside Bancshares Inc (SBSI);https://es.investing.com/equities/southside-bancshares;1.19;-
+Southwest Gas Holdings Inc (SWX);https://es.investing.com/equities/southwest-gas-corp;-;2.85 
+Spectris PLC (SXS);https://es.investing.com/equities/spectris;-;2.2 
+Spirax-Sarco Engineering PLC (SPX);https://es.investing.com/equities/spirax;-;1.15 
+Spirit Aerosystems Holdings Inc (SPR);https://es.investing.com/equities/spirit-aerosystems-holdings-inc;-;0.53 
+Sprint Corp (S);https://es.investing.com/equities/sprint-nextel-corp;-;-
+Sprouts Farmers Market Inc (SFM);https://es.investing.com/equities/sprts-frmr;-;-
+Standard Motor Products Inc (SMP);https://es.investing.com/equities/standard-motor-products-inc;1.13;-
+Stanley Black & Decker Inc (SWK);https://es.investing.com/equities/stanley-works;-;1.75 
+Stantec Inc (STN);https://es.investing.com/equities/stantec;-;1.64 
+Starbucks Corporation (SBUX);https://es.investing.com/equities/starbucks-corp;-;1.94 
+Stella-Jones Inc. (SJ);https://es.investing.com/equities/stella-jones-inc.;-;1.47 
+Stepan Company (SCL);https://es.investing.com/equities/stepan-comp;-;1.1 
+Stericycle Inc (SRCL);https://es.investing.com/equities/stericycle-inc;-;-
+STERIS plc (STE);https://es.investing.com/equities/steris-corp;-;0.98 
+Stora Enso Oyj R (STERV);https://es.investing.com/equities/stora-enso;-;3.34 
+Store Capital Corp (STOR);https://es.investing.com/equities/store-capital-corp;-;3.43 
+Stryker Corporation (SYK);https://es.investing.com/equities/stryker;-;1.03 
+Swiss Life Holding AG (SLHN);https://es.investing.com/equities/swiss-life;-;2.67 
+Swiss Prime Site AG (SPSN);https://es.investing.com/equities/swiss-prime-si;-;3.54 
+Sysco Corporation (SYY);https://es.investing.com/equities/sysco-corp;-;2.23 
+Shenzhen Expressway Co Ltd (600548);https://es.investing.com/equities/sz-expressway;-;3.34 
+T. Rowe Price Group Inc (TROW);https://es.investing.com/equities/t-rowe-price-gp;-;2.48 
+Taiwan Semiconductor Manufacturing (TSM);https://es.investing.com/equities/taiwan-semicond.manufacturing-co;-;2.97 
+Tanger Factory Outlet Centers Inc (SKT);https://es.investing.com/equities/tanger-factory;1.43;-
+Target Corporation (TGT);https://es.investing.com/equities/target;-;2.08 
+Técnicas Reunidas S.A. (TRE);https://es.investing.com/equities/tecnicas-reunidas;1.19;-
+Telecom Italia SPA (TI);https://es.investing.com/equities/telecom-italia-s.p.a.;-;-
+Teleperformance SE (TEPRF);https://es.investing.com/equities/teleperformance;-;0.85 
+Telephone and Data Systems Inc (TDS);https://es.investing.com/equities/telephone-and-data-systems-inc;-;2.81 
+Tennant Company (TNC);https://es.investing.com/equities/tennant-co.;1.37;-
+Texas Instruments Incorporated (TXN);https://es.investing.com/equities/texas-instru;-;3.02 
+Texas Pacific Land Trust (TPL);https://es.investing.com/equities/texas-pacific-land-trust;-;0.26 
+The Ensign Group Inc (ENSG);https://es.investing.com/equities/the-ensign-group;-;0.44 
+The Travelers Companies Inc (TRV);https://es.investing.com/equities/the-travelers-co;-;2.4 
+The Wendy’s Co (WEN);https://es.investing.com/equities/the-wendys-co;-;2.23 
+Thomson Reuters Corp (TRI);https://es.investing.com/equities/thomson-reuters-corp;-;2.02 
+Tiffany & Co (TIF);https://es.investing.com/equities/tiffany---co;-;1.74 
+TJX Companies Inc (TJX);https://es.investing.com/equities/tjx-co-inc;-;1.52 
+Tompkins Financial Corporation (TMP);https://es.investing.com/equities/tompkins-financial-corp;1.3;-
+Tootsie Roll Industries Inc (TR);https://es.investing.com/equities/tootsie-roll-industries-inc;-;1.04 
+Toro Co (TTC);https://es.investing.com/equities/toro-co.;-;1.15 
+Toromont Industries Ltd. (TIH);https://es.investing.com/equities/toromont-industries-ltd;-;1.57 
+Toronto Dominion Bank (TD);https://es.investing.com/equities/toronto-dominion-bank;-;3.85 
+Tractor Supply Company (TSCO);https://es.investing.com/equities/tractor-supply-company;-;1.46 
+Transcontinental Inc (TCLa);https://es.investing.com/equities/transcontinental-inc;1.25;-
+TFI International Inc (TFII);https://es.investing.com/equities/transforce-inc;-;2.17 
+Travis Perkins PLC (TPK);https://es.investing.com/equities/travis-perkins;-;3.02 
+Tyson Foods Inc (TSN);https://es.investing.com/equities/tyson-foods;-;1.88 
+UGI Corporation (UGI);https://es.investing.com/equities/ugi;-;2.95 
+Ultra Electronics Holdings PLC (ULE);https://es.investing.com/equities/ultra-electronics;1.48;-
+UMB Financial Corporation (UMBF);https://es.investing.com/equities/umb-financial-corp;-;1.84 
+Umicore SA (UMI);https://es.investing.com/equities/umicore;-;1.96 
+Under Armour Inc A (UAA);https://es.investing.com/equities/under-armour;-;-
+Unilever PLC (ULVR);https://es.investing.com/equities/unilever;-;3.11 
+Unilever NV (UNA);https://es.investing.com/equities/unilever-ord;-;3.04 
+Union Pacific Corporation (UNP);https://es.investing.com/equities/union-pacific;-;2.19 
+United Bankshares Inc (UBSI);https://es.investing.com/equities/united-bankshares;-;3.69 
+United Airlines Holdings Inc (UAL);https://es.investing.com/equities/united-continenta;-;-
+UnitedHealth Group Incorporated (UNH);https://es.investing.com/equities/united-health-group;-;1.54 
+United Parcel Service Inc (UPS);https://es.investing.com/equities/united-parcel;-;3.17 
+United Technologies Corporation (UTX);https://es.investing.com/equities/united-tech;-;1.98 
+Universal Corporation (UVV);https://es.investing.com/equities/universal-corp;1.28;-
+Universal Health Realty Income Trust (UHT);https://es.investing.com/equities/universal-health-realty-trust;1.65;-
+Universal Health Services Inc (UHS);https://es.investing.com/equities/universal-health-services;-;0.57 
+Unum Group (UNM);https://es.investing.com/equities/unum-group;-;3.78 
+UPM-Kymmene Oyj (UPM);https://es.investing.com/equities/upm-kymmene;-;3.79 
+US Bancorp (USB);https://es.investing.com/equities/us-bancorp;-;2.8 
+Vail Resorts Inc (MTN);https://es.investing.com/equities/vail-resorts-inc;-;2.87 
+Valeo SA (VLOF);https://es.investing.com/equities/valeo;-;3.42 
+Valero Energy Corporation (VLO);https://es.investing.com/equities/valero-energy;-;3.69 
+Vector Group Ltd (VGR);https://es.investing.com/equities/vector-group-ltd;1.97;-
+Veolia Environnement VE SA (VIE);https://es.investing.com/equities/veolia-environ;-;3.61 
+VeriSign Inc (VRSN);https://es.investing.com/equities/verisign-inc;-;-
+VF Corporation (VFC);https://es.investing.com/equities/vf-corp;-;2.19 
+Victrex (VCTX);https://es.investing.com/equities/victrex;-;2.91 
+Vidrala S.A. (VID);https://es.investing.com/equities/vidrala-sa;-;1.13 
+Vinci SA (SGEF);https://es.investing.com/equities/vinci;-;2.72 
+Visa Inc Class A (V);https://es.investing.com/equities/visa-inc;-;0.66 
+Viscofan S.A. (VIS);https://es.investing.com/equities/viscofan-sa;-;3.45 
+Koninklijke Vopak NV (VOPA);https://es.investing.com/equities/vopak;-;2.16 
+WW Grainger Inc (GWW);https://es.investing.com/equities/w-w-grainger-inc;-;1.8 
+Walmart Inc (WMT);https://es.investing.com/equities/wal-mart-stores;-;1.78 
+Walgreens Boots Alliance Inc (WBA);https://es.investing.com/equities/walgreen-co;-;3.07 
+Waste Connections Inc (WCN);https://es.investing.com/equities/waste-connections-inc;-;0.81 
+Waste Management Inc (WM);https://es.investing.com/equities/waste-managemnt;-;1.82 
+WD-40 Company (WDFC);https://es.investing.com/equities/wd-40-company;-;1.27 
+Weir Group PLC (WEIR);https://es.investing.com/equities/weir-group;-;3.25 
+Wells Fargo & Company (WFC);https://es.investing.com/equities/wells-fargo;-;3.79 
+Wendel (MWDP);https://es.investing.com/equities/wendel;-;2.14 
+WESCO International Inc (WCC);https://es.investing.com/equities/wesco-intl;-;-
+West Pharmaceutical Services Inc (WST);https://es.investing.com/equities/west-pharmaceutical-services-inc;-;0.43 
+Westamerica Bancorporation (WABC);https://es.investing.com/equities/westamerica-banco;1.77;-
+Evergy Inc (EVRG);https://es.investing.com/equities/westar-energy;-;3.18 
+Westlake Chemical Corporation (WLK);https://es.investing.com/equities/westlake-chemical;-;1.51 
+WH Smith PLC (SMWH);https://es.investing.com/equities/wh-smith;-;2.41 
+Whitbread PLC (WTB);https://es.investing.com/equities/whitbread;-;2.17 
+Williams-Sonoma Inc (WSM);https://es.investing.com/equities/williams-sonoma-inc;-;2.69 
+Wirecard AG (WDIG);https://es.investing.com/equities/wire-card;-;0.16 
+WEC Energy Group Inc (WEC);https://es.investing.com/equities/wisconsin-energy-corp;-;2.65 
+Wolters Kluwer (WLSNc);https://es.investing.com/equities/wolters-kluwer;-;1.59 
+W. R. Berkley Corp (WRB);https://es.investing.com/equities/wr-berkley-corp;-;0.64 
+Wyndham Destinations Inc (WYND);https://es.investing.com/equities/wyndham-world;-;3.68 
+Xcel Energy Inc (XEL);https://es.investing.com/equities/xcel-energy;-;2.65 
+Xilinx Inc (XLNX);https://es.investing.com/equities/xilinx-inc;-;1.62 
