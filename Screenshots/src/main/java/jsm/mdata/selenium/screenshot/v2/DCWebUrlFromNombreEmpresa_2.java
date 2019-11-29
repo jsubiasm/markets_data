@@ -3,11 +3,11 @@
  */
 package jsm.mdata.selenium.screenshot.v2;
 
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,13 +24,13 @@ import jsm.mdata.selenium.common.WebDriverBase;
  * @author Empleado
  *
  */
-public class DCWebUrlFromNombreEmpresa
+public class DCWebUrlFromNombreEmpresa_2
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(DCWebUrlFromNombreEmpresa.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(DCWebUrlFromNombreEmpresa_2.class);
 
 	/**
 	 * Configuración
@@ -1222,7 +1222,7 @@ public class DCWebUrlFromNombreEmpresa
 	/**
 	 * 
 	 */
-	private final static String URL_INICIAL = "https://www.google.es/search?q=";
+	private final static String URL_INICIAL = "https://www.google.es";
 
 	/**
 	 * @param args
@@ -1274,9 +1274,22 @@ public class DCWebUrlFromNombreEmpresa
 						{
 							LOGGER.info("Reintento [" + errorRetry + "]");
 						}
-						String busquedaURL = URL_INICIAL + URLEncoder.encode(proveedorDatos[0] + "+" + nombreEmpresa, "UTF-8");
+						String busquedaURL = URL_INICIAL;
 						LOGGER.info("Cargando URL de búsqueda [" + busquedaURL + "]");
 						driver.get(busquedaURL);
+						new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("input")));
+						List<WebElement> listaInputs = driver.findElements(By.tagName("input"));
+						for (WebElement input : listaInputs)
+						{
+							String inputTitle = input.getAttribute("title");
+							if (inputTitle != null && inputTitle.indexOf("Buscar") != -1)
+							{
+								input.click();
+								input.clear();
+								input.sendKeys(proveedorDatos[0] + " " + nombreEmpresa);
+								input.sendKeys(Keys.RETURN);
+							}
+						}
 						new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("a")));
 						List<WebElement> listaLinks = driver.findElements(By.tagName("a"));
 						String resultHrefElemento = null;

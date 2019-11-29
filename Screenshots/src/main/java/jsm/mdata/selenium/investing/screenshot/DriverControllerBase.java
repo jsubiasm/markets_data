@@ -89,6 +89,7 @@ public abstract class DriverControllerBase
 							if (capitalizacion < minCapitalizacion)
 							{
 								LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
+								LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacion + ";-");
 								return;
 							}
 							else
@@ -99,6 +100,7 @@ public abstract class DriverControllerBase
 						else
 						{
 							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
+							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacionStr + ";-");
 							return;
 						}
 					}
@@ -107,6 +109,7 @@ public abstract class DriverControllerBase
 			catch (Exception e)
 			{
 				LOGGER.error("Error al obtener la Capitalización de [" + nombreEmpresa + "] [" + hrefElemento + "]", e);
+				LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
 				return;
 			}
 		}
@@ -130,6 +133,7 @@ public abstract class DriverControllerBase
 						if (dividendoStr.indexOf("N/A") != -1)
 						{
 							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + dividendoStr + "] no está disponible");
+							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
 							return;
 						}
 						dividendoStr = dividendoStr.substring(dividendoStr.indexOf("(") + 1, dividendoStr.indexOf(")") - 1);
@@ -139,6 +143,7 @@ public abstract class DriverControllerBase
 						if (dividendo < minDividendo)
 						{
 							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + dividendo + "] es menor que la RPD mínima [" + minDividendo + "] ");
+							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;" + dividendo);
 							return;
 						}
 						else
@@ -151,6 +156,7 @@ public abstract class DriverControllerBase
 			catch (Exception e)
 			{
 				LOGGER.error("Error al obtener la RPD de [" + nombreEmpresa + "] [" + hrefElemento + "]", e);
+				LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
 				return;
 			}
 		}
@@ -390,7 +396,7 @@ public abstract class DriverControllerBase
 		Thread.sleep(500);
 
 		String loggerExcelLine = "Generando screenshot --> ";
-		loggerExcelLine = loggerExcelLine + ";" + sector;
+		loggerExcelLine = loggerExcelLine + sector;
 		loggerExcelLine = loggerExcelLine + ";" + industria;
 		loggerExcelLine = loggerExcelLine + ";" + nombreEmpresa.replaceAll("&amp;", "&");
 		loggerExcelLine = loggerExcelLine + ";" + dividendo.toString().replaceAll("\\.", ",");

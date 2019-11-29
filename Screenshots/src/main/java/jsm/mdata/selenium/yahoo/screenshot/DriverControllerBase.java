@@ -20,6 +20,11 @@ public abstract class DriverControllerBase
 	protected static final String DOWNLOAD_PATH = "C:\\_PELAYO\\Software\\Eclipse Neon\\workspace\\markets_data\\Screenshots\\yahoo\\download";
 
 	/**
+	 * 
+	 */
+	protected static final String TF_MENSUAL = "TF_MENSUAL";
+
+	/**
 	 * Logger
 	 */
 	private final static Logger LOGGER = LoggerFactory.getLogger(DriverControllerBase.class);
@@ -35,7 +40,6 @@ public abstract class DriverControllerBase
 	{
 		LOGGER.info("Cargando URL [" + hrefElemento + "] ");
 		driver.get(hrefElemento);
-
 	}
 
 }
