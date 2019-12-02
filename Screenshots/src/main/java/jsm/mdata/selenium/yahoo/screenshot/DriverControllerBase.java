@@ -3,15 +3,22 @@
  */
 package jsm.mdata.selenium.yahoo.screenshot;
 
+import java.io.File;
+import java.net.URLEncoder;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import jsm.mdata.selenium.common.WebDriverBase;
 
 /**
  * @author Empleado
@@ -56,14 +63,14 @@ public abstract class DriverControllerBase
 		String resultCAP = null;
 		String resultCAP_UM = null;
 		String resultRPD = null;
+		Double doubleResultCAP = null;
+		Double doubleResultRPD = null;
 		for (WebElement filaTabla : listaFilasTabla)
 		{
 			if (filaTabla.getAttribute("innerHTML").indexOf("Capitalización de mercado") != -1)
 			{
 				List<WebElement> elementosFila = filaTabla.findElements(By.tagName("span"));
 				String capitalizacionStr = elementosFila.get(1).getAttribute("innerHTML").trim();
-				capitalizacionStr = capitalizacionStr.replaceAll(",", "");
-				capitalizacionStr = capitalizacionStr.replaceAll("\\.", ",");
 				resultCAP = capitalizacionStr.substring(0, capitalizacionStr.length() - 1);
 				resultCAP_UM = capitalizacionStr.substring(capitalizacionStr.length() - 1, capitalizacionStr.length());
 				if (capitalizacionStr.endsWith("T"))
@@ -72,14 +79,13 @@ public abstract class DriverControllerBase
 				}
 				else if (resultCAP_UM.equalsIgnoreCase("B"))
 				{
-					resultCAP = resultCAP.substring(0, resultCAP.indexOf("B"));
 					resultCAP = resultCAP.replaceAll("\\.", "");
 					resultCAP = resultCAP.replaceAll(",", ".");
-					Double doubleResultCAP = Double.valueOf(resultCAP);
+					doubleResultCAP = Double.valueOf(resultCAP);
 					if (doubleResultCAP < minCapitalizacion)
 					{
 						LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + doubleResultCAP + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
-						LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + doubleResultCAP + ";-");
+						LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + resultCAP + ";-");
 						return;
 					}
 					else
@@ -99,22 +105,19 @@ public abstract class DriverControllerBase
 				List<WebElement> elementosFila = filaTabla.findElements(By.tagName("td"));
 				resultRPD = elementosFila.get(1).getAttribute("innerHTML").trim();
 				resultRPD = resultRPD.substring(resultRPD.indexOf("(") + 1, resultRPD.indexOf(")") - 1);
-				resultRPD = resultRPD.replaceAll(",", "");
-				resultRPD = resultRPD.replaceAll("\\.", ",");
-				if (resultRPD.indexOf("N/A") != -1)
+				if (resultRPD.indexOf("N/") != -1)
 				{
 					LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + resultRPD + "] no está disponible");
 					LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
 					return;
 				}
-				resultRPD = resultRPD.substring(resultRPD.indexOf("(") + 1, resultRPD.indexOf(")") - 1);
 				resultRPD = resultRPD.replaceAll("\\.", "");
 				resultRPD = resultRPD.replaceAll(",", ".");
-				Double doubleResultRPD = Double.valueOf(resultRPD);
+				doubleResultRPD = Double.valueOf(resultRPD);
 				if (doubleResultRPD < minDividendo)
 				{
 					LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + doubleResultRPD + "] es menor que la RPD mínima [" + minDividendo + "] ");
-					LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;" + doubleResultRPD);
+					LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;" + resultRPD);
 					return;
 				}
 				else
@@ -124,9 +127,58 @@ public abstract class DriverControllerBase
 			}
 		}
 
-		// TODO: FALTA TERMINAR
+		String chartUrl = hrefElemento.replaceAll("quote", "chart");
+		LOGGER.info("Cargando chart URL [" + chartUrl + "] ");
+		driver.get(chartUrl);
+
+		LOGGER.info("Ajustando el chart");
+		WebElement chartToolbar = driver.findElement(By.id("chart-toolbar"));
+		List<WebElement> elementosToolbar = chartToolbar.findElements(By.tagName("span"));
+		for (WebElement elemento : elementosToolbar)
+		{
+			if (elemento.getAttribute("innerHTML").indexOf("Máx.") != -1)
+			{
+				WebDriverBase.clickElement(driver, elemento);
+				continue;
+			}
+			// else if (elemento.getAttribute("innerHTML").indexOf("Intervalo") != -1 && elemento.getAttribute("innerHTML").indexOf("Intervalo de fechas") == -1)
+			// {
+			// WebDriverBase.clickElement(driver, elemento);
+			// WebElement presetDiv = driver.findElement(By.id("preset"));
+			// List<WebElement> listaIntervalos = presetDiv.findElements(By.tagName("span"));
+			// for (WebElement intervalo : listaIntervalos)
+			// {
+			// if (intervalo.getAttribute("innerHTML").indexOf("1&nbsp;mes") != -1)
+			// {
+			// WebDriverBase.clickElement(driver, intervalo);
+			// continue;
+			// }
+			// }
+			// continue;
+			// }
+			// else if (elemento.getAttribute("innerHTML").indexOf("Línea") != -1)
+			// {
+			// WebDriverBase.clickElement(driver, elemento);
+			// WebElement presetDiv = driver.findElement(By.id("dropdown-menu"));
+			// List<WebElement> listaTiposChart = presetDiv.findElements(By.tagName("span"));
+			// for (WebElement tipoChart : listaTiposChart)
+			// {
+			// if (tipoChart.getAttribute("innerHTML").indexOf("Vela") != -1)
+			// {
+			// WebDriverBase.clickElement(driver, tipoChart);
+			// continue;
+			// }
+			// }
+			// continue;
+			// }
+		}
+
+		LOGGER.info("Esperamos 500 milisegundos");
+		Thread.sleep(500);
 
 		LOGGER.info("Generando screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + resultRPD + ";" + resultCAP + ";" + resultCAP_UM + ";" + hrefElemento);
+		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + doubleResultRPD.intValue() + "\\" + URLEncoder.encode(hrefElemento, WebDriverBase.CHARSET) + timeFrame + ".png"));
 	}
 
 }

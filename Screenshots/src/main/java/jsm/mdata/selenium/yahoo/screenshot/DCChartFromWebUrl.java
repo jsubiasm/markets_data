@@ -42,11 +42,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		// -- ACCIONES CON DIVIDENDO
 		// --
 		List<String> listaURL_09 = new ArrayList<String>();
-		listaURL_09.add("https://es.finance.yahoo.com/quote/CGO.TO");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/CRT-UN.TO");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/CWB.TO");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/GRT-UN.TO");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/IIP-UN.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/0HV2.IL");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/0N4Y.IL");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/0RPV.IL");
@@ -166,6 +161,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/BMY");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/BN.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/BNDSF");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/BNKR.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/BNKXF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/BNP.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/BNPQY");
@@ -211,6 +207,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CFR");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CFRUY");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/CGO.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CHD");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CHDN");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CHE");
@@ -219,6 +216,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CIB");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CIE.MC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CINF");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/CL");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CLDN.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CLNX.MC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CLPBF");
@@ -232,16 +230,16 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CMP");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CMS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CNI");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/CNP.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CNP");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/CNP.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CNQ");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CNS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CO.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/COL.MC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/COLM");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CON.DE");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/COR.LS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/COR");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/COR.LS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/COST");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CPG.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CPK");
@@ -252,15 +250,18 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CRDA.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CRH");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CRST.L");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/CRT-UN.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CSCO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CSL");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CSX");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CTAS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CTC.TO");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/CTY.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CU.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CUBE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CVS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CVX");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/CWB.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CWK.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/CWT");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/D");
@@ -271,8 +272,8 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DEO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DFS");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/DG.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DG");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/DG.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DIS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DLMAF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DLR");
@@ -285,8 +286,8 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DPW.DE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DPZ");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DSV.CO");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/DTE.DE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DTE");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/DTE.DE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DUK");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DUSCF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/DVA");
@@ -323,6 +324,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ERG.MI");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ERIE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ES");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/ESLOF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ESS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ET");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ETE");
@@ -383,12 +385,14 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GLE.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GMHIU");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GN.CO");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/GNK.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GNTX");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GOLD");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GOOG");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GPC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GPI");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GRPTF");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/GRT-UN.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GSK");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/GVDBF");
@@ -433,6 +437,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/IFF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/IFPJF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/IFX.DE");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/IIP-UN.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ILD.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/IMB.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/IMO");
@@ -491,8 +496,8 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/LDSVF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/LEA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/LECO");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/LEG.DE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/LEG");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/LEG.DE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/LFUS");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/LGEN.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/LHX");
@@ -538,6 +543,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/MGRC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/MIC.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/MKC");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/MKS.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/MKTX");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/MMB.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/MMC");
@@ -590,6 +596,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/OHI");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/OKE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/OMC");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/ONEX.TO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/OR");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/OR.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ORCL");
@@ -612,6 +619,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PG");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PH");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PHG");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/PHP.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PII");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PKG");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PKIUF");
@@ -633,6 +641,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PRI");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PRU.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PRY.MI");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/PSG.MC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PSO");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PUBGY");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/PXD");
@@ -666,6 +675,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ROL");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ROP");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ROST");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/ROVI.MC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ROYMY");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/RPM");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/RR.L");
@@ -681,12 +691,14 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/S");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SAFRY");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SAGE");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/SAMPO.HE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SAN");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SAPGF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SAPIF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SBRY.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SBSI");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SBUX");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/SCEXF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SCL");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SCRYY");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SEB-A.ST");
@@ -726,8 +738,8 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SON");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SPG");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SPGI");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/SPR.DE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SPR");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/SPR.DE");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SPXSF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SR");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SRCE");
@@ -741,8 +753,8 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/STLJF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/STOR");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/STZ");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/SU.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SU");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/SU.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SVYSF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SW.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/SWDAF");
@@ -820,6 +832,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/VER");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/VFC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/VGR");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/VID.MC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/VIE.PA");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/VIS.MC");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/VLEEF");
@@ -863,19 +876,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ZHEH.L");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ZONNF");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/ZOT.MC");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/CL");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/ESLOF");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/ONEX.TO");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/PSG.MC");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/ROVI.MC");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/SAMPO.HE");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/SCEXF");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/VID.MC");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/BNKR.L");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/CTY.L");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/GNK.L");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/MKS.L");
-		listaURL_09.add("https://es.finance.yahoo.com/quote/PHP.L");
 		LISTA_URL_GROUP.add(new URLGroup("DIVIDENDO", listaURL_09));
 	}
 
