@@ -3,11 +3,11 @@
  */
 package jsm.mdata.selenium.screenshot.v2;
 
-import java.io.Console;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -159,49 +159,49 @@ public class DCWebUrlFromNombreEmpresa_FIREFOX
 		// listaEmpresas.add("AVISTA CORP");
 		// listaEmpresas.add("AVIVA");
 		// listaEmpresas.add("AXA");
-		listaEmpresas.add("AXA SA");
-		listaEmpresas.add("AXEL SPRINGER SE");
-		listaEmpresas.add("AXIS CAPITAL HOLDINGS LTD");
-		listaEmpresas.add("B&G FOODS");
-		listaEmpresas.add("BADGER METER INC");
-		listaEmpresas.add("BAE SYSTEMS PLC");
-		listaEmpresas.add("BAKKAFROST");
-		listaEmpresas.add("BALCHEM INC");
-		listaEmpresas.add("BALL CORP");
-		listaEmpresas.add("BALOISE HOLDING AG");
-		listaEmpresas.add("BANCFIRST CORP");
-		listaEmpresas.add("BANCFIRST CORP OK");
-		listaEmpresas.add("BANCO SABADELL");
-		listaEmpresas.add("BANCO SANTANDER");
-		listaEmpresas.add("BANK OF AMERICA");
-		listaEmpresas.add("BANK OF MARIN BANCORP");
-		listaEmpresas.add("BANK OF MONTREAL");
-		listaEmpresas.add("BANK OF NOVA SCOTIA");
-		listaEmpresas.add("BANK OF UTICA");
-		listaEmpresas.add("BANK OZK");
-		listaEmpresas.add("BANKERS INVESTMENT TRUST PLC");
-		listaEmpresas.add("BANKIA");
-		listaEmpresas.add("BANKINTER");
-		listaEmpresas.add("BAR HARBOR BANKSHARES");
-		listaEmpresas.add("BARRICK GOLD");
-		listaEmpresas.add("BARÓN DE LEY");
-		listaEmpresas.add("BASF");
-		listaEmpresas.add("BASF SE");
-		listaEmpresas.add("BAYER AG");
-		listaEmpresas.add("BAYER AKTIENGESELLSCHAFT");
-		listaEmpresas.add("BBVA");
-		listaEmpresas.add("BCE INC");
-		listaEmpresas.add("BEAZLEY PLC");
-		listaEmpresas.add("BECTON DICKINSON & CO");
-		listaEmpresas.add("BEIERSDORF AG");
-		listaEmpresas.add("BELLWAY PLC");
-		listaEmpresas.add("BEMIS CO");
-		listaEmpresas.add("BEMIS CO INC");
-		listaEmpresas.add("BEST BUY CORP");
-		listaEmpresas.add("BHP BILLITON");
-		listaEmpresas.add("BIC");
-		listaEmpresas.add("BIOMERIEUX SA");
-		listaEmpresas.add("BIOSEARCH");
+		// listaEmpresas.add("AXA SA");
+		// listaEmpresas.add("AXEL SPRINGER SE");
+		// listaEmpresas.add("AXIS CAPITAL HOLDINGS LTD");
+		// listaEmpresas.add("B&G FOODS");
+		// listaEmpresas.add("BADGER METER INC");
+		// listaEmpresas.add("BAE SYSTEMS PLC");
+		// listaEmpresas.add("BAKKAFROST");
+		// listaEmpresas.add("BALCHEM INC");
+		// listaEmpresas.add("BALL CORP");
+		// listaEmpresas.add("BALOISE HOLDING AG");
+		// listaEmpresas.add("BANCFIRST CORP");
+		// listaEmpresas.add("BANCFIRST CORP OK");
+		// listaEmpresas.add("BANCO SABADELL");
+		// listaEmpresas.add("BANCO SANTANDER");
+		// listaEmpresas.add("BANK OF AMERICA");
+		// listaEmpresas.add("BANK OF MARIN BANCORP");
+		// listaEmpresas.add("BANK OF MONTREAL");
+		// listaEmpresas.add("BANK OF NOVA SCOTIA");
+		// listaEmpresas.add("BANK OF UTICA");
+		// listaEmpresas.add("BANK OZK");
+		// listaEmpresas.add("BANKERS INVESTMENT TRUST PLC");
+		// listaEmpresas.add("BANKIA");
+		// listaEmpresas.add("BANKINTER");
+		// listaEmpresas.add("BAR HARBOR BANKSHARES");
+		// listaEmpresas.add("BARRICK GOLD");
+		// listaEmpresas.add("BARÓN DE LEY");
+		// listaEmpresas.add("BASF");
+		// listaEmpresas.add("BASF SE");
+		// listaEmpresas.add("BAYER AG");
+		// listaEmpresas.add("BAYER AKTIENGESELLSCHAFT");
+		// listaEmpresas.add("BBVA");
+		// listaEmpresas.add("BCE INC");
+		// listaEmpresas.add("BEAZLEY PLC");
+		// listaEmpresas.add("BECTON DICKINSON & CO");
+		// listaEmpresas.add("BEIERSDORF AG");
+		// listaEmpresas.add("BELLWAY PLC");
+		// listaEmpresas.add("BEMIS CO");
+		// listaEmpresas.add("BEMIS CO INC");
+		// listaEmpresas.add("BEST BUY CORP");
+		// listaEmpresas.add("BHP BILLITON");
+		// listaEmpresas.add("BIC");
+		// listaEmpresas.add("BIOMERIEUX SA");
+		// listaEmpresas.add("BIOSEARCH");
 		listaEmpresas.add("BLACK HILLS CORP");
 		listaEmpresas.add("BLACK ROCK INC");
 		listaEmpresas.add("BLACKROCK INC");
@@ -1345,13 +1345,9 @@ public class DCWebUrlFromNombreEmpresa_FIREFOX
 	/**
 	 * 
 	 */
+	@SuppressWarnings("resource")
 	private static void waitForEnter()
 	{
-		Console systemConsole = System.console();
-		if (systemConsole != null)
-		{
-			systemConsole.format("\nPulsar ENTER para continuar...\n");
-			systemConsole.readLine();
-		}
+		new Scanner(System.in).nextLine();
 	}
 }
