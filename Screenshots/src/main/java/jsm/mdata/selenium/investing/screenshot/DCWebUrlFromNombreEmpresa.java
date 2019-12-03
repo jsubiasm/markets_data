@@ -11,8 +11,6 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -1247,10 +1245,7 @@ public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 		FileUtils.cleanDirectory(new File(DOWNLOAD_PATH));
 
 		LOGGER.info("Iniciando driver");
-		System.setProperty(WebDriverBase.WEB_DRIVER_PROPERTY, WebDriverBase.WEB_DRIVER_EXE);
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--start-maximized");
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = WebDriverBase.getChromeWebDriver();
 
 		LOGGER.info("Iniciando proceso");
 		for (URLGroup empresasGroup : LISTA_EMPRESAS_GROUP)
