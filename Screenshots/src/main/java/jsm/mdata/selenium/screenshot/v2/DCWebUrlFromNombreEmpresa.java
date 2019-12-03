@@ -6,6 +6,7 @@ package jsm.mdata.selenium.screenshot.v2;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,6 +36,7 @@ public class DCWebUrlFromNombreEmpresa
 	/**
 	 * Configuración
 	 */
+	private final static Random RANDOM = new Random();
 	private final static List<URLGroup> LISTA_EMPRESAS_GROUP = new ArrayList<URLGroup>();
 	private final static List<String[]> LISTA_PROVEEDORES_DATOS = new ArrayList<String[]>();
 	static
@@ -42,8 +44,8 @@ public class DCWebUrlFromNombreEmpresa
 		// --
 		// -- LISTA PROVEEDORES DATOS
 		// --
-		LISTA_PROVEEDORES_DATOS.add(new String[] { "es.finance.yahoo.com", "/es.finance.yahoo.com/quote/" });
-		LISTA_PROVEEDORES_DATOS.add(new String[] { "es.investing.com", "/es.investing.com/equities/" });
+		LISTA_PROVEEDORES_DATOS.add(new String[] { "es.finance.yahoo.com", "finance.yahoo.com/quote/" });
+		LISTA_PROVEEDORES_DATOS.add(new String[] { "es.investing.com", "investing.com/equities/" });
 		// --
 		// -- LISTA DE EMPRESAS
 		// --
@@ -1217,7 +1219,7 @@ public class DCWebUrlFromNombreEmpresa
 	/**
 	 * 
 	 */
-	private final static Integer MAX_ERROR_RETRY = 1;
+	private final static Integer MAX_ERROR_RETRY = 2;
 
 	/**
 	 * 
@@ -1296,7 +1298,7 @@ public class DCWebUrlFromNombreEmpresa
 						LOGGER.info(" --- URL Encontrada [" + proveedorDatos[0] + "] [" + downloadFolder + "] [" + nombreEmpresa + "] [" + resultHrefElemento + "]");
 						empresaIdx++;
 						errorRetry = 0;
-						long msEspera = 5000;
+						int msEspera = getRandomMsBetween(2000, 10000);
 						LOGGER.info("Esperamos [" + String.valueOf(msEspera / 1000) + "] segundos...");
 						Thread.sleep(msEspera);
 					}
@@ -1310,13 +1312,24 @@ public class DCWebUrlFromNombreEmpresa
 							empresaIdx++;
 							errorRetry = 0;
 						}
-						long msEspera = 120000;
+						int msEspera = 120000;
 						LOGGER.info("Esperamos [" + String.valueOf(msEspera / 1000) + "] segundos...");
 						Thread.sleep(msEspera);
 					}
 				}
 			}
 		}
+	}
+
+	/**
+	 * @param min
+	 * @param max
+	 * @return
+	 */
+	private static int getRandomMsBetween(int minMs, int maxMs)
+	{
+		int randomInt = RANDOM.nextInt(maxMs - minMs) + minMs;
+		return randomInt;
 	}
 
 }
