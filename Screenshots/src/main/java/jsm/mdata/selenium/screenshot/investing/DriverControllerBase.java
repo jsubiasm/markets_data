@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jsm.mdata.selenium.investing.screenshot;
+package jsm.mdata.selenium.screenshot.investing;
 
 import java.io.File;
 import java.net.URLEncoder;
@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import jsm.mdata.selenium.common.WebDriverBase;
+import jsm.mdata.selenium.screenshot.base.WebDriverBase;
 
 /**
  * @author Empleado

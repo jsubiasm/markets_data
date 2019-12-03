@@ -1,14 +1,13 @@
 /**
  * 
  */
-package jsm.mdata.selenium.screenshot.v2;
+package jsm.mdata.selenium.screenshot.investing;
 
-import java.net.URLEncoder;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,14 +16,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import jsm.mdata.selenium.common.URLGroup;
-import jsm.mdata.selenium.common.WebDriverBase;
+import jsm.mdata.selenium.screenshot.base.URLGroup;
+import jsm.mdata.selenium.screenshot.base.WebDriverBase;
 
 /**
  * @author Empleado
  *
  */
-public class DCWebUrlFromNombreEmpresa
+public class DCWebUrlFromNombreEmpresa extends DriverControllerBase
 {
 
 	/**
@@ -33,306 +32,299 @@ public class DCWebUrlFromNombreEmpresa
 	private final static Logger LOGGER = LoggerFactory.getLogger(DCWebUrlFromNombreEmpresa.class);
 
 	/**
-	 * Configuración
+	 * URL Groups
 	 */
-	private final static Random RANDOM = new Random();
 	private final static List<URLGroup> LISTA_EMPRESAS_GROUP = new ArrayList<URLGroup>();
-	private final static List<String[]> LISTA_PROVEEDORES_DATOS = new ArrayList<String[]>();
 	static
 	{
-		// --
-		// -- LISTA PROVEEDORES DATOS
-		// --
-		LISTA_PROVEEDORES_DATOS.add(new String[] { "es.finance.yahoo.com", "finance.yahoo.com/quote/" });
-		LISTA_PROVEEDORES_DATOS.add(new String[] { "es.investing.com", "investing.com/equities/" });
 		// --
 		// -- LISTA DE EMPRESAS
 		// --
 		List<String> listaEmpresas = new ArrayList<String>();
-		// listaEmpresas.add("1ST SOURCE CORP");
-		// listaEmpresas.add("3I GROUP PLC");
-		// listaEmpresas.add("3I INFRASTRUCTURE PLC");
-		// listaEmpresas.add("3M CO");
-		// listaEmpresas.add("4IMPRINT PLC");
-		// listaEmpresas.add("AALBERTS INDUSTRIES NV");
-		// listaEmpresas.add("AARON'S INC");
-		// listaEmpresas.add("ABBOTT LABORATORIES");
-		// listaEmpresas.add("ABBVIE INC");
-		// listaEmpresas.add("ABCAM PLC");
-		// listaEmpresas.add("ABERDEEN ASSET MANAGEMENT");
-		// listaEmpresas.add("ABERDEEN NEW DAWN INVESTMENT TRUST PLC");
-		// listaEmpresas.add("ABM INDUSTRIES INC");
-		// listaEmpresas.add("ACCENTURE");
-		// listaEmpresas.add("ACCENTURE PLC");
-		// listaEmpresas.add("ACCIONA");
-		// listaEmpresas.add("ACCOR SA");
-		// listaEmpresas.add("ACERINOX");
-		// listaEmpresas.add("ACKERMANS & VAN HAAREN NV");
-		// listaEmpresas.add("ACME UNITED CORP");
-		// listaEmpresas.add("ACS");
-		// listaEmpresas.add("ACTIVISION BLIZZARD INC");
-		// listaEmpresas.add("ADIDAS");
-		// listaEmpresas.add("ADIDAS AG");
-		// listaEmpresas.add("ADOLFO DOMINGUEZ");
-		// listaEmpresas.add("AEGON");
-		// listaEmpresas.add("AEGON NV");
-		// listaEmpresas.add("AENA");
-		// listaEmpresas.add("AFLAC INC");
-		// listaEmpresas.add("AG BARR PLC");
-		// listaEmpresas.add("AGEAS NV");
-		// listaEmpresas.add("AHOLD");
-		// listaEmpresas.add("AHOLD NV");
-		// listaEmpresas.add("AIR LIQUIDE SA");
-		// listaEmpresas.add("AIR PRODUCTS & CHEM");
-		// listaEmpresas.add("AIR PRODUCTS & CHEMICALS INC");
-		// listaEmpresas.add("AIRBUS");
-		// listaEmpresas.add("AIRBUS SE");
-		// listaEmpresas.add("AKZO NOBEL NV");
-		// listaEmpresas.add("ALBA");
-		// listaEmpresas.add("ALBEMARLE CORP");
-		// listaEmpresas.add("ALFA LAVAL");
-		// listaEmpresas.add("ALGONQUIN POWER & UTILITIES CORP");
-		// listaEmpresas.add("ALIMENTATION COUCHE TARD INC");
-		// listaEmpresas.add("ALLIANCE TRUST PLC");
-		// listaEmpresas.add("ALLIANT ENERGY CORP");
-		// listaEmpresas.add("ALLIANZ");
-		// listaEmpresas.add("ALLIANZ SE");
-		// listaEmpresas.add("ALLIED PROPERTIES REAL ESTATE INVESTMENT TRUST");
-		// listaEmpresas.add("ALMIRALL");
-		// listaEmpresas.add("ALTRIA GROUP INC");
-		// listaEmpresas.add("AMADEUS");
-		// listaEmpresas.add("AMADEUS IT GROUP SA");
-		// listaEmpresas.add("AMCOR");
-		// listaEmpresas.add("AMERICAN EQUITY INVESTMENT LIFE HOLDING CO");
-		// listaEmpresas.add("AMERICAN EXPRESS");
-		// listaEmpresas.add("AMERICAN EXPRESS CO");
-		// listaEmpresas.add("AMERICAN FINANCIAL GROUP INC");
-		// listaEmpresas.add("AMERICAN STATES WATER");
-		// listaEmpresas.add("AMERICAN STATES WATER CO");
-		// listaEmpresas.add("AMERICAN TOWER");
-		// listaEmpresas.add("AMERICAN WATER WORKS");
-		// listaEmpresas.add("AMERIPRISE FINANCIAL");
-		// listaEmpresas.add("AMERIPRISE FINANCIAL INC");
-		// listaEmpresas.add("AMERISOURCEBERGEN CORP");
-		// listaEmpresas.add("AMGEN INC");
-		// listaEmpresas.add("AMPER");
-		// listaEmpresas.add("ANALOG DEVICES INC");
-		// listaEmpresas.add("ANDERSONS INC");
-		// listaEmpresas.add("ANDREW PELLER LTD");
-		// listaEmpresas.add("ANHEUSER BUSCH INBEV");
-		// listaEmpresas.add("ANPARIO PLC");
-		// listaEmpresas.add("AO SMITH CORP");
-		// listaEmpresas.add("APPLE INC");
-		// listaEmpresas.add("APPLIED INDUSTRIAL TECHNOLOGIES INC");
-		// listaEmpresas.add("APPLIED MATERIALS");
-		// listaEmpresas.add("APTARGROUP INC");
-		// listaEmpresas.add("AQUA AMERICA INC");
-		// listaEmpresas.add("ARCELORMITTAL");
-		// listaEmpresas.add("ARCHER DANIELS MIDLAND");
-		// listaEmpresas.add("ARCHER DANIELS MIDLAND CO");
-		// listaEmpresas.add("ARKEMA SA");
-		// listaEmpresas.add("ARMANINO FOODS OF DISTINCTION INC");
-		// listaEmpresas.add("ARROW FINANCIAL CORP");
-		// listaEmpresas.add("ARTESIAN RESOURCES");
-		// listaEmpresas.add("ASHLAND GLOBAL HOLDINGS INC");
-		// listaEmpresas.add("ASHMORE GROUP PLC");
-		// listaEmpresas.add("ASHTEAD GROUP PLC");
-		// listaEmpresas.add("ASML HOLDING NV");
-		// listaEmpresas.add("ASSICURAZIONI GENERALI SPA");
-		// listaEmpresas.add("ASSOCIATED BRITISH FOODS PLC");
-		// listaEmpresas.add("ASSURANT INC");
-		// listaEmpresas.add("ASTRAZENECA PLC");
-		// listaEmpresas.add("AT&T INC");
-		// listaEmpresas.add("ATCO LTD");
-		// listaEmpresas.add("ATLANTIA SPA");
-		// listaEmpresas.add("ATLAS COPCO");
-		// listaEmpresas.add("ATMOS ENERGY");
-		// listaEmpresas.add("ATOS SE");
-		// listaEmpresas.add("ATRESMEDIA");
-		// listaEmpresas.add("ATRION CORP");
-		// listaEmpresas.add("ATRIUM EUROPEAN REAL ESTATES ");
-		// listaEmpresas.add("ATRIUM MORTGAGE INVESTMENT CORP");
-		// listaEmpresas.add("AUBURN NATIONAL BANCORP");
-		// listaEmpresas.add("AUTOMATIC DATA PROC");
-		// listaEmpresas.add("AUTOMATIC DATA PROCESSING INC");
-		// listaEmpresas.add("AVISTA CORP");
-		// listaEmpresas.add("AVIVA");
-		// listaEmpresas.add("AXA");
-		// listaEmpresas.add("AXA SA");
-		// listaEmpresas.add("AXEL SPRINGER SE");
-		// listaEmpresas.add("AXIS CAPITAL HOLDINGS LTD");
-		// listaEmpresas.add("B&G FOODS");
-		// listaEmpresas.add("BADGER METER INC");
-		// listaEmpresas.add("BAE SYSTEMS PLC");
-		// listaEmpresas.add("BAKKAFROST");
-		// listaEmpresas.add("BALCHEM INC");
-		// listaEmpresas.add("BALL CORP");
-		// listaEmpresas.add("BALOISE HOLDING AG");
-		// listaEmpresas.add("BANCFIRST CORP");
-		// listaEmpresas.add("BANCFIRST CORP OK");
-		// listaEmpresas.add("BANCO SABADELL");
-		// listaEmpresas.add("BANCO SANTANDER");
-		// listaEmpresas.add("BANK OF AMERICA");
-		// listaEmpresas.add("BANK OF MARIN BANCORP");
-		// listaEmpresas.add("BANK OF MONTREAL");
-		// listaEmpresas.add("BANK OF NOVA SCOTIA");
-		// listaEmpresas.add("BANK OF UTICA");
-		// listaEmpresas.add("BANK OZK");
-		// listaEmpresas.add("BANKERS INVESTMENT TRUST PLC");
-		// listaEmpresas.add("BANKIA");
-		// listaEmpresas.add("BANKINTER");
-		// listaEmpresas.add("BAR HARBOR BANKSHARES");
-		// listaEmpresas.add("BARRICK GOLD");
-		// listaEmpresas.add("BARÓN DE LEY");
-		// listaEmpresas.add("BASF");
-		// listaEmpresas.add("BASF SE");
-		// listaEmpresas.add("BAYER AG");
-		// listaEmpresas.add("BAYER AKTIENGESELLSCHAFT");
-		// listaEmpresas.add("BBVA");
-		// listaEmpresas.add("BCE INC");
-		// listaEmpresas.add("BEAZLEY PLC");
-		// listaEmpresas.add("BECTON DICKINSON & CO");
-		// listaEmpresas.add("BEIERSDORF AG");
-		// listaEmpresas.add("BELLWAY PLC");
-		// listaEmpresas.add("BEMIS CO");
-		// listaEmpresas.add("BEMIS CO INC");
-		// listaEmpresas.add("BEST BUY CORP");
-		// listaEmpresas.add("BHP BILLITON");
-		// listaEmpresas.add("BIC");
-		// listaEmpresas.add("BIOMERIEUX SA");
-		// listaEmpresas.add("BIOSEARCH");
-		// listaEmpresas.add("BLACK HILLS CORP");
-		// listaEmpresas.add("BLACK ROCK INC");
-		// listaEmpresas.add("BLACKROCK INC");
-		// listaEmpresas.add("BLOOMSBURY PUBLISHING PLC");
-		// listaEmpresas.add("BME");
-		// listaEmpresas.add("BMW");
-		// listaEmpresas.add("BNP PARIBAS SA");
-		// listaEmpresas.add("BODEGAS RIOJANAS");
-		// listaEmpresas.add("BOEING");
-		// listaEmpresas.add("BOK FINANCIAL CORP");
-		// listaEmpresas.add("BORGWARNER");
-		// listaEmpresas.add("BOUYGUES SA");
-		// listaEmpresas.add("BOVIS HOMES GROUP PLC");
-		// listaEmpresas.add("BOYD GROUP INCOME FUND");
-		// listaEmpresas.add("BP PLC");
-		// listaEmpresas.add("BRADY CORP");
-		// listaEmpresas.add("BREMBO");
-		// listaEmpresas.add("BRENNTAG AG");
-		// listaEmpresas.add("BRIDGEMARQ REAL ESTATE SERVICES INC");
-		// listaEmpresas.add("BRINKER INTERNATIONAL");
-		// listaEmpresas.add("BRISTOL MYERS");
-		// listaEmpresas.add("BRISTOL MYERS SQUIBB CO");
-		// listaEmpresas.add("BRITISH AMERICAN TOBACCO PLC");
-		// listaEmpresas.add("BRITISH AMERICAN TOBACCO PLC ADS COMMON STOCK");
-		// listaEmpresas.add("BRITISH LAND CO PLC");
-		// listaEmpresas.add("BRITVIC PLC");
-		// listaEmpresas.add("BROADCOM INC");
-		// listaEmpresas.add("BROADRIDGE FINANCIAL SOLUTIONS INC");
-		// listaEmpresas.add("BROOKFIELD ASSET MANAGEMENT INC");
-		// listaEmpresas.add("BROOKFIELD INFRAESTRUCTURE PARTNERS");
-		// listaEmpresas.add("BROOKFIELD INFRASTRUCTURE PARTNERS LP");
-		// listaEmpresas.add("BROOKFIELD PROPERTY PARTNERS LP");
-		// listaEmpresas.add("BROOKFIELD RENEWABLE ENERGY PARTNERS LP");
-		// listaEmpresas.add("BROOKFIELD RENEWABLE PARTNERS LP");
-		// listaEmpresas.add("BROOKS MACDONALD PLC");
-		// listaEmpresas.add("BROWN & BROWN INC");
-		// listaEmpresas.add("BROWN FORMAN CLASS B");
-		// listaEmpresas.add("BROWN FORMAN CORP");
-		// listaEmpresas.add("BROWN FORMAN INC CLASS B");
-		// listaEmpresas.add("BRUNNER INVESTMENT TRUST PLC");
-		// listaEmpresas.add("BRUNSWICK CORP");
-		// listaEmpresas.add("BT GROUP PLC");
-		// listaEmpresas.add("BUCKEYE");
-		// listaEmpresas.add("BUNGE LTD");
-		// listaEmpresas.add("BUNZL PLC");
-		// listaEmpresas.add("BURBERRY");
-		// listaEmpresas.add("BUREAU VERITAS SA");
-		// listaEmpresas.add("CAE INC");
-		// listaEmpresas.add("CAESARSTONE");
-		// listaEmpresas.add("CAF");
-		// listaEmpresas.add("CAIXABANK");
-		// listaEmpresas.add("CAL MAINE FOODS");
-		// listaEmpresas.add("CALEDONIA INVESTMENTS PLC");
-		// listaEmpresas.add("CALIFORNIA WATER SERVICE");
-		// listaEmpresas.add("CALIFORNIA WATER SERVICE GROUP");
-		// listaEmpresas.add("CALVIN B TAYLOR BANKSHARES INC");
-		// listaEmpresas.add("CAMBRIDGE BANCORP");
-		// listaEmpresas.add("CAMPARI");
-		// listaEmpresas.add("CANADIAN APARTMENT PROPERTIES REAL ESTATE INVESTMENT TRUST");
-		// listaEmpresas.add("CANADIAN GENERAL INVESTMENTS LTD");
-		// listaEmpresas.add("CANADIAN IMPERIAL BANK OF COMMERCE");
-		// listaEmpresas.add("CANADIAN NATIONAL RAILWAY");
-		// listaEmpresas.add("CANADIAN NATIONAL RAILWAY CO");
-		// listaEmpresas.add("CANADIAN NATURAL RESOURCES");
-		// listaEmpresas.add("CANADIAN TIRE CORP LTD A NVTG");
-		// listaEmpresas.add("CANADIAN UTILITIES");
-		// listaEmpresas.add("CANADIAN WESTERN BANK");
-		// listaEmpresas.add("CANTEL MEDICAL CORP");
-		// listaEmpresas.add("CAPGEMINI SE");
-		// listaEmpresas.add("CAPITAL POWER CORP");
-		// listaEmpresas.add("CARDINAL HEALTH INC");
-		// listaEmpresas.add("CARETECH HOLDINGS PLC");
-		// listaEmpresas.add("CARLISLE COMPANIES");
-		// listaEmpresas.add("CARLSBERG A/S CLASS B");
-		// listaEmpresas.add("CARNIVAL");
-		// listaEmpresas.add("CASEY'S GENERAL STORES INC");
-		// listaEmpresas.add("CASINO GUICHARD PERRACHON SA");
-		// listaEmpresas.add("CASS INFORMATION SYSTEMS INC");
-		// listaEmpresas.add("CATALANA OCCIDENTE");
-		// listaEmpresas.add("CATERPILLAR INC");
-		// listaEmpresas.add("CBOE HOLDINGS INC");
-		// listaEmpresas.add("CCFNB BANCORP INC");
-		// listaEmpresas.add("CCL INDUSTRIES INC");
-		// listaEmpresas.add("CELANESE CORP");
-		// listaEmpresas.add("CELLNEX");
-		// listaEmpresas.add("CENTERPOINT ENERGY");
-		// listaEmpresas.add("CENTERPOINT ENERGY INC");
-		// listaEmpresas.add("CENTRICA");
-		// listaEmpresas.add("CF INDUSTRIES");
-		// listaEmpresas.add("CH ROBINSON WORLDWIDE");
-		// listaEmpresas.add("CHEMED CORP");
-		// listaEmpresas.add("CHESAPEAKE FINANCIAL SHARES");
-		// listaEmpresas.add("CHESAPEAKE UTILITIES");
-		// listaEmpresas.add("CHESNARA PLC");
-		// listaEmpresas.add("CHEVRON CORP");
-		// listaEmpresas.add("CHICO'S FAS INC");
-		// listaEmpresas.add("CHIPOTLE");
-		// listaEmpresas.add("CHOCOLADEFABRIKEN LINDT & SPRUENGLI AG PARTICIPATION");
-		// listaEmpresas.add("CHUBB LTD");
-		// listaEmpresas.add("CHURCH & DWIGHT");
-		// listaEmpresas.add("CHURCH & DWIGHT CO INC");
-		// listaEmpresas.add("CIE AUTOMOTIVE");
-		// listaEmpresas.add("CINCINNATI FINANCIAL");
-		// listaEmpresas.add("CINCINNATI FINANCIAL CORP");
-		// listaEmpresas.add("CINEPLEX INC");
-		// listaEmpresas.add("CINTAS CORP");
-		// listaEmpresas.add("CISCO SYSTEMS");
-		// listaEmpresas.add("CISCO SYSTEMS INC");
-		// listaEmpresas.add("CITIZENS FINANCIAL SERVICES");
-		// listaEmpresas.add("CITY OF LONDON INVESTMENT TRUST PLC");
-		// listaEmpresas.add("CLOROX CO");
-		// listaEmpresas.add("CLOSE BROTHERS GROUP PLC");
-		// listaEmpresas.add("CLÍNICA BAVIERA");
-		// listaEmpresas.add("CMS ENERGY CORP");
-		// listaEmpresas.add("CNP ASSURANCES SA");
-		// listaEmpresas.add("COCA COLA");
-		// listaEmpresas.add("COCA COLA CO");
-		// listaEmpresas.add("COEMAC");
-		// listaEmpresas.add("COGECO COMMUNICATIONS INC");
-		// listaEmpresas.add("COGECO INC");
-		// listaEmpresas.add("COHEN & STEERS INC");
-		// listaEmpresas.add("COLGATE PALMOLIVE CO");
-		// listaEmpresas.add("COLONIAL");
-		// listaEmpresas.add("COLOPLAST A/S");
-		// listaEmpresas.add("COLUMBIA SPORTSWEAR CO");
-		// listaEmpresas.add("COMCAST CORP");
-		// listaEmpresas.add("COMERICA INC");
-		// listaEmpresas.add("COMMERCE BANCSHARES");
-		// listaEmpresas.add("COMMERCE BANCSHARES INC");
-		// listaEmpresas.add("COMMUNITY BANK SYSTEM");
-		// listaEmpresas.add("COMMUNITY TRUST BANC");
-		// listaEmpresas.add("COMPAGNIE FINANCIERE RICHEMONT");
+		listaEmpresas.add("1ST SOURCE CORP");
+		listaEmpresas.add("3I GROUP PLC");
+		listaEmpresas.add("3I INFRASTRUCTURE PLC");
+		listaEmpresas.add("3M CO");
+		listaEmpresas.add("4IMPRINT PLC");
+		listaEmpresas.add("AALBERTS INDUSTRIES NV");
+		listaEmpresas.add("AARON'S INC");
+		listaEmpresas.add("ABBOTT LABORATORIES");
+		listaEmpresas.add("ABBVIE INC");
+		listaEmpresas.add("ABCAM PLC");
+		listaEmpresas.add("ABERDEEN ASSET MANAGEMENT");
+		listaEmpresas.add("ABERDEEN NEW DAWN INVESTMENT TRUST PLC");
+		listaEmpresas.add("ABM INDUSTRIES INC");
+		listaEmpresas.add("ACCENTURE");
+		listaEmpresas.add("ACCENTURE PLC");
+		listaEmpresas.add("ACCIONA");
+		listaEmpresas.add("ACCOR SA");
+		listaEmpresas.add("ACERINOX");
+		listaEmpresas.add("ACKERMANS & VAN HAAREN NV");
+		listaEmpresas.add("ACME UNITED CORP");
+		listaEmpresas.add("ACS");
+		listaEmpresas.add("ACTIVISION BLIZZARD INC");
+		listaEmpresas.add("ADIDAS");
+		listaEmpresas.add("ADIDAS AG");
+		listaEmpresas.add("ADOLFO DOMINGUEZ");
+		listaEmpresas.add("AEGON");
+		listaEmpresas.add("AEGON NV");
+		listaEmpresas.add("AENA");
+		listaEmpresas.add("AFLAC INC");
+		listaEmpresas.add("AG BARR PLC");
+		listaEmpresas.add("AGEAS NV");
+		listaEmpresas.add("AHOLD");
+		listaEmpresas.add("AHOLD NV");
+		listaEmpresas.add("AIR LIQUIDE SA");
+		listaEmpresas.add("AIR PRODUCTS & CHEM");
+		listaEmpresas.add("AIR PRODUCTS & CHEMICALS INC");
+		listaEmpresas.add("AIRBUS");
+		listaEmpresas.add("AIRBUS SE");
+		listaEmpresas.add("AKZO NOBEL NV");
+		listaEmpresas.add("ALBA");
+		listaEmpresas.add("ALBEMARLE CORP");
+		listaEmpresas.add("ALFA LAVAL");
+		listaEmpresas.add("ALGONQUIN POWER & UTILITIES CORP");
+		listaEmpresas.add("ALIMENTATION COUCHE TARD INC");
+		listaEmpresas.add("ALLIANCE TRUST PLC");
+		listaEmpresas.add("ALLIANT ENERGY CORP");
+		listaEmpresas.add("ALLIANZ");
+		listaEmpresas.add("ALLIANZ SE");
+		listaEmpresas.add("ALLIED PROPERTIES REAL ESTATE INVESTMENT TRUST");
+		listaEmpresas.add("ALMIRALL");
+		listaEmpresas.add("ALTRIA GROUP INC");
+		listaEmpresas.add("AMADEUS");
+		listaEmpresas.add("AMADEUS IT GROUP SA");
+		listaEmpresas.add("AMCOR");
+		listaEmpresas.add("AMERICAN EQUITY INVESTMENT LIFE HOLDING CO");
+		listaEmpresas.add("AMERICAN EXPRESS");
+		listaEmpresas.add("AMERICAN EXPRESS CO");
+		listaEmpresas.add("AMERICAN FINANCIAL GROUP INC");
+		listaEmpresas.add("AMERICAN STATES WATER");
+		listaEmpresas.add("AMERICAN STATES WATER CO");
+		listaEmpresas.add("AMERICAN TOWER");
+		listaEmpresas.add("AMERICAN WATER WORKS");
+		listaEmpresas.add("AMERIPRISE FINANCIAL");
+		listaEmpresas.add("AMERIPRISE FINANCIAL INC");
+		listaEmpresas.add("AMERISOURCEBERGEN CORP");
+		listaEmpresas.add("AMGEN INC");
+		listaEmpresas.add("AMPER");
+		listaEmpresas.add("ANALOG DEVICES INC");
+		listaEmpresas.add("ANDERSONS INC");
+		listaEmpresas.add("ANDREW PELLER LTD");
+		listaEmpresas.add("ANHEUSER BUSCH INBEV");
+		listaEmpresas.add("ANPARIO PLC");
+		listaEmpresas.add("AO SMITH CORP");
+		listaEmpresas.add("APPLE INC");
+		listaEmpresas.add("APPLIED INDUSTRIAL TECHNOLOGIES INC");
+		listaEmpresas.add("APPLIED MATERIALS");
+		listaEmpresas.add("APTARGROUP INC");
+		listaEmpresas.add("AQUA AMERICA INC");
+		listaEmpresas.add("ARCELORMITTAL");
+		listaEmpresas.add("ARCHER DANIELS MIDLAND");
+		listaEmpresas.add("ARCHER DANIELS MIDLAND CO");
+		listaEmpresas.add("ARKEMA SA");
+		listaEmpresas.add("ARMANINO FOODS OF DISTINCTION INC");
+		listaEmpresas.add("ARROW FINANCIAL CORP");
+		listaEmpresas.add("ARTESIAN RESOURCES");
+		listaEmpresas.add("ASHLAND GLOBAL HOLDINGS INC");
+		listaEmpresas.add("ASHMORE GROUP PLC");
+		listaEmpresas.add("ASHTEAD GROUP PLC");
+		listaEmpresas.add("ASML HOLDING NV");
+		listaEmpresas.add("ASSICURAZIONI GENERALI SPA");
+		listaEmpresas.add("ASSOCIATED BRITISH FOODS PLC");
+		listaEmpresas.add("ASSURANT INC");
+		listaEmpresas.add("ASTRAZENECA PLC");
+		listaEmpresas.add("AT&T INC");
+		listaEmpresas.add("ATCO LTD");
+		listaEmpresas.add("ATLANTIA SPA");
+		listaEmpresas.add("ATLAS COPCO");
+		listaEmpresas.add("ATMOS ENERGY");
+		listaEmpresas.add("ATOS SE");
+		listaEmpresas.add("ATRESMEDIA");
+		listaEmpresas.add("ATRION CORP");
+		listaEmpresas.add("ATRIUM EUROPEAN REAL ESTATES ");
+		listaEmpresas.add("ATRIUM MORTGAGE INVESTMENT CORP");
+		listaEmpresas.add("AUBURN NATIONAL BANCORP");
+		listaEmpresas.add("AUTOMATIC DATA PROC");
+		listaEmpresas.add("AUTOMATIC DATA PROCESSING INC");
+		listaEmpresas.add("AVISTA CORP");
+		listaEmpresas.add("AVIVA");
+		listaEmpresas.add("AXA");
+		listaEmpresas.add("AXA SA");
+		listaEmpresas.add("AXEL SPRINGER SE");
+		listaEmpresas.add("AXIS CAPITAL HOLDINGS LTD");
+		listaEmpresas.add("B&G FOODS");
+		listaEmpresas.add("BADGER METER INC");
+		listaEmpresas.add("BAE SYSTEMS PLC");
+		listaEmpresas.add("BAKKAFROST");
+		listaEmpresas.add("BALCHEM INC");
+		listaEmpresas.add("BALL CORP");
+		listaEmpresas.add("BALOISE HOLDING AG");
+		listaEmpresas.add("BANCFIRST CORP");
+		listaEmpresas.add("BANCFIRST CORP OK");
+		listaEmpresas.add("BANCO SABADELL");
+		listaEmpresas.add("BANCO SANTANDER");
+		listaEmpresas.add("BANK OF AMERICA");
+		listaEmpresas.add("BANK OF MARIN BANCORP");
+		listaEmpresas.add("BANK OF MONTREAL");
+		listaEmpresas.add("BANK OF NOVA SCOTIA");
+		listaEmpresas.add("BANK OF UTICA");
+		listaEmpresas.add("BANK OZK");
+		listaEmpresas.add("BANKERS INVESTMENT TRUST PLC");
+		listaEmpresas.add("BANKIA");
+		listaEmpresas.add("BANKINTER");
+		listaEmpresas.add("BAR HARBOR BANKSHARES");
+		listaEmpresas.add("BARRICK GOLD");
+		listaEmpresas.add("BARÓN DE LEY");
+		listaEmpresas.add("BASF");
+		listaEmpresas.add("BASF SE");
+		listaEmpresas.add("BAYER AG");
+		listaEmpresas.add("BAYER AKTIENGESELLSCHAFT");
+		listaEmpresas.add("BBVA");
+		listaEmpresas.add("BCE INC");
+		listaEmpresas.add("BEAZLEY PLC");
+		listaEmpresas.add("BECTON DICKINSON & CO");
+		listaEmpresas.add("BEIERSDORF AG");
+		listaEmpresas.add("BELLWAY PLC");
+		listaEmpresas.add("BEMIS CO");
+		listaEmpresas.add("BEMIS CO INC");
+		listaEmpresas.add("BEST BUY CORP");
+		listaEmpresas.add("BHP BILLITON");
+		listaEmpresas.add("BIC");
+		listaEmpresas.add("BIOMERIEUX SA");
+		listaEmpresas.add("BIOSEARCH");
+		listaEmpresas.add("BLACK HILLS CORP");
+		listaEmpresas.add("BLACK ROCK INC");
+		listaEmpresas.add("BLACKROCK INC");
+		listaEmpresas.add("BLOOMSBURY PUBLISHING PLC");
+		listaEmpresas.add("BME");
+		listaEmpresas.add("BMW");
+		listaEmpresas.add("BNP PARIBAS SA");
+		listaEmpresas.add("BODEGAS RIOJANAS");
+		listaEmpresas.add("BOEING");
+		listaEmpresas.add("BOK FINANCIAL CORP");
+		listaEmpresas.add("BORGWARNER");
+		listaEmpresas.add("BOUYGUES SA");
+		listaEmpresas.add("BOVIS HOMES GROUP PLC");
+		listaEmpresas.add("BOYD GROUP INCOME FUND");
+		listaEmpresas.add("BP PLC");
+		listaEmpresas.add("BRADY CORP");
+		listaEmpresas.add("BREMBO");
+		listaEmpresas.add("BRENNTAG AG");
+		listaEmpresas.add("BRIDGEMARQ REAL ESTATE SERVICES INC");
+		listaEmpresas.add("BRINKER INTERNATIONAL");
+		listaEmpresas.add("BRISTOL MYERS");
+		listaEmpresas.add("BRISTOL MYERS SQUIBB CO");
+		listaEmpresas.add("BRITISH AMERICAN TOBACCO PLC");
+		listaEmpresas.add("BRITISH AMERICAN TOBACCO PLC ADS COMMON STOCK");
+		listaEmpresas.add("BRITISH LAND CO PLC");
+		listaEmpresas.add("BRITVIC PLC");
+		listaEmpresas.add("BROADCOM INC");
+		listaEmpresas.add("BROADRIDGE FINANCIAL SOLUTIONS INC");
+		listaEmpresas.add("BROOKFIELD ASSET MANAGEMENT INC");
+		listaEmpresas.add("BROOKFIELD INFRAESTRUCTURE PARTNERS");
+		listaEmpresas.add("BROOKFIELD INFRASTRUCTURE PARTNERS LP");
+		listaEmpresas.add("BROOKFIELD PROPERTY PARTNERS LP");
+		listaEmpresas.add("BROOKFIELD RENEWABLE ENERGY PARTNERS LP");
+		listaEmpresas.add("BROOKFIELD RENEWABLE PARTNERS LP");
+		listaEmpresas.add("BROOKS MACDONALD PLC");
+		listaEmpresas.add("BROWN & BROWN INC");
+		listaEmpresas.add("BROWN FORMAN CLASS B");
+		listaEmpresas.add("BROWN FORMAN CORP");
+		listaEmpresas.add("BROWN FORMAN INC CLASS B");
+		listaEmpresas.add("BRUNNER INVESTMENT TRUST PLC");
+		listaEmpresas.add("BRUNSWICK CORP");
+		listaEmpresas.add("BT GROUP PLC");
+		listaEmpresas.add("BUCKEYE");
+		listaEmpresas.add("BUNGE LTD");
+		listaEmpresas.add("BUNZL PLC");
+		listaEmpresas.add("BURBERRY");
+		listaEmpresas.add("BUREAU VERITAS SA");
+		listaEmpresas.add("CAE INC");
+		listaEmpresas.add("CAESARSTONE");
+		listaEmpresas.add("CAF");
+		listaEmpresas.add("CAIXABANK");
+		listaEmpresas.add("CAL MAINE FOODS");
+		listaEmpresas.add("CALEDONIA INVESTMENTS PLC");
+		listaEmpresas.add("CALIFORNIA WATER SERVICE");
+		listaEmpresas.add("CALIFORNIA WATER SERVICE GROUP");
+		listaEmpresas.add("CALVIN B TAYLOR BANKSHARES INC");
+		listaEmpresas.add("CAMBRIDGE BANCORP");
+		listaEmpresas.add("CAMPARI");
+		listaEmpresas.add("CANADIAN APARTMENT PROPERTIES REAL ESTATE INVESTMENT TRUST");
+		listaEmpresas.add("CANADIAN GENERAL INVESTMENTS LTD");
+		listaEmpresas.add("CANADIAN IMPERIAL BANK OF COMMERCE");
+		listaEmpresas.add("CANADIAN NATIONAL RAILWAY");
+		listaEmpresas.add("CANADIAN NATIONAL RAILWAY CO");
+		listaEmpresas.add("CANADIAN NATURAL RESOURCES");
+		listaEmpresas.add("CANADIAN TIRE CORP LTD A NVTG");
+		listaEmpresas.add("CANADIAN UTILITIES");
+		listaEmpresas.add("CANADIAN WESTERN BANK");
+		listaEmpresas.add("CANTEL MEDICAL CORP");
+		listaEmpresas.add("CAPGEMINI SE");
+		listaEmpresas.add("CAPITAL POWER CORP");
+		listaEmpresas.add("CARDINAL HEALTH INC");
+		listaEmpresas.add("CARETECH HOLDINGS PLC");
+		listaEmpresas.add("CARLISLE COMPANIES");
+		listaEmpresas.add("CARLSBERG A/S CLASS B");
+		listaEmpresas.add("CARNIVAL");
+		listaEmpresas.add("CASEY'S GENERAL STORES INC");
+		listaEmpresas.add("CASINO GUICHARD PERRACHON SA");
+		listaEmpresas.add("CASS INFORMATION SYSTEMS INC");
+		listaEmpresas.add("CATALANA OCCIDENTE");
+		listaEmpresas.add("CATERPILLAR INC");
+		listaEmpresas.add("CBOE HOLDINGS INC");
+		listaEmpresas.add("CCFNB BANCORP INC");
+		listaEmpresas.add("CCL INDUSTRIES INC");
+		listaEmpresas.add("CELANESE CORP");
+		listaEmpresas.add("CELLNEX");
+		listaEmpresas.add("CENTERPOINT ENERGY");
+		listaEmpresas.add("CENTERPOINT ENERGY INC");
+		listaEmpresas.add("CENTRICA");
+		listaEmpresas.add("CF INDUSTRIES");
+		listaEmpresas.add("CH ROBINSON WORLDWIDE");
+		listaEmpresas.add("CHEMED CORP");
+		listaEmpresas.add("CHESAPEAKE FINANCIAL SHARES");
+		listaEmpresas.add("CHESAPEAKE UTILITIES");
+		listaEmpresas.add("CHESNARA PLC");
+		listaEmpresas.add("CHEVRON CORP");
+		listaEmpresas.add("CHICO'S FAS INC");
+		listaEmpresas.add("CHIPOTLE");
+		listaEmpresas.add("CHOCOLADEFABRIKEN LINDT & SPRUENGLI AG PARTICIPATION");
+		listaEmpresas.add("CHUBB LTD");
+		listaEmpresas.add("CHURCH & DWIGHT");
+		listaEmpresas.add("CHURCH & DWIGHT CO INC");
+		listaEmpresas.add("CIE AUTOMOTIVE");
+		listaEmpresas.add("CINCINNATI FINANCIAL");
+		listaEmpresas.add("CINCINNATI FINANCIAL CORP");
+		listaEmpresas.add("CINEPLEX INC");
+		listaEmpresas.add("CINTAS CORP");
+		listaEmpresas.add("CISCO SYSTEMS");
+		listaEmpresas.add("CISCO SYSTEMS INC");
+		listaEmpresas.add("CITIZENS FINANCIAL SERVICES");
+		listaEmpresas.add("CITY OF LONDON INVESTMENT TRUST PLC");
+		listaEmpresas.add("CLOROX CO");
+		listaEmpresas.add("CLOSE BROTHERS GROUP PLC");
+		listaEmpresas.add("CLÍNICA BAVIERA");
+		listaEmpresas.add("CMS ENERGY CORP");
+		listaEmpresas.add("CNP ASSURANCES SA");
+		listaEmpresas.add("COCA COLA");
+		listaEmpresas.add("COCA COLA CO");
+		listaEmpresas.add("COEMAC");
+		listaEmpresas.add("COGECO COMMUNICATIONS INC");
+		listaEmpresas.add("COGECO INC");
+		listaEmpresas.add("COHEN & STEERS INC");
+		listaEmpresas.add("COLGATE PALMOLIVE CO");
+		listaEmpresas.add("COLONIAL");
+		listaEmpresas.add("COLOPLAST A/S");
+		listaEmpresas.add("COLUMBIA SPORTSWEAR CO");
+		listaEmpresas.add("COMCAST CORP");
+		listaEmpresas.add("COMERICA INC");
+		listaEmpresas.add("COMMERCE BANCSHARES");
+		listaEmpresas.add("COMMERCE BANCSHARES INC");
+		listaEmpresas.add("COMMUNITY BANK SYSTEM");
+		listaEmpresas.add("COMMUNITY TRUST BANC");
+		listaEmpresas.add("COMPAGNIE FINANCIERE RICHEMONT");
 		listaEmpresas.add("COMPAGNIE FINANCIERE RICHEMONT SA");
 		listaEmpresas.add("COMPAGNIE GENERALE DES ETABLISSEMENTS MICHELIN");
 		listaEmpresas.add("COMPAGNIE PLASTIC OMNIUM SA");
@@ -1223,7 +1215,7 @@ public class DCWebUrlFromNombreEmpresa
 	/**
 	 * 
 	 */
-	private final static String URL_INICIAL = "https://www.google.es/search?q=";
+	private final static String URL_INICIAL = "https://es.investing.com";
 
 	/**
 	 * @param args
@@ -1249,124 +1241,140 @@ public class DCWebUrlFromNombreEmpresa
 	 */
 	private static void run() throws Exception
 	{
+		LOGGER.info("Suprimiendo ficheros temporales antiguos");
+		FileUtils.cleanDirectory(new File(DOWNLOAD_PATH));
+
 		LOGGER.info("Iniciando driver");
-		WebDriver driver = WebDriverBase.getFirefoxWebDriver();
-		// WebDriver driver = WebDriverBase.getChromeWebDriver();
+		WebDriver driver = WebDriverBase.getChromeWebDriver();
+
 		LOGGER.info("Iniciando proceso");
-		for (String[] proveedorDatos : LISTA_PROVEEDORES_DATOS)
+		for (URLGroup empresasGroup : LISTA_EMPRESAS_GROUP)
 		{
-			for (URLGroup empresasGroup : LISTA_EMPRESAS_GROUP)
+			String downloadFolder = empresasGroup.getDownloadFolder();
+			LOGGER.info("Procesando grupo [" + downloadFolder + "]");
+
+			LOGGER.info("Cargando URL inicial");
+			driver.get(URL_INICIAL);
+			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.className("disclaimer")));
+
+			List<String> listaEmpresas = empresasGroup.getListaURL();
+			int empresaIdx = 0;
+			int errorRetry = 0;
+			while (empresaIdx < listaEmpresas.size())
 			{
-				String downloadFolder = empresasGroup.getDownloadFolder();
-				LOGGER.info("Procesando grupo [" + downloadFolder + "]");
-				List<String> listaEmpresas = empresasGroup.getListaURL();
-				int empresaIdx = 0;
-				int errorRetry = 0;
-				while (empresaIdx < listaEmpresas.size())
+				String nombreEmpresa = null;
+				try
 				{
-					String nombreEmpresa = null;
+					nombreEmpresa = listaEmpresas.get(empresaIdx);
+
+					LOGGER.info("Buscando empresa [" + nombreEmpresa + "]");
+					if (errorRetry > 0)
+					{
+						LOGGER.info("Reintento [" + errorRetry + "]");
+					}
+					new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.className("searchText")));
+					WebElement textBoxBusqueda = driver.findElement(By.className("searchText"));
+					textBoxBusqueda.clear();
+					textBoxBusqueda.sendKeys(nombreEmpresa);
+
+					LOGGER.info("Esperamos 100 milisegundos");
+					Thread.sleep(100);
+					WebDriverBase.clickElementByClassName(driver, driver, "js-magnifying-glass-icon");
+					new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("js-inner-all-results-quotes-wrapper")));
+					WebElement tablaResultados = driver.findElement(By.className("js-inner-all-results-quotes-wrapper"));
+					List<WebElement> listaResultados = tablaResultados.findElements(By.tagName("a"));
+					String resultFlag = null;
+					String resultTicker = null;
+					String resultNombreEmpresa = null;
+					String resultDescripcion = null;
+					for (WebElement resultado : listaResultados)
+					{
+						if (resultado.getAttribute("innerHTML").indexOf("Acción") != -1)
+						{
+							resultFlag = resultado.findElements(By.tagName("span")).get(0).getAttribute("innerHTML");
+							resultTicker = resultado.findElements(By.tagName("span")).get(1).getAttribute("innerHTML");
+							resultNombreEmpresa = resultado.findElements(By.tagName("span")).get(2).getAttribute("innerHTML");
+							resultDescripcion = resultado.findElements(By.tagName("span")).get(3).getAttribute("innerHTML");
+							WebDriverBase.clickElement(driver, resultado);
+							break;
+						}
+					}
+
+					LOGGER.info("Recuperando URL");
+					new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.linkText("Gráfico")));
+					String hrefElemento = driver.getCurrentUrl();
+					if (hrefElemento.equalsIgnoreCase(URL_INICIAL))
+					{
+						throw new Exception("URL inadecuada");
+					}
+
+					LOGGER.info("Buscando Capitalización");
+					String capitalizacionStr01 = null;
+					String capitalizacionStr02 = null;
 					try
 					{
-						nombreEmpresa = listaEmpresas.get(empresaIdx);
-						LOGGER.info("Buscando empresa [" + nombreEmpresa + "]");
-						if (errorRetry > 0)
+						new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("overviewDataTableWithTooltip")));
+						WebElement tablaDatos = driver.findElement(By.className("overviewDataTableWithTooltip"));
+						List<WebElement> listaInlineBlock = tablaDatos.findElements(By.className("inlineblock"));
+						for (WebElement inlineBlock : listaInlineBlock)
 						{
-							LOGGER.info("Reintento [" + errorRetry + "]");
-						}
-						// MODO INTRODUCIENDO TEXTO
-						// String busquedaURL = URL_INICIAL;
-						// LOGGER.info("Cargando URL de búsqueda [" + busquedaURL + "]");
-						// driver.get(busquedaURL);
-						// new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("input")));
-						// List<WebElement> listaInputs = driver.findElements(By.tagName("input"));
-						// for (WebElement input : listaInputs)
-						// {
-						// String inputTitle = input.getAttribute("title");
-						// if (inputTitle != null && inputTitle.indexOf("Buscar") != -1)
-						// {
-						// input.click();
-						// input.clear();
-						// input.sendKeys(proveedorDatos[0] + " " + nombreEmpresa);
-						// input.sendKeys(Keys.RETURN);
-						// }
-						// }
-						// new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("a")));
-						// List<WebElement> listaLinks = driver.findElements(By.tagName("a"));
-						// String resultHrefElemento = null;
-						// for (WebElement link : listaLinks)
-						// {
-						// String linkHref = link.getAttribute("href");
-						// if (linkHref != null && linkHref.indexOf(proveedorDatos[1]) != -1)
-						// {
-						// resultHrefElemento = linkHref;
-						// break;
-						// }
-						// }
-						// if (resultHrefElemento == null)
-						// {
-						// throw new Exception("No se ha encontrado la URL");
-						// }
-						String busquedaURL = URL_INICIAL + URLEncoder.encode(proveedorDatos[0] + "+" + nombreEmpresa, "UTF-8");
-						LOGGER.info("Cargando URL de búsqueda [" + busquedaURL + "]");
-						driver.get(busquedaURL);
-						new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("a")));
-						List<WebElement> listaLinks = driver.findElements(By.tagName("a"));
-						String resultHrefElemento = null;
-						for (WebElement link : listaLinks)
-						{
-							String linkHref = link.getAttribute("href");
-							if (linkHref != null && linkHref.indexOf(proveedorDatos[1]) != -1)
+							WebElement floatLangBase1 = inlineBlock.findElement(By.className("float_lang_base_1"));
+							if (floatLangBase1.getAttribute("innerHTML") != null && floatLangBase1.getAttribute("innerHTML").equalsIgnoreCase("Cap. mercado"))
 							{
-								resultHrefElemento = linkHref;
-								break;
+								WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
+								String capitalizacionStr = floatLangBase2.getAttribute("innerHTML");
+								capitalizacionStr = capitalizacionStr.replaceAll("\\.", "");
+								capitalizacionStr01 = capitalizacionStr.substring(0, capitalizacionStr.length() - 1);
+								capitalizacionStr02 = capitalizacionStr.substring(capitalizacionStr.length() - 1, capitalizacionStr.length());
 							}
 						}
-						if (resultHrefElemento == null)
-						{
-							throw new Exception("No se ha encontrado la URL");
-						}
-						LOGGER.info(" --- URL Encontrada [" + proveedorDatos[0] + "] [" + downloadFolder + "] [" + nombreEmpresa + "] [" + resultHrefElemento + "]");
-						empresaIdx++;
-						errorRetry = 0;
-						int msEspera = getRandomMsBetween(2000, 8000);
-						LOGGER.info("Esperamos [" + String.valueOf(msEspera / 1000) + "] segundos...");
-						Thread.sleep(msEspera);
 					}
 					catch (Exception e)
 					{
-						LOGGER.error("Se ha producido un error", e);
-						errorRetry++;
-						if (errorRetry >= MAX_ERROR_RETRY)
+						LOGGER.error("Error al obtener la Capitalización", e);
+					}
+
+					LOGGER.info("Buscando Dividendo");
+					String dividendoStr = null;
+					try
+					{
+						new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("overviewDataTableWithTooltip")));
+						WebElement tablaDatos = driver.findElement(By.className("overviewDataTableWithTooltip"));
+						List<WebElement> listaInlineBlock = tablaDatos.findElements(By.className("inlineblock"));
+						for (WebElement inlineBlock : listaInlineBlock)
 						{
-							LOGGER.info(" --- URL NO Encontrada [" + proveedorDatos[0] + "] [" + downloadFolder + "] [" + nombreEmpresa + "] [-]");
-							empresaIdx++;
-							errorRetry = 0;
+							WebElement floatLangBase1 = inlineBlock.findElement(By.className("float_lang_base_1"));
+							if (floatLangBase1.getAttribute("innerHTML") != null && floatLangBase1.getAttribute("innerHTML").equalsIgnoreCase("Dividendo"))
+							{
+								WebElement floatLangBase2 = inlineBlock.findElement(By.className("float_lang_base_2"));
+								dividendoStr = floatLangBase2.getAttribute("innerHTML");
+								dividendoStr = dividendoStr.substring(dividendoStr.indexOf("(") + 1, dividendoStr.indexOf(")") - 1);
+								dividendoStr = dividendoStr.replaceAll("\\.", "");
+							}
 						}
-						LOGGER.info("Esperamos a pulsar ENTER...");
-						waitForEnter();
+					}
+					catch (Exception e)
+					{
+						LOGGER.error("Error al obtener la RPD", e);
+					}
+
+					LOGGER.info("Empresa [" + resultFlag + "] [" + resultDescripcion + "] [" + capitalizacionStr01 + "] [" + capitalizacionStr02 + "] [" + dividendoStr + "] [" + resultTicker + "] [" + resultNombreEmpresa + "] [" + hrefElemento + "]");
+					empresaIdx++;
+					errorRetry = 0;
+				}
+				catch (Exception e)
+				{
+					LOGGER.error("Se ha producido un error", e);
+					errorRetry++;
+					if (errorRetry >= MAX_ERROR_RETRY)
+					{
+						LOGGER.info("Empresa [-] [-] [-] [-] [-] [-] [" + nombreEmpresa + "] [-]");
+						empresaIdx++;
+						errorRetry = 0;
 					}
 				}
 			}
 		}
 	}
 
-	/**
-	 * @param min
-	 * @param max
-	 * @return
-	 */
-	private static int getRandomMsBetween(int minMs, int maxMs)
-	{
-		int randomInt = RANDOM.nextInt(maxMs - minMs) + minMs;
-		return randomInt;
-	}
-
-	/**
-	 * 
-	 */
-	@SuppressWarnings("resource")
-	private static void waitForEnter()
-	{
-		new Scanner(System.in).nextLine();
-	}
 }

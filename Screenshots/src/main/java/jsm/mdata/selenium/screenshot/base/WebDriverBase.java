@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jsm.mdata.selenium.common;
+package jsm.mdata.selenium.screenshot.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
