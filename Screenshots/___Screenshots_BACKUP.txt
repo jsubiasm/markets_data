@@ -2623,3 +2623,1218 @@ Pulsar ENTER para continuar...
 
 ---------------------------------------
 
+
+2019-12-04 09:02:41 INFO  DCWebUrlFromNombreEmpresa:1252 - Iniciando driver
+2019-12-04 09:02:45 INFO  DCWebUrlFromNombreEmpresa:1255 - Iniciando proceso
+2019-12-04 09:02:45 INFO  DCWebUrlFromNombreEmpresa:1261 - Procesando grupo [EMPRESAS]
+2019-12-04 09:02:45 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ILIAD SA]
+2019-12-04 09:02:45 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BILIAD+SA&nocache=1575446565051]
+2019-12-04 09:02:46 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ILIAD SA] [https://es.finance.yahoo.com/quote/ild.pa/]
+2019-12-04 09:02:46 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:02:50 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ILLINOIS TOOL WORKS]
+2019-12-04 09:02:50 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BILLINOIS+TOOL+WORKS&nocache=1575446570076]
+2019-12-04 09:02:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ILLINOIS TOOL WORKS] [https://finance.yahoo.com/quote/ITW/]
+2019-12-04 09:02:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:02:53 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ILLINOIS TOOL WORKS INC]
+2019-12-04 09:02:53 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BILLINOIS+TOOL+WORKS+INC&nocache=1575446573024]
+2019-12-04 09:02:53 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ILLINOIS TOOL WORKS INC] [https://finance.yahoo.com/quote/ITW/]
+2019-12-04 09:02:53 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:02:55 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [IMA INDUSTRIA MACCHINE AUTOMATICHE SPA]
+2019-12-04 09:02:55 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BIMA+INDUSTRIA+MACCHINE+AUTOMATICHE+SPA&nocache=1575446575700]
+2019-12-04 09:02:57 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [IMA INDUSTRIA MACCHINE AUTOMATICHE SPA] [https://es.finance.yahoo.com/quote/12M.F/]
+2019-12-04 09:02:57 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:01 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [IMERYS SA]
+2019-12-04 09:03:01 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BIMERYS+SA&nocache=1575446581331]
+2019-12-04 09:03:02 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [IMERYS SA] [https://es.finance.yahoo.com/quote/NK.PA/]
+2019-12-04 09:03:02 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:05 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [IMI PLC]
+2019-12-04 09:03:05 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BIMI+PLC&nocache=1575446585802]
+2019-12-04 09:03:06 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [IMI PLC] [https://es.finance.yahoo.com/quote/IMI.L/]
+2019-12-04 09:03:06 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:03:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [IMPERIAL BRANDS]
+2019-12-04 09:03:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BIMPERIAL+BRANDS&nocache=1575446587781]
+2019-12-04 09:03:08 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [IMPERIAL BRANDS] [https://es.finance.yahoo.com/quote/IMB.L/]
+2019-12-04 09:03:08 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:03:09 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [IMPERIAL BRANDS GROUP PLC]
+2019-12-04 09:03:09 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BIMPERIAL+BRANDS+GROUP+PLC&nocache=1575446589931]
+2019-12-04 09:03:10 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [IMPERIAL BRANDS GROUP PLC] [https://es.finance.yahoo.com/quote/IMB.L/]
+2019-12-04 09:03:10 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:14 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [IMPERIAL BRANDS PLC]
+2019-12-04 09:03:14 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BIMPERIAL+BRANDS+PLC&nocache=1575446594031]
+2019-12-04 09:03:14 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [IMPERIAL BRANDS PLC] [https://es.finance.yahoo.com/quote/IMB.L/]
+2019-12-04 09:03:14 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:03:16 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [IMPERIAL OIL]
+2019-12-04 09:03:16 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BIMPERIAL+OIL&nocache=1575446596824]
+2019-12-04 09:03:17 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [IMPERIAL OIL] [https://finance.yahoo.com/quote/IMO/]
+2019-12-04 09:03:17 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:03:19 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INCHCAPE PLC]
+2019-12-04 09:03:19 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINCHCAPE+PLC&nocache=1575446599636]
+2019-12-04 09:03:20 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INCHCAPE PLC] [https://finance.yahoo.com/quote/inch.l/]
+2019-12-04 09:03:20 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:23 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INDITEX]
+2019-12-04 09:03:23 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINDITEX&nocache=1575446603882]
+2019-12-04 09:03:24 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INDITEX] [https://es.finance.yahoo.com/quote/ITX.MC/]
+2019-12-04 09:03:24 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:28 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INDITEX SA]
+2019-12-04 09:03:28 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINDITEX+SA&nocache=1575446608204]
+2019-12-04 09:03:28 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INDITEX SA] [https://es.finance.yahoo.com/quote/ITX.MC/]
+2019-12-04 09:03:28 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:03:31 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INDRA]
+2019-12-04 09:03:31 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINDRA&nocache=1575446611405]
+2019-12-04 09:03:32 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INDRA] [https://es.finance.yahoo.com/quote/IDR.MC/chart/]
+2019-12-04 09:03:32 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:36 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INDUSTRIAL ALLIANCE]
+2019-12-04 09:03:36 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINDUSTRIAL+ALLIANCE&nocache=1575446616357]
+2019-12-04 09:03:37 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INDUSTRIAL ALLIANCE] [https://ca.finance.yahoo.com/quote/IAG.TO/]
+2019-12-04 09:03:37 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:40 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INFINEON TECHNOLOGIES AG]
+2019-12-04 09:03:40 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINFINEON+TECHNOLOGIES+AG&nocache=1575446620644]
+2019-12-04 09:03:41 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INFINEON TECHNOLOGIES AG] [https://es.finance.yahoo.com/quote/IFX.DE/]
+2019-12-04 09:03:41 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:44 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INFORMA PLC]
+2019-12-04 09:03:44 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINFORMA+PLC&nocache=1575446624639]
+2019-12-04 09:03:45 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INFORMA PLC] [https://es.finance.yahoo.com/quote/INF.L/]
+2019-12-04 09:03:45 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:48 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INGENICO GROUP SA]
+2019-12-04 09:03:48 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINGENICO+GROUP+SA&nocache=1575446628754]
+2019-12-04 09:03:49 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INGENICO GROUP SA] [https://finance.yahoo.com/quote/ing.pa/]
+2019-12-04 09:03:49 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:03:50 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INGERSOLL RAND]
+2019-12-04 09:03:51 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINGERSOLL+RAND&nocache=1575446631110]
+2019-12-04 09:03:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INGERSOLL RAND] [https://finance.yahoo.com/quote/IR/]
+2019-12-04 09:03:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:03:55 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INGREDION INC]
+2019-12-04 09:03:55 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINGREDION+INC&nocache=1575446635441]
+2019-12-04 09:03:56 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INGREDION INC] [https://finance.yahoo.com/quote/INGR/]
+2019-12-04 09:03:56 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:04:00 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INNERGEX RENEWABLE ENERGY INC]
+2019-12-04 09:04:00 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINNERGEX+RENEWABLE+ENERGY+INC&nocache=1575446640037]
+2019-12-04 09:04:00 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INNERGEX RENEWABLE ENERGY INC] [https://finance.yahoo.com/quote/INE.TO?p=INE.TO]
+2019-12-04 09:04:00 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:02 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTACT FINANCIAL ]
+2019-12-04 09:04:02 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTACT+FINANCIAL+&nocache=1575446642861]
+2019-12-04 09:04:03 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTACT FINANCIAL ] [https://finance.yahoo.com/quote/ifc.to/]
+2019-12-04 09:04:03 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:04:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTEL]
+2019-12-04 09:04:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTEL&nocache=1575446647001]
+2019-12-04 09:04:07 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTEL] [https://finance.yahoo.com/quote/INTC/]
+2019-12-04 09:04:07 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:04:09 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTEL CORP]
+2019-12-04 09:04:09 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTEL+CORP&nocache=1575446649681]
+2019-12-04 09:04:10 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTEL CORP] [https://finance.yahoo.com/quote/INTC/]
+2019-12-04 09:04:10 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:04:12 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTER PARFUMS INC]
+2019-12-04 09:04:12 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTER+PARFUMS+INC&nocache=1575446652317]
+2019-12-04 09:04:13 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTER PARFUMS INC] [https://finance.yahoo.com/quote/IPAR/]
+2019-12-04 09:04:13 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:15 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTER PIPELINE]
+2019-12-04 09:04:15 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTER+PIPELINE&nocache=1575446655673]
+2019-12-04 09:04:16 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTER PIPELINE] [https://finance.yahoo.com/quote/IPL.TO/]
+2019-12-04 09:04:16 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:19 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTERNATIONAL BANCSHARES CORP]
+2019-12-04 09:04:19 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTERNATIONAL+BANCSHARES+CORP&nocache=1575446659534]
+2019-12-04 09:04:20 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTERNATIONAL BANCSHARES CORP] [https://finance.yahoo.com/quote/IBOC/]
+2019-12-04 09:04:20 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:23 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTERNATIONAL BUSINESS MACHINES]
+2019-12-04 09:04:23 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTERNATIONAL+BUSINESS+MACHINES&nocache=1575446663391]
+2019-12-04 09:04:24 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTERNATIONAL BUSINESS MACHINES] [https://finance.yahoo.com/quote/IBM/]
+2019-12-04 09:04:24 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:04:27 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTERNATIONAL BUSINESS MACHINES CORP]
+2019-12-04 09:04:27 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTERNATIONAL+BUSINESS+MACHINES+CORP&nocache=1575446667597]
+2019-12-04 09:04:28 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTERNATIONAL BUSINESS MACHINES CORP] [https://finance.yahoo.com/quote/IBM/]
+2019-12-04 09:04:28 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:31 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTERNATIONAL FLAVORS & FRAGRANCES]
+2019-12-04 09:04:31 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTERNATIONAL+FLAVORS+%26+FRAGRANCES&nocache=1575446671482]
+2019-12-04 09:04:32 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTERNATIONAL FLAVORS & FRAGRANCES] [https://finance.yahoo.com/quote/IFF/]
+2019-12-04 09:04:32 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:04:33 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTERNATIONAL SPEEDWAY CORP]
+2019-12-04 09:04:33 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTERNATIONAL+SPEEDWAY+CORP&nocache=1575446673854]
+2019-12-04 09:04:34 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTERNATIONAL SPEEDWAY CORP] [https://finance.yahoo.com/quote/ISCA/]
+2019-12-04 09:04:34 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:37 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTERRENT REAL ESTATE INVESTMENT TRUST]
+2019-12-04 09:04:37 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTERRENT+REAL+ESTATE+INVESTMENT+TRUST&nocache=1575446677414]
+2019-12-04 09:04:38 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTERRENT REAL ESTATE INVESTMENT TRUST] [https://finance.yahoo.com/quote/iip-un.to/]
+2019-12-04 09:04:38 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:04:39 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INTERTEK GROUP PLC]
+2019-12-04 09:04:39 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINTERTEK+GROUP+PLC&nocache=1575446679255]
+2019-12-04 09:04:39 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INTERTEK GROUP PLC] [https://finance.yahoo.com/quote/ITRK.L/]
+2019-12-04 09:04:39 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:42 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INVESCO INCOME GROWTH TRUST PLC]
+2019-12-04 09:04:42 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINVESCO+INCOME+GROWTH+TRUST+PLC&nocache=1575446682128]
+2019-12-04 09:04:42 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INVESCO INCOME GROWTH TRUST PLC] [https://uk.finance.yahoo.com/quote/IVI.L/]
+2019-12-04 09:04:42 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:04:46 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INVESCO LTD]
+2019-12-04 09:04:46 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINVESCO+LTD&nocache=1575446686004]
+2019-12-04 09:04:46 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INVESCO LTD] [https://finance.yahoo.com/quote/IVZ/community/]
+2019-12-04 09:04:46 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:49 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [INVESTEC PLC]
+2019-12-04 09:04:49 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BINVESTEC+PLC&nocache=1575446689261]
+2019-12-04 09:04:50 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [INVESTEC PLC] [https://uk.finance.yahoo.com/quote/INVP.L/]
+2019-12-04 09:04:50 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:04:53 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [IPSEN SA]
+2019-12-04 09:04:53 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BIPSEN+SA&nocache=1575446693049]
+2019-12-04 09:04:53 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [IPSEN SA] [https://es.finance.yahoo.com/quote/IPN.PA/]
+2019-12-04 09:04:53 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:04:55 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ISABELLA BANK CORP]
+2019-12-04 09:04:55 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BISABELLA+BANK+CORP&nocache=1575446695921]
+2019-12-04 09:04:56 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ISABELLA BANK CORP] [https://es.finance.yahoo.com/quote/ISBA/news/]
+2019-12-04 09:04:56 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:05:00 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [J SMART & CO PLC]
+2019-12-04 09:05:00 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJ+SMART+%26+CO+PLC&nocache=1575446700788]
+2019-12-04 09:05:01 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [J SMART & CO PLC] [https://uk.finance.yahoo.com/quote/SMJ.L/]
+2019-12-04 09:05:01 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:05:04 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [J&J SNACK FOODS CORP]
+2019-12-04 09:05:04 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJ%26J+SNACK+FOODS+CORP&nocache=1575446704203]
+2019-12-04 09:05:05 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [J&J SNACK FOODS CORP] [https://finance.yahoo.com/quote/JJSF/]
+2019-12-04 09:05:05 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:05:08 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JACK HENRY & ASSOCIATES]
+2019-12-04 09:05:08 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJACK+HENRY+%26+ASSOCIATES&nocache=1575446708572]
+2019-12-04 09:05:09 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JACK HENRY & ASSOCIATES] [https://finance.yahoo.com/quote/JKHY/]
+2019-12-04 09:05:09 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:05:11 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JAMES FISHER & SONS PLC]
+2019-12-04 09:05:11 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJAMES+FISHER+%26+SONS+PLC&nocache=1575446711683]
+2019-12-04 09:05:12 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JAMES FISHER & SONS PLC] [https://finance.yahoo.com/quote/FSJ.L/]
+2019-12-04 09:05:12 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:05:15 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JB HUNT TRANSPORT SERVICES INC]
+2019-12-04 09:05:15 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJB+HUNT+TRANSPORT+SERVICES+INC&nocache=1575446715309]
+2019-12-04 09:05:16 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JB HUNT TRANSPORT SERVICES INC] [https://es.finance.yahoo.com/quote/JBHT/news/]
+2019-12-04 09:05:16 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:05:17 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JCDECAUX SA]
+2019-12-04 09:05:17 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJCDECAUX+SA&nocache=1575446717550]
+2019-12-04 09:05:18 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JCDECAUX SA] [https://es.finance.yahoo.com/quote/DEC.PA/]
+2019-12-04 09:05:18 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:05:21 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JD SPORTS FASHION PLC]
+2019-12-04 09:05:21 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJD+SPORTS+FASHION+PLC&nocache=1575446721776]
+2019-12-04 09:05:22 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JD SPORTS FASHION PLC] [https://es.finance.yahoo.com/quote/JDDSF/]
+2019-12-04 09:05:22 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:05:26 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JIANGSU EXPRESSWAY]
+2019-12-04 09:05:26 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJIANGSU+EXPRESSWAY&nocache=1575446726084]
+2019-12-04 09:05:26 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JIANGSU EXPRESSWAY] [https://finance.yahoo.com/quote/JEXYY/]
+2019-12-04 09:05:26 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:05:28 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JM SMUCKER]
+2019-12-04 09:05:28 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJM+SMUCKER&nocache=1575446728359]
+2019-12-04 09:05:29 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JM SMUCKER] [https://finance.yahoo.com/quote/SJM/]
+2019-12-04 09:05:29 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:05:33 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JM SMUCKER CO]
+2019-12-04 09:05:33 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJM+SMUCKER+CO&nocache=1575446733152]
+2019-12-04 09:05:34 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JM SMUCKER CO] [https://finance.yahoo.com/quote/SJM/]
+2019-12-04 09:05:34 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:05:35 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JOHN WILEY & SONS INC]
+2019-12-04 09:05:35 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJOHN+WILEY+%26+SONS+INC&nocache=1575446735311]
+2019-12-04 09:05:36 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JOHN WILEY & SONS INC] [https://finance.yahoo.com/quote/JW-A/]
+2019-12-04 09:05:36 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:05:38 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JOHNSON & JOHNSON]
+2019-12-04 09:05:38 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJOHNSON+%26+JOHNSON&nocache=1575446738428]
+2019-12-04 09:05:39 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JOHNSON & JOHNSON] [https://finance.yahoo.com/quote/JNJ/]
+2019-12-04 09:05:39 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:05:41 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JOHNSON CONTROLS]
+2019-12-04 09:05:41 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJOHNSON+CONTROLS&nocache=1575446741999]
+2019-12-04 09:06:13 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:06:13 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:17:03 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JOHNSON CONTROLS]
+2019-12-04 09:17:03 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:17:03 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJOHNSON+CONTROLS&nocache=1575447423911]
+2019-12-04 09:17:04 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JOHNSON CONTROLS] [https://finance.yahoo.com/quote/JCI/]
+2019-12-04 09:17:04 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:17:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JOHNSON MATTHEY PLC]
+2019-12-04 09:17:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJOHNSON+MATTHEY+PLC&nocache=1575447427024]
+2019-12-04 09:17:07 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JOHNSON MATTHEY PLC] [https://es.finance.yahoo.com/quote/JMAT.L/]
+2019-12-04 09:17:07 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:17:11 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JP MORGAN CHASE & CO]
+2019-12-04 09:17:11 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJP+MORGAN+CHASE+%26+CO&nocache=1575447431134]
+2019-12-04 09:17:12 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JP MORGAN CHASE & CO] [https://finance.yahoo.com/quote/JPM/]
+2019-12-04 09:17:12 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:17:15 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JPM CLAVERHOUSE INVESTMENT TRUST PLC]
+2019-12-04 09:17:15 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJPM+CLAVERHOUSE+INVESTMENT+TRUST+PLC&nocache=1575447435549]
+2019-12-04 09:17:16 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JPM CLAVERHOUSE INVESTMENT TRUST PLC] [https://finance.yahoo.com/quote/JCH.L/]
+2019-12-04 09:17:16 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:17:18 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JPMORGAN CHASE & CO]
+2019-12-04 09:17:18 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJPMORGAN+CHASE+%26+CO&nocache=1575447438994]
+2019-12-04 09:17:20 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JPMORGAN CHASE & CO] [https://finance.yahoo.com/quote/JPM/]
+2019-12-04 09:17:20 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:17:21 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JUDGES SCIENTIFIC PLC]
+2019-12-04 09:17:21 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJUDGES+SCIENTIFIC+PLC&nocache=1575447441876]
+2019-12-04 09:17:22 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JUDGES SCIENTIFIC PLC] [https://finance.yahoo.com/quote/jdg.l]
+2019-12-04 09:17:22 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:17:26 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [JUPITER FUND MANAGEMENT PLC]
+2019-12-04 09:17:26 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BJUPITER+FUND+MANAGEMENT+PLC&nocache=1575447446605]
+2019-12-04 09:17:27 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [JUPITER FUND MANAGEMENT PLC] [https://finance.yahoo.com/quote/jup.l/]
+2019-12-04 09:17:27 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:17:30 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KELLOGG CO]
+2019-12-04 09:17:30 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKELLOGG+CO&nocache=1575447450970]
+2019-12-04 09:17:31 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KELLOGG CO] [https://finance.yahoo.com/quote/K/]
+2019-12-04 09:17:31 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:17:33 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KERING SA]
+2019-12-04 09:17:33 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKERING+SA&nocache=1575447453357]
+2019-12-04 09:17:34 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KERING SA] [https://es.finance.yahoo.com/quote/KER.PA/]
+2019-12-04 09:17:34 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:17:35 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KERRY GROUP PLC]
+2019-12-04 09:17:35 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKERRY+GROUP+PLC&nocache=1575447455298]
+2019-12-04 09:17:36 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KERRY GROUP PLC] [https://finance.yahoo.com/quote/KYGA.L/]
+2019-12-04 09:17:36 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:17:37 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KEYERA CORP]
+2019-12-04 09:17:37 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKEYERA+CORP&nocache=1575447457815]
+2019-12-04 09:17:38 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KEYERA CORP] [https://finance.yahoo.com/quote/KEYUF/]
+2019-12-04 09:17:38 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:17:39 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KIMBERLY CLARK CORP]
+2019-12-04 09:17:39 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKIMBERLY+CLARK+CORP&nocache=1575447459914]
+2019-12-04 09:17:40 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KIMBERLY CLARK CORP] [https://finance.yahoo.com/quote/KMB/]
+2019-12-04 09:17:40 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:17:43 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KIMCO REALTY CORP]
+2019-12-04 09:17:43 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKIMCO+REALTY+CORP&nocache=1575447463651]
+2019-12-04 09:17:44 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KIMCO REALTY CORP] [https://finance.yahoo.com/quote/Kim]
+2019-12-04 09:17:44 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:17:45 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KINDER MORGAN]
+2019-12-04 09:17:45 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKINDER+MORGAN&nocache=1575447465894]
+2019-12-04 09:17:46 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KINDER MORGAN] [https://finance.yahoo.com/quote/KMI/]
+2019-12-04 09:17:46 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:17:48 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KINEPOLIS GROUP NV]
+2019-12-04 09:17:48 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKINEPOLIS+GROUP+NV&nocache=1575447468213]
+2019-12-04 09:17:48 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KINEPOLIS GROUP NV] [https://es.finance.yahoo.com/quote/KIN.BR/press-releases/]
+2019-12-04 09:17:48 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:17:51 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KINGFISHER PLC]
+2019-12-04 09:17:51 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKINGFISHER+PLC&nocache=1575447471206]
+2019-12-04 09:17:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KINGFISHER PLC] [https://es.finance.yahoo.com/quote/KGF.L/]
+2019-12-04 09:17:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:17:54 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KION GROUP AG]
+2019-12-04 09:17:54 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKION+GROUP+AG&nocache=1575447474157]
+2019-12-04 09:17:55 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KION GROUP AG] [https://finance.yahoo.com/quote/KGX.DE/]
+2019-12-04 09:17:55 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:17:57 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KLEPIERRE SA]
+2019-12-04 09:17:57 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKLEPIERRE+SA&nocache=1575447477876]
+2019-12-04 09:17:58 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KLEPIERRE SA] [https://es.finance.yahoo.com/quote/li.pa/]
+2019-12-04 09:17:58 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:18:00 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KOEBENHAVNS LUFTHAVNE A/S]
+2019-12-04 09:18:00 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKOEBENHAVNS+LUFTHAVNE+A%2FS&nocache=1575447480996]
+2019-12-04 09:18:01 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KOEBENHAVNS LUFTHAVNE A/S] [https://finance.yahoo.com/quote/kbhl.co/]
+2019-12-04 09:18:01 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:18:03 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KONE OYJ]
+2019-12-04 09:18:03 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKONE+OYJ&nocache=1575447483473]
+2019-12-04 09:18:04 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KONE OYJ] [https://finance.yahoo.com/quote/knebv.he/]
+2019-12-04 09:18:04 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:18:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KONECRANES OYJ]
+2019-12-04 09:18:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKONECRANES+OYJ&nocache=1575447487032]
+2019-12-04 09:18:07 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KONECRANES OYJ] [https://es.finance.yahoo.com/quote/K34.F/]
+2019-12-04 09:18:07 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:18:09 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KONECRANES PLC]
+2019-12-04 09:18:09 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKONECRANES+PLC&nocache=1575447489588]
+2019-12-04 09:18:10 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:18:10 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:18:10 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KONECRANES PLC]
+2019-12-04 09:18:10 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:18:10 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKONECRANES+PLC&nocache=1575447490537]
+2019-12-04 09:18:11 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:18:11 INFO  DCWebUrlFromNombreEmpresa:1341 -  --- URL NO Encontrada [es.finance.yahoo.com] [EMPRESAS] [KONECRANES PLC] [-]
+2019-12-04 09:18:11 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:24:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KONINKLIJKE DSM NV]
+2019-12-04 09:24:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKONINKLIJKE+DSM+NV&nocache=1575447847891]
+2019-12-04 09:24:08 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KONINKLIJKE DSM NV] [https://finance.yahoo.com/quote/DSM.AS/]
+2019-12-04 09:24:08 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:24:11 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KONINKLIJKE VOPAK NV]
+2019-12-04 09:24:11 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKONINKLIJKE+VOPAK+NV&nocache=1575447851231]
+2019-12-04 09:24:12 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KONINKLIJKE VOPAK NV] [https://finance.yahoo.com/quote/vpk.as/]
+2019-12-04 09:24:12 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:24:14 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KORIAN SA]
+2019-12-04 09:24:14 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKORIAN+SA&nocache=1575447854866]
+2019-12-04 09:24:15 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KORIAN SA] [https://es.finance.yahoo.com/quote/KORI.PA/]
+2019-12-04 09:24:15 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:24:19 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KRAFT HEINZ CO]
+2019-12-04 09:24:19 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKRAFT+HEINZ+CO&nocache=1575447859501]
+2019-12-04 09:24:20 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KRAFT HEINZ CO] [https://finance.yahoo.com/quote/KHC/]
+2019-12-04 09:24:20 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:24:22 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [KROGER CO]
+2019-12-04 09:24:22 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BKROGER+CO&nocache=1575447862357]
+2019-12-04 09:24:23 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [KROGER CO] [https://finance.yahoo.com/quote/KR/]
+2019-12-04 09:24:23 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:24:25 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [L BRANDS]
+2019-12-04 09:24:25 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BL+BRANDS&nocache=1575447865778]
+2019-12-04 09:24:26 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [L BRANDS] [https://finance.yahoo.com/quote/LB/]
+2019-12-04 09:24:26 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:24:28 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [L'OREAL]
+2019-12-04 09:24:28 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BL%27OREAL&nocache=1575447868851]
+2019-12-04 09:24:30 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [L'OREAL] [https://finance.yahoo.com/quote/or.pa/]
+2019-12-04 09:24:30 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:24:32 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [L'OREAL SA]
+2019-12-04 09:24:32 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BL%27OREAL+SA&nocache=1575447872148]
+2019-12-04 09:24:33 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [L'OREAL SA] [https://es.finance.yahoo.com/quote/or.pa/]
+2019-12-04 09:24:33 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:24:35 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [L3HARRIS TECHNOLOGIES INC]
+2019-12-04 09:24:35 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BL3HARRIS+TECHNOLOGIES+INC&nocache=1575447875581]
+2019-12-04 09:24:36 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [L3HARRIS TECHNOLOGIES INC] [https://finance.yahoo.com/quote/LHX/]
+2019-12-04 09:24:36 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:24:39 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LAGARDERE SCA]
+2019-12-04 09:24:39 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLAGARDERE+SCA&nocache=1575447879161]
+2019-12-04 09:24:40 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LAGARDERE SCA] [https://finance.yahoo.com/quote/mmb.pa/]
+2019-12-04 09:24:40 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:24:41 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LANCASTER COLONY CORP]
+2019-12-04 09:24:41 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLANCASTER+COLONY+CORP&nocache=1575447881287]
+2019-12-04 09:24:42 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LANCASTER COLONY CORP] [https://finance.yahoo.com/quote/LANC/]
+2019-12-04 09:24:42 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:24:44 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LANDMARK BANCORP INC]
+2019-12-04 09:24:44 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLANDMARK+BANCORP+INC&nocache=1575447884064]
+2019-12-04 09:24:45 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LANDMARK BANCORP INC] [https://finance.yahoo.com/quote/LDKB/]
+2019-12-04 09:24:45 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:24:46 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LANDSTAR SYSTEM INC]
+2019-12-04 09:24:46 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLANDSTAR+SYSTEM+INC&nocache=1575447886473]
+2019-12-04 09:24:47 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LANDSTAR SYSTEM INC] [https://finance.yahoo.com/quote/LSTR/]
+2019-12-04 09:24:47 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:24:50 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LANXESS AG]
+2019-12-04 09:24:50 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLANXESS+AG&nocache=1575447890016]
+2019-12-04 09:24:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LANXESS AG] [https://es.finance.yahoo.com/quote/LXS.DE/]
+2019-12-04 09:24:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:24:53 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LAURENTIAN BANK OF CANADA]
+2019-12-04 09:24:53 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLAURENTIAN+BANK+OF+CANADA&nocache=1575447893840]
+2019-12-04 09:24:54 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LAURENTIAN BANK OF CANADA] [https://ca.finance.yahoo.com/quote/LB.TO/]
+2019-12-04 09:24:54 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:24:57 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LAZARD LTD]
+2019-12-04 09:24:57 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLAZARD+LTD&nocache=1575447897312]
+2019-12-04 09:24:58 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LAZARD LTD] [https://es.finance.yahoo.com/quote/LAZ/]
+2019-12-04 09:24:58 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:25:00 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LEAR CORP]
+2019-12-04 09:25:00 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLEAR+CORP&nocache=1575447900924]
+2019-12-04 09:25:02 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LEAR CORP] [https://es.finance.yahoo.com/quote/LEA/]
+2019-12-04 09:25:02 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:25:04 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LEG IMMOBILIEN AG]
+2019-12-04 09:25:04 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLEG+IMMOBILIEN+AG&nocache=1575447904858]
+2019-12-04 09:25:05 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LEG IMMOBILIEN AG] [https://es.finance.yahoo.com/quote/LEG.DE/]
+2019-12-04 09:25:05 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:25:08 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LEGAL & GENERAL GROUP PLC]
+2019-12-04 09:25:08 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLEGAL+%26+GENERAL+GROUP+PLC&nocache=1575447908156]
+2019-12-04 09:25:09 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LEGAL & GENERAL GROUP PLC] [https://finance.yahoo.com/quote/LGEN.L/]
+2019-12-04 09:25:09 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:25:10 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LEGAL&GENERAL]
+2019-12-04 09:25:10 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLEGAL%26GENERAL&nocache=1575447910314]
+2019-12-04 09:25:11 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:25:11 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+
+
+---------------------------------------
+
+
+2019-12-04 09:39:02 INFO  DCWebUrlFromNombreEmpresa:1252 - Iniciando driver
+2019-12-04 09:39:07 INFO  DCWebUrlFromNombreEmpresa:1255 - Iniciando proceso
+2019-12-04 09:39:07 INFO  DCWebUrlFromNombreEmpresa:1261 - Procesando grupo [EMPRESAS]
+2019-12-04 09:39:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LEGAL & GENERAL GROUP PLC]
+2019-12-04 09:39:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLEGAL+%26+GENERAL+GROUP+PLC&nocache=1575448747143]
+2019-12-04 09:39:11 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LEGAL & GENERAL GROUP PLC] [https://finance.yahoo.com/quote/LGEN.L/]
+2019-12-04 09:39:11 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:39:12 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LEGAL&GENERAL]
+2019-12-04 09:39:12 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLEGAL%26GENERAL&nocache=1575448752083]
+2019-12-04 09:39:15 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LEGAL&GENERAL] [https://es.finance.yahoo.com/quote/%5Eibex/]
+2019-12-04 09:39:15 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:39:17 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LEGGETT & PLATT INC]
+2019-12-04 09:39:17 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLEGGETT+%26+PLATT+INC&nocache=1575448757169]
+2019-12-04 09:39:18 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LEGGETT & PLATT INC] [https://finance.yahoo.com/quote/LEG/]
+2019-12-04 09:39:18 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:39:20 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LENNOX INTERNATIONAL INC]
+2019-12-04 09:39:20 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLENNOX+INTERNATIONAL+INC&nocache=1575448760532]
+2019-12-04 09:39:22 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LENNOX INTERNATIONAL INC] [https://finance.yahoo.com/quote/LII/]
+2019-12-04 09:39:22 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:39:24 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LIMONEIRA CO]
+2019-12-04 09:39:24 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLIMONEIRA+CO&nocache=1575448764423]
+2019-12-04 09:39:25 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LIMONEIRA CO] [https://es.finance.yahoo.com/quote/LMNR/]
+2019-12-04 09:39:25 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:39:28 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LINCOLN ELECTRIC HOLDINGS]
+2019-12-04 09:39:28 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLINCOLN+ELECTRIC+HOLDINGS&nocache=1575448768796]
+2019-12-04 09:39:30 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LINCOLN ELECTRIC HOLDINGS] [https://finance.yahoo.com/quote/LECO/]
+2019-12-04 09:39:30 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:39:32 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LINDE]
+2019-12-04 09:39:32 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLINDE&nocache=1575448772230]
+2019-12-04 09:39:33 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LINDE] [https://es.finance.yahoo.com/quote/LIN.DE/]
+2019-12-04 09:39:33 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:39:36 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LINDE PLC]
+2019-12-04 09:39:36 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLINDE+PLC&nocache=1575448776055]
+2019-12-04 09:39:37 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LINDE PLC] [https://finance.yahoo.com/quote/LIN/]
+2019-12-04 09:39:37 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:39:39 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LINDSAY CORP]
+2019-12-04 09:39:39 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLINDSAY+CORP&nocache=1575448779208]
+2019-12-04 09:39:40 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LINDSAY CORP] [https://finance.yahoo.com/quote/LNN/]
+2019-12-04 09:39:40 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:39:42 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LINDT & SPRÜNGLI AG]
+2019-12-04 09:39:42 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLINDT+%26+SPR%C3%9CNGLI+AG&nocache=1575448782200]
+2019-12-04 09:39:43 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LINDT & SPRÜNGLI AG] [https://finance.yahoo.com/quote/LISN.SW/]
+2019-12-04 09:39:43 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:39:45 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LINDT&SPRUNGLI]
+2019-12-04 09:39:45 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLINDT%26SPRUNGLI&nocache=1575448785503]
+2019-12-04 09:39:47 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LINDT&SPRUNGLI] [https://es.finance.yahoo.com/quote/%5EIBEX/]
+2019-12-04 09:39:47 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:39:50 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LINGOTES ESPECIALES]
+2019-12-04 09:39:50 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLINGOTES+ESPECIALES&nocache=1575448790510]
+2019-12-04 09:39:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LINGOTES ESPECIALES] [https://es.finance.yahoo.com/quote/LGT.MC/]
+2019-12-04 09:39:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:39:54 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LITHIA MOTORS INC]
+2019-12-04 09:39:54 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLITHIA+MOTORS+INC&nocache=1575448794859]
+2019-12-04 09:39:56 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LITHIA MOTORS INC] [https://finance.yahoo.com/quote/LAD/]
+2019-12-04 09:39:56 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:39:59 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LITTELFUSE INC]
+2019-12-04 09:39:59 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLITTELFUSE+INC&nocache=1575448799378]
+2019-12-04 09:40:00 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LITTELFUSE INC] [https://finance.yahoo.com/quote/LFUS?ltr=1]
+2019-12-04 09:40:00 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:40:04 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOBLAW COMPANIES LTD]
+2019-12-04 09:40:04 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOBLAW+COMPANIES+LTD&nocache=1575448804193]
+2019-12-04 09:40:05 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOBLAW COMPANIES LTD] [https://ca.finance.yahoo.com/quote/L.TO/]
+2019-12-04 09:40:05 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:40:08 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOCKHEED MARTIN]
+2019-12-04 09:40:08 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOCKHEED+MARTIN&nocache=1575448808162]
+2019-12-04 09:40:09 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOCKHEED MARTIN] [https://finance.yahoo.com/quote/LMT/]
+2019-12-04 09:40:09 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:40:11 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOGISTA]
+2019-12-04 09:40:11 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOGISTA&nocache=1575448811935]
+2019-12-04 09:40:13 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOGISTA] [https://es.finance.yahoo.com/quote/LOG.MC/]
+2019-12-04 09:40:13 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:40:16 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOGISTEC CORP]
+2019-12-04 09:40:16 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOGISTEC+CORP&nocache=1575448816382]
+2019-12-04 09:40:17 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOGISTEC CORP] [https://es.finance.yahoo.com/quote/LGT-A.TO/]
+2019-12-04 09:40:17 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:40:20 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOTUS BAKERIES NV]
+2019-12-04 09:40:20 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOTUS+BAKERIES+NV&nocache=1575448820345]
+2019-12-04 09:40:21 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOTUS BAKERIES NV] [https://es.finance.yahoo.com/quote/LOTB.BR/]
+2019-12-04 09:40:21 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:40:25 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOUIS VUITTON]
+2019-12-04 09:40:25 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOUIS+VUITTON&nocache=1575448825360]
+2019-12-04 09:40:26 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOUIS VUITTON] [https://es.finance.yahoo.com/quote/MC.PA/]
+2019-12-04 09:40:26 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:40:29 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOWE'S COMPANIES]
+2019-12-04 09:40:29 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOWE%27S+COMPANIES&nocache=1575448829440]
+2019-12-04 09:40:31 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOWE'S COMPANIES] [https://finance.yahoo.com/quote/LOW/]
+2019-12-04 09:40:31 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:40:33 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOWE'S COMPANIES INC]
+2019-12-04 09:40:33 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOWE%27S+COMPANIES+INC&nocache=1575448833226]
+2019-12-04 09:40:34 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOWE'S COMPANIES INC] [https://finance.yahoo.com/quote/LOW/]
+2019-12-04 09:40:34 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:40:38 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LOWE'S COS INC]
+2019-12-04 09:40:38 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLOWE%27S+COS+INC&nocache=1575448838051]
+2019-12-04 09:40:39 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LOWE'S COS INC] [https://finance.yahoo.com/quote/LOW/]
+2019-12-04 09:40:39 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:40:42 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LSE]
+2019-12-04 09:40:42 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLSE&nocache=1575448842049]
+2019-12-04 09:40:43 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LSE] [https://es.finance.yahoo.com/quote/%5Eibex/]
+2019-12-04 09:40:43 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:40:45 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LSL PROPERTIES]
+2019-12-04 09:40:45 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLSL+PROPERTIES&nocache=1575448845374]
+2019-12-04 09:40:46 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LSL PROPERTIES] [https://finance.yahoo.com/quote/LSL.L/]
+2019-12-04 09:40:46 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:40:48 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LTC PROPERTIES INC]
+2019-12-04 09:40:48 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLTC+PROPERTIES+INC&nocache=1575448848738]
+2019-12-04 09:40:50 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LTC PROPERTIES INC] [https://finance.yahoo.com/quote/ltc/]
+2019-12-04 09:40:50 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:40:53 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LVMH SE]
+2019-12-04 09:40:53 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLVMH+SE&nocache=1575448853132]
+2019-12-04 09:40:54 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LVMH SE] [https://es.finance.yahoo.com/quote/MC.PA/]
+2019-12-04 09:40:54 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:40:56 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [LYONS BANCORP INC]
+2019-12-04 09:40:56 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BLYONS+BANCORP+INC&nocache=1575448856959]
+2019-12-04 09:40:58 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [LYONS BANCORP INC] [https://finance.yahoo.com/quote/LYBC/]
+2019-12-04 09:40:58 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:41:01 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MAGELLAN AEROSPACE CORP]
+2019-12-04 09:41:01 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMAGELLAN+AEROSPACE+CORP&nocache=1575448861536]
+2019-12-04 09:41:03 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MAGELLAN AEROSPACE CORP] [https://finance.yahoo.com/quote/mal.to/]
+2019-12-04 09:41:03 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:41:06 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MAGELLAN MIDSTREAM PARTNERS LP]
+2019-12-04 09:41:06 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMAGELLAN+MIDSTREAM+PARTNERS+LP&nocache=1575448866270]
+2019-12-04 09:41:08 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MAGELLAN MIDSTREAM PARTNERS LP] [https://finance.yahoo.com/quote/MMP/]
+2019-12-04 09:41:08 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:41:10 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MAGNA INTERNATIONAL INC]
+2019-12-04 09:41:10 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMAGNA+INTERNATIONAL+INC&nocache=1575448870428]
+2019-12-04 09:41:12 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MAGNA INTERNATIONAL INC] [https://finance.yahoo.com/quote/MGA/]
+2019-12-04 09:41:12 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:41:15 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MAIN STREET CAPITAL CORP]
+2019-12-04 09:41:15 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMAIN+STREET+CAPITAL+CORP&nocache=1575448875519]
+2019-12-04 09:41:17 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MAIN STREET CAPITAL CORP] [https://finance.yahoo.com/quote/MAIN/]
+2019-12-04 09:41:17 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:41:19 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MAINTEL HOLDINGS PLC]
+2019-12-04 09:41:19 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMAINTEL+HOLDINGS+PLC&nocache=1575448879599]
+2019-12-04 09:41:21 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MAINTEL HOLDINGS PLC] [https://es.finance.yahoo.com/quote/MAI.L/]
+2019-12-04 09:41:21 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:41:23 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MAN SE]
+2019-12-04 09:41:23 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMAN+SE&nocache=1575448883463]
+2019-12-04 09:41:25 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MAN SE] [https://finance.yahoo.com/quote/MAN/]
+2019-12-04 09:41:25 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:41:28 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MANPOWER GROUP]
+2019-12-04 09:41:28 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMANPOWER+GROUP&nocache=1575448888248]
+2019-12-04 09:41:30 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MANPOWER GROUP] [https://finance.yahoo.com/quote/MAN/]
+2019-12-04 09:41:30 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:41:32 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MANULIFE FINANCIAL CORP]
+2019-12-04 09:41:32 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMANULIFE+FINANCIAL+CORP&nocache=1575448892536]
+2019-12-04 09:41:34 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MANULIFE FINANCIAL CORP] [https://finance.yahoo.com/quote/MFC/]
+2019-12-04 09:41:34 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:41:37 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MAPFRE]
+2019-12-04 09:41:37 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMAPFRE&nocache=1575448897835]
+2019-12-04 09:41:39 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MAPFRE] [https://es.finance.yahoo.com/quote/MAP.MC/]
+2019-12-04 09:41:39 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:41:41 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MARKETAXESS HOLDINGS INC]
+2019-12-04 09:41:41 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMARKETAXESS+HOLDINGS+INC&nocache=1575448901480]
+2019-12-04 09:41:43 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MARKETAXESS HOLDINGS INC] [https://finance.yahoo.com/quote/MKTX/]
+2019-12-04 09:41:43 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:41:45 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MARKS & SPENCER GROUP PLC]
+2019-12-04 09:41:45 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMARKS+%26+SPENCER+GROUP+PLC&nocache=1575448905396]
+2019-12-04 09:41:47 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MARKS & SPENCER GROUP PLC] [https://uk.finance.yahoo.com/quote/MKS.L/]
+2019-12-04 09:41:47 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:41:48 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MARRIOTT INTERNATIONAL INC]
+2019-12-04 09:41:48 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMARRIOTT+INTERNATIONAL+INC&nocache=1575448908633]
+2019-12-04 09:41:50 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MARRIOTT INTERNATIONAL INC] [https://finance.yahoo.com/quote/MAR/]
+2019-12-04 09:41:50 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:41:53 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MARSH & MCLENNAN COMPANIES INC]
+2019-12-04 09:41:53 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMARSH+%26+MCLENNAN+COMPANIES+INC&nocache=1575448913362]
+2019-12-04 09:41:55 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MARSH & MCLENNAN COMPANIES INC] [https://finance.yahoo.com/quote/MMC/]
+2019-12-04 09:41:55 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:41:57 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MASTERCARD]
+2019-12-04 09:41:57 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMASTERCARD&nocache=1575448917072]
+2019-12-04 09:41:59 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MASTERCARD] [https://finance.yahoo.com/quote/MA/]
+2019-12-04 09:41:59 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:42:02 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MATTHEWS INTERNATIONAL]
+2019-12-04 09:42:02 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMATTHEWS+INTERNATIONAL&nocache=1575448922883]
+2019-12-04 09:42:04 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MATTHEWS INTERNATIONAL] [https://finance.yahoo.com/quote/MATW/]
+2019-12-04 09:42:04 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:42:06 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MATTIOLI WOODS PLC]
+2019-12-04 09:42:06 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMATTIOLI+WOODS+PLC&nocache=1575448926299]
+2019-12-04 09:42:08 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MATTIOLI WOODS PLC] [https://finance.yahoo.com/quote/MTW.L/]
+2019-12-04 09:42:08 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:42:11 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MAXIM INTEGRATED PRODUCTS]
+2019-12-04 09:42:11 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMAXIM+INTEGRATED+PRODUCTS&nocache=1575448931684]
+2019-12-04 09:42:13 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MAXIM INTEGRATED PRODUCTS] [https://finance.yahoo.com/quote/MXIM/]
+2019-12-04 09:42:13 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:42:17 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MCCORMICK & CO]
+2019-12-04 09:42:17 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMCCORMICK+%26+CO&nocache=1575448937880]
+2019-12-04 09:42:19 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MCCORMICK & CO] [https://finance.yahoo.com/quote/MKC/]
+2019-12-04 09:42:19 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:42:20 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MCCORMICK & CO INC]
+2019-12-04 09:42:20 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMCCORMICK+%26+CO+INC&nocache=1575448940952]
+2019-12-04 09:42:22 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:42:22 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:42:54 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MCCORMICK & CO INC]
+2019-12-04 09:42:54 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:42:54 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMCCORMICK+%26+CO+INC&nocache=1575448974302]
+2019-12-04 09:42:57 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MCCORMICK & CO INC] [https://finance.yahoo.com/quote/MKC/]
+2019-12-04 09:42:57 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:42:58 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MCDONALD'S CORP]
+2019-12-04 09:42:58 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMCDONALD%27S+CORP&nocache=1575448978390]
+2019-12-04 09:42:59 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MCDONALD'S CORP] [https://finance.yahoo.com/quote/MCD/]
+2019-12-04 09:42:59 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:43:03 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MCGRATH RENTCORP]
+2019-12-04 09:43:03 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMCGRATH+RENTCORP&nocache=1575448983261]
+2019-12-04 09:43:04 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MCGRATH RENTCORP] [https://finance.yahoo.com/quote/MGRC/]
+2019-12-04 09:43:04 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:43:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MCKESSON CORP]
+2019-12-04 09:43:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMCKESSON+CORP&nocache=1575448987172]
+2019-12-04 09:43:08 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MCKESSON CORP] [https://finance.yahoo.com/quote/MCK/community/]
+2019-12-04 09:43:08 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:43:10 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MDU RESOURCES]
+2019-12-04 09:43:10 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMDU+RESOURCES&nocache=1575448990789]
+2019-12-04 09:43:12 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MDU RESOURCES] [https://finance.yahoo.com/quote/MDU/]
+2019-12-04 09:43:12 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:43:14 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MDU RESOURCES GROUP INC]
+2019-12-04 09:43:14 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMDU+RESOURCES+GROUP+INC&nocache=1575448994744]
+2019-12-04 09:43:16 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MDU RESOURCES GROUP INC] [https://finance.yahoo.com/quote/MDU/]
+2019-12-04 09:43:16 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:43:17 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MEARS GROUP PLC]
+2019-12-04 09:43:17 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMEARS+GROUP+PLC&nocache=1575448997941]
+2019-12-04 09:43:19 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MEARS GROUP PLC] [https://finance.yahoo.com/quote/mer.l/]
+2019-12-04 09:43:19 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:43:20 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MEDIASET]
+2019-12-04 09:43:20 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMEDIASET&nocache=1575449000520]
+2019-12-04 09:43:21 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MEDIASET] [https://es.finance.yahoo.com/quote/GETVF/]
+2019-12-04 09:43:21 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:43:25 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MEDIOBANCA GROUP]
+2019-12-04 09:43:25 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMEDIOBANCA+GROUP&nocache=1575449005605]
+2019-12-04 09:43:26 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MEDIOBANCA GROUP] [https://es.finance.yahoo.com/quote/mb.mi/]
+2019-12-04 09:43:26 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:43:29 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MEDTRONIC PLC]
+2019-12-04 09:43:29 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMEDTRONIC+PLC&nocache=1575449009038]
+2019-12-04 09:43:30 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MEDTRONIC PLC] [https://finance.yahoo.com/quote/MDT/]
+2019-12-04 09:43:30 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:43:31 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MEGGITT PLC]
+2019-12-04 09:43:31 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMEGGITT+PLC&nocache=1575449011691]
+2019-12-04 09:43:32 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MEGGITT PLC] [https://es.finance.yahoo.com/quote/MGGT.L?p=MGGT.L]
+2019-12-04 09:43:32 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:43:34 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MELIÁ HOTELS]
+2019-12-04 09:43:34 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMELI%C3%81+HOTELS&nocache=1575449014324]
+2019-12-04 09:43:35 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MELIÁ HOTELS] [https://es.finance.yahoo.com/quote/MEL.MC/]
+2019-12-04 09:43:35 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:43:38 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MERCK & CO INC]
+2019-12-04 09:43:38 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMERCK+%26+CO+INC&nocache=1575449018552]
+2019-12-04 09:43:40 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MERCK & CO INC] [https://es.finance.yahoo.com/quote/MRK/]
+2019-12-04 09:43:40 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:43:43 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MERCK KGAA]
+2019-12-04 09:43:43 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMERCK+KGAA&nocache=1575449023152]
+2019-12-04 09:43:44 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MERCK KGAA] [https://es.finance.yahoo.com/quote/MRK.DE/]
+2019-12-04 09:43:44 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:43:47 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MERCURY GENERAL CORP]
+2019-12-04 09:43:47 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMERCURY+GENERAL+CORP&nocache=1575449027332]
+2019-12-04 09:43:48 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MERCURY GENERAL CORP] [https://finance.yahoo.com/quote/MCY/]
+2019-12-04 09:43:48 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:43:50 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MEREDITH CORP]
+2019-12-04 09:43:50 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMEREDITH+CORP&nocache=1575449030142]
+2019-12-04 09:43:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MEREDITH CORP] [https://es.finance.yahoo.com/quote/MDP/]
+2019-12-04 09:43:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:43:55 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MERLÍN PROPERTIES]
+2019-12-04 09:43:55 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMERL%C3%8DN+PROPERTIES&nocache=1575449035399]
+2019-12-04 09:43:57 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MERLÍN PROPERTIES] [https://es.finance.yahoo.com/quote/MRL.MC/]
+2019-12-04 09:43:57 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:44:01 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [METHANEX CORP]
+2019-12-04 09:44:01 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMETHANEX+CORP&nocache=1575449041196]
+2019-12-04 09:44:02 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:44:02 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:46:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [METHANEX CORP]
+2019-12-04 09:46:07 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:46:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMETHANEX+CORP&nocache=1575449167646]
+2019-12-04 09:46:08 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [METHANEX CORP] [https://es.finance.yahoo.com/quote/MEOH/]
+2019-12-04 09:46:08 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:46:10 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [METLIFE]
+2019-12-04 09:46:10 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMETLIFE&nocache=1575449170023]
+2019-12-04 09:46:11 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [METLIFE] [https://finance.yahoo.com/quote/MET/]
+2019-12-04 09:46:11 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:46:14 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [METRO INC]
+2019-12-04 09:46:14 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMETRO+INC&nocache=1575449174964]
+2019-12-04 09:46:16 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [METRO INC] [https://es.finance.yahoo.com/quote/MRU.TO/]
+2019-12-04 09:46:16 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:46:20 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MGE ENERGY INC]
+2019-12-04 09:46:20 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMGE+ENERGY+INC&nocache=1575449180060]
+2019-12-04 09:46:21 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MGE ENERGY INC] [https://finance.yahoo.com/quote/MGEE/]
+2019-12-04 09:46:21 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:46:22 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MICHAEL KORS]
+2019-12-04 09:46:22 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMICHAEL+KORS&nocache=1575449182780]
+2019-12-04 09:46:24 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MICHAEL KORS] [https://finance.yahoo.com/quote/kors/]
+2019-12-04 09:46:24 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:46:26 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MICHELIN]
+2019-12-04 09:46:26 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMICHELIN&nocache=1575449186097]
+2019-12-04 09:46:27 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MICHELIN] [https://es.finance.yahoo.com/quote/ml.pa/]
+2019-12-04 09:46:27 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:46:29 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MICHELIN SCA]
+2019-12-04 09:46:29 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMICHELIN+SCA&nocache=1575449189466]
+2019-12-04 09:46:31 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MICHELIN SCA] [https://es.finance.yahoo.com/quote/ml.pa/]
+2019-12-04 09:46:31 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:46:34 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MICRO FOCUS INTERNATIONAL PLC]
+2019-12-04 09:46:34 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMICRO+FOCUS+INTERNATIONAL+PLC&nocache=1575449194079]
+2019-12-04 09:46:35 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MICRO FOCUS INTERNATIONAL PLC] [https://es.finance.yahoo.com/quote/mcro.l/]
+2019-12-04 09:46:35 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:46:38 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MICROCHIP TECHNOLOGY INC]
+2019-12-04 09:46:38 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMICROCHIP+TECHNOLOGY+INC&nocache=1575449198708]
+2019-12-04 09:46:40 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MICROCHIP TECHNOLOGY INC] [https://finance.yahoo.com/quote/MCHP/]
+2019-12-04 09:46:40 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:46:42 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MICROSOFT CO]
+2019-12-04 09:46:42 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMICROSOFT+CO&nocache=1575449202180]
+2019-12-04 09:46:43 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MICROSOFT CO] [https://es.finance.yahoo.com/quote/MSFT/]
+2019-12-04 09:46:43 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:46:45 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MICROSOFT CORP]
+2019-12-04 09:46:45 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMICROSOFT+CORP&nocache=1575449205530]
+2019-12-04 09:46:47 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MICROSOFT CORP] [https://es.finance.yahoo.com/quote/MSFT/]
+2019-12-04 09:46:47 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:46:50 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MIDDLESEX WATER CO]
+2019-12-04 09:46:50 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMIDDLESEX+WATER+CO&nocache=1575449210052]
+2019-12-04 09:46:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MIDDLESEX WATER CO] [https://finance.yahoo.com/quote/MSEX/]
+2019-12-04 09:46:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:46:52 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MIQUEL Y COSTAS]
+2019-12-04 09:46:52 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMIQUEL+Y+COSTAS&nocache=1575449212763]
+2019-12-04 09:46:54 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MIQUEL Y COSTAS] [https://es.finance.yahoo.com/quote/MCM.MC/]
+2019-12-04 09:46:54 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:46:56 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MOLSON COORS]
+2019-12-04 09:46:56 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMOLSON+COORS&nocache=1575449216834]
+2019-12-04 09:46:58 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MOLSON COORS] [https://finance.yahoo.com/quote/TAP/]
+2019-12-04 09:46:58 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:47:01 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MONDELEZ INTERNATIONAL INC]
+2019-12-04 09:47:01 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMONDELEZ+INTERNATIONAL+INC&nocache=1575449221972]
+2019-12-04 09:47:03 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MONDELEZ INTERNATIONAL INC] [https://es.finance.yahoo.com/quote/MDLZ/]
+2019-12-04 09:47:03 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:47:05 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MONDI PLC]
+2019-12-04 09:47:05 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMONDI+PLC&nocache=1575449225737]
+2019-12-04 09:47:06 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MONDI PLC] [https://es.finance.yahoo.com/quote/MNDI.L/]
+2019-12-04 09:47:06 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:47:09 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MONEYSUPERMARKETCOM GROUP PLC]
+2019-12-04 09:47:09 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMONEYSUPERMARKETCOM+GROUP+PLC&nocache=1575449229661]
+2019-12-04 09:47:10 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MONEYSUPERMARKETCOM GROUP PLC] [https://es.finance.yahoo.com/quote/mony.l/]
+2019-12-04 09:47:10 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:47:13 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MONRO INC]
+2019-12-04 09:47:13 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMONRO+INC&nocache=1575449233767]
+2019-12-04 09:47:15 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MONRO INC] [https://es.finance.yahoo.com/quote/%5EIBEX/]
+2019-12-04 09:47:15 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:47:17 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MOODY'S CORP]
+2019-12-04 09:47:17 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMOODY%27S+CORP&nocache=1575449237954]
+2019-12-04 09:47:19 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MOODY'S CORP] [https://es.finance.yahoo.com/quote/mco/]
+2019-12-04 09:47:19 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:47:23 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MOODYS]
+2019-12-04 09:47:23 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMOODYS&nocache=1575449243043]
+2019-12-04 09:47:23 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:47:23 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:48:27 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MOODYS]
+2019-12-04 09:48:27 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:48:27 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMOODYS&nocache=1575449307303]
+2019-12-04 09:48:28 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MOODYS] [https://finance.yahoo.com/quote/MCO/]
+2019-12-04 09:48:28 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:48:29 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MSA SAFETY INC]
+2019-12-04 09:48:29 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMSA+SAFETY+INC&nocache=1575449309923]
+2019-12-04 09:48:31 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MSA SAFETY INC] [https://finance.yahoo.com/quote/MSA/]
+2019-12-04 09:48:31 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:48:33 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MSC INDUSTRIAL DIRECT CO INC]
+2019-12-04 09:48:33 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMSC+INDUSTRIAL+DIRECT+CO+INC&nocache=1575449313663]
+2019-12-04 09:48:34 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MSC INDUSTRIAL DIRECT CO INC] [https://finance.yahoo.com/quote/MSM/]
+2019-12-04 09:48:34 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:48:38 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MUNCHENER RUCKVERSICHERUNGS GESELLSCHAFT AKTIENGESELLSCHAFT]
+2019-12-04 09:48:38 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMUNCHENER+RUCKVERSICHERUNGS+GESELLSCHAFT+AKTIENGESELLSCHAFT&nocache=1575449318881]
+2019-12-04 09:48:40 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MUNCHENER RUCKVERSICHERUNGS GESELLSCHAFT AKTIENGESELLSCHAFT] [https://es.finance.yahoo.com/quote/MUV2.DE/]
+2019-12-04 09:48:40 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:48:42 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MUNCY BANK FINANCIAL INC]
+2019-12-04 09:48:42 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMUNCY+BANK+FINANCIAL+INC&nocache=1575449322203]
+2019-12-04 09:48:43 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MUNCY BANK FINANCIAL INC] [https://finance.yahoo.com/quote/mybf/]
+2019-12-04 09:48:43 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:48:47 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MUNICH RE]
+2019-12-04 09:48:47 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMUNICH+RE&nocache=1575449327444]
+2019-12-04 09:48:49 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MUNICH RE] [https://es.finance.yahoo.com/quote/MUV2.DE/]
+2019-12-04 09:48:49 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:48:51 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MUNICH REINSURANCE CO]
+2019-12-04 09:48:51 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMUNICH+REINSURANCE+CO&nocache=1575449331882]
+2019-12-04 09:48:53 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MUNICH REINSURANCE CO] [https://es.finance.yahoo.com/quote/MUV2.DE/]
+2019-12-04 09:48:53 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:48:55 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [MURRAY INTERNATIONAL TRUST PLC]
+2019-12-04 09:48:55 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BMURRAY+INTERNATIONAL+TRUST+PLC&nocache=1575449335700]
+2019-12-04 09:48:57 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [MURRAY INTERNATIONAL TRUST PLC] [https://uk.finance.yahoo.com/quote/MYI.L/]
+2019-12-04 09:48:57 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:48:59 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NACCO INDUSTRIES]
+2019-12-04 09:48:59 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNACCO+INDUSTRIES&nocache=1575449339555]
+2019-12-04 09:49:01 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NACCO INDUSTRIES] [https://finance.yahoo.com/quote/NC/]
+2019-12-04 09:49:01 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:49:02 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATIONAL BANK]
+2019-12-04 09:49:02 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATIONAL+BANK&nocache=1575449342919]
+2019-12-04 09:49:04 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATIONAL BANK] [https://finance.yahoo.com/quote/SNBN.SW/]
+2019-12-04 09:49:04 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:49:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATIONAL BANKSHARES]
+2019-12-04 09:49:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATIONAL+BANKSHARES&nocache=1575449347028]
+2019-12-04 09:49:08 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATIONAL BANKSHARES] [https://finance.yahoo.com/quote/NKSH/]
+2019-12-04 09:49:08 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:49:12 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATIONAL FUEL GAS]
+2019-12-04 09:49:12 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATIONAL+FUEL+GAS&nocache=1575449352369]
+2019-12-04 09:49:14 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATIONAL FUEL GAS] [https://finance.yahoo.com/quote/nfg/]
+2019-12-04 09:49:14 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:49:16 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATIONAL GRID]
+2019-12-04 09:49:16 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATIONAL+GRID&nocache=1575449356681]
+2019-12-04 09:49:18 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATIONAL GRID] [https://es.finance.yahoo.com/quote/ng.l/]
+2019-12-04 09:49:18 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:49:20 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATIONAL HEALTH INVESTORS]
+2019-12-04 09:49:20 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATIONAL+HEALTH+INVESTORS&nocache=1575449360489]
+2019-12-04 09:49:22 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATIONAL HEALTH INVESTORS] [https://finance.yahoo.com/quote/nhi/]
+2019-12-04 09:49:22 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:49:24 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATIONAL HEALTHCARE CORP]
+2019-12-04 09:49:24 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATIONAL+HEALTHCARE+CORP&nocache=1575449364420]
+2019-12-04 09:49:26 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATIONAL HEALTHCARE CORP] [https://es.finance.yahoo.com/quote/NHLG?p=NHLG]
+2019-12-04 09:49:26 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:49:28 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATIONAL RETAIL PROPERTIES]
+2019-12-04 09:49:28 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATIONAL+RETAIL+PROPERTIES&nocache=1575449368330]
+2019-12-04 09:49:29 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATIONAL RETAIL PROPERTIES] [https://es.finance.yahoo.com/quote/NNN/]
+2019-12-04 09:49:29 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:49:33 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATRA]
+2019-12-04 09:49:33 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATRA&nocache=1575449373572]
+2019-12-04 09:49:34 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:49:34 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:49:46 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATRA]
+2019-12-04 09:49:46 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:49:46 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATRA&nocache=1575449386744]
+2019-12-04 09:49:47 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATRA] [https://es.finance.yahoo.com/quote/NR6.BE/]
+2019-12-04 09:49:47 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:49:49 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NATURGY]
+2019-12-04 09:49:49 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNATURGY&nocache=1575449389977]
+2019-12-04 09:49:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NATURGY] [https://es.finance.yahoo.com/quote/NTGY.MC/]
+2019-12-04 09:49:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:49:53 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NESTLE]
+2019-12-04 09:49:53 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNESTLE&nocache=1575449393282]
+2019-12-04 09:49:54 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NESTLE] [https://es.finance.yahoo.com/quote/%5EIBEX/]
+2019-12-04 09:49:54 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:49:58 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NESTLE SA]
+2019-12-04 09:49:58 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNESTLE+SA&nocache=1575449398488]
+2019-12-04 09:49:59 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NESTLE SA] [https://es.finance.yahoo.com/quote/NSRGY/]
+2019-12-04 09:49:59 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:50:02 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NEW JERSEY RESOURCES]
+2019-12-04 09:50:02 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNEW+JERSEY+RESOURCES&nocache=1575449402306]
+2019-12-04 09:50:03 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NEW JERSEY RESOURCES] [https://finance.yahoo.com/quote/NJR/]
+2019-12-04 09:50:03 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:50:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NEWMARKET CORP]
+2019-12-04 09:50:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNEWMARKET+CORP&nocache=1575449407475]
+2019-12-04 09:50:08 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NEWMARKET CORP] [https://es.finance.yahoo.com/quote/NEU/]
+2019-12-04 09:50:08 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:50:11 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NEXT PLC]
+2019-12-04 09:50:11 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNEXT+PLC&nocache=1575449411717]
+2019-12-04 09:50:13 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NEXT PLC] [https://uk.finance.yahoo.com/quote/NXT.L/]
+2019-12-04 09:50:13 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:50:17 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NEXTERA ENERGY INC]
+2019-12-04 09:50:17 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNEXTERA+ENERGY+INC&nocache=1575449417143]
+2019-12-04 09:50:18 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NEXTERA ENERGY INC] [https://finance.yahoo.com/quote/NEE/]
+2019-12-04 09:50:18 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:50:21 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NH HOTELES]
+2019-12-04 09:50:21 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNH+HOTELES&nocache=1575449421213]
+2019-12-04 09:50:23 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NH HOTELES] [https://es.finance.yahoo.com/quote/MEL.MC/]
+2019-12-04 09:50:23 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:50:26 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NICHOLS PLC]
+2019-12-04 09:50:26 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNICHOLS+PLC&nocache=1575449426725]
+2019-12-04 09:50:28 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NICHOLS PLC] [https://finance.yahoo.com/quote/NICL.L/]
+2019-12-04 09:50:28 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:50:29 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NIKE INC]
+2019-12-04 09:50:29 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNIKE+INC&nocache=1575449429592]
+2019-12-04 09:50:31 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NIKE INC] [https://es.finance.yahoo.com/quote/NKE/]
+2019-12-04 09:50:31 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:50:34 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NOKIAN RENKAAT OYJ]
+2019-12-04 09:50:34 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNOKIAN+RENKAAT+OYJ&nocache=1575449434252]
+2019-12-04 09:50:35 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NOKIAN RENKAAT OYJ] [https://es.finance.yahoo.com/quote/NRE1V.HE]
+2019-12-04 09:50:35 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:50:38 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NOKIAN TYRES PLC]
+2019-12-04 09:50:38 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNOKIAN+TYRES+PLC&nocache=1575449438912]
+2019-12-04 09:50:40 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NOKIAN TYRES PLC] [https://es.finance.yahoo.com/quote/NRE1V.HE]
+2019-12-04 09:50:40 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:50:41 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORDSON CORP]
+2019-12-04 09:50:41 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORDSON+CORP&nocache=1575449441706]
+2019-12-04 09:50:43 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORDSON CORP] [https://finance.yahoo.com/quote/NDSN/]
+2019-12-04 09:50:43 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:50:44 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORTHEAST INDIANA BANCORP]
+2019-12-04 09:50:44 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORTHEAST+INDIANA+BANCORP&nocache=1575449444342]
+2019-12-04 09:50:45 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORTHEAST INDIANA BANCORP] [https://finance.yahoo.com/quote/NIDB/]
+2019-12-04 09:50:45 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:50:47 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORTHRIM BANCORP INC]
+2019-12-04 09:50:47 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORTHRIM+BANCORP+INC&nocache=1575449447706]
+2019-12-04 09:50:49 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORTHRIM BANCORP INC] [https://finance.yahoo.com/quote/NRIM/]
+2019-12-04 09:50:49 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:50:52 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORTHROP GRUMMAN]
+2019-12-04 09:50:52 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORTHROP+GRUMMAN&nocache=1575449452681]
+2019-12-04 09:50:54 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORTHROP GRUMMAN] [https://finance.yahoo.com/quote/NOC/]
+2019-12-04 09:50:54 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:50:56 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORTHWEST BANCSHARES INC]
+2019-12-04 09:50:56 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORTHWEST+BANCSHARES+INC&nocache=1575449456092]
+2019-12-04 09:50:57 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORTHWEST BANCSHARES INC] [https://finance.yahoo.com/quote/NWBI/]
+2019-12-04 09:50:57 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:50:59 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORTHWEST NATURAL GAS]
+2019-12-04 09:50:59 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORTHWEST+NATURAL+GAS&nocache=1575449459285]
+2019-12-04 09:51:01 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORTHWEST NATURAL GAS] [https://finance.yahoo.com/quote/NWN/]
+2019-12-04 09:51:01 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:51:05 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORTHWEST NATURAL HOLDING CO]
+2019-12-04 09:51:05 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORTHWEST+NATURAL+HOLDING+CO&nocache=1575449465002]
+2019-12-04 09:51:05 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:51:05 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:51:58 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORTHWEST NATURAL HOLDING CO]
+2019-12-04 09:51:58 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:51:58 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORTHWEST+NATURAL+HOLDING+CO&nocache=1575449518080]
+2019-12-04 09:51:59 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORTHWEST NATURAL HOLDING CO] [https://finance.yahoo.com/quote/NWN/]
+2019-12-04 09:51:59 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:52:01 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORTHWESTERN CORP]
+2019-12-04 09:52:01 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORTHWESTERN+CORP&nocache=1575449521188]
+2019-12-04 09:52:02 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORTHWESTERN CORP] [https://finance.yahoo.com/quote/NWE/]
+2019-12-04 09:52:02 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:52:05 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NORWOOD FINANCIAL]
+2019-12-04 09:52:05 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNORWOOD+FINANCIAL&nocache=1575449525047]
+2019-12-04 09:52:06 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NORWOOD FINANCIAL] [https://es.finance.yahoo.com/quote/%5EIBEX/]
+2019-12-04 09:52:06 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:52:10 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NOS]
+2019-12-04 09:52:10 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNOS&nocache=1575449530260]
+2019-12-04 09:52:11 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NOS] [https://es.finance.yahoo.com/quote/%5EIBEX/]
+2019-12-04 09:52:11 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:52:14 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NOVARTIS]
+2019-12-04 09:52:14 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNOVARTIS&nocache=1575449534144]
+2019-12-04 09:52:15 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NOVARTIS] [https://es.finance.yahoo.com/quote/NVS/]
+2019-12-04 09:52:15 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:52:19 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NOVARTIS AG]
+2019-12-04 09:52:19 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNOVARTIS+AG&nocache=1575449539030]
+2019-12-04 09:52:20 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NOVARTIS AG] [https://es.finance.yahoo.com/quote/NVS/]
+2019-12-04 09:52:20 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:52:22 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NOVO NORDISK]
+2019-12-04 09:52:22 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNOVO+NORDISK&nocache=1575449542151]
+2019-12-04 09:52:23 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NOVO NORDISK] [https://es.finance.yahoo.com/quote/NOVO-B.CO/]
+2019-12-04 09:52:23 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:52:26 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NOVO NORDISK A/S]
+2019-12-04 09:52:26 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNOVO+NORDISK+A%2FS&nocache=1575449546910]
+2019-12-04 09:52:28 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NOVO NORDISK A/S] [https://finance.yahoo.com/quote/NVO/]
+2019-12-04 09:52:28 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:52:31 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NOVOZYMES A/S]
+2019-12-04 09:52:31 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNOVOZYMES+A%2FS&nocache=1575449551516]
+2019-12-04 09:52:33 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NOVOZYMES A/S] [https://finance.yahoo.com/quote/NVZMY/]
+2019-12-04 09:52:33 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:52:34 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NU SKIN ENTERPRISES INC]
+2019-12-04 09:52:34 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNU+SKIN+ENTERPRISES+INC&nocache=1575449554293]
+2019-12-04 09:52:36 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NU SKIN ENTERPRISES INC] [https://es.finance.yahoo.com/quote/NUS/]
+2019-12-04 09:52:36 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:52:37 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [NUCOR CORP]
+2019-12-04 09:52:37 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BNUCOR+CORP&nocache=1575449557536]
+2019-12-04 09:52:39 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [NUCOR CORP] [https://finance.yahoo.com/quote/NUE/]
+2019-12-04 09:52:39 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:52:42 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OCCIDENTAL PETROLEUM]
+2019-12-04 09:52:42 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOCCIDENTAL+PETROLEUM&nocache=1575449562912]
+2019-12-04 09:52:49 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OCCIDENTAL PETROLEUM] [https://finance.yahoo.com/quote/OXY/]
+2019-12-04 09:52:49 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:52:52 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OCCIDENTAL PETROLEUM CORP]
+2019-12-04 09:52:52 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOCCIDENTAL+PETROLEUM+CORP&nocache=1575449572040]
+2019-12-04 09:52:54 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OCCIDENTAL PETROLEUM CORP] [https://finance.yahoo.com/quote/OXY/]
+2019-12-04 09:52:54 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:52:56 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OENEO]
+2019-12-04 09:52:56 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOENEO&nocache=1575449576757]
+2019-12-04 09:52:58 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OENEO] [https://es.finance.yahoo.com/quote/SBT.PA/]
+2019-12-04 09:52:58 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:53:02 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OGE ENERGY CORP]
+2019-12-04 09:53:02 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOGE+ENERGY+CORP&nocache=1575449582051]
+2019-12-04 09:53:03 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OGE ENERGY CORP] [https://es.finance.yahoo.com/quote/OGE/]
+2019-12-04 09:53:03 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:53:05 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OHL]
+2019-12-04 09:53:05 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOHL&nocache=1575449585735]
+2019-12-04 09:53:07 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OHL] [https://es.finance.yahoo.com/quote/OHL.mc/]
+2019-12-04 09:53:07 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:53:08 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OIL DRI CORP OF AMERICA]
+2019-12-04 09:53:08 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOIL+DRI+CORP+OF+AMERICA&nocache=1575449588972]
+2019-12-04 09:53:09 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:53:09 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:54:27 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OIL DRI CORP OF AMERICA]
+2019-12-04 09:54:27 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:54:27 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOIL+DRI+CORP+OF+AMERICA&nocache=1575449667372]
+2019-12-04 09:54:28 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OIL DRI CORP OF AMERICA] [https://finance.yahoo.com/quote/ODC/]
+2019-12-04 09:54:28 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:54:29 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OLD REPUBLIC INTERNATIONAL]
+2019-12-04 09:54:29 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOLD+REPUBLIC+INTERNATIONAL&nocache=1575449669556]
+2019-12-04 09:54:30 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OLD REPUBLIC INTERNATIONAL] [https://es.finance.yahoo.com/quote/ORI/]
+2019-12-04 09:54:30 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:54:33 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OLD REPUBLIC INTERNATIONAL CORP]
+2019-12-04 09:54:33 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOLD+REPUBLIC+INTERNATIONAL+CORP&nocache=1575449673176]
+2019-12-04 09:54:34 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OLD REPUBLIC INTERNATIONAL CORP] [https://es.finance.yahoo.com/quote/ORI/]
+2019-12-04 09:54:34 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:54:36 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OMEGA HEALTH CARE]
+2019-12-04 09:54:36 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOMEGA+HEALTH+CARE&nocache=1575449676564]
+2019-12-04 09:54:37 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OMEGA HEALTH CARE] [https://finance.yahoo.com/quote/OHI/]
+2019-12-04 09:54:37 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:54:38 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OMEGA HEALTHCARE INVESTORS]
+2019-12-04 09:54:38 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOMEGA+HEALTHCARE+INVESTORS&nocache=1575449678981]
+2019-12-04 09:54:40 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OMEGA HEALTHCARE INVESTORS] [https://finance.yahoo.com/quote/OHI/]
+2019-12-04 09:54:40 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:54:41 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OMNICOM GROUP INC]
+2019-12-04 09:54:41 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOMNICOM+GROUP+INC&nocache=1575449681573]
+2019-12-04 09:54:42 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OMNICOM GROUP INC] [https://finance.yahoo.com/quote/OMC/]
+2019-12-04 09:54:42 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:54:46 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ONEOK INC]
+2019-12-04 09:54:46 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BONEOK+INC&nocache=1575449686590]
+2019-12-04 09:54:47 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ONEOK INC] [https://finance.yahoo.com/quote/OKE/]
+2019-12-04 09:54:47 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:54:51 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ONEX CORP]
+2019-12-04 09:54:51 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BONEX+CORP&nocache=1575449691032]
+2019-12-04 09:54:52 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ONEX CORP] [https://es.finance.yahoo.com/quote/%5EIBEX/]
+2019-12-04 09:54:52 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:54:54 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OPEN TEXT CORP]
+2019-12-04 09:54:54 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOPEN+TEXT+CORP&nocache=1575449694665]
+2019-12-04 09:54:56 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OPEN TEXT CORP] [https://finance.yahoo.com/quote/OTEX/]
+2019-12-04 09:54:56 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:54:57 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ORACLE CORP]
+2019-12-04 09:54:57 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BORACLE+CORP&nocache=1575449697816]
+2019-12-04 09:54:59 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ORACLE CORP] [https://finance.yahoo.com/quote/ORCL/]
+2019-12-04 09:54:59 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:55:00 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ORION OYJ]
+2019-12-04 09:55:00 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BORION+OYJ&nocache=1575449700324]
+2019-12-04 09:55:01 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ORION OYJ] [https://es.finance.yahoo.com/quote/ORNBV.HE/history/]
+2019-12-04 09:55:01 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:55:04 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [ORKLA]
+2019-12-04 09:55:04 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BORKLA&nocache=1575449704407]
+2019-12-04 09:55:05 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [ORKLA] [https://es.finance.yahoo.com/quote/ORK.OL/]
+2019-12-04 09:55:05 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:55:08 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OSISKO GOLD ROYALTIES LTD]
+2019-12-04 09:55:08 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOSISKO+GOLD+ROYALTIES+LTD&nocache=1575449708540]
+2019-12-04 09:55:09 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OSISKO GOLD ROYALTIES LTD] [https://finance.yahoo.com/quote/OR/]
+2019-12-04 09:55:09 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:55:13 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OSRAM LICHT AG]
+2019-12-04 09:55:13 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOSRAM+LICHT+AG&nocache=1575449713408]
+2019-12-04 09:55:14 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OSRAM LICHT AG] [https://es.finance.yahoo.com/quote/OSR.MU/]
+2019-12-04 09:55:14 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:55:16 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OSSUR HF]
+2019-12-04 09:55:16 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOSSUR+HF&nocache=1575449716099]
+2019-12-04 09:55:17 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OSSUR HF] [https://es.finance.yahoo.com/quote/0FIW.L/history/]
+2019-12-04 09:55:17 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:55:19 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [OWENS & MINOR INC]
+2019-12-04 09:55:19 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BOWENS+%26+MINOR+INC&nocache=1575449719450]
+2019-12-04 09:55:20 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [OWENS & MINOR INC] [https://finance.yahoo.com/quote/OMI/]
+2019-12-04 09:55:20 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:55:23 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PANDORA]
+2019-12-04 09:55:23 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPANDORA&nocache=1575449723801]
+2019-12-04 09:55:25 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PANDORA] [https://es.finance.yahoo.com/quote/PNDORA.CO/]
+2019-12-04 09:55:25 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:55:27 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PARKER HANNIFIN CORP]
+2019-12-04 09:55:27 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPARKER+HANNIFIN+CORP&nocache=1575449727275]
+2019-12-04 09:55:28 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PARKER HANNIFIN CORP] [https://finance.yahoo.com/quote/PH/]
+2019-12-04 09:55:28 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:55:32 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PARKLAND FUEL CORP]
+2019-12-04 09:55:32 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPARKLAND+FUEL+CORP&nocache=1575449732322]
+2019-12-04 09:55:33 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:55:33 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:55:52 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PARKLAND FUEL CORP]
+2019-12-04 09:55:52 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:55:52 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPARKLAND+FUEL+CORP&nocache=1575449752325]
+2019-12-04 09:55:53 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PARKLAND FUEL CORP] [https://ca.finance.yahoo.com/quote/PKI.TO/]
+2019-12-04 09:55:53 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:55:54 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PARTNERS GROUP HOLDING]
+2019-12-04 09:55:54 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPARTNERS+GROUP+HOLDING&nocache=1575449754357]
+2019-12-04 09:55:55 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PARTNERS GROUP HOLDING] [https://finance.yahoo.com/quote/PGPHF/]
+2019-12-04 09:55:55 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:55:59 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PATTERN ENERGY GROUP INC]
+2019-12-04 09:55:59 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPATTERN+ENERGY+GROUP+INC&nocache=1575449759434]
+2019-12-04 09:56:00 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PATTERN ENERGY GROUP INC] [https://finance.yahoo.com/quote/pegi.to/]
+2019-12-04 09:56:00 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:56:04 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PAYCHEX]
+2019-12-04 09:56:04 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPAYCHEX&nocache=1575449764480]
+2019-12-04 09:56:05 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PAYCHEX] [https://finance.yahoo.com/quote/PAYX/]
+2019-12-04 09:56:05 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:56:08 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PAYPOINT PLC]
+2019-12-04 09:56:08 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPAYPOINT+PLC&nocache=1575449768199]
+2019-12-04 09:56:09 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PAYPOINT PLC] [https://es.finance.yahoo.com/quote/PAY.L/]
+2019-12-04 09:56:09 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:56:10 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PEARSON]
+2019-12-04 09:56:10 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPEARSON&nocache=1575449770339]
+2019-12-04 09:56:11 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PEARSON] [https://es.finance.yahoo.com/quote/PSON.L/]
+2019-12-04 09:56:11 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:56:13 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PEMBINA PIPELINE]
+2019-12-04 09:56:13 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPEMBINA+PIPELINE&nocache=1575449773919]
+2019-12-04 09:56:15 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PEMBINA PIPELINE] [https://finance.yahoo.com/quote/PBA/]
+2019-12-04 09:56:15 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:56:16 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PENNON GROUP PLC]
+2019-12-04 09:56:16 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPENNON+GROUP+PLC&nocache=1575449776427]
+2019-12-04 09:56:17 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PENNON GROUP PLC] [https://es.finance.yahoo.com/quote/PNN.L/]
+2019-12-04 09:56:17 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:56:19 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PENTAIR LTD]
+2019-12-04 09:56:19 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPENTAIR+LTD&nocache=1575449779101]
+2019-12-04 09:56:20 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PENTAIR LTD] [https://es.finance.yahoo.com/quote/PNR/]
+2019-12-04 09:56:20 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:56:21 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PENTAIR PLC]
+2019-12-04 09:56:21 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPENTAIR+PLC&nocache=1575449781598]
+2019-12-04 09:56:22 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PENTAIR PLC] [https://es.finance.yahoo.com/quote/PNR/]
+2019-12-04 09:56:22 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:56:24 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PEOPLE'S UNITED FINANCIAL]
+2019-12-04 09:56:24 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPEOPLE%27S+UNITED+FINANCIAL&nocache=1575449784426]
+2019-12-04 09:56:25 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PEOPLE'S UNITED FINANCIAL] [https://finance.yahoo.com/quote/PBCT/]
+2019-12-04 09:56:25 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:56:28 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PEOPLE'S UNITED FINANCIAL INC]
+2019-12-04 09:56:28 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPEOPLE%27S+UNITED+FINANCIAL+INC&nocache=1575449788313]
+2019-12-04 09:56:29 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PEOPLE'S UNITED FINANCIAL INC] [https://finance.yahoo.com/quote/PBCT/]
+2019-12-04 09:56:29 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:56:32 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PEPSICO INC]
+2019-12-04 09:56:32 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPEPSICO+INC&nocache=1575449792580]
+2019-12-04 09:56:34 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PEPSICO INC] [https://finance.yahoo.com/quote/PEP/]
+2019-12-04 09:56:34 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:56:37 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PERNOD RICARD]
+2019-12-04 09:56:37 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPERNOD+RICARD&nocache=1575449797951]
+2019-12-04 09:56:39 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PERNOD RICARD] [https://es.finance.yahoo.com/quote/RI.PA/]
+2019-12-04 09:56:39 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:56:40 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PERNOD RICARD SA]
+2019-12-04 09:56:40 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPERNOD+RICARD+SA&nocache=1575449800582]
+2019-12-04 09:56:41 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PERNOD RICARD SA] [https://es.finance.yahoo.com/quote/RI.PA/]
+2019-12-04 09:56:41 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:56:44 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PERRIGO CO PLC]
+2019-12-04 09:56:44 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPERRIGO+CO+PLC&nocache=1575449804568]
+2019-12-04 09:56:46 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PERRIGO CO PLC] [https://es.finance.yahoo.com/quote/PRGO/news/]
+2019-12-04 09:56:46 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:56:49 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PERSONAL GROUP HOLDINGS PLC]
+2019-12-04 09:56:49 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPERSONAL+GROUP+HOLDINGS+PLC&nocache=1575449809207]
+2019-12-04 09:56:50 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:56:50 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+2019-12-04 09:57:40 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PERSONAL GROUP HOLDINGS PLC]
+2019-12-04 09:57:40 INFO  DCWebUrlFromNombreEmpresa:1274 - Reintento [1]
+2019-12-04 09:57:40 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPERSONAL+GROUP+HOLDINGS+PLC&nocache=1575449860331]
+2019-12-04 09:57:41 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PERSONAL GROUP HOLDINGS PLC] [https://finance.yahoo.com/quote/PGH.L/]
+2019-12-04 09:57:41 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:57:45 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PETMED EXPRESS INC]
+2019-12-04 09:57:45 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPETMED+EXPRESS+INC&nocache=1575449865004]
+2019-12-04 09:57:46 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PETMED EXPRESS INC] [https://finance.yahoo.com/quote/PETS/]
+2019-12-04 09:57:46 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:57:47 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PFIZER INC]
+2019-12-04 09:57:47 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPFIZER+INC&nocache=1575449867526]
+2019-12-04 09:57:48 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PFIZER INC] [https://finance.yahoo.com/quote/PFE/]
+2019-12-04 09:57:48 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:57:50 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PHARMAMAR]
+2019-12-04 09:57:50 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPHARMAMAR&nocache=1575449870492]
+2019-12-04 09:57:51 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PHARMAMAR] [https://es.finance.yahoo.com/quote/PHM.MC/]
+2019-12-04 09:57:51 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:57:53 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PHILIP MORRIS INTERNATIONAL]
+2019-12-04 09:57:53 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPHILIP+MORRIS+INTERNATIONAL&nocache=1575449873636]
+2019-12-04 09:57:55 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PHILIP MORRIS INTERNATIONAL] [https://finance.yahoo.com/quote/PM/]
+2019-12-04 09:57:55 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:57:58 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PHILIP MORRIS INTERNATIONAL INC]
+2019-12-04 09:57:58 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPHILIP+MORRIS+INTERNATIONAL+INC&nocache=1575449878553]
+2019-12-04 09:57:59 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PHILIP MORRIS INTERNATIONAL INC] [https://finance.yahoo.com/quote/PM/]
+2019-12-04 09:57:59 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:58:03 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PHILIPS NV]
+2019-12-04 09:58:03 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPHILIPS+NV&nocache=1575449883589]
+2019-12-04 09:58:04 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PHILIPS NV] [https://es.finance.yahoo.com/quote/PHIA.AS/]
+2019-12-04 09:58:04 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:58:07 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PILGRIM´S PRIDE]
+2019-12-04 09:58:07 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPILGRIM%C2%B4S+PRIDE&nocache=1575449887644]
+2019-12-04 09:58:09 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PILGRIM´S PRIDE] [https://es.finance.yahoo.com/quote/PPC/]
+2019-12-04 09:58:09 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:58:11 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PIONEER BANKSHARES INC]
+2019-12-04 09:58:11 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPIONEER+BANKSHARES+INC&nocache=1575449891907]
+2019-12-04 09:58:13 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PIONEER BANKSHARES INC] [https://es.finance.yahoo.com/quote/PNBI/news/]
+2019-12-04 09:58:13 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:58:16 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PKG]
+2019-12-04 09:58:16 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPKG&nocache=1575449896092]
+2019-12-04 09:58:17 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PKG] [https://finance.yahoo.com/quote/PKG/]
+2019-12-04 09:58:17 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:58:19 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PLAYTECH PLC]
+2019-12-04 09:58:19 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPLAYTECH+PLC&nocache=1575449899671]
+2019-12-04 09:58:20 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PLAYTECH PLC] [https://es.finance.yahoo.com/quote/PTEC.L/]
+2019-12-04 09:58:20 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:58:23 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PLAZA RETAIL REIT]
+2019-12-04 09:58:23 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPLAZA+RETAIL+REIT&nocache=1575449903990]
+2019-12-04 09:58:25 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PLAZA RETAIL REIT] [https://es.finance.yahoo.com/quote/PLZ-UN.TO/]
+2019-12-04 09:58:25 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:58:27 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [POLARIS INDUSTRIES]
+2019-12-04 09:58:27 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPOLARIS+INDUSTRIES&nocache=1575449907405]
+2019-12-04 09:58:28 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [POLARIS INDUSTRIES] [https://finance.yahoo.com/quote/PII/]
+2019-12-04 09:58:28 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:58:31 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PORTLAND GENERAL ELECTRIC CO]
+2019-12-04 09:58:31 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPORTLAND+GENERAL+ELECTRIC+CO&nocache=1575449911304]
+2019-12-04 09:58:32 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PORTLAND GENERAL ELECTRIC CO] [https://finance.yahoo.com/quote/POR/]
+2019-12-04 09:58:32 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:58:35 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PPG INDUSTRIES INC]
+2019-12-04 09:58:35 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPPG+INDUSTRIES+INC&nocache=1575449915344]
+2019-12-04 09:58:36 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PPG INDUSTRIES INC] [https://finance.yahoo.com/quote/PPG/]
+2019-12-04 09:58:36 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [1] segundos...
+2019-12-04 09:58:38 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PPL CORP]
+2019-12-04 09:58:38 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPPL+CORP&nocache=1575449918047]
+2019-12-04 09:58:39 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PPL CORP] [https://finance.yahoo.com/quote/PPL/]
+2019-12-04 09:58:39 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [2] segundos...
+2019-12-04 09:58:41 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PREFERRED APARTMENT COMMUNITIES INC]
+2019-12-04 09:58:41 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPREFERRED+APARTMENT+COMMUNITIES+INC&nocache=1575449921558]
+2019-12-04 09:58:42 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PREFERRED APARTMENT COMMUNITIES INC] [https://finance.yahoo.com/quote/APTS/]
+2019-12-04 09:58:42 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:58:46 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PREMIUM BRANDS HOLDINGS CORP]
+2019-12-04 09:58:46 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPREMIUM+BRANDS+HOLDINGS+CORP&nocache=1575449926628]
+2019-12-04 09:58:48 INFO  DCWebUrlFromNombreEmpresa:1328 -  --- URL Encontrada [es.finance.yahoo.com] [EMPRESAS] [PREMIUM BRANDS HOLDINGS CORP] [https://es.finance.yahoo.com/quote/PBH.TO/history/]
+2019-12-04 09:58:48 INFO  DCWebUrlFromNombreEmpresa:1332 - Esperamos [3] segundos...
+2019-12-04 09:58:51 INFO  DCWebUrlFromNombreEmpresa:1271 - Buscando empresa [PRIM]
+2019-12-04 09:58:51 INFO  DCWebUrlFromNombreEmpresa:1310 - Cargando URL de búsqueda [https://www.google.es/search?q=es.finance.yahoo.com%2BPRIM&nocache=1575449931455]
+2019-12-04 09:58:52 ERROR DCWebUrlFromNombreEmpresa:1337 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.run(DCWebUrlFromNombreEmpresa.java:1326)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa.main(DCWebUrlFromNombreEmpresa.java:1235)
+2019-12-04 09:58:52 INFO  DCWebUrlFromNombreEmpresa:1345 - Esperamos a pulsar ENTER...
+
