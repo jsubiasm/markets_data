@@ -1,0 +1,222 @@
+2019-12-05 16:11:57 INFO  DCWebUrlFromNombreEmpresa_Google:1399 - Iniciando driver
+2019-12-05 16:12:00 INFO  DCWebUrlFromNombreEmpresa_Google:1402 - Iniciando proceso
+2019-12-05 16:12:00 INFO  DCWebUrlFromNombreEmpresa_Google:1408 - Procesando grupo [EMPRESAS]
+2019-12-05 16:12:00 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [AARON'S INC]
+2019-12-05 16:12:00 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BAARON%27S+INC&nocache=1575558720275]
+2019-12-05 16:12:01 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [AARON'S INC] [https://es.investing.com/equities/aarons]
+2019-12-05 16:12:01 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:03 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ABERDEEN ASSET MANAGEMENT]
+2019-12-05 16:12:03 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BABERDEEN+ASSET+MANAGEMENT&nocache=1575558723068]
+2019-12-05 16:12:04 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ABERDEEN ASSET MANAGEMENT] [https://es.investing.com/equities/aberdeen-asset-management-plc]
+2019-12-05 16:12:04 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:06 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ABERDEEN NEW DAWN INVESTMENT TRUST PLC]
+2019-12-05 16:12:06 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BABERDEEN+NEW+DAWN+INVESTMENT+TRUST+PLC&nocache=1575558726359]
+2019-12-05 16:12:07 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ABERDEEN NEW DAWN INVESTMENT TRUST PLC] [https://es.investing.com/equities/aberdeen-new-dawn-inv-trust-earnings]
+2019-12-05 16:12:07 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:09 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [AG BARR PLC]
+2019-12-05 16:12:09 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BAG+BARR+PLC&nocache=1575558729404]
+2019-12-05 16:12:10 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [AG BARR PLC] [https://es.investing.com/equities/a.g-barr-plc]
+2019-12-05 16:12:10 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:11 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ALLIED PROPERTIES REAL ESTATE INVESTMENT TRUST]
+2019-12-05 16:12:11 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BALLIED+PROPERTIES+REAL+ESTATE+INVESTMENT+TRUST&nocache=1575558731816]
+2019-12-05 16:12:13 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ALLIED PROPERTIES REAL ESTATE INVESTMENT TRUST] [https://www.investing.com/equities/allied-properties-reit]
+2019-12-05 16:12:13 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:15 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [AMADEUS IT GROUP SA]
+2019-12-05 16:12:15 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BAMADEUS+IT+GROUP+SA&nocache=1575558735377]
+2019-12-05 16:12:16 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [AMADEUS IT GROUP SA] [https://es.investing.com/equities/amadeus]
+2019-12-05 16:12:16 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:18 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [APPLIED INDUSTRIAL TECHNOLOGIES INC]
+2019-12-05 16:12:18 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BAPPLIED+INDUSTRIAL+TECHNOLOGIES+INC&nocache=1575558738204]
+2019-12-05 16:12:19 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [APPLIED INDUSTRIAL TECHNOLOGIES INC] [https://es.investing.com/equities/applied-industrial-technologies]
+2019-12-05 16:12:19 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:20 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ARMANINO FOODS OF DISTINCTION INC]
+2019-12-05 16:12:20 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BARMANINO+FOODS+OF+DISTINCTION+INC&nocache=1575558740672]
+2019-12-05 16:12:21 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ARMANINO FOODS OF DISTINCTION INC] [https://www.investing.com/equities/armanino-foods-new]
+2019-12-05 16:12:21 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:22 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ASSICURAZIONI GENERALI SPA]
+2019-12-05 16:12:22 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BASSICURAZIONI+GENERALI+SPA&nocache=1575558742681]
+2019-12-05 16:12:23 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ASSICURAZIONI GENERALI SPA] [https://es.investing.com/equities/assicurazioni-generali-adr-earnings]
+2019-12-05 16:12:23 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:24 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ATRIUM EUROPEAN REAL ESTATES ]
+2019-12-05 16:12:24 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BATRIUM+EUROPEAN+REAL+ESTATES+&nocache=1575558744920]
+2019-12-05 16:12:26 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ATRIUM EUROPEAN REAL ESTATES ] [https://es.investing.com/equities/atrium-euro-real-historical-data]
+2019-12-05 16:12:26 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:27 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BALCHEM INC]
+2019-12-05 16:12:27 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBALCHEM+INC&nocache=1575558747206]
+2019-12-05 16:12:28 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BALCHEM INC] [https://es.investing.com/equities/balchem-corp]
+2019-12-05 16:12:28 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:29 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BANCFIRST CORP OK]
+2019-12-05 16:12:29 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBANCFIRST+CORP+OK&nocache=1575558749733]
+2019-12-05 16:12:30 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BANCFIRST CORP OK] [https://es.investing.com/equities/bancfirst-corp-company-profile]
+2019-12-05 16:12:30 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:31 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BANK OF UTICA]
+2019-12-05 16:12:31 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBANK+OF+UTICA&nocache=1575558751762]
+2019-12-05 16:12:32 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BANK OF UTICA] [https://es.investing.com/equities/bank-of-america]
+2019-12-05 16:12:32 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:33 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BANKERS INVESTMENT TRUST PLC]
+2019-12-05 16:12:33 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBANKERS+INVESTMENT+TRUST+PLC&nocache=1575558753976]
+2019-12-05 16:12:34 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BANKERS INVESTMENT TRUST PLC] [https://es.investing.com/equities/bankers-investment-trust-dividends]
+2019-12-05 16:12:34 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:36 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BAYER AKTIENGESELLSCHAFT]
+2019-12-05 16:12:36 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBAYER+AKTIENGESELLSCHAFT&nocache=1575558756497]
+2019-12-05 16:12:37 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BAYER AKTIENGESELLSCHAFT] [https://es.investing.com/equities/bayer-ag]
+2019-12-05 16:12:37 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:38 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BEST BUY CORP]
+2019-12-05 16:12:38 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBEST+BUY+CORP&nocache=1575558758932]
+2019-12-05 16:12:39 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BEST BUY CORP] [https://es.investing.com/equities/best-buy]
+2019-12-05 16:12:39 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:41 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BLACK ROCK INC]
+2019-12-05 16:12:41 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBLACK+ROCK+INC&nocache=1575558761249]
+2019-12-05 16:12:42 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BLACK ROCK INC] [https://es.investing.com/equities/blackrock,-inc.-c]
+2019-12-05 16:12:42 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:43 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BLOOMSBURY PUBLISHING PLC]
+2019-12-05 16:12:43 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBLOOMSBURY+PUBLISHING+PLC&nocache=1575558763969]
+2019-12-05 16:12:44 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BLOOMSBURY PUBLISHING PLC] [https://es.investing.com/equities/bloomsbury-publishing]
+2019-12-05 16:12:44 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:46 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BRIDGEMARQ REAL ESTATE SERVICES INC]
+2019-12-05 16:12:46 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBRIDGEMARQ+REAL+ESTATE+SERVICES+INC&nocache=1575558766777]
+2019-12-05 16:12:47 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BRIDGEMARQ REAL ESTATE SERVICES INC] [https://es.investing.com/equities/brookfield-real-estate-services-inc-company-profile]
+2019-12-05 16:12:47 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:49 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BRITISH AMERICAN TOBACCO PLC ADS COMMON STOCK]
+2019-12-05 16:12:49 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBRITISH+AMERICAN+TOBACCO+PLC+ADS+COMMON+STOCK&nocache=1575558769622]
+2019-12-05 16:12:50 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BRITISH AMERICAN TOBACCO PLC ADS COMMON STOCK] [https://es.investing.com/equities/british-american-tobacco-plc-bats]
+2019-12-05 16:12:50 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:52 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BROOKFIELD INFRAESTRUCTURE PARTNERS]
+2019-12-05 16:12:52 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBROOKFIELD+INFRAESTRUCTURE+PARTNERS&nocache=1575558772727]
+2019-12-05 16:12:53 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BROOKFIELD INFRAESTRUCTURE PARTNERS] [https://es.investing.com/equities/brookfield-infrastructure-partners]
+2019-12-05 16:12:53 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:55 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BROWN & BROWN INC]
+2019-12-05 16:12:55 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBROWN+%26+BROWN+INC&nocache=1575558775383]
+2019-12-05 16:12:56 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BROWN & BROWN INC] [https://es.investing.com/equities/brown---brown-inc]
+2019-12-05 16:12:56 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:12:57 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BROWN FORMAN CLASS B]
+2019-12-05 16:12:57 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBROWN+FORMAN+CLASS+B&nocache=1575558777799]
+2019-12-05 16:12:59 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BROWN FORMAN CLASS B] [https://es.investing.com/equities/brown-forman-b-advanced-chart]
+2019-12-05 16:12:59 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:00 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BROWN FORMAN INC CLASS B]
+2019-12-05 16:13:00 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBROWN+FORMAN+INC+CLASS+B&nocache=1575558780390]
+2019-12-05 16:13:01 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BROWN FORMAN INC CLASS B] [https://es.investing.com/equities/brown-forman-b]
+2019-12-05 16:13:01 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:03 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [BRUNNER INVESTMENT TRUST PLC]
+2019-12-05 16:13:03 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BBRUNNER+INVESTMENT+TRUST+PLC&nocache=1575558783166]
+2019-12-05 16:13:04 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [BRUNNER INVESTMENT TRUST PLC] [https://es.investing.com/equities/brunner-inv-trust]
+2019-12-05 16:13:04 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:06 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CALEDONIA INVESTMENTS PLC]
+2019-12-05 16:13:06 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCALEDONIA+INVESTMENTS+PLC&nocache=1575558786107]
+2019-12-05 16:13:07 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CALEDONIA INVESTMENTS PLC] [https://www.investing.com/equities/caledonia-investment]
+2019-12-05 16:13:07 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:08 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CALVIN B TAYLOR BANKSHARES INC]
+2019-12-05 16:13:08 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCALVIN+B+TAYLOR+BANKSHARES+INC&nocache=1575558788492]
+2019-12-05 16:13:09 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CALVIN B TAYLOR BANKSHARES INC] [https://www.investing.com/equities/taylor-calvin-b-bksh-financial-summary]
+2019-12-05 16:13:09 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:11 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CANADIAN APARTMENT PROPERTIES REAL ESTATE INVESTMENT TRUST]
+2019-12-05 16:13:11 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCANADIAN+APARTMENT+PROPERTIES+REAL+ESTATE+INVESTMENT+TRUST&nocache=1575558791484]
+2019-12-05 16:13:12 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CANADIAN APARTMENT PROPERTIES REAL ESTATE INVESTMENT TRUST] [https://www.investing.com/equities/canadian-apartment-properties-reit]
+2019-12-05 16:13:12 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:14 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CANADIAN TIRE CORP LTD A NVTG]
+2019-12-05 16:13:14 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCANADIAN+TIRE+CORP+LTD+A+NVTG&nocache=1575558794389]
+2019-12-05 16:13:15 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CANADIAN TIRE CORP LTD A NVTG] [https://es.investing.com/equities/canadian-tire-corp-ltd]
+2019-12-05 16:13:15 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:17 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CARLSBERG A/S CLASS B]
+2019-12-05 16:13:17 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCARLSBERG+A%2FS+CLASS+B&nocache=1575558797117]
+2019-12-05 16:13:18 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CARLSBERG A/S CLASS B] [https://es.investing.com/equities/carlsberg-b]
+2019-12-05 16:13:18 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:19 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CASEY'S GENERAL STORES INC]
+2019-12-05 16:13:19 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCASEY%27S+GENERAL+STORES+INC&nocache=1575558799425]
+2019-12-05 16:13:20 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CASEY'S GENERAL STORES INC] [https://es.investing.com/equities/caseys-general]
+2019-12-05 16:13:20 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:22 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CBOE HOLDINGS INC]
+2019-12-05 16:13:22 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCBOE+HOLDINGS+INC&nocache=1575558802198]
+2019-12-05 16:13:23 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CBOE HOLDINGS INC] [https://es.investing.com/equities/cboe-holdings-inc]
+2019-12-05 16:13:23 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:24 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CHESAPEAKE FINANCIAL SHARES]
+2019-12-05 16:13:24 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCHESAPEAKE+FINANCIAL+SHARES&nocache=1575558804492]
+2019-12-05 16:13:25 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CHESAPEAKE FINANCIAL SHARES] [https://es.investing.com/equities/chesapeake-ener]
+2019-12-05 16:13:25 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:27 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CHICO'S FAS INC]
+2019-12-05 16:13:27 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCHICO%27S+FAS+INC&nocache=1575558807699]
+2019-12-05 16:13:28 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CHICO'S FAS INC] [https://es.investing.com/equities/chicos-fas-inc]
+2019-12-05 16:13:28 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:30 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CHOCOLADEFABRIKEN LINDT & SPRUENGLI AG PARTICIPATION]
+2019-12-05 16:13:30 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCHOCOLADEFABRIKEN+LINDT+%26+SPRUENGLI+AG+PARTICIPATION&nocache=1575558810894]
+2019-12-05 16:13:31 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CHOCOLADEFABRIKEN LINDT & SPRUENGLI AG PARTICIPATION] [https://es.investing.com/equities/lindt---sp-n]
+2019-12-05 16:13:31 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:33 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CITY OF LONDON INVESTMENT TRUST PLC]
+2019-12-05 16:13:33 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCITY+OF+LONDON+INVESTMENT+TRUST+PLC&nocache=1575558813230]
+2019-12-05 16:13:34 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CITY OF LONDON INVESTMENT TRUST PLC] [https://es.investing.com/equities/city-of-london-investment-trust-components]
+2019-12-05 16:13:34 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:35 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CONCURRENT TECHNOLOGIES PLC]
+2019-12-05 16:13:35 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCONCURRENT+TECHNOLOGIES+PLC&nocache=1575558815837]
+2019-12-05 16:13:36 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CONCURRENT TECHNOLOGIES PLC] [https://uk.investing.com/equities/concurrent-technologies]
+2019-12-05 16:13:36 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:38 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [CRACKER BARREL OLD COUNTRY STORE INC]
+2019-12-05 16:13:38 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BCRACKER+BARREL+OLD+COUNTRY+STORE+INC&nocache=1575558818688]
+2019-12-05 16:13:40 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [CRACKER BARREL OLD COUNTRY STORE INC] [https://es.investing.com/equities/cracker-barrelold-country]
+2019-12-05 16:13:40 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:41 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [DOMINO'S PIZZA GROUP PLC]
+2019-12-05 16:13:41 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BDOMINO%27S+PIZZA+GROUP+PLC&nocache=1575558821708]
+2019-12-05 16:13:42 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [DOMINO'S PIZZA GROUP PLC] [https://es.investing.com/equities/dominos-pizza-ukir]
+2019-12-05 16:13:42 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:44 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [EDISON INTERNACIONAL]
+2019-12-05 16:13:44 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BEDISON+INTERNACIONAL&nocache=1575558824587]
+2019-12-05 16:13:45 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [EDISON INTERNACIONAL] [https://es.investing.com/equities/edison-intl]
+2019-12-05 16:13:45 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:47 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ELIA SYSTEM OPERATOR NV]
+2019-12-05 16:13:47 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BELIA+SYSTEM+OPERATOR+NV&nocache=1575558827067]
+2019-12-05 16:13:48 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ELIA SYSTEM OPERATOR NV] [https://es.investing.com/equities/elia-system-op.]
+2019-12-05 16:13:48 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:49 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [EMS CHEMIE HOLDING AG]
+2019-12-05 16:13:49 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BEMS+CHEMIE+HOLDING+AG&nocache=1575558829933]
+2019-12-05 16:13:51 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [EMS CHEMIE HOLDING AG] [https://es.investing.com/equities/ems-chemie-hld]
+2019-12-05 16:13:51 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:52 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ENEL SPA]
+2019-12-05 16:13:52 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BENEL+SPA&nocache=1575558832977]
+2019-12-05 16:13:54 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ENEL SPA] [https://es.investing.com/equities/enel]
+2019-12-05 16:13:54 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:55 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [ESSILOR LUXOTTICA]
+2019-12-05 16:13:55 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BESSILOR+LUXOTTICA&nocache=1575558835267]
+2019-12-05 16:13:56 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [ESSILOR LUXOTTICA] [https://es.investing.com/equities/essilor-internat]
+2019-12-05 16:13:56 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:13:58 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [EXCO TECHNOLOGIES LTD]
+2019-12-05 16:13:58 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BEXCO+TECHNOLOGIES+LTD&nocache=1575558838258]
+2019-12-05 16:13:59 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [EXCO TECHNOLOGIES LTD] [https://es.investing.com/equities/exco-technologies-limited]
+2019-12-05 16:13:59 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:01 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [EXXONMOBIL CORP]
+2019-12-05 16:14:01 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BEXXONMOBIL+CORP&nocache=1575558841105]
+2019-12-05 16:14:02 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [EXXONMOBIL CORP] [https://es.investing.com/equities/exxon-mobil]
+2019-12-05 16:14:02 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:03 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [F&C CAPITAL & INCOME INVESTMENT TRUST PLC]
+2019-12-05 16:14:03 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BF%26C+CAPITAL+%26+INCOME+INVESTMENT+TRUST+PLC&nocache=1575558843708]
+2019-12-05 16:14:04 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [F&C CAPITAL & INCOME INVESTMENT TRUST PLC] [https://es.investing.com/equities/f-c-capital---income-inv-trust-technical]
+2019-12-05 16:14:04 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:06 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [FAURECIA SA]
+2019-12-05 16:14:06 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BFAURECIA+SA&nocache=1575558846006]
+2019-12-05 16:14:06 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [FAURECIA SA] [https://es.investing.com/equities/faurecia]
+2019-12-05 16:14:06 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:08 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [FIELMANN AKTIENGESELLSCHAFT]
+2019-12-05 16:14:08 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BFIELMANN+AKTIENGESELLSCHAFT&nocache=1575558848786]
+2019-12-05 16:14:09 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [FIELMANN AKTIENGESELLSCHAFT] [https://es.investing.com/equities/fielmann-ag-exch]
+2019-12-05 16:14:09 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:11 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [FIRST OF LONG ISLAND CORP]
+2019-12-05 16:14:11 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BFIRST+OF+LONG+ISLAND+CORP&nocache=1575558851779]
+2019-12-05 16:14:13 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [FIRST OF LONG ISLAND CORP] [https://es.investing.com/equities/the-first-of-long-options]
+2019-12-05 16:14:13 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:14 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [FRAPORT AG FRANKFURT ARPRT SVCS WRLDWDE]
+2019-12-05 16:14:14 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BFRAPORT+AG+FRANKFURT+ARPRT+SVCS+WRLDWDE&nocache=1575558854713]
+2019-12-05 16:14:16 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [FRAPORT AG FRANKFURT ARPRT SVCS WRLDWDE] [https://es.investing.com/equities/fraport-frankfurt-airport-adr]
+2019-12-05 16:14:16 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:17 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [FRESENIUS MEDICAL CARE AG & CO KGAA]
+2019-12-05 16:14:17 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BFRESENIUS+MEDICAL+CARE+AG+%26+CO+KGAA&nocache=1575558857814]
+2019-12-05 16:14:19 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [FRESENIUS MEDICAL CARE AG & CO KGAA] [https://es.investing.com/equities/fresenius-medical-care-e?cid=997111]
+2019-12-05 16:14:19 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:20 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [FUCHS PETROLUB SE PREF]
+2019-12-05 16:14:20 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BFUCHS+PETROLUB+SE+PREF&nocache=1575558860940]
+2019-12-05 16:14:21 INFO  DCWebUrlFromNombreEmpresa_Google:1475 -  --- URL Encontrada [es.investing.com] [EMPRESAS] [FUCHS PETROLUB SE PREF] [https://es.investing.com/equities/fuchs-petrolub-ag]
+2019-12-05 16:14:21 INFO  DCWebUrlFromNombreEmpresa_Google:1479 - Esperamos [1] segundos...
+2019-12-05 16:14:23 INFO  DCWebUrlFromNombreEmpresa_Google:1418 - Buscando empresa [FUCHS PETROLUB SE PREFERRED]
+2019-12-05 16:14:23 INFO  DCWebUrlFromNombreEmpresa_Google:1457 - Cargando URL de búsqueda [https://www.google.es/search?q=es.investing.com%2BFUCHS+PETROLUB+SE+PREFERRED&nocache=1575558863142]
+2019-12-05 16:14:24 ERROR DCWebUrlFromNombreEmpresa_Google:1484 - Se ha producido un error
+java.lang.Exception: No se ha encontrado la URL
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa_Google.run(DCWebUrlFromNombreEmpresa_Google.java:1473)
+	at jsm.mdata.selenium.screenshot.common.DCWebUrlFromNombreEmpresa_Google.main(DCWebUrlFromNombreEmpresa_Google.java:1382)
+2019-12-05 16:14:24 INFO  DCWebUrlFromNombreEmpresa_Google:1492 - Esperamos a pulsar ENTER...
