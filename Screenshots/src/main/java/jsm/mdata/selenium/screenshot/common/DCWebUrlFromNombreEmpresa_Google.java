@@ -6,6 +6,7 @@ package jsm.mdata.selenium.screenshot.common;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 import org.openqa.selenium.By;
@@ -23,18 +24,18 @@ import jsm.mdata.selenium.screenshot.base.WebDriverBase;
  * @author Empleado
  *
  */
-public class DCWebUrlFromNombreEmpresa
+public class DCWebUrlFromNombreEmpresa_Google
 {
 
 	/**
 	 * Logger
 	 */
-	private final static Logger LOGGER = LoggerFactory.getLogger(DCWebUrlFromNombreEmpresa.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(DCWebUrlFromNombreEmpresa_Google.class);
 
 	/**
 	 * Configuración
 	 */
-	// private final static Random RANDOM = new Random();
+	private final static Random RANDOM = new Random();
 	private final static List<URLGroup> LISTA_EMPRESAS_GROUP = new ArrayList<URLGroup>();
 	private final static List<String[]> LISTA_PROVEEDORES_DATOS = new ArrayList<String[]>();
 	static
@@ -42,7 +43,7 @@ public class DCWebUrlFromNombreEmpresa
 		// --
 		// -- LISTA PROVEEDORES DATOS
 		// --
-		// LISTA_PROVEEDORES_DATOS.add(new String[] { "es.finance.yahoo.com", "finance.yahoo.com/quote/" });
+		LISTA_PROVEEDORES_DATOS.add(new String[] { "es.finance.yahoo.com", "finance.yahoo.com/quote/" });
 		LISTA_PROVEEDORES_DATOS.add(new String[] { "es.investing.com", "investing.com/equities/" });
 		// --
 		// -- LISTA DE EMPRESAS
@@ -1327,7 +1328,7 @@ public class DCWebUrlFromNombreEmpresa
 						LOGGER.info(" --- URL Encontrada [" + proveedorDatos[0] + "] [" + downloadFolder + "] [" + nombreEmpresa + "] [" + resultHrefElemento + "]");
 						empresaIdx++;
 						errorRetry = 0;
-						int msEspera = 1000;
+						int msEspera = getRandomMsBetween(1000, 2000);
 						LOGGER.info("Esperamos [" + String.valueOf(msEspera / 1000) + "] segundos...");
 						Thread.sleep(msEspera);
 					}
@@ -1354,10 +1355,10 @@ public class DCWebUrlFromNombreEmpresa
 	 * @param max
 	 * @return
 	 */
-	// private static int getRandomMsBetween(int minMs, int maxMs)
-	// {
-	// return RANDOM.nextInt(maxMs - minMs) + minMs;
-	// }
+	private static int getRandomMsBetween(int minMs, int maxMs)
+	{
+		return RANDOM.nextInt(maxMs - minMs) + minMs;
+	}
 
 	/**
 	 * 
