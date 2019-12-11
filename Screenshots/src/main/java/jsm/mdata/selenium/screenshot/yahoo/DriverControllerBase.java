@@ -141,36 +141,36 @@ public abstract class DriverControllerBase
 				WebDriverBase.clickElement(driver, elemento);
 				continue;
 			}
-			// else if (elemento.getAttribute("innerHTML").indexOf("Intervalo") != -1 && elemento.getAttribute("innerHTML").indexOf("Intervalo de fechas") == -1)
-			// {
-			// WebDriverBase.clickElement(driver, elemento);
-			// WebElement presetDiv = driver.findElement(By.id("preset"));
-			// List<WebElement> listaIntervalos = presetDiv.findElements(By.tagName("span"));
-			// for (WebElement intervalo : listaIntervalos)
-			// {
-			// if (intervalo.getAttribute("innerHTML").indexOf("1&nbsp;mes") != -1)
-			// {
-			// WebDriverBase.clickElement(driver, intervalo);
-			// continue;
-			// }
-			// }
-			// continue;
-			// }
-			// else if (elemento.getAttribute("innerHTML").indexOf("Línea") != -1)
-			// {
-			// WebDriverBase.clickElement(driver, elemento);
-			// WebElement presetDiv = driver.findElement(By.id("dropdown-menu"));
-			// List<WebElement> listaTiposChart = presetDiv.findElements(By.tagName("span"));
-			// for (WebElement tipoChart : listaTiposChart)
-			// {
-			// if (tipoChart.getAttribute("innerHTML").indexOf("Vela") != -1)
-			// {
-			// WebDriverBase.clickElement(driver, tipoChart);
-			// continue;
-			// }
-			// }
-			// continue;
-			// }
+			else if (elemento.getAttribute("innerHTML").indexOf("Intervalo") != -1 && elemento.getAttribute("innerHTML").indexOf("Intervalo de fechas") == -1)
+			{
+				WebDriverBase.clickElement(driver, elemento);
+				WebElement presetDiv = driver.findElement(By.id("preset"));
+				List<WebElement> listaIntervalos = presetDiv.findElements(By.tagName("span"));
+				for (WebElement intervalo : listaIntervalos)
+				{
+					if (intervalo.getAttribute("innerHTML").indexOf("1&nbsp;mes") != -1)
+					{
+						WebDriverBase.clickElement(driver, intervalo);
+						break;
+					}
+				}
+				continue;
+			}
+			else if (elemento.getAttribute("innerHTML").indexOf("Línea") != -1)
+			{
+				WebDriverBase.clickElement(driver, elemento);
+				WebElement presetDiv = driver.findElement(By.id("dropdown-menu"));
+				List<WebElement> listaTiposChart = presetDiv.findElements(By.tagName("span"));
+				for (WebElement tipoChart : listaTiposChart)
+				{
+					if (tipoChart.getAttribute("innerHTML").indexOf("Vela") != -1)
+					{
+						WebDriverBase.clickElement(driver, tipoChart);
+						break;
+					}
+				}
+				continue;
+			}
 		}
 
 		LOGGER.info("Esperamos 500 milisegundos");

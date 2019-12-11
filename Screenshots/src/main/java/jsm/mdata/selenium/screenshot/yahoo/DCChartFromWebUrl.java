@@ -40,7 +40,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		// -- ACCIONES CON DIVIDENDO
 		// --
 		List<String> listaURL_09 = new ArrayList<String>();
-		listaURL_09.add("https://au.finance.yahoo.com/quote/bhp.ax/");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/0548.hk");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/1910.hk/");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/3in.l/");
@@ -159,6 +158,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.finance.yahoo.com/quote/bg/");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/bgs/");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/bhb/");
+		listaURL_09.add("https://es.finance.yahoo.com/quote/bhp.ax");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/bim.pa/");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/bio.mc/");
 		listaURL_09.add("https://es.finance.yahoo.com/quote/bip/");
