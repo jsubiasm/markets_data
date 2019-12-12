@@ -136,7 +136,25 @@ public abstract class DriverControllerBase
 		List<WebElement> elementosToolbar = chartToolbar.findElements(By.tagName("span"));
 		for (WebElement elemento : elementosToolbar)
 		{
-			if (elemento.getAttribute("innerHTML").indexOf("Máx.") != -1)
+			if (elemento.getAttribute("innerHTML").indexOf("Eventos") != -1)
+			{
+				WebDriverBase.clickElement(driver, elemento);
+				WebElement dropdownMenu = driver.findElement(By.id("dropdown-menu"));
+				List<WebElement> listaOpciones = dropdownMenu.findElements(By.tagName("span"));
+				for (WebElement opcion : listaOpciones)
+				{
+					if (opcion.getAttribute("innerHTML").indexOf("Dividendos") != -1)
+					{
+						WebDriverBase.clickElement(driver, opcion);
+					}
+					else if (opcion.getAttribute("innerHTML").indexOf("Splits de acciones") != -1)
+					{
+						WebDriverBase.clickElement(driver, opcion);
+					}
+				}
+				continue;
+			}
+			else if (elemento.getAttribute("innerHTML").indexOf("Máx.") != -1)
 			{
 				WebDriverBase.clickElement(driver, elemento);
 				continue;
