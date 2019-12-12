@@ -85,7 +85,7 @@ public abstract class DriverControllerBase
 					if (doubleResultCAP < minCapitalizacion)
 					{
 						LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + doubleResultCAP + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
-						LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + resultCAP + ";-");
+						LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacionStr + ";-");
 						return;
 					}
 					else
@@ -96,7 +96,7 @@ public abstract class DriverControllerBase
 				else
 				{
 					LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + resultCAP + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
-					LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + resultCAP + ";-");
+					LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacionStr + ";-");
 					return;
 				}
 			}
@@ -126,11 +126,9 @@ public abstract class DriverControllerBase
 				}
 			}
 		}
-
 		String chartUrl = hrefElemento.replaceAll("quote", "chart");
 		LOGGER.info("Cargando chart URL [" + chartUrl + "] ");
 		driver.get(chartUrl);
-
 		LOGGER.info("Ajustando el chart");
 		WebElement chartToolbar = driver.findElement(By.id("chart-toolbar"));
 		List<WebElement> elementosToolbar = chartToolbar.findElements(By.tagName("span"));
@@ -190,13 +188,19 @@ public abstract class DriverControllerBase
 				continue;
 			}
 		}
-
 		LOGGER.info("Esperamos 500 milisegundos");
 		Thread.sleep(500);
-
-		LOGGER.info("Generando screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + resultRPD + ";" + resultCAP + ";" + resultCAP_UM + ";" + hrefElemento);
-		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + doubleResultRPD.intValue() + "\\" + URLEncoder.encode(hrefElemento, WebDriverBase.CHARSET) + timeFrame + ".png"));
+		if (doubleResultRPD != null)
+		{
+			LOGGER.info("Generando screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + resultRPD + ";" + resultCAP + ";" + resultCAP_UM + ";" + hrefElemento);
+			File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + doubleResultRPD.intValue() + "\\" + URLEncoder.encode(hrefElemento, WebDriverBase.CHARSET) + timeFrame + ".png"));
+		}
+		else
+		{
+			LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + resultRPD + "] no está disponible");
+			LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
+		}
 	}
 
 }
