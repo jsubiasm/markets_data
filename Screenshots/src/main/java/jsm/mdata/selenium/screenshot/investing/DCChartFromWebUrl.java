@@ -1148,7 +1148,12 @@ public class DCChartFromWebUrl extends DriverControllerBase
 	/**
 	 * 
 	 */
-	private static final Double RPD_MINIMA = 4.0;
+	private final static Integer MAX_ERROR_RETRY = 3;
+
+	/**
+	 * 
+	 */
+	private static final Double RPD_MINIMA = 5.0;
 
 	/**
 	 * 
@@ -1196,18 +1201,31 @@ public class DCChartFromWebUrl extends DriverControllerBase
 			LOGGER.info("Procesando grupo [" + downloadFolder + "]");
 			List<String> listaURL = urlGroup.getListaURL();
 			int urlsIdx = 0;
+			int errorRetry = 0;
 			while (urlsIdx < listaURL.size())
 			{
+				String hrefElemento = null;
 				try
 				{
-					String hrefElemento = listaURL.get(urlsIdx);
+					if (errorRetry > 0)
+					{
+						LOGGER.info("Reintento [" + errorRetry + "]");
+					}
+					hrefElemento = listaURL.get(urlsIdx);
 					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL, RPD_MINIMA, CAP_MINIMA_EN_B);
 					urlsIdx++;
+					errorRetry = 0;
 				}
 				catch (Exception e)
 				{
 					LOGGER.error("Se ha producido un error", e);
-					gestionError(driver);
+					errorRetry++;
+					if (errorRetry >= MAX_ERROR_RETRY)
+					{
+						LOGGER.info("NO screenshot --> -;" + hrefElemento + ";-;-");
+						urlsIdx++;
+						errorRetry = 0;
+					}
 				}
 			}
 		}
