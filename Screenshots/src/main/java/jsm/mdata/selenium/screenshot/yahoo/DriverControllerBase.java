@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jsm.mdata.selenium.screenshot.base.Utils;
 import jsm.mdata.selenium.screenshot.base.WebDriverBase;
 
 /**
@@ -84,8 +85,8 @@ public abstract class DriverControllerBase
 					doubleResultCAP = Double.valueOf(resultCAP);
 					if (doubleResultCAP < minCapitalizacion)
 					{
-						LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + doubleResultCAP + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
-						LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacionStr + ";-");
+						LOGGER.info("No se obtiene el chart de [" + Utils.normalizaTexto(resultNombreEmpresa) + "] [" + hrefElemento + "] porque la capitalización [" + doubleResultCAP + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
+						LOGGER.info("NO screenshot --> " + Utils.normalizaTexto(resultNombreEmpresa) + ";" + hrefElemento + ";" + capitalizacionStr + ";-");
 						return;
 					}
 					else
@@ -95,8 +96,8 @@ public abstract class DriverControllerBase
 				}
 				else
 				{
-					LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + resultCAP + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
-					LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacionStr + ";-");
+					LOGGER.info("No se obtiene el chart de [" + Utils.normalizaTexto(resultNombreEmpresa) + "] [" + hrefElemento + "] porque la capitalización [" + resultCAP + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
+					LOGGER.info("NO screenshot --> " + Utils.normalizaTexto(resultNombreEmpresa) + ";" + hrefElemento + ";" + capitalizacionStr + ";-");
 					return;
 				}
 			}
@@ -107,8 +108,8 @@ public abstract class DriverControllerBase
 				resultRPD = resultRPD.substring(resultRPD.indexOf("(") + 1, resultRPD.indexOf(")") - 1);
 				if (resultRPD.indexOf("N/") != -1)
 				{
-					LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + resultRPD + "] no está disponible");
-					LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
+					LOGGER.info("No se obtiene el chart de [" + Utils.normalizaTexto(resultNombreEmpresa) + "] [" + hrefElemento + "] porque la RPD [" + resultRPD + "] no está disponible");
+					LOGGER.info("NO screenshot --> " + Utils.normalizaTexto(resultNombreEmpresa) + ";" + hrefElemento + ";-;-");
 					return;
 				}
 				resultRPD = resultRPD.replaceAll("\\.", "");
@@ -116,8 +117,8 @@ public abstract class DriverControllerBase
 				doubleResultRPD = Double.valueOf(resultRPD);
 				if (doubleResultRPD < minDividendo)
 				{
-					LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + doubleResultRPD + "] es menor que la RPD mínima [" + minDividendo + "] ");
-					LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;" + resultRPD);
+					LOGGER.info("No se obtiene el chart de [" + Utils.normalizaTexto(resultNombreEmpresa) + "] [" + hrefElemento + "] porque la RPD [" + doubleResultRPD + "] es menor que la RPD mínima [" + minDividendo + "] ");
+					LOGGER.info("NO screenshot --> " + Utils.normalizaTexto(resultNombreEmpresa) + ";" + hrefElemento + ";-;" + resultRPD);
 					return;
 				}
 				else
@@ -134,18 +135,18 @@ public abstract class DriverControllerBase
 		List<WebElement> elementosToolbar = chartToolbar.findElements(By.tagName("span"));
 		for (WebElement elemento : elementosToolbar)
 		{
-			if (elemento.getAttribute("innerHTML").indexOf("Eventos") != -1)
+			if (elemento.getAttribute("innerHTML").indexOf("Eventos") != -1 && elemento.getAttribute("innerHTML").indexOf("span") == -1)
 			{
 				WebDriverBase.clickElement(driver, elemento);
 				WebElement dropdownMenu = driver.findElement(By.id("dropdown-menu"));
 				List<WebElement> listaOpciones = dropdownMenu.findElements(By.tagName("span"));
 				for (WebElement opcion : listaOpciones)
 				{
-					if (opcion.getAttribute("innerHTML").indexOf("Dividendos") != -1)
+					if (opcion.getAttribute("innerHTML").indexOf("Dividendos") != -1 && opcion.getAttribute("innerHTML").indexOf("span") == -1)
 					{
 						WebDriverBase.clickElement(driver, opcion);
 					}
-					else if (opcion.getAttribute("innerHTML").indexOf("Splits de acciones") != -1)
+					else if (opcion.getAttribute("innerHTML").indexOf("Splits de acciones") != -1 && opcion.getAttribute("innerHTML").indexOf("span") == -1)
 					{
 						WebDriverBase.clickElement(driver, opcion);
 					}
@@ -192,14 +193,14 @@ public abstract class DriverControllerBase
 		Thread.sleep(500);
 		if (doubleResultRPD != null)
 		{
-			LOGGER.info("Generando screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + resultRPD + ";" + resultCAP + ";" + resultCAP_UM + ";" + hrefElemento);
+			LOGGER.info("Generando screenshot --> " + Utils.normalizaTexto(resultNombreEmpresa) + ";" + resultRPD.replaceAll("\\.", ",") + ";" + resultCAP.replaceAll("\\.", ",") + ";" + resultCAP_UM + ";" + hrefElemento);
 			File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + doubleResultRPD.intValue() + "\\" + URLEncoder.encode(hrefElemento, WebDriverBase.CHARSET) + timeFrame + ".png"));
 		}
 		else
 		{
-			LOGGER.info("No se obtiene el chart de [" + resultNombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + resultRPD + "] no está disponible");
-			LOGGER.info("NO screenshot --> " + resultNombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
+			LOGGER.info("No se obtiene el chart de [" + Utils.normalizaTexto(resultNombreEmpresa) + "] [" + hrefElemento + "] porque la RPD [" + resultRPD + "] no está disponible");
+			LOGGER.info("NO screenshot --> " + Utils.normalizaTexto(resultNombreEmpresa) + ";" + hrefElemento + ";-;-");
 		}
 	}
 

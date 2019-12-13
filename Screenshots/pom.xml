@@ -43,7 +43,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>jsm.mdata.selenium.screenshot.investing.DCChartFromWebUrl</mainClass>
+							<mainClass>jsm.mdata.selenium.screenshot.yahoo.DCChartFromWebUrl</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
