@@ -140,13 +140,14 @@ public abstract class DriverControllerBase
 				WebDriverBase.clickElement(driver, elemento);
 				WebElement dropdownMenu = driver.findElement(By.id("dropdown-menu"));
 				List<WebElement> listaOpciones = dropdownMenu.findElements(By.tagName("span"));
+				boolean firstCheckboxChecked = dropdownMenu.findElements(By.tagName("svg")).get(0).getAttribute("data-icon").equalsIgnoreCase("checkbox-checked");
 				for (WebElement opcion : listaOpciones)
 				{
-					if (opcion.getAttribute("innerHTML").indexOf("Dividendos") != -1 && opcion.getAttribute("innerHTML").indexOf("span") == -1)
+					if (firstCheckboxChecked && opcion.getAttribute("innerHTML").indexOf("Dividendos") != -1 && opcion.getAttribute("innerHTML").indexOf("span") == -1)
 					{
 						WebDriverBase.clickElement(driver, opcion);
 					}
-					else if (opcion.getAttribute("innerHTML").indexOf("Splits de acciones") != -1 && opcion.getAttribute("innerHTML").indexOf("span") == -1)
+					else if (firstCheckboxChecked && opcion.getAttribute("innerHTML").indexOf("Splits de acciones") != -1 && opcion.getAttribute("innerHTML").indexOf("span") == -1)
 					{
 						WebDriverBase.clickElement(driver, opcion);
 					}
