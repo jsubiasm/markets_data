@@ -48,10 +48,13 @@ public abstract class DriverControllerBase
 	 * @param driver
 	 * @param hrefElemento
 	 * @param downloadPath
-	 * @param charset
+	 * @param timeFrame
+	 * @param minDividendo
+	 * @param minCapitalizacion
+	 * @param nacionalidades
 	 * @throws Exception
 	 */
-	protected static void procesarElemento(WebDriver driver, String hrefElemento, String downloadPath, String timeFrame, Double minDividendo, Double minCapitalizacion) throws Exception
+	protected static void procesarElemento(WebDriver driver, String hrefElemento, String downloadPath, String timeFrame, Double minDividendo, Double minCapitalizacion, String[] nacionalidades) throws Exception
 	{
 		LOGGER.info("Cargando URL [" + hrefElemento + "] ");
 		driver.get(hrefElemento);
@@ -59,6 +62,41 @@ public abstract class DriverControllerBase
 		LOGGER.info("Buscando nombre de empresa");
 		WebElement instrumentHead = driver.findElement(By.className("instrumentHead"));
 		String nombreEmpresa = instrumentHead.findElements(By.tagName("h1")).get(0).getAttribute("innerHTML").trim();
+
+		String nacionalidad = null;
+		if (nacionalidades != null && nacionalidades.length > 0)
+		{
+			LOGGER.info("Buscando Nacionalidad");
+			try
+			{
+				new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("DropdownBtn")));
+				WebElement botonNacionalidad = driver.findElement(By.id("DropdownBtn"));
+				WebElement bandera = botonNacionalidad.findElement(By.tagName("span"));
+				nacionalidad = bandera.getAttribute("class").trim();
+				nacionalidad = nacionalidad.substring(7).trim();
+				boolean nacionalidadOk = false;
+				for (int i = 0; i < nacionalidades.length; i++)
+				{
+					if (nacionalidades[i].equalsIgnoreCase(nacionalidad))
+					{
+						nacionalidadOk = true;
+						break;
+					}
+				}
+				if (!nacionalidadOk)
+				{
+					LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la Nacionalidad [" + nacionalidad + "] no es ninguna de las seleccionadas");
+					LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-;" + nacionalidad);
+					return;
+				}
+			}
+			catch (Exception e)
+			{
+				LOGGER.error("Error al obtener la Nacionalidad de [" + nombreEmpresa + "] [" + hrefElemento + "]", e);
+				LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-;-");
+				return;
+			}
+		}
 
 		Double capitalizacion = null;
 		if (minCapitalizacion != null)
@@ -89,7 +127,7 @@ public abstract class DriverControllerBase
 							if (capitalizacion < minCapitalizacion)
 							{
 								LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacion + "] B es menor que la capitalización mínima [" + minCapitalizacion + "] B");
-								LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacion + ";-");
+								LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacion + ";-;-");
 								return;
 							}
 							else
@@ -100,7 +138,7 @@ public abstract class DriverControllerBase
 						else
 						{
 							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la capitalización [" + capitalizacionStr + "] no supera la capitalización mínima [" + minCapitalizacion + "] B");
-							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacionStr + ";-");
+							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";" + capitalizacionStr + ";-;-");
 							return;
 						}
 					}
@@ -109,7 +147,7 @@ public abstract class DriverControllerBase
 			catch (Exception e)
 			{
 				LOGGER.error("Error al obtener la Capitalización de [" + nombreEmpresa + "] [" + hrefElemento + "]", e);
-				LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
+				LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-;-");
 				return;
 			}
 		}
@@ -133,7 +171,7 @@ public abstract class DriverControllerBase
 						if (dividendoStr.indexOf("N/A") != -1)
 						{
 							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + dividendoStr + "] no está disponible");
-							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
+							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-;-");
 							return;
 						}
 						dividendoStr = dividendoStr.substring(dividendoStr.indexOf("(") + 1, dividendoStr.indexOf(")") - 1);
@@ -143,7 +181,7 @@ public abstract class DriverControllerBase
 						if (dividendo < minDividendo)
 						{
 							LOGGER.info("No se obtiene el chart de [" + nombreEmpresa.replaceAll("&amp;", "&") + "] [" + hrefElemento + "] porque la RPD [" + dividendo + "] es menor que la RPD mínima [" + minDividendo + "] ");
-							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;" + dividendo);
+							LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;" + dividendo + ";-");
 							return;
 						}
 						else
@@ -156,7 +194,7 @@ public abstract class DriverControllerBase
 			catch (Exception e)
 			{
 				LOGGER.error("Error al obtener la RPD de [" + nombreEmpresa + "] [" + hrefElemento + "]", e);
-				LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-");
+				LOGGER.info("NO screenshot --> " + nombreEmpresa.replaceAll("&amp;", "&") + ";" + hrefElemento + ";-;-;-");
 				return;
 			}
 		}
@@ -396,7 +434,8 @@ public abstract class DriverControllerBase
 		Thread.sleep(500);
 
 		String loggerExcelLine = "Generando screenshot --> ";
-		loggerExcelLine = loggerExcelLine + sector;
+		loggerExcelLine = loggerExcelLine + nacionalidad;
+		loggerExcelLine = loggerExcelLine + ";" + sector;
 		loggerExcelLine = loggerExcelLine + ";" + industria;
 		loggerExcelLine = loggerExcelLine + ";" + nombreEmpresa.replaceAll("&amp;", "&");
 		loggerExcelLine = loggerExcelLine + ";" + dividendo.toString().replaceAll("\\.", ",");

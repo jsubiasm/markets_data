@@ -1135,12 +1135,17 @@ public class DCChartFromWebUrl extends DriverControllerBase
 	/**
 	 * 
 	 */
-	private static final Double RPD_MINIMA = 5.0;
+	private static final Double RPD_MINIMA = 3.5;
 
 	/**
 	 * 
 	 */
 	private static final Double CAP_MINIMA_EN_B = 2.0;
+
+	/**
+	 * 
+	 */
+	private static final String[] NACIONALIDADES = new String[] { "Spain", "USA", "UK", "Netherlands", "Canada" };
 
 	/**
 	 * @param args
@@ -1194,7 +1199,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 						LOGGER.info("Reintento [" + errorRetry + "]");
 					}
 					hrefElemento = listaURL.get(urlsIdx);
-					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL, RPD_MINIMA, CAP_MINIMA_EN_B);
+					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL, RPD_MINIMA, CAP_MINIMA_EN_B, NACIONALIDADES);
 					urlsIdx++;
 					errorRetry = 0;
 				}
