@@ -1135,7 +1135,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 	/**
 	 * 
 	 */
-	private static final Double RPD_MINIMA = 3.5;
+	private static final Double RPD_MINIMA = 3.0;
 
 	/**
 	 * 
@@ -1145,7 +1145,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 	/**
 	 * 
 	 */
-	private static final String[] NACIONALIDADES = new String[] { "Spain", "USA", "UK", "Netherlands", "Canada" };
+	private static final String[] NACIONALIDADES = new String[] { "Australia", "Belgium", "Canada", "China", "Denmark", "Finland", "France", "Germany", "Hong_Kong", "Ireland", "Japan", "Netherlands", "Norway", "Spain", "Sweden", "Switzerland", "UK", "USA" };
 
 	/**
 	 * @param args

@@ -480,7 +480,7 @@ public abstract class DriverControllerBase
 		loggerExcelLine = loggerExcelLine + ";" + hrefElemento;
 		LOGGER.info(loggerExcelLine);
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + "RPD_" + dividendo.intValue() + "\\" + URLEncoder.encode(hrefElemento, WebDriverBase.CHARSET) + timeFrame + ".png"));
+		FileUtils.copyFile(screenshotFile, new File(downloadPath + "\\" + nacionalidad + "\\RPD_" + dividendo.intValue() + "\\" + URLEncoder.encode(hrefElemento, WebDriverBase.CHARSET) + timeFrame + ".png"));
 	}
 
 	/**
