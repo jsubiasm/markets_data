@@ -49,6 +49,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/a.o-smith-corp");
 		listaURL_09.add("https://es.investing.com/equities/aalberts-industr");
 		listaURL_09.add("https://es.investing.com/equities/aarons");
+		listaURL_09.add("https://es.investing.com/equities/abb-ltd");
 		listaURL_09.add("https://es.investing.com/equities/abbott-laboratories");
 		listaURL_09.add("https://es.investing.com/equities/abbvie-inc");
 		listaURL_09.add("https://es.investing.com/equities/abcam-plc");
@@ -66,7 +67,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/adidas-salomon");
 		listaURL_09.add("https://es.investing.com/equities/adolfo-dominguez-sa");
 		listaURL_09.add("https://es.investing.com/equities/aegon");
-		listaURL_09.add("https://es.investing.com/equities/aegon-nv");
 		listaURL_09.add("https://es.investing.com/equities/aena-aeropuertos-sa");
 		listaURL_09.add("https://es.investing.com/equities/aflac-inc");
 		listaURL_09.add("https://es.investing.com/equities/ageas");
@@ -103,7 +103,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/amper-sa");
 		listaURL_09.add("https://es.investing.com/equities/analog-devices");
 		listaURL_09.add("https://es.investing.com/equities/andrew-peller-ltd-a");
-		listaURL_09.add("https://es.investing.com/equities/anheuser-busch-exch");
 		listaURL_09.add("https://es.investing.com/equities/anheuser-busch-inbev");
 		listaURL_09.add("https://es.investing.com/equities/anpario-plc");
 		listaURL_09.add("https://es.investing.com/equities/apple-computer-inc");
@@ -121,12 +120,10 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/ashmore");
 		listaURL_09.add("https://es.investing.com/equities/ashtead-group");
 		listaURL_09.add("https://es.investing.com/equities/asml-holding");
-		listaURL_09.add("https://es.investing.com/equities/asml-holdings");
-		listaURL_09.add("https://es.investing.com/equities/assicurazioni-generali-adr-earnings");
+		listaURL_09.add("https://es.investing.com/equities/assa-abloy");
 		listaURL_09.add("https://es.investing.com/equities/assoc.br.foods");
 		listaURL_09.add("https://es.investing.com/equities/assurant");
 		listaURL_09.add("https://es.investing.com/equities/astrazeneca");
-		listaURL_09.add("https://es.investing.com/equities/astrazeneca-plc-ads");
 		listaURL_09.add("https://es.investing.com/equities/at-t");
 		listaURL_09.add("https://es.investing.com/equities/atco-ltd");
 		listaURL_09.add("https://es.investing.com/equities/atlantia");
@@ -154,14 +151,12 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/ball-corp");
 		listaURL_09.add("https://es.investing.com/equities/baloise-hld");
 		listaURL_09.add("https://es.investing.com/equities/bancfirst-corp");
-		listaURL_09.add("https://es.investing.com/equities/bancfirst-corp-company-profile");
 		listaURL_09.add("https://es.investing.com/equities/banco-santander");
 		listaURL_09.add("https://es.investing.com/equities/bank-of-america");
 		listaURL_09.add("https://es.investing.com/equities/bank-of-marin-ban");
 		listaURL_09.add("https://es.investing.com/equities/bank-of-montreal-financial-group");
 		listaURL_09.add("https://es.investing.com/equities/bank-of-the-ozark");
 		listaURL_09.add("https://es.investing.com/equities/bankers-investment-trust");
-		listaURL_09.add("https://es.investing.com/equities/bankers-investment-trust-dividends");
 		listaURL_09.add("https://es.investing.com/equities/bankia");
 		listaURL_09.add("https://es.investing.com/equities/bankinter");
 		listaURL_09.add("https://es.investing.com/equities/bar-harbor-bankshares");
@@ -183,14 +178,13 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/best-buy");
 		listaURL_09.add("https://es.investing.com/equities/bhp-billiton");
 		listaURL_09.add("https://es.investing.com/equities/bhp-billiton-limited");
-		listaURL_09.add("https://es.investing.com/equities/bhp-billiton-ltd-nyse-exch");
 		listaURL_09.add("https://es.investing.com/equities/biomerieux");
 		listaURL_09.add("https://es.investing.com/equities/biosearch-sa");
 		listaURL_09.add("https://es.investing.com/equities/black-hills-corp");
 		listaURL_09.add("https://es.investing.com/equities/blackrock,-inc.-c");
+		listaURL_09.add("https://es.investing.com/equities/blckrck-sm-co");
 		listaURL_09.add("https://es.investing.com/equities/bloomsbury-publishing");
 		listaURL_09.add("https://es.investing.com/equities/bnp-paribas");
-		listaURL_09.add("https://es.investing.com/equities/bnp-paribas-fortis-sa");
 		listaURL_09.add("https://es.investing.com/equities/bodegas-riojanas-sa");
 		listaURL_09.add("https://es.investing.com/equities/boeing-co");
 		listaURL_09.add("https://es.investing.com/equities/bok-financial-corp");
@@ -201,14 +195,12 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/bovis-homes");
 		listaURL_09.add("https://es.investing.com/equities/boyd-group-income-fund");
 		listaURL_09.add("https://es.investing.com/equities/bp");
-		listaURL_09.add("https://es.investing.com/equities/bp-plc");
 		listaURL_09.add("https://es.investing.com/equities/brady-corp");
 		listaURL_09.add("https://es.investing.com/equities/brembo");
 		listaURL_09.add("https://es.investing.com/equities/brenntag-ag");
 		listaURL_09.add("https://es.investing.com/equities/brinker-international-inc");
 		listaURL_09.add("https://es.investing.com/equities/bristol-myer-squiib");
 		listaURL_09.add("https://es.investing.com/equities/british-american-tobacco");
-		listaURL_09.add("https://es.investing.com/equities/british-american-tobacco-plc-bats");
 		listaURL_09.add("https://es.investing.com/equities/british-land");
 		listaURL_09.add("https://es.investing.com/equities/britvic");
 		listaURL_09.add("https://es.investing.com/equities/broadridge-financial-solutions");
@@ -223,9 +215,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/brown-forman-b");
 		listaURL_09.add("https://es.investing.com/equities/brunner-inv-trust");
 		listaURL_09.add("https://es.investing.com/equities/brunswick-corp");
-		listaURL_09.add("https://es.investing.com/equities/brussel-lambert-adr");
 		listaURL_09.add("https://es.investing.com/equities/bt-group");
-		listaURL_09.add("https://es.investing.com/equities/bt-group-plc");
 		listaURL_09.add("https://es.investing.com/equities/buckeye-partners-lp");
 		listaURL_09.add("https://es.investing.com/equities/bunge");
 		listaURL_09.add("https://es.investing.com/equities/bunge-ltd-pfd");
@@ -270,6 +260,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/cf-industries");
 		listaURL_09.add("https://es.investing.com/equities/chemed-corp");
 		listaURL_09.add("https://es.investing.com/equities/chesapeake-ener");
+		listaURL_09.add("https://es.investing.com/equities/chesapeake-finl-shs");
 		listaURL_09.add("https://es.investing.com/equities/chesapeake-utilities-corp");
 		listaURL_09.add("https://es.investing.com/equities/chesnara-plc");
 		listaURL_09.add("https://es.investing.com/equities/chevron");
@@ -286,7 +277,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/cisco-sys-inc");
 		listaURL_09.add("https://es.investing.com/equities/citizens-financial-services-inc");
 		listaURL_09.add("https://es.investing.com/equities/city-of-london-investment-trust");
-		listaURL_09.add("https://es.investing.com/equities/city-of-london-investment-trust-components");
+		listaURL_09.add("https://es.investing.com/equities/clarkson-plc");
 		listaURL_09.add("https://es.investing.com/equities/clinica-baviera-sa");
 		listaURL_09.add("https://es.investing.com/equities/clorox-co");
 		listaURL_09.add("https://es.investing.com/equities/close-brothers");
@@ -308,6 +299,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/community-trust-bancorp");
 		listaURL_09.add("https://es.investing.com/equities/compass-group");
 		listaURL_09.add("https://es.investing.com/equities/compass-minerals-intl-inc");
+		listaURL_09.add("https://es.investing.com/equities/computacenter");
 		listaURL_09.add("https://es.investing.com/equities/computer-services-inc");
 		listaURL_09.add("https://es.investing.com/equities/concurrent-technologies");
 		listaURL_09.add("https://es.investing.com/equities/connecticut-water");
@@ -325,7 +317,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/credit-agricole");
 		listaURL_09.add("https://es.investing.com/equities/crest-nicholson");
 		listaURL_09.add("https://es.investing.com/equities/crh");
-		listaURL_09.add("https://es.investing.com/equities/crh-plc");
 		listaURL_09.add("https://es.investing.com/equities/croda");
 		listaURL_09.add("https://es.investing.com/equities/csx-corp");
 		listaURL_09.add("https://es.investing.com/equities/ct-real-estate-investment-trust");
@@ -340,18 +331,18 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/dassault-avia");
 		listaURL_09.add("https://es.investing.com/equities/dassault-system");
 		listaURL_09.add("https://es.investing.com/equities/davita-inc");
+		listaURL_09.add("https://es.investing.com/equities/dcc-plc-exch");
 		listaURL_09.add("https://es.investing.com/equities/dechra-pharma");
 		listaURL_09.add("https://es.investing.com/equities/deere---co");
 		listaURL_09.add("https://es.investing.com/equities/deoleo");
 		listaURL_09.add("https://es.investing.com/equities/derwent-london");
 		listaURL_09.add("https://es.investing.com/equities/deutsche-annington-immobilien-se");
 		listaURL_09.add("https://es.investing.com/equities/deutsche-post");
-		listaURL_09.add("https://es.investing.com/equities/deutsche-wohnen-adr");
 		listaURL_09.add("https://es.investing.com/equities/deutsche-wohnen-ag-exch");
 		listaURL_09.add("https://es.investing.com/equities/dewhurst-plc");
 		listaURL_09.add("https://es.investing.com/equities/dia");
 		listaURL_09.add("https://es.investing.com/equities/diageo");
-		listaURL_09.add("https://es.investing.com/equities/diageo-plc");
+		listaURL_09.add("https://es.investing.com/equities/dieteren");
 		listaURL_09.add("https://es.investing.com/equities/digital-realty-trust-inc");
 		listaURL_09.add("https://es.investing.com/equities/diploma--plc");
 		listaURL_09.add("https://es.investing.com/equities/discover-financl");
@@ -391,18 +382,17 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/edinburgh-worldwide-inv-trust-plc");
 		listaURL_09.add("https://es.investing.com/equities/edison-intl");
 		listaURL_09.add("https://es.investing.com/equities/edp");
-		listaURL_09.add("https://es.investing.com/equities/edp-energias-de-portugal-sa");
 		listaURL_09.add("https://es.investing.com/equities/eiffage");
 		listaURL_09.add("https://es.investing.com/equities/elecnor-sa");
 		listaURL_09.add("https://es.investing.com/equities/eli-lilly-and-co");
 		listaURL_09.add("https://es.investing.com/equities/elia-system-op.");
 		listaURL_09.add("https://es.investing.com/equities/elisa-corporat.");
+		listaURL_09.add("https://es.investing.com/equities/emera-incorporated");
 		listaURL_09.add("https://es.investing.com/equities/emerald-expositions-events-inc");
 		listaURL_09.add("https://es.investing.com/equities/emerson-elec");
 		listaURL_09.add("https://es.investing.com/equities/empire-company-ltd");
 		listaURL_09.add("https://es.investing.com/equities/ems-chemie-hld");
 		listaURL_09.add("https://es.investing.com/equities/enagas");
-		listaURL_09.add("https://es.investing.com/equities/enagas-sa");
 		listaURL_09.add("https://es.investing.com/equities/enbridge-inc.");
 		listaURL_09.add("https://es.investing.com/equities/ence-energia-y-celulosa-sa");
 		listaURL_09.add("https://es.investing.com/equities/endesa");
@@ -428,9 +418,11 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/exchange-income-corp");
 		listaURL_09.add("https://es.investing.com/equities/exco-technologies-limited");
 		listaURL_09.add("https://es.investing.com/equities/expeditors-intl-wash-inc");
+		listaURL_09.add("https://es.investing.com/equities/experian-ord-usd0");
 		listaURL_09.add("https://es.investing.com/equities/extra-space-storage");
 		listaURL_09.add("https://es.investing.com/equities/exxon-mobil");
 		listaURL_09.add("https://es.investing.com/equities/f-c-capital---income-inv-trust");
+		listaURL_09.add("https://es.investing.com/equities/f-c-global-smaller-companies-plc");
 		listaURL_09.add("https://es.investing.com/equities/factset-research-systems-inc");
 		listaURL_09.add("https://es.investing.com/equities/faes-farma-sa");
 		listaURL_09.add("https://es.investing.com/equities/farmers---merchants-bancorp-inc");
@@ -440,6 +432,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/federal-realty-investment-trust");
 		listaURL_09.add("https://es.investing.com/equities/fedex-corp");
 		listaURL_09.add("https://es.investing.com/equities/fentura-financial-inc");
+		listaURL_09.add("https://es.investing.com/equities/fidelity-special-values");
 		listaURL_09.add("https://es.investing.com/equities/fielmann-ag-exch");
 		listaURL_09.add("https://es.investing.com/equities/fiera-capital-corporation");
 		listaURL_09.add("https://es.investing.com/equities/finning-international-inc");
@@ -455,13 +448,13 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/fluidra-sa");
 		listaURL_09.add("https://es.investing.com/equities/fondiaria-sai");
 		listaURL_09.add("https://es.investing.com/equities/ford-motor-co");
+		listaURL_09.add("https://es.investing.com/equities/foreign-and-colonial-inv-trust");
 		listaURL_09.add("https://es.investing.com/equities/fortis-inc");
 		listaURL_09.add("https://es.investing.com/equities/fortum");
 		listaURL_09.add("https://es.investing.com/equities/franco-nevada-corp");
 		listaURL_09.add("https://es.investing.com/equities/franklin-electric");
 		listaURL_09.add("https://es.investing.com/equities/franklin-res");
 		listaURL_09.add("https://es.investing.com/equities/fraport");
-		listaURL_09.add("https://es.investing.com/equities/fraport-frankfurt-airport-adr");
 		listaURL_09.add("https://es.investing.com/equities/freenet");
 		listaURL_09.add("https://es.investing.com/equities/fresenius-ag");
 		listaURL_09.add("https://es.investing.com/equities/fresenius-medi");
@@ -469,7 +462,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/fresenius-medical-care-e");
 		listaURL_09.add("https://es.investing.com/equities/fuchs-petrolub-ag");
 		listaURL_09.add("https://es.investing.com/equities/fuchs-petrolub-l");
-		listaURL_09.add("https://es.investing.com/equities/fuchs-petrolub-se");
 		listaURL_09.add("https://es.investing.com/equities/galp-energia");
 		listaURL_09.add("https://es.investing.com/equities/gamesa");
 		listaURL_09.add("https://es.investing.com/equities/gas-natural-sdg");
@@ -490,8 +482,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/gilead-sciences-inc");
 		listaURL_09.add("https://es.investing.com/equities/givaudan-sa-cfd");
 		listaURL_09.add("https://es.investing.com/equities/glanbia-plc");
-		listaURL_09.add("https://es.investing.com/equities/glaxo-egypt");
-		listaURL_09.add("https://es.investing.com/equities/glaxosmithklein-exch");
 		listaURL_09.add("https://es.investing.com/equities/glaxosmithkline");
 		listaURL_09.add("https://es.investing.com/equities/glencore");
 		listaURL_09.add("https://es.investing.com/equities/gn-store-nord");
@@ -527,7 +517,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/hawkins");
 		listaURL_09.add("https://es.investing.com/equities/hb-fuller-comp");
 		listaURL_09.add("https://es.investing.com/equities/hcp-inc");
-		listaURL_09.add("https://es.investing.com/equities/hdfc-bank");
 		listaURL_09.add("https://es.investing.com/equities/hdfc-bank-ltd");
 		listaURL_09.add("https://es.investing.com/equities/health-care-reit");
 		listaURL_09.add("https://es.investing.com/equities/healthcare-service");
@@ -544,11 +533,13 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/hera-spa");
 		listaURL_09.add("https://es.investing.com/equities/hermes-international");
 		listaURL_09.add("https://es.investing.com/equities/hershey-co");
+		listaURL_09.add("https://es.investing.com/equities/hicl-infrastructure");
 		listaURL_09.add("https://es.investing.com/equities/highcroft-investments-plc-reit");
 		listaURL_09.add("https://es.investing.com/equities/hill---smith-holdings-plc");
 		listaURL_09.add("https://es.investing.com/equities/hillenbrand-inc");
 		listaURL_09.add("https://es.investing.com/equities/hilton-food-group-plc");
 		listaURL_09.add("https://es.investing.com/equities/hingham-institutions");
+		listaURL_09.add("https://es.investing.com/equities/hiscox");
 		listaURL_09.add("https://es.investing.com/equities/hochtief");
 		listaURL_09.add("https://es.investing.com/equities/holly-energy-partners-lp");
 		listaURL_09.add("https://es.investing.com/equities/home-depot");
@@ -558,9 +549,9 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/howden-join");
 		listaURL_09.add("https://es.investing.com/equities/hubbell-inc-b");
 		listaURL_09.add("https://es.investing.com/equities/hugo-boss");
+		listaURL_09.add("https://es.investing.com/equities/huhtamaki");
 		listaURL_09.add("https://es.investing.com/equities/hyatt-hotels-corp");
 		listaURL_09.add("https://es.investing.com/equities/iberdrola");
-		listaURL_09.add("https://es.investing.com/equities/iberdrola-sa");
 		listaURL_09.add("https://es.investing.com/equities/iberpapel-gestion-sa");
 		listaURL_09.add("https://es.investing.com/equities/ibm");
 		listaURL_09.add("https://es.investing.com/equities/icade");
@@ -587,14 +578,17 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/intel-corp");
 		listaURL_09.add("https://es.investing.com/equities/inter-parfums-inc");
 		listaURL_09.add("https://es.investing.com/equities/inter-pipeline-fund");
+		listaURL_09.add("https://es.investing.com/equities/intermediate-capital-group");
 		listaURL_09.add("https://es.investing.com/equities/international-ban");
 		listaURL_09.add("https://es.investing.com/equities/international-spe");
 		listaURL_09.add("https://es.investing.com/equities/interrent-reit");
 		listaURL_09.add("https://es.investing.com/equities/intertek-testing-services");
 		listaURL_09.add("https://es.investing.com/equities/intl-flav---frag");
+		listaURL_09.add("https://es.investing.com/equities/intl-public-partnership");
 		listaURL_09.add("https://es.investing.com/equities/invesco-income-growth-trust-plc");
 		listaURL_09.add("https://es.investing.com/equities/invesco-ltd");
 		listaURL_09.add("https://es.investing.com/equities/investec");
+		listaURL_09.add("https://es.investing.com/equities/investors-bancorp");
 		listaURL_09.add("https://es.investing.com/equities/inypsa-informes-y-proyectos-sa");
 		listaURL_09.add("https://es.investing.com/equities/ipsen");
 		listaURL_09.add("https://es.investing.com/equities/iquel-y-costas---miquel-sa");
@@ -609,6 +603,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/jm-smucker-co");
 		listaURL_09.add("https://es.investing.com/equities/john-wiley---sons-a");
 		listaURL_09.add("https://es.investing.com/equities/john-wiley---sons-b");
+		listaURL_09.add("https://es.investing.com/equities/john-wood-group");
 		listaURL_09.add("https://es.investing.com/equities/johnson-controls");
 		listaURL_09.add("https://es.investing.com/equities/johnson-johnson");
 		listaURL_09.add("https://es.investing.com/equities/johnson-matthey");
@@ -618,22 +613,24 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/jupiter-fund-management");
 		listaURL_09.add("https://es.investing.com/equities/kellogg-co.");
 		listaURL_09.add("https://es.investing.com/equities/kelly-partners-group-holdings-ltd");
+		listaURL_09.add("https://es.investing.com/equities/kemira-oy");
 		listaURL_09.add("https://es.investing.com/equities/kering");
 		listaURL_09.add("https://es.investing.com/equities/kerry-group");
-		listaURL_09.add("https://es.investing.com/equities/kerry-group-plc-pk");
 		listaURL_09.add("https://es.investing.com/equities/keyera-corp");
 		listaURL_09.add("https://es.investing.com/equities/kimberly-clark");
 		listaURL_09.add("https://es.investing.com/equities/kimco-realty");
 		listaURL_09.add("https://es.investing.com/equities/kinder-morgan");
 		listaURL_09.add("https://es.investing.com/equities/kinepolis-group");
 		listaURL_09.add("https://es.investing.com/equities/kingfisher");
+		listaURL_09.add("https://es.investing.com/equities/kinnevik-investment-a");
+		listaURL_09.add("https://es.investing.com/equities/kinnevik-investment-b");
 		listaURL_09.add("https://es.investing.com/equities/kion-group-ag");
 		listaURL_09.add("https://es.investing.com/equities/klepierre");
+		listaURL_09.add("https://es.investing.com/equities/knightsbridge-tankers-ltd");
 		listaURL_09.add("https://es.investing.com/equities/koebenhavns-lufthavne");
 		listaURL_09.add("https://es.investing.com/equities/kone-corporation");
 		listaURL_09.add("https://es.investing.com/equities/konecranes");
 		listaURL_09.add("https://es.investing.com/equities/koninklijke-dsm");
-		listaURL_09.add("https://es.investing.com/equities/koninklijke-philips-nv");
 		listaURL_09.add("https://es.investing.com/equities/korian");
 		listaURL_09.add("https://es.investing.com/equities/kraft-foods-inc");
 		listaURL_09.add("https://es.investing.com/equities/kroger-co");
@@ -648,7 +645,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/lanxess");
 		listaURL_09.add("https://es.investing.com/equities/laurentian-bank-of-canada");
 		listaURL_09.add("https://es.investing.com/equities/lazard-ltd");
-		listaURL_09.add("https://es.investing.com/equities/lead-all-investments-ltd");
 		listaURL_09.add("https://es.investing.com/equities/lear");
 		listaURL_09.add("https://es.investing.com/equities/leg-immobilien-ag");
 		listaURL_09.add("https://es.investing.com/equities/legal---general");
@@ -671,6 +667,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/logista");
 		listaURL_09.add("https://es.investing.com/equities/logistec-corp");
 		listaURL_09.add("https://es.investing.com/equities/london-stock-exchange");
+		listaURL_09.add("https://es.investing.com/equities/lonza-grp");
 		listaURL_09.add("https://es.investing.com/equities/lotus-bakeries");
 		listaURL_09.add("https://es.investing.com/equities/lowes-companies");
 		listaURL_09.add("https://es.investing.com/equities/lsl-property-services-plc");
@@ -711,16 +708,15 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/merlin-properties-sa");
 		listaURL_09.add("https://es.investing.com/equities/methanex");
 		listaURL_09.add("https://es.investing.com/equities/metlife-inc");
+		listaURL_09.add("https://es.investing.com/equities/metro-inc");
 		listaURL_09.add("https://es.investing.com/equities/mge-energy-inc");
 		listaURL_09.add("https://es.investing.com/equities/michael-kors-holdings");
 		listaURL_09.add("https://es.investing.com/equities/michelin");
 		listaURL_09.add("https://es.investing.com/equities/micro-focus");
-		listaURL_09.add("https://es.investing.com/equities/micro-focus-adr");
 		listaURL_09.add("https://es.investing.com/equities/microchip-technology-inc");
 		listaURL_09.add("https://es.investing.com/equities/microsoft-corp");
 		listaURL_09.add("https://es.investing.com/equities/middlesex-water");
 		listaURL_09.add("https://es.investing.com/equities/mine-safety-appliances-comp");
-		listaURL_09.add("https://es.investing.com/equities/mine-safety-appliances-comp-options");
 		listaURL_09.add("https://es.investing.com/equities/molson-coors");
 		listaURL_09.add("https://es.investing.com/equities/mond");
 		listaURL_09.add("https://es.investing.com/equities/mondelez-international-inc");
@@ -733,14 +729,12 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/nacco-industries-inc");
 		listaURL_09.add("https://es.investing.com/equities/national-fuel-gas-comp");
 		listaURL_09.add("https://es.investing.com/equities/national-grid");
-		listaURL_09.add("https://es.investing.com/equities/national-grid-transco-plc");
 		listaURL_09.add("https://es.investing.com/equities/national-health-investors-inc");
 		listaURL_09.add("https://es.investing.com/equities/national-healthcare-corp");
 		listaURL_09.add("https://es.investing.com/equities/national-retail");
 		listaURL_09.add("https://es.investing.com/equities/natl.-bank-gr");
 		listaURL_09.add("https://es.investing.com/equities/natraceutical-sa");
 		listaURL_09.add("https://es.investing.com/equities/nestle-ag");
-		listaURL_09.add("https://es.investing.com/equities/nestle-nig");
 		listaURL_09.add("https://es.investing.com/equities/newjersey-resources-corp");
 		listaURL_09.add("https://es.investing.com/equities/newmarket-corp");
 		listaURL_09.add("https://es.investing.com/equities/newmont-mining");
@@ -749,7 +743,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/nh-hoteles-sa");
 		listaURL_09.add("https://es.investing.com/equities/nike");
 		listaURL_09.add("https://es.investing.com/equities/nokian-renkaat");
-		listaURL_09.add("https://es.investing.com/equities/nokian-tyres-plc");
 		listaURL_09.add("https://es.investing.com/equities/nordson-corp");
 		listaURL_09.add("https://es.investing.com/equities/northeast-indiana-bancorp-inc");
 		listaURL_09.add("https://es.investing.com/equities/northeast-utilities");
@@ -760,7 +753,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/northwestern-corp");
 		listaURL_09.add("https://es.investing.com/equities/norwood-financial");
 		listaURL_09.add("https://es.investing.com/equities/novartis");
-		listaURL_09.add("https://es.investing.com/equities/novartis-ag");
 		listaURL_09.add("https://es.investing.com/equities/novo-nordis");
 		listaURL_09.add("https://es.investing.com/equities/novo-nordisk");
 		listaURL_09.add("https://es.investing.com/equities/novozymes-b");
@@ -793,14 +785,13 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/paychex-inc");
 		listaURL_09.add("https://es.investing.com/equities/paypoint");
 		listaURL_09.add("https://es.investing.com/equities/pearson");
-		listaURL_09.add("https://es.investing.com/equities/pearson-plc");
 		listaURL_09.add("https://es.investing.com/equities/pembina-pipeline-corp");
 		listaURL_09.add("https://es.investing.com/equities/pennon");
 		listaURL_09.add("https://es.investing.com/equities/pentair");
-		listaURL_09.add("https://es.investing.com/equities/pentair-company-profile");
 		listaURL_09.add("https://es.investing.com/equities/peoples-united-financial");
 		listaURL_09.add("https://es.investing.com/equities/pepsico");
 		listaURL_09.add("https://es.investing.com/equities/pernod-ricard");
+		listaURL_09.add("https://es.investing.com/equities/perpetual-inc---growth");
 		listaURL_09.add("https://es.investing.com/equities/perrigo-co");
 		listaURL_09.add("https://es.investing.com/equities/personal-group-holdings-plc");
 		listaURL_09.add("https://es.investing.com/equities/petmed-express");
@@ -847,9 +838,9 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/red-electrica");
 		listaURL_09.add("https://es.investing.com/equities/regal-beloit-corp");
 		listaURL_09.add("https://es.investing.com/equities/regis-corp");
+		listaURL_09.add("https://es.investing.com/equities/regus-group");
 		listaURL_09.add("https://es.investing.com/equities/reinsurance-group-of-america-inc");
 		listaURL_09.add("https://es.investing.com/equities/remy-cointreau");
-		listaURL_09.add("https://es.investing.com/equities/remy-cointreau-adr");
 		listaURL_09.add("https://es.investing.com/equities/renaissancere-holdings-ltd");
 		listaURL_09.add("https://es.investing.com/equities/renault");
 		listaURL_09.add("https://es.investing.com/equities/renta-4-banco-sa");
@@ -860,7 +851,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/resources-connect");
 		listaURL_09.add("https://es.investing.com/equities/restaurant-brands-intrnational");
 		listaURL_09.add("https://es.investing.com/equities/retail-opportunit");
-		listaURL_09.add("https://es.investing.com/equities/retail-opportunit-historical-data");
 		listaURL_09.add("https://es.investing.com/equities/rexam");
 		listaURL_09.add("https://es.investing.com/equities/rgc-resources-inc");
 		listaURL_09.add("https://es.investing.com/equities/richards-packaging-income-fund");
@@ -868,7 +858,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/richemont");
 		listaURL_09.add("https://es.investing.com/equities/rightmove");
 		listaURL_09.add("https://es.investing.com/equities/rio-tinto");
-		listaURL_09.add("https://es.investing.com/equities/rio-tinto-plc-exch");
 		listaURL_09.add("https://es.investing.com/equities/ritchie-bros.-auctioneers");
 		listaURL_09.add("https://es.investing.com/equities/rli-corp");
 		listaURL_09.add("https://es.investing.com/equities/robert-half-intl");
@@ -883,7 +872,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/rotork");
 		listaURL_09.add("https://es.investing.com/equities/royal-bank-of-canada-rbc");
 		listaURL_09.add("https://es.investing.com/equities/royal-dsm-nv");
-		listaURL_09.add("https://es.investing.com/equities/royal-dutch-shell-a-plc");
 		listaURL_09.add("https://es.investing.com/equities/royal-dutch-shell-a-shr");
 		listaURL_09.add("https://es.investing.com/equities/royal-gold-inc.");
 		listaURL_09.add("https://es.investing.com/equities/royal-mail");
@@ -896,7 +884,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/ryder-system-inc");
 		listaURL_09.add("https://es.investing.com/equities/s.e.b");
 		listaURL_09.add("https://es.investing.com/equities/s.y.-bancorp");
-		listaURL_09.add("https://es.investing.com/equities/sa-dieteren-adr");
 		listaURL_09.add("https://es.investing.com/equities/sacyr-valle");
 		listaURL_09.add("https://es.investing.com/equities/safran");
 		listaURL_09.add("https://es.investing.com/equities/sage-group");
@@ -905,22 +892,24 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/saint-gobain");
 		listaURL_09.add("https://es.investing.com/equities/sampo-plc");
 		listaURL_09.add("https://es.investing.com/equities/samsonite-international-sa");
-		listaURL_09.add("https://es.investing.com/equities/sanofi");
 		listaURL_09.add("https://es.investing.com/equities/sanofi-aventis");
 		listaURL_09.add("https://es.investing.com/equities/sap-ag");
-		listaURL_09.add("https://es.investing.com/equities/sap-ag-ads-exch");
 		listaURL_09.add("https://es.investing.com/equities/saputo-inc");
 		listaURL_09.add("https://es.investing.com/equities/saracen-mineral-holdings");
 		listaURL_09.add("https://es.investing.com/equities/savaria-corporation");
 		listaURL_09.add("https://es.investing.com/equities/schlumberger-ltd");
 		listaURL_09.add("https://es.investing.com/equities/schneider-electr");
 		listaURL_09.add("https://es.investing.com/equities/schnitzer-steel");
+		listaURL_09.add("https://es.investing.com/equities/schroder-oriental-income-fund-ltd");
 		listaURL_09.add("https://es.investing.com/equities/schroders");
 		listaURL_09.add("https://es.investing.com/equities/scor");
 		listaURL_09.add("https://es.investing.com/equities/scotiabank");
 		listaURL_09.add("https://es.investing.com/equities/scottish---southern-energy");
+		listaURL_09.add("https://es.investing.com/equities/scottish-investment-trust");
+		listaURL_09.add("https://es.investing.com/equities/scottish-mortgage-inv-trust");
 		listaURL_09.add("https://es.investing.com/equities/scotts-miracle-gro-comp");
 		listaURL_09.add("https://es.investing.com/equities/seb");
+		listaURL_09.add("https://es.investing.com/equities/securitas-b");
 		listaURL_09.add("https://es.investing.com/equities/sei-investments");
 		listaURL_09.add("https://es.investing.com/equities/sempra-energy");
 		listaURL_09.add("https://es.investing.com/equities/senior-housing");
@@ -928,13 +917,13 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/sgs");
 		listaURL_09.add("https://es.investing.com/equities/shenzhen-expressway-co-ltd");
 		listaURL_09.add("https://es.investing.com/equities/sherwinwilliams");
-		listaURL_09.add("https://es.investing.com/equities/shire-plc");
 		listaURL_09.add("https://es.investing.com/equities/siemens");
 		listaURL_09.add("https://es.investing.com/equities/silgan-holdings");
 		listaURL_09.add("https://es.investing.com/equities/silver-wheaton-corp");
 		listaURL_09.add("https://es.investing.com/equities/simcorp");
 		listaURL_09.add("https://es.investing.com/equities/simon-prop-grp");
 		listaURL_09.add("https://es.investing.com/equities/sjw-corp");
+		listaURL_09.add("https://es.investing.com/equities/skf");
 		listaURL_09.add("https://es.investing.com/equities/skyfii-ltd");
 		listaURL_09.add("https://es.investing.com/equities/slate-retail-reit-a");
 		listaURL_09.add("https://es.investing.com/equities/smith---nephew-snats-inc");
@@ -973,8 +962,10 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/suez-environnement-s.a.");
 		listaURL_09.add("https://es.investing.com/equities/suncor-energy-inc.");
 		listaURL_09.add("https://es.investing.com/equities/supremex-inc.");
+		listaURL_09.add("https://es.investing.com/equities/swedish-match");
 		listaURL_09.add("https://es.investing.com/equities/swiss-life");
 		listaURL_09.add("https://es.investing.com/equities/swiss-prime-si");
+		listaURL_09.add("https://es.investing.com/equities/swiss-re");
 		listaURL_09.add("https://es.investing.com/equities/swisscom");
 		listaURL_09.add("https://es.investing.com/equities/sylogist-ltd");
 		listaURL_09.add("https://es.investing.com/equities/sysco-corp");
@@ -989,8 +980,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/taylor-calvin-b-bksh");
 		listaURL_09.add("https://es.investing.com/equities/tecnicas-reunidas");
 		listaURL_09.add("https://es.investing.com/equities/tecsys-inc.");
-		listaURL_09.add("https://es.investing.com/equities/telecom-italia");
-		listaURL_09.add("https://es.investing.com/equities/telecom-italia-s.p.a.");
 		listaURL_09.add("https://es.investing.com/equities/telecom-plus-common-stock");
 		listaURL_09.add("https://es.investing.com/equities/telefonica");
 		listaURL_09.add("https://es.investing.com/equities/teleperformance");
@@ -1007,6 +996,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/the-coca-cola-co-bdr");
 		listaURL_09.add("https://es.investing.com/equities/the-ensign-group");
 		listaURL_09.add("https://es.investing.com/equities/the-first-of-long-options");
+		listaURL_09.add("https://es.investing.com/equities/the-paragon-group-of-companies-plc");
 		listaURL_09.add("https://es.investing.com/equities/the-travelers-co");
 		listaURL_09.add("https://es.investing.com/equities/the-wendys-co");
 		listaURL_09.add("https://es.investing.com/equities/the-york-water-company");
@@ -1020,7 +1010,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/toromont-industries-ltd");
 		listaURL_09.add("https://es.investing.com/equities/toronto-dominion-bank");
 		listaURL_09.add("https://es.investing.com/equities/total");
-		listaURL_09.add("https://es.investing.com/equities/total-s.a.");
 		listaURL_09.add("https://es.investing.com/equities/tr-european-growth-trust-plc");
 		listaURL_09.add("https://es.investing.com/equities/tractor-supply-company");
 		listaURL_09.add("https://es.investing.com/equities/transalta-renewables-inc.");
@@ -1033,6 +1022,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/tullet-prebon");
 		listaURL_09.add("https://es.investing.com/equities/tyson-foods");
 		listaURL_09.add("https://es.investing.com/equities/ubs-group-n");
+		listaURL_09.add("https://es.investing.com/equities/ucb");
 		listaURL_09.add("https://es.investing.com/equities/ugi");
 		listaURL_09.add("https://es.investing.com/equities/ultra-electronics");
 		listaURL_09.add("https://es.investing.com/equities/umb-financial-corp");
@@ -1041,12 +1031,11 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/uni-select-inc.");
 		listaURL_09.add("https://es.investing.com/equities/uniball");
 		listaURL_09.add("https://es.investing.com/equities/unilever");
-		listaURL_09.add("https://es.investing.com/equities/unilever-cert");
-		listaURL_09.add("https://es.investing.com/equities/unilever-n.v.");
 		listaURL_09.add("https://es.investing.com/equities/unilever-ord");
 		listaURL_09.add("https://es.investing.com/equities/union-pacific");
 		listaURL_09.add("https://es.investing.com/equities/united-bankshares");
 		listaURL_09.add("https://es.investing.com/equities/united-continenta");
+		listaURL_09.add("https://es.investing.com/equities/united-drug-plc");
 		listaURL_09.add("https://es.investing.com/equities/united-health-group");
 		listaURL_09.add("https://es.investing.com/equities/united-parcel");
 		listaURL_09.add("https://es.investing.com/equities/united-tech");
@@ -1056,7 +1045,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/universal-health-services");
 		listaURL_09.add("https://es.investing.com/equities/unum-group");
 		listaURL_09.add("https://es.investing.com/equities/upm-kymmene");
-		listaURL_09.add("https://es.investing.com/equities/upm-kymmene-corp");
 		listaURL_09.add("https://es.investing.com/equities/uralita-sa");
 		listaURL_09.add("https://es.investing.com/equities/urstadt-biddle-properties-inc");
 		listaURL_09.add("https://es.investing.com/equities/us-bancorp");
@@ -1081,7 +1069,6 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/viscofan-sa");
 		listaURL_09.add("https://es.investing.com/equities/vocento-sa");
 		listaURL_09.add("https://es.investing.com/equities/vodafone");
-		listaURL_09.add("https://es.investing.com/equities/vodafone-group-plc-exch");
 		listaURL_09.add("https://es.investing.com/equities/vopak");
 		listaURL_09.add("https://es.investing.com/equities/vse-corp");
 		listaURL_09.add("https://es.investing.com/equities/w-p-carey-inc");
@@ -1110,10 +1097,10 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/winmark-corp");
 		listaURL_09.add("https://es.investing.com/equities/wire-card");
 		listaURL_09.add("https://es.investing.com/equities/wisconsin-energy-corp");
+		listaURL_09.add("https://es.investing.com/equities/witan-investment-company");
 		listaURL_09.add("https://es.investing.com/equities/wolters-kluwer");
 		listaURL_09.add("https://es.investing.com/equities/wolters-kluwer-nv");
 		listaURL_09.add("https://es.investing.com/equities/wpp");
-		listaURL_09.add("https://es.investing.com/equities/wpp-plc");
 		listaURL_09.add("https://es.investing.com/equities/wr-berkley-corp");
 		listaURL_09.add("https://es.investing.com/equities/wyndham-world");
 		listaURL_09.add("https://es.investing.com/equities/wynnstay-group");
@@ -1123,6 +1110,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		listaURL_09.add("https://es.investing.com/equities/zardoya-otis-sa");
 		listaURL_09.add("https://es.investing.com/equities/zhejiangexpres");
 		listaURL_09.add("https://es.investing.com/equities/zon-optimus-sa");
+		listaURL_09.add("https://es.investing.com/equities/zurich-fin");
 		listaURL_09.add("https://es.investing.com/equities/zytronic-plc");
 		LISTA_URL_GROUP.add(new URLGroup("DIVIDENDO", listaURL_09));
 	}
@@ -1145,7 +1133,8 @@ public class DCChartFromWebUrl extends DriverControllerBase
 	/**
 	 * 
 	 */
-	private static final String[] NACIONALIDADES = new String[] { "Australia", "Belgium", "Canada", "China", "Denmark", "Finland", "France", "Germany", "Hong_Kong", "Ireland", "Japan", "Netherlands", "Norway", "Spain", "Sweden", "Switzerland", "UK", "USA" };
+	// private static final String[] NACIONALIDADES = new String[] { "Australia", "Belgium", "Canada", "China", "Denmark", "Finland", "France", "Germany", "Hong_Kong", "Ireland", "Japan", "Netherlands", "Norway", "Spain", "Sweden", "Switzerland", "UK", "USA" };
+	private static final String[] NACIONALIDADES = new String[] { "Netherlands", "Spain", "UK", "USA" };
 
 	/**
 	 * @param args
