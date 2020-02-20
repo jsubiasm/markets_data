@@ -1180,6 +1180,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 		for (URLGroup urlGroup : LISTA_URL_GROUP)
 		{
 			String downloadFolder = urlGroup.getDownloadFolder();
+			boolean esAristocrata = downloadFolder.equalsIgnoreCase("Aristocratas");
 			LOGGER.info("Procesando grupo [" + downloadFolder + "]");
 			List<String> listaURL = urlGroup.getListaURL();
 			int urlsIdx = 0;
@@ -1194,7 +1195,7 @@ public class DCChartFromWebUrl extends DriverControllerBase
 						LOGGER.info("Reintento [" + errorRetry + "]");
 					}
 					hrefElemento = listaURL.get(urlsIdx);
-					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL, RPD_MINIMA, CAP_MINIMA_EN_B, NACIONALIDADES);
+					procesarElemento(driver, hrefElemento, DOWNLOAD_PATH + "\\" + downloadFolder + "\\" + TF_MENSUAL, TF_MENSUAL, RPD_MINIMA, CAP_MINIMA_EN_B, NACIONALIDADES, esAristocrata);
 					urlsIdx++;
 					errorRetry = 0;
 				}
