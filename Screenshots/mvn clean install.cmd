@@ -1,7 +1,7 @@
 @echo off
 
-set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_181
-set M2_HOME=C:\_PELAYO\Software\Maven\apache-maven-3.3.9
+set JAVA_HOME=C:\_JSM\SeguimientoCartera\01_Software\jdk-15.0.2_windows-x64_bin\jdk-15.0.2
+set M2_HOME=C:\_JSM\SeguimientoCartera\01_Software\apache-maven-3.6.3-bin\apache-maven-3.6.3
 PATH=%JAVA_HOME%\bin;%M2_HOME%\bin
 
 call mvn clean install
