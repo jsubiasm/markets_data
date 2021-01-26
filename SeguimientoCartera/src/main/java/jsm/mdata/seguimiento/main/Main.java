@@ -6,6 +6,7 @@ package jsm.mdata.seguimiento.main;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.slf4j.Logger;
@@ -57,6 +58,17 @@ public class Main
 		while (rs.next())
 		{
 			LOGGER.info("row {id: " + rs.getInt("id") + ", name: " + rs.getString("name") + "}");
+		}
+		try
+		{
+			DriverManager.getConnection("jdbc:derby:;shutdown=true");
+		}
+		catch (SQLException se)
+		{
+			if (se.getErrorCode() != 50000 || !"XJ015".equals(se.getSQLState()))
+			{
+				throw se;
+			}
 		}
 	}
 
