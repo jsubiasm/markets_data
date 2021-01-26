@@ -51,7 +51,7 @@ public class Main
 	{
 		LOGGER.info("run()");
 
-		String dbUrl = "jdbc:derby:C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\prueba;create=true";
+		String dbUrl = "jdbc:derby:C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\prueba";
 		Connection conn = DriverManager.getConnection(dbUrl);
 		Statement stmt = conn.createStatement();
 
