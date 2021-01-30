@@ -51,7 +51,7 @@ public class Main
 	 */
 	private static void holaMundoDerbyEmbedded() throws Throwable
 	{
-		String dbUrl = "jdbc:derby:C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\prueba";
+		String dbUrl = "jdbc:derby:C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\prueba;create=true";
 		Connection conn = DriverManager.getConnection(dbUrl);
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery("SELECT * FROM USERS");
