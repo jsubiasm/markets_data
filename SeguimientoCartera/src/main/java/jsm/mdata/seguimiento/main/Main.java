@@ -43,17 +43,57 @@ public class Main
 	 */
 	public static void main(String[] args)
 	{
+		LOGGER.info("INICIO PROCESO");
+		Connection connection = null;
 		try
 		{
-			LOGGER.info("INICIO PROCESO");
-			validateMovimientos();
+			LOGGER.info("Abriendo connection");
+			connection = getConnection();
+			validateMovimientos(connection);
+			validateMovimientos(connection);
+			LOGGER.info("Confirmando transaccion");
+			connection.commit();
 		}
 		catch (Throwable t)
 		{
 			LOGGER.error("ERROR", t);
+			LOGGER.info("Deshaciendo transaccion");
+			try
+			{
+				connection.rollback();
+			}
+			catch (Throwable t2)
+			{
+				LOGGER.error("ERROR", t2);
+			}
 		}
 		finally
 		{
+			LOGGER.info("Cerrando connection");
+			try
+			{
+				connection.close();
+			}
+			catch (Throwable t)
+			{
+				LOGGER.error("ERROR", t);
+			}
+			LOGGER.info("Cerrando DB");
+			try
+			{
+				DriverManager.getConnection("jdbc:derby:;shutdown=true");
+			}
+			catch (SQLException se)
+			{
+				if (se.getErrorCode() != 50000 || !"XJ015".equals(se.getSQLState()))
+				{
+					LOGGER.error("ERROR", se);
+				}
+			}
+			catch (Throwable t)
+			{
+				LOGGER.error("ERROR", t);
+			}
 			LOGGER.info("FIN PROCESO");
 		}
 	}
@@ -71,17 +111,15 @@ public class Main
 	}
 
 	/**
+	 * @param connection
 	 * @throws Throwable
 	 */
-	private static void validateMovimientos() throws Throwable
+	private static void validateMovimientos(Connection connection) throws Throwable
 	{
-		Connection connection = null;
 		Statement statement = null;
 		ResultSet resultSet = null;
 		try
 		{
-			LOGGER.info("Abriendo connection");
-			connection = getConnection();
 			LOGGER.info("Abriendo statement");
 			statement = connection.createStatement();
 			LOGGER.info("Abriendo resultSet");
@@ -98,7 +136,6 @@ public class Main
 				BigDecimal total = resultSet.getBigDecimal("TOTAL");
 				String comercializador = resultSet.getString("COMERCIALIZADOR");
 				String mercado = resultSet.getString("MERCADO");
-				LOGGER.info("-------------------------------------------------");
 				LOGGER.info("movimientoId [" + movimientoId + "]");
 				LOGGER.info("produtoId [" + produtoId + "]");
 				LOGGER.info("compraVenta [" + compraVenta + "]");
@@ -112,21 +149,17 @@ public class Main
 				BigDecimal totalCalculado = numeroTitulos.multiply(precioTitulo).add(comision).setScale(2, RoundingMode.HALF_UP);
 				if (totalCalculado.equals(total.setScale(2, RoundingMode.HALF_UP)))
 				{
-					LOGGER.info("MOVIMIENTO VALIDADO");
+					LOGGER.info("----------MOVIMIENTO VALIDADO----------");
 				}
 				else
 				{
-					LOGGER.info("MOVIMIENTO NO VALIDADO [" + totalCalculado + "] [" + total + "]");
+					throw new Exception("MOVIMIENTO NO VALIDADO [" + totalCalculado + "] [" + total + "]");
 				}
 			}
-			LOGGER.info("Commit connection");
-			connection.commit();
 		}
 		catch (Throwable t)
 		{
 			LOGGER.error("ERROR", t);
-			LOGGER.info("Rollback connection");
-			connection.rollback();
 		}
 		finally
 		{
@@ -134,20 +167,6 @@ public class Main
 			resultSet.close();
 			LOGGER.info("Cerrando statement");
 			statement.close();
-			LOGGER.info("Cerrando connection");
-			connection.close();
-			LOGGER.info("Cerrando DB");
-			try
-			{
-				DriverManager.getConnection("jdbc:derby:;shutdown=true");
-			}
-			catch (SQLException se)
-			{
-				if (se.getErrorCode() != 50000 || !"XJ015".equals(se.getSQLState()))
-				{
-					throw se;
-				}
-			}
 		}
 	}
 
