@@ -7,9 +7,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -47,17 +47,16 @@ public class Main
 		Connection connection = null;
 		try
 		{
-			LOGGER.info("Abriendo connection");
+			LOGGER.info("Abriendo Conexion");
 			connection = getConnection();
 			validateMovimientos(connection);
-			validateMovimientos(connection);
-			LOGGER.info("Confirmando transaccion");
+			LOGGER.info("Confirmando Transaccion");
 			connection.commit();
 		}
 		catch (Throwable t)
 		{
 			LOGGER.error("ERROR", t);
-			LOGGER.info("Deshaciendo transaccion");
+			LOGGER.info("Deshaciendo Transaccion");
 			try
 			{
 				connection.rollback();
@@ -69,7 +68,7 @@ public class Main
 		}
 		finally
 		{
-			LOGGER.info("Cerrando connection");
+			LOGGER.info("Cerrando Conexion");
 			try
 			{
 				connection.close();
@@ -78,7 +77,7 @@ public class Main
 			{
 				LOGGER.error("ERROR", t);
 			}
-			LOGGER.info("Cerrando DB");
+			LOGGER.info("Cerrando Base Datos");
 			try
 			{
 				DriverManager.getConnection("jdbc:derby:;shutdown=true");
@@ -116,14 +115,15 @@ public class Main
 	 */
 	private static void validateMovimientos(Connection connection) throws Throwable
 	{
-		Statement statement = null;
+		PreparedStatement statement = null;
 		ResultSet resultSet = null;
 		try
 		{
-			LOGGER.info("Abriendo statement");
-			statement = connection.createStatement();
-			LOGGER.info("Abriendo resultSet");
-			resultSet = statement.executeQuery("SELECT MOVIMIENTO_ID, PRODUCTO_ID, COMPRA_VENTA, FECHA, NUMERO_TITULOS, PRECIO_TITULO, COMISION, TOTAL, COMERCIALIZADOR, MERCADO from MASTER_MOVIMIENTOS");
+			LOGGER.info("Abriendo Sentencia");
+			statement = connection.prepareStatement("SELECT MOVIMIENTO_ID, PRODUCTO_ID, COMPRA_VENTA, FECHA, NUMERO_TITULOS, PRECIO_TITULO, COMISION, TOTAL, COMERCIALIZADOR, MERCADO from MASTER_MOVIMIENTOS");
+			LOGGER.info("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.info("Abriendo Cursor");
 			while (resultSet.next())
 			{
 				Integer movimientoId = resultSet.getInt("MOVIMIENTO_ID");
@@ -136,24 +136,24 @@ public class Main
 				BigDecimal total = resultSet.getBigDecimal("TOTAL");
 				String comercializador = resultSet.getString("COMERCIALIZADOR");
 				String mercado = resultSet.getString("MERCADO");
-				LOGGER.info("movimientoId [" + movimientoId + "]");
-				LOGGER.info("produtoId [" + produtoId + "]");
-				LOGGER.info("compraVenta [" + compraVenta + "]");
-				LOGGER.info("fecha [" + fecha + "]");
-				LOGGER.info("numeroTitulos [" + numeroTitulos + "]");
-				LOGGER.info("precioTitulo [" + precioTitulo + "]");
-				LOGGER.info("comision [" + comision + "]");
-				LOGGER.info("total [" + total + "]");
-				LOGGER.info("comercializador [" + comercializador + "]");
-				LOGGER.info("mercado [" + mercado + "]");
+				StringBuilder movimientoLog = new StringBuilder();
+				movimientoLog.append(" movimientoId [" + movimientoId + "]");
+				movimientoLog.append(" produtoId [" + produtoId + "]");
+				movimientoLog.append(" compraVenta [" + compraVenta + "]");
+				movimientoLog.append(" fecha [" + fecha + "]");
+				movimientoLog.append(" numeroTitulos [" + numeroTitulos + "]");
+				movimientoLog.append(" precioTitulo [" + precioTitulo + "]");
+				movimientoLog.append(" comision [" + comision + "]");
+				movimientoLog.append(" comercializador [" + comercializador + "]");
+				movimientoLog.append(" mercado [" + mercado + "]");
 				BigDecimal totalCalculado = numeroTitulos.multiply(precioTitulo).add(comision).setScale(2, RoundingMode.HALF_UP);
 				if (totalCalculado.equals(total.setScale(2, RoundingMode.HALF_UP)))
 				{
-					LOGGER.info("----------MOVIMIENTO VALIDADO----------");
+					LOGGER.info("Movimiento validado: totalCalculado [" + totalCalculado + "] total [" + total + "]" + movimientoLog.toString());
 				}
 				else
 				{
-					throw new Exception("MOVIMIENTO NO VALIDADO [" + totalCalculado + "] [" + total + "]");
+					throw new Exception("ERROR MOVIMIENTO [" + totalCalculado + "] [" + total + "]" + movimientoLog.toString());
 				}
 			}
 		}
@@ -163,9 +163,9 @@ public class Main
 		}
 		finally
 		{
-			LOGGER.info("Cerrando resultSet");
+			LOGGER.info("Cerrando Cursor");
 			resultSet.close();
-			LOGGER.info("Cerrando statement");
+			LOGGER.info("Cerrando Sentencia");
 			statement.close();
 		}
 	}
