@@ -120,7 +120,7 @@ public class Main
 		try
 		{
 			LOGGER.info("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT MOVIMIENTO_ID, PRODUCTO_ID, COMPRA_VENTA, FECHA, NUMERO_TITULOS, PRECIO_TITULO, COMISION, TOTAL, COMERCIALIZADOR, MERCADO from MASTER_MOVIMIENTOS");
+			statement = connection.prepareStatement("SELECT MOVIMIENTO_ID, PRODUCTO_ID, COMPRA_VENTA, FECHA, NUMERO_TITULOS, PRECIO_TITULO, COMISION, TOTAL, COMERCIALIZADOR, MERCADO from TB02_MOVIMIENTOS");
 			LOGGER.info("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
 			LOGGER.info("Abriendo Cursor");
