@@ -12,7 +12,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
+import jsm.mdata.seguimiento.dto.PrecioDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
 
 /**
@@ -32,7 +34,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final List<MovimientoDTO> selectMovimientos(Connection connection) throws Throwable
+	public static final List<MovimientoDTO> select_TB02_MOVIMIENTOS(Connection connection) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -62,6 +64,7 @@ public class DatosDAO
 		}
 		catch (Throwable t)
 		{
+			LOGGER.error("ERROR", t);
 			throw t;
 		}
 		finally
@@ -80,7 +83,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final ProductoDTO selectProducto(Connection connection, String identificador) throws Throwable
+	public static final ProductoDTO select_TB02_PRODUCTOS(Connection connection, String identificador) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -109,6 +112,7 @@ public class DatosDAO
 		}
 		catch (Throwable t)
 		{
+			LOGGER.error("ERROR", t);
 			throw t;
 		}
 		finally
@@ -119,6 +123,99 @@ public class DatosDAO
 			statement.close();
 		}
 		return producto;
+	}
+
+	/**
+	 * @param connection
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final List<GanPerProdPesoDTO> select_VW03_GAN_PER_PROD_PESO(Connection connection) throws Throwable
+	{
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		List<GanPerProdPesoDTO> listaGanPerProdPeso = new ArrayList<GanPerProdPesoDTO>();
+		try
+		{
+			LOGGER.debug("Abriendo Sentencia");
+			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VW03_GAN_PER_PROD_PESO");
+			LOGGER.debug("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.debug("Abriendo Cursor");
+			while (resultSet.next())
+			{
+				GanPerProdPesoDTO dto = new GanPerProdPesoDTO();
+				dto.setGananciaPerdida(resultSet.getBigDecimal("GANANCIA_PERDIDA"));
+				dto.setGananciaPerdidaPrcnt(resultSet.getBigDecimal("GANANCIA_PERDIDA_PRCNT"));
+				dto.setNombre(resultSet.getString("NOMBRE"));
+				dto.setPesoEnCartera(resultSet.getBigDecimal("PESO_EN_CARTERA"));
+				dto.setPrecioTitulosComprados(resultSet.getBigDecimal("PRECIO_TITULOS_COMPRADOS"));
+				dto.setPrecioTitulosVendidos(resultSet.getBigDecimal("PRECIO_TITULOS_VENDIDOS"));
+				dto.setProductoId(resultSet.getString("PRODUCTO_ID"));
+				dto.setTitulosActuales(resultSet.getBigDecimal("TITULOS_ACTUALES"));
+				dto.setTitulosComprados(resultSet.getBigDecimal("TITULOS_COMPRADOS"));
+				dto.setTitulosVendidos(resultSet.getBigDecimal("TITULOS_VENDIDOS"));
+				dto.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
+				dto.setValorTitulosActuales(resultSet.getBigDecimal("VALOR_TITULOS_ACTUALES"));
+				listaGanPerProdPeso.add(dto);
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+			throw t;
+		}
+		finally
+		{
+			LOGGER.debug("Cerrando Cursor");
+			resultSet.close();
+			LOGGER.debug("Cerrando Sentencia");
+			statement.close();
+		}
+		return listaGanPerProdPeso;
+	}
+
+	/**
+	 * @param connection
+	 * @param productoId
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final PrecioDTO select_TB02_PRECIOS(Connection connection, String productoId) throws Throwable
+	{
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		PrecioDTO precio = null;
+		try
+		{
+			LOGGER.debug("Abriendo Sentencia");
+			statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, ULTIMA_ACTUALIZACION FROM TB02_PRECIOS WHERE PRODUCTO_ID = ?");
+			statement.setString(1, productoId);
+			LOGGER.debug("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.debug("Abriendo Cursor");
+			if (resultSet.next())
+			{
+				precio = new PrecioDTO();
+				precio.setFechaValor(resultSet.getDate("FECHA_VALOR"));
+				precio.setProductoId(resultSet.getString("PRODUCTO_ID"));
+				precio.setUltimaActualizacion(resultSet.getDate("ULTIMA_ACTUALIZACION"));
+				precio.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+			throw t;
+		}
+		finally
+		{
+			LOGGER.debug("Cerrando Cursor");
+			resultSet.close();
+			LOGGER.debug("Cerrando Sentencia");
+			statement.close();
+		}
+		return precio;
 	}
 
 }
