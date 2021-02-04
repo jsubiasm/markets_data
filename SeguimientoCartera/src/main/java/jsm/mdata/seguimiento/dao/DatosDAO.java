@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
+import jsm.mdata.seguimiento.dto.ProductoDTO;
 
 /**
  * @author jsubiasm
@@ -38,11 +39,11 @@ public class DatosDAO
 		List<MovimientoDTO> listaMovimientos = new ArrayList<MovimientoDTO>();
 		try
 		{
-			LOGGER.info("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT MOVIMIENTO_ID, PRODUCTO_ID, COMPRA_VENTA, FECHA, NUMERO_TITULOS, PRECIO_TITULO, COMISION, TOTAL, COMERCIALIZADOR, MERCADO from TB02_MOVIMIENTOS");
-			LOGGER.info("Ejecutando Sentencia");
+			LOGGER.debug("Abriendo Sentencia");
+			statement = connection.prepareStatement("SELECT MOVIMIENTO_ID, PRODUCTO_ID, COMPRA_VENTA, FECHA, NUMERO_TITULOS, PRECIO_TITULO, COMISION, TOTAL, COMERCIALIZADOR, MERCADO FROM TB02_MOVIMIENTOS");
+			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
-			LOGGER.info("Abriendo Cursor");
+			LOGGER.debug("Abriendo Cursor");
 			while (resultSet.next())
 			{
 				MovimientoDTO dto = new MovimientoDTO();
@@ -54,7 +55,7 @@ public class DatosDAO
 				dto.setMovimientoId(resultSet.getInt("MOVIMIENTO_ID"));
 				dto.setNumeroTitulos(resultSet.getBigDecimal("NUMERO_TITULOS"));
 				dto.setPrecioTitulo(resultSet.getBigDecimal("PRECIO_TITULO"));
-				dto.setProducto(resultSet.getString("PRODUCTO_ID"));
+				dto.setProductoId(resultSet.getString("PRODUCTO_ID"));
 				dto.setTotal(resultSet.getBigDecimal("TOTAL"));
 				listaMovimientos.add(dto);
 			}
@@ -65,12 +66,59 @@ public class DatosDAO
 		}
 		finally
 		{
-			LOGGER.info("Cerrando Cursor");
+			LOGGER.debug("Cerrando Cursor");
 			resultSet.close();
-			LOGGER.info("Cerrando Sentencia");
+			LOGGER.debug("Cerrando Sentencia");
 			statement.close();
 		}
 		return listaMovimientos;
+	}
+
+	/**
+	 * @param connection
+	 * @param identificador
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final ProductoDTO selectProducto(Connection connection, String identificador) throws Throwable
+	{
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		ProductoDTO producto = null;
+		try
+		{
+			LOGGER.debug("Abriendo Sentencia");
+			statement = connection.prepareStatement("SELECT IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING FROM TB02_PRODUCTOS WHERE IDENTIFICADOR = ?");
+			statement.setString(1, identificador);
+			LOGGER.debug("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.debug("Abriendo Cursor");
+			if (resultSet.next())
+			{
+				producto = new ProductoDTO();
+				producto.setIdentificador(resultSet.getString("IDENTIFICADOR"));
+				producto.setInstrumento(resultSet.getString("INSTRUMENTO"));
+				producto.setMoneda(resultSet.getString("MONEDA"));
+				producto.setNombre(resultSet.getString("NOMBRE"));
+				producto.setProveedor(resultSet.getString("PROVEEDOR"));
+				producto.setSubtipoActivo(resultSet.getString("SUBTIPO_ACTIVO"));
+				producto.setTipoActivo(resultSet.getString("TIPO_ACTIVO"));
+				producto.setUrlScraping(resultSet.getString("URL_SCRAPING"));
+				producto.setUsoIngresos(resultSet.getString("USO_INGRESOS"));
+			}
+		}
+		catch (Throwable t)
+		{
+			throw t;
+		}
+		finally
+		{
+			LOGGER.debug("Cerrando Cursor");
+			resultSet.close();
+			LOGGER.debug("Cerrando Sentencia");
+			statement.close();
+		}
+		return producto;
 	}
 
 }

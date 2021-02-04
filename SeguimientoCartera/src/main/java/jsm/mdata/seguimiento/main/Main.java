@@ -7,8 +7,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -17,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 import jsm.mdata.seguimiento.dao.DatosDAO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
+import jsm.mdata.seguimiento.dto.ProductoDTO;
 
 /**
  * 
@@ -65,11 +64,11 @@ public class Main
 			BigDecimal totalCalculado = movimiento.getNumeroTitulos().multiply(movimiento.getPrecioTitulo()).add(movimiento.getComision()).setScale(2, RoundingMode.HALF_UP);
 			if (totalCalculado.equals(movimiento.getTotal().setScale(2, RoundingMode.HALF_UP)))
 			{
-				LOGGER.info("OK -> [" + movimiento.getMovimientoId() + "] [" + movimiento.getProducto() + "] total [" + movimiento.getTotal() + "] totalCalculado [" + totalCalculado + "]");
+				LOGGER.info("OK -> [" + movimiento.getMovimientoId() + "] [" + movimiento.getProductoId() + "] total [" + movimiento.getTotal() + "] totalCalculado [" + totalCalculado + "]");
 			}
 			else
 			{
-				throw new Exception("ERROR MOVIMIENTO [" + movimiento.getMovimientoId() + "] [" + movimiento.getProducto() + "] [" + movimiento.getTotal() + "] [" + totalCalculado + "]");
+				throw new Exception("ERROR MOVIMIENTO [" + movimiento.getMovimientoId() + "] [" + movimiento.getProductoId() + "] [" + movimiento.getTotal() + "] [" + totalCalculado + "]");
 			}
 		}
 	}
@@ -80,30 +79,11 @@ public class Main
 	 */
 	private static void validate_VW03_GAN_PER_PROD_PESO(Connection connection) throws Throwable
 	{
-		PreparedStatement statement = null;
-		ResultSet resultSet = null;
-		try
+		List<MovimientoDTO> listaMovimientos = DatosDAO.selectMovimientos(connection);
+		for (MovimientoDTO movimiento : listaMovimientos)
 		{
-			LOGGER.info("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT MOVIMIENTO_ID, PRODUCTO_ID, COMPRA_VENTA, FECHA, NUMERO_TITULOS, PRECIO_TITULO, COMISION, TOTAL, COMERCIALIZADOR, MERCADO from TB02_MOVIMIENTOS");
-			LOGGER.info("Ejecutando Sentencia");
-			resultSet = statement.executeQuery();
-			LOGGER.info("Abriendo Cursor");
-			while (resultSet.next())
-			{
-
-			}
-		}
-		catch (Throwable t)
-		{
-			LOGGER.error("ERROR", t);
-		}
-		finally
-		{
-			LOGGER.info("Cerrando Cursor");
-			resultSet.close();
-			LOGGER.info("Cerrando Sentencia");
-			statement.close();
+			ProductoDTO producto = DatosDAO.selectProducto(connection, movimiento.getProductoId());
+			LOGGER.info("OK -> Identificador Producto [" + producto.getIdentificador() + "]");
 		}
 	}
 

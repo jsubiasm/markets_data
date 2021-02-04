@@ -17,7 +17,7 @@ public class MovimientoDTO
 	 * 
 	 */
 	private Integer movimientoId = null;
-	private String producto = null;
+	private String productoId = null;
 	private String compraVenta = null;
 	private Date fecha = null;
 	private BigDecimal numeroTitulos = null;
@@ -44,19 +44,19 @@ public class MovimientoDTO
 	}
 
 	/**
-	 * @return the producto
+	 * @return the productoId
 	 */
-	public String getProducto()
+	public String getProductoId()
 	{
-		return producto;
+		return productoId;
 	}
 
 	/**
-	 * @param producto the producto to set
+	 * @param productoId the productoId to set
 	 */
-	public void setProducto(String producto)
+	public void setProductoId(String productoId)
 	{
-		this.producto = producto;
+		this.productoId = productoId;
 	}
 
 	/**
