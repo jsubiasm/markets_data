@@ -46,18 +46,6 @@ public class Main
 	private static final String DB_PATH = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\seguimiento_cartera";
 
 	/**
-	 * @return
-	 * @throws Throwable
-	 */
-	private static Connection getConnection() throws Throwable
-	{
-		String dbUrl = DB_PROTOCOL + DB_PATH;
-		Connection connection = DriverManager.getConnection(dbUrl);
-		connection.setAutoCommit(false);
-		return connection;
-	}
-
-	/**
 	 * @param connection
 	 * @throws Throwable
 	 */
@@ -86,7 +74,6 @@ public class Main
 	{
 		Map<String, GanPerProdPesoDTO> mapGanPerProdPeso = new HashMap<String, GanPerProdPesoDTO>();
 		List<MovimientoDTO> listaMovimientos = DatosDAO.select_TB02_MOVIMIENTOS(connection);
-		BigDecimal sumValorTitulosActuales = BigDecimal.ZERO;
 		for (MovimientoDTO mov : listaMovimientos)
 		{
 			if (mapGanPerProdPeso.containsKey(mov.getProductoId()))
@@ -102,7 +89,6 @@ public class Main
 				gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosComprados().add(mov.getNumeroTitulos()) : gpp.getTitulosComprados());
 				gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? gpp.getTitulosVendidos().add(mov.getNumeroTitulos()) : gpp.getTitulosVendidos());
 				mapGanPerProdPeso.put(mov.getProductoId(), gpp);
-				sumValorTitulosActuales.add(gpp.getValorTitulosActuales());
 			}
 			else
 			{
@@ -121,9 +107,9 @@ public class Main
 				gpp.setValorTitulo(BigDecimal.ZERO);
 				gpp.setValorTitulosActuales(BigDecimal.ZERO);
 				mapGanPerProdPeso.put(mov.getProductoId(), gpp);
-				sumValorTitulosActuales.add(gpp.getValorTitulosActuales());
 			}
 		}
+		BigDecimal sumValorTitulosActuales = BigDecimal.ZERO;
 		for (String productoId : mapGanPerProdPeso.keySet())
 		{
 			PrecioDTO precio = DatosDAO.select_TB02_PRECIOS(connection, productoId);
@@ -136,14 +122,17 @@ public class Main
 			gpp.setValorTitulosActuales(precio.getValorTitulo().multiply(gpp.getTitulosActuales()));
 			gpp.setGananciaPerdida(gpp.getPrecioTitulosVendidos().add(gpp.getValorTitulosActuales()).subtract(gpp.getPrecioTitulosComprados()));
 			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 2, RoundingMode.HALF_UP));
-			if (sumValorTitulosActuales.equals(BigDecimal.ZERO))
+			sumValorTitulosActuales = sumValorTitulosActuales.add(gpp.getValorTitulosActuales());
+			mapGanPerProdPeso.put(productoId, gpp);
+		}
+		for (String productoId : mapGanPerProdPeso.keySet())
+		{
+			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(productoId);
+			if (!gpp.getProductoId().equalsIgnoreCase(productoId))
 			{
-				gpp.setPesoEnCartera(BigDecimal.ZERO);
+				throw new Exception("Los IDs de producto no coinciden [" + gpp.getProductoId() + "] [" + productoId + "]");
 			}
-			else
-			{
-				gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 2, RoundingMode.HALF_UP));
-			}
+			gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 2, RoundingMode.HALF_UP));
 			mapGanPerProdPeso.put(productoId, gpp);
 		}
 		List<GanPerProdPesoDTO> listGanPerProdPeso = DatosDAO.select_VW03_GAN_PER_PROD_PESO(connection);
@@ -194,14 +183,87 @@ public class Main
 			{
 				throw new Exception("Los valores de ganancia perdida porcentual no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getGananciaPerdidaPrcnt() + "] [" + ganPerProdPesoJAVA.getGananciaPerdidaPrcnt() + "]");
 			}
-//			if (!ganPerProdPesoSQL.getPesoEnCartera().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPesoEnCartera().setScale(2, RoundingMode.HALF_UP)))
-//			{
-//				throw new Exception("Los valores peso en cartera no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPesoEnCartera() + "] [" + ganPerProdPesoJAVA.getPesoEnCartera() + "]");
-//			}
+			if (!ganPerProdPesoSQL.getPesoEnCartera().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPesoEnCartera().setScale(2, RoundingMode.HALF_UP)))
+			{
+				throw new Exception("Los valores peso en cartera no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPesoEnCartera() + "] [" + ganPerProdPesoJAVA.getPesoEnCartera() + "]");
+			}
 			else
 			{
 				LOGGER.info("VW03_GAN_PER_PROD_PESO - OK -> [" + ganPerProdPesoSQL.getProductoId() + "]");
 			}
+		}
+	}
+
+	/**
+	 * @return
+	 * @throws Throwable
+	 */
+	private static Connection abrirConexion() throws Throwable
+	{
+		String dbUrl = DB_PROTOCOL + DB_PATH;
+		Connection connection = DriverManager.getConnection(dbUrl);
+		connection.setAutoCommit(false);
+		return connection;
+	}
+
+	/**
+	 * @param connection
+	 * @throws Throwable
+	 */
+	private static void confirmarTransaccion(Connection connection) throws Throwable
+	{
+		connection.commit();
+	}
+
+	/**
+	 * @param connection
+	 */
+	private static void deshacerTransaccion(Connection connection)
+	{
+		try
+		{
+			connection.rollback();
+		}
+		catch (Throwable t2)
+		{
+			LOGGER.error("ERROR", t2);
+		}
+	}
+
+	/**
+	 * @param connection
+	 */
+	private static void cerrarConexion(Connection connection)
+	{
+		try
+		{
+			connection.close();
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+		}
+	}
+
+	/**
+	 * 
+	 */
+	private static void cerrarBaseDatos()
+	{
+		try
+		{
+			DriverManager.getConnection(DB_PROTOCOL + ";shutdown=true");
+		}
+		catch (SQLException se)
+		{
+			if (se.getErrorCode() != 50000 || !"XJ015".equals(se.getSQLState()))
+			{
+				LOGGER.error("ERROR", se);
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
 		}
 	}
 
@@ -215,52 +277,24 @@ public class Main
 		try
 		{
 			LOGGER.info("Abriendo Conexion");
-			connection = getConnection();
+			connection = abrirConexion();
 			validate_TB02_MOVIMIENTOS(connection);
 			validate_VW03_GAN_PER_PROD_PESO(connection);
 			LOGGER.info("Confirmando Transaccion");
-			connection.commit();
+			confirmarTransaccion(connection);
 		}
 		catch (Throwable t)
 		{
 			LOGGER.error("ERROR", t);
 			LOGGER.info("Deshaciendo Transaccion");
-			try
-			{
-				connection.rollback();
-			}
-			catch (Throwable t2)
-			{
-				LOGGER.error("ERROR", t2);
-			}
+			deshacerTransaccion(connection);
 		}
 		finally
 		{
 			LOGGER.info("Cerrando Conexion");
-			try
-			{
-				connection.close();
-			}
-			catch (Throwable t)
-			{
-				LOGGER.error("ERROR", t);
-			}
+			cerrarConexion(connection);
 			LOGGER.info("Cerrando Base Datos");
-			try
-			{
-				DriverManager.getConnection("jdbc:derby:;shutdown=true");
-			}
-			catch (SQLException se)
-			{
-				if (se.getErrorCode() != 50000 || !"XJ015".equals(se.getSQLState()))
-				{
-					LOGGER.error("ERROR", se);
-				}
-			}
-			catch (Throwable t)
-			{
-				LOGGER.error("ERROR", t);
-			}
+			cerrarBaseDatos();
 			LOGGER.info("FIN PROCESO");
 		}
 	}
