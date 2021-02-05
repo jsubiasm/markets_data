@@ -155,6 +155,10 @@ public class Main
 			mapGanPerProdPeso.put(mapKey, gpp);
 		}
 		List<GanPerProdPesoDTO> listGanPerProdPeso = DatosDAO.select_VW03_GAN_PER_PROD_PESO(connection);
+		if (listGanPerProdPeso.size() != mapGanPerProdPeso.size())
+		{
+			throw new Exception("La dimensión de los elementos es distinta [" + listGanPerProdPeso.size() + "] [" + mapGanPerProdPeso.size() + "]");
+		}
 		for (GanPerProdPesoDTO ganPerProdPesoSQL : listGanPerProdPeso)
 		{
 			GanPerProdPesoDTO ganPerProdPesoJAVA = mapGanPerProdPeso.get(getMapKey(ganPerProdPesoSQL));
