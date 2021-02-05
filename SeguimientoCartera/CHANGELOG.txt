@@ -1,0 +1,1 @@
+ - Version 0.1: Construida y validada la vista VW03_GAN_PER_PROD_PESO
