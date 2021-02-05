@@ -12,11 +12,16 @@ import java.math.BigDecimal;
 public class GanPerProdPesoDTO
 {
 
-	/**
-	 * 
-	 */
 	private String productoId = null;
 	private String nombre = null;
+	private String comercializador = null;
+	private String mercado = null;
+	private String proveedor = null;
+	private String instrumento = null;
+	private String tipoActivo = null;
+	private String subtipoActivo = null;
+	private String moneda = null;
+	private String usoIngresos = null;
 	private BigDecimal titulosComprados = null;
 	private BigDecimal precioTitulosComprados = null;
 	private BigDecimal titulosVendidos = null;
@@ -58,6 +63,134 @@ public class GanPerProdPesoDTO
 	public void setNombre(String nombre)
 	{
 		this.nombre = nombre;
+	}
+
+	/**
+	 * @return the comercializador
+	 */
+	public String getComercializador()
+	{
+		return comercializador;
+	}
+
+	/**
+	 * @param comercializador the comercializador to set
+	 */
+	public void setComercializador(String comercializador)
+	{
+		this.comercializador = comercializador;
+	}
+
+	/**
+	 * @return the mercado
+	 */
+	public String getMercado()
+	{
+		return mercado;
+	}
+
+	/**
+	 * @param mercado the mercado to set
+	 */
+	public void setMercado(String mercado)
+	{
+		this.mercado = mercado;
+	}
+
+	/**
+	 * @return the proveedor
+	 */
+	public String getProveedor()
+	{
+		return proveedor;
+	}
+
+	/**
+	 * @param proveedor the proveedor to set
+	 */
+	public void setProveedor(String proveedor)
+	{
+		this.proveedor = proveedor;
+	}
+
+	/**
+	 * @return the instrumento
+	 */
+	public String getInstrumento()
+	{
+		return instrumento;
+	}
+
+	/**
+	 * @param instrumento the instrumento to set
+	 */
+	public void setInstrumento(String instrumento)
+	{
+		this.instrumento = instrumento;
+	}
+
+	/**
+	 * @return the tipoActivo
+	 */
+	public String getTipoActivo()
+	{
+		return tipoActivo;
+	}
+
+	/**
+	 * @param tipoActivo the tipoActivo to set
+	 */
+	public void setTipoActivo(String tipoActivo)
+	{
+		this.tipoActivo = tipoActivo;
+	}
+
+	/**
+	 * @return the subtipoActivo
+	 */
+	public String getSubtipoActivo()
+	{
+		return subtipoActivo;
+	}
+
+	/**
+	 * @param subtipoActivo the subtipoActivo to set
+	 */
+	public void setSubtipoActivo(String subtipoActivo)
+	{
+		this.subtipoActivo = subtipoActivo;
+	}
+
+	/**
+	 * @return the moneda
+	 */
+	public String getMoneda()
+	{
+		return moneda;
+	}
+
+	/**
+	 * @param moneda the moneda to set
+	 */
+	public void setMoneda(String moneda)
+	{
+		this.moneda = moneda;
+	}
+
+	/**
+	 * @return the usoIngresos
+	 */
+	public String getUsoIngresos()
+	{
+		return usoIngresos;
+	}
+
+	/**
+	 * @param usoIngresos the usoIngresos to set
+	 */
+	public void setUsoIngresos(String usoIngresos)
+	{
+		this.usoIngresos = usoIngresos;
 	}
 
 	/**

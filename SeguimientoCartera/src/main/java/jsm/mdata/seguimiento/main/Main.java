@@ -67,6 +67,25 @@ public class Main
 	}
 
 	/**
+	 * @param mov
+	 * @param producto
+	 * @return
+	 */
+	private static String getMapKey(MovimientoDTO mov, ProductoDTO producto)
+	{
+		return mov.getProductoId() + producto.getNombre() + mov.getComercializador() + producto.getInstrumento() + mov.getMercado() + producto.getMoneda() + producto.getProveedor() + producto.getSubtipoActivo() + producto.getTipoActivo() + producto.getUsoIngresos();
+	}
+
+	/**
+	 * @param gpp
+	 * @return
+	 */
+	private static String getMapKey(GanPerProdPesoDTO gpp)
+	{
+		return gpp.getProductoId() + gpp.getNombre() + gpp.getComercializador() + gpp.getInstrumento() + gpp.getMercado() + gpp.getMoneda() + gpp.getProveedor() + gpp.getSubtipoActivo() + gpp.getTipoActivo() + gpp.getUsoIngresos();
+	}
+
+	/**
 	 * @param connection
 	 * @throws Throwable
 	 */
@@ -76,9 +95,10 @@ public class Main
 		List<MovimientoDTO> listaMovimientos = DatosDAO.select_TB02_MOVIMIENTOS(connection);
 		for (MovimientoDTO mov : listaMovimientos)
 		{
-			if (mapGanPerProdPeso.containsKey(mov.getProductoId()))
+			ProductoDTO producto = DatosDAO.select_TB02_PRODUCTOS(connection, mov.getProductoId());
+			if (mapGanPerProdPeso.containsKey(getMapKey(mov, producto)))
 			{
-				GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(mov.getProductoId());
+				GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(getMapKey(mov, producto));
 				if (!gpp.getProductoId().equalsIgnoreCase(mov.getProductoId()))
 				{
 					throw new Exception("Los IDs de producto no coinciden [" + gpp.getProductoId() + "] [" + mov.getProductoId() + "]");
@@ -88,57 +108,56 @@ public class Main
 				gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosActuales().add(mov.getNumeroTitulos()) : gpp.getTitulosActuales().subtract(mov.getNumeroTitulos()));
 				gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosComprados().add(mov.getNumeroTitulos()) : gpp.getTitulosComprados());
 				gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? gpp.getTitulosVendidos().add(mov.getNumeroTitulos()) : gpp.getTitulosVendidos());
-				mapGanPerProdPeso.put(mov.getProductoId(), gpp);
+				mapGanPerProdPeso.put(getMapKey(mov, producto), gpp);
 			}
 			else
 			{
-				ProductoDTO producto = DatosDAO.select_TB02_PRODUCTOS(connection, mov.getProductoId());
 				GanPerProdPesoDTO gpp = new GanPerProdPesoDTO();
+				gpp.setProductoId(mov.getProductoId());
+				gpp.setNombre(producto.getNombre());
+				gpp.setComercializador(mov.getComercializador());
+				gpp.setInstrumento(producto.getInstrumento());
+				gpp.setMercado(mov.getMercado());
+				gpp.setMoneda(producto.getMoneda());
+				gpp.setProveedor(producto.getProveedor());
+				gpp.setSubtipoActivo(producto.getSubtipoActivo());
+				gpp.setTipoActivo(producto.getTipoActivo());
+				gpp.setUsoIngresos(producto.getUsoIngresos());
 				gpp.setGananciaPerdida(BigDecimal.ZERO);
 				gpp.setGananciaPerdidaPrcnt(BigDecimal.ZERO);
-				gpp.setNombre(producto.getNombre());
 				gpp.setPesoEnCartera(BigDecimal.ZERO);
 				gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision()) : BigDecimal.ZERO);
 				gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision()) : BigDecimal.ZERO);
-				gpp.setProductoId(mov.getProductoId());
 				gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : mov.getNumeroTitulos().multiply(new BigDecimal(-1d)));
 				gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
 				gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
 				gpp.setValorTitulo(BigDecimal.ZERO);
 				gpp.setValorTitulosActuales(BigDecimal.ZERO);
-				mapGanPerProdPeso.put(mov.getProductoId(), gpp);
+				mapGanPerProdPeso.put(getMapKey(mov, producto), gpp);
 			}
 		}
 		BigDecimal sumValorTitulosActuales = BigDecimal.ZERO;
-		for (String productoId : mapGanPerProdPeso.keySet())
+		for (String mapKey : mapGanPerProdPeso.keySet())
 		{
-			PrecioDTO precio = DatosDAO.select_TB02_PRECIOS(connection, productoId);
-			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(productoId);
-			if (!gpp.getProductoId().equalsIgnoreCase(productoId))
-			{
-				throw new Exception("Los IDs de producto no coinciden [" + gpp.getProductoId() + "] [" + productoId + "]");
-			}
+			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(mapKey);
+			PrecioDTO precio = DatosDAO.select_TB02_PRECIOS(connection, gpp.getProductoId());
 			gpp.setValorTitulo(precio.getValorTitulo());
 			gpp.setValorTitulosActuales(precio.getValorTitulo().multiply(gpp.getTitulosActuales()));
 			gpp.setGananciaPerdida(gpp.getPrecioTitulosVendidos().add(gpp.getValorTitulosActuales()).subtract(gpp.getPrecioTitulosComprados()));
 			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 2, RoundingMode.HALF_UP));
 			sumValorTitulosActuales = sumValorTitulosActuales.add(gpp.getValorTitulosActuales());
-			mapGanPerProdPeso.put(productoId, gpp);
+			mapGanPerProdPeso.put(mapKey, gpp);
 		}
-		for (String productoId : mapGanPerProdPeso.keySet())
+		for (String mapKey : mapGanPerProdPeso.keySet())
 		{
-			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(productoId);
-			if (!gpp.getProductoId().equalsIgnoreCase(productoId))
-			{
-				throw new Exception("Los IDs de producto no coinciden [" + gpp.getProductoId() + "] [" + productoId + "]");
-			}
+			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(mapKey);
 			gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 2, RoundingMode.HALF_UP));
-			mapGanPerProdPeso.put(productoId, gpp);
+			mapGanPerProdPeso.put(mapKey, gpp);
 		}
 		List<GanPerProdPesoDTO> listGanPerProdPeso = DatosDAO.select_VW03_GAN_PER_PROD_PESO(connection);
 		for (GanPerProdPesoDTO ganPerProdPesoSQL : listGanPerProdPeso)
 		{
-			GanPerProdPesoDTO ganPerProdPesoJAVA = mapGanPerProdPeso.get(ganPerProdPesoSQL.getProductoId());
+			GanPerProdPesoDTO ganPerProdPesoJAVA = mapGanPerProdPeso.get(getMapKey(ganPerProdPesoSQL));
 			if (!ganPerProdPesoSQL.getProductoId().equalsIgnoreCase(ganPerProdPesoJAVA.getProductoId()))
 			{
 				throw new Exception("Los IDs de producto no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoJAVA.getProductoId() + "]");
@@ -146,6 +165,38 @@ public class Main
 			if (!ganPerProdPesoSQL.getNombre().equalsIgnoreCase(ganPerProdPesoJAVA.getNombre()))
 			{
 				throw new Exception("Los nombres de producto no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getNombre() + "] [" + ganPerProdPesoJAVA.getNombre() + "]");
+			}
+			if (!ganPerProdPesoSQL.getComercializador().equalsIgnoreCase(ganPerProdPesoJAVA.getComercializador()))
+			{
+				throw new Exception("Los valores de comercializador no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getComercializador() + "] [" + ganPerProdPesoJAVA.getComercializador() + "]");
+			}
+			if (!ganPerProdPesoSQL.getMercado().equalsIgnoreCase(ganPerProdPesoJAVA.getMercado()))
+			{
+				throw new Exception("Los valores de mercado no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getMercado() + "] [" + ganPerProdPesoJAVA.getMercado() + "]");
+			}
+			if (!ganPerProdPesoSQL.getProveedor().equalsIgnoreCase(ganPerProdPesoJAVA.getProveedor()))
+			{
+				throw new Exception("Los valores de proveedor no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getProveedor() + "] [" + ganPerProdPesoJAVA.getProveedor() + "]");
+			}
+			if (!ganPerProdPesoSQL.getInstrumento().equalsIgnoreCase(ganPerProdPesoJAVA.getInstrumento()))
+			{
+				throw new Exception("Los valores de instrumento no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getInstrumento() + "] [" + ganPerProdPesoJAVA.getInstrumento() + "]");
+			}
+			if (!ganPerProdPesoSQL.getTipoActivo().equalsIgnoreCase(ganPerProdPesoJAVA.getTipoActivo()))
+			{
+				throw new Exception("Los valores de tipo activo no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTipoActivo() + "] [" + ganPerProdPesoJAVA.getTipoActivo() + "]");
+			}
+			if (!ganPerProdPesoSQL.getSubtipoActivo().equalsIgnoreCase(ganPerProdPesoJAVA.getSubtipoActivo()))
+			{
+				throw new Exception("Los valores de subtipo activo no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getSubtipoActivo() + "] [" + ganPerProdPesoJAVA.getSubtipoActivo() + "]");
+			}
+			if (!ganPerProdPesoSQL.getMoneda().equalsIgnoreCase(ganPerProdPesoJAVA.getMoneda()))
+			{
+				throw new Exception("Los valores de moneda no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getMoneda() + "] [" + ganPerProdPesoJAVA.getMoneda() + "]");
+			}
+			if (!ganPerProdPesoSQL.getUsoIngresos().equalsIgnoreCase(ganPerProdPesoJAVA.getUsoIngresos()))
+			{
+				throw new Exception("Los valores de uso ingresos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getUsoIngresos() + "] [" + ganPerProdPesoJAVA.getUsoIngresos() + "]");
 			}
 			if (!ganPerProdPesoSQL.getTitulosComprados().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getTitulosComprados().setScale(2, RoundingMode.HALF_UP)))
 			{

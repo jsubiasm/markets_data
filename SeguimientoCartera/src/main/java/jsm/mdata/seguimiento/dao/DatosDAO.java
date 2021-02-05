@@ -127,56 +127,6 @@ public class DatosDAO
 
 	/**
 	 * @param connection
-	 * @return
-	 * @throws Throwable
-	 */
-	public static final List<GanPerProdPesoDTO> select_VW03_GAN_PER_PROD_PESO(Connection connection) throws Throwable
-	{
-		PreparedStatement statement = null;
-		ResultSet resultSet = null;
-		List<GanPerProdPesoDTO> listaGanPerProdPeso = new ArrayList<GanPerProdPesoDTO>();
-		try
-		{
-			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VW03_GAN_PER_PROD_PESO");
-			LOGGER.debug("Ejecutando Sentencia");
-			resultSet = statement.executeQuery();
-			LOGGER.debug("Abriendo Cursor");
-			while (resultSet.next())
-			{
-				GanPerProdPesoDTO dto = new GanPerProdPesoDTO();
-				dto.setGananciaPerdida(resultSet.getBigDecimal("GANANCIA_PERDIDA"));
-				dto.setGananciaPerdidaPrcnt(resultSet.getBigDecimal("GANANCIA_PERDIDA_PRCNT"));
-				dto.setNombre(resultSet.getString("NOMBRE"));
-				dto.setPesoEnCartera(resultSet.getBigDecimal("PESO_EN_CARTERA"));
-				dto.setPrecioTitulosComprados(resultSet.getBigDecimal("PRECIO_TITULOS_COMPRADOS"));
-				dto.setPrecioTitulosVendidos(resultSet.getBigDecimal("PRECIO_TITULOS_VENDIDOS"));
-				dto.setProductoId(resultSet.getString("PRODUCTO_ID"));
-				dto.setTitulosActuales(resultSet.getBigDecimal("TITULOS_ACTUALES"));
-				dto.setTitulosComprados(resultSet.getBigDecimal("TITULOS_COMPRADOS"));
-				dto.setTitulosVendidos(resultSet.getBigDecimal("TITULOS_VENDIDOS"));
-				dto.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
-				dto.setValorTitulosActuales(resultSet.getBigDecimal("VALOR_TITULOS_ACTUALES"));
-				listaGanPerProdPeso.add(dto);
-			}
-		}
-		catch (Throwable t)
-		{
-			LOGGER.error("ERROR", t);
-			throw t;
-		}
-		finally
-		{
-			LOGGER.debug("Cerrando Cursor");
-			resultSet.close();
-			LOGGER.debug("Cerrando Sentencia");
-			statement.close();
-		}
-		return listaGanPerProdPeso;
-	}
-
-	/**
-	 * @param connection
 	 * @param productoId
 	 * @return
 	 * @throws Throwable
@@ -216,6 +166,64 @@ public class DatosDAO
 			statement.close();
 		}
 		return precio;
+	}
+
+	/**
+	 * @param connection
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final List<GanPerProdPesoDTO> select_VW03_GAN_PER_PROD_PESO(Connection connection) throws Throwable
+	{
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		List<GanPerProdPesoDTO> listaGanPerProdPeso = new ArrayList<GanPerProdPesoDTO>();
+		try
+		{
+			LOGGER.debug("Abriendo Sentencia");
+			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, COMERCIALIZADOR, MERCADO, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VW03_GAN_PER_PROD_PESO");
+			LOGGER.debug("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.debug("Abriendo Cursor");
+			while (resultSet.next())
+			{
+				GanPerProdPesoDTO dto = new GanPerProdPesoDTO();
+				dto.setComercializador(resultSet.getString("COMERCIALIZADOR"));
+				dto.setGananciaPerdida(resultSet.getBigDecimal("GANANCIA_PERDIDA"));
+				dto.setGananciaPerdidaPrcnt(resultSet.getBigDecimal("GANANCIA_PERDIDA_PRCNT"));
+				dto.setInstrumento(resultSet.getString("INSTRUMENTO"));
+				dto.setMercado(resultSet.getString("MERCADO"));
+				dto.setMoneda(resultSet.getString("MONEDA"));
+				dto.setNombre(resultSet.getString("NOMBRE"));
+				dto.setPesoEnCartera(resultSet.getBigDecimal("PESO_EN_CARTERA"));
+				dto.setPrecioTitulosComprados(resultSet.getBigDecimal("PRECIO_TITULOS_COMPRADOS"));
+				dto.setPrecioTitulosVendidos(resultSet.getBigDecimal("PRECIO_TITULOS_VENDIDOS"));
+				dto.setProductoId(resultSet.getString("PRODUCTO_ID"));
+				dto.setProveedor(resultSet.getString("PROVEEDOR"));
+				dto.setSubtipoActivo(resultSet.getString("SUBTIPO_ACTIVO"));
+				dto.setTipoActivo(resultSet.getString("TIPO_ACTIVO"));
+				dto.setTitulosActuales(resultSet.getBigDecimal("TITULOS_ACTUALES"));
+				dto.setTitulosComprados(resultSet.getBigDecimal("TITULOS_COMPRADOS"));
+				dto.setTitulosVendidos(resultSet.getBigDecimal("TITULOS_VENDIDOS"));
+				dto.setUsoIngresos(resultSet.getString("USO_INGRESOS"));
+				dto.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
+				dto.setValorTitulosActuales(resultSet.getBigDecimal("VALOR_TITULOS_ACTUALES"));
+				listaGanPerProdPeso.add(dto);
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+			throw t;
+		}
+		finally
+		{
+			LOGGER.debug("Cerrando Cursor");
+			resultSet.close();
+			LOGGER.debug("Cerrando Sentencia");
+			statement.close();
+		}
+		return listaGanPerProdPeso;
 	}
 
 }
