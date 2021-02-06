@@ -87,9 +87,10 @@ public class Main
 
 	/**
 	 * @param connection
+	 * @return
 	 * @throws Throwable
 	 */
-	private static void validate_VW03_GAN_PER_PROD_PESO(Connection connection) throws Throwable
+	private static Map<String, GanPerProdPesoDTO> validate_VW03_GAN_PER_PROD_PESO(Connection connection) throws Throwable
 	{
 		Map<String, GanPerProdPesoDTO> mapGanPerProdPeso = new HashMap<String, GanPerProdPesoDTO>();
 		List<MovimientoDTO> listaMovimientos = DatosDAO.select_TB02_MOVIMIENTOS(connection);
@@ -144,14 +145,14 @@ public class Main
 			gpp.setValorTitulo(precio.getValorTitulo());
 			gpp.setValorTitulosActuales(precio.getValorTitulo().multiply(gpp.getTitulosActuales()));
 			gpp.setGananciaPerdida(gpp.getPrecioTitulosVendidos().add(gpp.getValorTitulosActuales()).subtract(gpp.getPrecioTitulosComprados()));
-			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 2, RoundingMode.HALF_UP));
+			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
 			sumValorTitulosActuales = sumValorTitulosActuales.add(gpp.getValorTitulosActuales());
 			mapGanPerProdPeso.put(mapKey, gpp);
 		}
 		for (String mapKey : mapGanPerProdPeso.keySet())
 		{
 			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(mapKey);
-			gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 2, RoundingMode.HALF_UP));
+			gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 6, RoundingMode.HALF_EVEN));
 			mapGanPerProdPeso.put(mapKey, gpp);
 		}
 		List<GanPerProdPesoDTO> listGanPerProdPeso = DatosDAO.select_VW03_GAN_PER_PROD_PESO(connection);
@@ -247,6 +248,127 @@ public class Main
 				LOGGER.info("VW03_GAN_PER_PROD_PESO - OK -> [" + ganPerProdPesoSQL.getProductoId() + "]");
 			}
 		}
+		return mapGanPerProdPeso;
+	}
+
+	/**
+	 * @param gpp
+	 * @param nombreVista
+	 * @return
+	 * @throws Throwable
+	 */
+	private static String getMapKey(GanPerProdPesoDTO gpp, String nombreVista) throws Throwable
+	{
+		String key = "noKey";
+		if (nombreVista != null)
+		{
+			if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
+			{
+				key = gpp.getComercializador();
+			}
+			else if ("INSTRUMENTO".equalsIgnoreCase(nombreVista))
+			{
+				key = gpp.getInstrumento();
+			}
+			else if ("MERCADO".equalsIgnoreCase(nombreVista))
+			{
+				key = gpp.getMercado();
+			}
+			else if ("MONEDA".equalsIgnoreCase(nombreVista))
+			{
+				key = gpp.getMoneda();
+			}
+			else if ("PROVEEDOR".equalsIgnoreCase(nombreVista))
+			{
+				key = gpp.getProveedor();
+			}
+			else if ("SUBTIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+			{
+				key = gpp.getSubtipoActivo();
+			}
+			else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+			{
+				key = gpp.getTipoActivo();
+			}
+			else if ("USO_INGRESOS".equalsIgnoreCase(nombreVista))
+			{
+				key = gpp.getUsoIngresos();
+			}
+			else
+			{
+				throw new Exception("Nombre de vista inesperado [" + nombreVista + "]");
+			}
+		}
+		return key;
+	}
+
+	/**
+	 * @param connection
+	 * @param nombreVista
+	 * @throws Throwable
+	 */
+	private static void validate_VWF_nombreVista(Connection connection, String nombreVista, Map<String, GanPerProdPesoDTO> mapInput) throws Throwable
+	{
+		Map<String, GanPerProdPesoDTO> mapVWF = new HashMap<String, GanPerProdPesoDTO>();
+		for (String mapGppKey : mapInput.keySet())
+		{
+			GanPerProdPesoDTO gppInput = mapInput.get(mapGppKey);
+			if (mapVWF.containsKey(getMapKey(gppInput, nombreVista)))
+			{
+				GanPerProdPesoDTO gppVWF = mapVWF.get(getMapKey(gppInput, nombreVista));
+				gppVWF.setPrecioTitulosComprados(gppVWF.getPrecioTitulosComprados().add(gppInput.getPrecioTitulosComprados()));
+				gppVWF.setPrecioTitulosVendidos(gppVWF.getPrecioTitulosVendidos().add(gppInput.getPrecioTitulosVendidos()));
+				gppVWF.setValorTitulosActuales(gppVWF.getValorTitulosActuales().add(gppInput.getValorTitulosActuales()));
+				gppVWF.setGananciaPerdida(gppVWF.getGananciaPerdida().add(gppInput.getGananciaPerdida()));
+				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
+				gppVWF.setPesoEnCartera(gppVWF.getPesoEnCartera().add(gppInput.getPesoEnCartera()));
+				mapVWF.put(getMapKey(gppInput, nombreVista), gppVWF);
+			}
+			else
+			{
+				GanPerProdPesoDTO gppVWF = new GanPerProdPesoDTO();
+				gppVWF.setPrecioTitulosComprados(gppInput.getPrecioTitulosComprados());
+				gppVWF.setPrecioTitulosVendidos(gppInput.getPrecioTitulosVendidos());
+				gppVWF.setValorTitulosActuales(gppInput.getValorTitulosActuales());
+				gppVWF.setGananciaPerdida(gppInput.getGananciaPerdida());
+				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
+				gppVWF.setPesoEnCartera(gppInput.getPesoEnCartera());
+				mapVWF.put(getMapKey(gppInput, nombreVista), gppVWF);
+			}
+		}
+		List<GanPerProdPesoDTO> listGanPerProdPeso = DatosDAO.select_VWF_nombreVista(connection, nombreVista);
+		for (GanPerProdPesoDTO ganPerProdPesoSQL : listGanPerProdPeso)
+		{
+			GanPerProdPesoDTO ganPerProdPesoJAVA = mapVWF.get(getMapKey(ganPerProdPesoSQL, nombreVista));
+			if (!ganPerProdPesoSQL.getPrecioTitulosComprados().setScale(1, RoundingMode.DOWN).equals(ganPerProdPesoJAVA.getPrecioTitulosComprados().setScale(1, RoundingMode.DOWN)))
+			{
+				throw new Exception("Los precios de titulos comprados no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getPrecioTitulosComprados() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosComprados() + "]");
+			}
+			if (!ganPerProdPesoSQL.getPrecioTitulosVendidos().setScale(1, RoundingMode.DOWN).equals(ganPerProdPesoJAVA.getPrecioTitulosVendidos().setScale(1, RoundingMode.DOWN)))
+			{
+				throw new Exception("Los precios de titulos vendidos no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getPrecioTitulosVendidos() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosVendidos() + "]");
+			}
+			if (!ganPerProdPesoSQL.getValorTitulosActuales().setScale(1, RoundingMode.DOWN).equals(ganPerProdPesoJAVA.getValorTitulosActuales().setScale(1, RoundingMode.DOWN)))
+			{
+				throw new Exception("Los valores de los titulos actuales no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getValorTitulosActuales() + "] [" + ganPerProdPesoJAVA.getValorTitulosActuales() + "]");
+			}
+			if (!ganPerProdPesoSQL.getGananciaPerdida().setScale(1, RoundingMode.DOWN).equals(ganPerProdPesoJAVA.getGananciaPerdida().setScale(1, RoundingMode.DOWN)))
+			{
+				throw new Exception("Los valores de ganancia perdida no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getGananciaPerdida() + "] [" + ganPerProdPesoJAVA.getGananciaPerdida() + "]");
+			}
+			if (!ganPerProdPesoSQL.getGananciaPerdidaPrcnt().setScale(1, RoundingMode.DOWN).equals(ganPerProdPesoJAVA.getGananciaPerdidaPrcnt().setScale(1, RoundingMode.DOWN)))
+			{
+				throw new Exception("Los valores de ganancia perdida porcentual no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getGananciaPerdidaPrcnt() + "] [" + ganPerProdPesoJAVA.getGananciaPerdidaPrcnt() + "]");
+			}
+			if (!ganPerProdPesoSQL.getPesoEnCartera().setScale(1, RoundingMode.DOWN).equals(ganPerProdPesoJAVA.getPesoEnCartera().setScale(1, RoundingMode.DOWN)))
+			{
+				throw new Exception("Los valores peso en cartera no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getPesoEnCartera() + "] [" + ganPerProdPesoJAVA.getPesoEnCartera() + "]");
+			}
+			else
+			{
+				LOGGER.info("VWF_" + nombreVista + " - OK -> [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "]");
+			}
+		}
 	}
 
 	/**
@@ -334,19 +456,16 @@ public class Main
 			LOGGER.info("Abriendo Conexion");
 			connection = abrirConexion();
 			validate_TB02_MOVIMIENTOS(connection);
-			validate_VW03_GAN_PER_PROD_PESO(connection);
-			
-			// TODO: VALIDAR VISTAS:
-			// VWF_COMERCIALIZADOR
-			// VWF_GAN_PER_PROD_PESO_SUM
-			// VWF_INSTRUMENTO
-			// VWF_MERCADO
-			// VWF_MONEDA
-			// VWF_PROVEEDOR
-			// VWF_SUBTIPO_ACTIVO
-			// VWF_TIPO_ACTIVO
-			// VWF_USO_INGRESOS
-
+			Map<String, GanPerProdPesoDTO> mapGanPerProdPeso = validate_VW03_GAN_PER_PROD_PESO(connection);
+			validate_VWF_nombreVista(connection, "INSTRUMENTO", mapGanPerProdPeso);
+			validate_VWF_nombreVista(connection, "COMERCIALIZADOR", mapGanPerProdPeso);
+			validate_VWF_nombreVista(connection, "MERCADO", mapGanPerProdPeso);
+			validate_VWF_nombreVista(connection, "MONEDA", mapGanPerProdPeso);
+			validate_VWF_nombreVista(connection, "PROVEEDOR", mapGanPerProdPeso);
+			validate_VWF_nombreVista(connection, "SUBTIPO_ACTIVO", mapGanPerProdPeso);
+			validate_VWF_nombreVista(connection, "TIPO_ACTIVO", mapGanPerProdPeso);
+			validate_VWF_nombreVista(connection, "USO_INGRESOS", mapGanPerProdPeso);
+			// validate_VWF_nombreVista(connection, null, mapGanPerProdPeso);
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
 		}

@@ -226,4 +226,95 @@ public class DatosDAO
 		return listaGanPerProdPeso;
 	}
 
+	/**
+	 * @param connection
+	 * @param nombreVista
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final List<GanPerProdPesoDTO> select_VWF_nombreVista(Connection connection, String nombreVista) throws Throwable
+	{
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		List<GanPerProdPesoDTO> listaGanPerProdPeso = new ArrayList<GanPerProdPesoDTO>();
+		try
+		{
+			LOGGER.debug("Abriendo Sentencia");
+			if (nombreVista != null)
+			{
+				statement = connection.prepareStatement("SELECT " + nombreVista + ", PRECIO_TITULOS_COMPRADOS, PRECIO_TITULOS_VENDIDOS, VALOR_TITULOS_ACTUALES, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VWF_" + nombreVista);
+			}
+			else
+			{
+				statement = connection.prepareStatement("SELECT PRECIO_TITULOS_COMPRADOS, PRECIO_TITULOS_VENDIDOS, VALOR_TITULOS_ACTUALES, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VWF_GAN_PER_PROD_PESO_SUM");
+			}
+			LOGGER.debug("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.debug("Abriendo Cursor");
+			while (resultSet.next())
+			{
+				GanPerProdPesoDTO dto = new GanPerProdPesoDTO();
+				if (nombreVista != null)
+				{
+					if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
+					{
+						dto.setComercializador(resultSet.getString("COMERCIALIZADOR"));
+					}
+					else if ("INSTRUMENTO".equalsIgnoreCase(nombreVista))
+					{
+						dto.setInstrumento(resultSet.getString("INSTRUMENTO"));
+					}
+					else if ("MERCADO".equalsIgnoreCase(nombreVista))
+					{
+						dto.setMercado(resultSet.getString("MERCADO"));
+					}
+					else if ("MONEDA".equalsIgnoreCase(nombreVista))
+					{
+						dto.setMoneda(resultSet.getString("MONEDA"));
+					}
+					else if ("PROVEEDOR".equalsIgnoreCase(nombreVista))
+					{
+						dto.setProveedor(resultSet.getString("PROVEEDOR"));
+					}
+					else if ("SUBTIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+					{
+						dto.setSubtipoActivo(resultSet.getString("SUBTIPO_ACTIVO"));
+					}
+					else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+					{
+						dto.setTipoActivo(resultSet.getString("TIPO_ACTIVO"));
+					}
+					else if ("USO_INGRESOS".equalsIgnoreCase(nombreVista))
+					{
+						dto.setUsoIngresos(resultSet.getString("USO_INGRESOS"));
+					}
+					else
+					{
+						throw new Exception("Nombre de vista inesperado [" + nombreVista + "]");
+					}
+				}
+				dto.setGananciaPerdida(resultSet.getBigDecimal("GANANCIA_PERDIDA"));
+				dto.setGananciaPerdidaPrcnt(resultSet.getBigDecimal("GANANCIA_PERDIDA_PRCNT"));
+				dto.setPesoEnCartera(resultSet.getBigDecimal("PESO_EN_CARTERA"));
+				dto.setPrecioTitulosComprados(resultSet.getBigDecimal("PRECIO_TITULOS_COMPRADOS"));
+				dto.setPrecioTitulosVendidos(resultSet.getBigDecimal("PRECIO_TITULOS_VENDIDOS"));
+				dto.setValorTitulosActuales(resultSet.getBigDecimal("VALOR_TITULOS_ACTUALES"));
+				listaGanPerProdPeso.add(dto);
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+			throw t;
+		}
+		finally
+		{
+			LOGGER.debug("Cerrando Cursor");
+			resultSet.close();
+			LOGGER.debug("Cerrando Sentencia");
+			statement.close();
+		}
+		return listaGanPerProdPeso;
+	}
+
 }
