@@ -18,7 +18,7 @@ DROP VIEW VWF_MERCADO;
 DROP VIEW VWF_MONEDA;
 DROP VIEW VWF_PROVEEDOR;
 DROP VIEW VWF_TIPO_ACTIVO;
-DROP VIEW VWF_TIPO_SUBTIPO_ACTIVO;
+DROP VIEW VWF_SUBTIPO_ACTIVO;
 DROP VIEW VWF_USO_INGRESOS;
 DROP VIEW VW03_GAN_PER_PROD_PESO;
 DROP VIEW VW02_GAN_PER_PROD;
@@ -129,6 +129,8 @@ ALTER TABLE TB01_MONEDA ADD CONSTRAINT TB01_MONEDA_CLAVE_UNQ Unique (CLAVE);
 --
 --
 INSERT INTO TB01_MONEDA (VALOR) VALUES ('EUR');
+INSERT INTO TB01_MONEDA (VALOR) VALUES ('EUR (Hdg)');
+INSERT INTO TB01_MONEDA (VALOR) VALUES ('EUR (No Hdg)');
 --
 --
 --
@@ -218,30 +220,30 @@ ALTER TABLE TB02_PRODUCTOS ADD CONSTRAINT TB02_PRODUCTOS_USO_INGRESOS_FK Foreign
 --
 --
 --
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('LU0389812933','Amundi IS JP Morgan GBI Glbl Gvs AHE-C','Amundi','Fondo','Renta Fija','RF Global MP','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F000002871');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('LU0389812933','Amundi IS JP Morgan GBI Glbl Gvs AHE-C','Amundi','Fondo','Renta Fija','RF Global MP','EUR (Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F000002871');
 INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('DE000ETFL219','Deka Dt. Boerse EUROGOV Ger 10+ ETF','Deka','ETF','Renta Fija','RF Alemania LP','EUR','Distribucion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000JNSO');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B579F325','Invesco Physical Gold ETC EUR','Invesco','ETC','Oro','Oro','EUR','N/A','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000WGWI');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('LU0908500753','Lyxor Core STOXX Europe 600(DR) ETF Acc EUR','Lyxor','ETF','Renta Variable','RV Europa','EUR','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0001BMZU');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B579F325','Invesco Physical Gold ETC EUR','Invesco','ETC','Oro','Oro','EUR (No Hdg)','N/A','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000WGWI');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('LU0908500753','Lyxor Core STOXX Europe 600(DR) ETF Acc EUR','Lyxor','ETF','Renta Variable','RV Europa','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0001BMZU');
 INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B246KL88','Vanguard 20+ Yr Eur Trs Idx Eur Acc','Vanguard','Fondo','Renta Fija','RF Europa LP','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F000001GFI');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0031786696','Vanguard Em Mkts Stk Idx Eur Acc','Vanguard','Fondo','Renta Variable','RV Emergente','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F00000T1HU');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0031786142','Vanguard Emerg Mkts Stk Idx Inv EUR Acc','Vanguard','Fondo','Renta Variable','RV Emergente','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR06TSA');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007987690','Vanguard European Stock Idx Inv EUR Acc','Vanguard','Fondo','Renta Variable','RV Europa','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR04SKF');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BK5BQT80','Vanguard FTSE All-World ETF USD Acc EUR','Vanguard','ETF','Renta Variable','RV Global','EUR','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0001I3S0');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BK5BQZ41','Vanguard FTSE Dev AsiaPac exJpn ETF USD Acc EUR','Vanguard','ETF','Renta Variable','RV Pacifico','EUR','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0001IHVY');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BK5BR733','Vanguard FTSE Emerg Markets ETF USD Acc EUR','Vanguard','ETF','Renta Variable','RV Emergente','EUR','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0001IHW1');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007281425','Vanguard Japan Stock Index Inv EUR Acc','Vanguard','Fondo','Renta Variable','RV Japon','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR061V3');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007286036','Vanguard Jpn Stk Idx Eur Acc','Vanguard','Fondo','Renta Variable','RV Japon','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR061XN');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007201266','Vanguard Pac ex-Japan Stk Idx EUR Acc','Vanguard','Fondo','Renta Variable','RV Pacifico','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F00000T1I9');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0032126645','Vanguard US 500 Stk Idx Eur Acc','Vanguard','Fondo','Renta Variable','RV USA','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR04UOL');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0032620787','Vanguard US 500 Stock Index Inv EUR Acc','Vanguard','Fondo','Renta Variable','RV USA','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR04G0F');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007987708','Vanguard European Stk Idx Eur Acc','Vanguard','Fondo','Renta Variable','RV Europa','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR04SGM');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0031786696','Vanguard Em Mkts Stk Idx Eur Acc','Vanguard','Fondo','Renta Variable','RV Emergente','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F00000T1HU');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0031786142','Vanguard Emerg Mkts Stk Idx Inv EUR Acc','Vanguard','Fondo','Renta Variable','RV Emergente','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR06TSA');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007987690','Vanguard European Stock Idx Inv EUR Acc','Vanguard','Fondo','Renta Variable','RV Europa','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR04SKF');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BK5BQT80','Vanguard FTSE All-World ETF USD Acc EUR','Vanguard','ETF','Renta Variable','RV Global','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0001I3S0');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BK5BQZ41','Vanguard FTSE Dev AsiaPac exJpn ETF USD Acc EUR','Vanguard','ETF','Renta Variable','RV Pacifico','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0001IHVY');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BK5BR733','Vanguard FTSE Emerg Markets ETF USD Acc EUR','Vanguard','ETF','Renta Variable','RV Emergente','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0001IHW1');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007281425','Vanguard Japan Stock Index Inv EUR Acc','Vanguard','Fondo','Renta Variable','RV Japon','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR061V3');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007286036','Vanguard Jpn Stk Idx Eur Acc','Vanguard','Fondo','Renta Variable','RV Japon','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR061XN');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007201266','Vanguard Pac ex-Japan Stk Idx EUR Acc','Vanguard','Fondo','Renta Variable','RV Pacifico','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F00000T1I9');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0032126645','Vanguard US 500 Stk Idx Eur Acc','Vanguard','Fondo','Renta Variable','RV USA','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR04UOL');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0032620787','Vanguard US 500 Stock Index Inv EUR Acc','Vanguard','Fondo','Renta Variable','RV USA','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR04G0F');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE0007987708','Vanguard European Stk Idx Eur Acc','Vanguard','Fondo','Renta Variable','RV Europa','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR04SGM');
 INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B04GQR24','Vanguard Eurozone InflLnkd Bd Idx Eur Acc','Vanguard','Fondo','Renta Fija','RF Europa BLI','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F0GBR05WKI');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('DE000A1DCTL3','WisdomTree Physical Swiss Gold ETC EUR','WisdomTree','ETC','Oro','Oro','EUR','N/A','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000NA52');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('DE000A0S9GB0','Xetra-Gold EUR','DBC','ETC','Oro','Oro','EUR','N/A','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000M7DL');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B4L5YX21','iShares Core MSCI Japan IMI ETF USD Acc EUR','iShares','ETF','Renta Variable','RV Japon','EUR','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000MEHV');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B5BMR087','iShares Core SP 500 ETF USD Acc EUR','iShares','ETF','Renta Variable','RV USA','EUR','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000OO21');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('DE000A1DCTL3','WisdomTree Physical Swiss Gold ETC EUR','WisdomTree','ETC','Oro','Oro','EUR (No Hdg)','N/A','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000NA52');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('DE000A0S9GB0','Xetra-Gold EUR','DBC','ETC','Oro','Oro','EUR (No Hdg)','N/A','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000M7DL');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B4L5YX21','iShares Core MSCI Japan IMI ETF USD Acc EUR','iShares','ETF','Renta Variable','RV Japon','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000MEHV');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B5BMR087','iShares Core SP 500 ETF USD Acc EUR','iShares','ETF','Renta Variable','RV USA','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P0000OO21');
 INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B4WXT857','iShares Eur GovInfLkd BdIdx(IE) InstlAcc Eur','iShares','Fondo','Renta Fija','RF Europa BLI','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F00000PEDX');
-INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BDRK7R97','iShares Pacific Index (IE) D Acc EUR','iShares','Fondo','Renta Variable','RV Pacifico','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F00000Z2S4');
+INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BDRK7R97','iShares Pacific Index (IE) D Acc EUR','iShares','Fondo','Renta Variable','RV Pacifico','EUR (No Hdg)','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F00000Z2S4');
 INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00B4XCK338','iShares UltraHQ EurGovtBdIdx(IE) InstAcc Eur','iShares','Fondo','Renta Fija','RF Europa MP','EUR','Acumulacion','https://www.morningstar.es/es/funds/snapshot/p_snapshot.aspx?id=F00000OEDJ');
 INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('DE000A0D8Q31','iShares eb.rexx GovtGer 10.5+yr (DE)','iShares','ETF','Renta Fija','RF Alemania LP','EUR','Distribucion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P00001NR4');
 INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING) VALUES ('IE00BSKRJX20','iShares Euro Govt Bond 20y TgtDur ETF Eur Dist EUR','iShares','ETF','Renta Fija','RF Europa LP','EUR','Distribucion','https://www.morningstar.es/es/etf/snapshot/p_snapshot.aspx?id=0P00015OCO');
@@ -644,7 +646,8 @@ SELECT
 	CAST(GANANCIA_PERDIDA AS DECIMAL(31, 2)) AS GANANCIA_PERDIDA,
 	CAST(GANANCIA_PERDIDA_PRCNT AS DECIMAL(31, 2)) AS GANANCIA_PERDIDA_PRCNT,
 	CAST(PESO_EN_CARTERA AS DECIMAL(31, 2)) AS PESO_EN_CARTERA
-FROM VW03_GAN_PER_PROD_PESO;
+FROM VW03_GAN_PER_PROD_PESO 
+WHERE PESO_EN_CARTERA > 0;
 --
 --
 --
@@ -806,9 +809,8 @@ WHERE PESO_EN_CARTERA > 0;
 --
 --
 --
-CREATE VIEW VWF_TIPO_SUBTIPO_ACTIVO AS 	
+CREATE VIEW VWF_SUBTIPO_ACTIVO AS 	
 SELECT 
-	TIPO_ACTIVO, 
 	SUBTIPO_ACTIVO,
 	CAST(PRECIO_TITULOS_COMPRADOS AS DECIMAL(31, 2)) AS PRECIO_TITULOS_COMPRADOS, 
 	CAST(PRECIO_TITULOS_VENDIDOS AS DECIMAL(31, 2)) AS PRECIO_TITULOS_VENDIDOS, 
@@ -818,7 +820,6 @@ SELECT
 	CAST(PESO_EN_CARTERA AS DECIMAL(31, 2)) AS PESO_EN_CARTERA 
 FROM (
 	SELECT 
-		TIPO_ACTIVO, 
 		SUBTIPO_ACTIVO,
 		SUM(PRECIO_TITULOS_COMPRADOS) AS PRECIO_TITULOS_COMPRADOS, 
 		SUM(PRECIO_TITULOS_VENDIDOS) AS PRECIO_TITULOS_VENDIDOS, 
@@ -828,7 +829,7 @@ FROM (
 	FROM 
 		VW03_GAN_PER_PROD_PESO
 	GROUP BY
-		TIPO_ACTIVO, SUBTIPO_ACTIVO
+		SUBTIPO_ACTIVO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
 WHERE PESO_EN_CARTERA > 0;

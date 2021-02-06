@@ -335,6 +335,18 @@ public class Main
 			connection = abrirConexion();
 			validate_TB02_MOVIMIENTOS(connection);
 			validate_VW03_GAN_PER_PROD_PESO(connection);
+			
+			// TODO: VALIDAR VISTAS:
+			// VWF_COMERCIALIZADOR
+			// VWF_GAN_PER_PROD_PESO_SUM
+			// VWF_INSTRUMENTO
+			// VWF_MERCADO
+			// VWF_MONEDA
+			// VWF_PROVEEDOR
+			// VWF_SUBTIPO_ACTIVO
+			// VWF_TIPO_ACTIVO
+			// VWF_USO_INGRESOS
+
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
 		}
