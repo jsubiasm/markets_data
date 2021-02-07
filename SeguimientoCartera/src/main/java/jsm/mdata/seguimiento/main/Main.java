@@ -337,6 +337,10 @@ public class Main
 			}
 		}
 		List<GanPerProdPesoDTO> listGanPerProdPeso = DatosDAO.select_VWF_nombreVista(connection, nombreVista);
+		if (listGanPerProdPeso.size() != mapVWF.size())
+		{
+			throw new Exception("La dimensión de los elementos es distinta [" + listGanPerProdPeso.size() + "] [" + mapVWF.size() + "]");
+		}
 		for (GanPerProdPesoDTO ganPerProdPesoSQL : listGanPerProdPeso)
 		{
 			GanPerProdPesoDTO ganPerProdPesoJAVA = mapVWF.get(getMapKey(ganPerProdPesoSQL, nombreVista));
