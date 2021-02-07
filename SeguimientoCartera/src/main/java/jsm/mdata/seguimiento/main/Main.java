@@ -259,7 +259,7 @@ public class Main
 	 */
 	private static String getMapKey(GanPerProdPesoDTO gpp, String nombreVista) throws Throwable
 	{
-		String key = "noKey";
+		String key = "N/A";
 		if (nombreVista != null)
 		{
 			if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
@@ -366,7 +366,7 @@ public class Main
 			}
 			else
 			{
-				LOGGER.info("VWF_" + nombreVista + " - OK -> [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "]");
+				LOGGER.info("VWF_" + (nombreVista == null ? "VWF_GAN_PER_PROD_PESO_TOTALES" : nombreVista) + " - OK -> [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "]");
 			}
 		}
 	}
