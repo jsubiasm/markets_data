@@ -243,11 +243,48 @@ public class DatosDAO
 			LOGGER.debug("Abriendo Sentencia");
 			if (nombreVista != null)
 			{
-				statement = connection.prepareStatement("SELECT " + nombreVista + ", PRECIO_TITULOS_COMPRADOS, PRECIO_TITULOS_VENDIDOS, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VWF_" + nombreVista);
+				String campoVista = null;
+				if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Comercializador\"";
+				}
+				else if ("INSTRUMENTO".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Instrumento\"";
+				}
+				else if ("MERCADO".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Mercado\"";
+				}
+				else if ("MONEDA".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Moneda\"";
+				}
+				else if ("PROVEEDOR".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Proveedor\"";
+				}
+				else if ("SUBTIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Subtipo Activo\"";
+				}
+				else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Tipo Activo\"";
+				}
+				else if ("USO_INGRESOS".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Uso Ingresos\"";
+				}
+				else
+				{
+					throw new Exception("Nombre de vista inesperado [" + nombreVista + "]");
+				}
+				statement = connection.prepareStatement("SELECT " + campoVista + ", \"Prec. Tit. C.\", \"Prec. Tit. V.\", \"Val. Tit. Act.\", \"Flujo Caja\", \"Gan./Perd.\", \"Gan./Perd. %\", \"Peso %\" FROM VWF_" + nombreVista);
 			}
 			else
 			{
-				statement = connection.prepareStatement("SELECT PRECIO_TITULOS_COMPRADOS, PRECIO_TITULOS_VENDIDOS, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VWF_GAN_PER_PROD_PESO_TOTALES");
+				statement = connection.prepareStatement("SELECT \"Prec. Tit. C.\", \"Prec. Tit. V.\", \"Val. Tit. Act.\", \"Flujo Caja\", \"Gan./Perd.\", \"Gan./Perd. %\", \"Peso %\" FROM VWF_GAN_PER_PROD_PESO_TOTALES");
 			}
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
@@ -259,48 +296,48 @@ public class DatosDAO
 				{
 					if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
 					{
-						dto.setComercializador(resultSet.getString("COMERCIALIZADOR"));
+						dto.setComercializador(resultSet.getString("Comercializador"));
 					}
 					else if ("INSTRUMENTO".equalsIgnoreCase(nombreVista))
 					{
-						dto.setInstrumento(resultSet.getString("INSTRUMENTO"));
+						dto.setInstrumento(resultSet.getString("Instrumento"));
 					}
 					else if ("MERCADO".equalsIgnoreCase(nombreVista))
 					{
-						dto.setMercado(resultSet.getString("MERCADO"));
+						dto.setMercado(resultSet.getString("Mercado"));
 					}
 					else if ("MONEDA".equalsIgnoreCase(nombreVista))
 					{
-						dto.setMoneda(resultSet.getString("MONEDA"));
+						dto.setMoneda(resultSet.getString("Moneda"));
 					}
 					else if ("PROVEEDOR".equalsIgnoreCase(nombreVista))
 					{
-						dto.setProveedor(resultSet.getString("PROVEEDOR"));
+						dto.setProveedor(resultSet.getString("Proveedor"));
 					}
 					else if ("SUBTIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 					{
-						dto.setSubtipoActivo(resultSet.getString("SUBTIPO_ACTIVO"));
+						dto.setSubtipoActivo(resultSet.getString("Subtipo Activo"));
 					}
 					else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 					{
-						dto.setTipoActivo(resultSet.getString("TIPO_ACTIVO"));
+						dto.setTipoActivo(resultSet.getString("Tipo Activo"));
 					}
 					else if ("USO_INGRESOS".equalsIgnoreCase(nombreVista))
 					{
-						dto.setUsoIngresos(resultSet.getString("USO_INGRESOS"));
+						dto.setUsoIngresos(resultSet.getString("Uso Ingresos"));
 					}
 					else
 					{
 						throw new Exception("Nombre de vista inesperado [" + nombreVista + "]");
 					}
 				}
-				dto.setGananciaPerdida(resultSet.getBigDecimal("GANANCIA_PERDIDA"));
-				dto.setGananciaPerdidaPrcnt(resultSet.getBigDecimal("GANANCIA_PERDIDA_PRCNT"));
-				dto.setPesoEnCartera(resultSet.getBigDecimal("PESO_EN_CARTERA"));
-				dto.setPrecioTitulosComprados(resultSet.getBigDecimal("PRECIO_TITULOS_COMPRADOS"));
-				dto.setPrecioTitulosVendidos(resultSet.getBigDecimal("PRECIO_TITULOS_VENDIDOS"));
-				dto.setFlujoCaja(resultSet.getBigDecimal("FLUJO_CAJA"));
-				dto.setValorTitulosActuales(resultSet.getBigDecimal("VALOR_TITULOS_ACTUALES"));
+				dto.setGananciaPerdida(resultSet.getBigDecimal("Gan./Perd."));
+				dto.setGananciaPerdidaPrcnt(resultSet.getBigDecimal("Gan./Perd. %"));
+				dto.setPesoEnCartera(resultSet.getBigDecimal("Peso %"));
+				dto.setPrecioTitulosComprados(resultSet.getBigDecimal("Prec. Tit. C."));
+				dto.setPrecioTitulosVendidos(resultSet.getBigDecimal("Prec. Tit. V."));
+				dto.setFlujoCaja(resultSet.getBigDecimal("Flujo Caja"));
+				dto.setValorTitulosActuales(resultSet.getBigDecimal("Val. Tit. Act."));
 				listaGanPerProdPeso.add(dto);
 			}
 		}
