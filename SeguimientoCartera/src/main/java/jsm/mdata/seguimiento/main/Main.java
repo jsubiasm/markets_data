@@ -129,6 +129,7 @@ public class Main
 				gpp.setPesoEnCartera(BigDecimal.ZERO);
 				gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision()) : BigDecimal.ZERO);
 				gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision()) : BigDecimal.ZERO);
+				gpp.setFlujoCaja(BigDecimal.ZERO);
 				gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : mov.getNumeroTitulos().multiply(new BigDecimal(-1d)));
 				gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
 				gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
@@ -144,6 +145,7 @@ public class Main
 			PrecioDTO precio = DatosDAO.select_TB02_PRECIOS(connection, gpp.getProductoId());
 			gpp.setValorTitulo(precio.getValorTitulo());
 			gpp.setValorTitulosActuales(precio.getValorTitulo().multiply(gpp.getTitulosActuales()));
+			gpp.setFlujoCaja(gpp.getPrecioTitulosVendidos().subtract(gpp.getPrecioTitulosComprados()));
 			gpp.setGananciaPerdida(gpp.getPrecioTitulosVendidos().add(gpp.getValorTitulosActuales()).subtract(gpp.getPrecioTitulosComprados()));
 			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
 			sumValorTitulosActuales = sumValorTitulosActuales.add(gpp.getValorTitulosActuales());
@@ -222,6 +224,10 @@ public class Main
 			if (!ganPerProdPesoSQL.getPrecioTitulosVendidos().setScale(3, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPrecioTitulosVendidos().setScale(3, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los precios de titulos vendidos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPrecioTitulosVendidos() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosVendidos() + "]");
+			}
+			if (!ganPerProdPesoSQL.getFlujoCaja().setScale(3, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getFlujoCaja().setScale(3, RoundingMode.HALF_UP)))
+			{
+				throw new Exception("Los valores de flujo de caja no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getFlujoCaja() + "] [" + ganPerProdPesoJAVA.getFlujoCaja() + "]");
 			}
 			if (!ganPerProdPesoSQL.getValorTitulo().setScale(3, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getValorTitulo().setScale(3, RoundingMode.HALF_UP)))
 			{
@@ -318,6 +324,7 @@ public class Main
 				GanPerProdPesoDTO gppVWF = mapVWF.get(getMapKey(gppInput, nombreVista));
 				gppVWF.setPrecioTitulosComprados(gppVWF.getPrecioTitulosComprados().add(gppInput.getPrecioTitulosComprados()));
 				gppVWF.setPrecioTitulosVendidos(gppVWF.getPrecioTitulosVendidos().add(gppInput.getPrecioTitulosVendidos()));
+				gppVWF.setFlujoCaja(gppVWF.getFlujoCaja().add(gppInput.getFlujoCaja()));
 				gppVWF.setValorTitulosActuales(gppVWF.getValorTitulosActuales().add(gppInput.getValorTitulosActuales()));
 				gppVWF.setGananciaPerdida(gppVWF.getGananciaPerdida().add(gppInput.getGananciaPerdida()));
 				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
@@ -329,6 +336,7 @@ public class Main
 				GanPerProdPesoDTO gppVWF = new GanPerProdPesoDTO();
 				gppVWF.setPrecioTitulosComprados(gppInput.getPrecioTitulosComprados());
 				gppVWF.setPrecioTitulosVendidos(gppInput.getPrecioTitulosVendidos());
+				gppVWF.setFlujoCaja(gppInput.getFlujoCaja());
 				gppVWF.setValorTitulosActuales(gppInput.getValorTitulosActuales());
 				gppVWF.setGananciaPerdida(gppInput.getGananciaPerdida());
 				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
@@ -351,6 +359,10 @@ public class Main
 			if (!ganPerProdPesoSQL.getPrecioTitulosVendidos().setScale(1, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPrecioTitulosVendidos().setScale(1, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los precios de titulos vendidos no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getPrecioTitulosVendidos() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosVendidos() + "]");
+			}
+			if (!ganPerProdPesoSQL.getFlujoCaja().setScale(1, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getFlujoCaja().setScale(1, RoundingMode.HALF_UP)))
+			{
+				throw new Exception("Los valores de flujo de caja no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getFlujoCaja() + "] [" + ganPerProdPesoJAVA.getFlujoCaja() + "]");
 			}
 			if (!ganPerProdPesoSQL.getValorTitulosActuales().setScale(1, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getValorTitulosActuales().setScale(1, RoundingMode.HALF_UP)))
 			{

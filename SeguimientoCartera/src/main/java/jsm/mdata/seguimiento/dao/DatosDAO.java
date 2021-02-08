@@ -181,7 +181,7 @@ public class DatosDAO
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, COMERCIALIZADOR, MERCADO, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VW03_GAN_PER_PROD_PESO");
+			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, COMERCIALIZADOR, MERCADO, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VW03_GAN_PER_PROD_PESO");
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
 			LOGGER.debug("Abriendo Cursor");
@@ -207,6 +207,7 @@ public class DatosDAO
 				dto.setTitulosVendidos(resultSet.getBigDecimal("TITULOS_VENDIDOS"));
 				dto.setUsoIngresos(resultSet.getString("USO_INGRESOS"));
 				dto.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
+				dto.setFlujoCaja(resultSet.getBigDecimal("FLUJO_CAJA"));
 				dto.setValorTitulosActuales(resultSet.getBigDecimal("VALOR_TITULOS_ACTUALES"));
 				listaGanPerProdPeso.add(dto);
 			}
@@ -242,11 +243,11 @@ public class DatosDAO
 			LOGGER.debug("Abriendo Sentencia");
 			if (nombreVista != null)
 			{
-				statement = connection.prepareStatement("SELECT " + nombreVista + ", PRECIO_TITULOS_COMPRADOS, PRECIO_TITULOS_VENDIDOS, VALOR_TITULOS_ACTUALES, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VWF_" + nombreVista);
+				statement = connection.prepareStatement("SELECT " + nombreVista + ", PRECIO_TITULOS_COMPRADOS, PRECIO_TITULOS_VENDIDOS, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VWF_" + nombreVista);
 			}
 			else
 			{
-				statement = connection.prepareStatement("SELECT PRECIO_TITULOS_COMPRADOS, PRECIO_TITULOS_VENDIDOS, VALOR_TITULOS_ACTUALES, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VWF_GAN_PER_PROD_PESO_TOTALES");
+				statement = connection.prepareStatement("SELECT PRECIO_TITULOS_COMPRADOS, PRECIO_TITULOS_VENDIDOS, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VWF_GAN_PER_PROD_PESO_TOTALES");
 			}
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
@@ -298,6 +299,7 @@ public class DatosDAO
 				dto.setPesoEnCartera(resultSet.getBigDecimal("PESO_EN_CARTERA"));
 				dto.setPrecioTitulosComprados(resultSet.getBigDecimal("PRECIO_TITULOS_COMPRADOS"));
 				dto.setPrecioTitulosVendidos(resultSet.getBigDecimal("PRECIO_TITULOS_VENDIDOS"));
+				dto.setFlujoCaja(resultSet.getBigDecimal("FLUJO_CAJA"));
 				dto.setValorTitulosActuales(resultSet.getBigDecimal("VALOR_TITULOS_ACTUALES"));
 				listaGanPerProdPeso.add(dto);
 			}

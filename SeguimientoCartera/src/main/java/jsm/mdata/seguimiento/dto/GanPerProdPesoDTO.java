@@ -27,6 +27,7 @@ public class GanPerProdPesoDTO
 	private BigDecimal titulosVendidos = null;
 	private BigDecimal precioTitulosVendidos = null;
 	private BigDecimal titulosActuales = null;
+	private BigDecimal flujoCaja = null;
 	private BigDecimal valorTitulo = null;
 	private BigDecimal valorTitulosActuales = null;
 	private BigDecimal gananciaPerdida = null;
@@ -255,6 +256,22 @@ public class GanPerProdPesoDTO
 	public void setPrecioTitulosVendidos(BigDecimal precioTitulosVendidos)
 	{
 		this.precioTitulosVendidos = precioTitulosVendidos;
+	}
+
+	/**
+	 * @return the flujoCaja
+	 */
+	public BigDecimal getFlujoCaja()
+	{
+		return flujoCaja;
+	}
+
+	/**
+	 * @param flujoCaja the flujoCaja to set
+	 */
+	public void setFlujoCaja(BigDecimal flujoCaja)
+	{
+		this.flujoCaja = flujoCaja;
 	}
 
 	/**
