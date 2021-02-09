@@ -212,47 +212,47 @@ public class Main
 			{
 				throw new Exception("Los valores de uso ingresos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getUsoIngresos() + "] [" + ganPerProdPesoJAVA.getUsoIngresos() + "]");
 			}
-			if (!ganPerProdPesoSQL.getTitulosComprados().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getTitulosComprados().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getTitulosComprados().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getTitulosComprados().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los titulos comprados no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTitulosComprados() + "] [" + ganPerProdPesoJAVA.getTitulosComprados() + "]");
 			}
-			if (!ganPerProdPesoSQL.getTitulosVendidos().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getTitulosVendidos().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getTitulosVendidos().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getTitulosVendidos().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los titulos vendidos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTitulosVendidos() + "] [" + ganPerProdPesoJAVA.getTitulosVendidos() + "]");
 			}
-			if (!ganPerProdPesoSQL.getTitulosActuales().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getTitulosActuales().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getTitulosActuales().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getTitulosActuales().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los titulos actuales no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTitulosActuales() + "] [" + ganPerProdPesoJAVA.getTitulosActuales() + "]");
 			}
-			if (!ganPerProdPesoSQL.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getPrecioTitulosComprados().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPrecioTitulosComprados().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los precios de titulos comprados no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPrecioTitulosComprados() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosComprados() + "]");
 			}
-			if (!ganPerProdPesoSQL.getPrecioTitulosVendidos().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPrecioTitulosVendidos().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getPrecioTitulosVendidos().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPrecioTitulosVendidos().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los precios de titulos vendidos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPrecioTitulosVendidos() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosVendidos() + "]");
 			}
-			if (!ganPerProdPesoSQL.getFlujoCaja().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getFlujoCaja().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getFlujoCaja().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getFlujoCaja().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los valores de flujo de caja no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getFlujoCaja() + "] [" + ganPerProdPesoJAVA.getFlujoCaja() + "]");
 			}
-			if (!ganPerProdPesoSQL.getValorTitulo().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getValorTitulo().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getValorTitulo().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getValorTitulo().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los valores del titulo no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getValorTitulo() + "] [" + ganPerProdPesoJAVA.getValorTitulo() + "]");
 			}
-			if (!ganPerProdPesoSQL.getValorTitulosActuales().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getValorTitulosActuales().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getValorTitulosActuales().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getValorTitulosActuales().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los valores de los titulos actuales no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getValorTitulosActuales() + "] [" + ganPerProdPesoJAVA.getValorTitulosActuales() + "]");
 			}
-			if (!ganPerProdPesoSQL.getGananciaPerdida().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getGananciaPerdida().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getGananciaPerdida().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getGananciaPerdida().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los valores de ganancia perdida no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getGananciaPerdida() + "] [" + ganPerProdPesoJAVA.getGananciaPerdida() + "]");
 			}
-			if (!ganPerProdPesoSQL.getGananciaPerdidaPrcnt().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getGananciaPerdidaPrcnt().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getGananciaPerdidaPrcnt().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getGananciaPerdidaPrcnt().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los valores de ganancia perdida porcentual no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getGananciaPerdidaPrcnt() + "] [" + ganPerProdPesoJAVA.getGananciaPerdidaPrcnt() + "]");
 			}
-			if (!ganPerProdPesoSQL.getPesoEnCartera().setScale(2, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPesoEnCartera().setScale(2, RoundingMode.HALF_UP)))
+			if (!ganPerProdPesoSQL.getPesoEnCartera().setScale(4, RoundingMode.HALF_UP).equals(ganPerProdPesoJAVA.getPesoEnCartera().setScale(4, RoundingMode.HALF_UP)))
 			{
 				throw new Exception("Los valores peso en cartera no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPesoEnCartera() + "] [" + ganPerProdPesoJAVA.getPesoEnCartera() + "]");
 			}
