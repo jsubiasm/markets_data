@@ -4,6 +4,7 @@
 package jsm.mdata.seguimiento.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -386,10 +387,22 @@ public class DatosDAO
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("UPDATE TB02_PRODUCTOS_VAR SET VALOR_TITULO = ?, FECHA_VALOR = ?, ULTIMA_ACTUALIZACION = CURRENT_TIMESTAMP WHERE PRODUCTO_ID = ?");
-			statement.setBigDecimal(1, productoVar.getValorTitulo());
-			statement.setDate(2, new java.sql.Date(productoVar.getFechaValor().getTime()));
-			statement.setString(3, productoVar.getProductoId());
+			if (productoVar.getTer() != null && productoVar.getFechaTer() != null)
+			{
+				statement = connection.prepareStatement("UPDATE TB02_PRODUCTOS_VAR SET VALOR_TITULO = ?, FECHA_VALOR = ?, TER = ?, FECHA_TER = ?, ULTIMA_ACTUALIZACION = CURRENT_TIMESTAMP WHERE PRODUCTO_ID = ?");
+				statement.setBigDecimal(1, productoVar.getValorTitulo());
+				statement.setDate(2, new Date(productoVar.getFechaValor().getTime()));
+				statement.setBigDecimal(3, productoVar.getTer());
+				statement.setDate(4, new Date(productoVar.getFechaTer().getTime()));
+				statement.setString(5, productoVar.getProductoId());
+			}
+			else
+			{
+				statement = connection.prepareStatement("UPDATE TB02_PRODUCTOS_VAR SET VALOR_TITULO = ?, FECHA_VALOR = ?, ULTIMA_ACTUALIZACION = CURRENT_TIMESTAMP WHERE PRODUCTO_ID = ?");
+				statement.setBigDecimal(1, productoVar.getValorTitulo());
+				statement.setDate(2, new Date(productoVar.getFechaValor().getTime()));
+				statement.setString(3, productoVar.getProductoId());
+			}
 			LOGGER.debug("Ejecutando Sentencia");
 			rowsUpdated = statement.executeUpdate();
 		}

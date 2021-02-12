@@ -19,6 +19,8 @@ public class ProductoVarDTO
 	private String productoId = null;
 	private BigDecimal valorTitulo = null;
 	private Date fechaValor = null;
+	private BigDecimal ter = null;
+	private Date fechaTer = null;
 	private Date ultimaActualizacion = null;
 	private String urlScraping = null;
 
@@ -68,6 +70,38 @@ public class ProductoVarDTO
 	public void setFechaValor(Date fechaValor)
 	{
 		this.fechaValor = fechaValor;
+	}
+
+	/**
+	 * @return the ter
+	 */
+	public BigDecimal getTer()
+	{
+		return ter;
+	}
+
+	/**
+	 * @param ter the ter to set
+	 */
+	public void setTer(BigDecimal ter)
+	{
+		this.ter = ter;
+	}
+
+	/**
+	 * @return the fechaTer
+	 */
+	public Date getFechaTer()
+	{
+		return fechaTer;
+	}
+
+	/**
+	 * @param fechaTer the fechaTer to set
+	 */
+	public void setFechaTer(Date fechaTer)
+	{
+		this.fechaTer = fechaTer;
 	}
 
 	/**

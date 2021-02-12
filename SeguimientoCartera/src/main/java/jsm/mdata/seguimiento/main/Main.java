@@ -409,30 +409,40 @@ public class Main
 			Element tablaDatos = tablasDatos.get(0);
 			Elements filas = tablaDatos.getElementsByTag("tr");
 			String fechaValor = null;
-			String valor = null;
+			String valorTitulo = null;
+			String fechaTer = null;
+			String ter = null;
 			for (Element fila : filas)
 			{
 				if (fila.text().startsWith("VL "))
 				{
 					fechaValor = fila.text().substring(3, 13);
-					valor = fila.text().substring(18, fila.text().length());
-					break;
+					valorTitulo = fila.text().substring(18, fila.text().length());
 				}
-				if (fila.text().startsWith("Precio de Cierre "))
+				else if (fila.text().startsWith("Precio de Cierre "))
 				{
 					fechaValor = fila.text().substring(17, 27);
-					valor = fila.text().substring(32, fila.text().length());
-					break;
+					valorTitulo = fila.text().substring(32, fila.text().length());
+				}
+				else if (fila.text().startsWith("Gastos Corrientes ") && !fila.text().contains("-%"))
+				{
+					fechaTer = fila.text().substring(18, 28);
+					ter = fila.text().substring(29, fila.text().length() - 1);
 				}
 			}
 			productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
-			productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valor).doubleValue())));
+			productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
+			if (ter != null && fechaTer != null)
+			{
+				productoVar.setFechaTer(new SimpleDateFormat("dd/MM/yyyy").parse(fechaTer));
+				productoVar.setTer(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(ter).doubleValue())));
+			}
 			int rowsUpdated = DatosDAO.update_TB02_PRODUCTOS_VAR(connection, productoVar);
 			if (rowsUpdated != 1)
 			{
 				throw new Exception("Se han actualizado [" + rowsUpdated + "] columnas y se esperaba solo una");
 			}
-			LOGGER.info("Precio actualizado - OK -> [" + productoVar.getProductoId() + "] [" + productoVar.getValorTitulo() + "] [" + productoVar.getFechaValor() + "]");
+			LOGGER.info("Precio actualizado - OK -> [" + productoVar.getProductoId() + "] [" + productoVar.getValorTitulo() + "] [" + productoVar.getFechaValor() + "] [" + productoVar.getTer() + "] [" + productoVar.getFechaTer() + "]");
 		}
 	}
 
