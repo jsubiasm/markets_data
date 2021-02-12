@@ -93,12 +93,12 @@ public class DatosDAO
 			LOGGER.debug("Abriendo Sentencia");
 			if (identificador != null)
 			{
-				statement = connection.prepareStatement("SELECT IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING FROM TB02_PRODUCTOS WHERE IDENTIFICADOR = ?");
+				statement = connection.prepareStatement("SELECT IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS FROM TB02_PRODUCTOS WHERE IDENTIFICADOR = ?");
 				statement.setString(1, identificador);
 			}
 			else
 			{
-				statement = connection.prepareStatement("SELECT IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, URL_SCRAPING FROM TB02_PRODUCTOS");
+				statement = connection.prepareStatement("SELECT IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS FROM TB02_PRODUCTOS");
 			}
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
@@ -113,7 +113,6 @@ public class DatosDAO
 				producto.setProveedor(resultSet.getString("PROVEEDOR"));
 				producto.setSubtipoActivo(resultSet.getString("SUBTIPO_ACTIVO"));
 				producto.setTipoActivo(resultSet.getString("TIPO_ACTIVO"));
-				producto.setUrlScraping(resultSet.getString("URL_SCRAPING"));
 				producto.setUsoIngresos(resultSet.getString("USO_INGRESOS"));
 				listaProductos.add(producto);
 			}
@@ -139,26 +138,36 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final ProductoVarDTO select_TB02_PRODUCTOS_VAR(Connection connection, String productoId) throws Throwable
+	public static final List<ProductoVarDTO> select_TB02_PRODUCTOS_VAR(Connection connection, String productoId) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
-		ProductoVarDTO productoVar = null;
+		List<ProductoVarDTO> listaProductoVar = new ArrayList<ProductoVarDTO>();
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, ULTIMA_ACTUALIZACION FROM TB02_PRODUCTOS_VAR WHERE PRODUCTO_ID = ?");
-			statement.setString(1, productoId);
+			if (productoId != null)
+			{
+				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, ULTIMA_ACTUALIZACION, URL_SCRAPING FROM TB02_PRODUCTOS_VAR WHERE PRODUCTO_ID = ?");
+				statement.setString(1, productoId);
+			}
+			else
+			{
+				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, ULTIMA_ACTUALIZACION, URL_SCRAPING FROM TB02_PRODUCTOS_VAR");
+			}
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
 			LOGGER.debug("Abriendo Cursor");
-			if (resultSet.next())
+			while (resultSet.next())
 			{
+				ProductoVarDTO productoVar = new ProductoVarDTO();
 				productoVar = new ProductoVarDTO();
 				productoVar.setFechaValor(resultSet.getDate("FECHA_VALOR"));
 				productoVar.setProductoId(resultSet.getString("PRODUCTO_ID"));
 				productoVar.setUltimaActualizacion(resultSet.getDate("ULTIMA_ACTUALIZACION"));
 				productoVar.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
+				productoVar.setUrlScraping(resultSet.getString("URL_SCRAPING"));
+				listaProductoVar.add(productoVar);
 			}
 		}
 		catch (Throwable t)
@@ -173,7 +182,7 @@ public class DatosDAO
 			LOGGER.debug("Cerrando Sentencia");
 			statement.close();
 		}
-		return productoVar;
+		return listaProductoVar;
 	}
 
 	/**
@@ -370,7 +379,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final int insert_TB02_PRODUCTOS_VAR(Connection connection, ProductoVarDTO productoVar) throws Throwable
+	public static final int update_TB02_PRODUCTOS_VAR(Connection connection, ProductoVarDTO productoVar) throws Throwable
 	{
 		PreparedStatement statement = null;
 		int rowsUpdated = 0;

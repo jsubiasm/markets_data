@@ -21,7 +21,6 @@ public class ProductoDTO
 	private String subtipoActivo = null;
 	private String moneda = null;
 	private String usoIngresos = null;
-	private String urlScraping = null;
 
 	/**
 	 * @return the identificador
@@ -149,22 +148,6 @@ public class ProductoDTO
 	public void setUsoIngresos(String usoIngresos)
 	{
 		this.usoIngresos = usoIngresos;
-	}
-
-	/**
-	 * @return the urlScraping
-	 */
-	public String getUrlScraping()
-	{
-		return urlScraping;
-	}
-
-	/**
-	 * @param urlScraping the urlScraping to set
-	 */
-	public void setUrlScraping(String urlScraping)
-	{
-		this.urlScraping = urlScraping;
 	}
 
 }

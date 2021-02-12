@@ -149,7 +149,7 @@ public class Main
 		for (String mapKey : mapGanPerProdPeso.keySet())
 		{
 			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(mapKey);
-			ProductoVarDTO productoVar = DatosDAO.select_TB02_PRODUCTOS_VAR(connection, gpp.getProductoId());
+			ProductoVarDTO productoVar = DatosDAO.select_TB02_PRODUCTOS_VAR(connection, gpp.getProductoId()).get(0);
 			gpp.setValorTitulo(productoVar.getValorTitulo());
 			gpp.setValorTitulosActuales(productoVar.getValorTitulo().multiply(gpp.getTitulosActuales()));
 			gpp.setFlujoCaja(gpp.getPrecioTitulosVendidos().subtract(gpp.getPrecioTitulosComprados()));
@@ -400,10 +400,10 @@ public class Main
 	 */
 	private static void urlScraping(Connection connection) throws Throwable
 	{
-		List<ProductoDTO> listaProductos = DatosDAO.select_TB02_PRODUCTOS(connection, null);
-		for (ProductoDTO producto : listaProductos)
+		List<ProductoVarDTO> listaProductosVar = DatosDAO.select_TB02_PRODUCTOS_VAR(connection, null);
+		for (ProductoVarDTO productoVar : listaProductosVar)
 		{
-			String urlScraping = producto.getUrlScraping();
+			String urlScraping = productoVar.getUrlScraping();
 			Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
 			Elements tablasDatos = page.getElementsByClass("snapshotTextColor snapshotTextFontStyle snapshotTable overviewKeyStatsTable");
 			Element tablaDatos = tablasDatos.get(0);
@@ -425,11 +425,9 @@ public class Main
 					break;
 				}
 			}
-			ProductoVarDTO productoVar = new ProductoVarDTO();
 			productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
-			productoVar.setProductoId(producto.getIdentificador());
 			productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valor).doubleValue())));
-			int rowsUpdated = DatosDAO.insert_TB02_PRODUCTOS_VAR(connection, productoVar);
+			int rowsUpdated = DatosDAO.update_TB02_PRODUCTOS_VAR(connection, productoVar);
 			if (rowsUpdated != 1)
 			{
 				throw new Exception("Se han actualizado [" + rowsUpdated + "] columnas y se esperaba solo una");
@@ -550,7 +548,7 @@ public class Main
 		{
 			LOGGER.info("Abriendo Conexion");
 			connection = abrirConexion();
-			// urlScraping(connection);
+			urlScraping(connection);
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
 			validate_TB02_MOVIMIENTOS(connection);

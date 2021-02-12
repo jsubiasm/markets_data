@@ -20,6 +20,7 @@ public class ProductoVarDTO
 	private BigDecimal valorTitulo = null;
 	private Date fechaValor = null;
 	private Date ultimaActualizacion = null;
+	private String urlScraping = null;
 
 	/**
 	 * @return the productoId
@@ -83,6 +84,22 @@ public class ProductoVarDTO
 	public void setUltimaActualizacion(Date ultimaActualizacion)
 	{
 		this.ultimaActualizacion = ultimaActualizacion;
+	}
+
+	/**
+	 * @return the urlScraping
+	 */
+	public String getUrlScraping()
+	{
+		return urlScraping;
+	}
+
+	/**
+	 * @param urlScraping the urlScraping to set
+	 */
+	public void setUrlScraping(String urlScraping)
+	{
+		this.urlScraping = urlScraping;
 	}
 
 }
