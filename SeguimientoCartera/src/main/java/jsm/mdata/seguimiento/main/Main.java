@@ -26,8 +26,8 @@ import jsm.mdata.seguimiento.constantes.Cons;
 import jsm.mdata.seguimiento.dao.DatosDAO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
-import jsm.mdata.seguimiento.dto.PrecioDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
+import jsm.mdata.seguimiento.dto.ProductoVarDTO;
 
 /**
  * 
@@ -149,9 +149,9 @@ public class Main
 		for (String mapKey : mapGanPerProdPeso.keySet())
 		{
 			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(mapKey);
-			PrecioDTO precio = DatosDAO.select_TB02_PRECIOS(connection, gpp.getProductoId());
-			gpp.setValorTitulo(precio.getValorTitulo());
-			gpp.setValorTitulosActuales(precio.getValorTitulo().multiply(gpp.getTitulosActuales()));
+			ProductoVarDTO productoVar = DatosDAO.select_TB02_PRODUCTOS_VAR(connection, gpp.getProductoId());
+			gpp.setValorTitulo(productoVar.getValorTitulo());
+			gpp.setValorTitulosActuales(productoVar.getValorTitulo().multiply(gpp.getTitulosActuales()));
 			gpp.setFlujoCaja(gpp.getPrecioTitulosVendidos().subtract(gpp.getPrecioTitulosComprados()));
 			gpp.setGananciaPerdida(gpp.getPrecioTitulosVendidos().add(gpp.getValorTitulosActuales()).subtract(gpp.getPrecioTitulosComprados()));
 			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
@@ -425,16 +425,16 @@ public class Main
 					break;
 				}
 			}
-			PrecioDTO precio = new PrecioDTO();
-			precio.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
-			precio.setProductoId(producto.getIdentificador());
-			precio.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valor).doubleValue())));
-			int rowsUpdated = DatosDAO.insert_TB02_PRECIOS(connection, precio);
+			ProductoVarDTO productoVar = new ProductoVarDTO();
+			productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
+			productoVar.setProductoId(producto.getIdentificador());
+			productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valor).doubleValue())));
+			int rowsUpdated = DatosDAO.insert_TB02_PRODUCTOS_VAR(connection, productoVar);
 			if (rowsUpdated != 1)
 			{
 				throw new Exception("Se han actualizado [" + rowsUpdated + "] columnas y se esperaba solo una");
 			}
-			LOGGER.info("Precio actualizado - OK -> [" + precio.getProductoId() + "] [" + precio.getValorTitulo() + "] [" + precio.getFechaValor() + "]");
+			LOGGER.info("Precio actualizado - OK -> [" + productoVar.getProductoId() + "] [" + productoVar.getValorTitulo() + "] [" + productoVar.getFechaValor() + "]");
 		}
 	}
 
@@ -550,7 +550,7 @@ public class Main
 		{
 			LOGGER.info("Abriendo Conexion");
 			connection = abrirConexion();
-			urlScraping(connection);
+			// urlScraping(connection);
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
 			validate_TB02_MOVIMIENTOS(connection);

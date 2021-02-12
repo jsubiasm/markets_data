@@ -14,8 +14,8 @@ import org.slf4j.LoggerFactory;
 
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
-import jsm.mdata.seguimiento.dto.PrecioDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
+import jsm.mdata.seguimiento.dto.ProductoVarDTO;
 
 /**
  * @author jsubiasm
@@ -139,26 +139,26 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final PrecioDTO select_TB02_PRECIOS(Connection connection, String productoId) throws Throwable
+	public static final ProductoVarDTO select_TB02_PRODUCTOS_VAR(Connection connection, String productoId) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
-		PrecioDTO precio = null;
+		ProductoVarDTO productoVar = null;
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, ULTIMA_ACTUALIZACION FROM TB02_PRECIOS WHERE PRODUCTO_ID = ?");
+			statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, ULTIMA_ACTUALIZACION FROM TB02_PRODUCTOS_VAR WHERE PRODUCTO_ID = ?");
 			statement.setString(1, productoId);
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
 			LOGGER.debug("Abriendo Cursor");
 			if (resultSet.next())
 			{
-				precio = new PrecioDTO();
-				precio.setFechaValor(resultSet.getDate("FECHA_VALOR"));
-				precio.setProductoId(resultSet.getString("PRODUCTO_ID"));
-				precio.setUltimaActualizacion(resultSet.getDate("ULTIMA_ACTUALIZACION"));
-				precio.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
+				productoVar = new ProductoVarDTO();
+				productoVar.setFechaValor(resultSet.getDate("FECHA_VALOR"));
+				productoVar.setProductoId(resultSet.getString("PRODUCTO_ID"));
+				productoVar.setUltimaActualizacion(resultSet.getDate("ULTIMA_ACTUALIZACION"));
+				productoVar.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
 			}
 		}
 		catch (Throwable t)
@@ -173,7 +173,7 @@ public class DatosDAO
 			LOGGER.debug("Cerrando Sentencia");
 			statement.close();
 		}
-		return precio;
+		return productoVar;
 	}
 
 	/**
@@ -366,21 +366,21 @@ public class DatosDAO
 
 	/**
 	 * @param connection
-	 * @param precio
+	 * @param productoVar
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final int insert_TB02_PRECIOS(Connection connection, PrecioDTO precio) throws Throwable
+	public static final int insert_TB02_PRODUCTOS_VAR(Connection connection, ProductoVarDTO productoVar) throws Throwable
 	{
 		PreparedStatement statement = null;
 		int rowsUpdated = 0;
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("UPDATE TB02_PRECIOS SET VALOR_TITULO = ?, FECHA_VALOR = ?, ULTIMA_ACTUALIZACION = CURRENT_TIMESTAMP WHERE PRODUCTO_ID = ?");
-			statement.setBigDecimal(1, precio.getValorTitulo());
-			statement.setDate(2, new java.sql.Date(precio.getFechaValor().getTime()));
-			statement.setString(3, precio.getProductoId());
+			statement = connection.prepareStatement("UPDATE TB02_PRODUCTOS_VAR SET VALOR_TITULO = ?, FECHA_VALOR = ?, ULTIMA_ACTUALIZACION = CURRENT_TIMESTAMP WHERE PRODUCTO_ID = ?");
+			statement.setBigDecimal(1, productoVar.getValorTitulo());
+			statement.setDate(2, new java.sql.Date(productoVar.getFechaValor().getTime()));
+			statement.setString(3, productoVar.getProductoId());
 			LOGGER.debug("Ejecutando Sentencia");
 			rowsUpdated = statement.executeUpdate();
 		}
