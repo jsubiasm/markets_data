@@ -150,6 +150,7 @@ public class Main
 		{
 			GanPerProdPesoDTO gpp = mapGanPerProdPeso.get(mapKey);
 			ProductoVarDTO productoVar = DatosDAO.select_TB02_PRODUCTOS_VAR(connection, gpp.getProductoId()).get(0);
+			gpp.setTer(productoVar.getTer());
 			gpp.setValorTitulo(productoVar.getValorTitulo());
 			gpp.setValorTitulosActuales(productoVar.getValorTitulo().multiply(gpp.getTitulosActuales()));
 			gpp.setFlujoCaja(gpp.getPrecioTitulosVendidos().subtract(gpp.getPrecioTitulosComprados()));
@@ -211,6 +212,10 @@ public class Main
 			if (!ganPerProdPesoSQL.getUsoIngresos().equalsIgnoreCase(ganPerProdPesoJAVA.getUsoIngresos()))
 			{
 				throw new Exception("Los valores de uso ingresos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getUsoIngresos() + "] [" + ganPerProdPesoJAVA.getUsoIngresos() + "]");
+			}
+			if (!similar(ganPerProdPesoJAVA.getTer().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getTer().setScale(4, RoundingMode.HALF_EVEN)))
+			{
+				throw new Exception("Los valores del TER no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTer() + "] [" + ganPerProdPesoJAVA.getTer() + "]");
 			}
 			if (!similar(ganPerProdPesoJAVA.getTitulosComprados().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getTitulosComprados().setScale(4, RoundingMode.HALF_EVEN)))
 			{
@@ -336,6 +341,7 @@ public class Main
 				gppVWF.setGananciaPerdida(gppVWF.getGananciaPerdida().add(gppInput.getGananciaPerdida()));
 				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
 				gppVWF.setPesoEnCartera(gppVWF.getPesoEnCartera().add(gppInput.getPesoEnCartera()));
+				gppVWF.setTer(gppVWF.getTer().add(gppInput.getValorTitulosActuales().multiply(gppInput.getTer())));
 				mapVWF.put(getMapKey(gppInput, nombreVista), gppVWF);
 			}
 			else
@@ -348,8 +354,14 @@ public class Main
 				gppVWF.setGananciaPerdida(gppInput.getGananciaPerdida());
 				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
 				gppVWF.setPesoEnCartera(gppInput.getPesoEnCartera());
+				gppVWF.setTer(gppInput.getValorTitulosActuales().multiply(gppInput.getTer()));
 				mapVWF.put(getMapKey(gppInput, nombreVista), gppVWF);
 			}
+		}
+		if (nombreVista == null)
+		{
+			GanPerProdPesoDTO gppVWF = mapVWF.get("N/A");
+			gppVWF.setTer(gppVWF.getTer().divide(gppVWF.getValorTitulosActuales(), 6, RoundingMode.HALF_EVEN));
 		}
 		List<GanPerProdPesoDTO> listGanPerProdPeso = DatosDAO.select_VWF_nombreVista(connection, nombreVista);
 		if (listGanPerProdPeso.size() != mapVWF.size())
@@ -359,6 +371,13 @@ public class Main
 		for (GanPerProdPesoDTO ganPerProdPesoSQL : listGanPerProdPeso)
 		{
 			GanPerProdPesoDTO ganPerProdPesoJAVA = mapVWF.get(getMapKey(ganPerProdPesoSQL, nombreVista));
+			if (nombreVista == null)
+			{
+				if (!similar(ganPerProdPesoJAVA.getTer().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getTer().setScale(2, RoundingMode.HALF_EVEN)))
+				{
+					throw new Exception("Los valores de TER no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getTer() + "] [" + ganPerProdPesoJAVA.getTer() + "]");
+				}
+			}
 			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_EVEN)))
 			{
 				throw new Exception("Los precios de titulos comprados no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getPrecioTitulosComprados() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosComprados() + "]");

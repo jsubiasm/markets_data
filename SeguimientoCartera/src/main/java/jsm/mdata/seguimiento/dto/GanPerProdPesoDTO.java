@@ -22,6 +22,7 @@ public class GanPerProdPesoDTO
 	private String subtipoActivo = null;
 	private String moneda = null;
 	private String usoIngresos = null;
+	private BigDecimal ter = null;
 	private BigDecimal titulosComprados = null;
 	private BigDecimal precioTitulosComprados = null;
 	private BigDecimal titulosVendidos = null;
@@ -195,6 +196,22 @@ public class GanPerProdPesoDTO
 	}
 
 	/**
+	 * @return the ter
+	 */
+	public BigDecimal getTer()
+	{
+		return ter;
+	}
+
+	/**
+	 * @param ter the ter to set
+	 */
+	public void setTer(BigDecimal ter)
+	{
+		this.ter = ter;
+	}
+
+	/**
 	 * @return the titulosComprados
 	 */
 	public BigDecimal getTitulosComprados()
@@ -259,22 +276,6 @@ public class GanPerProdPesoDTO
 	}
 
 	/**
-	 * @return the flujoCaja
-	 */
-	public BigDecimal getFlujoCaja()
-	{
-		return flujoCaja;
-	}
-
-	/**
-	 * @param flujoCaja the flujoCaja to set
-	 */
-	public void setFlujoCaja(BigDecimal flujoCaja)
-	{
-		this.flujoCaja = flujoCaja;
-	}
-
-	/**
 	 * @return the titulosActuales
 	 */
 	public BigDecimal getTitulosActuales()
@@ -288,6 +289,22 @@ public class GanPerProdPesoDTO
 	public void setTitulosActuales(BigDecimal titulosActuales)
 	{
 		this.titulosActuales = titulosActuales;
+	}
+
+	/**
+	 * @return the flujoCaja
+	 */
+	public BigDecimal getFlujoCaja()
+	{
+		return flujoCaja;
+	}
+
+	/**
+	 * @param flujoCaja the flujoCaja to set
+	 */
+	public void setFlujoCaja(BigDecimal flujoCaja)
+	{
+		this.flujoCaja = flujoCaja;
 	}
 
 	/**

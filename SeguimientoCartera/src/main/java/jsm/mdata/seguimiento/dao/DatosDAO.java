@@ -149,12 +149,12 @@ public class DatosDAO
 			LOGGER.debug("Abriendo Sentencia");
 			if (productoId != null)
 			{
-				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, ULTIMA_ACTUALIZACION, URL_SCRAPING FROM TB02_PRODUCTOS_VAR WHERE PRODUCTO_ID = ?");
+				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, TER, FECHA_TER, ULTIMA_ACTUALIZACION, URL_SCRAPING FROM TB02_PRODUCTOS_VAR WHERE PRODUCTO_ID = ?");
 				statement.setString(1, productoId);
 			}
 			else
 			{
-				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, ULTIMA_ACTUALIZACION, URL_SCRAPING FROM TB02_PRODUCTOS_VAR");
+				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, TER, FECHA_TER, ULTIMA_ACTUALIZACION, URL_SCRAPING FROM TB02_PRODUCTOS_VAR");
 			}
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
@@ -163,10 +163,12 @@ public class DatosDAO
 			{
 				ProductoVarDTO productoVar = new ProductoVarDTO();
 				productoVar = new ProductoVarDTO();
-				productoVar.setFechaValor(resultSet.getDate("FECHA_VALOR"));
 				productoVar.setProductoId(resultSet.getString("PRODUCTO_ID"));
-				productoVar.setUltimaActualizacion(resultSet.getDate("ULTIMA_ACTUALIZACION"));
 				productoVar.setValorTitulo(resultSet.getBigDecimal("VALOR_TITULO"));
+				productoVar.setFechaValor(resultSet.getDate("FECHA_VALOR"));
+				productoVar.setTer(resultSet.getBigDecimal("TER"));
+				productoVar.setFechaTer(resultSet.getDate("FECHA_TER"));
+				productoVar.setUltimaActualizacion(resultSet.getDate("ULTIMA_ACTUALIZACION"));
 				productoVar.setUrlScraping(resultSet.getString("URL_SCRAPING"));
 				listaProductoVar.add(productoVar);
 			}
@@ -199,7 +201,7 @@ public class DatosDAO
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, COMERCIALIZADOR, MERCADO, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VW03_GAN_PER_PROD_PESO");
+			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, COMERCIALIZADOR, MERCADO, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, TER, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VW03_GAN_PER_PROD_PESO");
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
 			LOGGER.debug("Abriendo Cursor");
@@ -219,6 +221,7 @@ public class DatosDAO
 				dto.setProductoId(resultSet.getString("PRODUCTO_ID"));
 				dto.setProveedor(resultSet.getString("PROVEEDOR"));
 				dto.setSubtipoActivo(resultSet.getString("SUBTIPO_ACTIVO"));
+				dto.setTer(resultSet.getBigDecimal("TER"));
 				dto.setTipoActivo(resultSet.getString("TIPO_ACTIVO"));
 				dto.setTitulosActuales(resultSet.getBigDecimal("TITULOS_ACTUALES"));
 				dto.setTitulosComprados(resultSet.getBigDecimal("TITULOS_COMPRADOS"));
@@ -302,7 +305,7 @@ public class DatosDAO
 			}
 			else
 			{
-				statement = connection.prepareStatement("SELECT \"Prec. Tit. C.\", \"Prec. Tit. V.\", \"Val. Tit. Act.\", \"Flujo Caja\", \"Gan./Perd.\", \"Gan./Perd. %\", \"Peso %\" FROM VWF_GAN_PER_PROD_PESO_TOTALES");
+				statement = connection.prepareStatement("SELECT \"TER\", \"Prec. Tit. C.\", \"Prec. Tit. V.\", \"Val. Tit. Act.\", \"Flujo Caja\", \"Gan./Perd.\", \"Gan./Perd. %\", \"Peso %\" FROM VWF_GAN_PER_PROD_PESO_TOTALES");
 			}
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
@@ -348,6 +351,10 @@ public class DatosDAO
 					{
 						throw new Exception("Nombre de vista inesperado [" + nombreVista + "]");
 					}
+				}
+				else
+				{
+					dto.setTer(resultSet.getBigDecimal("TER"));
 				}
 				dto.setGananciaPerdida(resultSet.getBigDecimal("Gan./Perd."));
 				dto.setGananciaPerdidaPrcnt(resultSet.getBigDecimal("Gan./Perd. %"));
