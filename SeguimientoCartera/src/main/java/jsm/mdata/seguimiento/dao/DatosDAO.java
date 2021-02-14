@@ -394,22 +394,12 @@ public class DatosDAO
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			if (productoVar.getTer() != null && productoVar.getFechaTer() != null)
-			{
-				statement = connection.prepareStatement("UPDATE TB02_PRODUCTOS_VAR SET VALOR_TITULO = ?, FECHA_VALOR = ?, TER = ?, FECHA_TER = ?, ULTIMA_ACTUALIZACION = CURRENT_TIMESTAMP WHERE PRODUCTO_ID = ?");
-				statement.setBigDecimal(1, productoVar.getValorTitulo());
-				statement.setDate(2, new Date(productoVar.getFechaValor().getTime()));
-				statement.setBigDecimal(3, productoVar.getTer());
-				statement.setDate(4, new Date(productoVar.getFechaTer().getTime()));
-				statement.setString(5, productoVar.getProductoId());
-			}
-			else
-			{
-				statement = connection.prepareStatement("UPDATE TB02_PRODUCTOS_VAR SET VALOR_TITULO = ?, FECHA_VALOR = ?, ULTIMA_ACTUALIZACION = CURRENT_TIMESTAMP WHERE PRODUCTO_ID = ?");
-				statement.setBigDecimal(1, productoVar.getValorTitulo());
-				statement.setDate(2, new Date(productoVar.getFechaValor().getTime()));
-				statement.setString(3, productoVar.getProductoId());
-			}
+			statement = connection.prepareStatement("UPDATE TB02_PRODUCTOS_VAR SET VALOR_TITULO = ?, FECHA_VALOR = ?, TER = ?, FECHA_TER = ?, ULTIMA_ACTUALIZACION = CURRENT_TIMESTAMP WHERE PRODUCTO_ID = ?");
+			statement.setBigDecimal(1, productoVar.getValorTitulo());
+			statement.setDate(2, new Date(productoVar.getFechaValor().getTime()));
+			statement.setBigDecimal(3, productoVar.getTer());
+			statement.setDate(4, new Date(productoVar.getFechaTer().getTime()));
+			statement.setString(5, productoVar.getProductoId());
 			LOGGER.debug("Ejecutando Sentencia");
 			rowsUpdated = statement.executeUpdate();
 		}
