@@ -61,8 +61,8 @@ public class Main
 		List<MovimientoDTO> listaMovimientos = DatosDAO.select_TB02_MOVIMIENTOS(connection);
 		for (MovimientoDTO movimiento : listaMovimientos)
 		{
-			BigDecimal totalCalculado = movimiento.getNumeroTitulos().multiply(movimiento.getPrecioTitulo()).add(movimiento.getComision()).setScale(2, RoundingMode.HALF_EVEN);
-			if (!similar(movimiento.getTotal().setScale(2, RoundingMode.HALF_EVEN), totalCalculado))
+			BigDecimal totalCalculado = movimiento.getNumeroTitulos().multiply(movimiento.getPrecioTitulo()).add(movimiento.getComision());
+			if (!similar(movimiento.getTotal(), totalCalculado))
 			{
 				throw new Exception("Los totales del movimiento no coinciden [" + movimiento.getMovimientoId() + "] [" + movimiento.getProductoId() + "] [" + movimiento.getTotal() + "] [" + totalCalculado + "]");
 			}
@@ -213,51 +213,51 @@ public class Main
 			{
 				throw new Exception("Los valores de uso ingresos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getUsoIngresos() + "] [" + ganPerProdPesoJAVA.getUsoIngresos() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getTer().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getTer().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getTer(), ganPerProdPesoSQL.getTer()))
 			{
 				throw new Exception("Los valores del TER no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTer() + "] [" + ganPerProdPesoJAVA.getTer() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getTitulosComprados().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getTitulosComprados().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getTitulosComprados(), ganPerProdPesoSQL.getTitulosComprados()))
 			{
 				throw new Exception("Los titulos comprados no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTitulosComprados() + "] [" + ganPerProdPesoJAVA.getTitulosComprados() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getTitulosVendidos().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getTitulosVendidos().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getTitulosVendidos(), ganPerProdPesoSQL.getTitulosVendidos()))
 			{
 				throw new Exception("Los titulos vendidos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTitulosVendidos() + "] [" + ganPerProdPesoJAVA.getTitulosVendidos() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getTitulosActuales().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getTitulosActuales().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getTitulosActuales(), ganPerProdPesoSQL.getTitulosActuales()))
 			{
 				throw new Exception("Los titulos actuales no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getTitulosActuales() + "] [" + ganPerProdPesoJAVA.getTitulosActuales() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosComprados().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getPrecioTitulosComprados().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosComprados(), ganPerProdPesoSQL.getPrecioTitulosComprados()))
 			{
 				throw new Exception("Los precios de titulos comprados no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPrecioTitulosComprados() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosComprados() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosVendidos().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getPrecioTitulosVendidos().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosVendidos(), ganPerProdPesoSQL.getPrecioTitulosVendidos()))
 			{
 				throw new Exception("Los precios de titulos vendidos no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPrecioTitulosVendidos() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosVendidos() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getFlujoCaja().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getFlujoCaja().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getFlujoCaja(), ganPerProdPesoSQL.getFlujoCaja()))
 			{
 				throw new Exception("Los valores de flujo de caja no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getFlujoCaja() + "] [" + ganPerProdPesoJAVA.getFlujoCaja() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getValorTitulo().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getValorTitulo().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getValorTitulo(), ganPerProdPesoSQL.getValorTitulo()))
 			{
 				throw new Exception("Los valores del titulo no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getValorTitulo() + "] [" + ganPerProdPesoJAVA.getValorTitulo() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getValorTitulosActuales().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getValorTitulosActuales().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getValorTitulosActuales(), ganPerProdPesoSQL.getValorTitulosActuales()))
 			{
 				throw new Exception("Los valores de los titulos actuales no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getValorTitulosActuales() + "] [" + ganPerProdPesoJAVA.getValorTitulosActuales() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getGananciaPerdida().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getGananciaPerdida().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getGananciaPerdida(), ganPerProdPesoSQL.getGananciaPerdida()))
 			{
 				throw new Exception("Los valores de ganancia perdida no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getGananciaPerdida() + "] [" + ganPerProdPesoJAVA.getGananciaPerdida() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getGananciaPerdidaPrcnt().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getGananciaPerdidaPrcnt().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getGananciaPerdidaPrcnt(), ganPerProdPesoSQL.getGananciaPerdidaPrcnt()))
 			{
 				throw new Exception("Los valores de ganancia perdida porcentual no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getGananciaPerdidaPrcnt() + "] [" + ganPerProdPesoJAVA.getGananciaPerdidaPrcnt() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getPesoEnCartera().setScale(4, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getPesoEnCartera().setScale(4, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getPesoEnCartera(), ganPerProdPesoSQL.getPesoEnCartera()))
 			{
 				throw new Exception("Los valores peso en cartera no coinciden [" + ganPerProdPesoSQL.getProductoId() + "] [" + ganPerProdPesoSQL.getPesoEnCartera() + "] [" + ganPerProdPesoJAVA.getPesoEnCartera() + "]");
 			}
@@ -373,36 +373,36 @@ public class Main
 			GanPerProdPesoDTO ganPerProdPesoJAVA = mapVWF.get(getMapKey(ganPerProdPesoSQL, nombreVista));
 			if (nombreVista == null)
 			{
-				if (!similar(ganPerProdPesoJAVA.getTer().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getTer().setScale(2, RoundingMode.HALF_EVEN)))
+				if (!similar(ganPerProdPesoJAVA.getTer(), ganPerProdPesoSQL.getTer()))
 				{
 					throw new Exception("Los valores de TER no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getTer() + "] [" + ganPerProdPesoJAVA.getTer() + "]");
 				}
 			}
-			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosComprados(), ganPerProdPesoSQL.getPrecioTitulosComprados()))
 			{
 				throw new Exception("Los precios de titulos comprados no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getPrecioTitulosComprados() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosComprados() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosVendidos().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getPrecioTitulosVendidos().setScale(2, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getPrecioTitulosVendidos(), ganPerProdPesoSQL.getPrecioTitulosVendidos()))
 			{
 				throw new Exception("Los precios de titulos vendidos no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getPrecioTitulosVendidos() + "] [" + ganPerProdPesoJAVA.getPrecioTitulosVendidos() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getFlujoCaja().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getFlujoCaja().setScale(2, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getFlujoCaja(), ganPerProdPesoSQL.getFlujoCaja()))
 			{
 				throw new Exception("Los valores de flujo de caja no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getFlujoCaja() + "] [" + ganPerProdPesoJAVA.getFlujoCaja() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getValorTitulosActuales().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getValorTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getValorTitulosActuales(), ganPerProdPesoSQL.getValorTitulosActuales()))
 			{
 				throw new Exception("Los valores de los titulos actuales no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getValorTitulosActuales() + "] [" + ganPerProdPesoJAVA.getValorTitulosActuales() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getGananciaPerdida().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getGananciaPerdida().setScale(2, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getGananciaPerdida(), ganPerProdPesoSQL.getGananciaPerdida()))
 			{
 				throw new Exception("Los valores de ganancia perdida no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getGananciaPerdida() + "] [" + ganPerProdPesoJAVA.getGananciaPerdida() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getGananciaPerdidaPrcnt().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getGananciaPerdidaPrcnt().setScale(2, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getGananciaPerdidaPrcnt(), ganPerProdPesoSQL.getGananciaPerdidaPrcnt()))
 			{
 				throw new Exception("Los valores de ganancia perdida porcentual no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getGananciaPerdidaPrcnt() + "] [" + ganPerProdPesoJAVA.getGananciaPerdidaPrcnt() + "]");
 			}
-			if (!similar(ganPerProdPesoJAVA.getPesoEnCartera().setScale(2, RoundingMode.HALF_EVEN), ganPerProdPesoSQL.getPesoEnCartera().setScale(2, RoundingMode.HALF_EVEN)))
+			if (!similar(ganPerProdPesoJAVA.getPesoEnCartera(), ganPerProdPesoSQL.getPesoEnCartera()))
 			{
 				throw new Exception("Los valores peso en cartera no coinciden [" + getMapKey(ganPerProdPesoSQL, nombreVista) + "] [" + ganPerProdPesoSQL.getPesoEnCartera() + "] [" + ganPerProdPesoJAVA.getPesoEnCartera() + "]");
 			}
@@ -472,7 +472,7 @@ public class Main
 	 */
 	private static boolean similar(BigDecimal primero, BigDecimal segundo)
 	{
-		double margenError = 0.01d;
+		double margenError = 0.02d;
 		boolean similar = false;
 		if (primero.equals(segundo))
 		{
