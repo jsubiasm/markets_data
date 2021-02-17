@@ -576,17 +576,17 @@ public class Main
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
 			validate_TB02_MOVIMIENTOS(connection);
-			Map<String, GanPerProdPesoDTO> mapGanPerProdPeso = new HashMap<String, GanPerProdPesoDTO>();
-			validate_VW03_GAN_PER_PROD_PESO(connection, mapGanPerProdPeso);
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, "INSTRUMENTO");
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, "COMERCIALIZADOR");
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, "MERCADO");
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, "MONEDA");
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, "PROVEEDOR");
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, "SUBTIPO_ACTIVO");
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, "TIPO_ACTIVO");
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, "USO_INGRESOS");
-			validate_VWF_nombreVista(connection, mapGanPerProdPeso, null);
+			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO(connection, mapGpp);
+			validate_VWF_nombreVista(connection, mapGpp, "INSTRUMENTO");
+			validate_VWF_nombreVista(connection, mapGpp, "COMERCIALIZADOR");
+			validate_VWF_nombreVista(connection, mapGpp, "MERCADO");
+			validate_VWF_nombreVista(connection, mapGpp, "MONEDA");
+			validate_VWF_nombreVista(connection, mapGpp, "PROVEEDOR");
+			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO");
+			validate_VWF_nombreVista(connection, mapGpp, "TIPO_ACTIVO");
+			validate_VWF_nombreVista(connection, mapGpp, "USO_INGRESOS");
+			validate_VWF_nombreVista(connection, mapGpp, null);
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
 		}
