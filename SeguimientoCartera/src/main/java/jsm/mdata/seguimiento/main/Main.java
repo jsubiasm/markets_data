@@ -61,7 +61,15 @@ public class Main
 		List<MovimientoDTO> listaMovimientos = DatosDAO.select_TB02_MOVIMIENTOS(connection);
 		for (MovimientoDTO mov : listaMovimientos)
 		{
-			BigDecimal totalCalculado = mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision());
+			BigDecimal totalCalculado = null;
+			if (mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA))
+			{
+				totalCalculado = mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision());
+			}
+			else
+			{
+				totalCalculado = mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision());
+			}
 			if (!similar(mov.getTotal(), totalCalculado))
 			{
 				throw new Exception("Los totales del movimiento no coinciden [" + mov.getMovimientoId() + "] [" + mov.getProductoId() + "] [" + mov.getTotal() + "] [" + totalCalculado + "]");
