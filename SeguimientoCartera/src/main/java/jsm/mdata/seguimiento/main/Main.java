@@ -105,47 +105,54 @@ public class Main
 	 * @param mapGpp
 	 * @throws Throwable
 	 */
-	private static void validate_VW03_GAN_PER_PROD_PESO(Connection connection, Map<String, GanPerProdPesoDTO> mapGpp) throws Throwable
+	private static void validate_VW03_GAN_PER_PROD_PESO_sufijo(Connection connection, Map<String, GanPerProdPesoDTO> mapGpp, String sufijo) throws Throwable
 	{
 		List<MovimientoDTO> listaMovimientos = DatosDAO.select_TB02_MOVIMIENTOS(connection);
 		for (MovimientoDTO mov : listaMovimientos)
 		{
 			ProductoDTO prod = DatosDAO.select_TB02_PRODUCTOS(connection, mov.getProductoId()).get(0);
-			if (mapGpp.containsKey(getMapKey(mov, prod)))
+			boolean incluirGlobal = sufijo.equalsIgnoreCase("GLOBAL");
+			boolean incluirOro = sufijo.equalsIgnoreCase("ORO") && prod.getTipoActivo().equalsIgnoreCase("Oro");
+			boolean incluirRF = sufijo.equalsIgnoreCase("RF") && prod.getTipoActivo().equalsIgnoreCase("Renta Fija");
+			boolean incluirRV = sufijo.equalsIgnoreCase("RV") && prod.getTipoActivo().equalsIgnoreCase("Renta Variable");
+			if (incluirGlobal || incluirOro || incluirRF || incluirRV)
 			{
-				GanPerProdPesoDTO gpp = mapGpp.get(getMapKey(mov, prod));
-				gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getPrecioTitulosComprados().add(mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision())) : gpp.getPrecioTitulosComprados());
-				gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? gpp.getPrecioTitulosVendidos().add(mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision())) : gpp.getPrecioTitulosVendidos());
-				gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosActuales().add(mov.getNumeroTitulos()) : gpp.getTitulosActuales().subtract(mov.getNumeroTitulos()));
-				gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosComprados().add(mov.getNumeroTitulos()) : gpp.getTitulosComprados());
-				gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? gpp.getTitulosVendidos().add(mov.getNumeroTitulos()) : gpp.getTitulosVendidos());
-				mapGpp.put(getMapKey(mov, prod), gpp);
-			}
-			else
-			{
-				GanPerProdPesoDTO gpp = new GanPerProdPesoDTO();
-				gpp.setGananciaPerdida(BigDecimal.ZERO);
-				gpp.setGananciaPerdidaPrcnt(BigDecimal.ZERO);
-				gpp.setPesoEnCartera(BigDecimal.ZERO);
-				gpp.setValorTitulo(BigDecimal.ZERO);
-				gpp.setValorTitulosActuales(BigDecimal.ZERO);
-				gpp.setFlujoCaja(BigDecimal.ZERO);
-				gpp.setProductoId(mov.getProductoId());
-				gpp.setNombre(prod.getNombre());
-				gpp.setComercializador(mov.getComercializador());
-				gpp.setInstrumento(prod.getInstrumento());
-				gpp.setMercado(mov.getMercado());
-				gpp.setMoneda(prod.getMoneda());
-				gpp.setProveedor(prod.getProveedor());
-				gpp.setSubtipoActivo(prod.getSubtipoActivo());
-				gpp.setTipoActivo(prod.getTipoActivo());
-				gpp.setUsoIngresos(prod.getUsoIngresos());
-				gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision()) : BigDecimal.ZERO);
-				gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision()) : BigDecimal.ZERO);
-				gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : mov.getNumeroTitulos().multiply(new BigDecimal(-1d)));
-				gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
-				gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
-				mapGpp.put(getMapKey(mov, prod), gpp);
+				if (mapGpp.containsKey(getMapKey(mov, prod)))
+				{
+					GanPerProdPesoDTO gpp = mapGpp.get(getMapKey(mov, prod));
+					gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getPrecioTitulosComprados().add(mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision())) : gpp.getPrecioTitulosComprados());
+					gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? gpp.getPrecioTitulosVendidos().add(mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision())) : gpp.getPrecioTitulosVendidos());
+					gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosActuales().add(mov.getNumeroTitulos()) : gpp.getTitulosActuales().subtract(mov.getNumeroTitulos()));
+					gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosComprados().add(mov.getNumeroTitulos()) : gpp.getTitulosComprados());
+					gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? gpp.getTitulosVendidos().add(mov.getNumeroTitulos()) : gpp.getTitulosVendidos());
+					mapGpp.put(getMapKey(mov, prod), gpp);
+				}
+				else
+				{
+					GanPerProdPesoDTO gpp = new GanPerProdPesoDTO();
+					gpp.setGananciaPerdida(BigDecimal.ZERO);
+					gpp.setGananciaPerdidaPrcnt(BigDecimal.ZERO);
+					gpp.setPesoEnCartera(BigDecimal.ZERO);
+					gpp.setValorTitulo(BigDecimal.ZERO);
+					gpp.setValorTitulosActuales(BigDecimal.ZERO);
+					gpp.setFlujoCaja(BigDecimal.ZERO);
+					gpp.setProductoId(mov.getProductoId());
+					gpp.setNombre(prod.getNombre());
+					gpp.setComercializador(mov.getComercializador());
+					gpp.setInstrumento(prod.getInstrumento());
+					gpp.setMercado(mov.getMercado());
+					gpp.setMoneda(prod.getMoneda());
+					gpp.setProveedor(prod.getProveedor());
+					gpp.setSubtipoActivo(prod.getSubtipoActivo());
+					gpp.setTipoActivo(prod.getTipoActivo());
+					gpp.setUsoIngresos(prod.getUsoIngresos());
+					gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision()) : BigDecimal.ZERO);
+					gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision()) : BigDecimal.ZERO);
+					gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : mov.getNumeroTitulos().multiply(new BigDecimal(-1d)));
+					gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
+					gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
+					mapGpp.put(getMapKey(mov, prod), gpp);
+				}
 			}
 		}
 		BigDecimal sumValorTitulosActuales = BigDecimal.ZERO;
@@ -168,7 +175,7 @@ public class Main
 			gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 6, RoundingMode.HALF_EVEN));
 			mapGpp.put(mapKey, gpp);
 		}
-		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VW03_GAN_PER_PROD_PESO(connection);
+		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VW03_GAN_PER_PROD_PESO_sufijo(connection, sufijo);
 		if (listGpp.size() != mapGpp.size())
 		{
 			throw new Exception("La dimensión de los elementos es distinta [" + listGpp.size() + "] [" + mapGpp.size() + "]");
@@ -266,7 +273,7 @@ public class Main
 			}
 			else
 			{
-				LOGGER.info("VW03_GAN_PER_PROD_PESO - OK -> [" + gppSQL.getProductoId() + "]");
+				LOGGER.info("VW03_GAN_PER_PROD_PESO_" + sufijo + " - OK -> [" + gppSQL.getProductoId() + "]");
 			}
 		}
 	}
@@ -302,7 +309,7 @@ public class Main
 			{
 				key = gpp.getProveedor();
 			}
-			else if ("SUBTIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+			else if (nombreVista.startsWith("SUBTIPO_ACTIVO"))
 			{
 				key = gpp.getSubtipoActivo();
 			}
@@ -577,16 +584,25 @@ public class Main
 			confirmarTransaccion(connection);
 			validate_TB02_MOVIMIENTOS(connection);
 			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
-			validate_VW03_GAN_PER_PROD_PESO(connection, mapGpp);
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGpp, "GLOBAL");
 			validate_VWF_nombreVista(connection, mapGpp, "INSTRUMENTO");
 			validate_VWF_nombreVista(connection, mapGpp, "COMERCIALIZADOR");
 			validate_VWF_nombreVista(connection, mapGpp, "MERCADO");
 			validate_VWF_nombreVista(connection, mapGpp, "MONEDA");
 			validate_VWF_nombreVista(connection, mapGpp, "PROVEEDOR");
-			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO");
 			validate_VWF_nombreVista(connection, mapGpp, "TIPO_ACTIVO");
+			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO_GLOBAL");
 			validate_VWF_nombreVista(connection, mapGpp, "USO_INGRESOS");
 			validate_VWF_nombreVista(connection, mapGpp, null);
+			Map<String, GanPerProdPesoDTO> mapGppOro = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppOro, "ORO");
+			validate_VWF_nombreVista(connection, mapGppOro, "SUBTIPO_ACTIVO_ORO");
+			Map<String, GanPerProdPesoDTO> mapGppRF = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRF, "RF");
+			validate_VWF_nombreVista(connection, mapGppRF, "SUBTIPO_ACTIVO_RF");
+			Map<String, GanPerProdPesoDTO> mapGppRV = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRV, "RV");
+			validate_VWF_nombreVista(connection, mapGppRV, "SUBTIPO_ACTIVO_RV");
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
 		}

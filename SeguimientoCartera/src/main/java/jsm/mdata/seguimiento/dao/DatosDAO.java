@@ -193,7 +193,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final List<GanPerProdPesoDTO> select_VW03_GAN_PER_PROD_PESO(Connection connection) throws Throwable
+	public static final List<GanPerProdPesoDTO> select_VW03_GAN_PER_PROD_PESO_sufijo(Connection connection, String sufijo) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -201,7 +201,8 @@ public class DatosDAO
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, COMERCIALIZADOR, MERCADO, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, TER, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM VW03_GAN_PER_PROD_PESO");
+			String nombreVista = "VW03_GAN_PER_PROD_PESO_" + sufijo;
+			statement = connection.prepareStatement("SELECT PRODUCTO_ID, NOMBRE, COMERCIALIZADOR, MERCADO, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS, TER, TITULOS_COMPRADOS, PRECIO_TITULOS_COMPRADOS, TITULOS_VENDIDOS, PRECIO_TITULOS_VENDIDOS, TITULOS_ACTUALES, VALOR_TITULO, VALOR_TITULOS_ACTUALES, FLUJO_CAJA, GANANCIA_PERDIDA, GANANCIA_PERDIDA_PRCNT, PESO_EN_CARTERA FROM " + nombreVista);
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
 			LOGGER.debug("Abriendo Cursor");
@@ -285,7 +286,7 @@ public class DatosDAO
 				{
 					campoVista = "\"Proveedor\"";
 				}
-				else if ("SUBTIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+				else if (nombreVista.startsWith("SUBTIPO_ACTIVO"))
 				{
 					campoVista = "\"Subtipo Activo\"";
 				}
@@ -335,7 +336,7 @@ public class DatosDAO
 					{
 						dto.setProveedor(resultSet.getString("Proveedor"));
 					}
-					else if ("SUBTIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+					else if (nombreVista.startsWith("SUBTIPO_ACTIVO"))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Subtipo Activo"));
 					}
