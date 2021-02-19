@@ -286,9 +286,21 @@ public class DatosDAO
 				{
 					campoVista = "\"Proveedor\"";
 				}
-				else if (nombreVista.startsWith("SUBTIPO_ACTIVO"))
+				else if ("SUBTIPO_ACTIVO_GLOBAL".equalsIgnoreCase(nombreVista))
 				{
 					campoVista = "\"Subtipo Activo\"";
+				}
+				else if ("SUBTIPO_ACTIVO_ORO".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Oro\"";
+				}
+				else if ("SUBTIPO_ACTIVO_RF".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Renta Fija\"";
+				}
+				else if ("SUBTIPO_ACTIVO_RV".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Renta Variable\"";
 				}
 				else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 				{
@@ -306,7 +318,7 @@ public class DatosDAO
 			}
 			else
 			{
-				statement = connection.prepareStatement("SELECT \"TER\", \"Prec. Tit. C.\", \"Prec. Tit. V.\", \"Val. Tit. Act.\", \"Flujo Caja\", \"Gan./Perd.\", \"Gan./Perd. %\", \"Peso %\" FROM VWF_GAN_PER_PROD_PESO_TOTALES");
+				statement = connection.prepareStatement("SELECT \"TER\", \"Prec. Tit. C.\", \"Prec. Tit. V.\", \"Val. Tit. Act.\", \"Flujo Caja\", \"Gan./Perd.\", \"Gan./Perd. %\", \"Peso %\" FROM VWF_GAN_PER_PROD_PESO_GLOBAL_TOTALES");
 			}
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
@@ -336,9 +348,21 @@ public class DatosDAO
 					{
 						dto.setProveedor(resultSet.getString("Proveedor"));
 					}
-					else if (nombreVista.startsWith("SUBTIPO_ACTIVO"))
+					else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_GLOBAL"))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Subtipo Activo"));
+					}
+					else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_ORO"))
+					{
+						dto.setSubtipoActivo(resultSet.getString("Oro"));
+					}
+					else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RF"))
+					{
+						dto.setSubtipoActivo(resultSet.getString("Renta Fija"));
+					}
+					else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RV"))
+					{
+						dto.setSubtipoActivo(resultSet.getString("Renta Variable"));
 					}
 					else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 					{
