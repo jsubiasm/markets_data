@@ -373,10 +373,10 @@ public class Main
 			gppVWF.setTer(gppVWF.getTer().divide(gppVWF.getValorTitulosActuales(), 6, RoundingMode.HALF_EVEN));
 		}
 		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VWF_nombreVista(connection, nombreVista);
-		if (listGpp.size() != mapGppVWF.size())
-		{
-			throw new Exception("La dimensión de los elementos es distinta [" + listGpp.size() + "] [" + mapGppVWF.size() + "]");
-		}
+//		if (listGpp.size() != mapGppVWF.size())
+//		{
+//			throw new Exception("La dimensión de los elementos es distinta [" + listGpp.size() + "] [" + mapGppVWF.size() + "]");
+//		}
 		for (GanPerProdPesoDTO gppSQL : listGpp)
 		{
 			GanPerProdPesoDTO gppJAVA = mapGppVWF.get(getMapKey(gppSQL, nombreVista));
