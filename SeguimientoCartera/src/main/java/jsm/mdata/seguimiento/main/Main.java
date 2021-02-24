@@ -172,7 +172,14 @@ public class Main
 		for (String mapKey : mapGpp.keySet())
 		{
 			GanPerProdPesoDTO gpp = mapGpp.get(mapKey);
-			gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 6, RoundingMode.HALF_EVEN));
+			if (sumValorTitulosActuales.compareTo(BigDecimal.ZERO) == 1)
+			{
+				gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 6, RoundingMode.HALF_EVEN));
+			}
+			else
+			{
+				gpp.setPesoEnCartera(BigDecimal.ZERO);
+			}
 			mapGpp.put(mapKey, gpp);
 		}
 		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VW03_GAN_PER_PROD_PESO_sufijo(connection, sufijo);
@@ -370,13 +377,20 @@ public class Main
 		if (nombreVista == null)
 		{
 			GanPerProdPesoDTO gppVWF = mapGppVWF.get("N/A");
-			gppVWF.setTer(gppVWF.getTer().divide(gppVWF.getValorTitulosActuales(), 6, RoundingMode.HALF_EVEN));
+			if (gppVWF.getValorTitulosActuales().compareTo(BigDecimal.ZERO) == 1)
+			{
+				gppVWF.setTer(gppVWF.getTer().divide(gppVWF.getValorTitulosActuales(), 6, RoundingMode.HALF_EVEN));
+			}
+			else
+			{
+				gppVWF.setTer(BigDecimal.ZERO);
+			}
 		}
 		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VWF_nombreVista(connection, nombreVista);
-//		if (listGpp.size() != mapGppVWF.size())
-//		{
-//			throw new Exception("La dimensión de los elementos es distinta [" + listGpp.size() + "] [" + mapGppVWF.size() + "]");
-//		}
+		if (listGpp.size() != mapGppVWF.size())
+		{
+			throw new Exception("La dimensión de los elementos es distinta [" + listGpp.size() + "] [" + mapGppVWF.size() + "]");
+		}
 		for (GanPerProdPesoDTO gppSQL : listGpp)
 		{
 			GanPerProdPesoDTO gppJAVA = mapGppVWF.get(getMapKey(gppSQL, nombreVista));
