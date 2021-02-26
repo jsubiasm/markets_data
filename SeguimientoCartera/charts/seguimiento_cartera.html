@@ -19,22 +19,28 @@
 			  width: 100%;
 			  float: left;
 			  padding: 12px;
-			  border: 1px solid red;
+			  border: 1px solid white;
 			}
 			.w50pad {
 			  width: 50%;
 			  float: left;
 			  padding: 12px;
-			  border: 1px solid red;
+			  border: 1px solid white;
 			}
-			.w50p0 {
+			.mitadIzda {
 			  width: 50%;
 			  float: left;
 			  padding: 0px;
-			  border: 1px solid red;
+			  border: 1px solid white;
 			}
+			.mitadDcha {
+			  width: 50%;
+			  float: left;
+			  padding: 0px;
+			  border: 1px solid white;
+			}			
 		</style>
-		<style>
+		<style>		
 			table {
 			  font-family: Arial, Helvetica, sans-serif;
 			  font-size: 12px;
@@ -56,13 +62,39 @@
 			  background-color: #a8a8a8;
 			  color: white;
 			}
+			
+			#tablaPrincipal {
+			  font-size: 16px;
+			}
+			
 		</style>		
 	</head>
 	<body>
 		<div class="w100pad">
-
+			<table id="tablaPrincipal">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Age</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Tiger Nixon</td>
+						<td>System Architect</td>
+						<td>Edinburgh</td>
+						<td>61</td>
+						<td>2011/04/25</td>
+						<td style="color:red">$320,800</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<div class="w50p0">
+		<div class="mitadIzda">
 			<div class="w100pad">
 				<table>
 					<thead>
@@ -82,7 +114,7 @@
 							<td>Edinburgh</td>
 							<td>61</td>
 							<td>2011/04/25</td>
-							<td>$320,800</td>
+							<td style="color:red">$320,800</td>
 						</tr>
 						<tr>
 							<td>Garrett Winters</td>
@@ -90,7 +122,7 @@
 							<td>Tokyo</td>
 							<td>63</td>
 							<td>2011/07/25</td>
-							<td>$170,750</td>
+							<td style="color:green">$170,750</td>
 						</tr>
 						<tr>
 							<td>Donna Snider</td>
@@ -98,7 +130,7 @@
 							<td>New York</td>
 							<td>27</td>
 							<td>2011/01/25</td>
-							<td>$112,000</td>
+							<td style="color:green">$112,000</td>
 						</tr>
 					</tbody>
 				</table>	
@@ -122,7 +154,7 @@
 							<td>Edinburgh</td>
 							<td>61</td>
 							<td>2011/04/25</td>
-							<td>$320,800</td>
+							<td style="color:red">$320,800</td>
 						</tr>
 						<tr>
 							<td>Garrett Winters</td>
@@ -130,7 +162,7 @@
 							<td>Tokyo</td>
 							<td>63</td>
 							<td>2011/07/25</td>
-							<td>$170,750</td>
+							<td style="color:green">$170,750</td>
 						</tr>
 						<tr>
 							<td>Donna Snider</td>
@@ -138,7 +170,7 @@
 							<td>New York</td>
 							<td>27</td>
 							<td>2011/01/25</td>
-							<td>$112,000</td>
+							<td style="color:green">$112,000</td>
 						</tr>
 					</tbody>
 				</table>			
@@ -162,7 +194,7 @@
 							<td>Edinburgh</td>
 							<td>61</td>
 							<td>2011/04/25</td>
-							<td>$320,800</td>
+							<td style="color:red">$320,800</td>
 						</tr>
 						<tr>
 							<td>Garrett Winters</td>
@@ -170,7 +202,7 @@
 							<td>Tokyo</td>
 							<td>63</td>
 							<td>2011/07/25</td>
-							<td>$170,750</td>
+							<td style="color:green">$170,750</td>
 						</tr>
 						<tr>
 							<td>Donna Snider</td>
@@ -178,7 +210,7 @@
 							<td>New York</td>
 							<td>27</td>
 							<td>2011/01/25</td>
-							<td>$112,000</td>
+							<td style="color:green">$112,000</td>
 						</tr>
 					</tbody>
 				</table>
@@ -202,7 +234,7 @@
 							<td>Edinburgh</td>
 							<td>61</td>
 							<td>2011/04/25</td>
-							<td>$320,800</td>
+							<td style="color:red">$320,800</td>
 						</tr>
 						<tr>
 							<td>Garrett Winters</td>
@@ -210,7 +242,7 @@
 							<td>Tokyo</td>
 							<td>63</td>
 							<td>2011/07/25</td>
-							<td>$170,750</td>
+							<td style="color:green">$170,750</td>
 						</tr>
 						<tr>
 							<td>Donna Snider</td>
@@ -218,34 +250,253 @@
 							<td>New York</td>
 							<td>27</td>
 							<td>2011/01/25</td>
-							<td>$112,000</td>
+							<td style="color:green">$112,000</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<div class="w100pad">
-
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Age</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td style="color:red">$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td style="color:green">$170,750</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>New York</td>
+							<td>27</td>
+							<td>2011/01/25</td>
+							<td style="color:green">$112,000</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="w100pad">
-
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Age</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td style="color:red">$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td style="color:green">$170,750</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>New York</td>
+							<td>27</td>
+							<td>2011/01/25</td>
+							<td style="color:green">$112,000</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="w100pad">
-
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Age</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td style="color:red">$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td style="color:green">$170,750</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>New York</td>
+							<td>27</td>
+							<td>2011/01/25</td>
+							<td style="color:green">$112,000</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="w100pad">
-
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Age</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td style="color:red">$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td style="color:green">$170,750</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>New York</td>
+							<td>27</td>
+							<td>2011/01/25</td>
+							<td style="color:green">$112,000</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="w100pad">
-
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Age</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td style="color:red">$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td style="color:green">$170,750</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>New York</td>
+							<td>27</td>
+							<td>2011/01/25</td>
+							<td style="color:green">$112,000</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="w100pad">
-
-			</div>
-			<div class="w100pad">
-
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Age</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td style="color:red">$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td style="color:green">$170,750</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>New York</td>
+							<td>27</td>
+							<td>2011/01/25</td>
+							<td style="color:green">$112,000</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>			
 		</div>
-		<div class="w50p0">
+		<div class="mitadDcha">
 			<div class="w50pad">
 				<canvas id="chartArea01"></canvas>
 			</div>
@@ -259,26 +510,87 @@
 				<canvas id="chartArea04"></canvas>
 			</div>
 			<div class="w50pad">
-
+				<canvas id="chartArea05"></canvas>
 			</div>
 			<div class="w50pad">
-
+				<canvas id="chartArea06"></canvas>
 			</div>
 			<div class="w50pad">
-
+				<canvas id="chartArea07"></canvas>
 			</div>
 			<div class="w50pad">
-
+				<canvas id="chartArea08"></canvas>
 			</div>
 			<div class="w50pad">
-
+				<canvas id="chartArea09"></canvas>
 			</div>
 			<div class="w50pad">
-
+				<canvas id="chartArea10"></canvas>
 			</div>			
 		</div>
 		<div class="w100pad">
-
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Age</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td style="color:red">$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td style="color:green">$170,750</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>New York</td>
+							<td>27</td>
+							<td>2011/01/25</td>
+							<td style="color:green">$112,000</td>
+						</tr>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td style="color:red">$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td style="color:green">$170,750</td>
+						</tr>
+						<tr>
+							<td>Donna Snider</td>
+							<td>Customer Support</td>
+							<td>New York</td>
+							<td>27</td>
+							<td>2011/01/25</td>
+							<td style="color:green">$112,000</td>
+						</tr>						
+					</tbody>
+				</table>
 		</div>	
 		<script>
 			var chartContext01 = document.getElementById('chartArea01').getContext('2d');
@@ -294,6 +606,15 @@
 							25,
 							15,
 							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
 						]
 					}],
 					labels: [
@@ -309,7 +630,8 @@
 				options: {
 					responsive: true,
 					legend: {
-						position: 'top',
+						display: true,
+						position: 'left',
 					},
 					title: {
 						display: true,
@@ -336,6 +658,15 @@
 							25,
 							15,
 							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
 						]
 					}],
 					labels: [
@@ -351,7 +682,8 @@
 				options: {
 					responsive: true,
 					legend: {
-						position: 'top',
+						display: true,
+						position: 'left',
 					},
 					title: {
 						display: true,
@@ -378,6 +710,15 @@
 							25,
 							15,
 							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
 						]
 					}],
 					labels: [
@@ -393,7 +734,8 @@
 				options: {
 					responsive: true,
 					legend: {
-						position: 'top',
+						display: true,
+						position: 'left',
 					},
 					title: {
 						display: true,
@@ -420,6 +762,15 @@
 							25,
 							15,
 							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
 						]
 					}],
 					labels: [
@@ -435,7 +786,320 @@
 				options: {
 					responsive: true,
 					legend: {
-						position: 'top',
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: true,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>	
+		<script>
+			var chartContext05 = document.getElementById('chartArea05').getContext('2d');
+			var myDoughnutChart05 = new Chart(chartContext05, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							5, 
+							10, 
+							15,
+							20,
+							25,
+							15,
+							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
+						]
+					}],
+					labels: [
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA'
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: true,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>
+		<script>
+			var chartContext06 = document.getElementById('chartArea06').getContext('2d');
+			var myDoughnutChart06 = new Chart(chartContext06, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							5, 
+							10, 
+							15,
+							20,
+							25,
+							15,
+							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
+						]
+					}],
+					labels: [
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA'
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: true,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>
+		<script>
+			var chartContext07 = document.getElementById('chartArea07').getContext('2d');
+			var myDoughnutChart07 = new Chart(chartContext07, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							5, 
+							10, 
+							15,
+							20,
+							25,
+							15,
+							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
+						]
+					}],
+					labels: [
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA'
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: true,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>
+		<script>
+			var chartContext08 = document.getElementById('chartArea08').getContext('2d');
+			var myDoughnutChart08 = new Chart(chartContext08, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							5, 
+							10, 
+							15,
+							20,
+							25,
+							15,
+							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
+						]
+					}],
+					labels: [
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA'
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: true,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>
+		<script>
+			var chartContext09 = document.getElementById('chartArea09').getContext('2d');
+			var myDoughnutChart09 = new Chart(chartContext09, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							5, 
+							10, 
+							15,
+							20,
+							25,
+							15,
+							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
+						]
+					}],
+					labels: [
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA'
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: true,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>
+		<script>
+			var chartContext10 = document.getElementById('chartArea10').getContext('2d');
+			var myDoughnutChart10 = new Chart(chartContext10, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							5, 
+							10, 
+							15,
+							20,
+							25,
+							15,
+							10
+						],
+						backgroundColor: [
+							'#edc5be',
+							'#ede5be',
+							'#d8edbe',
+							'#beedcb',
+							'#beede7',
+							'#bec7ed',
+							'#ebbeed'
+						]
+					}],
+					labels: [
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA',
+						'AAA AAA'
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
 					},
 					title: {
 						display: true,
