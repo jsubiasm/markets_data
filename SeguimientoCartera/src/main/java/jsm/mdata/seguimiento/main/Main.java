@@ -60,7 +60,7 @@ public class Main
 	 */
 	private static final String DB_PATH = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\seguimiento_cartera";
 	private static final String HTML_TEMPLATE = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\html\\seguimiento_cartera.template.html";
-	private static final String HTML_OUTPUT = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\html\\seguimiento_cartera.output.html";
+	private static final String HTML_OUTPUT = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\output\\seguimiento_cartera.output.html";
 
 	/**
 	 * @param connection
