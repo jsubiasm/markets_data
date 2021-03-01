@@ -666,7 +666,7 @@ public class Main
 			{
 				if (lineaTemplate != null && lineaTemplate.contains("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->"))
 				{
-					listLineasOutput.add(templateDto.getTableGlobalTotales());
+					listLineasOutput.add(lineaTemplate.replace("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->", templateDto.getTableGlobalTotales()));
 				}
 				else
 				{
