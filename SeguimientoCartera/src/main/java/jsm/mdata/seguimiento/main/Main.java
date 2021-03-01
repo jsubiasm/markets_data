@@ -3,18 +3,24 @@
  */
 package jsm.mdata.seguimiento.main;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import org.apache.commons.io.IOUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -24,10 +30,12 @@ import org.slf4j.LoggerFactory;
 
 import jsm.mdata.seguimiento.constantes.Cons;
 import jsm.mdata.seguimiento.dao.DatosDAO;
+import jsm.mdata.seguimiento.dao.TemplateDAO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
 import jsm.mdata.seguimiento.dto.ProductoVarDTO;
+import jsm.mdata.seguimiento.dto.TemplateDTO;
 
 /**
  * 
@@ -51,6 +59,8 @@ public class Main
 	 * 
 	 */
 	private static final String DB_PATH = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\seguimiento_cartera";
+	private static final String HTML_TEMPLATE = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\html\\seguimiento_cartera.template.html";
+	private static final String HTML_OUTPUT = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\html\\seguimiento_cartera.output.html";
 
 	/**
 	 * @param connection
@@ -593,30 +603,32 @@ public class Main
 		{
 			LOGGER.info("Abriendo Conexion");
 			connection = abrirConexion();
-			urlScraping(connection);
-			LOGGER.info("Confirmando Transaccion");
-			confirmarTransaccion(connection);
-			validate_TB02_MOVIMIENTOS(connection);
-			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
-			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGpp, "GLOBAL");
-			validate_VWF_nombreVista(connection, mapGpp, "INSTRUMENTO");
-			validate_VWF_nombreVista(connection, mapGpp, "COMERCIALIZADOR");
-			validate_VWF_nombreVista(connection, mapGpp, "MERCADO");
-			validate_VWF_nombreVista(connection, mapGpp, "MONEDA");
-			validate_VWF_nombreVista(connection, mapGpp, "PROVEEDOR");
-			validate_VWF_nombreVista(connection, mapGpp, "TIPO_ACTIVO");
-			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO_GLOBAL");
-			validate_VWF_nombreVista(connection, mapGpp, "USO_INGRESOS");
-			validate_VWF_nombreVista(connection, mapGpp, null);
-			Map<String, GanPerProdPesoDTO> mapGppOro = new HashMap<String, GanPerProdPesoDTO>();
-			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppOro, "ORO");
-			validate_VWF_nombreVista(connection, mapGppOro, "SUBTIPO_ACTIVO_ORO");
-			Map<String, GanPerProdPesoDTO> mapGppRF = new HashMap<String, GanPerProdPesoDTO>();
-			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRF, "RF");
-			validate_VWF_nombreVista(connection, mapGppRF, "SUBTIPO_ACTIVO_RF");
-			Map<String, GanPerProdPesoDTO> mapGppRV = new HashMap<String, GanPerProdPesoDTO>();
-			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRV, "RV");
-			validate_VWF_nombreVista(connection, mapGppRV, "SUBTIPO_ACTIVO_RV");
+//			urlScraping(connection);
+//			LOGGER.info("Confirmando Transaccion");
+//			confirmarTransaccion(connection);
+//			validate_TB02_MOVIMIENTOS(connection);
+//			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
+//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGpp, "GLOBAL");
+//			validate_VWF_nombreVista(connection, mapGpp, "INSTRUMENTO");
+//			validate_VWF_nombreVista(connection, mapGpp, "COMERCIALIZADOR");
+//			validate_VWF_nombreVista(connection, mapGpp, "MERCADO");
+//			validate_VWF_nombreVista(connection, mapGpp, "MONEDA");
+//			validate_VWF_nombreVista(connection, mapGpp, "PROVEEDOR");
+//			validate_VWF_nombreVista(connection, mapGpp, "TIPO_ACTIVO");
+//			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO_GLOBAL");
+//			validate_VWF_nombreVista(connection, mapGpp, "USO_INGRESOS");
+//			validate_VWF_nombreVista(connection, mapGpp, null);
+//			Map<String, GanPerProdPesoDTO> mapGppOro = new HashMap<String, GanPerProdPesoDTO>();
+//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppOro, "ORO");
+//			validate_VWF_nombreVista(connection, mapGppOro, "SUBTIPO_ACTIVO_ORO");
+//			Map<String, GanPerProdPesoDTO> mapGppRF = new HashMap<String, GanPerProdPesoDTO>();
+//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRF, "RF");
+//			validate_VWF_nombreVista(connection, mapGppRF, "SUBTIPO_ACTIVO_RF");
+//			Map<String, GanPerProdPesoDTO> mapGppRV = new HashMap<String, GanPerProdPesoDTO>();
+//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRV, "RV");
+//			validate_VWF_nombreVista(connection, mapGppRV, "SUBTIPO_ACTIVO_RV");
+			LOGGER.info("Generación Informe");
+			generacionInformeHtml(connection);
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
 		}
@@ -634,6 +646,35 @@ public class Main
 			cerrarBaseDatos();
 			LOGGER.info("FIN PROCESO");
 		}
+	}
+
+	/**
+	 * @param connection
+	 * @throws Throwable
+	 */
+	private static void generacionInformeHtml(Connection connection) throws Throwable
+	{
+		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VWF_nombreVista(connection, null);
+		String globalTotales = TemplateDAO.getTableRows(listGpp, null);
+		TemplateDTO templateDto = new TemplateDTO();
+		templateDto.setTableGlobalTotales(globalTotales);
+		List<String> listLineasTemplate = IOUtils.readLines(new FileReader(new File(HTML_TEMPLATE), StandardCharsets.UTF_8));
+		List<String> listLineasOutput = new ArrayList<String>();
+		if (listLineasTemplate != null && !listLineasTemplate.isEmpty())
+		{
+			for (String lineaTemplate : listLineasTemplate)
+			{
+				if (lineaTemplate != null && lineaTemplate.contains("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->"))
+				{
+					listLineasOutput.add(templateDto.getTableGlobalTotales());
+				}
+				else
+				{
+					listLineasOutput.add(lineaTemplate);
+				}
+			}
+		}
+		IOUtils.writeLines(listLineasOutput, "\n", new FileWriter(new File(HTML_OUTPUT), StandardCharsets.UTF_8));
 	}
 
 }
