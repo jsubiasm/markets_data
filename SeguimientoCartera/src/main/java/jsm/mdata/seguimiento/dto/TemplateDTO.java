@@ -52,6 +52,7 @@ public class TemplateDTO
 	// templateItem: // TEMPLATE.CHART.PROVEEDOR.DATA //
 	// templateItem: // TEMPLATE.CHART.PROVEEDOR.BGCOLOR //
 	// templateItem: // TEMPLATE.CHART.PROVEEDOR.LABEL //
+	// templateItem: <!-- TEMPLATE.MENSAJE.FECHA.FICHERO -->
 
 	/**
 	 * 
@@ -98,6 +99,7 @@ public class TemplateDTO
 	private String chartProveedorData;
 	private String chartProveedorBGColor;
 	private String chartProveedorLabel;
+	private String mensajeFechaFichero;
 
 	/**
 	 * @return the tableGlobalTotales
@@ -769,6 +771,22 @@ public class TemplateDTO
 	public void setChartProveedorLabel(String chartProveedorLabel)
 	{
 		this.chartProveedorLabel = chartProveedorLabel;
+	}
+
+	/**
+	 * @return the mensajeFechaFichero
+	 */
+	public String getMensajeFechaFichero()
+	{
+		return mensajeFechaFichero;
+	}
+
+	/**
+	 * @param mensajeFechaFichero the mensajeFechaFichero to set
+	 */
+	public void setMensajeFechaFichero(String mensajeFechaFichero)
+	{
+		this.mensajeFechaFichero = mensajeFechaFichero;
 	}
 
 }

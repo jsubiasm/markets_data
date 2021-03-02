@@ -441,4 +441,64 @@ public class DatosDAO
 		return rowsUpdated;
 	}
 
+	/**
+	 * @param connection
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final List<GanPerProdPesoDTO> select_VWF_GAN_PER_PROD_PESO_GLOBAL(Connection connection) throws Throwable
+	{
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		List<GanPerProdPesoDTO> listaGanPerProdPeso = new ArrayList<GanPerProdPesoDTO>();
+		try
+		{
+			LOGGER.debug("Abriendo Sentencia");
+			statement = connection.prepareStatement("SELECT \"ISIN\", \"Nombre\", \"Comercializador\", \"Mercado\", \"Proveedor\", \"Instrumento\", \"Tipo Activo\", \"Subtipo Activo\", \"Moneda\", \"Uso Ingresos\", \"TER\", \"Tit. Compra\", \"Prec. Tit. C.\", \"Tit. Venta\", \"Prec. Tit. V.\", \"Flujo Caja\", \"Tit. Act.\", \"Val. Tit.\", \"Val. Tit. Act.\", \"Gan./Perd.\", \"Gan./Perd. %\", \"Peso %\" FROM VWF_GAN_PER_PROD_PESO_GLOBAL");
+			LOGGER.debug("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.debug("Abriendo Cursor");
+			while (resultSet.next())
+			{
+				GanPerProdPesoDTO dto = new GanPerProdPesoDTO();
+				dto.setProductoId(resultSet.getString("ISIN"));
+				dto.setNombre(resultSet.getString("Nombre"));
+				dto.setComercializador(resultSet.getString("Comercializador"));
+				dto.setMercado(resultSet.getString("Mercado"));
+				dto.setProveedor(resultSet.getString("Proveedor"));
+				dto.setInstrumento(resultSet.getString("Instrumento"));
+				dto.setTipoActivo(resultSet.getString("Tipo Activo"));
+				dto.setSubtipoActivo(resultSet.getString("Subtipo Activo"));
+				dto.setMoneda(resultSet.getString("Moneda"));
+				dto.setUsoIngresos(resultSet.getString("Uso Ingresos"));
+				dto.setTer(resultSet.getBigDecimal("TER"));
+				dto.setTitulosComprados(resultSet.getBigDecimal("Tit. Compra"));
+				dto.setPrecioTitulosComprados(resultSet.getBigDecimal("Prec. Tit. C."));
+				dto.setTitulosVendidos(resultSet.getBigDecimal("Tit. Venta"));
+				dto.setPrecioTitulosVendidos(resultSet.getBigDecimal("Prec. Tit. V."));
+				dto.setFlujoCaja(resultSet.getBigDecimal("Flujo Caja"));
+				dto.setTitulosActuales(resultSet.getBigDecimal("Tit. Act."));
+				dto.setValorTitulo(resultSet.getBigDecimal("Val. Tit."));
+				dto.setValorTitulosActuales(resultSet.getBigDecimal("Val. Tit. Act."));
+				dto.setGananciaPerdida(resultSet.getBigDecimal("Gan./Perd."));
+				dto.setGananciaPerdidaPrcnt(resultSet.getBigDecimal("Gan./Perd. %"));
+				dto.setPesoEnCartera(resultSet.getBigDecimal("Peso %"));
+				listaGanPerProdPeso.add(dto);
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+			throw t;
+		}
+		finally
+		{
+			LOGGER.debug("Cerrando Cursor");
+			resultSet.close();
+			LOGGER.debug("Cerrando Sentencia");
+			statement.close();
+		}
+		return listaGanPerProdPeso;
+	}
+
 }

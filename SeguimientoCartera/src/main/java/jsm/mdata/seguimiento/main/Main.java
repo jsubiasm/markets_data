@@ -27,12 +27,12 @@ import org.slf4j.LoggerFactory;
 
 import jsm.mdata.seguimiento.constantes.Cons;
 import jsm.mdata.seguimiento.dao.DatosDAO;
-import jsm.mdata.seguimiento.dao.TemplateDAO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
 import jsm.mdata.seguimiento.dto.ProductoVarDTO;
 import jsm.mdata.seguimiento.dto.TemplateDTO;
+import jsm.mdata.seguimiento.template.HtmlConverter;
 
 /**
  * 
@@ -58,6 +58,79 @@ public class Main
 	private static final String DB_PATH = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\seguimiento_cartera";
 	private static final String HTML_TEMPLATE = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\html\\seguimiento_cartera.template.html";
 	private static final String HTML_OUTPUT = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\output\\seguimiento_cartera.output.html";
+
+	/**
+	 * @return
+	 * @throws Throwable
+	 */
+	private static Connection abrirConexion() throws Throwable
+	{
+		String dbUrl = DB_PROTOCOL + DB_PATH;
+		Connection connection = DriverManager.getConnection(dbUrl);
+		connection.setAutoCommit(false);
+		return connection;
+	}
+
+	/**
+	 * @param connection
+	 * @throws Throwable
+	 */
+	private static void confirmarTransaccion(Connection connection) throws Throwable
+	{
+		connection.commit();
+	}
+
+	/**
+	 * @param connection
+	 */
+	private static void deshacerTransaccion(Connection connection)
+	{
+		try
+		{
+			connection.rollback();
+		}
+		catch (Throwable t2)
+		{
+			LOGGER.error("ERROR", t2);
+		}
+	}
+
+	/**
+	 * @param connection
+	 */
+	private static void cerrarConexion(Connection connection)
+	{
+		try
+		{
+			connection.close();
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+		}
+	}
+
+	/**
+	 * 
+	 */
+	private static void cerrarBaseDatos()
+	{
+		try
+		{
+			DriverManager.getConnection(DB_PROTOCOL + ";shutdown=true");
+		}
+		catch (SQLException se)
+		{
+			if (se.getErrorCode() != 50000 || !"XJ015".equals(se.getSQLState()))
+			{
+				LOGGER.error("ERROR", se);
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+		}
+	}
 
 	/**
 	 * @param connection
@@ -517,177 +590,50 @@ public class Main
 	}
 
 	/**
-	 * @return
-	 * @throws Throwable
-	 */
-	private static Connection abrirConexion() throws Throwable
-	{
-		String dbUrl = DB_PROTOCOL + DB_PATH;
-		Connection connection = DriverManager.getConnection(dbUrl);
-		connection.setAutoCommit(false);
-		return connection;
-	}
-
-	/**
-	 * @param connection
-	 * @throws Throwable
-	 */
-	private static void confirmarTransaccion(Connection connection) throws Throwable
-	{
-		connection.commit();
-	}
-
-	/**
-	 * @param connection
-	 */
-	private static void deshacerTransaccion(Connection connection)
-	{
-		try
-		{
-			connection.rollback();
-		}
-		catch (Throwable t2)
-		{
-			LOGGER.error("ERROR", t2);
-		}
-	}
-
-	/**
-	 * @param connection
-	 */
-	private static void cerrarConexion(Connection connection)
-	{
-		try
-		{
-			connection.close();
-		}
-		catch (Throwable t)
-		{
-			LOGGER.error("ERROR", t);
-		}
-	}
-
-	/**
-	 * 
-	 */
-	private static void cerrarBaseDatos()
-	{
-		try
-		{
-			DriverManager.getConnection(DB_PROTOCOL + ";shutdown=true");
-		}
-		catch (SQLException se)
-		{
-			if (se.getErrorCode() != 50000 || !"XJ015".equals(se.getSQLState()))
-			{
-				LOGGER.error("ERROR", se);
-			}
-		}
-		catch (Throwable t)
-		{
-			LOGGER.error("ERROR", t);
-		}
-	}
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args)
-	{
-		LOGGER.info("INICIO PROCESO");
-		Connection connection = null;
-		try
-		{
-			LOGGER.info("Abriendo Conexion");
-			connection = abrirConexion();
-//			urlScraping(connection);
-//			LOGGER.info("Confirmando Transaccion");
-//			confirmarTransaccion(connection);
-//			validate_TB02_MOVIMIENTOS(connection);
-//			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
-//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGpp, "GLOBAL");
-//			validate_VWF_nombreVista(connection, mapGpp, "INSTRUMENTO");
-//			validate_VWF_nombreVista(connection, mapGpp, "COMERCIALIZADOR");
-//			validate_VWF_nombreVista(connection, mapGpp, "MERCADO");
-//			validate_VWF_nombreVista(connection, mapGpp, "MONEDA");
-//			validate_VWF_nombreVista(connection, mapGpp, "PROVEEDOR");
-//			validate_VWF_nombreVista(connection, mapGpp, "TIPO_ACTIVO");
-//			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO_GLOBAL");
-//			validate_VWF_nombreVista(connection, mapGpp, "USO_INGRESOS");
-//			validate_VWF_nombreVista(connection, mapGpp, null);
-//			Map<String, GanPerProdPesoDTO> mapGppOro = new HashMap<String, GanPerProdPesoDTO>();
-//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppOro, "ORO");
-//			validate_VWF_nombreVista(connection, mapGppOro, "SUBTIPO_ACTIVO_ORO");
-//			Map<String, GanPerProdPesoDTO> mapGppRF = new HashMap<String, GanPerProdPesoDTO>();
-//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRF, "RF");
-//			validate_VWF_nombreVista(connection, mapGppRF, "SUBTIPO_ACTIVO_RF");
-//			Map<String, GanPerProdPesoDTO> mapGppRV = new HashMap<String, GanPerProdPesoDTO>();
-//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRV, "RV");
-//			validate_VWF_nombreVista(connection, mapGppRV, "SUBTIPO_ACTIVO_RV");
-			LOGGER.info("Generación Informe");
-			generacionInformeHtml(connection);
-			LOGGER.info("Confirmando Transaccion");
-			confirmarTransaccion(connection);
-		}
-		catch (Throwable t)
-		{
-			LOGGER.error("ERROR", t);
-			LOGGER.info("Deshaciendo Transaccion");
-			deshacerTransaccion(connection);
-		}
-		finally
-		{
-			LOGGER.info("Cerrando Conexion");
-			cerrarConexion(connection);
-			LOGGER.info("Cerrando Base Datos");
-			cerrarBaseDatos();
-			LOGGER.info("FIN PROCESO");
-		}
-	}
-
-	/**
 	 * @param connection
 	 * @throws Throwable
 	 */
 	private static void generacionInformeHtml(Connection connection) throws Throwable
 	{
 		List<GanPerProdPesoDTO> vistaGlobalTotales = DatosDAO.select_VWF_nombreVista(connection, null);
-		String tableGlobalTotales = TemplateDAO.getTable_VWF_nombreVista(vistaGlobalTotales, null);
+		String tableGlobalTotales = HtmlConverter.getTable_VWF_nombreVista(vistaGlobalTotales, null);
 
 		List<GanPerProdPesoDTO> vistaTipoActivo = DatosDAO.select_VWF_nombreVista(connection, "TIPO_ACTIVO");
-		String tableTipoActivo = TemplateDAO.getTable_VWF_nombreVista(vistaTipoActivo, "TIPO_ACTIVO");
+		String tableTipoActivo = HtmlConverter.getTable_VWF_nombreVista(vistaTipoActivo, "TIPO_ACTIVO");
 
 		List<GanPerProdPesoDTO> vistaSubtipoActivoOro = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_ORO");
-		String tableSubtipoActivoOro = TemplateDAO.getTable_VWF_nombreVista(vistaSubtipoActivoOro, "SUBTIPO_ACTIVO_ORO");
+		String tableSubtipoActivoOro = HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoOro, "SUBTIPO_ACTIVO_ORO");
 
 		List<GanPerProdPesoDTO> vistaSubtipoActivoRF = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_RF");
-		String tableSubtipoActivoRF = TemplateDAO.getTable_VWF_nombreVista(vistaSubtipoActivoRF, "SUBTIPO_ACTIVO_RF");
+		String tableSubtipoActivoRF = HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoRF, "SUBTIPO_ACTIVO_RF");
 
 		List<GanPerProdPesoDTO> vistaSubtipoActivoRV = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_RV");
-		String tableSubtipoActivoRV = TemplateDAO.getTable_VWF_nombreVista(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV");
+		String tableSubtipoActivoRV = HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV");
 
 		List<GanPerProdPesoDTO> vistaMoneda = DatosDAO.select_VWF_nombreVista(connection, "MONEDA");
-		String tableMoneda = TemplateDAO.getTable_VWF_nombreVista(vistaMoneda, "MONEDA");
+		String tableMoneda = HtmlConverter.getTable_VWF_nombreVista(vistaMoneda, "MONEDA");
 
 		List<GanPerProdPesoDTO> vistaInstrumento = DatosDAO.select_VWF_nombreVista(connection, "INSTRUMENTO");
-		String tableInstrumento = TemplateDAO.getTable_VWF_nombreVista(vistaInstrumento, "INSTRUMENTO");
+		String tableInstrumento = HtmlConverter.getTable_VWF_nombreVista(vistaInstrumento, "INSTRUMENTO");
 
 		List<GanPerProdPesoDTO> vistaUsoIngresos = DatosDAO.select_VWF_nombreVista(connection, "USO_INGRESOS");
-		String tableUsoIngresos = TemplateDAO.getTable_VWF_nombreVista(vistaUsoIngresos, "USO_INGRESOS");
+		String tableUsoIngresos = HtmlConverter.getTable_VWF_nombreVista(vistaUsoIngresos, "USO_INGRESOS");
 
 		List<GanPerProdPesoDTO> vistaMercado = DatosDAO.select_VWF_nombreVista(connection, "MERCADO");
-		String tableMercado = TemplateDAO.getTable_VWF_nombreVista(vistaMercado, "MERCADO");
+		String tableMercado = HtmlConverter.getTable_VWF_nombreVista(vistaMercado, "MERCADO");
 
 		List<GanPerProdPesoDTO> vistaComercializador = DatosDAO.select_VWF_nombreVista(connection, "COMERCIALIZADOR");
-		String tableComercializador = TemplateDAO.getTable_VWF_nombreVista(vistaComercializador, "COMERCIALIZADOR");
+		String tableComercializador = HtmlConverter.getTable_VWF_nombreVista(vistaComercializador, "COMERCIALIZADOR");
 
 		List<GanPerProdPesoDTO> vistaProveedor = DatosDAO.select_VWF_nombreVista(connection, "PROVEEDOR");
-		String tableProveedor = TemplateDAO.getTable_VWF_nombreVista(vistaProveedor, "PROVEEDOR");
+		String tableProveedor = HtmlConverter.getTable_VWF_nombreVista(vistaProveedor, "PROVEEDOR");
+
+		List<GanPerProdPesoDTO> vistaGlobal = DatosDAO.select_VWF_GAN_PER_PROD_PESO_GLOBAL(connection);
+		String tablaGlobal = HtmlConverter.getTable_VWF_GAN_PER_PROD_PESO_GLOBAL(vistaGlobal);
 
 		TemplateDTO templateDto = new TemplateDTO();
 		templateDto.setTableGlobalTotales(tableGlobalTotales);
 		templateDto.setTableComercializador(tableComercializador);
-//		templateDto.setTableGlobal(null);
 		templateDto.setTableInstrumento(tableInstrumento);
 		templateDto.setTableMercado(tableMercado);
 		templateDto.setTableMoneda(tableMoneda);
@@ -697,6 +643,8 @@ public class Main
 		templateDto.setTableRentaVariable(tableSubtipoActivoRV);
 		templateDto.setTableTipoActivo(tableTipoActivo);
 		templateDto.setTableUsoIngresos(tableUsoIngresos);
+		templateDto.setTableGlobal(tablaGlobal);
+		templateDto.setMensajeFechaFichero(HtmlConverter.getMensajeFechaFichero());
 
 		List<String> listLineasInput = FileUtils.readLines(new File(HTML_TEMPLATE), "UTF-8");
 		List<String> listLineasOutput = new ArrayList<String>();
@@ -748,10 +696,14 @@ public class Main
 				{
 					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.PROVEEDOR -->", templateDto.getTableProveedor()));
 				}
-//				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.GLOBAL -->"))
-//				{
-//					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.GLOBAL -->", templateDto.getTableGlobal()));
-//				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.GLOBAL -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.GLOBAL -->", templateDto.getTableGlobal()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.MENSAJE.FECHA.FICHERO -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.MENSAJE.FECHA.FICHERO -->", templateDto.getMensajeFechaFichero()));
+				}
 				else
 				{
 					listLineasOutput.add(lineaInput);
@@ -759,6 +711,62 @@ public class Main
 			}
 		}
 		FileUtils.writeLines(new File(HTML_OUTPUT), "UTF-8", listLineasOutput, "\n", false);
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		LOGGER.info("INICIO PROCESO");
+		Connection connection = null;
+		try
+		{
+			LOGGER.info("Abriendo Conexion");
+			connection = abrirConexion();
+			urlScraping(connection);
+			LOGGER.info("Confirmando Transaccion");
+			confirmarTransaccion(connection);
+			validate_TB02_MOVIMIENTOS(connection);
+			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGpp, "GLOBAL");
+			validate_VWF_nombreVista(connection, mapGpp, "INSTRUMENTO");
+			validate_VWF_nombreVista(connection, mapGpp, "COMERCIALIZADOR");
+			validate_VWF_nombreVista(connection, mapGpp, "MERCADO");
+			validate_VWF_nombreVista(connection, mapGpp, "MONEDA");
+			validate_VWF_nombreVista(connection, mapGpp, "PROVEEDOR");
+			validate_VWF_nombreVista(connection, mapGpp, "TIPO_ACTIVO");
+			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO_GLOBAL");
+			validate_VWF_nombreVista(connection, mapGpp, "USO_INGRESOS");
+			validate_VWF_nombreVista(connection, mapGpp, null);
+			Map<String, GanPerProdPesoDTO> mapGppOro = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppOro, "ORO");
+			validate_VWF_nombreVista(connection, mapGppOro, "SUBTIPO_ACTIVO_ORO");
+			Map<String, GanPerProdPesoDTO> mapGppRF = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRF, "RF");
+			validate_VWF_nombreVista(connection, mapGppRF, "SUBTIPO_ACTIVO_RF");
+			Map<String, GanPerProdPesoDTO> mapGppRV = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRV, "RV");
+			validate_VWF_nombreVista(connection, mapGppRV, "SUBTIPO_ACTIVO_RV");
+			LOGGER.info("Generación Informe");
+			generacionInformeHtml(connection);
+			LOGGER.info("Confirmando Transaccion");
+			confirmarTransaccion(connection);
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+			LOGGER.info("Deshaciendo Transaccion");
+			deshacerTransaccion(connection);
+		}
+		finally
+		{
+			LOGGER.info("Cerrando Conexion");
+			cerrarConexion(connection);
+			LOGGER.info("Cerrando Base Datos");
+			cerrarBaseDatos();
+			LOGGER.info("FIN PROCESO");
+		}
 	}
 
 }
