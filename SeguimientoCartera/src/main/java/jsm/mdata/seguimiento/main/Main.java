@@ -4,11 +4,8 @@
 package jsm.mdata.seguimiento.main;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -20,7 +17,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -654,27 +651,114 @@ public class Main
 	 */
 	private static void generacionInformeHtml(Connection connection) throws Throwable
 	{
-		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VWF_nombreVista(connection, null);
-		String globalTotales = TemplateDAO.getTableRows(listGpp, null);
+		List<GanPerProdPesoDTO> vistaGlobalTotales = DatosDAO.select_VWF_nombreVista(connection, null);
+		String tableGlobalTotales = TemplateDAO.getTable_VWF_nombreVista(vistaGlobalTotales, null);
+
+		List<GanPerProdPesoDTO> vistaTipoActivo = DatosDAO.select_VWF_nombreVista(connection, "TIPO_ACTIVO");
+		String tableTipoActivo = TemplateDAO.getTable_VWF_nombreVista(vistaTipoActivo, "TIPO_ACTIVO");
+
+		List<GanPerProdPesoDTO> vistaSubtipoActivoOro = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_ORO");
+		String tableSubtipoActivoOro = TemplateDAO.getTable_VWF_nombreVista(vistaSubtipoActivoOro, "SUBTIPO_ACTIVO_ORO");
+
+		List<GanPerProdPesoDTO> vistaSubtipoActivoRF = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_RF");
+		String tableSubtipoActivoRF = TemplateDAO.getTable_VWF_nombreVista(vistaSubtipoActivoRF, "SUBTIPO_ACTIVO_RF");
+
+		List<GanPerProdPesoDTO> vistaSubtipoActivoRV = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_RV");
+		String tableSubtipoActivoRV = TemplateDAO.getTable_VWF_nombreVista(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV");
+
+		List<GanPerProdPesoDTO> vistaMoneda = DatosDAO.select_VWF_nombreVista(connection, "MONEDA");
+		String tableMoneda = TemplateDAO.getTable_VWF_nombreVista(vistaMoneda, "MONEDA");
+
+		List<GanPerProdPesoDTO> vistaInstrumento = DatosDAO.select_VWF_nombreVista(connection, "INSTRUMENTO");
+		String tableInstrumento = TemplateDAO.getTable_VWF_nombreVista(vistaInstrumento, "INSTRUMENTO");
+
+		List<GanPerProdPesoDTO> vistaUsoIngresos = DatosDAO.select_VWF_nombreVista(connection, "USO_INGRESOS");
+		String tableUsoIngresos = TemplateDAO.getTable_VWF_nombreVista(vistaUsoIngresos, "USO_INGRESOS");
+
+		List<GanPerProdPesoDTO> vistaMercado = DatosDAO.select_VWF_nombreVista(connection, "MERCADO");
+		String tableMercado = TemplateDAO.getTable_VWF_nombreVista(vistaMercado, "MERCADO");
+
+		List<GanPerProdPesoDTO> vistaComercializador = DatosDAO.select_VWF_nombreVista(connection, "COMERCIALIZADOR");
+		String tableComercializador = TemplateDAO.getTable_VWF_nombreVista(vistaComercializador, "COMERCIALIZADOR");
+
+		List<GanPerProdPesoDTO> vistaProveedor = DatosDAO.select_VWF_nombreVista(connection, "PROVEEDOR");
+		String tableProveedor = TemplateDAO.getTable_VWF_nombreVista(vistaProveedor, "PROVEEDOR");
+
 		TemplateDTO templateDto = new TemplateDTO();
-		templateDto.setTableGlobalTotales(globalTotales);
-		List<String> listLineasTemplate = IOUtils.readLines(new FileReader(new File(HTML_TEMPLATE), StandardCharsets.UTF_8));
+		templateDto.setTableGlobalTotales(tableGlobalTotales);
+		templateDto.setTableComercializador(tableComercializador);
+//		templateDto.setTableGlobal(null);
+		templateDto.setTableInstrumento(tableInstrumento);
+		templateDto.setTableMercado(tableMercado);
+		templateDto.setTableMoneda(tableMoneda);
+		templateDto.setTableOro(tableSubtipoActivoOro);
+		templateDto.setTableProveedor(tableProveedor);
+		templateDto.setTableRentaFija(tableSubtipoActivoRF);
+		templateDto.setTableRentaVariable(tableSubtipoActivoRV);
+		templateDto.setTableTipoActivo(tableTipoActivo);
+		templateDto.setTableUsoIngresos(tableUsoIngresos);
+
+		List<String> listLineasInput = FileUtils.readLines(new File(HTML_TEMPLATE), "UTF-8");
 		List<String> listLineasOutput = new ArrayList<String>();
-		if (listLineasTemplate != null && !listLineasTemplate.isEmpty())
+		if (listLineasInput != null && !listLineasInput.isEmpty())
 		{
-			for (String lineaTemplate : listLineasTemplate)
+			for (String lineaInput : listLineasInput)
 			{
-				if (lineaTemplate != null && lineaTemplate.contains("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->"))
+				if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->"))
 				{
-					listLineasOutput.add(lineaTemplate.replace("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->", templateDto.getTableGlobalTotales()));
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->", templateDto.getTableGlobalTotales()));
 				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.TIPO_ACTIVO -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.TIPO_ACTIVO -->", templateDto.getTableTipoActivo()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.ORO -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.ORO -->", templateDto.getTableOro()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.RENTA_FIJA -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.RENTA_FIJA -->", templateDto.getTableRentaFija()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.RENTA_VARIABLE -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.RENTA_VARIABLE -->", templateDto.getTableRentaVariable()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.MONEDA -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.MONEDA -->", templateDto.getTableMoneda()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.INSTRUMENTO -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.INSTRUMENTO -->", templateDto.getTableInstrumento()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.USO_INGRESOS -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.USO_INGRESOS -->", templateDto.getTableUsoIngresos()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.MERCADO -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.MERCADO -->", templateDto.getTableMercado()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.COMERCIALIZADOR -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.COMERCIALIZADOR -->", templateDto.getTableComercializador()));
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.PROVEEDOR -->"))
+				{
+					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.PROVEEDOR -->", templateDto.getTableProveedor()));
+				}
+//				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.GLOBAL -->"))
+//				{
+//					listLineasOutput.add(lineaInput.replace("<!-- TEMPLATE.TABLE.GLOBAL -->", templateDto.getTableGlobal()));
+//				}
 				else
 				{
-					listLineasOutput.add(lineaTemplate);
+					listLineasOutput.add(lineaInput);
 				}
 			}
 		}
-		IOUtils.writeLines(listLineasOutput, "\n", new FileWriter(new File(HTML_OUTPUT), StandardCharsets.UTF_8));
+		FileUtils.writeLines(new File(HTML_OUTPUT), "UTF-8", listLineasOutput, "\n", false);
 	}
 
 }
