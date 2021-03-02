@@ -29,7 +29,7 @@ public class HtmlConverter
 		{
 			strTableRows.append(getRow_VWF_nombreVista(tableRow, nombreVista)).append("\n");
 		}
-		return strTableRows.toString();
+		return strTableRows.toString().substring(0, strTableRows.toString().length() - 1);
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class HtmlConverter
 		{
 			strTableRows.append(getRow_VWF_GAN_PER_PROD_PESO_GLOBAL(tableRow)).append("\n");
 		}
-		return strTableRows.toString();
+		return strTableRows.toString().substring(0, strTableRows.toString().length() - 1);
 	}
 
 	/**
@@ -194,6 +194,99 @@ public class HtmlConverter
 		Calendar cl = Calendar.getInstance();
 		String[] mo = new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
 		return "Fichero generado el " + cl.get(Calendar.DAY_OF_MONTH) + " de " + mo[cl.get(Calendar.MONTH)] + " de " + cl.get(Calendar.YEAR) + " a las " + cl.get(Calendar.HOUR_OF_DAY) + ":" + cl.get(Calendar.MINUTE);
+	}
+
+	/**
+	 * @param listTableRows
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final String getChartData(List<GanPerProdPesoDTO> listTableRows) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (GanPerProdPesoDTO tableRow : listTableRows)
+		{
+			output.append(tableRow.getPesoEnCartera()).append(",");
+		}
+		return output.toString().substring(0, output.toString().length() - 1);
+	}
+
+	/**
+	 * @param listTableRows
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final String getChartBGColor(List<GanPerProdPesoDTO> listTableRows) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (int i = 0; i < listTableRows.size(); i++)
+		{
+			output.append("'#dddddd'").append(",");
+		}
+		return output.toString().substring(0, output.toString().length() - 1);
+	}
+
+	/**
+	 * @param listTableRows
+	 * @param nombreVista
+	 * @return
+	 * @throws Throwable
+	 */
+	public static final String getChartLabel(List<GanPerProdPesoDTO> listTableRows, String nombreVista) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (GanPerProdPesoDTO tableRow : listTableRows)
+		{
+			if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
+			{
+				output.append("'").append(tableRow.getComercializador()).append("',");
+			}
+			else if ("INSTRUMENTO".equalsIgnoreCase(nombreVista))
+			{
+				output.append("'").append(tableRow.getInstrumento()).append("',");
+			}
+			else if ("MERCADO".equalsIgnoreCase(nombreVista))
+			{
+				output.append("'").append(tableRow.getMercado()).append("',");
+			}
+			else if ("MONEDA".equalsIgnoreCase(nombreVista))
+			{
+				output.append("'").append(tableRow.getMoneda()).append("',");
+			}
+			else if ("PROVEEDOR".equalsIgnoreCase(nombreVista))
+			{
+				output.append("'").append(tableRow.getProveedor()).append("',");
+			}
+			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_GLOBAL"))
+			{
+				output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+			}
+			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_ORO"))
+			{
+				output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+			}
+			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RF"))
+			{
+				output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+			}
+			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RV"))
+			{
+				output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+			}
+			else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+			{
+				output.append("'").append(tableRow.getTipoActivo()).append("',");
+			}
+			else if ("USO_INGRESOS".equalsIgnoreCase(nombreVista))
+			{
+				output.append("'").append(tableRow.getUsoIngresos()).append("',");
+			}
+			else
+			{
+				throw new Exception("Nombre de vista inesperado [" + nombreVista + "]");
+			}
+		}
+		return output.toString().substring(0, output.toString().length() - 1);
 	}
 
 }
