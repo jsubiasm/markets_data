@@ -36,3 +36,6 @@
 	- VWF_SUBTIPO_ACTIVO_RV
 	- VWF_TIPO_ACTIVO
 	- VWF_USO_INGRESOS
+
+- Versión 2.0: Generación del informe HTML completado
+

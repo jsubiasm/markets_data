@@ -265,7 +265,7 @@ public class Main
 		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VW03_GAN_PER_PROD_PESO_sufijo(connection, sufijo);
 		if (listGpp.size() != mapGpp.size())
 		{
-			throw new Exception("La dimensión de los elementos es distinta [" + listGpp.size() + "] [" + mapGpp.size() + "]");
+			throw new Exception("La dimension de los elementos es distinta [" + listGpp.size() + "] [" + mapGpp.size() + "]");
 		}
 		for (GanPerProdPesoDTO gppSQL : listGpp)
 		{
@@ -469,7 +469,7 @@ public class Main
 		List<GanPerProdPesoDTO> listGpp = DatosDAO.select_VWF_nombreVista(connection, nombreVista);
 		if (listGpp.size() != mapGppVWF.size())
 		{
-			throw new Exception("La dimensión de los elementos es distinta [" + listGpp.size() + "] [" + mapGppVWF.size() + "]");
+			throw new Exception("La dimension de los elementos es distinta [" + listGpp.size() + "] [" + mapGppVWF.size() + "]");
 		}
 		for (GanPerProdPesoDTO gppSQL : listGpp)
 		{
@@ -596,75 +596,61 @@ public class Main
 	private static void generacionInformeHtml(Connection connection) throws Throwable
 	{
 		TemplateDTO templateDto = new TemplateDTO();
-		
 		List<GanPerProdPesoDTO> vistaGlobalTotales = DatosDAO.select_VWF_nombreVista(connection, null);
 		templateDto.setTableGlobalTotales(HtmlConverter.getTable_VWF_nombreVista(vistaGlobalTotales, null));
-
 		List<GanPerProdPesoDTO> vistaTipoActivo = DatosDAO.select_VWF_nombreVista(connection, "TIPO_ACTIVO");
 		templateDto.setTableTipoActivo(HtmlConverter.getTable_VWF_nombreVista(vistaTipoActivo, "TIPO_ACTIVO"));
 		templateDto.setChartTipoActivoData(HtmlConverter.getChartData(vistaTipoActivo));
 		templateDto.setChartTipoActivoBGColor(HtmlConverter.getChartBGColor(vistaTipoActivo));
-		templateDto.setChartTipoActivoLabel(HtmlConverter.getChartLabel(vistaTipoActivo, "TIPO_ACTIVO"));		
-
-		
-		
-		
-		
-		
-		
-		
+		templateDto.setChartTipoActivoLabel(HtmlConverter.getChartLabel(vistaTipoActivo, "TIPO_ACTIVO"));
 		List<GanPerProdPesoDTO> vistaSubtipoActivoOro = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_ORO");
-		String tableSubtipoActivoOro = HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoOro, "SUBTIPO_ACTIVO_ORO");
-
+		templateDto.setTableOro(HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoOro, "SUBTIPO_ACTIVO_ORO"));
+		templateDto.setChartOroData(HtmlConverter.getChartData(vistaSubtipoActivoOro));
+		templateDto.setChartOroBGColor(HtmlConverter.getChartBGColor(vistaSubtipoActivoOro));
+		templateDto.setChartOroLabel(HtmlConverter.getChartLabel(vistaSubtipoActivoOro, "SUBTIPO_ACTIVO_ORO"));
 		List<GanPerProdPesoDTO> vistaSubtipoActivoRF = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_RF");
-		String tableSubtipoActivoRF = HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoRF, "SUBTIPO_ACTIVO_RF");
-
+		templateDto.setTableRentaFija(HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoRF, "SUBTIPO_ACTIVO_RF"));
+		templateDto.setChartRentaFijaData(HtmlConverter.getChartData(vistaSubtipoActivoRF));
+		templateDto.setChartRentaFijaBGColor(HtmlConverter.getChartBGColor(vistaSubtipoActivoRF));
+		templateDto.setChartRentaFijaLabel(HtmlConverter.getChartLabel(vistaSubtipoActivoRF, "SUBTIPO_ACTIVO_RF"));
 		List<GanPerProdPesoDTO> vistaSubtipoActivoRV = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_RV");
-		String tableSubtipoActivoRV = HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV");
-
+		templateDto.setTableRentaVariable(HtmlConverter.getTable_VWF_nombreVista(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV"));
+		templateDto.setChartRentaVariableData(HtmlConverter.getChartData(vistaSubtipoActivoRV));
+		templateDto.setChartRentaVariableBGColor(HtmlConverter.getChartBGColor(vistaSubtipoActivoRV));
+		templateDto.setChartRentaVariableLabel(HtmlConverter.getChartLabel(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV"));
 		List<GanPerProdPesoDTO> vistaMoneda = DatosDAO.select_VWF_nombreVista(connection, "MONEDA");
-		String tableMoneda = HtmlConverter.getTable_VWF_nombreVista(vistaMoneda, "MONEDA");
-
+		templateDto.setTableMoneda(HtmlConverter.getTable_VWF_nombreVista(vistaMoneda, "MONEDA"));
+		templateDto.setChartMonedaData(HtmlConverter.getChartData(vistaMoneda));
+		templateDto.setChartMonedaBGColor(HtmlConverter.getChartBGColor(vistaMoneda));
+		templateDto.setChartMonedaLabel(HtmlConverter.getChartLabel(vistaMoneda, "MONEDA"));
 		List<GanPerProdPesoDTO> vistaInstrumento = DatosDAO.select_VWF_nombreVista(connection, "INSTRUMENTO");
-		String tableInstrumento = HtmlConverter.getTable_VWF_nombreVista(vistaInstrumento, "INSTRUMENTO");
-
+		templateDto.setTableInstrumento(HtmlConverter.getTable_VWF_nombreVista(vistaInstrumento, "INSTRUMENTO"));
+		templateDto.setChartInstrumentoData(HtmlConverter.getChartData(vistaInstrumento));
+		templateDto.setChartInstrumentoBGColor(HtmlConverter.getChartBGColor(vistaInstrumento));
+		templateDto.setChartInstrumentoLabel(HtmlConverter.getChartLabel(vistaInstrumento, "INSTRUMENTO"));
 		List<GanPerProdPesoDTO> vistaUsoIngresos = DatosDAO.select_VWF_nombreVista(connection, "USO_INGRESOS");
-		String tableUsoIngresos = HtmlConverter.getTable_VWF_nombreVista(vistaUsoIngresos, "USO_INGRESOS");
-
+		templateDto.setTableUsoIngresos(HtmlConverter.getTable_VWF_nombreVista(vistaUsoIngresos, "USO_INGRESOS"));
+		templateDto.setChartUsoIngresosData(HtmlConverter.getChartData(vistaUsoIngresos));
+		templateDto.setChartUsoIngresosBGColor(HtmlConverter.getChartBGColor(vistaUsoIngresos));
+		templateDto.setChartUsoIngresosLabel(HtmlConverter.getChartLabel(vistaUsoIngresos, "USO_INGRESOS"));
 		List<GanPerProdPesoDTO> vistaMercado = DatosDAO.select_VWF_nombreVista(connection, "MERCADO");
-		String tableMercado = HtmlConverter.getTable_VWF_nombreVista(vistaMercado, "MERCADO");
-
+		templateDto.setTableMercado(HtmlConverter.getTable_VWF_nombreVista(vistaMercado, "MERCADO"));
+		templateDto.setChartMercadoData(HtmlConverter.getChartData(vistaMercado));
+		templateDto.setChartMercadoBGColor(HtmlConverter.getChartBGColor(vistaMercado));
+		templateDto.setChartMercadoLabel(HtmlConverter.getChartLabel(vistaMercado, "MERCADO"));
 		List<GanPerProdPesoDTO> vistaComercializador = DatosDAO.select_VWF_nombreVista(connection, "COMERCIALIZADOR");
-		String tableComercializador = HtmlConverter.getTable_VWF_nombreVista(vistaComercializador, "COMERCIALIZADOR");
-
+		templateDto.setTableComercializador(HtmlConverter.getTable_VWF_nombreVista(vistaComercializador, "COMERCIALIZADOR"));
+		templateDto.setChartComercializadorData(HtmlConverter.getChartData(vistaComercializador));
+		templateDto.setChartComercializadorBGColor(HtmlConverter.getChartBGColor(vistaComercializador));
+		templateDto.setChartComercializadorLabel(HtmlConverter.getChartLabel(vistaComercializador, "COMERCIALIZADOR"));
 		List<GanPerProdPesoDTO> vistaProveedor = DatosDAO.select_VWF_nombreVista(connection, "PROVEEDOR");
-		String tableProveedor = HtmlConverter.getTable_VWF_nombreVista(vistaProveedor, "PROVEEDOR");
-
+		templateDto.setTableProveedor(HtmlConverter.getTable_VWF_nombreVista(vistaProveedor, "PROVEEDOR"));
+		templateDto.setChartProveedorData(HtmlConverter.getChartData(vistaProveedor));
+		templateDto.setChartProveedorBGColor(HtmlConverter.getChartBGColor(vistaProveedor));
+		templateDto.setChartProveedorLabel(HtmlConverter.getChartLabel(vistaProveedor, "PROVEEDOR"));
 		List<GanPerProdPesoDTO> vistaGlobal = DatosDAO.select_VWF_GAN_PER_PROD_PESO_GLOBAL(connection);
-		String tablaGlobal = HtmlConverter.getTable_VWF_GAN_PER_PROD_PESO_GLOBAL(vistaGlobal);
-
-		
-
-
-
-		
-		templateDto.setTableComercializador(tableComercializador);
-		templateDto.setTableInstrumento(tableInstrumento);
-		templateDto.setTableMercado(tableMercado);
-		templateDto.setTableMoneda(tableMoneda);
-		templateDto.setTableOro(tableSubtipoActivoOro);
-		templateDto.setTableProveedor(tableProveedor);
-		templateDto.setTableRentaFija(tableSubtipoActivoRF);
-		templateDto.setTableRentaVariable(tableSubtipoActivoRV);
-		templateDto.setTableUsoIngresos(tableUsoIngresos);
-		templateDto.setTableGlobal(tablaGlobal);
+		templateDto.setTableGlobal(HtmlConverter.getTable_VWF_GAN_PER_PROD_PESO_GLOBAL(vistaGlobal));
 		templateDto.setMensajeFechaFichero(HtmlConverter.getMensajeFechaFichero());
-
-		
-		
-		
-		
-		
 		List<String> listLineasInput = FileUtils.readLines(new File(HTML_TEMPLATE), "UTF-8");
 		List<String> listLineasOutput = new ArrayList<String>();
 		if (listLineasInput != null && !listLineasInput.isEmpty())
@@ -723,12 +709,6 @@ public class Main
 				{
 					listLineasOutput.add(templateDto.getMensajeFechaFichero());
 				}
-
-				
-				
-				
-				
-				
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.TIPO_ACTIVO.DATA //"))
 				{
 					listLineasOutput.add(templateDto.getChartTipoActivoData());
@@ -741,14 +721,114 @@ public class Main
 				{
 					listLineasOutput.add(templateDto.getChartTipoActivoLabel());
 				}
-				
-				
-				
-				
-				
-				
-				
-
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.ORO.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartOroData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.ORO.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartOroBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.ORO.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartOroLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.RENTA_FIJA.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartRentaFijaData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.RENTA_FIJA.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartRentaFijaBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.RENTA_FIJA.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartRentaFijaLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.RENTA_VARIABLE.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartRentaVariableData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.RENTA_VARIABLE.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartRentaVariableBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.RENTA_VARIABLE.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartRentaVariableLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MONEDA.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartMonedaData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MONEDA.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartMonedaBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MONEDA.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartMonedaLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.INSTRUMENTO.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartInstrumentoData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.INSTRUMENTO.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartInstrumentoBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.INSTRUMENTO.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartInstrumentoLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.USO_INGRESOS.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartUsoIngresosData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.USO_INGRESOS.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartUsoIngresosBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.USO_INGRESOS.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartUsoIngresosLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MERCADO.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartMercadoData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MERCADO.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartMercadoBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MERCADO.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartMercadoLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.COMERCIALIZADOR.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartComercializadorData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.COMERCIALIZADOR.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartComercializadorBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.COMERCIALIZADOR.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartComercializadorLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.PROVEEDOR.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartProveedorData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.PROVEEDOR.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartProveedorBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.PROVEEDOR.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartProveedorLabel());
+				}
 				else
 				{
 					listLineasOutput.add(lineaInput);
@@ -769,31 +849,31 @@ public class Main
 		{
 			LOGGER.info("Abriendo Conexion");
 			connection = abrirConexion();
-//			urlScraping(connection);
-//			LOGGER.info("Confirmando Transaccion");
-//			confirmarTransaccion(connection);
-//			validate_TB02_MOVIMIENTOS(connection);
-//			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
-//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGpp, "GLOBAL");
-//			validate_VWF_nombreVista(connection, mapGpp, "INSTRUMENTO");
-//			validate_VWF_nombreVista(connection, mapGpp, "COMERCIALIZADOR");
-//			validate_VWF_nombreVista(connection, mapGpp, "MERCADO");
-//			validate_VWF_nombreVista(connection, mapGpp, "MONEDA");
-//			validate_VWF_nombreVista(connection, mapGpp, "PROVEEDOR");
-//			validate_VWF_nombreVista(connection, mapGpp, "TIPO_ACTIVO");
-//			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO_GLOBAL");
-//			validate_VWF_nombreVista(connection, mapGpp, "USO_INGRESOS");
-//			validate_VWF_nombreVista(connection, mapGpp, null);
-//			Map<String, GanPerProdPesoDTO> mapGppOro = new HashMap<String, GanPerProdPesoDTO>();
-//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppOro, "ORO");
-//			validate_VWF_nombreVista(connection, mapGppOro, "SUBTIPO_ACTIVO_ORO");
-//			Map<String, GanPerProdPesoDTO> mapGppRF = new HashMap<String, GanPerProdPesoDTO>();
-//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRF, "RF");
-//			validate_VWF_nombreVista(connection, mapGppRF, "SUBTIPO_ACTIVO_RF");
-//			Map<String, GanPerProdPesoDTO> mapGppRV = new HashMap<String, GanPerProdPesoDTO>();
-//			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRV, "RV");
-//			validate_VWF_nombreVista(connection, mapGppRV, "SUBTIPO_ACTIVO_RV");
-			LOGGER.info("Generación Informe");
+			urlScraping(connection);
+			LOGGER.info("Confirmando Transaccion");
+			confirmarTransaccion(connection);
+			validate_TB02_MOVIMIENTOS(connection);
+			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGpp, "GLOBAL");
+			validate_VWF_nombreVista(connection, mapGpp, "INSTRUMENTO");
+			validate_VWF_nombreVista(connection, mapGpp, "COMERCIALIZADOR");
+			validate_VWF_nombreVista(connection, mapGpp, "MERCADO");
+			validate_VWF_nombreVista(connection, mapGpp, "MONEDA");
+			validate_VWF_nombreVista(connection, mapGpp, "PROVEEDOR");
+			validate_VWF_nombreVista(connection, mapGpp, "TIPO_ACTIVO");
+			validate_VWF_nombreVista(connection, mapGpp, "SUBTIPO_ACTIVO_GLOBAL");
+			validate_VWF_nombreVista(connection, mapGpp, "USO_INGRESOS");
+			validate_VWF_nombreVista(connection, mapGpp, null);
+			Map<String, GanPerProdPesoDTO> mapGppOro = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppOro, "ORO");
+			validate_VWF_nombreVista(connection, mapGppOro, "SUBTIPO_ACTIVO_ORO");
+			Map<String, GanPerProdPesoDTO> mapGppRF = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRF, "RF");
+			validate_VWF_nombreVista(connection, mapGppRF, "SUBTIPO_ACTIVO_RF");
+			Map<String, GanPerProdPesoDTO> mapGppRV = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRV, "RV");
+			validate_VWF_nombreVista(connection, mapGppRV, "SUBTIPO_ACTIVO_RV");
+			LOGGER.info("Generando Informe");
 			generacionInformeHtml(connection);
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);

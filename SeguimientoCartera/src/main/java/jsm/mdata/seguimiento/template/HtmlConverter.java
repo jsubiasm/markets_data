@@ -206,7 +206,10 @@ public class HtmlConverter
 		StringBuilder output = new StringBuilder();
 		for (GanPerProdPesoDTO tableRow : listTableRows)
 		{
-			output.append(tableRow.getPesoEnCartera()).append(",");
+			if (tableRow.getPesoEnCartera().compareTo(BigDecimal.ZERO) > 0)
+			{
+				output.append(tableRow.getPesoEnCartera()).append(",");
+			}
 		}
 		return output.toString().substring(0, output.toString().length() - 1);
 	}
@@ -219,9 +222,12 @@ public class HtmlConverter
 	public static final String getChartBGColor(List<GanPerProdPesoDTO> listTableRows) throws Throwable
 	{
 		StringBuilder output = new StringBuilder();
-		for (int i = 0; i < listTableRows.size(); i++)
+		for (GanPerProdPesoDTO tableRow : listTableRows)
 		{
-			output.append("'#dddddd'").append(",");
+			if (tableRow.getPesoEnCartera().compareTo(BigDecimal.ZERO) > 0)
+			{
+				output.append("'#dddddd'").append(",");
+			}
 		}
 		return output.toString().substring(0, output.toString().length() - 1);
 	}
@@ -237,53 +243,56 @@ public class HtmlConverter
 		StringBuilder output = new StringBuilder();
 		for (GanPerProdPesoDTO tableRow : listTableRows)
 		{
-			if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
+			if (tableRow.getPesoEnCartera().compareTo(BigDecimal.ZERO) > 0)
 			{
-				output.append("'").append(tableRow.getComercializador()).append("',");
-			}
-			else if ("INSTRUMENTO".equalsIgnoreCase(nombreVista))
-			{
-				output.append("'").append(tableRow.getInstrumento()).append("',");
-			}
-			else if ("MERCADO".equalsIgnoreCase(nombreVista))
-			{
-				output.append("'").append(tableRow.getMercado()).append("',");
-			}
-			else if ("MONEDA".equalsIgnoreCase(nombreVista))
-			{
-				output.append("'").append(tableRow.getMoneda()).append("',");
-			}
-			else if ("PROVEEDOR".equalsIgnoreCase(nombreVista))
-			{
-				output.append("'").append(tableRow.getProveedor()).append("',");
-			}
-			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_GLOBAL"))
-			{
-				output.append("'").append(tableRow.getSubtipoActivo()).append("',");
-			}
-			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_ORO"))
-			{
-				output.append("'").append(tableRow.getSubtipoActivo()).append("',");
-			}
-			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RF"))
-			{
-				output.append("'").append(tableRow.getSubtipoActivo()).append("',");
-			}
-			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RV"))
-			{
-				output.append("'").append(tableRow.getSubtipoActivo()).append("',");
-			}
-			else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
-			{
-				output.append("'").append(tableRow.getTipoActivo()).append("',");
-			}
-			else if ("USO_INGRESOS".equalsIgnoreCase(nombreVista))
-			{
-				output.append("'").append(tableRow.getUsoIngresos()).append("',");
-			}
-			else
-			{
-				throw new Exception("Nombre de vista inesperado [" + nombreVista + "]");
+				if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getComercializador()).append("',");
+				}
+				else if ("INSTRUMENTO".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getInstrumento()).append("',");
+				}
+				else if ("MERCADO".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getMercado()).append("',");
+				}
+				else if ("MONEDA".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getMoneda()).append("',");
+				}
+				else if ("PROVEEDOR".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getProveedor()).append("',");
+				}
+				else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_GLOBAL"))
+				{
+					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+				}
+				else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_ORO"))
+				{
+					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+				}
+				else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RF"))
+				{
+					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+				}
+				else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RV"))
+				{
+					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+				}
+				else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getTipoActivo()).append("',");
+				}
+				else if ("USO_INGRESOS".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getUsoIngresos()).append("',");
+				}
+				else
+				{
+					throw new Exception("Nombre de vista inesperado [" + nombreVista + "]");
+				}
 			}
 		}
 		return output.toString().substring(0, output.toString().length() - 1);
