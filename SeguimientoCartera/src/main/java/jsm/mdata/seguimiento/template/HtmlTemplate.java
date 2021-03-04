@@ -216,17 +216,33 @@ public class HtmlTemplate
 
 	/**
 	 * @param listTableRows
+	 * @param nombreVista
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final String getChartBGColor(List<GanPerProdPesoDTO> listTableRows) throws Throwable
+	public static final String getChartBGColor(List<GanPerProdPesoDTO> listTableRows, String nombreVista) throws Throwable
 	{
 		StringBuilder output = new StringBuilder();
 		for (GanPerProdPesoDTO tableRow : listTableRows)
 		{
 			if (tableRow.getPesoEnCartera().compareTo(BigDecimal.ZERO) > 0)
 			{
-				output.append("'#dddddd'").append(",");
+				if ("SUBTIPO_ACTIVO_ORO".equalsIgnoreCase(nombreVista) || "Oro".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#f2d974'").append(",");
+				}
+				else if ("SUBTIPO_ACTIVO_RF".equalsIgnoreCase(nombreVista) || "Renta Fija".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#72aded'").append(",");
+				}
+				else if ("SUBTIPO_ACTIVO_RV".equalsIgnoreCase(nombreVista) || "Renta Variable".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#f07380'").append(",");
+				}
+				else
+				{
+					output.append("'#c3d6d1'").append(",");
+				}
 			}
 		}
 		return output.toString().substring(0, output.toString().length() - 1);
