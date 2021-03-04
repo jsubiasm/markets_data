@@ -10,50 +10,6 @@ package jsm.mdata.seguimiento.dto;
 public class TemplateDTO
 {
 
-	// templateItem: <!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->
-	// templateItem: <!-- TEMPLATE.TABLE.TIPO_ACTIVO -->
-	// templateItem: <!-- TEMPLATE.TABLE.ORO -->
-	// templateItem: <!-- TEMPLATE.TABLE.RENTA_FIJA -->
-	// templateItem: <!-- TEMPLATE.TABLE.RENTA_VARIABLE -->
-	// templateItem: <!-- TEMPLATE.TABLE.MONEDA -->
-	// templateItem: <!-- TEMPLATE.TABLE.INSTRUMENTO -->
-	// templateItem: <!-- TEMPLATE.TABLE.USO_INGRESOS -->
-	// templateItem: <!-- TEMPLATE.TABLE.MERCADO -->
-	// templateItem: <!-- TEMPLATE.TABLE.COMERCIALIZADOR -->
-	// templateItem: <!-- TEMPLATE.TABLE.PROVEEDOR -->
-	// templateItem: <!-- TEMPLATE.TABLE.GLOBAL -->
-	// templateItem: // TEMPLATE.CHART.TIPO_ACTIVO.DATA //
-	// templateItem: // TEMPLATE.CHART.TIPO_ACTIVO.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.TIPO_ACTIVO.LABEL //
-	// templateItem: // TEMPLATE.CHART.ORO.DATA //
-	// templateItem: // TEMPLATE.CHART.ORO.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.ORO.LABEL //
-	// templateItem: // TEMPLATE.CHART.RENTA_FIJA.DATA //
-	// templateItem: // TEMPLATE.CHART.RENTA_FIJA.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.RENTA_FIJA.LABEL //
-	// templateItem: // TEMPLATE.CHART.RENTA_VARIABLE.DATA //
-	// templateItem: // TEMPLATE.CHART.RENTA_VARIABLE.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.RENTA_VARIABLE.LABEL //
-	// templateItem: // TEMPLATE.CHART.MONEDA.DATA //
-	// templateItem: // TEMPLATE.CHART.MONEDA.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.MONEDA.LABEL //
-	// templateItem: // TEMPLATE.CHART.INSTRUMENTO.DATA //
-	// templateItem: // TEMPLATE.CHART.INSTRUMENTO.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.INSTRUMENTO.LABEL //
-	// templateItem: // TEMPLATE.CHART.USO_INGRESOS.DATA //
-	// templateItem: // TEMPLATE.CHART.USO_INGRESOS.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.USO_INGRESOS.LABEL //
-	// templateItem: // TEMPLATE.CHART.MERCADO.DATA //
-	// templateItem: // TEMPLATE.CHART.MERCADO.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.MERCADO.LABEL //
-	// templateItem: // TEMPLATE.CHART.COMERCIALIZADOR.DATA //
-	// templateItem: // TEMPLATE.CHART.COMERCIALIZADOR.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.COMERCIALIZADOR.LABEL //
-	// templateItem: // TEMPLATE.CHART.PROVEEDOR.DATA //
-	// templateItem: // TEMPLATE.CHART.PROVEEDOR.BGCOLOR //
-	// templateItem: // TEMPLATE.CHART.PROVEEDOR.LABEL //
-	// templateItem: <!-- TEMPLATE.MENSAJE.FECHA.FICHERO -->
-
 	/**
 	 * 
 	 */

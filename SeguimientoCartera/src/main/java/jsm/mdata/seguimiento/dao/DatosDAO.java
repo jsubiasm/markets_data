@@ -348,19 +348,19 @@ public class DatosDAO
 					{
 						dto.setProveedor(resultSet.getString("Proveedor"));
 					}
-					else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_GLOBAL"))
+					else if ("SUBTIPO_ACTIVO_GLOBAL".equalsIgnoreCase(nombreVista))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Subtipo Activo"));
 					}
-					else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_ORO"))
+					else if ("SUBTIPO_ACTIVO_ORO".equalsIgnoreCase(nombreVista))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Oro"));
 					}
-					else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RF"))
+					else if ("SUBTIPO_ACTIVO_RF".equalsIgnoreCase(nombreVista))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Renta Fija"));
 					}
-					else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RV"))
+					else if ("SUBTIPO_ACTIVO_RV".equalsIgnoreCase(nombreVista))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Renta Variable"));
 					}

@@ -13,7 +13,7 @@ import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
  * @author jsubiasm
  *
  */
-public class HtmlConverter
+public class HtmlTemplate
 {
 
 	/**
@@ -64,19 +64,19 @@ public class HtmlConverter
 			{
 				strTableRow.append("<td>").append(tableRow.getProveedor()).append("</td>");
 			}
-			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_GLOBAL"))
+			else if ("SUBTIPO_ACTIVO_GLOBAL".equalsIgnoreCase(nombreVista))
 			{
 				strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
 			}
-			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_ORO"))
+			else if ("SUBTIPO_ACTIVO_ORO".equalsIgnoreCase(nombreVista))
 			{
 				strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
 			}
-			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RF"))
+			else if ("SUBTIPO_ACTIVO_RF".equalsIgnoreCase(nombreVista))
 			{
 				strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
 			}
-			else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RV"))
+			else if ("SUBTIPO_ACTIVO_RV".equalsIgnoreCase(nombreVista))
 			{
 				strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
 			}
@@ -265,19 +265,19 @@ public class HtmlConverter
 				{
 					output.append("'").append(tableRow.getProveedor()).append("',");
 				}
-				else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_GLOBAL"))
+				else if ("SUBTIPO_ACTIVO_GLOBAL".equalsIgnoreCase(nombreVista))
 				{
 					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
 				}
-				else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_ORO"))
+				else if ("SUBTIPO_ACTIVO_ORO".equalsIgnoreCase(nombreVista))
 				{
 					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
 				}
-				else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RF"))
+				else if ("SUBTIPO_ACTIVO_RF".equalsIgnoreCase(nombreVista))
 				{
 					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
 				}
-				else if (nombreVista.equalsIgnoreCase("SUBTIPO_ACTIVO_RV"))
+				else if ("SUBTIPO_ACTIVO_RV".equalsIgnoreCase(nombreVista))
 				{
 					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
 				}
