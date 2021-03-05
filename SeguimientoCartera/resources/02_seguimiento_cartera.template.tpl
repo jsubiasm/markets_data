@@ -20,6 +20,7 @@
 				float: left;
 				padding: 12px;
 				border: 1px solid white;
+				background-color: #ffffff;
 			}
 			.w50pad {
 				width: 50%;
@@ -32,6 +33,7 @@
 				float: left;
 				padding: 0px;
 				border: 1px solid white;
+				background-color: #ffffff;
 			}
 			.mitadDcha {
 				width: 50%;
@@ -44,15 +46,23 @@
 				text-align: right; 
 				font-size: 12px;
 				padding: 12px;
+				background-color: #ffffff;
 			}
 			.footer {
 				border: 1px solid #dddddd; 
 				text-align: left; 
 				font-size: 12px;
 				padding: 12px;
+				background-color: #ffffff;
 			}			
 		</style>
 		<style>		
+		
+			body {
+				background-color: #f2f2f2;
+				color: #444444;
+			}
+		
 			table {
 				font-family: Arial, Helvetica, sans-serif;
 				font-size: 12px;
@@ -68,7 +78,7 @@
 
 			tr:nth-child(even){background-color: #f2f2f2;}
 
-			tr:hover {background-color: #cceded;}
+			tr:hover {background-color: #c3d6d1;}
 
 			th {
 				background-color: #a8a8a8;
