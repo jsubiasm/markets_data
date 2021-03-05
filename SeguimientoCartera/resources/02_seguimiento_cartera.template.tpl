@@ -44,9 +44,10 @@
 			.header {
 				border: 1px solid #dddddd; 
 				text-align: right; 
-				font-size: 12px;
+				font-size: 14px;
 				padding: 12px;
 				background-color: #ffffff;
+				color: #000000;
 			}
 			.footer {
 				border: 1px solid #dddddd; 
@@ -54,13 +55,14 @@
 				font-size: 12px;
 				padding: 12px;
 				background-color: #ffffff;
+				color: #000000;
 			}			
 		</style>
 		<style>		
 		
 			body {
 				background-color: #f2f2f2;
-				color: #444444;
+				color: #555555;
 			}
 		
 			table {
@@ -93,7 +95,7 @@
 	</head>
 	<body>
 		<div class="w100pad">
-			<div class="header">Nombre: Cartera Permantente<br/>Horizonte temporal: +20 A&ntilde;os</div>
+			<div class="header">Cartera Permantente<br/>Horizonte temporal +20 A&ntilde;os</div>
 		</div>
 		<div class="mitadIzda">
 			<div class="w100pad">
