@@ -105,17 +105,25 @@ public class HtmlTemplate
 		{
 			strTableRow.append("<td style=\"color:red\">").append(tableRow.getGananciaPerdida()).append("</td>");
 		}
-		if (tableRow.getGananciaPerdida().compareTo(BigDecimal.ZERO) > 0)
+		else if (tableRow.getGananciaPerdida().compareTo(BigDecimal.ZERO) > 0)
 		{
 			strTableRow.append("<td style=\"color:green\">").append(tableRow.getGananciaPerdida()).append("</td>");
+		}
+		else
+		{
+			strTableRow.append("<td>").append(tableRow.getGananciaPerdida()).append("</td>");
 		}
 		if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) < 0)
 		{
 			strTableRow.append("<td style=\"color:red\">").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
 		}
-		if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) > 0)
+		else if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) > 0)
 		{
 			strTableRow.append("<td style=\"color:green\">").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
+		}
+		else
+		{
+			strTableRow.append("<td>").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
 		}
 		strTableRow.append("<td>").append(tableRow.getPesoEnCartera()).append("</td>");
 		strTableRow.append("</tr>");
@@ -169,17 +177,25 @@ public class HtmlTemplate
 		{
 			strTableRow.append("<td style=\"color:red\">").append(tableRow.getGananciaPerdida()).append("</td>");
 		}
-		if (tableRow.getGananciaPerdida().compareTo(BigDecimal.ZERO) > 0)
+		else if (tableRow.getGananciaPerdida().compareTo(BigDecimal.ZERO) > 0)
 		{
 			strTableRow.append("<td style=\"color:green\">").append(tableRow.getGananciaPerdida()).append("</td>");
+		}
+		else
+		{
+			strTableRow.append("<td>").append(tableRow.getGananciaPerdida()).append("</td>");
 		}
 		if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) < 0)
 		{
 			strTableRow.append("<td style=\"color:red\">").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
 		}
-		if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) > 0)
+		else if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) > 0)
 		{
 			strTableRow.append("<td style=\"color:green\">").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
+		}
+		else
+		{
+			strTableRow.append("<td>").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
 		}
 		strTableRow.append("<td>").append(tableRow.getPesoEnCartera()).append("</td>");
 		strTableRow.append("</tr>");
