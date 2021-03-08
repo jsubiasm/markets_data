@@ -227,7 +227,7 @@ public class HtmlTemplate
 				output.append(tableRow.getPesoEnCartera()).append(",");
 			}
 		}
-		return output.toString().substring(0, output.toString().length() - 1);
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
 	}
 
 	/**
@@ -261,7 +261,7 @@ public class HtmlTemplate
 				}
 			}
 		}
-		return output.toString().substring(0, output.toString().length() - 1);
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
 	}
 
 	/**
@@ -327,7 +327,7 @@ public class HtmlTemplate
 				}
 			}
 		}
-		return output.toString().substring(0, output.toString().length() - 1);
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
 	}
 
 }
