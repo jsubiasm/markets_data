@@ -4,6 +4,7 @@
 package jsm.mdata.seguimiento.template;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Calendar;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class HtmlTemplate
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final String getTable_VWF_nombreVista(List<GanPerProdPesoDTO> listTableRows, String nombreVista) throws Throwable
+	public static String getTable_VWF_nombreVista(List<GanPerProdPesoDTO> listTableRows, String nombreVista) throws Throwable
 	{
 		StringBuilder strTableRows = new StringBuilder();
 		for (GanPerProdPesoDTO tableRow : listTableRows)
@@ -38,7 +39,7 @@ public class HtmlTemplate
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final String getRow_VWF_nombreVista(GanPerProdPesoDTO tableRow, String nombreVista) throws Throwable
+	private static String getRow_VWF_nombreVista(GanPerProdPesoDTO tableRow, String nombreVista) throws Throwable
 	{
 		StringBuilder strTableRow = new StringBuilder();
 		strTableRow.append("<tr>");
@@ -95,37 +96,15 @@ public class HtmlTemplate
 		}
 		else
 		{
-			strTableRow.append("<td>").append(tableRow.getTer()).append("</td>");
+			strTableRow.append("<td>").append(tableRow.getTer().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
 		}
-		strTableRow.append("<td>").append(tableRow.getPrecioTitulosComprados()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getFlujoCaja()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales()).append("</td>");
-		if (tableRow.getGananciaPerdida().compareTo(BigDecimal.ZERO) < 0)
-		{
-			strTableRow.append("<td style=\"color:red\">").append(tableRow.getGananciaPerdida()).append("</td>");
-		}
-		else if (tableRow.getGananciaPerdida().compareTo(BigDecimal.ZERO) > 0)
-		{
-			strTableRow.append("<td style=\"color:green\">").append(tableRow.getGananciaPerdida()).append("</td>");
-		}
-		else
-		{
-			strTableRow.append("<td>").append(tableRow.getGananciaPerdida()).append("</td>");
-		}
-		if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) < 0)
-		{
-			strTableRow.append("<td style=\"color:red\">").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
-		}
-		else if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) > 0)
-		{
-			strTableRow.append("<td style=\"color:green\">").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
-		}
-		else
-		{
-			strTableRow.append("<td>").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
-		}
-		strTableRow.append("<td>").append(tableRow.getPesoEnCartera()).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getFlujoCaja().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida())).append(">").append(tableRow.getGananciaPerdida().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
 	}
@@ -135,7 +114,7 @@ public class HtmlTemplate
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final String getTable_VWF_GAN_PER_PROD_PESO_GLOBAL(List<GanPerProdPesoDTO> listTableRows) throws Throwable
+	public static String getTable_VWF_GAN_PER_PROD_PESO_GLOBAL(List<GanPerProdPesoDTO> listTableRows) throws Throwable
 	{
 		StringBuilder strTableRows = new StringBuilder();
 		for (GanPerProdPesoDTO tableRow : listTableRows)
@@ -150,7 +129,7 @@ public class HtmlTemplate
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final String getRow_VWF_GAN_PER_PROD_PESO_GLOBAL(GanPerProdPesoDTO tableRow) throws Throwable
+	private static String getRow_VWF_GAN_PER_PROD_PESO_GLOBAL(GanPerProdPesoDTO tableRow) throws Throwable
 	{
 		StringBuilder strTableRow = new StringBuilder();
 		strTableRow.append("<tr>");
@@ -164,42 +143,38 @@ public class HtmlTemplate
 		strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getMoneda()).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getUsoIngresos()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getTer()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getTitulosComprados()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getPrecioTitulosComprados()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getTitulosVendidos()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getFlujoCaja()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getTitulosActuales()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getValorTitulo()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales()).append("</td>");
-		if (tableRow.getGananciaPerdida().compareTo(BigDecimal.ZERO) < 0)
-		{
-			strTableRow.append("<td style=\"color:red\">").append(tableRow.getGananciaPerdida()).append("</td>");
-		}
-		else if (tableRow.getGananciaPerdida().compareTo(BigDecimal.ZERO) > 0)
-		{
-			strTableRow.append("<td style=\"color:green\">").append(tableRow.getGananciaPerdida()).append("</td>");
-		}
-		else
-		{
-			strTableRow.append("<td>").append(tableRow.getGananciaPerdida()).append("</td>");
-		}
-		if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) < 0)
-		{
-			strTableRow.append("<td style=\"color:red\">").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
-		}
-		else if (tableRow.getGananciaPerdidaPrcnt().compareTo(BigDecimal.ZERO) > 0)
-		{
-			strTableRow.append("<td style=\"color:green\">").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
-		}
-		else
-		{
-			strTableRow.append("<td>").append(tableRow.getGananciaPerdidaPrcnt()).append("</td>");
-		}
-		strTableRow.append("<td>").append(tableRow.getPesoEnCartera()).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getTer().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getTitulosComprados().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getTitulosVendidos().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getFlujoCaja().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getValorTitulo().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida())).append(">").append(tableRow.getGananciaPerdida().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
+	}
+
+	/**
+	 * @param valor
+	 * @return
+	 */
+	private static String getTDColor(BigDecimal valor)
+	{
+		String tdColor = "";
+		if (valor.compareTo(BigDecimal.ZERO) < 0)
+		{
+			tdColor = " style=\"color:red\"";
+		}
+		else if (valor.compareTo(BigDecimal.ZERO) > 0)
+		{
+			tdColor = " style=\"color:green\"";
+		}
+		return tdColor;
 	}
 
 	/**
@@ -209,7 +184,7 @@ public class HtmlTemplate
 	{
 		Calendar cl = Calendar.getInstance();
 		String[] mo = new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
-		return "Fichero generado el " + cl.get(Calendar.DAY_OF_MONTH) + " de " + mo[cl.get(Calendar.MONTH)] + " de " + cl.get(Calendar.YEAR) + " a las " + cl.get(Calendar.HOUR_OF_DAY) + ":" + cl.get(Calendar.MINUTE);
+		return "Fichero generado el " + cl.get(Calendar.DAY_OF_MONTH) + " de " + mo[cl.get(Calendar.MONTH)] + " de " + cl.get(Calendar.YEAR) + " a las " + cl.get(Calendar.HOUR_OF_DAY) + " horas " + cl.get(Calendar.MINUTE) + " minutos";
 	}
 
 	/**
@@ -217,14 +192,14 @@ public class HtmlTemplate
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final String getChartData(List<GanPerProdPesoDTO> listTableRows) throws Throwable
+	public static String getChartData(List<GanPerProdPesoDTO> listTableRows) throws Throwable
 	{
 		StringBuilder output = new StringBuilder();
 		for (GanPerProdPesoDTO tableRow : listTableRows)
 		{
 			if (tableRow.getPesoEnCartera().compareTo(BigDecimal.ZERO) > 0)
 			{
-				output.append(tableRow.getPesoEnCartera()).append(",");
+				output.append(tableRow.getPesoEnCartera().setScale(2, RoundingMode.HALF_EVEN)).append(",");
 			}
 		}
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
@@ -236,7 +211,7 @@ public class HtmlTemplate
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final String getChartBGColor(List<GanPerProdPesoDTO> listTableRows, String nombreVista) throws Throwable
+	public static String getChartBGColor(List<GanPerProdPesoDTO> listTableRows, String nombreVista) throws Throwable
 	{
 		StringBuilder output = new StringBuilder();
 		for (GanPerProdPesoDTO tableRow : listTableRows)
@@ -270,7 +245,7 @@ public class HtmlTemplate
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final String getChartLabel(List<GanPerProdPesoDTO> listTableRows, String nombreVista) throws Throwable
+	public static String getChartLabel(List<GanPerProdPesoDTO> listTableRows, String nombreVista) throws Throwable
 	{
 		StringBuilder output = new StringBuilder();
 		for (GanPerProdPesoDTO tableRow : listTableRows)

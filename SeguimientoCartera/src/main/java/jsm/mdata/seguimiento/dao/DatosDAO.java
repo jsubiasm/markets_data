@@ -35,7 +35,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final List<MovimientoDTO> select_TB02_MOVIMIENTOS(Connection connection) throws Throwable
+	public static List<MovimientoDTO> select_TB02_MOVIMIENTOS(Connection connection) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -84,7 +84,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final List<ProductoDTO> select_TB02_PRODUCTOS(Connection connection, String identificador) throws Throwable
+	public static List<ProductoDTO> select_TB02_PRODUCTOS(Connection connection, String identificador) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -139,7 +139,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final List<ProductoVarDTO> select_TB02_PRODUCTOS_VAR(Connection connection, String productoId) throws Throwable
+	public static List<ProductoVarDTO> select_TB02_PRODUCTOS_VAR(Connection connection, String productoId) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -193,7 +193,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final List<GanPerProdPesoDTO> select_VW03_GAN_PER_PROD_PESO_sufijo(Connection connection, String sufijo) throws Throwable
+	public static List<GanPerProdPesoDTO> select_VW03_GAN_PER_PROD_PESO_sufijo(Connection connection, String sufijo) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -255,7 +255,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final List<GanPerProdPesoDTO> select_VWF_nombreVista(Connection connection, String nombreVista) throws Throwable
+	public static List<GanPerProdPesoDTO> select_VWF_nombreVista(Connection connection, String nombreVista) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
@@ -412,7 +412,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final int update_TB02_PRODUCTOS_VAR(Connection connection, ProductoVarDTO productoVar) throws Throwable
+	public static int update_TB02_PRODUCTOS_VAR(Connection connection, ProductoVarDTO productoVar) throws Throwable
 	{
 		PreparedStatement statement = null;
 		int rowsUpdated = 0;
@@ -446,7 +446,7 @@ public class DatosDAO
 	 * @return
 	 * @throws Throwable
 	 */
-	public static final List<GanPerProdPesoDTO> select_VWF_GAN_PER_PROD_PESO_GLOBAL(Connection connection) throws Throwable
+	public static List<GanPerProdPesoDTO> select_VWF_GAN_PER_PROD_PESO_GLOBAL(Connection connection) throws Throwable
 	{
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
