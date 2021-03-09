@@ -13,6 +13,10 @@ public class TemplateDTO
 	/**
 	 * 
 	 */
+	private String tableEfectivo;
+	private String chartEfectivoData;
+	private String chartEfectivoBGColor;
+	private String chartEfectivoLabel;
 	private String tableGlobalTotales;
 	private String tableTipoActivo;
 	private String tableOro;
@@ -56,6 +60,70 @@ public class TemplateDTO
 	private String chartProveedorBGColor;
 	private String chartProveedorLabel;
 	private String mensajeFechaFichero;
+
+	/**
+	 * @return the tableEfectivo
+	 */
+	public String getTableEfectivo()
+	{
+		return tableEfectivo;
+	}
+
+	/**
+	 * @param tableEfectivo the tableEfectivo to set
+	 */
+	public void setTableEfectivo(String tableEfectivo)
+	{
+		this.tableEfectivo = tableEfectivo;
+	}
+
+	/**
+	 * @return the chartEfectivoData
+	 */
+	public String getChartEfectivoData()
+	{
+		return chartEfectivoData;
+	}
+
+	/**
+	 * @param chartEfectivoData the chartEfectivoData to set
+	 */
+	public void setChartEfectivoData(String chartEfectivoData)
+	{
+		this.chartEfectivoData = chartEfectivoData;
+	}
+
+	/**
+	 * @return the chartEfectivoBGColor
+	 */
+	public String getChartEfectivoBGColor()
+	{
+		return chartEfectivoBGColor;
+	}
+
+	/**
+	 * @param chartEfectivoBGColor the chartEfectivoBGColor to set
+	 */
+	public void setChartEfectivoBGColor(String chartEfectivoBGColor)
+	{
+		this.chartEfectivoBGColor = chartEfectivoBGColor;
+	}
+
+	/**
+	 * @return the chartEfectivoLabel
+	 */
+	public String getChartEfectivoLabel()
+	{
+		return chartEfectivoLabel;
+	}
+
+	/**
+	 * @param chartEfectivoLabel the chartEfectivoLabel to set
+	 */
+	public void setChartEfectivoLabel(String chartEfectivoLabel)
+	{
+		this.chartEfectivoLabel = chartEfectivoLabel;
+	}
 
 	/**
 	 * @return the tableGlobalTotales

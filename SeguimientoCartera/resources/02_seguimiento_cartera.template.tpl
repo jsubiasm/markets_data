@@ -44,7 +44,7 @@
 			.header {
 				border: 1px solid #dddddd; 
 				text-align: right; 
-				font-size: 14px;
+				font-size: 12px;
 				padding: 12px;
 				background-color: #ffffff;
 				color: #000000;
@@ -56,7 +56,15 @@
 				padding: 12px;
 				background-color: #ffffff;
 				color: #000000;
-			}			
+			}
+			.title {
+				font-family: Arial, Helvetica, sans-serif;
+				text-align: left; 
+				font-size: 30px;
+				padding: 12px;
+				background-color: #ffffff;
+				color: #000000;
+			}
 		</style>
 		<style>		
 		
@@ -95,9 +103,28 @@
 	</head>
 	<body>
 		<div class="w100pad">
-			<div class="header">Cartera Permantente<br/>Horizonte temporal +20 A&ntilde;os</div>
+			<div class="header">Nombre: Mi Cartera. &nbsp; Tipo: Cartera Permantente. &nbsp; Horizonte temporal: +20 A&ntilde;os</div>
 		</div>
-		<div class="mitadIzda">
+		<div class="w100pad">
+			<div class="title">Efectivo</div>
+		</div>			
+		<div class="mitadIzda">	
+			<div class="w100pad">
+				<table>
+					<thead>
+						<tr><th>Nombre Cuenta</th><th>Liquido</th><th>Inmovilizado</th></tr>
+					</thead>
+					<tbody>
+						<!-- TEMPLATE.TABLE.EFECTIVO -->
+					</tbody>
+				</table>	
+			</div>		
+		</div>
+		<div class="mitadDcha"></div>
+		<div class="w100pad">
+			<div class="title">Invertido</div>
+		</div>	
+		<div class="mitadIzda">	
 			<div class="w100pad">
 				<table id="tablaPrincipal">
 					<thead>

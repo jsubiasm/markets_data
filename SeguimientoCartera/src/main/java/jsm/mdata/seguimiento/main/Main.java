@@ -27,6 +27,7 @@ import org.slf4j.LoggerFactory;
 
 import jsm.mdata.seguimiento.constantes.Cons;
 import jsm.mdata.seguimiento.dao.DatosDAO;
+import jsm.mdata.seguimiento.dto.EfectivoDTO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
@@ -596,6 +597,8 @@ public class Main
 	private static void generacionInformeHtml(Connection connection) throws Throwable
 	{
 		TemplateDTO templateDto = new TemplateDTO();
+		List<EfectivoDTO> vistaEfectivo = DatosDAO.select_VWF_EFECTIVO(connection);
+		templateDto.setTableEfectivo(HtmlTemplate.getTable_VWF_EFECTIVO(vistaEfectivo));
 		List<GanPerProdPesoDTO> vistaGlobalTotales = DatosDAO.select_VWF_nombreVista(connection, null);
 		templateDto.setTableGlobalTotales(HtmlTemplate.getTable_VWF_nombreVista(vistaGlobalTotales, null));
 		List<GanPerProdPesoDTO> vistaTipoActivo = DatosDAO.select_VWF_nombreVista(connection, "TIPO_ACTIVO");
@@ -657,7 +660,11 @@ public class Main
 		{
 			for (String lineaInput : listLineasInput)
 			{
-				if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->"))
+				if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.EFECTIVO -->"))
+				{
+					listLineasOutput.add(templateDto.getTableEfectivo());
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.GLOBAL_TOTALES -->"))
 				{
 					listLineasOutput.add(templateDto.getTableGlobalTotales());
 				}

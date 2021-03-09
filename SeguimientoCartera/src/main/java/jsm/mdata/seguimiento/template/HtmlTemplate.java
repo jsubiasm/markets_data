@@ -8,6 +8,7 @@ import java.math.RoundingMode;
 import java.util.Calendar;
 import java.util.List;
 
+import jsm.mdata.seguimiento.dto.EfectivoDTO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 
 /**
@@ -303,6 +304,52 @@ public class HtmlTemplate
 			}
 		}
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
+	}
+
+	/**
+	 * @param listTableRows
+	 * @return
+	 * @throws Throwable
+	 */
+	public static String getTable_VWF_EFECTIVO(List<EfectivoDTO> listTableRows) throws Throwable
+	{
+		StringBuilder strTableRows = new StringBuilder();
+		for (EfectivoDTO tableRow : listTableRows)
+		{
+			strTableRows.append(getRow_VWF_EFECTIVO(tableRow)).append("\n");
+		}
+		return strTableRows.toString().substring(0, strTableRows.toString().length() - 1);
+	}
+
+	/**
+	 * @param tableRow
+	 * @return
+	 * @throws Throwable
+	 */
+	private static String getRow_VWF_EFECTIVO(EfectivoDTO tableRow) throws Throwable
+	{
+		StringBuilder strTableRow = new StringBuilder();
+		strTableRow.append("<tr>");
+		String nombreCuenta = tableRow.getNombreCuenta();
+		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(nombreCuenta).append("</td>");
+		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getLiquido().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getInmovilizado().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("</tr>");
+		return strTableRow.toString();
+	}
+
+	/**
+	 * @param nombreCuenta
+	 * @return
+	 */
+	private static String getTDStyle(String nombreCuenta)
+	{
+		String tdStyle = "";
+		if (nombreCuenta.equalsIgnoreCase("Total"))
+		{
+			tdStyle = " style=\"font-size: 16px; font-weight: bold;\"";
+		}
+		return tdStyle;
 	}
 
 }

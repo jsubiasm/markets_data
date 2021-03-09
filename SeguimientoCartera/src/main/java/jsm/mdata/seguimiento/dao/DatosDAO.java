@@ -13,6 +13,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jsm.mdata.seguimiento.dto.EfectivoDTO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
@@ -499,6 +500,47 @@ public class DatosDAO
 			statement.close();
 		}
 		return listaGanPerProdPeso;
+	}
+
+	/**
+	 * @param connection
+	 * @return
+	 * @throws Throwable
+	 */
+	public static List<EfectivoDTO> select_VWF_EFECTIVO(Connection connection) throws Throwable
+	{
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		List<EfectivoDTO> listaEfectivo = new ArrayList<EfectivoDTO>();
+		try
+		{
+			LOGGER.debug("Abriendo Sentencia");
+			statement = connection.prepareStatement("SELECT \"Nombre Cuenta\", \"Liquido\", \"Inmovilizado\" FROM VWF_EFECTIVO");
+			LOGGER.debug("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.debug("Abriendo Cursor");
+			while (resultSet.next())
+			{
+				EfectivoDTO dto = new EfectivoDTO();
+				dto.setNombreCuenta(resultSet.getString("Nombre Cuenta"));
+				dto.setLiquido(resultSet.getBigDecimal("Liquido"));
+				dto.setInmovilizado(resultSet.getBigDecimal("Inmovilizado"));
+				listaEfectivo.add(dto);
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+			throw t;
+		}
+		finally
+		{
+			LOGGER.debug("Cerrando Cursor");
+			resultSet.close();
+			LOGGER.debug("Cerrando Sentencia");
+			statement.close();
+		}
+		return listaEfectivo;
 	}
 
 }
