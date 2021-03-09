@@ -120,7 +120,14 @@
 				</table>	
 			</div>		
 		</div>
-		<div class="mitadDcha"></div>
+		<div class="mitadDcha">
+			<div class="w50pad">
+				<canvas id="chartArea11"></canvas>
+			</div>
+			<div class="w50pad">
+				<canvas id="chartArea12"></canvas>
+			</div>
+		</div>
 		<div class="w100pad">
 			<div class="title">Invertido</div>
 		</div>	
@@ -281,7 +288,75 @@
 			<div class="footer">
 				<!-- TEMPLATE.MENSAJE.FECHA.FICHERO -->
 			</div>
-		</div>		
+		</div>
+		<script>
+			var chartContext11 = document.getElementById('chartArea11').getContext('2d');
+			var myDoughnutChart11 = new Chart(chartContext11, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							// TEMPLATE.CHART.EFECTIVO.DATA //
+						],
+						backgroundColor: [
+							// TEMPLATE.CHART.EFECTIVO.BGCOLOR //
+						]
+					}],
+					labels: [
+						// TEMPLATE.CHART.EFECTIVO.LABEL //
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: false,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>	
+		<script>
+			var chartContext12 = document.getElementById('chartArea12').getContext('2d');
+			var myDoughnutChart12 = new Chart(chartContext12, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							// TEMPLATE.CHART.EFECTIVO_INVERTIDO.DATA //
+						],
+						backgroundColor: [
+							// TEMPLATE.CHART.EFECTIVO_INVERTIDO.BGCOLOR //
+						]
+					}],
+					labels: [
+						// TEMPLATE.CHART.EFECTIVO_INVERTIDO.LABEL //
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: false,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>		
 		<script>
 			var chartContext01 = document.getElementById('chartArea01').getContext('2d');
 			var myDoughnutChart01 = new Chart(chartContext01, {

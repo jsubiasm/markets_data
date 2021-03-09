@@ -599,6 +599,9 @@ public class Main
 		TemplateDTO templateDto = new TemplateDTO();
 		List<EfectivoDTO> vistaEfectivo = DatosDAO.select_VWF_EFECTIVO(connection);
 		templateDto.setTableEfectivo(HtmlTemplate.getTable_VWF_EFECTIVO(vistaEfectivo));
+		templateDto.setChartEfectivoData(HtmlTemplate.getChartEfectivoData(vistaEfectivo));
+		templateDto.setChartEfectivoBGColor(HtmlTemplate.getChartEfectivoBGColor(vistaEfectivo));
+		templateDto.setChartEfectivoLabel(HtmlTemplate.getChartEfectivoLabel(vistaEfectivo));
 		List<GanPerProdPesoDTO> vistaGlobalTotales = DatosDAO.select_VWF_nombreVista(connection, null);
 		templateDto.setTableGlobalTotales(HtmlTemplate.getTable_VWF_nombreVista(vistaGlobalTotales, null));
 		List<GanPerProdPesoDTO> vistaTipoActivo = DatosDAO.select_VWF_nombreVista(connection, "TIPO_ACTIVO");
@@ -606,6 +609,9 @@ public class Main
 		templateDto.setChartTipoActivoData(HtmlTemplate.getChartData(vistaTipoActivo));
 		templateDto.setChartTipoActivoBGColor(HtmlTemplate.getChartBGColor(vistaTipoActivo, "TIPO_ACTIVO"));
 		templateDto.setChartTipoActivoLabel(HtmlTemplate.getChartLabel(vistaTipoActivo, "TIPO_ACTIVO"));
+		templateDto.setChartEfectivoInvertidoData(HtmlTemplate.getChartData(vistaEfectivo, vistaTipoActivo));
+		templateDto.setChartEfectivoInvertidoBGColor(HtmlTemplate.getChartBGColor(vistaTipoActivo));
+		templateDto.setChartEfectivoInvertidoLabel(HtmlTemplate.getChartLabel(vistaTipoActivo));
 		List<GanPerProdPesoDTO> vistaSubtipoActivoOro = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_ORO");
 		templateDto.setTableOro(HtmlTemplate.getTable_VWF_nombreVista(vistaSubtipoActivoOro, "SUBTIPO_ACTIVO_ORO"));
 		templateDto.setChartOroData(HtmlTemplate.getChartData(vistaSubtipoActivoOro));
@@ -715,6 +721,30 @@ public class Main
 				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.MENSAJE.FECHA.FICHERO -->"))
 				{
 					listLineasOutput.add(templateDto.getMensajeFechaFichero());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.EFECTIVO.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartEfectivoData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.EFECTIVO.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartEfectivoBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.EFECTIVO.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartEfectivoLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.EFECTIVO_INVERTIDO.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartEfectivoInvertidoData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.EFECTIVO_INVERTIDO.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartEfectivoInvertidoBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.EFECTIVO_INVERTIDO.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartEfectivoInvertidoLabel());
 				}
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.TIPO_ACTIVO.DATA //"))
 				{

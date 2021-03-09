@@ -115,20 +115,27 @@
 						<tr><th>Nombre Cuenta</th><th>Liquido</th><th>Inmovilizado</th></tr>
 					</thead>
 					<tbody>
+<tr><td>Degiro jotasumin</td><td>7.50</td><td>0.00</td></tr>
+<tr><td>EVO Cuenta Corriente</td><td>111.11</td><td>0.00</td></tr>
 <tr><td>ING Sin Nomina</td><td>2990.50</td><td>0.00</td></tr>
 <tr><td>Bankinter Nomina</td><td>5222.22</td><td>0.00</td></tr>
-<tr><td>EVO Cuenta Corriente</td><td>111.11</td><td>0.00</td></tr>
 <tr><td>NN Cuenta Ahorro</td><td>9000.26</td><td>0.00</td></tr>
+<tr><td>Myinvestor Cuenta Corriente</td><td>15009.22</td><td>0.00</td></tr>
 <tr><td>Ticket Restaurant</td><td>0.00</td><td>255.40</td></tr>
 <tr><td>Openbank Familiar</td><td>0.00</td><td>1205.76</td></tr>
-<tr><td>Myinvestor Cuenta Corriente</td><td>15009.22</td><td>0.00</td></tr>
-<tr><td>Degiro jotasumin</td><td>7.50</td><td>0.00</td></tr>
 <tr><td style="font-size: 16px; font-weight: bold;">Total</td><td style="font-size: 16px; font-weight: bold;">32340.81</td><td style="font-size: 16px; font-weight: bold;">1461.16</td></tr>
 					</tbody>
 				</table>	
 			</div>		
 		</div>
-		<div class="mitadDcha"></div>
+		<div class="mitadDcha">
+			<div class="w50pad">
+				<canvas id="chartArea11"></canvas>
+			</div>
+			<div class="w50pad">
+				<canvas id="chartArea12"></canvas>
+			</div>
+		</div>
 		<div class="w100pad">
 			<div class="title">Invertido</div>
 		</div>	
@@ -325,9 +332,77 @@
 		</div>	
 		<div class="w100pad">
 			<div class="footer">
-Fichero generado el 9 de Marzo de 2021 a las 12 horas 27 minutos
+Fichero generado el 9 de Marzo de 2021 a las 16 horas 3 minutos
 			</div>
-		</div>		
+		</div>
+		<script>
+			var chartContext11 = document.getElementById('chartArea11').getContext('2d');
+			var myDoughnutChart11 = new Chart(chartContext11, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+111.11,2990.50,5222.22,9000.26,15009.22
+						],
+						backgroundColor: [
+'#7ad472','#7ad472','#7ad472','#7ad472','#7ad472'
+						]
+					}],
+					labels: [
+'EVO Cuenta Corriente','ING Sin Nomina','Bankinter Nomina','NN Cuenta Ahorro','Myinvestor Cuenta Corriente'
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: false,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>	
+		<script>
+			var chartContext12 = document.getElementById('chartArea12').getContext('2d');
+			var myDoughnutChart12 = new Chart(chartContext12, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+8386.58,9436.98,9528.74,32340.81
+						],
+						backgroundColor: [
+'#f2d974','#72aded','#f07380','#7ad472'
+						]
+					}],
+					labels: [
+'Oro','Renta Fija','Renta Variable','Liquido'
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: false,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>		
 		<script>
 			var chartContext01 = document.getElementById('chartArea01').getContext('2d');
 			var myDoughnutChart01 = new Chart(chartContext01, {

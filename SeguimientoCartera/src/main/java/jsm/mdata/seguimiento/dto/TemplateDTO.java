@@ -17,6 +17,9 @@ public class TemplateDTO
 	private String chartEfectivoData;
 	private String chartEfectivoBGColor;
 	private String chartEfectivoLabel;
+	private String chartEfectivoInvertidoData;
+	private String chartEfectivoInvertidoBGColor;
+	private String chartEfectivoInvertidoLabel;
 	private String tableGlobalTotales;
 	private String tableTipoActivo;
 	private String tableOro;
@@ -123,6 +126,54 @@ public class TemplateDTO
 	public void setChartEfectivoLabel(String chartEfectivoLabel)
 	{
 		this.chartEfectivoLabel = chartEfectivoLabel;
+	}
+
+	/**
+	 * @return the chartEfectivoInvertidoData
+	 */
+	public String getChartEfectivoInvertidoData()
+	{
+		return chartEfectivoInvertidoData;
+	}
+
+	/**
+	 * @param chartEfectivoInvertidoData the chartEfectivoInvertidoData to set
+	 */
+	public void setChartEfectivoInvertidoData(String chartEfectivoInvertidoData)
+	{
+		this.chartEfectivoInvertidoData = chartEfectivoInvertidoData;
+	}
+
+	/**
+	 * @return the chartEfectivoInvertidoBGColor
+	 */
+	public String getChartEfectivoInvertidoBGColor()
+	{
+		return chartEfectivoInvertidoBGColor;
+	}
+
+	/**
+	 * @param chartEfectivoInvertidoBGColor the chartEfectivoInvertidoBGColor to set
+	 */
+	public void setChartEfectivoInvertidoBGColor(String chartEfectivoInvertidoBGColor)
+	{
+		this.chartEfectivoInvertidoBGColor = chartEfectivoInvertidoBGColor;
+	}
+
+	/**
+	 * @return the chartEfectivoInvertidoLabel
+	 */
+	public String getChartEfectivoInvertidoLabel()
+	{
+		return chartEfectivoInvertidoLabel;
+	}
+
+	/**
+	 * @param chartEfectivoInvertidoLabel the chartEfectivoInvertidoLabel to set
+	 */
+	public void setChartEfectivoInvertidoLabel(String chartEfectivoInvertidoLabel)
+	{
+		this.chartEfectivoInvertidoLabel = chartEfectivoInvertidoLabel;
 	}
 
 	/**

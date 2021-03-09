@@ -352,4 +352,133 @@ public class HtmlTemplate
 		return tdStyle;
 	}
 
+	/**
+	 * @param listTableRows
+	 * @return
+	 * @throws Throwable
+	 */
+	public static String getChartEfectivoData(List<EfectivoDTO> listTableRows) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (EfectivoDTO tableRow : listTableRows)
+		{
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(50d)) == 1)
+			{
+				output.append(tableRow.getLiquido().setScale(2, RoundingMode.HALF_EVEN)).append(",");
+			}
+		}
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
+	}
+
+	/**
+	 * @param listTableRows
+	 * @return
+	 * @throws Throwable
+	 */
+	public static String getChartEfectivoBGColor(List<EfectivoDTO> listTableRows) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (EfectivoDTO tableRow : listTableRows)
+		{
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(50d)) == 1)
+			{
+				output.append("'#7ad472'").append(",");
+			}
+		}
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
+	}
+
+	/**
+	 * @param listTableRows
+	 * @return
+	 * @throws Throwable
+	 */
+	public static String getChartEfectivoLabel(List<EfectivoDTO> listTableRows) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (EfectivoDTO tableRow : listTableRows)
+		{
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(50d)) == 1)
+			{
+				output.append("'").append(tableRow.getNombreCuenta()).append("',");
+			}
+		}
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
+	}
+
+	/**
+	 * @param vistaEfectivo
+	 * @param vistaTipoActivo
+	 * @return
+	 * @throws Throwable
+	 */
+	public static String getChartData(List<EfectivoDTO> vistaEfectivo, List<GanPerProdPesoDTO> vistaTipoActivo) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (GanPerProdPesoDTO tableRow : vistaTipoActivo)
+		{
+			if (tableRow.getValorTitulosActuales().compareTo(BigDecimal.ZERO) > 0)
+			{
+				output.append(tableRow.getValorTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)).append(",");
+			}
+		}
+		for (EfectivoDTO tableRow : vistaEfectivo)
+		{
+			if (tableRow.getNombreCuenta().equalsIgnoreCase("Total"))
+			{
+				output.append(tableRow.getLiquido().setScale(2, RoundingMode.HALF_EVEN)).append(",");
+			}
+		}
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
+	}
+
+	/**
+	 * @param vistaTipoActivo
+	 * @return
+	 * @throws Throwable
+	 */
+	public static String getChartBGColor(List<GanPerProdPesoDTO> vistaTipoActivo) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (GanPerProdPesoDTO tableRow : vistaTipoActivo)
+		{
+			if (tableRow.getValorTitulosActuales().compareTo(BigDecimal.ZERO) > 0)
+			{
+				if ("Oro".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#f2d974'").append(",");
+				}
+				else if ("Renta Fija".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#72aded'").append(",");
+				}
+				else if ("Renta Variable".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#f07380'").append(",");
+				}
+			}
+		}
+		output.append("'#7ad472'").append(",");
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
+	}
+
+	/**
+	 * @param vistaTipoActivo
+	 * @return
+	 * @throws Throwable
+	 */
+	public static String getChartLabel(List<GanPerProdPesoDTO> vistaTipoActivo) throws Throwable
+	{
+		StringBuilder output = new StringBuilder();
+		for (GanPerProdPesoDTO tableRow : vistaTipoActivo)
+		{
+			if (tableRow.getValorTitulosActuales().compareTo(BigDecimal.ZERO) > 0)
+			{
+				output.append("'").append(tableRow.getTipoActivo()).append("',");
+			}
+		}
+		output.append("'Liquido',");
+		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
+	}
+
 }
