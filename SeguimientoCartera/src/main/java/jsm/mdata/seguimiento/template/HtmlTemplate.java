@@ -362,7 +362,7 @@ public class HtmlTemplate
 		StringBuilder output = new StringBuilder();
 		for (EfectivoDTO tableRow : listTableRows)
 		{
-			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(50d)) == 1)
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(500d)) == 1)
 			{
 				output.append(tableRow.getLiquido().setScale(2, RoundingMode.HALF_EVEN)).append(",");
 			}
@@ -380,7 +380,7 @@ public class HtmlTemplate
 		StringBuilder output = new StringBuilder();
 		for (EfectivoDTO tableRow : listTableRows)
 		{
-			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(50d)) == 1)
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(500d)) == 1)
 			{
 				output.append("'#7ad472'").append(",");
 			}
@@ -398,7 +398,7 @@ public class HtmlTemplate
 		StringBuilder output = new StringBuilder();
 		for (EfectivoDTO tableRow : listTableRows)
 		{
-			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(50d)) == 1)
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getLiquido().compareTo(BigDecimal.valueOf(500d)) == 1)
 			{
 				output.append("'").append(tableRow.getNombreCuenta()).append("',");
 			}

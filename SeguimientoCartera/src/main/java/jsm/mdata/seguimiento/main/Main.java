@@ -25,7 +25,6 @@ import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import jsm.mdata.seguimiento.constantes.Cons;
 import jsm.mdata.seguimiento.dao.DatosDAO;
 import jsm.mdata.seguimiento.dto.EfectivoDTO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
@@ -143,7 +142,7 @@ public class Main
 		for (MovimientoDTO mov : listaMovimientos)
 		{
 			BigDecimal totalCalculado = null;
-			if (mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA))
+			if (mov.getCompraVenta().equalsIgnoreCase("Compra"))
 			{
 				totalCalculado = mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision());
 			}
@@ -201,11 +200,11 @@ public class Main
 				if (mapGpp.containsKey(getMapKey(mov, prod)))
 				{
 					GanPerProdPesoDTO gpp = mapGpp.get(getMapKey(mov, prod));
-					gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getPrecioTitulosComprados().add(mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision())) : gpp.getPrecioTitulosComprados());
-					gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? gpp.getPrecioTitulosVendidos().add(mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision())) : gpp.getPrecioTitulosVendidos());
-					gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosActuales().add(mov.getNumeroTitulos()) : gpp.getTitulosActuales().subtract(mov.getNumeroTitulos()));
-					gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? gpp.getTitulosComprados().add(mov.getNumeroTitulos()) : gpp.getTitulosComprados());
-					gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? gpp.getTitulosVendidos().add(mov.getNumeroTitulos()) : gpp.getTitulosVendidos());
+					gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase("Compra") ? gpp.getPrecioTitulosComprados().add(mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision())) : gpp.getPrecioTitulosComprados());
+					gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase("Venta") ? gpp.getPrecioTitulosVendidos().add(mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision())) : gpp.getPrecioTitulosVendidos());
+					gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase("Compra") ? gpp.getTitulosActuales().add(mov.getNumeroTitulos()) : gpp.getTitulosActuales().subtract(mov.getNumeroTitulos()));
+					gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase("Compra") ? gpp.getTitulosComprados().add(mov.getNumeroTitulos()) : gpp.getTitulosComprados());
+					gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase("Venta") ? gpp.getTitulosVendidos().add(mov.getNumeroTitulos()) : gpp.getTitulosVendidos());
 					mapGpp.put(getMapKey(mov, prod), gpp);
 				}
 				else
@@ -227,11 +226,11 @@ public class Main
 					gpp.setSubtipoActivo(prod.getSubtipoActivo());
 					gpp.setTipoActivo(prod.getTipoActivo());
 					gpp.setUsoIngresos(prod.getUsoIngresos());
-					gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision()) : BigDecimal.ZERO);
-					gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision()) : BigDecimal.ZERO);
-					gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : mov.getNumeroTitulos().multiply(new BigDecimal(-1d)));
-					gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase(Cons.COMPRA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
-					gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase(Cons.VENTA) ? mov.getNumeroTitulos() : BigDecimal.ZERO);
+					gpp.setPrecioTitulosComprados(mov.getCompraVenta().equalsIgnoreCase("Compra") ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).add(mov.getComision()) : BigDecimal.ZERO);
+					gpp.setPrecioTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase("Venta") ? mov.getNumeroTitulos().multiply(mov.getPrecioTitulo()).subtract(mov.getComision()) : BigDecimal.ZERO);
+					gpp.setTitulosActuales(mov.getCompraVenta().equalsIgnoreCase("Compra") ? mov.getNumeroTitulos() : mov.getNumeroTitulos().multiply(new BigDecimal(-1d)));
+					gpp.setTitulosComprados(mov.getCompraVenta().equalsIgnoreCase("Compra") ? mov.getNumeroTitulos() : BigDecimal.ZERO);
+					gpp.setTitulosVendidos(mov.getCompraVenta().equalsIgnoreCase("Venta") ? mov.getNumeroTitulos() : BigDecimal.ZERO);
 					mapGpp.put(getMapKey(mov, prod), gpp);
 				}
 			}
