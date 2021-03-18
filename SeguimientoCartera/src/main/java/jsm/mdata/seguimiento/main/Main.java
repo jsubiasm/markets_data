@@ -4,6 +4,8 @@
 package jsm.mdata.seguimiento.main;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Connection;
@@ -58,6 +60,8 @@ public class Main
 	private static final String DB_PATH = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\seguimiento_cartera";
 	private static final String HTML_TEMPLATE = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\02_seguimiento_cartera.template.tpl";
 	private static final String HTML_OUTPUT = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\03_seguimiento_cartera.output.html";
+	private static final String SCRIPT_SQL = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\01_seguimiento_cartera.input.sql";
+	private static final String SCRIPT_LOG = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\01_seguimiento_cartera.output.log";
 
 	/**
 	 * @return
@@ -89,9 +93,9 @@ public class Main
 		{
 			connection.rollback();
 		}
-		catch (Throwable t2)
+		catch (Throwable t)
 		{
-			LOGGER.error("ERROR", t2);
+			LOGGER.error("ERROR", t);
 		}
 	}
 
@@ -119,11 +123,11 @@ public class Main
 		{
 			DriverManager.getConnection(DB_PROTOCOL + ";shutdown=true");
 		}
-		catch (SQLException se)
+		catch (SQLException e)
 		{
-			if (se.getErrorCode() != 50000 || !"XJ015".equals(se.getSQLState()))
+			if (e.getErrorCode() != 50000 || !"XJ015".equals(e.getSQLState()))
 			{
-				LOGGER.error("ERROR", se);
+				LOGGER.error("ERROR", e);
 			}
 		}
 		catch (Throwable t)
@@ -875,6 +879,55 @@ public class Main
 	}
 
 	/**
+	 * @param connection
+	 * @throws Throwable
+	 */
+	private static void ejecutarScript(Connection connection) throws Throwable
+	{
+		FileInputStream scriptInputStream = null;
+		FileOutputStream logOutputStream = null;
+		try
+		{
+			scriptInputStream = new FileInputStream(new File(SCRIPT_SQL));
+			logOutputStream = new FileOutputStream(new File(SCRIPT_LOG));
+			int exitCode = org.apache.derby.tools.ij.runScript(connection, scriptInputStream, "UTF-8", logOutputStream, "UTF-8");
+			if (exitCode != 0)
+			{
+				throw new Exception("La ejecucion del script SQL ha terminado con codigo de error [" + exitCode + "]");
+			}
+		}
+		finally
+		{
+			if (scriptInputStream != null)
+			{
+				scriptInputStream.close();
+			}
+			if (logOutputStream != null)
+			{
+				logOutputStream.close();
+			}
+		}
+	}
+
+	/**
+	 * @throws Throwable
+	 */
+	private static void validarEjecucionScript() throws Throwable
+	{
+		List<String> listLineasInput = FileUtils.readLines(new File(SCRIPT_LOG), "UTF-8");
+		if (listLineasInput != null && !listLineasInput.isEmpty())
+		{
+			for (String lineaInput : listLineasInput)
+			{
+				if (lineaInput != null && lineaInput.toUpperCase().contains("ERROR"))
+				{
+					throw new Exception("Se han producido errores en la ejecucion del script SQL [" + lineaInput + "]");
+				}
+			}
+		}
+	}
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args)
@@ -885,9 +938,17 @@ public class Main
 		{
 			LOGGER.info("Abriendo Conexion");
 			connection = abrirConexion();
+			LOGGER.info("Ejecutando Script");
+			ejecutarScript(connection);
+			LOGGER.info("Validando Ejecucion Script");
+			validarEjecucionScript();
+			LOGGER.info("Confirmando Transaccion");
+			confirmarTransaccion(connection);
+			LOGGER.info("Recuperando Datos Productos");
 			urlScraping(connection);
 			LOGGER.info("Confirmando Transaccion");
 			confirmarTransaccion(connection);
+			LOGGER.info("Validando Datos");
 			validate_TB02_MOVIMIENTOS(connection);
 			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
 			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGpp, "GLOBAL");

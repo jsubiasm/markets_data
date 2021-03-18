@@ -39,3 +39,7 @@
 
 - Versión 2.0: Generación del informe HTML completado
 
+- Versión 3.0: Se ejecuta el script SQL desde el proceso java
+
+
+
