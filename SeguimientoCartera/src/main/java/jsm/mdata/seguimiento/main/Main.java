@@ -58,10 +58,14 @@ public class Main
 	 * 
 	 */
 	private static final String DB_PATH = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\derby\\seguimiento_cartera";
-	private static final String HTML_TEMPLATE = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\02_seguimiento_cartera.template.tpl";
-	private static final String HTML_OUTPUT = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\03_seguimiento_cartera.output.html";
-	private static final String SCRIPT_SQL = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\01_seguimiento_cartera.input.sql";
-	private static final String SCRIPT_LOG = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\01_seguimiento_cartera.output.log";
+
+	/**
+	 * 
+	 */
+	private static final String SCRIPT_SQL = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\01.input.seguimiento_cartera.sql";
+	private static final String HTML_TEMPLATE = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\02.input.seguimiento_cartera.template";
+	private static final String SCRIPT_LOG = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\03.output.seguimiento_cartera.log";
+	private static final String HTML_OUTPUT = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\04.output.seguimiento_cartera.html";
 
 	/**
 	 * @return
@@ -928,6 +932,23 @@ public class Main
 	}
 
 	/**
+	 * @throws Throwable
+	 */
+	private static void borrarFicherosSalida() throws Throwable
+	{
+		File outLog = new File(SCRIPT_LOG);
+		if (outLog.exists())
+		{
+			outLog.delete();
+		}
+		File outHtml = new File(HTML_OUTPUT);
+		if (outHtml.exists())
+		{
+			outHtml.delete();
+		}
+	}
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args)
@@ -936,18 +957,16 @@ public class Main
 		Connection connection = null;
 		try
 		{
+			LOGGER.info("Borrando Ficheros Salida");
+			borrarFicherosSalida();
 			LOGGER.info("Abriendo Conexion");
 			connection = abrirConexion();
 			LOGGER.info("Ejecutando Script");
 			ejecutarScript(connection);
 			LOGGER.info("Validando Ejecucion Script");
 			validarEjecucionScript();
-			LOGGER.info("Confirmando Transaccion");
-			confirmarTransaccion(connection);
 			LOGGER.info("Recuperando Datos Productos");
 			urlScraping(connection);
-			LOGGER.info("Confirmando Transaccion");
-			confirmarTransaccion(connection);
 			LOGGER.info("Validando Datos");
 			validate_TB02_MOVIMIENTOS(connection);
 			Map<String, GanPerProdPesoDTO> mapGpp = new HashMap<String, GanPerProdPesoDTO>();
