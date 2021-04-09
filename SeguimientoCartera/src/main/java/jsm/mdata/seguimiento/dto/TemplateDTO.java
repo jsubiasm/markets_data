@@ -25,6 +25,7 @@ public class TemplateDTO
 	private String tableOro;
 	private String tableRentaFija;
 	private String tableRentaVariable;
+	private String tableCriptomoneda;
 	private String tableMoneda;
 	private String tableInstrumento;
 	private String tableUsoIngresos;
@@ -44,6 +45,9 @@ public class TemplateDTO
 	private String chartRentaVariableData;
 	private String chartRentaVariableBGColor;
 	private String chartRentaVariableLabel;
+	private String chartCriptomonedaData;
+	private String chartCriptomonedaBGColor;
+	private String chartCriptomonedaLabel;
 	private String chartMonedaData;
 	private String chartMonedaBGColor;
 	private String chartMonedaLabel;
@@ -254,6 +258,22 @@ public class TemplateDTO
 	public void setTableRentaVariable(String tableRentaVariable)
 	{
 		this.tableRentaVariable = tableRentaVariable;
+	}
+
+	/**
+	 * @return the tableCriptomoneda
+	 */
+	public String getTableCriptomoneda()
+	{
+		return tableCriptomoneda;
+	}
+
+	/**
+	 * @param tableCriptomoneda the tableCriptomoneda to set
+	 */
+	public void setTableCriptomoneda(String tableCriptomoneda)
+	{
+		this.tableCriptomoneda = tableCriptomoneda;
 	}
 
 	/**
@@ -558,6 +578,54 @@ public class TemplateDTO
 	public void setChartRentaVariableLabel(String chartRentaVariableLabel)
 	{
 		this.chartRentaVariableLabel = chartRentaVariableLabel;
+	}
+
+	/**
+	 * @return the chartCriptomonedaData
+	 */
+	public String getChartCriptomonedaData()
+	{
+		return chartCriptomonedaData;
+	}
+
+	/**
+	 * @param chartCriptomonedaData the chartCriptomonedaData to set
+	 */
+	public void setChartCriptomonedaData(String chartCriptomonedaData)
+	{
+		this.chartCriptomonedaData = chartCriptomonedaData;
+	}
+
+	/**
+	 * @return the chartCriptomonedaBGColor
+	 */
+	public String getChartCriptomonedaBGColor()
+	{
+		return chartCriptomonedaBGColor;
+	}
+
+	/**
+	 * @param chartCriptomonedaBGColor the chartCriptomonedaBGColor to set
+	 */
+	public void setChartCriptomonedaBGColor(String chartCriptomonedaBGColor)
+	{
+		this.chartCriptomonedaBGColor = chartCriptomonedaBGColor;
+	}
+
+	/**
+	 * @return the chartCriptomonedaLabel
+	 */
+	public String getChartCriptomonedaLabel()
+	{
+		return chartCriptomonedaLabel;
+	}
+
+	/**
+	 * @param chartCriptomonedaLabel the chartCriptomonedaLabel to set
+	 */
+	public void setChartCriptomonedaLabel(String chartCriptomonedaLabel)
+	{
+		this.chartCriptomonedaLabel = chartCriptomonedaLabel;
 	}
 
 	/**

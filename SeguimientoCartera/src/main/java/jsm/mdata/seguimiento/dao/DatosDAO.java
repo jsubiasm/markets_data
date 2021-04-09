@@ -303,6 +303,10 @@ public class DatosDAO
 				{
 					campoVista = "\"Renta Variable\"";
 				}
+				else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Criptomoneda\"";
+				}
 				else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 				{
 					campoVista = "\"Tipo Activo\"";
@@ -364,6 +368,10 @@ public class DatosDAO
 					else if ("SUBTIPO_ACTIVO_RV".equalsIgnoreCase(nombreVista))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Renta Variable"));
+					}
+					else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista))
+					{
+						dto.setSubtipoActivo(resultSet.getString("Criptomoneda"));
 					}
 					else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 					{

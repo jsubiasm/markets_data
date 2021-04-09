@@ -122,10 +122,10 @@
 		</div>
 		<div class="mitadDcha">
 			<div class="w50pad">
-				<canvas id="chartArea11"></canvas>
+				<canvas id="chartArea001"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea12"></canvas>
+				<canvas id="chartArea002"></canvas>
 			</div>
 		</div>
 		<div class="w100pad">
@@ -182,6 +182,16 @@
 					</tbody>
 				</table>
 			</div>
+			<div class="w100pad">
+				<table>
+					<thead>
+						<tr><th>Criptomoneda</th><th>Prec. Tit. C.</th><th>Prec. Tit. V.</th><th>Flujo Caja</th><th>Val. Tit. Act.</th><th>Gan./Perd.</th><th>Gan./Perd. %</th><th>Peso %</th></tr>
+					</thead>
+					<tbody>
+						<!-- TEMPLATE.TABLE.CRIPTOMONEDA -->
+					</tbody>
+				</table>
+			</div>			
 			<div class="w100pad">
 				<table>
 					<thead>
@@ -244,35 +254,41 @@
 		</div>
 		<div class="mitadDcha">
 			<div class="w50pad">
-				<canvas id="chartArea01"></canvas>
+				<canvas id="chartArea003"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea02"></canvas>
+				<canvas id="chartArea004"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea03"></canvas>
+				<canvas id="chartArea005"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea04"></canvas>
+				<canvas id="chartArea006"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea05"></canvas>
+				<canvas id="chartArea007"></canvas>
+			</div>				
+			<div class="w50pad">
+				<canvas id="chartArea008"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea06"></canvas>
+				<canvas id="chartArea009"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea07"></canvas>
+				<canvas id="chartArea010"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea08"></canvas>
+				<canvas id="chartArea011"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea09"></canvas>
+				<canvas id="chartArea012"></canvas>
 			</div>
 			<div class="w50pad">
-				<canvas id="chartArea10"></canvas>
-			</div>			
+				<canvas id="chartArea013"></canvas>
+			</div>		
+			<div class="w50pad">
+		
+			</div>				
 		</div>
 		<div class="w100pad">
 			<table>
@@ -290,7 +306,7 @@
 			</div>
 		</div>
 		<script>
-			var chartContext11 = document.getElementById('chartArea11').getContext('2d');
+			var chartContext11 = document.getElementById('chartArea001').getContext('2d');
 			var myDoughnutChart11 = new Chart(chartContext11, {
 				type: 'doughnut',
 				data: {
@@ -324,7 +340,7 @@
 			});			
 		</script>	
 		<script>
-			var chartContext12 = document.getElementById('chartArea12').getContext('2d');
+			var chartContext12 = document.getElementById('chartArea002').getContext('2d');
 			var myDoughnutChart12 = new Chart(chartContext12, {
 				type: 'doughnut',
 				data: {
@@ -358,7 +374,7 @@
 			});			
 		</script>		
 		<script>
-			var chartContext01 = document.getElementById('chartArea01').getContext('2d');
+			var chartContext01 = document.getElementById('chartArea003').getContext('2d');
 			var myDoughnutChart01 = new Chart(chartContext01, {
 				type: 'doughnut',
 				data: {
@@ -392,7 +408,7 @@
 			});			
 		</script>	
 		<script>
-			var chartContext02 = document.getElementById('chartArea02').getContext('2d');
+			var chartContext02 = document.getElementById('chartArea004').getContext('2d');
 			var myDoughnutChart02 = new Chart(chartContext02, {
 				type: 'doughnut',
 				data: {
@@ -426,7 +442,7 @@
 			});			
 		</script>
 		<script>
-			var chartContext03 = document.getElementById('chartArea03').getContext('2d');
+			var chartContext03 = document.getElementById('chartArea005').getContext('2d');
 			var myDoughnutChart03 = new Chart(chartContext03, {
 				type: 'doughnut',
 				data: {
@@ -460,7 +476,7 @@
 			});			
 		</script>
 		<script>
-			var chartContext04 = document.getElementById('chartArea04').getContext('2d');
+			var chartContext04 = document.getElementById('chartArea006').getContext('2d');
 			var myDoughnutChart04 = new Chart(chartContext04, {
 				type: 'doughnut',
 				data: {
@@ -494,7 +510,41 @@
 			});			
 		</script>	
 		<script>
-			var chartContext05 = document.getElementById('chartArea05').getContext('2d');
+			var chartContext13 = document.getElementById('chartArea007').getContext('2d');
+			var myDoughnutChart13 = new Chart(chartContext13, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
+							// TEMPLATE.CHART.CRIPTOMONEDA.DATA //
+						],
+						backgroundColor: [
+							// TEMPLATE.CHART.CRIPTOMONEDA.BGCOLOR //
+						]
+					}],
+					labels: [
+						// TEMPLATE.CHART.CRIPTOMONEDA.LABEL //
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: false,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>		
+		<script>
+			var chartContext05 = document.getElementById('chartArea008').getContext('2d');
 			var myDoughnutChart05 = new Chart(chartContext05, {
 				type: 'doughnut',
 				data: {
@@ -528,7 +578,7 @@
 			});			
 		</script>
 		<script>
-			var chartContext06 = document.getElementById('chartArea06').getContext('2d');
+			var chartContext06 = document.getElementById('chartArea009').getContext('2d');
 			var myDoughnutChart06 = new Chart(chartContext06, {
 				type: 'doughnut',
 				data: {
@@ -562,7 +612,7 @@
 			});			
 		</script>
 		<script>
-			var chartContext07 = document.getElementById('chartArea07').getContext('2d');
+			var chartContext07 = document.getElementById('chartArea010').getContext('2d');
 			var myDoughnutChart07 = new Chart(chartContext07, {
 				type: 'doughnut',
 				data: {
@@ -596,7 +646,7 @@
 			});			
 		</script>
 		<script>
-			var chartContext08 = document.getElementById('chartArea08').getContext('2d');
+			var chartContext08 = document.getElementById('chartArea011').getContext('2d');
 			var myDoughnutChart08 = new Chart(chartContext08, {
 				type: 'doughnut',
 				data: {
@@ -630,7 +680,7 @@
 			});			
 		</script>
 		<script>
-			var chartContext09 = document.getElementById('chartArea09').getContext('2d');
+			var chartContext09 = document.getElementById('chartArea012').getContext('2d');
 			var myDoughnutChart09 = new Chart(chartContext09, {
 				type: 'doughnut',
 				data: {
@@ -664,7 +714,7 @@
 			});			
 		</script>
 		<script>
-			var chartContext10 = document.getElementById('chartArea10').getContext('2d');
+			var chartContext10 = document.getElementById('chartArea013').getContext('2d');
 			var myDoughnutChart10 = new Chart(chartContext10, {
 				type: 'doughnut',
 				data: {

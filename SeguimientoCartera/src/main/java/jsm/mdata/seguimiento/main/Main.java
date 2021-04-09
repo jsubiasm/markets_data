@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -203,7 +204,8 @@ public class Main
 			boolean incluirOro = sufijo.equalsIgnoreCase("ORO") && prod.getTipoActivo().equalsIgnoreCase("Oro");
 			boolean incluirRF = sufijo.equalsIgnoreCase("RF") && prod.getTipoActivo().equalsIgnoreCase("Renta Fija");
 			boolean incluirRV = sufijo.equalsIgnoreCase("RV") && prod.getTipoActivo().equalsIgnoreCase("Renta Variable");
-			if (incluirGlobal || incluirOro || incluirRF || incluirRV)
+			boolean incluirCripto = sufijo.equalsIgnoreCase("CRIPTO") && prod.getTipoActivo().equalsIgnoreCase("Criptomoneda");
+			if (incluirGlobal || incluirOro || incluirRF || incluirRV || incluirCripto)
 			{
 				if (mapGpp.containsKey(getMapKey(mov, prod)))
 				{
@@ -253,7 +255,7 @@ public class Main
 			gpp.setValorTitulosActuales(prodVar.getValorTitulo().multiply(gpp.getTitulosActuales()));
 			gpp.setFlujoCaja(gpp.getPrecioTitulosVendidos().subtract(gpp.getPrecioTitulosComprados()));
 			gpp.setGananciaPerdida(gpp.getPrecioTitulosVendidos().add(gpp.getValorTitulosActuales()).subtract(gpp.getPrecioTitulosComprados()));
-			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
+			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
 			sumValorTitulosActuales = sumValorTitulosActuales.add(gpp.getValorTitulosActuales());
 			mapGpp.put(mapKey, gpp);
 		}
@@ -262,7 +264,7 @@ public class Main
 			GanPerProdPesoDTO gpp = mapGpp.get(mapKey);
 			if (sumValorTitulosActuales.compareTo(BigDecimal.ZERO) == 1)
 			{
-				gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 6, RoundingMode.HALF_EVEN));
+				gpp.setPesoEnCartera(gpp.getValorTitulosActuales().multiply(new BigDecimal(100d)).divide(sumValorTitulosActuales, 10, RoundingMode.HALF_EVEN));
 			}
 			else
 			{
@@ -443,7 +445,7 @@ public class Main
 				gppVWF.setFlujoCaja(gppVWF.getFlujoCaja().add(gppIn.getFlujoCaja()));
 				gppVWF.setValorTitulosActuales(gppVWF.getValorTitulosActuales().add(gppIn.getValorTitulosActuales()));
 				gppVWF.setGananciaPerdida(gppVWF.getGananciaPerdida().add(gppIn.getGananciaPerdida()));
-				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
+				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
 				gppVWF.setPesoEnCartera(gppVWF.getPesoEnCartera().add(gppIn.getPesoEnCartera()));
 				gppVWF.setTer(gppVWF.getTer().add(gppIn.getValorTitulosActuales().multiply(gppIn.getTer())));
 				mapGppVWF.put(getMapKey(gppIn, nombreVista), gppVWF);
@@ -456,7 +458,7 @@ public class Main
 				gppVWF.setFlujoCaja(gppIn.getFlujoCaja());
 				gppVWF.setValorTitulosActuales(gppIn.getValorTitulosActuales());
 				gppVWF.setGananciaPerdida(gppIn.getGananciaPerdida());
-				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 6, RoundingMode.HALF_EVEN));
+				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
 				gppVWF.setPesoEnCartera(gppIn.getPesoEnCartera());
 				gppVWF.setTer(gppIn.getValorTitulosActuales().multiply(gppIn.getTer()));
 				mapGppVWF.put(getMapKey(gppIn, nombreVista), gppVWF);
@@ -467,7 +469,7 @@ public class Main
 			GanPerProdPesoDTO gppVWF = mapGppVWF.get("N/A");
 			if (gppVWF.getValorTitulosActuales().compareTo(BigDecimal.ZERO) == 1)
 			{
-				gppVWF.setTer(gppVWF.getTer().divide(gppVWF.getValorTitulosActuales(), 6, RoundingMode.HALF_EVEN));
+				gppVWF.setTer(gppVWF.getTer().divide(gppVWF.getValorTitulosActuales(), 10, RoundingMode.HALF_EVEN));
 			}
 			else
 			{
@@ -534,38 +536,56 @@ public class Main
 		for (ProductoVarDTO productoVar : listaProductosVar)
 		{
 			String urlScraping = productoVar.getUrlScraping();
-			Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
-			Elements tablasDatos = page.getElementsByClass("snapshotTextColor snapshotTextFontStyle snapshotTable overviewKeyStatsTable");
-			Element tablaDatos = tablasDatos.get(0);
-			Elements filas = tablaDatos.getElementsByTag("tr");
-			String fechaValor = null;
-			String valorTitulo = null;
-			String fechaTer = null;
-			String ter = null;
-			for (Element fila : filas)
+			if (urlScraping.contains("morningstar.es"))
 			{
-				if (fila.text().startsWith("VL "))
+				Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
+				Elements tablasDatos = page.getElementsByClass("snapshotTextColor snapshotTextFontStyle snapshotTable overviewKeyStatsTable");
+				Element tablaDatos = tablasDatos.get(0);
+				Elements filas = tablaDatos.getElementsByTag("tr");
+				String fechaValor = null;
+				String valorTitulo = null;
+				String fechaTer = null;
+				String ter = null;
+				for (Element fila : filas)
 				{
-					fechaValor = fila.text().substring(3, 13);
-					valorTitulo = fila.text().substring(18, fila.text().length());
+					if (fila.text().startsWith("VL "))
+					{
+						fechaValor = fila.text().substring(3, 13);
+						valorTitulo = fila.text().substring(18, fila.text().length());
+					}
+					else if (fila.text().startsWith("Precio de Cierre "))
+					{
+						fechaValor = fila.text().substring(17, 27);
+						valorTitulo = fila.text().substring(32, fila.text().length());
+					}
+					else if (fila.text().startsWith("Gastos Corrientes ") && !fila.text().contains("-%"))
+					{
+						fechaTer = fila.text().substring(18, 28);
+						ter = fila.text().substring(29, fila.text().length() - 1);
+					}
 				}
-				else if (fila.text().startsWith("Precio de Cierre "))
+				productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
+				productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
+				if (ter != null && fechaTer != null)
 				{
-					fechaValor = fila.text().substring(17, 27);
-					valorTitulo = fila.text().substring(32, fila.text().length());
-				}
-				else if (fila.text().startsWith("Gastos Corrientes ") && !fila.text().contains("-%"))
-				{
-					fechaTer = fila.text().substring(18, 28);
-					ter = fila.text().substring(29, fila.text().length() - 1);
+					productoVar.setFechaTer(new SimpleDateFormat("dd/MM/yyyy").parse(fechaTer));
+					productoVar.setTer(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(ter).doubleValue())));
 				}
 			}
-			productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
-			productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
-			if (ter != null && fechaTer != null)
+			else if (urlScraping.contains("investing.com"))
 			{
-				productoVar.setFechaTer(new SimpleDateFormat("dd/MM/yyyy").parse(fechaTer));
+				Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
+				Element elementPrecio = page.getElementById("last_last");
+				String valorTitulo = elementPrecio.text();
+				String ter = "0,0";
+				productoVar.setFechaValor(new Date());
+				productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
+				productoVar.setFechaTer(new Date());
 				productoVar.setTer(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(ter).doubleValue())));
+			}
+			else
+			{
+				throw new Exception("URL no soportada [" + urlScraping + "]");
 			}
 			int rowsUpdated = DatosDAO.update_TB02_PRODUCTOS_VAR(connection, productoVar);
 			if (rowsUpdated != 1)
@@ -583,7 +603,7 @@ public class Main
 	 */
 	private static boolean similar(BigDecimal primero, BigDecimal segundo)
 	{
-		double margenError = 0.02d;
+		double margenError = 0.0001d;
 		boolean similar = false;
 		if (primero.equals(segundo))
 		{
@@ -634,6 +654,11 @@ public class Main
 		templateDto.setChartRentaVariableData(HtmlTemplate.getChartData(vistaSubtipoActivoRV));
 		templateDto.setChartRentaVariableBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV"));
 		templateDto.setChartRentaVariableLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV"));
+		List<GanPerProdPesoDTO> vistaSubtipoActivoCripto = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_CRIPTO");
+		templateDto.setTableCriptomoneda(HtmlTemplate.getTable_VWF_nombreVista(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
+		templateDto.setChartCriptomonedaData(HtmlTemplate.getChartData(vistaSubtipoActivoCripto));
+		templateDto.setChartCriptomonedaBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
+		templateDto.setChartCriptomonedaLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
 		List<GanPerProdPesoDTO> vistaMoneda = DatosDAO.select_VWF_nombreVista(connection, "MONEDA");
 		templateDto.setTableMoneda(HtmlTemplate.getTable_VWF_nombreVista(vistaMoneda, "MONEDA"));
 		templateDto.setChartMonedaData(HtmlTemplate.getChartData(vistaMoneda));
@@ -696,6 +721,10 @@ public class Main
 				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.RENTA_VARIABLE -->"))
 				{
 					listLineasOutput.add(templateDto.getTableRentaVariable());
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.CRIPTOMONEDA -->"))
+				{
+					listLineasOutput.add(templateDto.getTableCriptomoneda());
 				}
 				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.MONEDA -->"))
 				{
@@ -800,6 +829,18 @@ public class Main
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.RENTA_VARIABLE.LABEL //"))
 				{
 					listLineasOutput.add(templateDto.getChartRentaVariableLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDA.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartCriptomonedaData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDA.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartCriptomonedaBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDA.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartCriptomonedaLabel());
 				}
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MONEDA.DATA //"))
 				{
@@ -989,6 +1030,9 @@ public class Main
 			Map<String, GanPerProdPesoDTO> mapGppRV = new HashMap<String, GanPerProdPesoDTO>();
 			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppRV, "RV");
 			validate_VWF_nombreVista(connection, mapGppRV, "SUBTIPO_ACTIVO_RV");
+			Map<String, GanPerProdPesoDTO> mapGppCripto = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppCripto, "CRIPTO");
+			validate_VWF_nombreVista(connection, mapGppCripto, "SUBTIPO_ACTIVO_CRIPTO");
 			LOGGER.info("Generando Informe");
 			generacionInformeHtml(connection);
 			LOGGER.info("Confirmando Transaccion");
