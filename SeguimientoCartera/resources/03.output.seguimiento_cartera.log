@@ -118,9 +118,9 @@ ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('EV
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('NN Cuenta Ahorro', 				10000.26,		0);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				37.87);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				32.87);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Openbank Familiar', 				0,				746.72);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Openbank Familiar', 				0,				733.72);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Openbank Fondos', 				0,				0);
 1 row inserted/updated/deleted
