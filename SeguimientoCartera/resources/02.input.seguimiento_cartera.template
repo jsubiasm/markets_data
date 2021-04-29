@@ -185,10 +185,10 @@
 			<div class="w100pad">
 				<table>
 					<thead>
-						<tr><th>Criptomoneda</th><th>Prec. Tit. C.</th><th>Prec. Tit. V.</th><th>Flujo Caja</th><th>Val. Tit. Act.</th><th>Gan./Perd.</th><th>Gan./Perd. %</th><th>Peso %</th></tr>
+						<tr><th>Criptomonedas</th><th>Prec. Tit. C.</th><th>Prec. Tit. V.</th><th>Flujo Caja</th><th>Val. Tit. Act.</th><th>Gan./Perd.</th><th>Gan./Perd. %</th><th>Peso %</th></tr>
 					</thead>
 					<tbody>
-						<!-- TEMPLATE.TABLE.CRIPTOMONEDA -->
+						<!-- TEMPLATE.TABLE.CRIPTOMONEDAS -->
 					</tbody>
 				</table>
 			</div>			
@@ -274,9 +274,9 @@
 			<div class="w50pad">
 				<canvas id="chartArea009"></canvas>
 			</div>
-			<div class="w50pad">
+			<!--div class="w50pad">
 				<canvas id="chartArea010"></canvas>
-			</div>
+			</div-->
 			<div class="w50pad">
 				<canvas id="chartArea011"></canvas>
 			</div>
@@ -306,8 +306,8 @@
 			</div>
 		</div>
 		<script>
-			var chartContext11 = document.getElementById('chartArea001').getContext('2d');
-			var myDoughnutChart11 = new Chart(chartContext11, {
+			var chartContext001 = document.getElementById('chartArea001').getContext('2d');
+			var myDoughnutChart001 = new Chart(chartContext001, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -340,8 +340,8 @@
 			});			
 		</script>	
 		<script>
-			var chartContext12 = document.getElementById('chartArea002').getContext('2d');
-			var myDoughnutChart12 = new Chart(chartContext12, {
+			var chartContext002 = document.getElementById('chartArea002').getContext('2d');
+			var myDoughnutChart002 = new Chart(chartContext002, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -374,8 +374,8 @@
 			});			
 		</script>		
 		<script>
-			var chartContext01 = document.getElementById('chartArea003').getContext('2d');
-			var myDoughnutChart01 = new Chart(chartContext01, {
+			var chartContext003 = document.getElementById('chartArea003').getContext('2d');
+			var myDoughnutChart003 = new Chart(chartContext003, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -408,8 +408,8 @@
 			});			
 		</script>	
 		<script>
-			var chartContext02 = document.getElementById('chartArea004').getContext('2d');
-			var myDoughnutChart02 = new Chart(chartContext02, {
+			var chartContext004 = document.getElementById('chartArea004').getContext('2d');
+			var myDoughnutChart004 = new Chart(chartContext004, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -442,8 +442,8 @@
 			});			
 		</script>
 		<script>
-			var chartContext03 = document.getElementById('chartArea005').getContext('2d');
-			var myDoughnutChart03 = new Chart(chartContext03, {
+			var chartContext005 = document.getElementById('chartArea005').getContext('2d');
+			var myDoughnutChart005 = new Chart(chartContext005, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -476,8 +476,8 @@
 			});			
 		</script>
 		<script>
-			var chartContext04 = document.getElementById('chartArea006').getContext('2d');
-			var myDoughnutChart04 = new Chart(chartContext04, {
+			var chartContext006 = document.getElementById('chartArea006').getContext('2d');
+			var myDoughnutChart006 = new Chart(chartContext006, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -510,20 +510,20 @@
 			});			
 		</script>	
 		<script>
-			var chartContext13 = document.getElementById('chartArea007').getContext('2d');
-			var myDoughnutChart13 = new Chart(chartContext13, {
+			var chartContext007 = document.getElementById('chartArea007').getContext('2d');
+			var myDoughnutChart007 = new Chart(chartContext007, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
 						data: [
-							// TEMPLATE.CHART.CRIPTOMONEDA.DATA //
+							// TEMPLATE.CHART.CRIPTOMONEDAS.DATA //
 						],
 						backgroundColor: [
-							// TEMPLATE.CHART.CRIPTOMONEDA.BGCOLOR //
+							// TEMPLATE.CHART.CRIPTOMONEDAS.BGCOLOR //
 						]
 					}],
 					labels: [
-						// TEMPLATE.CHART.CRIPTOMONEDA.LABEL //
+						// TEMPLATE.CHART.CRIPTOMONEDAS.LABEL //
 					]
 				},
 				options: {
@@ -544,8 +544,8 @@
 			});			
 		</script>		
 		<script>
-			var chartContext05 = document.getElementById('chartArea008').getContext('2d');
-			var myDoughnutChart05 = new Chart(chartContext05, {
+			var chartContext008 = document.getElementById('chartArea008').getContext('2d');
+			var myDoughnutChart008 = new Chart(chartContext008, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -578,8 +578,8 @@
 			});			
 		</script>
 		<script>
-			var chartContext06 = document.getElementById('chartArea009').getContext('2d');
-			var myDoughnutChart06 = new Chart(chartContext06, {
+			var chartContext009 = document.getElementById('chartArea009').getContext('2d');
+			var myDoughnutChart009 = new Chart(chartContext009, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -612,8 +612,9 @@
 			});			
 		</script>
 		<script>
-			var chartContext07 = document.getElementById('chartArea010').getContext('2d');
-			var myDoughnutChart07 = new Chart(chartContext07, {
+			/*
+			var chartContext010 = document.getElementById('chartArea010').getContext('2d');
+			var myDoughnutChart010 = new Chart(chartContext010, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -643,11 +644,12 @@
 						animateRotate: true
 					}
 				}
-			});			
+			});
+			*/
 		</script>
 		<script>
-			var chartContext08 = document.getElementById('chartArea011').getContext('2d');
-			var myDoughnutChart08 = new Chart(chartContext08, {
+			var chartContext011 = document.getElementById('chartArea011').getContext('2d');
+			var myDoughnutChart011 = new Chart(chartContext011, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -680,8 +682,8 @@
 			});			
 		</script>
 		<script>
-			var chartContext09 = document.getElementById('chartArea012').getContext('2d');
-			var myDoughnutChart09 = new Chart(chartContext09, {
+			var chartContext012 = document.getElementById('chartArea012').getContext('2d');
+			var myDoughnutChart012 = new Chart(chartContext012, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -714,8 +716,8 @@
 			});			
 		</script>
 		<script>
-			var chartContext10 = document.getElementById('chartArea013').getContext('2d');
-			var myDoughnutChart10 = new Chart(chartContext10, {
+			var chartContext013 = document.getElementById('chartArea013').getContext('2d');
+			var myDoughnutChart013 = new Chart(chartContext013, {
 				type: 'doughnut',
 				data: {
 					datasets: [{

@@ -204,7 +204,7 @@ public class Main
 			boolean incluirOro = sufijo.equalsIgnoreCase("ORO") && prod.getTipoActivo().equalsIgnoreCase("Oro");
 			boolean incluirRF = sufijo.equalsIgnoreCase("RF") && prod.getTipoActivo().equalsIgnoreCase("Renta Fija");
 			boolean incluirRV = sufijo.equalsIgnoreCase("RV") && prod.getTipoActivo().equalsIgnoreCase("Renta Variable");
-			boolean incluirCripto = sufijo.equalsIgnoreCase("CRIPTO") && prod.getTipoActivo().equalsIgnoreCase("Criptomoneda");
+			boolean incluirCripto = sufijo.equalsIgnoreCase("CRIPTO") && prod.getTipoActivo().equalsIgnoreCase("Criptomonedas");
 			if (incluirGlobal || incluirOro || incluirRF || incluirRV || incluirCripto)
 			{
 				if (mapGpp.containsKey(getMapKey(mov, prod)))
@@ -655,10 +655,10 @@ public class Main
 		templateDto.setChartRentaVariableBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV"));
 		templateDto.setChartRentaVariableLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoRV, "SUBTIPO_ACTIVO_RV"));
 		List<GanPerProdPesoDTO> vistaSubtipoActivoCripto = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_CRIPTO");
-		templateDto.setTableCriptomoneda(HtmlTemplate.getTable_VWF_nombreVista(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
-		templateDto.setChartCriptomonedaData(HtmlTemplate.getChartData(vistaSubtipoActivoCripto));
-		templateDto.setChartCriptomonedaBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
-		templateDto.setChartCriptomonedaLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
+		templateDto.setTableCriptomonedas(HtmlTemplate.getTable_VWF_nombreVista(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
+		templateDto.setChartCriptomonedasData(HtmlTemplate.getChartData(vistaSubtipoActivoCripto));
+		templateDto.setChartCriptomonedasBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
+		templateDto.setChartCriptomonedasLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
 		List<GanPerProdPesoDTO> vistaMoneda = DatosDAO.select_VWF_nombreVista(connection, "MONEDA");
 		templateDto.setTableMoneda(HtmlTemplate.getTable_VWF_nombreVista(vistaMoneda, "MONEDA"));
 		templateDto.setChartMonedaData(HtmlTemplate.getChartData(vistaMoneda));
@@ -722,9 +722,9 @@ public class Main
 				{
 					listLineasOutput.add(templateDto.getTableRentaVariable());
 				}
-				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.CRIPTOMONEDA -->"))
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.CRIPTOMONEDAS -->"))
 				{
-					listLineasOutput.add(templateDto.getTableCriptomoneda());
+					listLineasOutput.add(templateDto.getTableCriptomonedas());
 				}
 				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.MONEDA -->"))
 				{
@@ -830,17 +830,17 @@ public class Main
 				{
 					listLineasOutput.add(templateDto.getChartRentaVariableLabel());
 				}
-				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDA.DATA //"))
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDAS.DATA //"))
 				{
-					listLineasOutput.add(templateDto.getChartCriptomonedaData());
+					listLineasOutput.add(templateDto.getChartCriptomonedasData());
 				}
-				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDA.BGCOLOR //"))
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDAS.BGCOLOR //"))
 				{
-					listLineasOutput.add(templateDto.getChartCriptomonedaBGColor());
+					listLineasOutput.add(templateDto.getChartCriptomonedasBGColor());
 				}
-				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDA.LABEL //"))
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDAS.LABEL //"))
 				{
-					listLineasOutput.add(templateDto.getChartCriptomonedaLabel());
+					listLineasOutput.add(templateDto.getChartCriptomonedasLabel());
 				}
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MONEDA.DATA //"))
 				{

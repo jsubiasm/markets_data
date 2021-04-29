@@ -235,7 +235,7 @@ public class HtmlTemplate
 				{
 					output.append("'#f59393'").append(",");
 				}
-				else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista) || "Criptomoneda".equalsIgnoreCase(tableRow.getTipoActivo()))
+				else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista) || "Criptomonedas".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
 					output.append("'#d6abf5'").append(",");
 				}
@@ -468,7 +468,7 @@ public class HtmlTemplate
 				{
 					output.append("'#f59393'").append(",");
 				}
-				else if ("Criptomoneda".equalsIgnoreCase(tableRow.getTipoActivo()))
+				else if ("Criptomonedas".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
 					output.append("'#d6abf5'").append(",");
 				}

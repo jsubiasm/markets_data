@@ -305,7 +305,7 @@ public class DatosDAO
 				}
 				else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista))
 				{
-					campoVista = "\"Criptomoneda\"";
+					campoVista = "\"Criptomonedas\"";
 				}
 				else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 				{
@@ -371,7 +371,7 @@ public class DatosDAO
 					}
 					else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista))
 					{
-						dto.setSubtipoActivo(resultSet.getString("Criptomoneda"));
+						dto.setSubtipoActivo(resultSet.getString("Criptomonedas"));
 					}
 					else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 					{

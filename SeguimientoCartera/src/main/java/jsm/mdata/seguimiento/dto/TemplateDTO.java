@@ -25,7 +25,7 @@ public class TemplateDTO
 	private String tableOro;
 	private String tableRentaFija;
 	private String tableRentaVariable;
-	private String tableCriptomoneda;
+	private String tableCriptomonedas;
 	private String tableMoneda;
 	private String tableInstrumento;
 	private String tableUsoIngresos;
@@ -45,9 +45,9 @@ public class TemplateDTO
 	private String chartRentaVariableData;
 	private String chartRentaVariableBGColor;
 	private String chartRentaVariableLabel;
-	private String chartCriptomonedaData;
-	private String chartCriptomonedaBGColor;
-	private String chartCriptomonedaLabel;
+	private String chartCriptomonedasData;
+	private String chartCriptomonedasBGColor;
+	private String chartCriptomonedasLabel;
 	private String chartMonedaData;
 	private String chartMonedaBGColor;
 	private String chartMonedaLabel;
@@ -261,19 +261,19 @@ public class TemplateDTO
 	}
 
 	/**
-	 * @return the tableCriptomoneda
+	 * @return the tableCriptomonedas
 	 */
-	public String getTableCriptomoneda()
+	public String getTableCriptomonedas()
 	{
-		return tableCriptomoneda;
+		return tableCriptomonedas;
 	}
 
 	/**
-	 * @param tableCriptomoneda the tableCriptomoneda to set
+	 * @param tableCriptomonedas the tableCriptomonedas to set
 	 */
-	public void setTableCriptomoneda(String tableCriptomoneda)
+	public void setTableCriptomonedas(String tableCriptomonedas)
 	{
-		this.tableCriptomoneda = tableCriptomoneda;
+		this.tableCriptomonedas = tableCriptomonedas;
 	}
 
 	/**
@@ -581,51 +581,51 @@ public class TemplateDTO
 	}
 
 	/**
-	 * @return the chartCriptomonedaData
+	 * @return the chartCriptomonedasData
 	 */
-	public String getChartCriptomonedaData()
+	public String getChartCriptomonedasData()
 	{
-		return chartCriptomonedaData;
+		return chartCriptomonedasData;
 	}
 
 	/**
-	 * @param chartCriptomonedaData the chartCriptomonedaData to set
+	 * @param chartCriptomonedasData the chartCriptomonedasData to set
 	 */
-	public void setChartCriptomonedaData(String chartCriptomonedaData)
+	public void setChartCriptomonedasData(String chartCriptomonedasData)
 	{
-		this.chartCriptomonedaData = chartCriptomonedaData;
+		this.chartCriptomonedasData = chartCriptomonedasData;
 	}
 
 	/**
-	 * @return the chartCriptomonedaBGColor
+	 * @return the chartCriptomonedasBGColor
 	 */
-	public String getChartCriptomonedaBGColor()
+	public String getChartCriptomonedasBGColor()
 	{
-		return chartCriptomonedaBGColor;
+		return chartCriptomonedasBGColor;
 	}
 
 	/**
-	 * @param chartCriptomonedaBGColor the chartCriptomonedaBGColor to set
+	 * @param chartCriptomonedasBGColor the chartCriptomonedasBGColor to set
 	 */
-	public void setChartCriptomonedaBGColor(String chartCriptomonedaBGColor)
+	public void setChartCriptomonedasBGColor(String chartCriptomonedasBGColor)
 	{
-		this.chartCriptomonedaBGColor = chartCriptomonedaBGColor;
+		this.chartCriptomonedasBGColor = chartCriptomonedasBGColor;
 	}
 
 	/**
-	 * @return the chartCriptomonedaLabel
+	 * @return the chartCriptomonedasLabel
 	 */
-	public String getChartCriptomonedaLabel()
+	public String getChartCriptomonedasLabel()
 	{
-		return chartCriptomonedaLabel;
+		return chartCriptomonedasLabel;
 	}
 
 	/**
-	 * @param chartCriptomonedaLabel the chartCriptomonedaLabel to set
+	 * @param chartCriptomonedasLabel the chartCriptomonedasLabel to set
 	 */
-	public void setChartCriptomonedaLabel(String chartCriptomonedaLabel)
+	public void setChartCriptomonedasLabel(String chartCriptomonedasLabel)
 	{
-		this.chartCriptomonedaLabel = chartCriptomonedaLabel;
+		this.chartCriptomonedasLabel = chartCriptomonedasLabel;
 	}
 
 	/**
