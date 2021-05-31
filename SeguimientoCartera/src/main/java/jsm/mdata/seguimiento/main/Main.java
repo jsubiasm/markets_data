@@ -221,7 +221,6 @@ public class Main
 				{
 					GanPerProdPesoDTO gpp = new GanPerProdPesoDTO();
 					gpp.setGananciaPerdida(BigDecimal.ZERO);
-					gpp.setGananciaPerdidaPrcnt(BigDecimal.ZERO);
 					gpp.setPesoEnCartera(BigDecimal.ZERO);
 					gpp.setValorTitulo(BigDecimal.ZERO);
 					gpp.setValorTitulosActuales(BigDecimal.ZERO);
@@ -255,7 +254,21 @@ public class Main
 			gpp.setValorTitulosActuales(prodVar.getValorTitulo().multiply(gpp.getTitulosActuales()));
 			gpp.setFlujoCaja(gpp.getPrecioTitulosVendidos().subtract(gpp.getPrecioTitulosComprados()));
 			gpp.setGananciaPerdida(gpp.getPrecioTitulosVendidos().add(gpp.getValorTitulosActuales()).subtract(gpp.getPrecioTitulosComprados()));
-			gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
+			if (gpp.getValorTitulosActuales().compareTo(BigDecimal.ZERO) == 1)
+			{
+				if (gpp.getFlujoCaja().compareTo(BigDecimal.ZERO) == -1)
+				{
+					gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(-100d)).divide(gpp.getFlujoCaja(), 10, RoundingMode.HALF_EVEN));
+				}
+				else
+				{
+					gpp.setGananciaPerdidaPrcnt(null);
+				}
+			}
+			else
+			{
+				gpp.setGananciaPerdidaPrcnt(gpp.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gpp.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
+			}
 			sumValorTitulosActuales = sumValorTitulosActuales.add(gpp.getValorTitulosActuales());
 			mapGpp.put(mapKey, gpp);
 		}
@@ -445,7 +458,21 @@ public class Main
 				gppVWF.setFlujoCaja(gppVWF.getFlujoCaja().add(gppIn.getFlujoCaja()));
 				gppVWF.setValorTitulosActuales(gppVWF.getValorTitulosActuales().add(gppIn.getValorTitulosActuales()));
 				gppVWF.setGananciaPerdida(gppVWF.getGananciaPerdida().add(gppIn.getGananciaPerdida()));
-				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
+				if (gppVWF.getValorTitulosActuales().compareTo(BigDecimal.ZERO) == 1)
+				{
+					if (gppVWF.getFlujoCaja().compareTo(BigDecimal.ZERO) == -1)
+					{
+						gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(-100d)).divide(gppVWF.getFlujoCaja(), 10, RoundingMode.HALF_EVEN));
+					}
+					else
+					{
+						gppVWF.setGananciaPerdidaPrcnt(null);
+					}
+				}
+				else
+				{
+					gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
+				}
 				gppVWF.setPesoEnCartera(gppVWF.getPesoEnCartera().add(gppIn.getPesoEnCartera()));
 				gppVWF.setTer(gppVWF.getTer().add(gppIn.getValorTitulosActuales().multiply(gppIn.getTer())));
 				mapGppVWF.put(getMapKey(gppIn, nombreVista), gppVWF);
@@ -458,7 +485,21 @@ public class Main
 				gppVWF.setFlujoCaja(gppIn.getFlujoCaja());
 				gppVWF.setValorTitulosActuales(gppIn.getValorTitulosActuales());
 				gppVWF.setGananciaPerdida(gppIn.getGananciaPerdida());
-				gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
+				if (gppVWF.getValorTitulosActuales().compareTo(BigDecimal.ZERO) == 1)
+				{
+					if (gppVWF.getFlujoCaja().compareTo(BigDecimal.ZERO) == -1)
+					{
+						gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(-100d)).divide(gppVWF.getFlujoCaja(), 10, RoundingMode.HALF_EVEN));
+					}
+					else
+					{
+						gppVWF.setGananciaPerdidaPrcnt(null);
+					}
+				}
+				else
+				{
+					gppVWF.setGananciaPerdidaPrcnt(gppVWF.getGananciaPerdida().multiply(new BigDecimal(100d)).divide(gppVWF.getPrecioTitulosComprados(), 10, RoundingMode.HALF_EVEN));
+				}
 				gppVWF.setPesoEnCartera(gppIn.getPesoEnCartera());
 				gppVWF.setTer(gppIn.getValorTitulosActuales().multiply(gppIn.getTer()));
 				mapGppVWF.put(getMapKey(gppIn, nombreVista), gppVWF);
@@ -605,7 +646,7 @@ public class Main
 	{
 		double margenError = 0.0001d;
 		boolean similar = false;
-		if (primero.equals(segundo))
+		if ((primero == null && segundo == null) || primero.equals(segundo))
 		{
 			similar = true;
 		}

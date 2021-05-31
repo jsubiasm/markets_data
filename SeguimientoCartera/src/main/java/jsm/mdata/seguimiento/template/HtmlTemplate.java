@@ -108,7 +108,14 @@ public class HtmlTemplate
 		strTableRow.append("<td>").append(tableRow.getFlujoCaja().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		if (tableRow.getGananciaPerdidaPrcnt() != null)
+		{
+			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		}
+		else
+		{
+			strTableRow.append("<td>N/A</td>");
+		}
 		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
@@ -158,7 +165,14 @@ public class HtmlTemplate
 		strTableRow.append("<td>").append(tableRow.getValorTitulo().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		if (tableRow.getGananciaPerdidaPrcnt() != null)
+		{
+			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		}
+		else
+		{
+			strTableRow.append("<td>N/A</td>");
+		}
 		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
@@ -171,13 +185,16 @@ public class HtmlTemplate
 	private static String getTDColor(BigDecimal valor)
 	{
 		String tdColor = "";
-		if (valor.compareTo(BigDecimal.ZERO) < 0)
+		if (valor != null)
 		{
-			tdColor = " style=\"color:red\"";
-		}
-		else if (valor.compareTo(BigDecimal.ZERO) > 0)
-		{
-			tdColor = " style=\"color:green\"";
+			if (valor.compareTo(BigDecimal.ZERO) < 0)
+			{
+				tdColor = " style=\"color:red\"";
+			}
+			else if (valor.compareTo(BigDecimal.ZERO) > 0)
+			{
+				tdColor = " style=\"color:green\"";
+			}
 		}
 		return tdColor;
 	}
