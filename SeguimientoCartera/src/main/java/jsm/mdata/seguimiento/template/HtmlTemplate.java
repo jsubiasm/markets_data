@@ -43,7 +43,7 @@ public class HtmlTemplate
 	private static String getRow_VWF_nombreVista(GanPerProdPesoDTO tableRow, String nombreVista) throws Throwable
 	{
 		StringBuilder strTableRow = new StringBuilder();
-		strTableRow.append("<tr>");
+		strTableRow.append("<tr").append(getTRColor(tableRow.getValorTitulosActuales())).append(">");
 		if (nombreVista != null)
 		{
 			if ("COMERCIALIZADOR".equalsIgnoreCase(nombreVista))
@@ -107,10 +107,10 @@ public class HtmlTemplate
 		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getFlujoCaja().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		if (tableRow.getGananciaPerdidaPrcnt() != null)
 		{
-			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		}
 		else
 		{
@@ -144,7 +144,7 @@ public class HtmlTemplate
 	private static String getRow_VWF_GAN_PER_PROD_PESO_GLOBAL(GanPerProdPesoDTO tableRow) throws Throwable
 	{
 		StringBuilder strTableRow = new StringBuilder();
-		strTableRow.append("<tr>");
+		strTableRow.append("<tr").append(getTRColor(tableRow.getValorTitulosActuales())).append(">");
 		strTableRow.append("<td>").append(tableRow.getProductoId()).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getNombre()).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getComercializador()).append("</td>");
@@ -164,10 +164,10 @@ public class HtmlTemplate
 		strTableRow.append("<td>").append(tableRow.getTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getValorTitulo().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		if (tableRow.getGananciaPerdidaPrcnt() != null)
 		{
-			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		}
 		else
 		{
@@ -182,21 +182,52 @@ public class HtmlTemplate
 	 * @param valor
 	 * @return
 	 */
-	private static String getTDColor(BigDecimal valor)
+	private static String getTDColor(BigDecimal valor, BigDecimal valorTitulosActuales)
 	{
 		String tdColor = "";
 		if (valor != null)
 		{
 			if (valor.compareTo(BigDecimal.ZERO) < 0)
 			{
-				tdColor = " style=\"color:red\"";
+				if (valorTitulosActuales.compareTo(BigDecimal.ZERO) == 0)
+				{
+					tdColor = " style=\"color:#d47f7f\"";
+				}
+				else
+				{
+					tdColor = " style=\"color:red\"";
+				}
 			}
 			else if (valor.compareTo(BigDecimal.ZERO) > 0)
 			{
-				tdColor = " style=\"color:green\"";
+				if (valorTitulosActuales.compareTo(BigDecimal.ZERO) == 0)
+				{
+					tdColor = " style=\"color:#80ad76\"";
+				}
+				else
+				{
+					tdColor = " style=\"color:green\"";
+				}
 			}
 		}
 		return tdColor;
+	}
+
+	/**
+	 * @param valor
+	 * @return
+	 */
+	private static String getTRColor(BigDecimal valorTitulosActuales)
+	{
+		String trColor = "";
+		if (valorTitulosActuales != null)
+		{
+			if (valorTitulosActuales.compareTo(BigDecimal.ZERO) == 0)
+			{
+				trColor = " style=\"color:#999999\"";
+			}
+		}
+		return trColor;
 	}
 
 	/**
