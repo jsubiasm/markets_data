@@ -110,13 +110,13 @@ public class HtmlTemplate
 		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		if (tableRow.getGananciaPerdidaPrcnt() != null)
 		{
-			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append(" %</td>");
 		}
 		else
 		{
 			strTableRow.append("<td>N/A</td>");
 		}
-		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append(" %</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
 	}
@@ -167,13 +167,13 @@ public class HtmlTemplate
 		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		if (tableRow.getGananciaPerdidaPrcnt() != null)
 		{
-			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append(" %</td>");
 		}
 		else
 		{
 			strTableRow.append("<td>N/A</td>");
 		}
-		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append(" %</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
 	}
