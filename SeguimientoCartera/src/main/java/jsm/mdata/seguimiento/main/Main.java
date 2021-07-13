@@ -618,11 +618,8 @@ public class Main
 				Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
 				Element elementPrecio = page.getElementById("last_last");
 				String valorTitulo = elementPrecio.text();
-				String ter = "0,0";
 				productoVar.setFechaValor(new Date());
 				productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
-				productoVar.setFechaTer(new Date());
-				productoVar.setTer(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(ter).doubleValue())));
 			}
 			else
 			{
