@@ -106,7 +106,7 @@ ij> ALTER TABLE TB00_EFECTIVO ADD CONSTRAINT TB00_EFECTIVO_NOMBRE_CUENTA_PK Prim
 ij> --
 --
 --
-INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('ING Sin Nomina', 					4029.96,		0);
+INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('ING Sin Nomina', 					2069.96,		0);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('ING Naranja', 					0,				0);
 1 row inserted/updated/deleted
@@ -118,7 +118,7 @@ ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('EV
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('NN Cuenta Ahorro', 				10000.01,		0);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				138.37);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				123.87);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Openbank Familiar', 				0,				821.13);
 1 row inserted/updated/deleted
@@ -135,6 +135,8 @@ ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Cl
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Degiro jotasumin', 				0,				0);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Degiro jsubiasm', 				0,				0);
+1 row inserted/updated/deleted
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Interactive Brokers',				10.0,			0);
 1 row inserted/updated/deleted
 ij> --
 --
@@ -390,6 +392,8 @@ ij> INSERT INTO TB01_PROVEEDOR (VALOR) VALUES ('N/A');
 1 row inserted/updated/deleted
 ij> INSERT INTO TB01_PROVEEDOR (VALOR) VALUES ('Vanguard');
 1 row inserted/updated/deleted
+ij> INSERT INTO TB01_PROVEEDOR (VALOR) VALUES ('Varios');
+1 row inserted/updated/deleted
 ij> INSERT INTO TB01_PROVEEDOR (VALOR) VALUES ('Wisdom Tree');
 1 row inserted/updated/deleted
 ij> INSERT INTO TB01_PROVEEDOR (VALOR) VALUES ('iShares');
@@ -480,9 +484,9 @@ ij> INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, T
 1 row inserted/updated/deleted
 ij> INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS) VALUES ('LU0389812933','Amundi IS JP Morgan GBI Glbl Gvs AHE-C','Amundi','Fondo','Renta Fija','RF Global MP','EUR Hdg','Acumulacion');
 1 row inserted/updated/deleted
-ij> INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS) VALUES ('N5137','Indexa Mas Rentabilidad Bonos','N/A','Plan Pension','Renta Fija','RF Global MP','EUR No Hdg','Acumulacion');
+ij> INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS) VALUES ('N5137','Indexa Mas Rentabilidad Bonos','Varios','Plan Pension','Renta Fija','RF Global MP','EUR No Hdg','Acumulacion');
 1 row inserted/updated/deleted
-ij> INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS) VALUES ('N5138','Indexa Mas Rentabilidad Acciones','N/A','Plan Pension','Renta Variable','RV Glob Desa','EUR No Hdg','Acumulacion');
+ij> INSERT INTO TB02_PRODUCTOS (IDENTIFICADOR, NOMBRE, PROVEEDOR, INSTRUMENTO, TIPO_ACTIVO, SUBTIPO_ACTIVO, MONEDA, USO_INGRESOS) VALUES ('N5138','Indexa Mas Rentabilidad Acciones','Varios','Plan Pension','Renta Variable','RV Glob Desa','EUR No Hdg','Acumulacion');
 1 row inserted/updated/deleted
 ij> --
 --
