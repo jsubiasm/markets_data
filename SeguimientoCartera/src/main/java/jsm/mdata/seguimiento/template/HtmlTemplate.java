@@ -191,7 +191,7 @@ public class HtmlTemplate
 			{
 				if (valorTitulosActuales.compareTo(BigDecimal.ZERO) == 0)
 				{
-					tdColor = " style=\"color:#9c7676\"";
+					// tdColor = " style=\"color:#9c7676\"";
 				}
 				else
 				{
@@ -202,7 +202,7 @@ public class HtmlTemplate
 			{
 				if (valorTitulosActuales.compareTo(BigDecimal.ZERO) == 0)
 				{
-					tdColor = " style=\"color:#769c7e\"";
+					// tdColor = " style=\"color:#769c7e\"";
 				}
 				else
 				{
