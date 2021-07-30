@@ -120,7 +120,7 @@ ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('NN
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				89.87);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('OpenBank Familiar', 				0,				348.65);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('OpenBank Familiar', 				0,				240.99);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, LIQUIDO, INMOVILIZADO) VALUES ('OpenBank Fondos', 				0,				0);
 1 row inserted/updated/deleted
@@ -1141,7 +1141,7 @@ SELECT
 	CAST(GANANCIA_PERDIDA_PRCNT AS DECIMAL(20, 10)) AS "Gan./Perd. %",
 	(CASE WHEN CAST(PESO_EN_CARTERA AS DECIMAL(20, 10)) >= 99.99 THEN 100.000000 ELSE CAST(PESO_EN_CARTERA AS DECIMAL(20, 10)) END) AS "Peso %"
 FROM VW03_GAN_PER_PROD_PESO_GLOBAL
-ORDER BY 22;
+ORDER BY 22, 7, 6, 2;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -1199,7 +1199,7 @@ FROM (
 		COMERCIALIZADOR
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -1229,7 +1229,7 @@ FROM (
 		MERCADO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -1259,7 +1259,7 @@ FROM (
 		PROVEEDOR
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -1289,7 +1289,7 @@ FROM (
 		INSTRUMENTO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -1319,7 +1319,7 @@ FROM (
 		TIPO_ACTIVO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -1349,7 +1349,7 @@ FROM (
 		SUBTIPO_ACTIVO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -1379,7 +1379,7 @@ FROM (
 		MONEDA
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -1409,7 +1409,7 @@ FROM (
 		USO_INGRESOS
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -2339,7 +2339,7 @@ FROM (
 		SUBTIPO_ACTIVO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -2369,7 +2369,7 @@ FROM (
 		SUBTIPO_ACTIVO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -2399,7 +2399,7 @@ FROM (
 		SUBTIPO_ACTIVO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> --
 --
@@ -2429,6 +2429,6 @@ FROM (
 		SUBTIPO_ACTIVO
 ) 
 TMP_GANANCIA_PERDIDA_PRCNT
-ORDER BY 8;
+ORDER BY 8, 1;
 0 rows inserted/updated/deleted
 ij> 
