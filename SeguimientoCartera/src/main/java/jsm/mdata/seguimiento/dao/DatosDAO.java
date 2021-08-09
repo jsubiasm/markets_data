@@ -307,6 +307,10 @@ public class DatosDAO
 				{
 					campoVista = "\"Criptomonedas\"";
 				}
+				else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Liquidez\"";
+				}
 				else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 				{
 					campoVista = "\"Tipo Activo\"";
@@ -372,6 +376,10 @@ public class DatosDAO
 					else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Criptomonedas"));
+					}
+					else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista))
+					{
+						dto.setSubtipoActivo(resultSet.getString("Liquidez"));
 					}
 					else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 					{
@@ -523,7 +531,7 @@ public class DatosDAO
 		try
 		{
 			LOGGER.debug("Abriendo Sentencia");
-			statement = connection.prepareStatement("SELECT \"Nombre Cuenta\", \"Liquido\", \"Inmovilizado\" FROM VWF_EFECTIVO");
+			statement = connection.prepareStatement("SELECT \"Nombre Cuenta\", \"Disponible\", \"Inmovilizado\" FROM VWF_EFECTIVO");
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
 			LOGGER.debug("Abriendo Cursor");
@@ -531,7 +539,7 @@ public class DatosDAO
 			{
 				EfectivoDTO dto = new EfectivoDTO();
 				dto.setNombreCuenta(resultSet.getString("Nombre Cuenta"));
-				dto.setLiquido(resultSet.getBigDecimal("Liquido"));
+				dto.setDisponible(resultSet.getBigDecimal("Disponible"));
 				dto.setInmovilizado(resultSet.getBigDecimal("Inmovilizado"));
 				listaEfectivo.add(dto);
 			}

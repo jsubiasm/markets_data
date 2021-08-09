@@ -105,7 +105,7 @@
 			<div class="w100pad">
 				<table>
 					<thead>
-						<tr><th>Nombre Cuenta</th><th>Liquido</th><th>Inmovilizado</th></tr>
+						<tr><th>Nombre Cuenta</th><th>Disponible</th><th>Inmovilizado</th></tr>
 					</thead>
 					<tbody>
 						<!-- TEMPLATE.TABLE.EFECTIVO -->
@@ -144,17 +144,17 @@
 						<!-- TEMPLATE.TABLE.TIPO_ACTIVO -->
 					</tbody>
 				</table>	
-			</div>
+			</div>		
 			<div class="w100pad">
 				<table>
 					<thead>
-						<tr><th>Oro</th><th>Prec. Tit. C.</th><th>Prec. Tit. V.</th><th>Flujo Caja</th><th>Val. Tit. Act.</th><th>Gan./Perd.</th><th>Gan./Perd. %</th><th>Peso %</th></tr>
+						<tr><th>Liquidez</th><th>Prec. Tit. C.</th><th>Prec. Tit. V.</th><th>Flujo Caja</th><th>Val. Tit. Act.</th><th>Gan./Perd.</th><th>Gan./Perd. %</th><th>Peso %</th></tr>
 					</thead>
 					<tbody>
-						<!-- TEMPLATE.TABLE.ORO -->
+						<!-- TEMPLATE.TABLE.LIQUIDEZ -->
 					</tbody>
-				</table>			
-			</div>
+				</table>
+			</div>		
 			<div class="w100pad">
 				<table>
 					<thead>
@@ -164,7 +164,7 @@
 						<!-- TEMPLATE.TABLE.RENTA_FIJA -->
 					</tbody>
 				</table>
-			</div>
+			</div>	
 			<div class="w100pad">
 				<table>
 					<thead>
@@ -174,6 +174,16 @@
 						<!-- TEMPLATE.TABLE.RENTA_VARIABLE -->
 					</tbody>
 				</table>
+			</div>	
+			<div class="w100pad">
+				<table>
+					<thead>
+						<tr><th>Oro</th><th>Prec. Tit. C.</th><th>Prec. Tit. V.</th><th>Flujo Caja</th><th>Val. Tit. Act.</th><th>Gan./Perd.</th><th>Gan./Perd. %</th><th>Peso %</th></tr>
+					</thead>
+					<tbody>
+						<!-- TEMPLATE.TABLE.ORO -->
+					</tbody>
+				</table>			
 			</div>
 			<div class="w100pad">
 				<table>
@@ -267,9 +277,9 @@
 			<div class="w50pad">
 				<canvas id="chartArea009"></canvas>
 			</div>
-			<!--div class="w50pad">
+			<div class="w50pad">
 				<canvas id="chartArea010"></canvas>
-			</div-->
+			</div>
 			<div class="w50pad">
 				<canvas id="chartArea011"></canvas>
 			</div>
@@ -280,7 +290,7 @@
 				<canvas id="chartArea013"></canvas>
 			</div>		
 			<div class="w50pad">
-		
+				<canvas id="chartArea014"></canvas>
 			</div>				
 		</div>
 		<div class="w100pad">
@@ -407,14 +417,14 @@
 				data: {
 					datasets: [{
 						data: [
-							// TEMPLATE.CHART.ORO.DATA //
+							// TEMPLATE.CHART.LIQUIDEZ.DATA //
 						],
 						backgroundColor: [
-							// TEMPLATE.CHART.ORO.BGCOLOR //
+							// TEMPLATE.CHART.LIQUIDEZ.BGCOLOR //
 						]
 					}],
 					labels: [
-						// TEMPLATE.CHART.ORO.LABEL //
+						// TEMPLATE.CHART.LIQUIDEZ.LABEL //
 					]
 				},
 				options: {
@@ -509,6 +519,40 @@
 				data: {
 					datasets: [{
 						data: [
+							// TEMPLATE.CHART.ORO.DATA //
+						],
+						backgroundColor: [
+							// TEMPLATE.CHART.ORO.BGCOLOR //
+						]
+					}],
+					labels: [
+						// TEMPLATE.CHART.ORO.LABEL //
+					]
+				},
+				options: {
+					responsive: true,
+					legend: {
+						display: true,
+						position: 'left',
+					},
+					title: {
+						display: false,
+						text: 'Prueba'
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: true
+					}
+				}
+			});			
+		</script>		
+		<script>
+			var chartContext008 = document.getElementById('chartArea008').getContext('2d');
+			var myDoughnutChart008 = new Chart(chartContext008, {
+				type: 'doughnut',
+				data: {
+					datasets: [{
+						data: [
 							// TEMPLATE.CHART.CRIPTOMONEDAS.DATA //
 						],
 						backgroundColor: [
@@ -533,12 +577,12 @@
 						animateScale: true,
 						animateRotate: true
 					}
-				}
+				}	
 			});			
-		</script>		
+		</script>
 		<script>
-			var chartContext008 = document.getElementById('chartArea008').getContext('2d');
-			var myDoughnutChart008 = new Chart(chartContext008, {
+			var chartContext009 = document.getElementById('chartArea009').getContext('2d');
+			var myDoughnutChart009 = new Chart(chartContext009, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -571,8 +615,8 @@
 			});			
 		</script>
 		<script>
-			var chartContext009 = document.getElementById('chartArea009').getContext('2d');
-			var myDoughnutChart009 = new Chart(chartContext009, {
+			var chartContext010 = document.getElementById('chartArea010').getContext('2d');
+			var myDoughnutChart010 = new Chart(chartContext010, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -602,12 +646,11 @@
 						animateRotate: true
 					}
 				}
-			});			
+			});
 		</script>
 		<script>
-			/*
-			var chartContext010 = document.getElementById('chartArea010').getContext('2d');
-			var myDoughnutChart010 = new Chart(chartContext010, {
+			var chartContext011 = document.getElementById('chartArea011').getContext('2d');
+			var myDoughnutChart011 = new Chart(chartContext011, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -637,12 +680,11 @@
 						animateRotate: true
 					}
 				}
-			});
-			*/
+			});			
 		</script>
 		<script>
-			var chartContext011 = document.getElementById('chartArea011').getContext('2d');
-			var myDoughnutChart011 = new Chart(chartContext011, {
+			var chartContext012 = document.getElementById('chartArea012').getContext('2d');
+			var myDoughnutChart012 = new Chart(chartContext012, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -675,8 +717,8 @@
 			});			
 		</script>
 		<script>
-			var chartContext012 = document.getElementById('chartArea012').getContext('2d');
-			var myDoughnutChart012 = new Chart(chartContext012, {
+			var chartContext013 = document.getElementById('chartArea013').getContext('2d');
+			var myDoughnutChart013 = new Chart(chartContext013, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -707,10 +749,10 @@
 					}
 				}
 			});			
-		</script>
+		</script>		
 		<script>
-			var chartContext013 = document.getElementById('chartArea013').getContext('2d');
-			var myDoughnutChart013 = new Chart(chartContext013, {
+			var chartContext014 = document.getElementById('chartArea014').getContext('2d');
+			var myDoughnutChart014 = new Chart(chartContext014, {
 				type: 'doughnut',
 				data: {
 					datasets: [{
@@ -739,8 +781,8 @@
 						animateScale: true,
 						animateRotate: true
 					}
-				}
+				}	
 			});			
-		</script>		
+		</script>			
 	</body>
 </html>

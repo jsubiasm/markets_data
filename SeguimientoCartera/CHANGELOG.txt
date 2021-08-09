@@ -41,5 +41,7 @@
 
 - Versión 3.0: Se ejecuta el script SQL desde el proceso java
 
-- Versión 4.0: Se añade el tipo de activo criptomonedas y el producto bitcoin
+- Versión 4.0: Se añade el tipo de activo Criptomonedas y el producto Bitcoin
+
+- Versión 5.0: Se añade el tipo de activo Liquidez y el producto Cuenta EUR
 

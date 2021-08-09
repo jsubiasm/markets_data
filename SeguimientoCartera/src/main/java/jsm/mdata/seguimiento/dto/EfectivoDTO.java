@@ -16,7 +16,7 @@ public class EfectivoDTO
 	 * 
 	 */
 	private String nombreCuenta = null;
-	private BigDecimal liquido = null;
+	private BigDecimal disponible = null;
 	private BigDecimal inmovilizado = null;
 
 	/**
@@ -36,19 +36,19 @@ public class EfectivoDTO
 	}
 
 	/**
-	 * @return the liquido
+	 * @return the disponible
 	 */
-	public BigDecimal getLiquido()
+	public BigDecimal getDisponible()
 	{
-		return liquido;
+		return disponible;
 	}
 
 	/**
-	 * @param liquido the liquido to set
+	 * @param disponible the disponible to set
 	 */
-	public void setLiquido(BigDecimal liquido)
+	public void setDisponible(BigDecimal disponible)
 	{
-		this.liquido = liquido;
+		this.disponible = disponible;
 	}
 
 	/**

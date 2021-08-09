@@ -205,7 +205,8 @@ public class Main
 			boolean incluirRF = sufijo.equalsIgnoreCase("RF") && prod.getTipoActivo().equalsIgnoreCase("Renta Fija");
 			boolean incluirRV = sufijo.equalsIgnoreCase("RV") && prod.getTipoActivo().equalsIgnoreCase("Renta Variable");
 			boolean incluirCripto = sufijo.equalsIgnoreCase("CRIPTO") && prod.getTipoActivo().equalsIgnoreCase("Criptomonedas");
-			if (incluirGlobal || incluirOro || incluirRF || incluirRV || incluirCripto)
+			boolean incluirLiquidez = sufijo.equalsIgnoreCase("LIQUIDEZ") && prod.getTipoActivo().equalsIgnoreCase("Liquidez");
+			if (incluirGlobal || incluirOro || incluirRF || incluirRV || incluirCripto || incluirLiquidez)
 			{
 				if (mapGpp.containsKey(getMapKey(mov, prod)))
 				{
@@ -577,58 +578,61 @@ public class Main
 		for (ProductoVarDTO productoVar : listaProductosVar)
 		{
 			String urlScraping = productoVar.getUrlScraping();
-			if (urlScraping.contains("morningstar.es"))
+			if (urlScraping != null)
 			{
-				Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
-				Elements tablasDatos = page.getElementsByClass("snapshotTextColor snapshotTextFontStyle snapshotTable overviewKeyStatsTable");
-				Element tablaDatos = tablasDatos.get(0);
-				Elements filas = tablaDatos.getElementsByTag("tr");
-				String fechaValor = null;
-				String valorTitulo = null;
-				String fechaTer = null;
-				String ter = null;
-				for (Element fila : filas)
+				if (urlScraping.contains("morningstar.es"))
 				{
-					if (fila.text().startsWith("VL "))
+					Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
+					Elements tablasDatos = page.getElementsByClass("snapshotTextColor snapshotTextFontStyle snapshotTable overviewKeyStatsTable");
+					Element tablaDatos = tablasDatos.get(0);
+					Elements filas = tablaDatos.getElementsByTag("tr");
+					String fechaValor = null;
+					String valorTitulo = null;
+					String fechaTer = null;
+					String ter = null;
+					for (Element fila : filas)
 					{
-						fechaValor = fila.text().substring(3, 13);
-						valorTitulo = fila.text().substring(18, fila.text().length());
+						if (fila.text().startsWith("VL "))
+						{
+							fechaValor = fila.text().substring(3, 13);
+							valorTitulo = fila.text().substring(18, fila.text().length());
+						}
+						else if (fila.text().startsWith("Precio de Cierre "))
+						{
+							fechaValor = fila.text().substring(17, 27);
+							valorTitulo = fila.text().substring(32, fila.text().length());
+						}
+						else if (fila.text().startsWith("Gastos Corrientes ") && !fila.text().contains("-%"))
+						{
+							fechaTer = fila.text().substring(18, 28);
+							ter = fila.text().substring(29, fila.text().length() - 1);
+						}
 					}
-					else if (fila.text().startsWith("Precio de Cierre "))
+					productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
+					productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
+					if (ter != null && fechaTer != null)
 					{
-						fechaValor = fila.text().substring(17, 27);
-						valorTitulo = fila.text().substring(32, fila.text().length());
-					}
-					else if (fila.text().startsWith("Gastos Corrientes ") && !fila.text().contains("-%"))
-					{
-						fechaTer = fila.text().substring(18, 28);
-						ter = fila.text().substring(29, fila.text().length() - 1);
+						productoVar.setFechaTer(new SimpleDateFormat("dd/MM/yyyy").parse(fechaTer));
+						productoVar.setTer(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(ter).doubleValue())));
 					}
 				}
-				productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
-				productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
-				if (ter != null && fechaTer != null)
+				else if (urlScraping.contains("investing.com"))
 				{
-					productoVar.setFechaTer(new SimpleDateFormat("dd/MM/yyyy").parse(fechaTer));
-					productoVar.setTer(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(ter).doubleValue())));
+					Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
+					Element elementPrecio = page.getElementById("last_last");
+					String valorTitulo = elementPrecio.text();
+					productoVar.setFechaValor(new Date());
+					productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
 				}
-			}
-			else if (urlScraping.contains("investing.com"))
-			{
-				Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
-				Element elementPrecio = page.getElementById("last_last");
-				String valorTitulo = elementPrecio.text();
-				productoVar.setFechaValor(new Date());
-				productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
-			}
-			else
-			{
-				throw new Exception("URL no soportada [" + urlScraping + "]");
-			}
-			int rowsUpdated = DatosDAO.update_TB02_PRODUCTOS_VAR(connection, productoVar);
-			if (rowsUpdated != 1)
-			{
-				throw new Exception("Se han actualizado [" + rowsUpdated + "] columnas y se esperaba solo una");
+				else
+				{
+					throw new Exception("URL no soportada [" + urlScraping + "]");
+				}
+				int rowsUpdated = DatosDAO.update_TB02_PRODUCTOS_VAR(connection, productoVar);
+				if (rowsUpdated != 1)
+				{
+					throw new Exception("Se han actualizado [" + rowsUpdated + "] columnas y se esperaba solo una");
+				}
 			}
 			LOGGER.info("Precio actualizado - OK -> [" + productoVar.getProductoId() + "] [" + productoVar.getValorTitulo() + "] [" + productoVar.getFechaValor() + "] [" + productoVar.getTer() + "] [" + productoVar.getFechaTer() + "]");
 		}
@@ -697,6 +701,11 @@ public class Main
 		templateDto.setChartCriptomonedasData(HtmlTemplate.getChartData(vistaSubtipoActivoCripto));
 		templateDto.setChartCriptomonedasBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
 		templateDto.setChartCriptomonedasLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoCripto, "SUBTIPO_ACTIVO_CRIPTO"));
+		List<GanPerProdPesoDTO> vistaSubtipoActivoLiquidez = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_LIQUIDEZ");
+		templateDto.setTableLiquidez(HtmlTemplate.getTable_VWF_nombreVista(vistaSubtipoActivoLiquidez, "SUBTIPO_ACTIVO_LIQUIDEZ"));
+		templateDto.setChartLiquidezData(HtmlTemplate.getChartData(vistaSubtipoActivoLiquidez));
+		templateDto.setChartLiquidezBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoLiquidez, "SUBTIPO_ACTIVO_LIQUIDEZ"));
+		templateDto.setChartLiquidezLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoLiquidez, "SUBTIPO_ACTIVO_LIQUIDEZ"));
 		List<GanPerProdPesoDTO> vistaMoneda = DatosDAO.select_VWF_nombreVista(connection, "MONEDA");
 		templateDto.setTableMoneda(HtmlTemplate.getTable_VWF_nombreVista(vistaMoneda, "MONEDA"));
 		templateDto.setChartMonedaData(HtmlTemplate.getChartData(vistaMoneda));
@@ -763,6 +772,10 @@ public class Main
 				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.CRIPTOMONEDAS -->"))
 				{
 					listLineasOutput.add(templateDto.getTableCriptomonedas());
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.LIQUIDEZ -->"))
+				{
+					listLineasOutput.add(templateDto.getTableLiquidez());
 				}
 				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.MONEDA -->"))
 				{
@@ -879,6 +892,18 @@ public class Main
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.CRIPTOMONEDAS.LABEL //"))
 				{
 					listLineasOutput.add(templateDto.getChartCriptomonedasLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.LIQUIDEZ.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartLiquidezData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.LIQUIDEZ.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartLiquidezBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.LIQUIDEZ.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartLiquidezLabel());
 				}
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MONEDA.DATA //"))
 				{
@@ -1071,6 +1096,9 @@ public class Main
 			Map<String, GanPerProdPesoDTO> mapGppCripto = new HashMap<String, GanPerProdPesoDTO>();
 			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppCripto, "CRIPTO");
 			validate_VWF_nombreVista(connection, mapGppCripto, "SUBTIPO_ACTIVO_CRIPTO");
+			Map<String, GanPerProdPesoDTO> mapGppLiquidez = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppLiquidez, "LIQUIDEZ");
+			validate_VWF_nombreVista(connection, mapGppLiquidez, "SUBTIPO_ACTIVO_LIQUIDEZ");
 			LOGGER.info("Generando Informe");
 			generacionInformeHtml(connection);
 			LOGGER.info("Confirmando Transaccion");

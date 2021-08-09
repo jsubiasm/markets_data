@@ -26,6 +26,7 @@ public class TemplateDTO
 	private String tableRentaFija;
 	private String tableRentaVariable;
 	private String tableCriptomonedas;
+	private String tableLiquidez;
 	private String tableMoneda;
 	private String tableInstrumento;
 	private String tableUsoIngresos;
@@ -48,6 +49,9 @@ public class TemplateDTO
 	private String chartCriptomonedasData;
 	private String chartCriptomonedasBGColor;
 	private String chartCriptomonedasLabel;
+	private String chartLiquidezData;
+	private String chartLiquidezBGColor;
+	private String chartLiquidezLabel;
 	private String chartMonedaData;
 	private String chartMonedaBGColor;
 	private String chartMonedaLabel;
@@ -274,6 +278,22 @@ public class TemplateDTO
 	public void setTableCriptomonedas(String tableCriptomonedas)
 	{
 		this.tableCriptomonedas = tableCriptomonedas;
+	}
+
+	/**
+	 * @return the tableLiquidez
+	 */
+	public String getTableLiquidez()
+	{
+		return tableLiquidez;
+	}
+
+	/**
+	 * @param tableLiquidez the tableLiquidez to set
+	 */
+	public void setTableLiquidez(String tableLiquidez)
+	{
+		this.tableLiquidez = tableLiquidez;
 	}
 
 	/**
@@ -626,6 +646,54 @@ public class TemplateDTO
 	public void setChartCriptomonedasLabel(String chartCriptomonedasLabel)
 	{
 		this.chartCriptomonedasLabel = chartCriptomonedasLabel;
+	}
+
+	/**
+	 * @return the chartLiquidezData
+	 */
+	public String getChartLiquidezData()
+	{
+		return chartLiquidezData;
+	}
+
+	/**
+	 * @param chartLiquidezData the chartLiquidezData to set
+	 */
+	public void setChartLiquidezData(String chartLiquidezData)
+	{
+		this.chartLiquidezData = chartLiquidezData;
+	}
+
+	/**
+	 * @return the chartLiquidezBGColor
+	 */
+	public String getChartLiquidezBGColor()
+	{
+		return chartLiquidezBGColor;
+	}
+
+	/**
+	 * @param chartLiquidezBGColor the chartLiquidezBGColor to set
+	 */
+	public void setChartLiquidezBGColor(String chartLiquidezBGColor)
+	{
+		this.chartLiquidezBGColor = chartLiquidezBGColor;
+	}
+
+	/**
+	 * @return the chartLiquidezLabel
+	 */
+	public String getChartLiquidezLabel()
+	{
+		return chartLiquidezLabel;
+	}
+
+	/**
+	 * @param chartLiquidezLabel the chartLiquidezLabel to set
+	 */
+	public void setChartLiquidezLabel(String chartLiquidezLabel)
+	{
+		this.chartLiquidezLabel = chartLiquidezLabel;
 	}
 
 	/**

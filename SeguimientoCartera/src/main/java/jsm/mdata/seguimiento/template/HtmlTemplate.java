@@ -86,6 +86,10 @@ public class HtmlTemplate
 			{
 				strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
 			}
+			else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista))
+			{
+				strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
+			}
 			else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 			{
 				strTableRow.append("<td>").append(tableRow.getTipoActivo()).append("</td>");
@@ -287,6 +291,10 @@ public class HtmlTemplate
 				{
 					output.append("'#d6abf5'").append(",");
 				}
+				else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista) || "Liquidez".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#b5ebb2'").append(",");
+				}
 				else
 				{
 					output.append("'#c3d6d1'").append(",");
@@ -349,6 +357,10 @@ public class HtmlTemplate
 				{
 					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
 				}
+				else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+				}
 				else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 				{
 					output.append("'").append(tableRow.getTipoActivo()).append("',");
@@ -392,7 +404,7 @@ public class HtmlTemplate
 		strTableRow.append("<tr>");
 		String nombreCuenta = tableRow.getNombreCuenta();
 		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(nombreCuenta).append("</td>");
-		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getLiquido().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getDisponible().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getInmovilizado().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
@@ -422,9 +434,9 @@ public class HtmlTemplate
 		StringBuilder output = new StringBuilder();
 		for (EfectivoDTO tableRow : listTableRows)
 		{
-			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") /* && tableRow.getLiquido().compareTo(BigDecimal.valueOf(500d)) == 1 */)
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getDisponible().compareTo(BigDecimal.valueOf(0d)) == 1)
 			{
-				output.append(tableRow.getLiquido().setScale(3, RoundingMode.HALF_EVEN)).append(",");
+				output.append(tableRow.getDisponible().setScale(3, RoundingMode.HALF_EVEN)).append(",");
 			}
 		}
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
@@ -440,9 +452,9 @@ public class HtmlTemplate
 		StringBuilder output = new StringBuilder();
 		for (EfectivoDTO tableRow : listTableRows)
 		{
-			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") /* && tableRow.getLiquido().compareTo(BigDecimal.valueOf(500d)) == 1 */)
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getDisponible().compareTo(BigDecimal.valueOf(0d)) == 1)
 			{
-				output.append("'#b5ebb2'").append(",");
+				output.append("'#c2c2c2'").append(",");
 			}
 		}
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
@@ -458,7 +470,7 @@ public class HtmlTemplate
 		StringBuilder output = new StringBuilder();
 		for (EfectivoDTO tableRow : listTableRows)
 		{
-			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") /* && tableRow.getLiquido().compareTo(BigDecimal.valueOf(500d)) == 1 */)
+			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getDisponible().compareTo(BigDecimal.valueOf(0d)) == 1)
 			{
 				output.append("'").append(tableRow.getNombreCuenta()).append("',");
 			}
@@ -486,7 +498,7 @@ public class HtmlTemplate
 		{
 			if (tableRow.getNombreCuenta().equalsIgnoreCase("Total"))
 			{
-				output.append(tableRow.getLiquido().setScale(3, RoundingMode.HALF_EVEN)).append(",");
+				output.append(tableRow.getDisponible().setScale(3, RoundingMode.HALF_EVEN)).append(",");
 			}
 		}
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
@@ -520,9 +532,13 @@ public class HtmlTemplate
 				{
 					output.append("'#d6abf5'").append(",");
 				}
+				else if ("Liquidez".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#b5ebb2'").append(",");
+				}
 			}
 		}
-		output.append("'#b5ebb2'").append(",");
+		output.append("'#c2c2c2'").append(",");
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
 	}
 
@@ -541,7 +557,7 @@ public class HtmlTemplate
 				output.append("'").append(tableRow.getTipoActivo()).append("',");
 			}
 		}
-		output.append("'Liquido',");
+		output.append("'Efectivo',");
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
 	}
 
