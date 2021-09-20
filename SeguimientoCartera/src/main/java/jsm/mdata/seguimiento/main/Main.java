@@ -610,7 +610,7 @@ public class Main
 					}
 					productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
 					productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
-					if (ter != null && fechaTer != null)
+					if (ter != null && fechaTer != null && !ter.trim().equalsIgnoreCase("") && !fechaTer.trim().equalsIgnoreCase(""))
 					{
 						productoVar.setFechaTer(new SimpleDateFormat("dd/MM/yyyy").parse(fechaTer));
 						productoVar.setTer(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(ter).doubleValue())));
