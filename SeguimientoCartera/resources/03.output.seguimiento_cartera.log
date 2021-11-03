@@ -116,16 +116,16 @@ ij> --
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('ING Naranja',					0,				0);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Bankinter Nomina', 				7051.30,		0);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Bankinter Nomina', 				6986.10,		0);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('EVO Cuenta Corriente', 			0,				0);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('EVO Deposito', 					0,				0);
 1 row inserted/updated/deleted
 ij> --INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('NN Cuenta Ahorro', 				13500.01,		0);
-  INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				20.77);
+  INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				99.97);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('OpenBank Familiar', 				0,				539.96);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('OpenBank Familiar', 				0,				416.48);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('OpenBank Fondos', 				0,				0);
 1 row inserted/updated/deleted
