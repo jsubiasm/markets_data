@@ -116,16 +116,16 @@ ij> --
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('ING Naranja',					0,				0);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Bankinter Nomina', 				5131.26,		0);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Bankinter Nomina', 				7122.84,		0);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('EVO Cuenta Corriente', 			0,				0);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('EVO Deposito', 					0,				0);
 1 row inserted/updated/deleted
 ij> --INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Nat.Nederlanden Cuenta Ahorro', 	10500.01,		0);
-  INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				4.49);
+  INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Ticket Restaurant', 				0,				97.19);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('OpenBank Familiar', 				0,				844.62);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('OpenBank Familiar', 				0,				449.36);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('OpenBank Fondos', 				0,				0);
 1 row inserted/updated/deleted
@@ -138,7 +138,7 @@ ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES (
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Degiro jsubiasm', 				0,				0);
 1 row inserted/updated/deleted
-ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Degiro jotasumin', 				1900.01,		0);
+ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('Degiro jotasumin', 				1898.84,		0);
 1 row inserted/updated/deleted
 ij> INSERT INTO TB00_EFECTIVO (NOMBRE_CUENTA, DISPONIBLE, INMOVILIZADO) VALUES ('InteractiveBrokers',				1900.01,		0);
 1 row inserted/updated/deleted
