@@ -105,22 +105,22 @@ public class HtmlTemplate
 		}
 		else
 		{
-			strTableRow.append("<td>").append(tableRow.getTer().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+			strTableRow.append("<td>").append(tableRow.getTer().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
 		}
-		strTableRow.append("<td>").append(tableRow.getPrecioTitulosComprados().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getFlujoCaja().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getFlujoCaja().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdida().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
 		if (tableRow.getGananciaPerdidaPrcnt() != null)
 		{
-			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append(" %</td>");
+			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(2, RoundingMode.HALF_EVEN)).append(" %</td>");
 		}
 		else
 		{
 			strTableRow.append("<td>N/A</td>");
 		}
-		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append(" %</td>");
+		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(2, RoundingMode.HALF_EVEN)).append(" %</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
 	}
@@ -159,25 +159,25 @@ public class HtmlTemplate
 		strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getMoneda()).append("</td>");
 		strTableRow.append("<td>").append(tableRow.getUsoIngresos()).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getTer().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getTitulosComprados().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getPrecioTitulosComprados().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getTitulosVendidos().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getFlujoCaja().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getValorTitulo().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdida().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getTer().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getTitulosComprados().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPrecioTitulosComprados().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getTitulosVendidos().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getPrecioTitulosVendidos().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getFlujoCaja().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getValorTitulo().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td>").append(tableRow.getValorTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdida(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdida().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
 		if (tableRow.getGananciaPerdidaPrcnt() != null)
 		{
-			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(3, RoundingMode.HALF_EVEN)).append(" %</td>");
+			strTableRow.append("<td").append(getTDColor(tableRow.getGananciaPerdidaPrcnt(), tableRow.getValorTitulosActuales())).append(">").append(tableRow.getGananciaPerdidaPrcnt().setScale(2, RoundingMode.HALF_EVEN)).append(" %</td>");
 		}
 		else
 		{
 			strTableRow.append("<td>N/A</td>");
 		}
-		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append(" %</td>");
+		strTableRow.append("<td>").append(tableRow.getPesoEnCartera().setScale(2, RoundingMode.HALF_EVEN)).append(" %</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
 	}
@@ -256,7 +256,7 @@ public class HtmlTemplate
 		{
 			if (tableRow.getPesoEnCartera().compareTo(BigDecimal.ZERO) > 0)
 			{
-				output.append(tableRow.getPesoEnCartera().setScale(3, RoundingMode.HALF_EVEN)).append(",");
+				output.append(tableRow.getPesoEnCartera().setScale(2, RoundingMode.HALF_EVEN)).append(",");
 			}
 		}
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
@@ -404,8 +404,8 @@ public class HtmlTemplate
 		strTableRow.append("<tr>");
 		String nombreCuenta = tableRow.getNombreCuenta();
 		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(nombreCuenta).append("</td>");
-		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getDisponible().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
-		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getInmovilizado().setScale(3, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getDisponible().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
+		strTableRow.append("<td").append(getTDStyle(nombreCuenta)).append(">").append(tableRow.getInmovilizado().setScale(2, RoundingMode.HALF_EVEN)).append("</td>");
 		strTableRow.append("</tr>");
 		return strTableRow.toString();
 	}
@@ -436,7 +436,7 @@ public class HtmlTemplate
 		{
 			if (!tableRow.getNombreCuenta().equalsIgnoreCase("Total") && tableRow.getDisponible().compareTo(BigDecimal.valueOf(0d)) == 1)
 			{
-				output.append(tableRow.getDisponible().setScale(3, RoundingMode.HALF_EVEN)).append(",");
+				output.append(tableRow.getDisponible().setScale(2, RoundingMode.HALF_EVEN)).append(",");
 			}
 		}
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
@@ -491,14 +491,14 @@ public class HtmlTemplate
 		{
 			if (tableRow.getValorTitulosActuales().compareTo(BigDecimal.ZERO) > 0)
 			{
-				output.append(tableRow.getValorTitulosActuales().setScale(3, RoundingMode.HALF_EVEN)).append(",");
+				output.append(tableRow.getValorTitulosActuales().setScale(2, RoundingMode.HALF_EVEN)).append(",");
 			}
 		}
 		for (EfectivoDTO tableRow : vistaEfectivo)
 		{
 			if (tableRow.getNombreCuenta().equalsIgnoreCase("Total"))
 			{
-				output.append(tableRow.getDisponible().setScale(3, RoundingMode.HALF_EVEN)).append(",");
+				output.append(tableRow.getDisponible().setScale(2, RoundingMode.HALF_EVEN)).append(",");
 			}
 		}
 		return output.toString().length() != 0 ? output.toString().substring(0, output.toString().length() - 1) : "";
