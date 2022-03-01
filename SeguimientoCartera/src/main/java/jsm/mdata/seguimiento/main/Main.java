@@ -628,6 +628,28 @@ public class Main
 					productoVar.setFechaValor(new Date());
 					productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
 				}
+				else if (urlScraping.contains("justetf.com"))
+				{
+					Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
+					Elements tablaDatos02 = page.getElementsByClass("col-xs-6");
+					for (Element element : tablaDatos02)
+					{
+						String text = element.text();
+						if (text.startsWith("EUR") && !text.contains("Fund size"))
+						{
+							String fechaValor = text.substring(text.lastIndexOf(" ") + 1, text.length());
+							String valorTitulo = text.substring(text.indexOf(" ") + 1, text.length());
+							valorTitulo = valorTitulo.substring(0, valorTitulo.indexOf(" "));
+							productoVar.setFechaValor(new SimpleDateFormat("dd.MM.yy").parse(fechaValor));
+							productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(valorTitulo)));
+						}
+						else if (text.contains("Total expense ratio"))
+						{
+							String ter = text.substring(0, text.indexOf("%"));
+							productoVar.setTer(BigDecimal.valueOf(Double.valueOf(ter)));
+						}
+					}
+				}
 				else
 				{
 					throw new Exception("URL no soportada [" + urlScraping + "]");
