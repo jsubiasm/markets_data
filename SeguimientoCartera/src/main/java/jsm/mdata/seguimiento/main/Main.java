@@ -14,7 +14,6 @@ import java.sql.SQLException;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -625,7 +624,6 @@ public class Main
 						elementPrecio = page.getElementsByAttributeValue("data-test", "instrument-price-last").get(0);
 					}
 					String valorTitulo = elementPrecio.text();
-					productoVar.setFechaValor(new Date());
 					productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
 				}
 				else if (urlScraping.contains("justetf.com"))
