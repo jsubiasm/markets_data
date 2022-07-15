@@ -97,11 +97,11 @@
 	<body>
 		<div class="w100pad">
 			<div class="header">
-				Liquidez - 20% (Min. 10% Max. 30%)<br/>
-				Renta Fija - 20% (Min. 10% Max. 30%)<br/>
-				Renta Variable - 20% (Min. 10% Max. 30%)<br/>
-				Oro - 20% (Min. 10% Max. 30%)<br/>
-				Criptomonedas - 20% (Min. 05% Max. 35%)<br/>
+				Liquidez - Min. 05% Max. 50%<br/>
+				Renta Fija - Min. 05% Max. 50%<br/>
+				Renta Variable - Min. 05% Max. 50%<br/>
+				Oro - Min. 05% Max. 50%<br/>
+				Criptomonedas - Min. 05% Max. 50%<br/>
 			</div>
 		</div>
 		<div class="w100pad">
