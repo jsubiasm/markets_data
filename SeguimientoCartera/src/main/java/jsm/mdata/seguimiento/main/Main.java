@@ -205,7 +205,8 @@ public class Main
 			boolean incluirRV = sufijo.equalsIgnoreCase("RV") && prod.getTipoActivo().equalsIgnoreCase("Renta Variable");
 			boolean incluirCripto = sufijo.equalsIgnoreCase("CRIPTO") && prod.getTipoActivo().equalsIgnoreCase("Criptomonedas");
 			boolean incluirLiquidez = sufijo.equalsIgnoreCase("LIQUIDEZ") && prod.getTipoActivo().equalsIgnoreCase("Liquidez");
-			if (incluirGlobal || incluirOro || incluirRF || incluirRV || incluirCripto || incluirLiquidez)
+			boolean incluirOtros = sufijo.equalsIgnoreCase("OTROS") && prod.getTipoActivo().equalsIgnoreCase("Otros");
+			if (incluirGlobal || incluirOro || incluirRF || incluirRV || incluirCripto || incluirLiquidez || incluirOtros)
 			{
 				if (mapGpp.containsKey(getMapKey(mov, prod)))
 				{
@@ -730,6 +731,11 @@ public class Main
 		templateDto.setChartLiquidezData(HtmlTemplate.getChartData(vistaSubtipoActivoLiquidez));
 		templateDto.setChartLiquidezBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoLiquidez, "SUBTIPO_ACTIVO_LIQUIDEZ"));
 		templateDto.setChartLiquidezLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoLiquidez, "SUBTIPO_ACTIVO_LIQUIDEZ"));
+		List<GanPerProdPesoDTO> vistaSubtipoActivoOtros = DatosDAO.select_VWF_nombreVista(connection, "SUBTIPO_ACTIVO_OTROS");
+		templateDto.setTableOtros(HtmlTemplate.getTable_VWF_nombreVista(vistaSubtipoActivoOtros, "SUBTIPO_ACTIVO_OTROS"));
+		templateDto.setChartOtrosData(HtmlTemplate.getChartData(vistaSubtipoActivoOtros));
+		templateDto.setChartOtrosBGColor(HtmlTemplate.getChartBGColor(vistaSubtipoActivoOtros, "SUBTIPO_ACTIVO_OTROS"));
+		templateDto.setChartOtrosLabel(HtmlTemplate.getChartLabel(vistaSubtipoActivoOtros, "SUBTIPO_ACTIVO_OTROS"));
 		List<GanPerProdPesoDTO> vistaMoneda = DatosDAO.select_VWF_nombreVista(connection, "MONEDA");
 		templateDto.setTableMoneda(HtmlTemplate.getTable_VWF_nombreVista(vistaMoneda, "MONEDA"));
 		templateDto.setChartMonedaData(HtmlTemplate.getChartData(vistaMoneda));
@@ -800,6 +806,10 @@ public class Main
 				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.LIQUIDEZ -->"))
 				{
 					listLineasOutput.add(templateDto.getTableLiquidez());
+				}
+				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.OTROS -->"))
+				{
+					listLineasOutput.add(templateDto.getTableOtros());
 				}
 				else if (lineaInput != null && lineaInput.contains("<!-- TEMPLATE.TABLE.MONEDA -->"))
 				{
@@ -928,6 +938,18 @@ public class Main
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.LIQUIDEZ.LABEL //"))
 				{
 					listLineasOutput.add(templateDto.getChartLiquidezLabel());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.OTROS.DATA //"))
+				{
+					listLineasOutput.add(templateDto.getChartOtrosData());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.OTROS.BGCOLOR //"))
+				{
+					listLineasOutput.add(templateDto.getChartOtrosBGColor());
+				}
+				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.OTROS.LABEL //"))
+				{
+					listLineasOutput.add(templateDto.getChartOtrosLabel());
 				}
 				else if (lineaInput != null && lineaInput.contains("// TEMPLATE.CHART.MONEDA.DATA //"))
 				{
@@ -1123,6 +1145,9 @@ public class Main
 			Map<String, GanPerProdPesoDTO> mapGppLiquidez = new HashMap<String, GanPerProdPesoDTO>();
 			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppLiquidez, "LIQUIDEZ");
 			validate_VWF_nombreVista(connection, mapGppLiquidez, "SUBTIPO_ACTIVO_LIQUIDEZ");
+			Map<String, GanPerProdPesoDTO> mapGppOtros = new HashMap<String, GanPerProdPesoDTO>();
+			validate_VW03_GAN_PER_PROD_PESO_sufijo(connection, mapGppOtros, "OTROS");
+			validate_VWF_nombreVista(connection, mapGppOtros, "SUBTIPO_ACTIVO_OTROS");
 			LOGGER.info("Generando Informe");
 			generacionInformeHtml(connection);
 			LOGGER.info("Confirmando Transaccion");

@@ -27,6 +27,7 @@ public class TemplateDTO
 	private String tableRentaVariable;
 	private String tableCriptomonedas;
 	private String tableLiquidez;
+	private String tableOtros;
 	private String tableMoneda;
 	private String tableInstrumento;
 	private String tableUsoIngresos;
@@ -52,6 +53,9 @@ public class TemplateDTO
 	private String chartLiquidezData;
 	private String chartLiquidezBGColor;
 	private String chartLiquidezLabel;
+	private String chartOtrosData;
+	private String chartOtrosBGColor;
+	private String chartOtrosLabel;
 	private String chartMonedaData;
 	private String chartMonedaBGColor;
 	private String chartMonedaLabel;
@@ -294,6 +298,22 @@ public class TemplateDTO
 	public void setTableLiquidez(String tableLiquidez)
 	{
 		this.tableLiquidez = tableLiquidez;
+	}
+
+	/**
+	 * @return the tableOtros
+	 */
+	public String getTableOtros()
+	{
+		return tableOtros;
+	}
+
+	/**
+	 * @param tableOtros the tableOtros to set
+	 */
+	public void setTableOtros(String tableOtros)
+	{
+		this.tableOtros = tableOtros;
 	}
 
 	/**
@@ -694,6 +714,54 @@ public class TemplateDTO
 	public void setChartLiquidezLabel(String chartLiquidezLabel)
 	{
 		this.chartLiquidezLabel = chartLiquidezLabel;
+	}
+
+	/**
+	 * @return the chartOtrosData
+	 */
+	public String getChartOtrosData()
+	{
+		return chartOtrosData;
+	}
+
+	/**
+	 * @param chartOtrosData the chartOtrosData to set
+	 */
+	public void setChartOtrosData(String chartOtrosData)
+	{
+		this.chartOtrosData = chartOtrosData;
+	}
+
+	/**
+	 * @return the chartOtrosBGColor
+	 */
+	public String getChartOtrosBGColor()
+	{
+		return chartOtrosBGColor;
+	}
+
+	/**
+	 * @param chartOtrosBGColor the chartOtrosBGColor to set
+	 */
+	public void setChartOtrosBGColor(String chartOtrosBGColor)
+	{
+		this.chartOtrosBGColor = chartOtrosBGColor;
+	}
+
+	/**
+	 * @return the chartOtrosLabel
+	 */
+	public String getChartOtrosLabel()
+	{
+		return chartOtrosLabel;
+	}
+
+	/**
+	 * @param chartOtrosLabel the chartOtrosLabel to set
+	 */
+	public void setChartOtrosLabel(String chartOtrosLabel)
+	{
+		this.chartOtrosLabel = chartOtrosLabel;
 	}
 
 	/**

@@ -90,6 +90,10 @@ public class HtmlTemplate
 			{
 				strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
 			}
+			else if ("SUBTIPO_ACTIVO_OTROS".equalsIgnoreCase(nombreVista))
+			{
+				strTableRow.append("<td>").append(tableRow.getSubtipoActivo()).append("</td>");
+			}
 			else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 			{
 				strTableRow.append("<td>").append(tableRow.getTipoActivo()).append("</td>");
@@ -277,23 +281,27 @@ public class HtmlTemplate
 			{
 				if ("SUBTIPO_ACTIVO_ORO".equalsIgnoreCase(nombreVista) || "Oro".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#fce697'").append(",");
+					output.append("'#f2f294'").append(",");
 				}
 				else if ("SUBTIPO_ACTIVO_RF".equalsIgnoreCase(nombreVista) || "Renta Fija".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#90c6f5'").append(",");
+					output.append("'#a694f7'").append(",");
 				}
 				else if ("SUBTIPO_ACTIVO_RV".equalsIgnoreCase(nombreVista) || "Renta Variable".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#f59393'").append(",");
+					output.append("'#fc8d8d'").append(",");
 				}
 				else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista) || "Criptomonedas".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#d6abf5'").append(",");
+					output.append("'#f7c294'").append(",");
 				}
 				else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista) || "Liquidez".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#b5ebb2'").append(",");
+					output.append("'#bae8df'").append(",");
+				}
+				else if ("SUBTIPO_ACTIVO_OTROS".equalsIgnoreCase(nombreVista) || "Otros".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#e294f7'").append(",");
 				}
 				else
 				{
@@ -358,6 +366,10 @@ public class HtmlTemplate
 					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
 				}
 				else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista))
+				{
+					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
+				}
+				else if ("SUBTIPO_ACTIVO_OTROS".equalsIgnoreCase(nombreVista))
 				{
 					output.append("'").append(tableRow.getSubtipoActivo()).append("',");
 				}
@@ -518,23 +530,27 @@ public class HtmlTemplate
 			{
 				if ("Oro".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#fce697'").append(",");
+					output.append("'#f2f294'").append(",");
 				}
 				else if ("Renta Fija".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#90c6f5'").append(",");
+					output.append("'#a694f7'").append(",");
 				}
 				else if ("Renta Variable".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#f59393'").append(",");
+					output.append("'#fc8d8d'").append(",");
 				}
 				else if ("Criptomonedas".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#d6abf5'").append(",");
+					output.append("'#f7c294'").append(",");
 				}
 				else if ("Liquidez".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#b5ebb2'").append(",");
+					output.append("'#bae8df'").append(",");
+				}
+				else if ("Otros".equalsIgnoreCase(tableRow.getTipoActivo()))
+				{
+					output.append("'#e294f7'").append(",");
 				}
 			}
 		}

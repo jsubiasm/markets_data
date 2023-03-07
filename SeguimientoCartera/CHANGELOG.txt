@@ -13,7 +13,7 @@
 	- VWF_SUBTIPO_ACTIVO
 	- VWF_USO_INGRESOS
 
-- Versión 1.0: Construidas y validadas por proceso Java las vistas:	
+- Versiï¿½n 1.0: Construidas y validadas por proceso Java las vistas:	
 	- VW01_MOVIMIENTOS_PRODUCTOS
 	- VW02_GAN_PER_PROD_GLOBAL
 	- VW02_GAN_PER_PROD_ORO
@@ -37,11 +37,12 @@
 	- VWF_TIPO_ACTIVO
 	- VWF_USO_INGRESOS
 
-- Versión 2.0: Generación del informe HTML completado
+- Versiï¿½n 2.0: Generaciï¿½n del informe HTML completado
 
-- Versión 3.0: Se ejecuta el script SQL desde el proceso java
+- Versiï¿½n 3.0: Se ejecuta el script SQL desde el proceso java
 
-- Versión 4.0: Se añade el tipo de activo Criptomonedas y el producto Bitcoin
+- Versiï¿½n 4.0: Se aï¿½ade el tipo de activo Criptomonedas y el producto Bitcoin
 
-- Versión 5.0: Se añade el tipo de activo Liquidez y el producto Cuenta EUR
+- Versiï¿½n 5.0: Se aï¿½ade el tipo de activo Liquidez y el producto Cuenta EUR
 
+- Versiï¿½n 6.0: Se aï¿½ade el tipo de activo Otros

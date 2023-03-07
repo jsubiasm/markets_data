@@ -311,6 +311,10 @@ public class DatosDAO
 				{
 					campoVista = "\"Liquidez\"";
 				}
+				else if ("SUBTIPO_ACTIVO_OTROS".equalsIgnoreCase(nombreVista))
+				{
+					campoVista = "\"Otros\"";
+				}
 				else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 				{
 					campoVista = "\"Tipo Activo\"";
@@ -380,6 +384,10 @@ public class DatosDAO
 					else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista))
 					{
 						dto.setSubtipoActivo(resultSet.getString("Liquidez"));
+					}
+					else if ("SUBTIPO_ACTIVO_OTROS".equalsIgnoreCase(nombreVista))
+					{
+						dto.setSubtipoActivo(resultSet.getString("Otros"));
 					}
 					else if ("TIPO_ACTIVO".equalsIgnoreCase(nombreVista))
 					{
