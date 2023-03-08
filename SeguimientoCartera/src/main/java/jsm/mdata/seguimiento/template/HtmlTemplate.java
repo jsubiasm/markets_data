@@ -31,7 +31,7 @@ public class HtmlTemplate
 		{
 			strTableRows.append(getRow_VWF_nombreVista(tableRow, nombreVista)).append("\n");
 		}
-		return strTableRows.toString().substring(0, strTableRows.toString().length() - 1);
+		return !strTableRows.toString().isEmpty() ? strTableRows.toString().substring(0, strTableRows.toString().length() - 1) : "";
 	}
 
 	/**
