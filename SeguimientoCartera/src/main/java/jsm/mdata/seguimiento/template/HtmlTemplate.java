@@ -285,7 +285,7 @@ public class HtmlTemplate
 				}
 				else if ("SUBTIPO_ACTIVO_RF".equalsIgnoreCase(nombreVista) || "Renta Fija".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#a694f7'").append(",");
+					output.append("'#94adf7'").append(",");
 				}
 				else if ("SUBTIPO_ACTIVO_RV".equalsIgnoreCase(nombreVista) || "Renta Variable".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
@@ -293,7 +293,7 @@ public class HtmlTemplate
 				}
 				else if ("SUBTIPO_ACTIVO_CRIPTO".equalsIgnoreCase(nombreVista) || "Criptomonedas".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#f7c294'").append(",");
+					output.append("'#f7c794'").append(",");
 				}
 				else if ("SUBTIPO_ACTIVO_LIQUIDEZ".equalsIgnoreCase(nombreVista) || "Liquidez".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
@@ -305,7 +305,7 @@ public class HtmlTemplate
 				}
 				else
 				{
-					output.append("'#c3d6d1'").append(",");
+					output.append("'#c2c2c2'").append(",");
 				}
 			}
 		}
@@ -534,7 +534,7 @@ public class HtmlTemplate
 				}
 				else if ("Renta Fija".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#a694f7'").append(",");
+					output.append("'#94adf7'").append(",");
 				}
 				else if ("Renta Variable".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
@@ -542,7 +542,7 @@ public class HtmlTemplate
 				}
 				else if ("Criptomonedas".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
-					output.append("'#f7c294'").append(",");
+					output.append("'#f7c794'").append(",");
 				}
 				else if ("Liquidez".equalsIgnoreCase(tableRow.getTipoActivo()))
 				{
