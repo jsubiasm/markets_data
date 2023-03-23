@@ -582,7 +582,29 @@ public class Main
 			{
 				if (urlScraping.contains("morningstar.es"))
 				{
-					Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
+					Document page = null;
+					int numErroresConexion = 0;
+					boolean conexionOK = false;
+					while (!conexionOK)
+					{
+						try
+						{
+							// page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
+							page = Jsoup.connect(urlScraping).get();
+							conexionOK = true;
+						}
+						catch (Throwable e)
+						{
+							LOGGER.error("Error recuperando URL [" + urlScraping + "]");
+							numErroresConexion++;
+							if (numErroresConexion >= 5)
+							{
+								throw e;
+							}
+							LOGGER.error("Esperamos 3 segundos para reintento...");
+							Thread.sleep(3000);
+						}
+					}
 					Elements tablasDatos = page.getElementsByClass("snapshotTextColor snapshotTextFontStyle snapshotTable overviewKeyStatsTable");
 					Element tablaDatos = tablasDatos.get(0);
 					Elements filas = tablaDatos.getElementsByTag("tr");
