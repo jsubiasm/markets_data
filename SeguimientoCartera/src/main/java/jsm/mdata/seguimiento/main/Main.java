@@ -11,19 +11,13 @@ import java.math.RoundingMode;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,8 +26,10 @@ import jsm.mdata.seguimiento.dto.EfectivoDTO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
+import jsm.mdata.seguimiento.dto.ProductoUrlDTO;
 import jsm.mdata.seguimiento.dto.ProductoVarDTO;
 import jsm.mdata.seguimiento.dto.TemplateDTO;
+import jsm.mdata.seguimiento.scraping.Scraper;
 import jsm.mdata.seguimiento.template.HtmlTemplate;
 
 /**
@@ -66,6 +62,11 @@ public class Main
 	private static final String HTML_TEMPLATE = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\02.input.seguimiento_cartera.template";
 	private static final String SCRIPT_LOG = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\03.output.seguimiento_cartera.log";
 	private static final String HTML_OUTPUT = "C:\\_JSM\\SeguimientoCartera\\03_Fuentes\\markets_data\\SeguimientoCartera\\resources\\04.output.seguimiento_cartera.html";
+
+	/**
+	 * 
+	 */
+	private static final double MARGEN_ERROR_SCRAPING = 4.0;
 
 	/**
 	 * @return
@@ -568,34 +569,67 @@ public class Main
 		}
 	}
 
-	/**
-	 * @param connection
-	 * @throws Throwable
-	 */
 	private static void urlScraping(Connection connection) throws Throwable
 	{
 		List<ProductoVarDTO> listaProductosVar = DatosDAO.select_TB02_PRODUCTOS_VAR(connection, null);
 		for (ProductoVarDTO productoVar : listaProductosVar)
 		{
-			String urlScraping = productoVar.getUrlScraping();
-			if (urlScraping != null)
+			LOGGER.info("--- Actualizando producto [" + productoVar.getProductoId() + "]");
+			List<ProductoUrlDTO> listaProductosURL = DatosDAO.select_TB02_PRODUCTOS_URL(connection, productoVar.getProductoId());
+			if (listaProductosURL != null && !listaProductosURL.isEmpty())
 			{
-				if (urlScraping.contains("morningstar.es"))
+				List<ProductoVarDTO> listaProductosVarScraping = new ArrayList<ProductoVarDTO>();
+				for (ProductoUrlDTO productoURL : listaProductosURL)
 				{
-					Document page = null;
+					String urlScraping = productoURL.getUrlScraping();
+					LOGGER.info("Scraping [" + urlScraping + "]");
 					int numErroresConexion = 0;
-					boolean conexionOK = false;
-					while (!conexionOK)
+					boolean procesadoOK = false;
+					while (!procesadoOK)
 					{
 						try
 						{
-							// page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
-							page = Jsoup.connect(urlScraping).get();
-							conexionOK = true;
+							if (urlScraping.contains("morningstar.es"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromMorningstar(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("markets.ft.com"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromFinancialTimes(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("investing.com"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromInvesting(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("finance.yahoo.com"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromYahoo(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("quefondos.com"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromQuefondos(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("finect.com"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromFinect(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("dracmametales.com"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromDracma(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("andorrano-joyeria.com"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromAndorrano(productoVar.getProductoId(), urlScraping));
+							}
+							else
+							{
+								throw new Exception("URL no soportada [" + urlScraping + "]");
+							}
+							procesadoOK = true;
 						}
 						catch (Throwable e)
 						{
-							LOGGER.error("Error recuperando URL [" + urlScraping + "]");
+							LOGGER.error("Error procesando URL [" + urlScraping + "]");
 							numErroresConexion++;
 							if (numErroresConexion >= 5)
 							{
@@ -605,84 +639,88 @@ public class Main
 							Thread.sleep(3000);
 						}
 					}
-					Elements tablasDatos = page.getElementsByClass("snapshotTextColor snapshotTextFontStyle snapshotTable overviewKeyStatsTable");
-					Element tablaDatos = tablasDatos.get(0);
-					Elements filas = tablaDatos.getElementsByTag("tr");
-					String fechaValor = null;
-					String valorTitulo = null;
-					String fechaTer = null;
-					String ter = null;
-					for (Element fila : filas)
-					{
-						if (fila.text().startsWith("VL "))
-						{
-							fechaValor = fila.text().substring(3, 13);
-							valorTitulo = fila.text().substring(18, fila.text().length());
-						}
-						else if (fila.text().startsWith("Precio de Cierre "))
-						{
-							fechaValor = fila.text().substring(17, 27);
-							valorTitulo = fila.text().substring(32, fila.text().length());
-						}
-						else if (fila.text().startsWith("Gastos Corrientes ") && !fila.text().contains("-%"))
-						{
-							fechaTer = fila.text().substring(18, 28);
-							ter = fila.text().substring(29, fila.text().length() - 1);
-						}
-					}
-					productoVar.setFechaValor(new SimpleDateFormat("dd/MM/yyyy").parse(fechaValor));
-					productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
-					if (ter != null && fechaTer != null && !ter.trim().equalsIgnoreCase("") && !fechaTer.trim().equalsIgnoreCase(""))
-					{
-						productoVar.setFechaTer(new SimpleDateFormat("dd/MM/yyyy").parse(fechaTer));
-						productoVar.setTer(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(ter).doubleValue())));
-					}
 				}
-				else if (urlScraping.contains("investing.com"))
-				{
-					Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
-					Element elementPrecio = page.getElementById("last_last");
-					if (elementPrecio == null)
-					{
-						elementPrecio = page.getElementsByAttributeValue("data-test", "instrument-price-last").get(0);
-					}
-					String valorTitulo = elementPrecio.text();
-					productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(NumberFormat.getNumberInstance(Locale.GERMAN).parse(valorTitulo).doubleValue())));
-				}
-				else if (urlScraping.contains("justetf.com"))
-				{
-					Document page = Jsoup.connect(urlScraping).userAgent("Mozilla/5.0 (Windows NT 6.1; rv:80.0) Gecko/27132701 Firefox/78.7").get();
-					Elements tablaDatos02 = page.getElementsByClass("col-xs-6");
-					for (Element element : tablaDatos02)
-					{
-						String text = element.text();
-						if (text.startsWith("EUR") && !text.contains("Fund size"))
-						{
-							String fechaValor = text.substring(text.lastIndexOf(" ") + 1, text.length());
-							String valorTitulo = text.substring(text.indexOf(" ") + 1, text.length());
-							valorTitulo = valorTitulo.substring(0, valorTitulo.indexOf(" "));
-							productoVar.setFechaValor(new SimpleDateFormat("dd.MM.yy").parse(fechaValor));
-							productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(valorTitulo)));
-						}
-						else if (text.contains("Total expense ratio"))
-						{
-							String ter = text.substring(0, text.indexOf("%"));
-							productoVar.setTer(BigDecimal.valueOf(Double.valueOf(ter)));
-						}
-					}
-				}
-				else
-				{
-					throw new Exception("URL no soportada [" + urlScraping + "]");
-				}
+				productoVar = getProductoVarValidado(listaProductosVarScraping, productoVar.getProductoId());
 				int rowsUpdated = DatosDAO.update_TB02_PRODUCTOS_VAR(connection, productoVar);
 				if (rowsUpdated != 1)
 				{
 					throw new Exception("Se han actualizado [" + rowsUpdated + "] columnas y se esperaba solo una");
 				}
+				LOGGER.info("Producto actualizado - OK -> [" + productoVar.getProductoId() + "] [" + productoVar.getValorTitulo() + "] [" + productoVar.getFechaValor() + "] [" + productoVar.getTer() + "] [" + productoVar.getFechaTer() + "]");
 			}
-			LOGGER.info("Precio actualizado - OK -> [" + productoVar.getProductoId() + "] [" + productoVar.getValorTitulo() + "] [" + productoVar.getFechaValor() + "] [" + productoVar.getTer() + "] [" + productoVar.getFechaTer() + "]");
 		}
+	}
+
+	/**
+	 * @param listaProductosVarScraping
+	 * @return
+	 */
+	private static ProductoVarDTO getProductoVarValidado(List<ProductoVarDTO> listaProductosVarScraping, String productoId) throws Throwable
+	{
+		Date fechaValor = null;
+		BigDecimal ter = null;
+		Date fechaTer = null;
+		for (int i = 0; i < listaProductosVarScraping.size(); i++)
+		{
+			if (fechaValor == null && listaProductosVarScraping.get(i).getFechaValor() != null)
+			{
+				fechaValor = listaProductosVarScraping.get(i).getFechaValor();
+			}
+			if (fechaTer == null && listaProductosVarScraping.get(i).getFechaTer() != null)
+			{
+				fechaTer = listaProductosVarScraping.get(i).getFechaTer();
+			}
+			if (ter == null && listaProductosVarScraping.get(i).getTer() != null)
+			{
+				ter = listaProductosVarScraping.get(i).getTer();
+			}
+			for (int j = i + 1; j < listaProductosVarScraping.size(); j++)
+			{
+				BigDecimal diferencia = listaProductosVarScraping.get(i).getValorTitulo().subtract(listaProductosVarScraping.get(j).getValorTitulo()).abs();
+				BigDecimal umbral = listaProductosVarScraping.get(i).getValorTitulo().multiply(new BigDecimal(MARGEN_ERROR_SCRAPING / 100.0));
+				if (diferencia.compareTo(umbral) > 0)
+				{
+					throw new Exception("La lista de valores " + getStringValores(listaProductosVarScraping) + "para el producto [" + productoId + "] es demasiado dispersa");
+				}
+			}
+		}
+		ProductoVarDTO productoVarValidado = new ProductoVarDTO();
+		productoVarValidado.setFechaTer(fechaTer != null ? fechaTer : new Date());
+		productoVarValidado.setFechaValor(fechaValor != null ? fechaValor : new Date());
+		productoVarValidado.setProductoId(productoId);
+		productoVarValidado.setTer(ter != null ? ter : BigDecimal.ZERO);
+		productoVarValidado.setValorTitulo(getMediaValores(listaProductosVarScraping));
+		LOGGER.info("Producto validado [" + productoVarValidado.getProductoId() + "] [" + getStringValores(listaProductosVarScraping) + "] [" + productoVarValidado.getValorTitulo() + "]");
+		return productoVarValidado;
+	}
+
+	/**
+	 * @param listaProductosVarScraping
+	 * @return
+	 */
+	private static BigDecimal getMediaValores(List<ProductoVarDTO> listaProductosVarScraping)
+	{
+		BigDecimal sumaValores = BigDecimal.ZERO;
+		for (ProductoVarDTO productoVarScraping : listaProductosVarScraping)
+		{
+			sumaValores = sumaValores.add(productoVarScraping.getValorTitulo());
+		}
+		BigDecimal mediaValores = sumaValores.divide(new BigDecimal(listaProductosVarScraping.size()), 5, RoundingMode.HALF_EVEN);
+		return mediaValores;
+	}
+
+	/**
+	 * @param listaProductosVarScraping
+	 * @return
+	 */
+	private static String getStringValores(List<ProductoVarDTO> listaProductosVarScraping)
+	{
+		String stringValores = "";
+		for (ProductoVarDTO productoVarScraping : listaProductosVarScraping)
+		{
+			stringValores = stringValores + "[" + productoVarScraping.getValorTitulo().doubleValue() + "] ";
+		}
+		return stringValores;
 	}
 
 	/**

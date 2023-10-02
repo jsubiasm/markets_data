@@ -17,6 +17,7 @@ import jsm.mdata.seguimiento.dto.EfectivoDTO;
 import jsm.mdata.seguimiento.dto.GanPerProdPesoDTO;
 import jsm.mdata.seguimiento.dto.MovimientoDTO;
 import jsm.mdata.seguimiento.dto.ProductoDTO;
+import jsm.mdata.seguimiento.dto.ProductoUrlDTO;
 import jsm.mdata.seguimiento.dto.ProductoVarDTO;
 
 /**
@@ -150,12 +151,12 @@ public class DatosDAO
 			LOGGER.debug("Abriendo Sentencia");
 			if (productoId != null)
 			{
-				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, TER, FECHA_TER, ULTIMA_ACTUALIZACION, URL_SCRAPING FROM TB02_PRODUCTOS_VAR WHERE PRODUCTO_ID = ?");
+				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, TER, FECHA_TER FROM TB02_PRODUCTOS_VAR WHERE PRODUCTO_ID = ?");
 				statement.setString(1, productoId);
 			}
 			else
 			{
-				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, TER, FECHA_TER, ULTIMA_ACTUALIZACION, URL_SCRAPING FROM TB02_PRODUCTOS_VAR");
+				statement = connection.prepareStatement("SELECT PRODUCTO_ID, VALOR_TITULO, FECHA_VALOR, TER, FECHA_TER FROM TB02_PRODUCTOS_VAR");
 			}
 			LOGGER.debug("Ejecutando Sentencia");
 			resultSet = statement.executeQuery();
@@ -169,8 +170,6 @@ public class DatosDAO
 				productoVar.setFechaValor(resultSet.getDate("FECHA_VALOR"));
 				productoVar.setTer(resultSet.getBigDecimal("TER"));
 				productoVar.setFechaTer(resultSet.getDate("FECHA_TER"));
-				productoVar.setUltimaActualizacion(resultSet.getDate("ULTIMA_ACTUALIZACION"));
-				productoVar.setUrlScraping(resultSet.getString("URL_SCRAPING"));
 				listaProductoVar.add(productoVar);
 			}
 		}
@@ -187,6 +186,56 @@ public class DatosDAO
 			statement.close();
 		}
 		return listaProductoVar;
+	}
+
+	/**
+	 * @param connection
+	 * @param productoId
+	 * @return
+	 * @throws Throwable
+	 */
+	public static List<ProductoUrlDTO> select_TB02_PRODUCTOS_URL(Connection connection, String productoId) throws Throwable
+	{
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		List<ProductoUrlDTO> listaProductoURL = new ArrayList<ProductoUrlDTO>();
+		try
+		{
+			LOGGER.debug("Abriendo Sentencia");
+			if (productoId != null)
+			{
+				statement = connection.prepareStatement("SELECT PRODUCTO_ID, URL_SCRAPING FROM TB02_PRODUCTOS_URL WHERE PRODUCTO_ID = ?");
+				statement.setString(1, productoId);
+			}
+			else
+			{
+				statement = connection.prepareStatement("SELECT PRODUCTO_ID, URL_SCRAPING FROM TB02_PRODUCTOS_URL");
+			}
+			LOGGER.debug("Ejecutando Sentencia");
+			resultSet = statement.executeQuery();
+			LOGGER.debug("Abriendo Cursor");
+			while (resultSet.next())
+			{
+				ProductoUrlDTO productoVar = new ProductoUrlDTO();
+				productoVar = new ProductoUrlDTO();
+				productoVar.setProductoId(resultSet.getString("PRODUCTO_ID"));
+				productoVar.setUrlScraping(resultSet.getString("URL_SCRAPING"));
+				listaProductoURL.add(productoVar);
+			}
+		}
+		catch (Throwable t)
+		{
+			LOGGER.error("ERROR", t);
+			throw t;
+		}
+		finally
+		{
+			LOGGER.debug("Cerrando Cursor");
+			resultSet.close();
+			LOGGER.debug("Cerrando Sentencia");
+			statement.close();
+		}
+		return listaProductoURL;
 	}
 
 	/**

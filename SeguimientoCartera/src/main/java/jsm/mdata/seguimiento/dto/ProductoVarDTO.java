@@ -21,8 +21,6 @@ public class ProductoVarDTO
 	private Date fechaValor = null;
 	private BigDecimal ter = null;
 	private Date fechaTer = null;
-	private Date ultimaActualizacion = null;
-	private String urlScraping = null;
 
 	/**
 	 * @return the productoId
@@ -102,38 +100,6 @@ public class ProductoVarDTO
 	public void setFechaTer(Date fechaTer)
 	{
 		this.fechaTer = fechaTer;
-	}
-
-	/**
-	 * @return the ultimaActualizacion
-	 */
-	public Date getUltimaActualizacion()
-	{
-		return ultimaActualizacion;
-	}
-
-	/**
-	 * @param ultimaActualizacion the ultimaActualizacion to set
-	 */
-	public void setUltimaActualizacion(Date ultimaActualizacion)
-	{
-		this.ultimaActualizacion = ultimaActualizacion;
-	}
-
-	/**
-	 * @return the urlScraping
-	 */
-	public String getUrlScraping()
-	{
-		return urlScraping;
-	}
-
-	/**
-	 * @param urlScraping the urlScraping to set
-	 */
-	public void setUrlScraping(String urlScraping)
-	{
-		this.urlScraping = urlScraping;
 	}
 
 }
