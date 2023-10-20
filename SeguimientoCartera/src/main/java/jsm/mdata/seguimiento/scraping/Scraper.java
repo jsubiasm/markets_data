@@ -124,7 +124,7 @@ public class Scraper
 	{
 		Connection connection = Jsoup.connect(urlScraping);
 		connection.header("Cookie",
-				"F=d=.A_ZHvQ9vPCZ4y.HipEny9MpG9o3ucSi2pEvhg--; PH=l=es-ES; Y=v=1&n=07uhrfhdk740o&l=9ik180ic/o&p=m2c09oh00000000&r=n5&intl=es; B=0jqmsidi6op8n&b=4&d=0SP2cAZtYFo.r7EqIN6a&s=st&i=n3qFETx7RjI44lFnZ8Be; ucs=tr=1695796331000; OTH=v=2&s=2&d=eyJraWQiOiIwMTY0MGY5MDNhMjRlMWMxZjA5N2ViZGEyZDA5YjE5NmM5ZGUzZWQ5IiwiYWxnIjoiUlMyNTYifQ.eyJjdSI6eyJndWlkIjoiWFZKVEgyV1E3RVRZM0lHUE5VUVBZNVhSR0kiLCJwZXJzaXN0ZW50Ijp0cnVlLCJzaWQiOiJ0UEdhQmxlbWFUNEsifX0.bwS8JRaZ11Hik2IC_H7e8_cpbsTbPmZ3H_VrPoe-inkOPwi5cM_yXWLH2JCZoybfaPsJeqB9mevSAOHmRnyRp15br4VHylVvr1cPiLPacTQHEGh4ty-m0e2ZyrmJN9KJitdibV5oF26zu_9Kw9WPyOyicCpLboA99eJG-Xq9gQ0; T=af=QXpBQ1I1UjYmdHM9MTY5NTcwOTkzMSZwcz1yS3cxSVNwRHRNaVlJdy5GcDNlanR3LS0-&d=bnMBeWFob28BZwFYVkpUSDJXUTdFVFkzSUdQTlVRUFk1WFJHSQFhYwFBTlVCQ3hQUAFhbAFqc3ViaWFzbQFzYwFkZXNrdG9wX3dlYgFmcwE4aUczSUpka2JHVVgBenoBcnJuRWxCQTdFAWEBUUFFAWxhdAFRaEMua0IBbnUBMA--&kt=EAAXgyd0LLLyIdmOvPBZilRjw--~I&ku=FAANHSaCvGPL.BJzsezHsK0rg_yK_3djnvNINm0wg2xGTPBTZrQfWej6JtNwzlLXIUitpXX29XgTxRH21Es3mcbFaaduMqWraBDr1SSptFKf.S9rXIi4CSg9y2C_.ae0hh3962wn7XEtSsV7Bu0GI5MtLTGJpB3SjoxH5pXxutnmpk-~E; EuConsent=CPxrYoAPxrYoAAOACBESDYCoAP_AAEfAACiQgoNB9G7WTXNncXp_YPs0eYUX1VBp4uAxBgCBA-ABzBsUIIwGVmEzJEyIJigCGAIAoGJBIEFtGAlAQFAQIIAFABHICEEAJBAAIGAAECAAAgBACBBIEwAAAAAQoUBXMhQgkAdEQFoIQchAlgAgAQIAICAEoIhBAgQAEAAgQABICEAIgigAggAAAAIAAAAEAFAIEQBABgECB____eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQTFABINSogCbAgJCaQMIoEQIgqCACgUAAAAECBAAAmDAoQRgEqMBkAIEQABAAAAABQEACAAACABCAAIAgAQAAACAQAAAAQCAAAEAAAAAAAAAAAAAQAgAAAAAAQgCIQAhBAACAACAAgoAAIABAAAAAAEAIARCAAAAAAABAAAAAAIAQBAABAAAAAAQAAAAAAAAQIACADAAADgkbLUAMNABgACIKAiADAAEQUBUAGAAIgoA; PRF=t%3DEXX6.DE%252BGB00BJYDH287.SG%252B0P0001CTGR.F%252BBTC-EUR%252BEURUSD%253DX%252BGC%253DF%252B0P00012PP6.F%252BMEUD.PA%252B0P0000IKFQ.F%252B0P0000IKFR.F%252BJE00B588CD74.SG%252BE20Y.SW%252BIE00BK5BR733.SG%252BIE00BK5BQZ41.SG%252BIE00BK5BQT80.SG; A3=d=AQABBERsFmUCEFJNe6b15ZefjGsl-PmZaFIFEgABCAG3F2VIZeS2b2UB9qMAAAcIsmsWZaJRP3M&S=AQAAAhAPJm06b_JRRS0ddSDhyko; GUC=AQABCAFlF7dlSEIfaQTT&s=AQAAAN_qg2W0&g=ZRZsTg; A1=d=AQABBERsFmUCEFJNe6b15ZefjGsl-PmZaFIFEgABCAG3F2VIZeS2b2UB9qMAAAcIsmsWZaJRP3M&S=AQAAAhAPJm06b_JRRS0ddSDhyko; cmp=t=1695971287&j=1&u=1---&v=96; A1S=d=AQABBERsFmUCEFJNe6b15ZefjGsl-PmZaFIFEgABCAG3F2VIZeS2b2UB9qMAAAcIsmsWZaJRP3M&S=AQAAAhAPJm06b_JRRS0ddSDhyko");
+				"F=d=.A_ZHvQ9vPCZ4y.HipEny9MpG9o3ucSi2pEvhg--; PH=l=es-ES; Y=v=1&n=07uhrfhdk740o&l=9ik180ic/o&p=m2c09oh00000000&r=n5&intl=es; B=0jqmsidi6op8n&b=4&d=0SP2cAZtYFo.r7EqIN6a&s=st&i=n3qFETx7RjI44lFnZ8Be; GUC=AQAACAFlH6BlTUIfaQTT&s=AQAAACCZFS33&g=ZR5aVQ; A1=d=AQABBERsFmUCEFJNe6b15ZefjGsl-PmZaFIFEgAACAGgH2VNZeS2b2UB9qMAAAcIsmsWZaJRP3MID3sAeRCaATU418Wt1agqtgkBBwoB8A&S=AQAAAuPCTL1wznApSMi_PJKXDrU; A3=d=AQABBERsFmUCEFJNe6b15ZefjGsl-PmZaFIFEgAACAGgH2VNZeS2b2UB9qMAAAcIsmsWZaJRP3MID3sAeRCaATU418Wt1agqtgkBBwoB8A&S=AQAAAuPCTL1wznApSMi_PJKXDrU; gam_id=y-3avXiD1G2uIuvSCD9ARcBP5_6COO9P8gmVYYyXXpmGYvRQj1CQ---A; axids=gam=y-3avXiD1G2uIuvSCD9ARcBP5_6COO9P8gmVYYyXXpmGYvRQj1CQ---A&dv360=eS1fYUZST05WRTJ1SG1rTW83VW1tRlEwOTcyVkxUNklHNnh3MDZFSnhZZVlVVjA2NWdQSDZHMXU5d0trcTVPS3dTYlBzY35B; tbla_id=db0985a5-a6e0-46ce-a6cf-bd7b50e6db5a-tuctb65ea9e; PRF=t%3DBTC-EUR%252BCSSPX.SW%252BIE00B5BMR087.IR%252BEUR%253DX%252BGC%253DF%252BEURUSD%253DX%252BORO-USD%252BEXX6.DE%252BGB00BJYDH287.SG%252B0P0001CTGR.F%252B0P00012PP6.F%252BMEUD.PA%252B0P0000IKFQ.F%252B0P0000IKFR.F%252BJE00B588CD74.SG; ucs=tr=1697791593000; A1S=d=AQABBERsFmUCEFJNe6b15ZefjGsl-PmZaFIFEgAACAGgH2VNZeS2b2UB9qMAAAcIsmsWZaJRP3MID3sAeRCaATU418Wt1agqtgkBBwoB8A&S=AQAAAuPCTL1wznApSMi_PJKXDrU; OTH=v=2&s=2&d=eyJraWQiOiIwMTY0MGY5MDNhMjRlMWMxZjA5N2ViZGEyZDA5YjE5NmM5ZGUzZWQ5IiwiYWxnIjoiUlMyNTYifQ.eyJjdSI6eyJndWlkIjoiWFZKVEgyV1E3RVRZM0lHUE5VUVBZNVhSR0kiLCJwZXJzaXN0ZW50Ijp0cnVlLCJzaWQiOiJuMW84R1RZbk4ydjkifX0.g-QgUfoMo1J6s8iCATb-T_Tni6bdvtqN3PaIzfsZiFGazgbDrGF5nThuLNlVdBksDyfkWCxcOBY2QP52-nQ80opvdspqjPL2GflOr9mfdsx3V83h9_gycRcPR6ALaDTZQEROxM2i0BDjh2k_aizg1lQDCljxaYzVaoUNCSPSVgs; T=af=QXpBQ1I1UjYmdHM9MTY5NzcwNTE5MyZwcz1SMTdiMzdtd0VmN09FUWwuVHZMajFRLS0-&d=bnMBeWFob28BZwFYVkpUSDJXUTdFVFkzSUdQTlVRUFk1WFJHSQFhYwFBRXYyNXpEWAFhbAFqc3ViaWFzbQFzYwFkZXNrdG9wX3dlYgFmcwE4aUczSUpka2JHVVgBenoBcHpPTWxCQTdFAWEBUUFFAWxhdAFRaEMua0IBbnUBMA--&kt=EAAxio.hdxbOT1QPJf8qu7ocw--~I&ku=FAAXwoVqdwfNo20y1whICp3WQzGxmq20DU4.9HXwxpVnnRg4huSxZvrDQhcpk0ph1ryzewujNTmOAoGvwbv7glwq51wCoYR3CEKwHd5_J1lkpXv2wRernavbUw_ineYn0A7yAVAyY4Kcbb20pgBhuhL.PcspdSi326ALeDksy7D8Gs-~E; cmp=t=1697705195&j=1&u=1---&v=99; EuConsent=CPxrYoAPxrYoAAOACBESDbCoAP_AAEfAACiQgoNB9G7WTXNncXp_YPs0eYUX1VBp4uAxBgCBA-ABzBsUIIwGVmEzJEyIJigCGAIAoGJBIEFtGAlAQFAQYIAFABHICEEAJBAAIGAAECAAAgBACBBIEwAAAAAQoUBXMhQgkAdEQFoIQchAlgAgAQIAICAEoIhBAgQAEAAgQABICEAIgigAggAAAAIAAAAEAFAIEQBABgECB____eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQTFABINSogCbAgJCaQMIoEQIgqCACgUAAAAECBAAAmDAoQRgEqMBkAIEQABAAAAABQEACAAACABCAAIAggQAAACAQAAAAQCAAAEAAAAAAAAAAAAAQAgAAAAAAQgCIQAhBAACAACAAgoAAIABAAAAAAEAIARCAAAAAAABAAAAAAIAQBAABAAAAAAQAAAAAAAAQIACADAAADgkbLUAMNABgACIKAiADAAEQUBUAGAAIgoA; __gpi=UID=00000cbb8f817dc0:T=1697705197:RT=1697705197:S=ALNI_MYwrSCHX8uZWCMNQJcOrUGdYlpVng");
 		connection.header("User-Agent", USER_AGENT);
 		Connection.Response response = connection.execute();
 		Document page = response.parse();
@@ -236,29 +236,29 @@ public class Scraper
 		{
 			ProductoVarDTO productoVar = null;
 
-			productoVar = getProductoFromMorningstar("TEST", "https://www.morningstar.es/es/etf/snapshot/snapshot.aspx?id=0P00001NR4");
+//			productoVar = getProductoFromMorningstar("TEST", "https://www.morningstar.es/es/etf/snapshot/snapshot.aspx?id=0P00001NR4");
+//			System.out.println(productoVar.getValorTitulo());
+//
+//			productoVar = getProductoFromFinancialTimes("TEST", "https://markets.ft.com/data/etfs/tearsheet/summary?s=EXX6:GER:EUR");
+//			System.out.println(productoVar.getValorTitulo());
+//
+//			productoVar = getProductoFromInvesting("TEST", "https://es.investing.com/etfs/ishares-eb.rexx-gov-germany-10,5");
+//			System.out.println(productoVar.getValorTitulo());
+//
+			productoVar = getProductoFromYahoo("TEST", "https://es.finance.yahoo.com/quote/BTC-EUR");
 			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromFinancialTimes("TEST", "https://markets.ft.com/data/etfs/tearsheet/summary?s=EXX6:GER:EUR");
-			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromInvesting("TEST", "https://es.investing.com/etfs/ishares-eb.rexx-gov-germany-10,5");
-			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromYahoo("TEST", "https://es.finance.yahoo.com/quote/EXX6.DE");
-			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromQuefondos("TEST", "https://www.quefondos.com/es/planes/ficha/index.html?isin=N5137");
-			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromFinect("TEST", "https://www.finect.com/planes-pensiones/N5137-Indexa_mas_rentabilidad_bonos_pp");
-			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromDracma("TEST", "https://www.dracmametales.com/precio-del-oro");
-			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromAndorrano("TEST", "https://www.andorrano-joyeria.com/precio-del-oro");
-			System.out.println(productoVar.getValorTitulo());
+//
+//			productoVar = getProductoFromQuefondos("TEST", "https://www.quefondos.com/es/planes/ficha/index.html?isin=N5137");
+//			System.out.println(productoVar.getValorTitulo());
+//
+//			productoVar = getProductoFromFinect("TEST", "https://www.finect.com/planes-pensiones/N5137-Indexa_mas_rentabilidad_bonos_pp");
+//			System.out.println(productoVar.getValorTitulo());
+//
+//			productoVar = getProductoFromDracma("TEST", "https://www.dracmametales.com/precio-del-oro");
+//			System.out.println(productoVar.getValorTitulo());
+//
+//			productoVar = getProductoFromAndorrano("TEST", "https://www.andorrano-joyeria.com/precio-del-oro");
+//			System.out.println(productoVar.getValorTitulo());
 
 		}
 		catch (Throwable t)

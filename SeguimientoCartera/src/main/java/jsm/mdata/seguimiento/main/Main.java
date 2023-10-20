@@ -66,7 +66,7 @@ public class Main
 	/**
 	 * 
 	 */
-	private static final double MARGEN_ERROR_SCRAPING = 4.0;
+	private static final double MARGEN_ERROR_PORCENTAJE = 3.0;
 
 	/**
 	 * @return
@@ -578,6 +578,10 @@ public class Main
 			List<ProductoUrlDTO> listaProductosURL = DatosDAO.select_TB02_PRODUCTOS_URL(connection, productoVar.getProductoId());
 			if (listaProductosURL != null && !listaProductosURL.isEmpty())
 			{
+				if (listaProductosURL.size() < 2)
+				{
+					throw new Exception("Existen menos de 2 URLs para el producto [" + productoVar.getProductoId() + "]");
+				}
 				List<ProductoVarDTO> listaProductosVarScraping = new ArrayList<ProductoVarDTO>();
 				for (ProductoUrlDTO productoURL : listaProductosURL)
 				{
@@ -677,10 +681,10 @@ public class Main
 			for (int j = i + 1; j < listaProductosVarScraping.size(); j++)
 			{
 				BigDecimal diferencia = listaProductosVarScraping.get(i).getValorTitulo().subtract(listaProductosVarScraping.get(j).getValorTitulo()).abs();
-				BigDecimal umbral = listaProductosVarScraping.get(i).getValorTitulo().multiply(new BigDecimal(MARGEN_ERROR_SCRAPING / 100.0));
+				BigDecimal umbral = listaProductosVarScraping.get(i).getValorTitulo().multiply(new BigDecimal(MARGEN_ERROR_PORCENTAJE / 100.0));
 				if (diferencia.compareTo(umbral) > 0)
 				{
-					throw new Exception("La lista de valores " + getStringValores(listaProductosVarScraping) + "para el producto [" + productoId + "] es demasiado dispersa");
+					throw new Exception("Los valores " + getStringValores(listaProductosVarScraping) + "para el producto [" + productoId + "] presentan una dispersion superior al [" + MARGEN_ERROR_PORCENTAJE + "] %");
 				}
 			}
 		}
