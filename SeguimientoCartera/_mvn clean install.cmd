@@ -4,6 +4,6 @@ set JAVA_HOME=C:\_JSM\SeguimientoCartera\01_Software\jdk-15.0.2_windows-x64_bin\
 set M2_HOME=C:\_JSM\SeguimientoCartera\01_Software\apache-maven-3.6.3-bin\apache-maven-3.6.3
 PATH=%JAVA_HOME%\bin;%M2_HOME%\bin;%PATH%
 
-call mvn clean install
+call mvn -s C:\_JSM\SeguimientoCartera\01_Software\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml clean install
 
 pause

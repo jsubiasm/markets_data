@@ -66,7 +66,7 @@ public class Main
 	/**
 	 * 
 	 */
-	private static final double MARGEN_ERROR_PORCENTAJE = 3.0;
+	private static final double MARGEN_ERROR_PORCENTAJE = 3.5;
 
 	/**
 	 * @return
@@ -624,6 +624,14 @@ public class Main
 							else if (urlScraping.contains("andorrano-joyeria.com"))
 							{
 								listaProductosVarScraping.add(Scraper.getProductoFromAndorrano(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("coinmarketcap"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromCoinmarketcap(productoVar.getProductoId(), urlScraping));
+							}
+							else if (urlScraping.contains("google"))
+							{
+								listaProductosVarScraping.add(Scraper.getProductoFromGoogle(productoVar.getProductoId(), urlScraping));
 							}
 							else
 							{
