@@ -195,7 +195,7 @@ public class Scraper
 	public static ProductoVarDTO getProductoFromDracma(String productoId, String urlScraping) throws Throwable
 	{
 		Connection connection = Jsoup.connect(urlScraping);
-		connection.header("Cookie", "d964a68d0298312fa3ac703176dc5e2b=df110815a07aca964f057dac8f5ebb4f");
+		connection.header("Cookie", "d964a68d0298312fa3ac703176dc5e2b=0e2ule2l25jo9atrcja0oob1n8; _gcl_au=1.1.337120705.1712654128; _gid=GA1.2.198113556.1712654128; _hjSessionUser_3410161=eyJpZCI6ImE2MzliN2NkLWI4YjAtNWFlYi1iZjQ5LTc2Nzg5MTgzZjA3NSIsImNyZWF0ZWQiOjE2OTU5ODQyMTU3MzksImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_3410161=eyJpZCI6IjMzMGMyZDYyLTBjYWYtNGMzZC1hZDA5LWViMTRlOTZjZDEwZCIsImMiOjE3MTI2NTQxMjg0OTgsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MH0=; cpnb_cookiesSettings=%7B%22required-cookies%22%3A1%2C%22analytical-cookies%22%3A1%2C%22social-media-cookies%22%3A1%2C%22targeted-advertising-cookies%22%3A1%7D; _ga_LVNZFEZ1DF=GS1.1.1712654126.2.1.1712654527.60.0.0; _ga=GA1.2.1087931829.1695984215; _gat=1; _gat_gtag_UA_106870620_1=1");
 		connection.header("User-Agent", USER_AGENT);
 		Connection.Response response = connection.execute();
 		Document page = response.parse();
@@ -237,7 +237,7 @@ public class Scraper
 		Document page = response.parse();
 		Elements listaElements = page.getElementsByClass("faq-answer-wrapper");
 		Element element = listaElements.get(0);
-		String valorTitulo = element.text().substring(63, 72);
+		String valorTitulo = element.text().substring(62, 71);
 		ProductoVarDTO productoVar = new ProductoVarDTO();
 		productoVar.setProductoId(productoId);
 		productoVar.setValorTitulo(BigDecimal.valueOf(Double.valueOf(valorTitulo.replaceAll(",", ""))));
@@ -269,7 +269,7 @@ public class Scraper
 		try
 		{
 			ProductoVarDTO productoVar = null;
-
+//
 //			productoVar = getProductoFromMorningstar("TEST", "https://www.morningstar.es/es/etf/snapshot/snapshot.aspx?id=0P00001NR4");
 //			System.out.println(productoVar.getValorTitulo());
 //
@@ -288,17 +288,17 @@ public class Scraper
 //			productoVar = getProductoFromFinect("TEST", "https://www.finect.com/planes-pensiones/N5137-Indexa_mas_rentabilidad_bonos_pp");
 //			System.out.println(productoVar.getValorTitulo());
 //
-//			productoVar = getProductoFromDracma("TEST", "https://www.dracmametales.com/precio-del-oro");
-//			System.out.println(productoVar.getValorTitulo());
+			productoVar = getProductoFromDracma("TEST", "https://www.dracmametales.com/precio-del-oro");
+			System.out.println(productoVar.getValorTitulo());
 //
 //			productoVar = getProductoFromAndorrano("TEST", "https://www.andorrano-joyeria.com/precio-del-oro");
 //			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromCoinmarketcap("TEST", "https://coinmarketcap.com/es/currencies/bitcoin/btc/eur");
-			System.out.println(productoVar.getValorTitulo());
-
-			productoVar = getProductoFromGoogle("TEST", "https://www.google.com/search?q=btc+eur");
-			System.out.println(productoVar.getValorTitulo());
+//
+//			productoVar = getProductoFromCoinmarketcap("TEST", "https://coinmarketcap.com/es/currencies/bitcoin/btc/eur");
+//			System.out.println(productoVar.getValorTitulo());
+//
+//			productoVar = getProductoFromGoogle("TEST", "https://www.google.com/search?q=btc+eur");
+//			System.out.println(productoVar.getValorTitulo());
 
 		}
 		catch (Throwable t)
